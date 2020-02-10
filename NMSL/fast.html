@@ -136,7 +136,17 @@
     
     
         <div class="adsense-contain">
-            侧边栏广告
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Sidebar Ads -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5888225880131847"
+     data-ad-slot="4752632688"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
         </div>
     
     
@@ -148,7 +158,117 @@
         <a class="post-header-title" href="/NMSL/fast.html">抽象话转换器-快速版</a>
     </div>
     
+    <html>
 
+<head>
+    <link rel="stylesheet" href="//cdnjs.loli.net/ajax/libs/mdui/0.4.3/css/mdui.min.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+
+    <style type="text/css">
+        body{
+            background: #d4dcd6;
+        }
+        .mdui-overlay-show{
+            visibility: hidden;
+        }
+    </style>
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body class="mdui-theme-primary-grey mdui-theme-accent-deep-purple">
+    
+    <div class="mdui-container">
+        <div class="mdui-textfield mdui-textfield-floating-label">
+            <label class="mdui-textfield-label">请输入需要抽象的话</label>
+            <textarea class="mdui-textfield-input" id="t" type="text" required></textarea>
+            <div class="mdui-textfield-helper">如果分词不准确，可自行加空格分词</div>
+        </div>
+
+        <b>抽象程度:</b><br>
+        低 &ensp;
+        <label class="mdui-switch">
+            <input type="checkbox" id="gaodu" disabled />
+            <i class="mdui-switch-icon"></i>
+        </label>
+        &ensp; 高<br>
+        <p class="mdui-typo-caption-opacity">快速版无法进行高抽象度转换</p>
+
+        <b>皮肤选择:</b><br>爷现在是：
+        <select id="skinSel" class="mdui-select" mdui-select>
+            <option value="0">👴</option>
+            <option value="1">👴🏻</option>
+            <option value="2">👴🏼</option>
+            <option value="3">👴🏽</option>
+            <option value="4">👴🏾</option>
+            <option value="5">👴🏿</option>
+            <option value="6">🎅</option>
+            <option value="7">👽</option>
+        </select>
+        <br>
+
+        <b>杂项:</b><br>
+        <label id="checkbox-1" class="mdui-checkbox">
+            <input type="checkbox" id="checkda" />
+            <i class="mdui-checkbox-icon"></i>
+            将所有“大”转换为“带”
+        </label><br>
+        <label class="mdui-checkbox">
+            <input type="checkbox" id="checkai" />
+            <i class="mdui-checkbox-icon"></i>
+            "爱"转化为"i"，而不是"💓"
+        </label><br>
+        <label class="mdui-checkbox">
+            <input type="checkbox" id="checkye" />
+            <i class="mdui-checkbox-icon"></i>
+            "我"转化为"👴"
+        </label><br>
+        <label class="mdui-checkbox" onclick="livere()">
+            <input type="checkbox" id="checklook" />
+            <i class="mdui-checkbox-icon"></i>
+            如果发现转换后的结果缺字或乱码，请选中这个
+        </label>
+    </div>
+
+    <div class="mdui-container">
+        <button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent mdui-col-xs-2 mdui-col-offset-xs-9"
+            id="up" mdui-dialog="{target: '#e'}">给👴转</button>
+    </div>
+    <div class="mdui-dialog" id="e">
+        <div class="mdui-dialog-title">抽象结果</div>
+        <div class="mdui-dialog-content" style="overflow-wrap: break-word;" id='res'>
+            <p id="te">出现错误，请重试</p>
+            <div id="p2" style="display: none;">
+                <div class="mdui-spinner mdui-spinner-colorful"></div>
+                正在加载，请稍后...
+            </div>
+        </div>
+        <div class="mdui-dialog-actions">
+            <button class="mdui-btn mdui-ripple" mdui-dialog-close>取消</button>
+            <button id="copy" class="btn mdui-btn mdui-ripple" data-clipboard-text="" mdui-dialog-confirm>复制</button>
+        </div>
+    </div>
+
+    <footer class="mdui-center mdui-text-center">
+        <div class="mdui-typo-caption-opacity">
+            <a href="./index.html">标准版</a><br>
+            原作者地址: https://github.com/gaowanliang/NMSL
+        </div>
+    </footer>
+
+    <script src="//cdnjs.loli.net/ajax/libs/mdui/0.4.3/js/mdui.min.js"></script>
+    <script src="https://cdn.bootcss.com/clipboard.js/2.0.1/clipboard.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/gh/sxei/pinyinjs/dict/pinyin_dict_withtone.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/gh/sxei/pinyinjs/dict/pinyin_dict_polyphone.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/sxei/pinyinjs/pinyinUtil.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script src='https://cdn.jsdelivr.net/gh/kb1000fx/ResBackup/NMSL/js/segmentCXH.min.js'></script>
+    <script src="https://cdn.jsdelivr.net/gh/kb1000fx/ResBackup/NMSL/js/emoji-regex.js"></script>
+    <script type="text/javascript" src="./src/js/fast.js"></script>
+
+</body>
+
+</html>
 
 </div>
     </main>
@@ -166,7 +286,7 @@
     
     <button id="gotop" class="mdui-fab mdui-fab-fixed mdui-fab-hide mdui-ripple mdui-color-teal"><i class="mdui-icon material-icons">arrow_upward</i></button>
     
-    <script async src="http://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
     
     
 <script src="/js/mdui.js"></script>
