@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>小蜗熊的蜂蜜罐</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <script>if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href="https://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); </script>
+    
+    
+<link rel="stylesheet" href="/css/mdui.css">
+<link rel="stylesheet" href="/css/main.css">
+
+    
+<link rel="stylesheet" href="//lib.baomitu.com/font-awesome/5.11.2/css/all.min.css">
+
+
+    
+    
+    <title>真空光速推导 | 小蜗熊的蜂蜜罐</title>
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-primary-blue-grey mdui-theme-accent-blue">
+    
+    <header class="mdui-appbar mdui-appbar-fixed">
+  <div id="toolbar" class="mdui-toolbar mdui-color-theme">
+    <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#sidebar', swipe: true}"><i class="mdui-icon material-icons">menu</i></a>
+    <a href="/" class="mdui-typo-headline">小蜗熊的蜂蜜罐</a>
+    <div class="mdui-toolbar-spacer"></div>
+    <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-dialog="{target: '#search'}" mdui-tooltip="{content: 'search'}"><i class="mdui-icon material-icons">search</i></a>
+  </div>
+</header>
+
+<div class="mdui-dialog" id="search">
+  
+    <div class="search-form">
+      <input type="search" class="search-form-input" placeholder="请输入关键字">
+    </div>
+    <div class="search-result" data-resource="/search.xml"></div>
+  
+</div>
+
+    <aside id="sidebar" class="mdui-drawer">
+    <div class="mdui-tab" mdui-tab>
+        <a href="#sidebar-tab1" id="sidebartab" class="mdui-ripple mdui-tab-active">导航</a>
+        <a href="#sidebar-tab2" id="sidebartab" class="mdui-ripple">站点概览</a>
+    </div>
+
+    
+    <div id="sidebar-tab1" class="mdui-p-a-2">
+        <div class="mdui-list">
+            
+                
+                <a href="/" class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons">home</i>
+                    <div class="mdui-list-item-content">主页</div>
+                </a>
+            
+                
+                <a href="/tags/" class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons">bookmark</i>
+                    <div class="mdui-list-item-content">标签</div>
+                </a>
+            
+                
+                <a href="/categories/" class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons">folder</i>
+                    <div class="mdui-list-item-content">分类</div>
+                </a>
+            
+                
+                <a href="/archives/" class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons">archive</i>
+                    <div class="mdui-list-item-content">归档</div>
+                </a>
+            
+                
+                <a href="/NMSL/" class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons">attach_money</i>
+                    <div class="mdui-list-item-content">抽象话转换器</div>
+                </a>
+            
+                
+                <a href="/sitemap.xml" class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons">map</i>
+                    <div class="mdui-list-item-content">站点地图</div>
+                </a>
+            
+            <div class="mdui-list-item mdui-ripple">
+                <i class="mdui-list-item-icon mdui-icon material-icons">brightness_2</i>
+                <div class="mdui-list-item-content">夜间模式</div>
+                <label class="mdui-switch" id="darkmode">
+                  <input type="checkbox" id="nightmode_switch"/>
+                  <i class="mdui-switch-icon"></i>
+                </label>
+            </div>           
+        </div>
+    </div>
+
+    
+    <div id="sidebar-tab2" class="mdui-p-a-2">
+        <div class="sidebar-avatar">
+            <img src="/images/avatar.jpg"/>
+            <p class="sidebar-author-name">机智小蜗熊</p>
+            <p class="sidebar-description">有害辣鸡</p>
+        </div>
+
+        <div class="sidebar-links">
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="fab fa-github"></i></span>
+                    <a href="https://github.com/kb1000fx" target="_blank" rel="noopener" class="mdui-chip-title">GitHub</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="fab fa-steam"></i></span>
+                    <a href="https://steamcommunity.com/profiles/76561198346798163" target="_blank" rel="noopener" class="mdui-chip-title">Steam</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="fas fa-envelope"></i></span>
+                    <a href="mailto:kb1000fx@gmail.com" class="mdui-chip-title">E-Mail</a>
+                </div>
+            
+        </div>
+    </div>
+
+    <div class="mdui-divider"></div>
+    
+    
+    
+        <div class="adsense-contain">
+            侧边栏广告
+        </div>
+    
+    
+</aside>
+    
+    <main id="main-contain" class="mdui-container mdui-m-t-5">
+      <article id="article" class="mdui-card mdui-p-a-2 mdui-m-b-5">
+  
+  
+    
+      <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": { 
+        preferredFont: "TeX", 
+        availableFonts: ["STIX","TeX"], 
+        linebreaks: { automatic:true }, 
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) 
+    },
+    tex2jax: { 
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ], 
+        processEscapes: true, 
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {  
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, 
+        Macros: { href: "{}" } 
+    },
+    messageStyle: "none"
+    }); 
+</script>
+<!-- 给MathJax元素添加has-jax class -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<!-- 通过连接CDN加载MathJax的js代码 -->
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+    
+  
+
+  <header class="mdui-card-media">
+    
+    
+      
+        <img src = ../images/58552/lightspeed.png >
+      
+      <div class="mdui-card-media-covered">
+        <div class="post-header"> 
+  <a class="post-header-title" href="/t-58552/">真空光速推导</a>
+  <div class="post-header-meta">
+    <span>
+      <i class="fa fa-calendar"></i>
+      发布于:&nbsp;2019-08-17
+    </span>
+    <span>
+      <i class="fa fa-calendar-check"></i>
+      更新于:&nbsp;2020-02-10
+    </span>
+    <span>
+      <i class="fa fa-folder"></i>
+      分类于:&nbsp;<a class="category-link" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a>
+    </span>
+  </div>
+</div>   
+    
+
+
+
+      </div>
+    
+      
+    
+    <div class="mdui-card-menu">
+    
+      <button class="mdui-btn mdui-btn-icon mdui-text-color-teal" mdui-menu="{target: '#share_menu', align: 'right'}"><i class="mdui-icon material-icons">share</i></button>
+      <ul class="mdui-menu" id="share_menu">
+        <li class="mdui-menu-item">
+          <a href="http://service.weibo.com/share/share.php?appkey=&title=真空光速推导&url=https://garybear.cn/t-58552/&pic=https://garybear.cn/images/favicon.png&searchPic=false&style=simple" target="_blank" class="mdui-ripple">分享到 Weibo</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://twitter.com/intent/tweet?text=真空光速推导&url=https://garybear.cn/t-58552/&via=机智小蜗熊" target="_blank" class="mdui-ripple">分享到 Twitter</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://garybear.cn/t-58552/" target="_blank" class="mdui-ripple">分享到 Facebook</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://plus.google.com/share?url=https://garybear.cn/t-58552/" target="_blank" class="mdui-ripple">分享到 Google+</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://garybear.cn/t-58552/&title=真空光速推导" target="_blank" class="mdui-ripple">分享到 LinkedIn</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="http://connect.qq.com/widget/shareqq/index.html?site=小蜗熊的蜂蜜罐&title=真空光速推导&summary=有害辣鸡&pics=https://garybear.cn/images/favicon.png&url=https://garybear.cn/t-58552/" target="_blank" class="mdui-ripple">分享到 QQ</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://telegram.me/share/url?url=https://garybear.cn/t-58552/&text=真空光速推导" target="_blank" class="mdui-ripple">分享到 Telegram</a>
+        </li>
+      </ul>
+    
+  </div>
+  </header>
+
+  
+  
+    <div class="adsense-contain">
+      页首广告
+    </div>
+  
+
+  
+  
+
+  <div class="mdui-card-content mdui-typo">
+    <h1 id="预备知识"><a href="#预备知识" class="headerlink" title="预备知识"></a>预备知识</h1><h2 id="真空中的麦克斯韦方程组"><a href="#真空中的麦克斯韦方程组" class="headerlink" title="真空中的麦克斯韦方程组"></a>真空中的麦克斯韦方程组</h2><p><strong>关于麦克斯韦方程组的积分及微分形式推导参见上一篇：<a href="https://garybear.cn/t-44074/">麦克斯韦方程组的推导及形式转换</a></strong><br>真空中的麦克斯韦方程组需进行相应的修正，即:</p>
+<ul>
+<li>空间内净电荷数为0</li>
+<li>空间内无传导电流，磁场仅由位移电流产生</li>
+</ul>
+<h2 id="Nabla算子与Laplace算子"><a href="#Nabla算子与Laplace算子" class="headerlink" title="Nabla算子与Laplace算子"></a>Nabla算子与Laplace算子</h2><p>Nabla算子：</p>
+<p>$$\nabla = grand = \frac{\partial }{\partial x} \vec{i} + \frac{\partial }{\partial y} \vec{j} + \frac{\partial }{\partial z} \vec{k} $$</p>
+<p>Laplace算子：</p>
+<p>$$ \Delta = \nabla^2 = \nabla \cdot \nabla = div(grand) = \frac{\partial^2 }{\partial x^2} + \frac{\partial^2 }{\partial y^2} + \frac{\partial^2 }{\partial z^2} $$</p>
+<p>对于标量场：</p>
+<p>$$ \nabla^2 f = \nabla \cdot ( \nabla f) = \frac{\partial^2 f }{\partial x^2 } + \frac{\partial^2 f}{\partial y^2} + \frac{\partial^2 f}{\partial z^2} $$</p>
+<p>对于矢量场：</p>
+<p>$$ \nabla^2 \vec{F} = \nabla \cdot ( \nabla \vec{F}) = (\nabla^2 F_x) \vec{i} + (\nabla^2 F_y) \vec{j} + (\nabla^2 F_z0) \vec{k} $$</p>
+<p>运算法则：</p>
+<p>$$ \nabla \times ( \nabla \times \vec{f} ) =\nabla ( \nabla \cdot \vec{f} ) - \nabla^2 \vec{f} $$</p>
+<h1 id="由微分形式推导真空光速"><a href="#由微分形式推导真空光速" class="headerlink" title="由微分形式推导真空光速"></a>由微分形式推导真空光速</h1><h2 id="真空中的修正形式"><a href="#真空中的修正形式" class="headerlink" title="真空中的修正形式"></a>真空中的修正形式</h2><p>真空中的麦克斯韦方程组微分形式：</p>
+<p>$$ \nabla \cdot \vec{E}=0\tag{1} $$</p>
+<p>$$ \nabla \cdot \vec{B}=0 \tag{2} $$</p>
+<p>$$ \nabla \times \vec{E} = -\frac{\partial \vec{B}}{\partial t} \tag{3} $$</p>
+<p>$$ \nabla \times \vec{B} = \mu_0 \varepsilon_0 \frac{\partial \vec{E}}{\partial t} \tag{4} $$</p>
+<h2 id="推导过程"><a href="#推导过程" class="headerlink" title="推导过程"></a>推导过程</h2><p>$$ \nabla \times ( \nabla \times \vec{E} ) = -\nabla \times \frac{\partial \vec{B}}{\partial t} = \frac{\partial }{\partial t} (\nabla \times \vec{B}) = -\mu_0 \varepsilon_0 \frac{\partial^2 \vec{E}}{\partial t^2} \tag{5} $$</p>
+<p>由$\nabla$算子的运算法则可知：</p>
+<p>$$ \nabla \times ( \nabla \times \vec{E} ) =\nabla ( \nabla \cdot \vec{E} ) - \nabla^2 \vec{E} \tag{6} $$</p>
+<p>联立(1)、(5)、(6)式可得：</p>
+<p>$$\nabla^2 \vec{E} = \mu_0 \varepsilon_0 \frac{\partial^2 \vec{E}}{\partial t^2} $$</p>
+<p>同理可得：</p>
+<p>$$\nabla^2 \vec{B} = \mu_0 \varepsilon_0 \frac{\partial^2 \vec{B}}{\partial t^2} $$</p>
+<p>设一电磁波沿X轴方向传播，则电场、磁场方向分别为Y、Z轴方向，可得两方程，即单向传播时的<strong>麦克斯韦波动方程</strong>：</p>
+<p>$$\frac{\partial^2 E_y}{\partial x^2} = \mu_0 \varepsilon_0 \frac{\partial^2 E_y}{\partial t^2}$$</p>
+<p>$$\frac{\partial^2 B_z}{\partial x^2} = \mu_0 \varepsilon_0 \frac{\partial^2 B_z}{\partial t^2}$$</p>
+<p>这里以其中电场的方程为例，使用磁场方程可以得到同样的结果：</p>
+<p>$$<br>\begin{split}<br>  \frac{\partial^2 E_y}{\partial t^2} &amp;= \frac{\partial^2 E_y}{\partial x^2} \cdot \frac{x^2}{t^2}<br>  \\<br>  &amp;= \frac{\partial^2 E_y}{\partial x^2} \cdot c^2<br>  \\<br>  &amp;= \frac{1}{\mu_0 \varepsilon_0} \cdot \frac{\partial^2 E_y}{\partial x^2}<br>\end{split}<br>$$</p>
+<p>整理可得：</p>
+<p>$$c^2 = \frac{x^2}{t^2} = \frac{1}{\mu_0 \varepsilon_0} $$</p>
+<p>最终得到真空中光速的表达形式为：</p>
+<p>$$c=\frac{1}{\sqrt{\mu_0 \varepsilon_0}}$$</p>
+<h1 id="由积分形式推导真空光速"><a href="#由积分形式推导真空光速" class="headerlink" title="由积分形式推导真空光速"></a>由积分形式推导真空光速</h1><h2 id="真空中的修正形式-1"><a href="#真空中的修正形式-1" class="headerlink" title="真空中的修正形式"></a>真空中的修正形式</h2><p>真空中的麦克斯韦方程组积分形式：</p>
+<p>$$ \oint_{S} \vec{E} \cdot d\vec{S}= 0 \tag{7} $$</p>
+<p>$$ \oint_{S} \vec{B} \cdot d\vec{S}= 0 \tag{8} $$</p>
+<p>$$ \oint_{l} \vec{E} \cdot d\vec{l}= - \iint_{S} \frac{\partial \vec{B}}{\partial t} \cdot d\vec{S} \tag{9} $$</p>
+<p>$$ \oint_{l} \vec{B} \cdot d\vec{l}= \mu_0 \varepsilon_0 \iint_{S} \frac{\partial \vec{E}}{\partial t} \cdot d\vec{S} \tag{10}$$</p>
+<h2 id="推导过程-1"><a href="#推导过程-1" class="headerlink" title="推导过程"></a>推导过程</h2><p>设电磁波沿X轴方向传播，则电场方向为Y轴方向，磁场方向为Z轴方向。</p>
+<p>在$xOy$平面内取一矩形回路，设其中一顶点坐标为$(x,y,0)$，回路的长、宽分别为$\Delta x 、\Delta y$。<br>对其应用法拉第电磁感应定律可得：</p>
+<p>$$ \oint_{l} \vec{E} \cdot d\vec{l}= - \iint_{S} \frac{\partial \vec{B}}{\partial t} \cdot d\vec{S} = - \frac{\partial B_z}{\partial t} \Delta x \Delta y \tag{11} $$</p>
+<p>对电场强度的环路积分应用泰勒公式：</p>
+<p>$$<br>\begin{equation}<br>\begin{split}<br>  \oint_{l} \vec{E} \cdot d\vec{l} &amp;= E_y(x+ \Delta x) \Delta y - E_y(x) \Delta y<br>  \\<br>  &amp;= \left [ E_y(x) + \frac{\partial E_y}{\partial x} \Delta x + o(\Delta x)^2 \right ] \cdot \Delta y - E_y(x) \Delta y<br>  \\<br>  &amp;= \frac{\partial E_y}{\partial x} \Delta x \Delta y<br>\end{split}<br>\tag{12}<br>\end{equation}<br>$$</p>
+<p>整理(11)、(12)二式可得：</p>
+<p>$$\frac{\partial E_y}{\partial x} \Delta x \Delta y =  - \frac{\partial B_z}{\partial t} \Delta x \Delta y$$</p>
+<p>消去$\Delta x \Delta y$后即：</p>
+<p>$$ \frac{\partial E_y}{\partial x} =  - \frac{\partial B_z}{\partial t} \tag{13} $$</p>
+<p>在$xOz$平面内再取一矩形回路，设其中一顶点坐标为$(x,y,0)$，回路的长、宽分别为$\Delta x 、\Delta y$。<br>对其应用全电流定律可得：</p>
+<p>$$ \oint_{l} \vec{B} \cdot d\vec{l} = \mu_0 \varepsilon_0  \iint_{S} \frac{\partial \vec{E}}{\partial t} \cdot d\vec{S} = \mu_0 \varepsilon_0 \frac{\partial E_y}{\partial t} \Delta x \Delta z $$</p>
+<p>依照上文中的方式对磁场强度的环路积分应用泰勒公式并进行整理，可得：</p>
+<p>$$ - \frac{\partial B_z}{\partial x} =  \mu_0 \varepsilon_0 \frac{\partial E_y}{\partial t} \tag{14}$$</p>
+<p>由偏微分的性质可得：</p>
+<p>$$ \frac{\partial}{\partial t} \left (\frac{\partial B_z}{\partial x} \right ) = \frac{\partial}{\partial x} \left (\frac{\partial B_z}{\partial t} \right ) $$</p>
+<p>带入(13)、(14)式可得：</p>
+<p>$$ \frac{\partial}{\partial t} \left (-\mu_0 \varepsilon_0 \frac{\partial E_y}{\partial t} \right ) = \frac{\partial}{\partial x} \left (-\frac{\partial E_z}{\partial x} \right ) $$</p>
+<p>整理后可得：</p>
+<p>$$\frac{\partial^2 E_y}{\partial x^2} = \mu_0 \varepsilon_0 \frac{\partial^2 E_y}{\partial t^2} \tag{15} $$</p>
+<p>同理，换用$E_y$的偏微分性质可得：</p>
+<p>$$\frac{\partial^2 B_z}{\partial x^2} = \mu_0 \varepsilon_0 \frac{\partial^2 B_z}{\partial t^2} \tag{16}$$</p>
+<p><strong>(15)、(16)式即第二节中所说的单向传播时的麦克斯韦波动方程</strong></p>
+<p>之后的计算过程与第二节微分形式时完全相同，在方程一侧凑出光速的平方$c^2$再消掉相同项，这里补充一下使用磁场方程的例子：</p>
+<p>$$<br>\begin{split}<br>  \frac{\partial^2 B_z}{\partial t^2} &amp;= \frac{\partial^2 B_z}{\partial x^2} \cdot \frac{x^2}{t^2}<br>  \\<br>  &amp;= \frac{\partial^2 E_y}{\partial x^2} \cdot c^2<br>  \\<br>  &amp;= \frac{1}{\mu_0 \varepsilon_0} \cdot \frac{\partial^2 E_y}{\partial x^2}<br>\end{split}<br>$$</p>
+<p>整理可得：</p>
+<p>$$c^2 = \frac{x^2}{t^2} = \frac{1}{\mu_0 \varepsilon_0} $$</p>
+<p>最终得到真空中光速的表达形式为：</p>
+<p>$$c=\frac{1}{\sqrt{\mu_0 \varepsilon_0}}$$</p>
+
+  </div>
+  
+  <!--文末结束语-->
+  
+    <div style="text-align:center;color: #ccc;font-size:24px;"> --- 本文结束 <i class="fa fa-heartbeat"></i> The End --- </div>
+  
+  
+  <!--页脚广告-->
+  
+    <div class="adsense-contain">
+      页脚广告
+    </div>
+  
+
+  <div class="mdui-divider-inset"></div>
+
+  
+  <nav >
+    
+      <a rel="prev" class="post-nav-item mdui-float-left" href="/t-12400/">
+        <i class="fa fa-chevron-left"></i>
+        <span>手枪单动双动区别</span>
+      </a>
+    
+    
+      <a rel="next" class="post-nav-item mdui-float-right" href="/t-2023/">
+        <span>光猫改桥接及双路由器的两种接法</span>
+        <i class="fa fa-chevron-right"></i>
+      </a>
+    
+  </nav>
+</article>
+
+
+
+
+  <div class="toc-button">
+    <button class="mdui-fab mdui-ripple mdui-color-teal" mdui-menu="{target: '#toc'}"><i class="mdui-icon material-icons">format_list_numbered</i></button>
+    <ul class="mdui-menu" id="toc">
+      <li class="mdui-menu-item">
+        <a href="/t-58552/" id="toc-header" class="mdui-ripple">文章目录</a>
+
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#预备知识"><span class="toc-number">1.</span> <span class="toc-text">预备知识</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#真空中的麦克斯韦方程组"><span class="toc-number">1.1.</span> <span class="toc-text">真空中的麦克斯韦方程组</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Nabla算子与Laplace算子"><span class="toc-number">1.2.</span> <span class="toc-text">Nabla算子与Laplace算子</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#由微分形式推导真空光速"><span class="toc-number">2.</span> <span class="toc-text">由微分形式推导真空光速</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#真空中的修正形式"><span class="toc-number">2.1.</span> <span class="toc-text">真空中的修正形式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#推导过程"><span class="toc-number">2.2.</span> <span class="toc-text">推导过程</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#由积分形式推导真空光速"><span class="toc-number">3.</span> <span class="toc-text">由积分形式推导真空光速</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#真空中的修正形式-1"><span class="toc-number">3.1.</span> <span class="toc-text">真空中的修正形式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#推导过程-1"><span class="toc-number">3.2.</span> <span class="toc-text">推导过程</span></a></li></ol></li></ol>
+      </li>
+    </ul>
+  </div>
+
+
+
+
+  <div id="comment" class="mdui-card mdui-p-a-2 mdui-m-b-5">
+    <div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+  var gitalk = new Gitalk({
+    clientID: 'f3866882707e12e74c4a',
+    clientSecret: '04a037afee00b94e4b55e474aa270ac136a8c952',
+    repo: 'kb1000fx.github.io',
+    owner: 'kb1000fx',
+    admin: ['kb1000fx'],
+    id: '' || location.pathname,
+    distractionFreeMode: 'true',
+  });
+  gitalk.render('gitalk-container');
+</script>
+  </div>
+
+    </main>
+    <footer id="footer" class="mdui-m-t-5 mdui-p-y-3 mdui-color-theme">
+  <div class="mdui-p-y-1 mdui-text-center">
+    Copyright &copy; 2015 - 2020 机智小蜗熊<br>
+    Powered by <a href="https://hexo.io/" target="_blank" class="mdui-text-color-theme-accent">Hexo</a>
+    <br>
+      <span id="busuanzi_container_site_uv" style="display: none;"><i class="mdui-icon material-icons">&#xe7fd;</i> <span id="busuanzi_value_site_uv"></span></span>
+      <span id="busuanzi_container_site_pv" style="display: none;"><i class="mdui-icon material-icons">&#xe417;</i> <span id="busuanzi_value_site_pv"></span></span> &nbsp;&nbsp;
+      
+    
+  </div>
+</footer>
+    
+    <button id="gotop" class="mdui-fab mdui-fab-fixed mdui-fab-hide mdui-ripple mdui-color-teal"><i class="mdui-icon material-icons">arrow_upward</i></button>
+    
+    <script async src="http://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+    
+<script src="/js/mdui.js"></script>
+<script src="/js/meadow.js"></script>
+
+</body>
+</html >

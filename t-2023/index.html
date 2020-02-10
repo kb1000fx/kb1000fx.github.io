@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>小蜗熊的蜂蜜罐</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <script>if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href="https://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); </script>
+    
+    
+<link rel="stylesheet" href="/css/mdui.css">
+<link rel="stylesheet" href="/css/main.css">
+
+    
+<link rel="stylesheet" href="//lib.baomitu.com/font-awesome/5.11.2/css/all.min.css">
+
+
+    
+    
+    <title>光猫改桥接及双路由器的两种接法 | 小蜗熊的蜂蜜罐</title>
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-primary-blue-grey mdui-theme-accent-blue">
+    
+    <header class="mdui-appbar mdui-appbar-fixed">
+  <div id="toolbar" class="mdui-toolbar mdui-color-theme">
+    <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#sidebar', swipe: true}"><i class="mdui-icon material-icons">menu</i></a>
+    <a href="/" class="mdui-typo-headline">小蜗熊的蜂蜜罐</a>
+    <div class="mdui-toolbar-spacer"></div>
+    <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-dialog="{target: '#search'}" mdui-tooltip="{content: 'search'}"><i class="mdui-icon material-icons">search</i></a>
+  </div>
+</header>
+
+<div class="mdui-dialog" id="search">
+  
+    <div class="search-form">
+      <input type="search" class="search-form-input" placeholder="请输入关键字">
+    </div>
+    <div class="search-result" data-resource="/search.xml"></div>
+  
+</div>
+
+    <aside id="sidebar" class="mdui-drawer">
+    <div class="mdui-tab" mdui-tab>
+        <a href="#sidebar-tab1" id="sidebartab" class="mdui-ripple mdui-tab-active">导航</a>
+        <a href="#sidebar-tab2" id="sidebartab" class="mdui-ripple">站点概览</a>
+    </div>
+
+    
+    <div id="sidebar-tab1" class="mdui-p-a-2">
+        <div class="mdui-list">
+            
+                
+                <a href="/" class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons">home</i>
+                    <div class="mdui-list-item-content">主页</div>
+                </a>
+            
+                
+                <a href="/tags/" class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons">bookmark</i>
+                    <div class="mdui-list-item-content">标签</div>
+                </a>
+            
+                
+                <a href="/categories/" class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons">folder</i>
+                    <div class="mdui-list-item-content">分类</div>
+                </a>
+            
+                
+                <a href="/archives/" class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons">archive</i>
+                    <div class="mdui-list-item-content">归档</div>
+                </a>
+            
+                
+                <a href="/NMSL/" class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons">attach_money</i>
+                    <div class="mdui-list-item-content">抽象话转换器</div>
+                </a>
+            
+                
+                <a href="/sitemap.xml" class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons">map</i>
+                    <div class="mdui-list-item-content">站点地图</div>
+                </a>
+            
+            <div class="mdui-list-item mdui-ripple">
+                <i class="mdui-list-item-icon mdui-icon material-icons">brightness_2</i>
+                <div class="mdui-list-item-content">夜间模式</div>
+                <label class="mdui-switch" id="darkmode">
+                  <input type="checkbox" id="nightmode_switch"/>
+                  <i class="mdui-switch-icon"></i>
+                </label>
+            </div>           
+        </div>
+    </div>
+
+    
+    <div id="sidebar-tab2" class="mdui-p-a-2">
+        <div class="sidebar-avatar">
+            <img src="/images/avatar.jpg"/>
+            <p class="sidebar-author-name">机智小蜗熊</p>
+            <p class="sidebar-description">有害辣鸡</p>
+        </div>
+
+        <div class="sidebar-links">
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="fab fa-github"></i></span>
+                    <a href="https://github.com/kb1000fx" target="_blank" rel="noopener" class="mdui-chip-title">GitHub</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="fab fa-steam"></i></span>
+                    <a href="https://steamcommunity.com/profiles/76561198346798163" target="_blank" rel="noopener" class="mdui-chip-title">Steam</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="fas fa-envelope"></i></span>
+                    <a href="mailto:kb1000fx@gmail.com" class="mdui-chip-title">E-Mail</a>
+                </div>
+            
+        </div>
+    </div>
+
+    <div class="mdui-divider"></div>
+    
+    
+    
+        <div class="adsense-contain">
+            侧边栏广告
+        </div>
+    
+    
+</aside>
+    
+    <main id="main-contain" class="mdui-container mdui-m-t-5">
+      <article id="article" class="mdui-card mdui-p-a-2 mdui-m-b-5">
+  
+  
+    
+  
+
+  <header class="mdui-card-media">
+    
+    
+      <div class="post-header"> 
+  <a class="post-header-title" href="/t-2023/">光猫改桥接及双路由器的两种接法</a>
+  <div class="post-header-meta">
+    <span>
+      <i class="fa fa-calendar"></i>
+      发布于:&nbsp;2019-08-16
+    </span>
+    <span>
+      <i class="fa fa-calendar-check"></i>
+      更新于:&nbsp;2020-02-10
+    </span>
+    <span>
+      <i class="fa fa-folder"></i>
+      分类于:&nbsp;<a class="category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a> > <a class="category-link" href="/categories/%E6%8A%80%E6%9C%AF/%E7%BD%91%E7%BB%9C%E7%A1%AC%E4%BB%B6/">网络硬件</a>
+    </span>
+  </div>
+</div>   
+    
+
+
+
+    
+      
+    
+    <div class="mdui-card-menu">
+    
+      <button class="mdui-btn mdui-btn-icon mdui-text-color-teal" mdui-menu="{target: '#share_menu', align: 'right'}"><i class="mdui-icon material-icons">share</i></button>
+      <ul class="mdui-menu" id="share_menu">
+        <li class="mdui-menu-item">
+          <a href="http://service.weibo.com/share/share.php?appkey=&title=光猫改桥接及双路由器的两种接法&url=https://garybear.cn/t-2023/&pic=https://garybear.cn/images/favicon.png&searchPic=false&style=simple" target="_blank" class="mdui-ripple">分享到 Weibo</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://twitter.com/intent/tweet?text=光猫改桥接及双路由器的两种接法&url=https://garybear.cn/t-2023/&via=机智小蜗熊" target="_blank" class="mdui-ripple">分享到 Twitter</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://garybear.cn/t-2023/" target="_blank" class="mdui-ripple">分享到 Facebook</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://plus.google.com/share?url=https://garybear.cn/t-2023/" target="_blank" class="mdui-ripple">分享到 Google+</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://garybear.cn/t-2023/&title=光猫改桥接及双路由器的两种接法" target="_blank" class="mdui-ripple">分享到 LinkedIn</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="http://connect.qq.com/widget/shareqq/index.html?site=小蜗熊的蜂蜜罐&title=光猫改桥接及双路由器的两种接法&summary=有害辣鸡&pics=https://garybear.cn/images/favicon.png&url=https://garybear.cn/t-2023/" target="_blank" class="mdui-ripple">分享到 QQ</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://telegram.me/share/url?url=https://garybear.cn/t-2023/&text=光猫改桥接及双路由器的两种接法" target="_blank" class="mdui-ripple">分享到 Telegram</a>
+        </li>
+      </ul>
+    
+  </div>
+  </header>
+
+  
+  
+    <div class="adsense-contain">
+      页首广告
+    </div>
+  
+
+  
+  
+
+  <div class="mdui-card-content mdui-typo">
+    <h1 id="联通光猫改桥接模式"><a href="#联通光猫改桥接模式" class="headerlink" title="联通光猫改桥接模式"></a>联通光猫改桥接模式</h1><h2 id="管理员登录页面与管理员密码"><a href="#管理员登录页面与管理员密码" class="headerlink" title="管理员登录页面与管理员密码"></a>管理员登录页面与管理员密码</h2><p>管理员登录页面一般不固定，可能会在<code>192.168.1.1</code>上直接列出管理员账户，如果没有直接显示可以尝试<code>192.168.1.1/login.htm</code> 、 <code>192.168.1.1/cu.htm</code>等页面。</p>
+<p>联通光猫的超级密码一般比较固定，已验证多地的默认密码均为：<code>CUAdmin</code></p>
+<h2 id="桥接步骤"><a href="#桥接步骤" class="headerlink" title="桥接步骤"></a>桥接步骤</h2><p><img src="../images/2023/OM-bridge.png" alt="OM-bridge"></p>
+<p>登录光猫的管理界面，在已有连接中选择<code>INTERNET</code>一项(全称会和图中的不一样)，记录下其中的<code>VLanID</code>，通常情况下连接名称后的数字也是<code>VLanID</code>。</p>
+<p>桥接后需要在路由器或电脑上输入宽带账号和密码来拨号，如果记不清了可以找到含有账号信息的页面(如：<a href="http://192.168.1.1/Rapid.htm)，查看网页源代码并从中找到未加密的密码。" target="_blank" rel="noopener">http://192.168.1.1/Rapid.htm)，查看网页源代码并从中找到未加密的密码。</a></p>
+<p>准备完成后将光猫中的路由模式(Route)改为桥接模式(Bridge)后保存即可。随后将路由器WAN口连至光猫，并在路由器上进行拨号，此时光猫只负责光电信号转换。</p>
+<h2 id="桥接后如何登录光猫"><a href="#桥接后如何登录光猫" class="headerlink" title="桥接后如何登录光猫"></a>桥接后如何登录光猫</h2><p>最简单的方法是在桥接的时候保留光猫的WiFi不要关闭它，这样需要连接光猫的时候只需连到光猫的WiFi即可。</p>
+<p>如果不想保留光猫的WiFi，可以在需要访问的时候将电脑直接用网线与光猫相连，同时将电脑IP改为光猫的统一区段（192.168.1.xxx），此时电脑和光猫处于同一局域网内，可以进行访问。</p>
+<p>如果需要更简便的方式，如直接通过手机或电脑连接路由器来访问光猫，则需要路由器的支持。<br><strong>路由器在PPPoe拨号时LAN口的所有请求都会被转发到PPPoe，所以需要建立一个虚拟WAN口并通过静态路由表将192.168.1.1的请求转发至光猫</strong></p>
+<h1 id="双路由器的WAN-LAN接法"><a href="#双路由器的WAN-LAN接法" class="headerlink" title="双路由器的WAN-LAN接法"></a>双路由器的WAN-LAN接法</h1><p>设有两个路由器A和B，WAN-LAN接法下两个路由器需要做如下配置：</p>
+<ul>
+<li>在路由器A上配置好网络环境</li>
+<li>将路由器B的LAN口IP设为与路由器A<strong>不同</strong>的C段IP</li>
+<li>将路由器B的WAN口设为自动分配IP</li>
+<li>从路由器A的LAN口引出一根线接到路由器B的WAN口</li>
+</ul>
+<p>WAN-LAN接法下B所在的局域网包含在A所在的局域网内，A、B均作为路由器使用，具有双层网络。<br>此时B路由器下的设备可以同时访问A、B两个局域网内的其他设备，而A路由器下的设备只能访问A局域网，无法访问B局域网。</p>
+<p><strong>此种接法的优点是方便管理，B路由器下的设备更加安全</strong></p>
+<h1 id="双路由器的LAN-LAN接法"><a href="#双路由器的LAN-LAN接法" class="headerlink" title="双路由器的LAN-LAN接法"></a>双路由器的LAN-LAN接法</h1><p>LAN-LAN接法配置如下：</p>
+<ul>
+<li>在路由器A上配置好网络环境</li>
+<li>将路由器B的LAN口IP设为与路由器A相同的C段IP，并关闭路由器B的DHCP功能</li>
+<li>从路由器A的LAN口引出一根线接到路由器B的LAN口</li>
+</ul>
+<p>LAN-LAN接法下路由器A和B处于同一个局域网内，此时A作为路由器使用，B作为交换机使用。<br>LAN-LAN接法下路由器A、B下接的设备可以互相访问，没有多余的一层网络，路由器B相当于完全透明的。</p>
+<p><strong>此种接法的优点是网络速度快，相对于WAN-LAN没有多余的损耗</strong></p>
+
+  </div>
+  
+  <!--文末结束语-->
+  
+    <div style="text-align:center;color: #ccc;font-size:24px;"> --- 本文结束 <i class="fa fa-heartbeat"></i> The End --- </div>
+  
+  
+  <!--页脚广告-->
+  
+    <div class="adsense-contain">
+      页脚广告
+    </div>
+  
+
+  <div class="mdui-divider-inset"></div>
+
+  
+  <nav >
+    
+      <a rel="prev" class="post-nav-item mdui-float-left" href="/t-58552/">
+        <i class="fa fa-chevron-left"></i>
+        <span>真空光速推导</span>
+      </a>
+    
+    
+      <a rel="next" class="post-nav-item mdui-float-right" href="/t-44074/">
+        <span>麦克斯韦方程组的推导及形式转换</span>
+        <i class="fa fa-chevron-right"></i>
+      </a>
+    
+  </nav>
+</article>
+
+
+
+
+  <div class="toc-button">
+    <button class="mdui-fab mdui-ripple mdui-color-teal" mdui-menu="{target: '#toc'}"><i class="mdui-icon material-icons">format_list_numbered</i></button>
+    <ul class="mdui-menu" id="toc">
+      <li class="mdui-menu-item">
+        <a href="/t-2023/" id="toc-header" class="mdui-ripple">文章目录</a>
+
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#联通光猫改桥接模式"><span class="toc-number">1.</span> <span class="toc-text">联通光猫改桥接模式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#管理员登录页面与管理员密码"><span class="toc-number">1.1.</span> <span class="toc-text">管理员登录页面与管理员密码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#桥接步骤"><span class="toc-number">1.2.</span> <span class="toc-text">桥接步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#桥接后如何登录光猫"><span class="toc-number">1.3.</span> <span class="toc-text">桥接后如何登录光猫</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#双路由器的WAN-LAN接法"><span class="toc-number">2.</span> <span class="toc-text">双路由器的WAN-LAN接法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#双路由器的LAN-LAN接法"><span class="toc-number">3.</span> <span class="toc-text">双路由器的LAN-LAN接法</span></a></li></ol>
+      </li>
+    </ul>
+  </div>
+
+
+
+
+  <div id="comment" class="mdui-card mdui-p-a-2 mdui-m-b-5">
+    <div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+  var gitalk = new Gitalk({
+    clientID: 'f3866882707e12e74c4a',
+    clientSecret: '04a037afee00b94e4b55e474aa270ac136a8c952',
+    repo: 'kb1000fx.github.io',
+    owner: 'kb1000fx',
+    admin: ['kb1000fx'],
+    id: '' || location.pathname,
+    distractionFreeMode: 'true',
+  });
+  gitalk.render('gitalk-container');
+</script>
+  </div>
+
+    </main>
+    <footer id="footer" class="mdui-m-t-5 mdui-p-y-3 mdui-color-theme">
+  <div class="mdui-p-y-1 mdui-text-center">
+    Copyright &copy; 2015 - 2020 机智小蜗熊<br>
+    Powered by <a href="https://hexo.io/" target="_blank" class="mdui-text-color-theme-accent">Hexo</a>
+    <br>
+      <span id="busuanzi_container_site_uv" style="display: none;"><i class="mdui-icon material-icons">&#xe7fd;</i> <span id="busuanzi_value_site_uv"></span></span>
+      <span id="busuanzi_container_site_pv" style="display: none;"><i class="mdui-icon material-icons">&#xe417;</i> <span id="busuanzi_value_site_pv"></span></span> &nbsp;&nbsp;
+      
+    
+  </div>
+</footer>
+    
+    <button id="gotop" class="mdui-fab mdui-fab-fixed mdui-fab-hide mdui-ripple mdui-color-teal"><i class="mdui-icon material-icons">arrow_upward</i></button>
+    
+    <script async src="http://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+    
+<script src="/js/mdui.js"></script>
+<script src="/js/meadow.js"></script>
+
+</body>
+</html >

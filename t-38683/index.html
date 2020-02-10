@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>小蜗熊的蜂蜜罐</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <script>if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href="https://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); </script>
+    
+    
+<link rel="stylesheet" href="/css/mdui.css">
+<link rel="stylesheet" href="/css/main.css">
+
+    
+<link rel="stylesheet" href="//lib.baomitu.com/font-awesome/5.11.2/css/all.min.css">
+
+
+    
+    
+    <title>达肯方程的推导过程 | 小蜗熊的蜂蜜罐</title>
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-primary-blue-grey mdui-theme-accent-blue">
+    
+    <header class="mdui-appbar mdui-appbar-fixed">
+  <div id="toolbar" class="mdui-toolbar mdui-color-theme">
+    <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#sidebar', swipe: true}"><i class="mdui-icon material-icons">menu</i></a>
+    <a href="/" class="mdui-typo-headline">小蜗熊的蜂蜜罐</a>
+    <div class="mdui-toolbar-spacer"></div>
+    <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-dialog="{target: '#search'}" mdui-tooltip="{content: 'search'}"><i class="mdui-icon material-icons">search</i></a>
+  </div>
+</header>
+
+<div class="mdui-dialog" id="search">
+  
+    <div class="search-form">
+      <input type="search" class="search-form-input" placeholder="请输入关键字">
+    </div>
+    <div class="search-result" data-resource="/search.xml"></div>
+  
+</div>
+
+    <aside id="sidebar" class="mdui-drawer">
+    <div class="mdui-tab" mdui-tab>
+        <a href="#sidebar-tab1" id="sidebartab" class="mdui-ripple mdui-tab-active">导航</a>
+        <a href="#sidebar-tab2" id="sidebartab" class="mdui-ripple">站点概览</a>
+    </div>
+
+    
+    <div id="sidebar-tab1" class="mdui-p-a-2">
+        <div class="mdui-list">
+            
+                
+                <a href="/" class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons">home</i>
+                    <div class="mdui-list-item-content">主页</div>
+                </a>
+            
+                
+                <a href="/tags/" class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons">bookmark</i>
+                    <div class="mdui-list-item-content">标签</div>
+                </a>
+            
+                
+                <a href="/categories/" class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons">folder</i>
+                    <div class="mdui-list-item-content">分类</div>
+                </a>
+            
+                
+                <a href="/archives/" class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons">archive</i>
+                    <div class="mdui-list-item-content">归档</div>
+                </a>
+            
+                
+                <a href="/NMSL/" class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons">attach_money</i>
+                    <div class="mdui-list-item-content">抽象话转换器</div>
+                </a>
+            
+                
+                <a href="/sitemap.xml" class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons">map</i>
+                    <div class="mdui-list-item-content">站点地图</div>
+                </a>
+            
+            <div class="mdui-list-item mdui-ripple">
+                <i class="mdui-list-item-icon mdui-icon material-icons">brightness_2</i>
+                <div class="mdui-list-item-content">夜间模式</div>
+                <label class="mdui-switch" id="darkmode">
+                  <input type="checkbox" id="nightmode_switch"/>
+                  <i class="mdui-switch-icon"></i>
+                </label>
+            </div>           
+        </div>
+    </div>
+
+    
+    <div id="sidebar-tab2" class="mdui-p-a-2">
+        <div class="sidebar-avatar">
+            <img src="/images/avatar.jpg"/>
+            <p class="sidebar-author-name">机智小蜗熊</p>
+            <p class="sidebar-description">有害辣鸡</p>
+        </div>
+
+        <div class="sidebar-links">
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="fab fa-github"></i></span>
+                    <a href="https://github.com/kb1000fx" target="_blank" rel="noopener" class="mdui-chip-title">GitHub</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="fab fa-steam"></i></span>
+                    <a href="https://steamcommunity.com/profiles/76561198346798163" target="_blank" rel="noopener" class="mdui-chip-title">Steam</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="fas fa-envelope"></i></span>
+                    <a href="mailto:kb1000fx@gmail.com" class="mdui-chip-title">E-Mail</a>
+                </div>
+            
+        </div>
+    </div>
+
+    <div class="mdui-divider"></div>
+    
+    
+    
+        <div class="adsense-contain">
+            侧边栏广告
+        </div>
+    
+    
+</aside>
+    
+    <main id="main-contain" class="mdui-container mdui-m-t-5">
+      <article id="article" class="mdui-card mdui-p-a-2 mdui-m-b-5">
+  
+  
+    
+      <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": { 
+        preferredFont: "TeX", 
+        availableFonts: ["STIX","TeX"], 
+        linebreaks: { automatic:true }, 
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) 
+    },
+    tex2jax: { 
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ], 
+        processEscapes: true, 
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {  
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, 
+        Macros: { href: "{}" } 
+    },
+    messageStyle: "none"
+    }); 
+</script>
+<!-- 给MathJax元素添加has-jax class -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<!-- 通过连接CDN加载MathJax的js代码 -->
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+    
+  
+
+  <header class="mdui-card-media">
+    
+    
+      
+        <img src = ../images/qiangqiang/1.png >
+      
+      <div class="mdui-card-media-covered">
+        <div class="post-header"> 
+  <a class="post-header-title" href="/t-38683/">达肯方程的推导过程</a>
+  <div class="post-header-meta">
+    <span>
+      <i class="fa fa-calendar"></i>
+      发布于:&nbsp;2019-10-11
+    </span>
+    <span>
+      <i class="fa fa-calendar-check"></i>
+      更新于:&nbsp;2020-02-10
+    </span>
+    <span>
+      <i class="fa fa-folder"></i>
+      分类于:&nbsp;<a class="category-link" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a>
+    </span>
+  </div>
+</div>   
+    
+
+
+
+      </div>
+    
+      
+    
+    <div class="mdui-card-menu">
+    
+      <button class="mdui-btn mdui-btn-icon mdui-text-color-teal" mdui-menu="{target: '#share_menu', align: 'right'}"><i class="mdui-icon material-icons">share</i></button>
+      <ul class="mdui-menu" id="share_menu">
+        <li class="mdui-menu-item">
+          <a href="http://service.weibo.com/share/share.php?appkey=&title=达肯方程的推导过程&url=https://garybear.cn/t-38683/&pic=https://garybear.cn/images/favicon.png&searchPic=false&style=simple" target="_blank" class="mdui-ripple">分享到 Weibo</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://twitter.com/intent/tweet?text=达肯方程的推导过程&url=https://garybear.cn/t-38683/&via=机智小蜗熊" target="_blank" class="mdui-ripple">分享到 Twitter</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://garybear.cn/t-38683/" target="_blank" class="mdui-ripple">分享到 Facebook</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://plus.google.com/share?url=https://garybear.cn/t-38683/" target="_blank" class="mdui-ripple">分享到 Google+</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://garybear.cn/t-38683/&title=达肯方程的推导过程" target="_blank" class="mdui-ripple">分享到 LinkedIn</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="http://connect.qq.com/widget/shareqq/index.html?site=小蜗熊的蜂蜜罐&title=达肯方程的推导过程&summary=有害辣鸡&pics=https://garybear.cn/images/favicon.png&url=https://garybear.cn/t-38683/" target="_blank" class="mdui-ripple">分享到 QQ</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://telegram.me/share/url?url=https://garybear.cn/t-38683/&text=达肯方程的推导过程" target="_blank" class="mdui-ripple">分享到 Telegram</a>
+        </li>
+      </ul>
+    
+  </div>
+  </header>
+
+  
+  
+    <div class="adsense-contain">
+      页首广告
+    </div>
+  
+
+  
+  
+
+  <div class="mdui-card-content mdui-typo">
+    <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>达肯方程描述柯肯达尔效应的一个方程，是将物质的扩散和对流全部按照扩散的形式来表示，其思路类似于全电流定律。</p>
+<h1 id="推导过程"><a href="#推导过程" class="headerlink" title="推导过程"></a>推导过程</h1><p>假设存在一个AB两组分组成的一维扩散偶，考虑对流的因素<br>根据扩散第一定律，对于成分A</p>
+<p>$$<br>J_A=J’_A + C_A \cdot v = -D_A \cdot \frac{\partial C_A}{\partial x} + C_A \cdot v  \tag{1}<br>$$</p>
+<p>取其中一个微元体，由物质守恒可得</p>
+<p>$$<br>\iint_S - \vec{J} \cdot d\vec{S} = \iint_{S} - \left ( - \vec{D}_A \cdot \frac{\partial C_A}{\partial x} + C_A \cdot \vec{v} \right ) \cdot d\vec{S} = \iiint_V \frac{\partial C_A}{\partial t} \cdot dV \tag{2}<br>$$</p>
+<p>由高斯定理可得</p>
+<p>$$<br>\iint_S \left ( \vec{D}_A \cdot \frac{\partial C_A}{\partial x} - C_A \cdot \vec{v} \right ) \cdot d \vec{S} = \iiint_V \frac{\partial}{\partial x} \left ( D_A \cdot \frac{\partial C_A}{\partial x} - C_A \cdot v \right ) \cdot dV \tag{3}<br>$$</p>
+<p>联立$(2)、(3)$二式可得</p>
+<p>$$<br>\frac{\partial C_A}{\partial t} = \frac{\partial}{\partial x} \left ( D_A \cdot \frac{\partial C_A}{\partial x} - C_A \cdot v \right ) \tag{4}<br>$$</p>
+<p>同理对于成分B可得</p>
+<p>$$<br>\frac{\partial C_B}{\partial t} = \frac{\partial}{\partial x} \left ( D_B \cdot \frac{\partial C_B}{\partial x} - C_B \cdot v \right ) \tag{5}<br>$$</p>
+<p>由于晶体内部各处成分不变，即 $C_A+C_B = const$，两边求导可得</p>
+<p>$$<br>\frac{\partial C}{\partial x} = \frac{\partial C_A}{\partial x} + \frac{\partial C_B}{\partial x} = 0 \tag{6}<br>$$</p>
+<p>将$(4)、(5)$式相加，并代入$(6)$式可得</p>
+<p>$$<br>\left ( D_A - D_B \right ) \cdot \frac{\partial C_A}{\partial x} - C \cdot v = const = 0<br>$$</p>
+<p>整理可得标记面的移动速度</p>
+<p>$$<br>v = \frac{\left ( D_A - D_B \right )}{C} \cdot \frac{\partial C_A}{\partial x} = \left ( D_A - D_B \right ) \cdot \frac{\partial{x_A}}{\partial x} \tag{7}<br>$$</p>
+<p>将$(7)$式代入$(1)$式中可得</p>
+<p>$$<br>J_A = -D_A \cdot \frac{\partial C_A}{\partial x} + C_A \cdot v = -\tilde {D} \cdot \frac{\partial C_A}{\partial x} \tag{8}<br>$$</p>
+<p>同理对于B组分有</p>
+<p>$$<br>J_B = -D_B \cdot \frac{\partial C_B}{\partial x} + C_B \cdot v = -\tilde {D} \cdot \frac{\partial C_B}{\partial x} \tag{9}<br>$$</p>
+<p>其中$\tilde {D}$是互扩散系数，联立$(6)(7)(8)(9)$式可得</p>
+<p>$$<br>\tilde {D}=\frac{C_B}{C_A+C_B} \cdot D_A + \frac{C_A}{C_A+C_B} \cdot D_B = x_B \cdot D_A + x_A \cdot D_B<br>$$</p>
+
+  </div>
+  
+  <!--文末结束语-->
+  
+    <div style="text-align:center;color: #ccc;font-size:24px;"> --- 本文结束 <i class="fa fa-heartbeat"></i> The End --- </div>
+  
+  
+  <!--页脚广告-->
+  
+    <div class="adsense-contain">
+      页脚广告
+    </div>
+  
+
+  <div class="mdui-divider-inset"></div>
+
+  
+  <nav >
+    
+      <a rel="prev" class="post-nav-item mdui-float-left" href="/t-46101/">
+        <i class="fa fa-chevron-left"></i>
+        <span>Hexo的Next主题下接入Google AdSense广告</span>
+      </a>
+    
+    
+      <a rel="next" class="post-nav-item mdui-float-right" href="/t-32304/">
+        <span>CSGO全成就指南</span>
+        <i class="fa fa-chevron-right"></i>
+      </a>
+    
+  </nav>
+</article>
+
+
+
+
+  <div class="toc-button">
+    <button class="mdui-fab mdui-ripple mdui-color-teal" mdui-menu="{target: '#toc'}"><i class="mdui-icon material-icons">format_list_numbered</i></button>
+    <ul class="mdui-menu" id="toc">
+      <li class="mdui-menu-item">
+        <a href="/t-38683/" id="toc-header" class="mdui-ripple">文章目录</a>
+
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#简介"><span class="toc-number">1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#推导过程"><span class="toc-number">2.</span> <span class="toc-text">推导过程</span></a></li></ol>
+      </li>
+    </ul>
+  </div>
+
+
+
+
+  <div id="comment" class="mdui-card mdui-p-a-2 mdui-m-b-5">
+    <div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+  var gitalk = new Gitalk({
+    clientID: 'f3866882707e12e74c4a',
+    clientSecret: '04a037afee00b94e4b55e474aa270ac136a8c952',
+    repo: 'kb1000fx.github.io',
+    owner: 'kb1000fx',
+    admin: ['kb1000fx'],
+    id: '' || location.pathname,
+    distractionFreeMode: 'true',
+  });
+  gitalk.render('gitalk-container');
+</script>
+  </div>
+
+    </main>
+    <footer id="footer" class="mdui-m-t-5 mdui-p-y-3 mdui-color-theme">
+  <div class="mdui-p-y-1 mdui-text-center">
+    Copyright &copy; 2015 - 2020 机智小蜗熊<br>
+    Powered by <a href="https://hexo.io/" target="_blank" class="mdui-text-color-theme-accent">Hexo</a>
+    <br>
+      <span id="busuanzi_container_site_uv" style="display: none;"><i class="mdui-icon material-icons">&#xe7fd;</i> <span id="busuanzi_value_site_uv"></span></span>
+      <span id="busuanzi_container_site_pv" style="display: none;"><i class="mdui-icon material-icons">&#xe417;</i> <span id="busuanzi_value_site_pv"></span></span> &nbsp;&nbsp;
+      
+    
+  </div>
+</footer>
+    
+    <button id="gotop" class="mdui-fab mdui-fab-fixed mdui-fab-hide mdui-ripple mdui-color-teal"><i class="mdui-icon material-icons">arrow_upward</i></button>
+    
+    <script async src="http://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+    
+<script src="/js/mdui.js"></script>
+<script src="/js/meadow.js"></script>
+
+</body>
+</html >

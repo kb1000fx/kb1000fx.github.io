@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>小蜗熊的蜂蜜罐</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <script>if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href="https://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); </script>
+    
+    
+<link rel="stylesheet" href="/css/mdui.css">
+<link rel="stylesheet" href="/css/main.css">
+
+    
+<link rel="stylesheet" href="//lib.baomitu.com/font-awesome/5.11.2/css/all.min.css">
+
+
+    
+    
+    <title>Hexo下插入视频的响应式布局 | 小蜗熊的蜂蜜罐</title>
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-primary-blue-grey mdui-theme-accent-blue">
+    
+    <header class="mdui-appbar mdui-appbar-fixed">
+  <div id="toolbar" class="mdui-toolbar mdui-color-theme">
+    <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#sidebar', swipe: true}"><i class="mdui-icon material-icons">menu</i></a>
+    <a href="/" class="mdui-typo-headline">小蜗熊的蜂蜜罐</a>
+    <div class="mdui-toolbar-spacer"></div>
+    <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-dialog="{target: '#search'}" mdui-tooltip="{content: 'search'}"><i class="mdui-icon material-icons">search</i></a>
+  </div>
+</header>
+
+<div class="mdui-dialog" id="search">
+  
+    <div class="search-form">
+      <input type="search" class="search-form-input" placeholder="请输入关键字">
+    </div>
+    <div class="search-result" data-resource="/search.xml"></div>
+  
+</div>
+
+    <aside id="sidebar" class="mdui-drawer">
+    <div class="mdui-tab" mdui-tab>
+        <a href="#sidebar-tab1" id="sidebartab" class="mdui-ripple mdui-tab-active">导航</a>
+        <a href="#sidebar-tab2" id="sidebartab" class="mdui-ripple">站点概览</a>
+    </div>
+
+    
+    <div id="sidebar-tab1" class="mdui-p-a-2">
+        <div class="mdui-list">
+            
+                
+                <a href="/" class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons">home</i>
+                    <div class="mdui-list-item-content">主页</div>
+                </a>
+            
+                
+                <a href="/tags/" class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons">bookmark</i>
+                    <div class="mdui-list-item-content">标签</div>
+                </a>
+            
+                
+                <a href="/categories/" class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons">folder</i>
+                    <div class="mdui-list-item-content">分类</div>
+                </a>
+            
+                
+                <a href="/archives/" class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons">archive</i>
+                    <div class="mdui-list-item-content">归档</div>
+                </a>
+            
+                
+                <a href="/NMSL/" class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons">attach_money</i>
+                    <div class="mdui-list-item-content">抽象话转换器</div>
+                </a>
+            
+                
+                <a href="/sitemap.xml" class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons">map</i>
+                    <div class="mdui-list-item-content">站点地图</div>
+                </a>
+            
+            <div class="mdui-list-item mdui-ripple">
+                <i class="mdui-list-item-icon mdui-icon material-icons">brightness_2</i>
+                <div class="mdui-list-item-content">夜间模式</div>
+                <label class="mdui-switch" id="darkmode">
+                  <input type="checkbox" id="nightmode_switch"/>
+                  <i class="mdui-switch-icon"></i>
+                </label>
+            </div>           
+        </div>
+    </div>
+
+    
+    <div id="sidebar-tab2" class="mdui-p-a-2">
+        <div class="sidebar-avatar">
+            <img src="/images/avatar.jpg"/>
+            <p class="sidebar-author-name">机智小蜗熊</p>
+            <p class="sidebar-description">有害辣鸡</p>
+        </div>
+
+        <div class="sidebar-links">
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="fab fa-github"></i></span>
+                    <a href="https://github.com/kb1000fx" target="_blank" rel="noopener" class="mdui-chip-title">GitHub</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="fab fa-steam"></i></span>
+                    <a href="https://steamcommunity.com/profiles/76561198346798163" target="_blank" rel="noopener" class="mdui-chip-title">Steam</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="fas fa-envelope"></i></span>
+                    <a href="mailto:kb1000fx@gmail.com" class="mdui-chip-title">E-Mail</a>
+                </div>
+            
+        </div>
+    </div>
+
+    <div class="mdui-divider"></div>
+    
+    
+    
+        <div class="adsense-contain">
+            侧边栏广告
+        </div>
+    
+    
+</aside>
+    
+    <main id="main-contain" class="mdui-container mdui-m-t-5">
+      <article id="article" class="mdui-card mdui-p-a-2 mdui-m-b-5">
+  
+  
+    
+  
+
+  <header class="mdui-card-media">
+    
+    
+      <div class="post-header"> 
+  <a class="post-header-title" href="/t-26113/">Hexo下插入视频的响应式布局</a>
+  <div class="post-header-meta">
+    <span>
+      <i class="fa fa-calendar"></i>
+      发布于:&nbsp;2019-11-12
+    </span>
+    <span>
+      <i class="fa fa-calendar-check"></i>
+      更新于:&nbsp;2020-02-10
+    </span>
+    <span>
+      <i class="fa fa-folder"></i>
+      分类于:&nbsp;<a class="category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a> > <a class="category-link" href="/categories/%E6%8A%80%E6%9C%AF/Web/">Web</a>
+    </span>
+  </div>
+</div>   
+    
+
+
+
+    
+      
+    
+    <div class="mdui-card-menu">
+    
+      <button class="mdui-btn mdui-btn-icon mdui-text-color-teal" mdui-menu="{target: '#share_menu', align: 'right'}"><i class="mdui-icon material-icons">share</i></button>
+      <ul class="mdui-menu" id="share_menu">
+        <li class="mdui-menu-item">
+          <a href="http://service.weibo.com/share/share.php?appkey=&title=Hexo下插入视频的响应式布局&url=https://garybear.cn/t-26113/&pic=https://garybear.cn/images/favicon.png&searchPic=false&style=simple" target="_blank" class="mdui-ripple">分享到 Weibo</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://twitter.com/intent/tweet?text=Hexo下插入视频的响应式布局&url=https://garybear.cn/t-26113/&via=机智小蜗熊" target="_blank" class="mdui-ripple">分享到 Twitter</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://garybear.cn/t-26113/" target="_blank" class="mdui-ripple">分享到 Facebook</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://plus.google.com/share?url=https://garybear.cn/t-26113/" target="_blank" class="mdui-ripple">分享到 Google+</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://garybear.cn/t-26113/&title=Hexo下插入视频的响应式布局" target="_blank" class="mdui-ripple">分享到 LinkedIn</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="http://connect.qq.com/widget/shareqq/index.html?site=小蜗熊的蜂蜜罐&title=Hexo下插入视频的响应式布局&summary=有害辣鸡&pics=https://garybear.cn/images/favicon.png&url=https://garybear.cn/t-26113/" target="_blank" class="mdui-ripple">分享到 QQ</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://telegram.me/share/url?url=https://garybear.cn/t-26113/&text=Hexo下插入视频的响应式布局" target="_blank" class="mdui-ripple">分享到 Telegram</a>
+        </li>
+      </ul>
+    
+  </div>
+  </header>
+
+  
+  
+    <div class="adsense-contain">
+      页首广告
+    </div>
+  
+
+  
+  
+    <div class="post-tags">
+      
+        <i class="fas fa-tag">
+          <a rel="tag" href = /tags/Hexo/ >Hexo</a>
+        </i>
+      
+    </div>
+
+
+  <div class="mdui-card-content mdui-typo">
+    <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>中午收到Google Search Console的一封邮件，提醒我网站存在移动端的错误。仔细检查后发现是一篇插入了B站视频的文章，在手机端浏览时会出现视频超出页面范围的问题。<br>对于网页中插入视频，通常视频网站提供的都是指定宽高度的iframe链接，由于本站采用了响应式布局，固定的视频尺寸就会和网页整体布局产生冲突。（Youtube链接虽然提供了固定的宽高，但仍会自动匹配页面布局）<br>使用<code>max-width=100%</code>的方法虽然可以解决手机等移动端超出页面的问题，但对于一些分辨率较低的视频，在PC端又会显得太小，与页面不协调。<br>因此最佳的方案就是通过修改CSS的方法使插入的视频也具备响应式的功能。</p>
+<h2 id="方法和步骤"><a href="#方法和步骤" class="headerlink" title="方法和步骤"></a>方法和步骤</h2><h3 id="修改CSS"><a href="#修改CSS" class="headerlink" title="修改CSS"></a>修改CSS</h3><p>首先在 <code>~\themes\next\source\css\main.styl</code> 中插入下面一行代码以导入自定义CSS</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@import</span> <span class="string">"_custom/iframe"</span>;</span><br></pre></td></tr></table></figure>
+
+<p>然后在<code>~\themes\next\source\css\_custom</code>新建文件<code>iframe.styl</code>，输入以下内容：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*响应式iframe*/</span></span><br><span class="line"></span><br><span class="line"><span class="selector-class">.iframe_video</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@media</span> <span class="keyword">only</span> screen <span class="keyword">and</span> (<span class="attribute">max-width:</span> <span class="number">767px</span>) &#123;</span><br><span class="line">    <span class="selector-class">.iframe_video</span> &#123;</span><br><span class="line">        <span class="attribute">height</span>: <span class="number">15em</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@media</span> <span class="keyword">only</span> screen <span class="keyword">and</span> (<span class="attribute">min-width:</span> <span class="number">768px</span>) <span class="keyword">and</span> (<span class="attribute">max-width:</span> <span class="number">991px</span>) &#123;</span><br><span class="line">    <span class="selector-class">.iframe_video</span> &#123;</span><br><span class="line">        <span class="attribute">height</span>: <span class="number">20em</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@media</span> <span class="keyword">only</span> screen <span class="keyword">and</span> (<span class="attribute">min-width:</span> <span class="number">992px</span>) <span class="keyword">and</span> (<span class="attribute">max-width:</span> <span class="number">1199px</span>) &#123;</span><br><span class="line">    <span class="selector-class">.iframe_video</span> &#123;</span><br><span class="line">        <span class="attribute">height</span>: <span class="number">30em</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@media</span> <span class="keyword">only</span> screen <span class="keyword">and</span> (<span class="attribute">min-width:</span> <span class="number">1200px</span>) &#123;</span><br><span class="line">    <span class="selector-class">.iframe_video</span> &#123;</span><br><span class="line">        <span class="attribute">height</span>: <span class="number">40em</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.iframe_cross</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">padding-bottom</span>: <span class="number">75%</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.iframe_cross</span> <span class="selector-tag">iframe</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="插入视频"><a href="#插入视频" class="headerlink" title="插入视频"></a>插入视频</h3><p>将视频的嵌入代码插入网页的适当位置,去掉其中关于宽度高度的信息 (width, height)，<br>然后在 <strong>iframe</strong> 标签后加上 <code>class=&quot;iframe_video&quot;</code>，例如：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;iframe class="iframe_video" src="//player.bilibili.com/player.html?aid=74352571&amp;cid=127185886&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"&gt; &lt;/iframe&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><p>本段是不同网站及清晰度下响应式视频插入的示例，为了篇幅简洁隐藏了一下。<br>可以自行寻找需要的例子，通过手机及PC端浏览效果感受其差异</p>
+<h3 id="B站-1080P"><a href="#B站-1080P" class="headerlink" title="B站 (1080P)"></a>B站 (1080P)</h3><details>
+<summary><b>点击查看详细内容</b></summary>
+
+<p>代码：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;iframe class="iframe_video" src="//player.bilibili.com/player.html?aid=74352571&amp;cid=127185886&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"&gt; &lt;/iframe&gt;</span><br></pre></td></tr></table></figure>
+<p>结果：</p>
+<iframe class="iframe_video" src="//player.bilibili.com/player.html?aid=74352571&cid=127185886&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</details>
+
+<h3 id="Youtube-1080P"><a href="#Youtube-1080P" class="headerlink" title="Youtube (1080P)"></a>Youtube (1080P)</h3><details>
+<summary><b>点击查看详细内容</b></summary>
+
+<p>代码：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;iframe class="iframe_video" src="https://www.youtube.com/embed/G0W8ilpnsaU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;</span><br></pre></td></tr></table></figure>
+<p>结果：</p>
+<iframe class="iframe_video" src="https://www.youtube.com/embed/G0W8ilpnsaU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</details>
+
+<h3 id="优酷-360P"><a href="#优酷-360P" class="headerlink" title="优酷 (360P)"></a>优酷 (360P)</h3><details>
+<summary><b>点击查看详细内容</b></summary>
+
+<p>代码：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;iframe class="iframe_video" src='//player.youku.com/embed/XMzcxMDUwMjE2' frameborder=0 allowfullscreen&gt;&lt;/iframe&gt;</span><br></pre></td></tr></table></figure>
+<p><strong>已经9102年了优酷居然还不支持HTTPS嵌入，为了网站的小绿锁在这就不放结果了。</strong></p>
+<p>以上代码在Chrome中要手动选择加载未知脚本，Edge下可以自动运行。</p>
+<h3 id="niconico-1080P"><a href="#niconico-1080P" class="headerlink" title="niconico (1080P)"></a>niconico (1080P)</h3><details>
+<summary><b>点击查看详细内容</b></summary>
+
+<p>代码：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;iframe class="iframe_video" src='https://embed.nicovideo.jp/watch/1559276347/' frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</span><br></pre></td></tr></table></figure>
+<p>结果：</p>
+<iframe class="iframe_video" src='https://embed.nicovideo.jp/watch/1559276347/' frameborder="0" allowfullscreen></iframe>
+
+  </div>
+  
+  <!--文末结束语-->
+  
+    <div style="text-align:center;color: #ccc;font-size:24px;"> --- 本文结束 <i class="fa fa-heartbeat"></i> The End --- </div>
+  
+  
+  <!--页脚广告-->
+  
+    <div class="adsense-contain">
+      页脚广告
+    </div>
+  
+
+  <div class="mdui-divider-inset"></div>
+
+  
+  <nav >
+    
+      <a rel="prev" class="post-nav-item mdui-float-left" href="/t-33718/">
+        <i class="fa fa-chevron-left"></i>
+        <span>再见，2019</span>
+      </a>
+    
+    
+      <a rel="next" class="post-nav-item mdui-float-right" href="/t-46101/">
+        <span>Hexo的Next主题下接入Google AdSense广告</span>
+        <i class="fa fa-chevron-right"></i>
+      </a>
+    
+  </nav>
+</article>
+
+
+
+
+  <div class="toc-button">
+    <button class="mdui-fab mdui-ripple mdui-color-teal" mdui-menu="{target: '#toc'}"><i class="mdui-icon material-icons">format_list_numbered</i></button>
+    <ul class="mdui-menu" id="toc">
+      <li class="mdui-menu-item">
+        <a href="/t-26113/" id="toc-header" class="mdui-ripple">文章目录</a>
+
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#简介"><span class="toc-number">1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方法和步骤"><span class="toc-number">2.</span> <span class="toc-text">方法和步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#修改CSS"><span class="toc-number">2.1.</span> <span class="toc-text">修改CSS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#插入视频"><span class="toc-number">2.2.</span> <span class="toc-text">插入视频</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#示例"><span class="toc-number">3.</span> <span class="toc-text">示例</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#B站-1080P"><span class="toc-number">3.1.</span> <span class="toc-text">B站 (1080P)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Youtube-1080P"><span class="toc-number">3.2.</span> <span class="toc-text">Youtube (1080P)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#优酷-360P"><span class="toc-number">3.3.</span> <span class="toc-text">优酷 (360P)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#niconico-1080P"><span class="toc-number">3.4.</span> <span class="toc-text">niconico (1080P)</span></a></li></ol></li></ol>
+      </li>
+    </ul>
+  </div>
+
+
+
+
+  <div id="comment" class="mdui-card mdui-p-a-2 mdui-m-b-5">
+    <div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+  var gitalk = new Gitalk({
+    clientID: 'f3866882707e12e74c4a',
+    clientSecret: '04a037afee00b94e4b55e474aa270ac136a8c952',
+    repo: 'kb1000fx.github.io',
+    owner: 'kb1000fx',
+    admin: ['kb1000fx'],
+    id: '' || location.pathname,
+    distractionFreeMode: 'true',
+  });
+  gitalk.render('gitalk-container');
+</script>
+  </div>
+
+    </main>
+    <footer id="footer" class="mdui-m-t-5 mdui-p-y-3 mdui-color-theme">
+  <div class="mdui-p-y-1 mdui-text-center">
+    Copyright &copy; 2015 - 2020 机智小蜗熊<br>
+    Powered by <a href="https://hexo.io/" target="_blank" class="mdui-text-color-theme-accent">Hexo</a>
+    <br>
+      <span id="busuanzi_container_site_uv" style="display: none;"><i class="mdui-icon material-icons">&#xe7fd;</i> <span id="busuanzi_value_site_uv"></span></span>
+      <span id="busuanzi_container_site_pv" style="display: none;"><i class="mdui-icon material-icons">&#xe417;</i> <span id="busuanzi_value_site_pv"></span></span> &nbsp;&nbsp;
+      
+    
+  </div>
+</footer>
+    
+    <button id="gotop" class="mdui-fab mdui-fab-fixed mdui-fab-hide mdui-ripple mdui-color-teal"><i class="mdui-icon material-icons">arrow_upward</i></button>
+    
+    <script async src="http://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+    
+<script src="/js/mdui.js"></script>
+<script src="/js/meadow.js"></script>
+
+</body>
+</html >

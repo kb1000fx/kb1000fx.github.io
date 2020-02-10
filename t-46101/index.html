@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>小蜗熊的蜂蜜罐</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <script>if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href="https://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); </script>
+    
+    
+<link rel="stylesheet" href="/css/mdui.css">
+<link rel="stylesheet" href="/css/main.css">
+
+    
+<link rel="stylesheet" href="//lib.baomitu.com/font-awesome/5.11.2/css/all.min.css">
+
+
+    
+    
+    <title>Hexo的Next主题下接入Google AdSense广告 | 小蜗熊的蜂蜜罐</title>
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-primary-blue-grey mdui-theme-accent-blue">
+    
+    <header class="mdui-appbar mdui-appbar-fixed">
+  <div id="toolbar" class="mdui-toolbar mdui-color-theme">
+    <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#sidebar', swipe: true}"><i class="mdui-icon material-icons">menu</i></a>
+    <a href="/" class="mdui-typo-headline">小蜗熊的蜂蜜罐</a>
+    <div class="mdui-toolbar-spacer"></div>
+    <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-dialog="{target: '#search'}" mdui-tooltip="{content: 'search'}"><i class="mdui-icon material-icons">search</i></a>
+  </div>
+</header>
+
+<div class="mdui-dialog" id="search">
+  
+    <div class="search-form">
+      <input type="search" class="search-form-input" placeholder="请输入关键字">
+    </div>
+    <div class="search-result" data-resource="/search.xml"></div>
+  
+</div>
+
+    <aside id="sidebar" class="mdui-drawer">
+    <div class="mdui-tab" mdui-tab>
+        <a href="#sidebar-tab1" id="sidebartab" class="mdui-ripple mdui-tab-active">导航</a>
+        <a href="#sidebar-tab2" id="sidebartab" class="mdui-ripple">站点概览</a>
+    </div>
+
+    
+    <div id="sidebar-tab1" class="mdui-p-a-2">
+        <div class="mdui-list">
+            
+                
+                <a href="/" class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons">home</i>
+                    <div class="mdui-list-item-content">主页</div>
+                </a>
+            
+                
+                <a href="/tags/" class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons">bookmark</i>
+                    <div class="mdui-list-item-content">标签</div>
+                </a>
+            
+                
+                <a href="/categories/" class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons">folder</i>
+                    <div class="mdui-list-item-content">分类</div>
+                </a>
+            
+                
+                <a href="/archives/" class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons">archive</i>
+                    <div class="mdui-list-item-content">归档</div>
+                </a>
+            
+                
+                <a href="/NMSL/" class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons">attach_money</i>
+                    <div class="mdui-list-item-content">抽象话转换器</div>
+                </a>
+            
+                
+                <a href="/sitemap.xml" class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons">map</i>
+                    <div class="mdui-list-item-content">站点地图</div>
+                </a>
+            
+            <div class="mdui-list-item mdui-ripple">
+                <i class="mdui-list-item-icon mdui-icon material-icons">brightness_2</i>
+                <div class="mdui-list-item-content">夜间模式</div>
+                <label class="mdui-switch" id="darkmode">
+                  <input type="checkbox" id="nightmode_switch"/>
+                  <i class="mdui-switch-icon"></i>
+                </label>
+            </div>           
+        </div>
+    </div>
+
+    
+    <div id="sidebar-tab2" class="mdui-p-a-2">
+        <div class="sidebar-avatar">
+            <img src="/images/avatar.jpg"/>
+            <p class="sidebar-author-name">机智小蜗熊</p>
+            <p class="sidebar-description">有害辣鸡</p>
+        </div>
+
+        <div class="sidebar-links">
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="fab fa-github"></i></span>
+                    <a href="https://github.com/kb1000fx" target="_blank" rel="noopener" class="mdui-chip-title">GitHub</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="fab fa-steam"></i></span>
+                    <a href="https://steamcommunity.com/profiles/76561198346798163" target="_blank" rel="noopener" class="mdui-chip-title">Steam</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="fas fa-envelope"></i></span>
+                    <a href="mailto:kb1000fx@gmail.com" class="mdui-chip-title">E-Mail</a>
+                </div>
+            
+        </div>
+    </div>
+
+    <div class="mdui-divider"></div>
+    
+    
+    
+        <div class="adsense-contain">
+            侧边栏广告
+        </div>
+    
+    
+</aside>
+    
+    <main id="main-contain" class="mdui-container mdui-m-t-5">
+      <article id="article" class="mdui-card mdui-p-a-2 mdui-m-b-5">
+  
+  
+    
+  
+
+  <header class="mdui-card-media">
+    
+    
+      <div class="post-header"> 
+  <a class="post-header-title" href="/t-46101/">Hexo的Next主题下接入Google AdSense广告</a>
+  <div class="post-header-meta">
+    <span>
+      <i class="fa fa-calendar"></i>
+      发布于:&nbsp;2019-10-24
+    </span>
+    <span>
+      <i class="fa fa-calendar-check"></i>
+      更新于:&nbsp;2020-02-10
+    </span>
+    <span>
+      <i class="fa fa-folder"></i>
+      分类于:&nbsp;<a class="category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a> > <a class="category-link" href="/categories/%E6%8A%80%E6%9C%AF/Web/">Web</a>
+    </span>
+  </div>
+</div>   
+    
+
+
+
+    
+      
+    
+    <div class="mdui-card-menu">
+    
+      <button class="mdui-btn mdui-btn-icon mdui-text-color-teal" mdui-menu="{target: '#share_menu', align: 'right'}"><i class="mdui-icon material-icons">share</i></button>
+      <ul class="mdui-menu" id="share_menu">
+        <li class="mdui-menu-item">
+          <a href="http://service.weibo.com/share/share.php?appkey=&title=Hexo的Next主题下接入Google AdSense广告&url=https://garybear.cn/t-46101/&pic=https://garybear.cn/images/favicon.png&searchPic=false&style=simple" target="_blank" class="mdui-ripple">分享到 Weibo</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://twitter.com/intent/tweet?text=Hexo的Next主题下接入Google AdSense广告&url=https://garybear.cn/t-46101/&via=机智小蜗熊" target="_blank" class="mdui-ripple">分享到 Twitter</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://garybear.cn/t-46101/" target="_blank" class="mdui-ripple">分享到 Facebook</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://plus.google.com/share?url=https://garybear.cn/t-46101/" target="_blank" class="mdui-ripple">分享到 Google+</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://garybear.cn/t-46101/&title=Hexo的Next主题下接入Google AdSense广告" target="_blank" class="mdui-ripple">分享到 LinkedIn</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="http://connect.qq.com/widget/shareqq/index.html?site=小蜗熊的蜂蜜罐&title=Hexo的Next主题下接入Google AdSense广告&summary=有害辣鸡&pics=https://garybear.cn/images/favicon.png&url=https://garybear.cn/t-46101/" target="_blank" class="mdui-ripple">分享到 QQ</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://telegram.me/share/url?url=https://garybear.cn/t-46101/&text=Hexo的Next主题下接入Google AdSense广告" target="_blank" class="mdui-ripple">分享到 Telegram</a>
+        </li>
+      </ul>
+    
+  </div>
+  </header>
+
+  
+  
+    <div class="adsense-contain">
+      页首广告
+    </div>
+  
+
+  
+  
+    <div class="post-tags">
+      
+        <i class="fas fa-tag">
+          <a rel="tag" href = /tags/Hexo/ >Hexo</a>
+        </i>
+      
+    </div>
+
+
+  <div class="mdui-card-content mdui-typo">
+    <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>使用Google Adsense也好几个月了，先以 <strong><em>Next</em></strong> 主题为例，对Hexo下Google Adsense的使用方法做个记录，方便以后更改广告布局。</p>
+<h1 id="自动广告"><a href="#自动广告" class="headerlink" title="自动广告"></a>自动广告</h1><p>首先建立目录<code>~\themes\next\layout\google_adsense</code>。</p>
+<p>在此目录下建立文件<code>auto_ads.swig</code>，内容如下。其中Publisher ID可以在Google Adsense的账号信息里找到。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">data-ad-client</span>=<span class="string">"你自己的Publisher ID"</span> <span class="attr">async</span> <span class="attr">src</span>=<span class="string">"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>打开<code>~\themes\next\layout\_partials\head\head.swig</code>，在其中任意部位插入</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--谷歌广告--&gt;</span></span><br><span class="line">&#123;% include '../../google_adsense/auto_ads.swig' %&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="正文内容前的广告单元"><a href="#正文内容前的广告单元" class="headerlink" title="正文内容前的广告单元"></a>正文内容前的广告单元</h1><p>在<code>~\themes\next\layout\google_adsense</code>下建立文件<code>banner_ads.swig</code></p>
+<p>建立一个新的广告单元，复制其代码到文件内，例如</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">async</span> <span class="attr">src</span>=<span class="string">"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- Banner Ads --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">ins</span> <span class="attr">class</span>=<span class="string">"adsbygoogle"</span></span></span><br><span class="line"><span class="tag">     <span class="attr">style</span>=<span class="string">"display:block"</span></span></span><br><span class="line"><span class="tag">     <span class="attr">data-ad-client</span>=<span class="string">"你自己的Publisher ID"</span></span></span><br><span class="line"><span class="tag">     <span class="attr">data-ad-slot</span>=<span class="string">"3949852758"</span></span></span><br><span class="line"><span class="tag">     <span class="attr">data-ad-format</span>=<span class="string">"auto"</span></span></span><br><span class="line"><span class="tag">     <span class="attr">data-full-width-responsive</span>=<span class="string">"true"</span>&gt;</span><span class="tag">&lt;/<span class="name">ins</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">     (adsbygoogle = <span class="built_in">window</span>.adsbygoogle || []).push(&#123;&#125;);</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>打开<code>~\themes\next\layout\_macro\post.swig</code>，在如下位置</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;% macro render(post, is_index, post_extra_class) %&#125;</span><br><span class="line">    ...</span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"post-body&#123;% if post.direction &amp;&amp; post.direction.toLowerCase() === 'rtl' %&#125; rtl&#123;% endif %&#125;"</span> <span class="attr">itemprop</span>=<span class="string">"articleBody"</span>&gt;</span></span><br><span class="line">        ...</span><br><span class="line">        &#123;% else %&#125;</span><br><span class="line">            <span class="comment">&lt;!-- 在此插入 --&gt;</span></span><br><span class="line">            &#123;&#123; post.content &#125;&#125;</span><br><span class="line">        &#123;% endif %&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    ...</span><br></pre></td></tr></table></figure>
+<p>插入下列代码</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--谷歌广告--&gt;</span></span><br><span class="line">&#123;% include '../google_adsense/banner_ads.swig' %&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="侧边栏广告单元"><a href="#侧边栏广告单元" class="headerlink" title="侧边栏广告单元"></a>侧边栏广告单元</h1><p>在<code>~\themes\next\layout\google_adsense</code>下建立文件<code>sidebar_ads.swig</code></p>
+<p>建立一个新的广告单元，复制其代码到文件内，例如</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">async</span> <span class="attr">src</span>=<span class="string">"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- Sidebar Ads --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">ins</span> <span class="attr">class</span>=<span class="string">"adsbygoogle"</span></span></span><br><span class="line"><span class="tag">     <span class="attr">style</span>=<span class="string">"display:block"</span></span></span><br><span class="line"><span class="tag">     <span class="attr">data-ad-client</span>=<span class="string">"你自己的Publisher ID"</span></span></span><br><span class="line"><span class="tag">     <span class="attr">data-ad-slot</span>=<span class="string">"4752632688"</span></span></span><br><span class="line"><span class="tag">     <span class="attr">data-ad-format</span>=<span class="string">"auto"</span></span></span><br><span class="line"><span class="tag">     <span class="attr">data-full-width-responsive</span>=<span class="string">"true"</span>&gt;</span><span class="tag">&lt;/<span class="name">ins</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">     (adsbygoogle = <span class="built_in">window</span>.adsbygoogle || []).push(&#123;&#125;);</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>打开<code>~\themes\next\layout\_macro\sidebar.swig</code>，在如下位置</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;% macro render(is_post) %&#125;</span><br><span class="line">    ....</span><br><span class="line">    <span class="tag">&lt;<span class="name">aside</span> <span class="attr">id</span>=<span class="string">"sidebar"</span> <span class="attr">class</span>=<span class="string">"sidebar"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"sidebar-inner"</span>&gt;</span></span><br><span class="line">        ...</span><br><span class="line">        <span class="comment">&lt;!-- 在此插入 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">aside</span>&gt;</span></span><br><span class="line">    ...</span><br></pre></td></tr></table></figure>
+<p>插入下列代码</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--谷歌广告--&gt;</span></span><br><span class="line">&#123;% include '../google_adsense/sidebar_ads.swig' %&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="文章页脚广告单元"><a href="#文章页脚广告单元" class="headerlink" title="文章页脚广告单元"></a>文章页脚广告单元</h1><p>在<code>~\themes\next\layout\google_adsense</code>下建立文件<code>footer_ads.swig</code></p>
+<p>建立一个新的广告单元，复制其代码到文件内，例如</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">async</span> <span class="attr">src</span>=<span class="string">"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- Footer Ads --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">ins</span> <span class="attr">class</span>=<span class="string">"adsbygoogle"</span></span></span><br><span class="line"><span class="tag">     <span class="attr">style</span>=<span class="string">"display:block"</span></span></span><br><span class="line"><span class="tag">     <span class="attr">data-ad-client</span>=<span class="string">"你自己的Publisher ID"</span></span></span><br><span class="line"><span class="tag">     <span class="attr">data-ad-slot</span>=<span class="string">"2212253348"</span></span></span><br><span class="line"><span class="tag">     <span class="attr">data-ad-format</span>=<span class="string">"auto"</span></span></span><br><span class="line"><span class="tag">     <span class="attr">data-full-width-responsive</span>=<span class="string">"true"</span>&gt;</span><span class="tag">&lt;/<span class="name">ins</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">     (adsbygoogle = <span class="built_in">window</span>.adsbygoogle || []).push(&#123;&#125;);</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>打开<code>~\themes\next\layout\_macro\post.swig</code>，在<code>post-body</code>后，<code>post-footer</code>前，位置如下</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">&#123;#####################&#125;</span><br><span class="line">&#123;### END POST BODY ###&#125;</span><br><span class="line">&#123;#####################&#125;</span><br><span class="line">...</span><br><span class="line"><span class="comment">&lt;!-- 在此插入 --&gt;</span></span><br><span class="line">...</span><br><span class="line"><span class="tag">&lt;<span class="name">footer</span> <span class="attr">class</span>=<span class="string">"post-footer"</span>&gt;</span></span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<p>插入下列代码</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--谷歌广告--&gt;</span></span><br><span class="line">&#123;% if not is_index %&#125;</span><br><span class="line">    &#123;% include './google_adsense/footer_ads.swig' %&#125;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+  </div>
+  
+  <!--文末结束语-->
+  
+    <div style="text-align:center;color: #ccc;font-size:24px;"> --- 本文结束 <i class="fa fa-heartbeat"></i> The End --- </div>
+  
+  
+  <!--页脚广告-->
+  
+    <div class="adsense-contain">
+      页脚广告
+    </div>
+  
+
+  <div class="mdui-divider-inset"></div>
+
+  
+  <nav >
+    
+      <a rel="prev" class="post-nav-item mdui-float-left" href="/t-26113/">
+        <i class="fa fa-chevron-left"></i>
+        <span>Hexo下插入视频的响应式布局</span>
+      </a>
+    
+    
+      <a rel="next" class="post-nav-item mdui-float-right" href="/t-38683/">
+        <span>达肯方程的推导过程</span>
+        <i class="fa fa-chevron-right"></i>
+      </a>
+    
+  </nav>
+</article>
+
+
+
+
+  <div class="toc-button">
+    <button class="mdui-fab mdui-ripple mdui-color-teal" mdui-menu="{target: '#toc'}"><i class="mdui-icon material-icons">format_list_numbered</i></button>
+    <ul class="mdui-menu" id="toc">
+      <li class="mdui-menu-item">
+        <a href="/t-46101/" id="toc-header" class="mdui-ripple">文章目录</a>
+
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#简介"><span class="toc-number">1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#自动广告"><span class="toc-number">2.</span> <span class="toc-text">自动广告</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#正文内容前的广告单元"><span class="toc-number">3.</span> <span class="toc-text">正文内容前的广告单元</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#侧边栏广告单元"><span class="toc-number">4.</span> <span class="toc-text">侧边栏广告单元</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#文章页脚广告单元"><span class="toc-number">5.</span> <span class="toc-text">文章页脚广告单元</span></a></li></ol>
+      </li>
+    </ul>
+  </div>
+
+
+
+
+  <div id="comment" class="mdui-card mdui-p-a-2 mdui-m-b-5">
+    <div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+  var gitalk = new Gitalk({
+    clientID: 'f3866882707e12e74c4a',
+    clientSecret: '04a037afee00b94e4b55e474aa270ac136a8c952',
+    repo: 'kb1000fx.github.io',
+    owner: 'kb1000fx',
+    admin: ['kb1000fx'],
+    id: '' || location.pathname,
+    distractionFreeMode: 'true',
+  });
+  gitalk.render('gitalk-container');
+</script>
+  </div>
+
+    </main>
+    <footer id="footer" class="mdui-m-t-5 mdui-p-y-3 mdui-color-theme">
+  <div class="mdui-p-y-1 mdui-text-center">
+    Copyright &copy; 2015 - 2020 机智小蜗熊<br>
+    Powered by <a href="https://hexo.io/" target="_blank" class="mdui-text-color-theme-accent">Hexo</a>
+    <br>
+      <span id="busuanzi_container_site_uv" style="display: none;"><i class="mdui-icon material-icons">&#xe7fd;</i> <span id="busuanzi_value_site_uv"></span></span>
+      <span id="busuanzi_container_site_pv" style="display: none;"><i class="mdui-icon material-icons">&#xe417;</i> <span id="busuanzi_value_site_pv"></span></span> &nbsp;&nbsp;
+      
+    
+  </div>
+</footer>
+    
+    <button id="gotop" class="mdui-fab mdui-fab-fixed mdui-fab-hide mdui-ripple mdui-color-teal"><i class="mdui-icon material-icons">arrow_upward</i></button>
+    
+    <script async src="http://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+    
+<script src="/js/mdui.js"></script>
+<script src="/js/meadow.js"></script>
+
+</body>
+</html >

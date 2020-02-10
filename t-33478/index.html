@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>小蜗熊的蜂蜜罐</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <script>if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href="https://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); </script>
+    
+    
+<link rel="stylesheet" href="/css/mdui.css">
+<link rel="stylesheet" href="/css/main.css">
+
+    
+<link rel="stylesheet" href="//lib.baomitu.com/font-awesome/5.11.2/css/all.min.css">
+
+
+    
+    
+    <title>Ubuntu16.04下的LAMP环境搭建 | 小蜗熊的蜂蜜罐</title>
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-primary-blue-grey mdui-theme-accent-blue">
+    
+    <header class="mdui-appbar mdui-appbar-fixed">
+  <div id="toolbar" class="mdui-toolbar mdui-color-theme">
+    <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#sidebar', swipe: true}"><i class="mdui-icon material-icons">menu</i></a>
+    <a href="/" class="mdui-typo-headline">小蜗熊的蜂蜜罐</a>
+    <div class="mdui-toolbar-spacer"></div>
+    <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-dialog="{target: '#search'}" mdui-tooltip="{content: 'search'}"><i class="mdui-icon material-icons">search</i></a>
+  </div>
+</header>
+
+<div class="mdui-dialog" id="search">
+  
+    <div class="search-form">
+      <input type="search" class="search-form-input" placeholder="请输入关键字">
+    </div>
+    <div class="search-result" data-resource="/search.xml"></div>
+  
+</div>
+
+    <aside id="sidebar" class="mdui-drawer">
+    <div class="mdui-tab" mdui-tab>
+        <a href="#sidebar-tab1" id="sidebartab" class="mdui-ripple mdui-tab-active">导航</a>
+        <a href="#sidebar-tab2" id="sidebartab" class="mdui-ripple">站点概览</a>
+    </div>
+
+    
+    <div id="sidebar-tab1" class="mdui-p-a-2">
+        <div class="mdui-list">
+            
+                
+                <a href="/" class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons">home</i>
+                    <div class="mdui-list-item-content">主页</div>
+                </a>
+            
+                
+                <a href="/tags/" class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons">bookmark</i>
+                    <div class="mdui-list-item-content">标签</div>
+                </a>
+            
+                
+                <a href="/categories/" class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons">folder</i>
+                    <div class="mdui-list-item-content">分类</div>
+                </a>
+            
+                
+                <a href="/archives/" class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons">archive</i>
+                    <div class="mdui-list-item-content">归档</div>
+                </a>
+            
+                
+                <a href="/NMSL/" class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons">attach_money</i>
+                    <div class="mdui-list-item-content">抽象话转换器</div>
+                </a>
+            
+                
+                <a href="/sitemap.xml" class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons">map</i>
+                    <div class="mdui-list-item-content">站点地图</div>
+                </a>
+            
+            <div class="mdui-list-item mdui-ripple">
+                <i class="mdui-list-item-icon mdui-icon material-icons">brightness_2</i>
+                <div class="mdui-list-item-content">夜间模式</div>
+                <label class="mdui-switch" id="darkmode">
+                  <input type="checkbox" id="nightmode_switch"/>
+                  <i class="mdui-switch-icon"></i>
+                </label>
+            </div>           
+        </div>
+    </div>
+
+    
+    <div id="sidebar-tab2" class="mdui-p-a-2">
+        <div class="sidebar-avatar">
+            <img src="/images/avatar.jpg"/>
+            <p class="sidebar-author-name">机智小蜗熊</p>
+            <p class="sidebar-description">有害辣鸡</p>
+        </div>
+
+        <div class="sidebar-links">
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="fab fa-github"></i></span>
+                    <a href="https://github.com/kb1000fx" target="_blank" rel="noopener" class="mdui-chip-title">GitHub</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="fab fa-steam"></i></span>
+                    <a href="https://steamcommunity.com/profiles/76561198346798163" target="_blank" rel="noopener" class="mdui-chip-title">Steam</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="fas fa-envelope"></i></span>
+                    <a href="mailto:kb1000fx@gmail.com" class="mdui-chip-title">E-Mail</a>
+                </div>
+            
+        </div>
+    </div>
+
+    <div class="mdui-divider"></div>
+    
+    
+    
+        <div class="adsense-contain">
+            侧边栏广告
+        </div>
+    
+    
+</aside>
+    
+    <main id="main-contain" class="mdui-container mdui-m-t-5">
+      <article id="article" class="mdui-card mdui-p-a-2 mdui-m-b-5">
+  
+  
+    
+  
+
+  <header class="mdui-card-media">
+    
+    
+      
+        <img src = ../images/33478/LAMP.png >
+      
+      <div class="mdui-card-media-covered">
+        <div class="post-header"> 
+  <a class="post-header-title" href="/t-33478/">Ubuntu16.04下的LAMP环境搭建</a>
+  <div class="post-header-meta">
+    <span>
+      <i class="fa fa-calendar"></i>
+      发布于:&nbsp;2017-09-03
+    </span>
+    <span>
+      <i class="fa fa-calendar-check"></i>
+      更新于:&nbsp;2020-02-10
+    </span>
+    <span>
+      <i class="fa fa-folder"></i>
+      分类于:&nbsp;<a class="category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a> > <a class="category-link" href="/categories/%E6%8A%80%E6%9C%AF/Linux/">Linux</a>
+    </span>
+  </div>
+</div>   
+    
+
+
+
+      </div>
+    
+      
+    
+    <div class="mdui-card-menu">
+    
+      <button class="mdui-btn mdui-btn-icon mdui-text-color-teal" mdui-menu="{target: '#share_menu', align: 'right'}"><i class="mdui-icon material-icons">share</i></button>
+      <ul class="mdui-menu" id="share_menu">
+        <li class="mdui-menu-item">
+          <a href="http://service.weibo.com/share/share.php?appkey=&title=Ubuntu16.04下的LAMP环境搭建&url=https://garybear.cn/t-33478/&pic=https://garybear.cn/images/favicon.png&searchPic=false&style=simple" target="_blank" class="mdui-ripple">分享到 Weibo</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://twitter.com/intent/tweet?text=Ubuntu16.04下的LAMP环境搭建&url=https://garybear.cn/t-33478/&via=机智小蜗熊" target="_blank" class="mdui-ripple">分享到 Twitter</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://garybear.cn/t-33478/" target="_blank" class="mdui-ripple">分享到 Facebook</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://plus.google.com/share?url=https://garybear.cn/t-33478/" target="_blank" class="mdui-ripple">分享到 Google+</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://garybear.cn/t-33478/&title=Ubuntu16.04下的LAMP环境搭建" target="_blank" class="mdui-ripple">分享到 LinkedIn</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="http://connect.qq.com/widget/shareqq/index.html?site=小蜗熊的蜂蜜罐&title=Ubuntu16.04下的LAMP环境搭建&summary=有害辣鸡&pics=https://garybear.cn/images/favicon.png&url=https://garybear.cn/t-33478/" target="_blank" class="mdui-ripple">分享到 QQ</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://telegram.me/share/url?url=https://garybear.cn/t-33478/&text=Ubuntu16.04下的LAMP环境搭建" target="_blank" class="mdui-ripple">分享到 Telegram</a>
+        </li>
+      </ul>
+    
+  </div>
+  </header>
+
+  
+  
+    <div class="adsense-contain">
+      页首广告
+    </div>
+  
+
+  
+  
+
+  <div class="mdui-card-content mdui-typo">
+    <h1 id="Ubuntu16-04下的LAMP环境搭建"><a href="#Ubuntu16-04下的LAMP环境搭建" class="headerlink" title="Ubuntu16.04下的LAMP环境搭建"></a>Ubuntu16.04下的LAMP环境搭建</h1><p><img src="../images/33478/apache.jpg" alt="机智小蜗熊"></p>
+<h2 id="基本设置"><a href="#基本设置" class="headerlink" title="基本设置"></a>基本设置</h2><h3 id="1-开启root账号SSH登录"><a href="#1-开启root账号SSH登录" class="headerlink" title="1.开启root账号SSH登录"></a>1.开启root账号SSH登录</h3><p>腾讯云的Ubuntu默认账号是ubuntu，且无法以root身份远程登录，首先需要手动开启远程登录root账号并设置root密码。 </p>
+<pre><code>vim /etc/ssh.sshd_config
+
+
+
+- PermitRootLogin prohibit-password
++ PermitRootLogin yes</code></pre><h3 id="2-设置root密码"><a href="#2-设置root密码" class="headerlink" title="2.设置root密码"></a>2.设置root密码</h3><pre><code>sudo passwd</code></pre><h3 id="3-设置DNS"><a href="#3-设置DNS" class="headerlink" title="3.设置DNS"></a>3.设置DNS</h3><p>有些服务器提供商并未设置DNS地址，这时需要先手动进行设置，否则接下来的步骤都将无法解析地址。 1.首先打开/etc/resolv.conf或/etc/resolvconf/resolv.conf.d/tail，前者在重启后会还原。 </p>
+<pre><code>sudo vi /etc/resolv.conf
+或者
+sudo vi /etc/resolvconf/resolv.conf.d/tail</code></pre><p>2.在文件中加入“nameserver 114.114.114.114”这么一条配置，保存退出。 3.重启网络。 </p>
+<pre><code>sudo /etc/init.d/networking restart</code></pre><h3 id="4-更新源"><a href="#4-更新源" class="headerlink" title="4.更新源"></a>4.更新源</h3><pre><code>sudo apt-get update</code></pre><p>源保存的文件为：/etc/apt/sources.list </p>
+<h2 id="安装常用软件"><a href="#安装常用软件" class="headerlink" title="安装常用软件"></a>安装常用软件</h2><h3 id="1-SSH"><a href="#1-SSH" class="headerlink" title="1.SSH"></a>1.SSH</h3><pre><code>sudo apt-get install openssh-server</code></pre><p>查看状态：service ssh status/start/stop/restart 或：/etc/init.d/ssh status/start/stop/retsrt </p>
+<h3 id="2-Vim"><a href="#2-Vim" class="headerlink" title="2.Vim"></a>2.Vim</h3><pre><code>sudo apt-get install vim</code></pre><h3 id="3-Tree"><a href="#3-Tree" class="headerlink" title="3.Tree"></a>3.Tree</h3><pre><code>sudo apt-get install tree</code></pre><h3 id="4-Git"><a href="#4-Git" class="headerlink" title="4.Git"></a>4.Git</h3><pre><code>sudo apt-get install git</code></pre><h2 id="搭建LAMP"><a href="#搭建LAMP" class="headerlink" title="搭建LAMP"></a>搭建LAMP</h2><h3 id="1-安装Apache"><a href="#1-安装Apache" class="headerlink" title="1.安装Apache"></a>1.安装Apache</h3><pre><code>sudo apt-get install apache2</code></pre><p>测试： 浏览器访问<a href="http://localhost" target="_blank" rel="noopener">http://localhost</a>，出现It Works!网页。 查看状态： service apache2 status/start/stop/restart Web目录：/var/www 安装目录： /etc/apache2/ 全局配置： /etc/apache2/apache2.conf 监听端口： /etc/apache2/ports.conf 虚拟主机： /etc/apache2/sites-enabled/000-default.conf </p>
+<h3 id="2-安装MySQL"><a href="#2-安装MySQL" class="headerlink" title="2.安装MySQL"></a>2.安装MySQL</h3><pre><code>sudo apt-get install mysql-server mysql-client</code></pre><p>测试：mysql -u root -p 查看状态：service mysql status/start/stop/retart 查看监听端口的情况：netstat -tunpl或 netstat -tap </p>
+<h3 id="3-安装PHP"><a href="#3-安装PHP" class="headerlink" title="3.安装PHP"></a>3.安装PHP</h3><pre><code>sudo apt-get install php7.0</code></pre><p>测试：php7.0 -v </p>
+<h3 id="4-安装其他模块"><a href="#4-安装其他模块" class="headerlink" title="4.安装其他模块"></a>4.安装其他模块</h3><pre><code>sudo apt-get install libapache2-mod-php7.0
+sudo apt-get install php7.0-mysql</code></pre><p>重启服务 service apache2 restart service mysql restart 测试Apache能否解析PHP vim /var/www/html/phpinfo.php 文件中写：<?php echo phpinfo();?> 浏览器访问：<a href="http://localhost/phpinfo.php，出现PHP" target="_blank" rel="noopener">http://localhost/phpinfo.php，出现PHP</a> Version网页 </p>
+<h3 id="5-修改权限"><a href="#5-修改权限" class="headerlink" title="5.修改权限"></a>5.修改权限</h3><pre><code>sudo chmod 777 /var/www</code></pre><h3 id="6-安装phpMyAdmin"><a href="#6-安装phpMyAdmin" class="headerlink" title="6.安装phpMyAdmin"></a>6.安装phpMyAdmin</h3><pre><code>sudo apt-get install phpmyadmin</code></pre><p>安装：选择apache2，点击确定。下一步选择是要配置数据库，并输入密码。 创建phpMyAdmin快捷方式： </p>
+<pre><code>sudo ln -s /usr/share/phpmyadmin /var/www/html
+ ```
+启用Apache mod_rewrite模块：sudo a2enmod rewrite 
+重启服务： </code></pre><p>service php7.0-fpm restart service apache2 restart </p>
+<pre><code>测试：浏览器访问：http://localhost/phpmyadmin
+### 7.配置Apache</code></pre><p>vim /etc/apache2/apache2.conf </p>
+<pre><code>添加： </code></pre><p>AddType application/x-httpd-php .php .htm .html AddDefaultCharset UTF-8 </p>
+<pre><code>重启Apache服务
+## 设置
+### 1.Apache限制IP访问某个特定的文件或文件夹
+详细教程可以参考：[「Files Directive」](https://httpd.apache.org/docs/2.4/en/mod/core.html#files)
+
+以限制WordPress后台登录画面的文件「wp-login.php」为例：
+
+若想只允许 IP 地址「192.168.2.1」访问，可按照如下设定，写入 Apache 的配置文件「apache2.conf」或者网站根目录下的「.htaccess」。
+&lt;pre&gt;&lt;code&gt;&amp;lt; Files &quot;wp-login.php&quot;&amp;gt;
+    Order Deny,Allow
+    Deny from all
+    Allow from 192.168.2.1
+&amp;lt;/Files&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+只允许某 IP 地址段「192.168.2.*」访问，则为：
+&lt;pre&gt;&lt;code&gt;&amp;lt;Files &quot;wp-login.php&quot;&amp;gt;
+    Order Deny,Allow
+    Deny from all
+    Allow from 192.168.2
+&amp;lt;/Files&amp;gt;&lt;/pre&gt;&lt;/code&gt;
+允许多个 IP 地址「192.168.2.1」「192.168.2.2」访问，则为：
+&lt;pre&gt;&lt;code&gt;&amp;lt;Files &quot;wp-login.php&quot;&amp;gt;
+    Order Deny,Allow
+    Deny from all
+    Allow from 192.168.2.1 192.168.2.2
+&amp;lt;/Files&amp;gt;&lt;/pre&gt;&lt;/code&gt;
+### 2.Apache开启Rewrite功能
+Ubuntu默认未开启Rewrite支持需手动开启，在此只是简单介绍，详细教程还是参考[「Files Directive」](https://httpd.apache.org/docs/2.4/en/mod/core.html#files)。
+
+在配置文件「apache2.conf」中加入：</code></pre><p>LoadModule rewrite_module modules/mod_rewrite.so </p>
+<pre><code>同时打开指定目录的AllowOveride开关（以网站根目录www为例）：</code></pre><p>Options Indexes FollowSymLinks AllowOverride All Order allow,deny Allow from all </p>
+<pre><code>测试Rewrite是否打开可在「.htaccess」中加入：</code></pre><h1 id="BEGIN"><a href="#BEGIN" class="headerlink" title="BEGIN"></a>BEGIN</h1><p>RewriteEngine on RewriteBase / RewriteRule .*$ http://欲跳转的页面 #END ``` 若能成功跳转，则说明Rewrite开启成功。</p>
+
+  </div>
+  
+  <!--文末结束语-->
+  
+    <div style="text-align:center;color: #ccc;font-size:24px;"> --- 本文结束 <i class="fa fa-heartbeat"></i> The End --- </div>
+  
+  
+  <!--页脚广告-->
+  
+    <div class="adsense-contain">
+      页脚广告
+    </div>
+  
+
+  <div class="mdui-divider-inset"></div>
+
+  
+  <nav >
+    
+      <a rel="prev" class="post-nav-item mdui-float-left" href="/t-65310/">
+        <i class="fa fa-chevron-left"></i>
+        <span>LAMP下使用Certbot自动配置SSL证书</span>
+      </a>
+    
+    
+      <a rel="next" class="post-nav-item mdui-float-right" href="/t-1358/">
+        <span>Windows10下Edge浏览器等UWP应用无法连接到代理服务器的解决方案</span>
+        <i class="fa fa-chevron-right"></i>
+      </a>
+    
+  </nav>
+</article>
+
+
+
+
+  <div class="toc-button">
+    <button class="mdui-fab mdui-ripple mdui-color-teal" mdui-menu="{target: '#toc'}"><i class="mdui-icon material-icons">format_list_numbered</i></button>
+    <ul class="mdui-menu" id="toc">
+      <li class="mdui-menu-item">
+        <a href="/t-33478/" id="toc-header" class="mdui-ripple">文章目录</a>
+
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Ubuntu16-04下的LAMP环境搭建"><span class="toc-number">1.</span> <span class="toc-text">Ubuntu16.04下的LAMP环境搭建</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#基本设置"><span class="toc-number">1.1.</span> <span class="toc-text">基本设置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-开启root账号SSH登录"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.开启root账号SSH登录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-设置root密码"><span class="toc-number">1.1.2.</span> <span class="toc-text">2.设置root密码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-设置DNS"><span class="toc-number">1.1.3.</span> <span class="toc-text">3.设置DNS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-更新源"><span class="toc-number">1.1.4.</span> <span class="toc-text">4.更新源</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装常用软件"><span class="toc-number">1.2.</span> <span class="toc-text">安装常用软件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-SSH"><span class="toc-number">1.2.1.</span> <span class="toc-text">1.SSH</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Vim"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.Vim</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Tree"><span class="toc-number">1.2.3.</span> <span class="toc-text">3.Tree</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-Git"><span class="toc-number">1.2.4.</span> <span class="toc-text">4.Git</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#搭建LAMP"><span class="toc-number">1.3.</span> <span class="toc-text">搭建LAMP</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-安装Apache"><span class="toc-number">1.3.1.</span> <span class="toc-text">1.安装Apache</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-安装MySQL"><span class="toc-number">1.3.2.</span> <span class="toc-text">2.安装MySQL</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-安装PHP"><span class="toc-number">1.3.3.</span> <span class="toc-text">3.安装PHP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-安装其他模块"><span class="toc-number">1.3.4.</span> <span class="toc-text">4.安装其他模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-修改权限"><span class="toc-number">1.3.5.</span> <span class="toc-text">5.修改权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-安装phpMyAdmin"><span class="toc-number">1.3.6.</span> <span class="toc-text">6.安装phpMyAdmin</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#BEGIN"><span class="toc-number">2.</span> <span class="toc-text">BEGIN</span></a></li></ol>
+      </li>
+    </ul>
+  </div>
+
+
+
+
+  <div id="comment" class="mdui-card mdui-p-a-2 mdui-m-b-5">
+    <div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+  var gitalk = new Gitalk({
+    clientID: 'f3866882707e12e74c4a',
+    clientSecret: '04a037afee00b94e4b55e474aa270ac136a8c952',
+    repo: 'kb1000fx.github.io',
+    owner: 'kb1000fx',
+    admin: ['kb1000fx'],
+    id: '' || location.pathname,
+    distractionFreeMode: 'true',
+  });
+  gitalk.render('gitalk-container');
+</script>
+  </div>
+
+    </main>
+    <footer id="footer" class="mdui-m-t-5 mdui-p-y-3 mdui-color-theme">
+  <div class="mdui-p-y-1 mdui-text-center">
+    Copyright &copy; 2015 - 2020 机智小蜗熊<br>
+    Powered by <a href="https://hexo.io/" target="_blank" class="mdui-text-color-theme-accent">Hexo</a>
+    <br>
+      <span id="busuanzi_container_site_uv" style="display: none;"><i class="mdui-icon material-icons">&#xe7fd;</i> <span id="busuanzi_value_site_uv"></span></span>
+      <span id="busuanzi_container_site_pv" style="display: none;"><i class="mdui-icon material-icons">&#xe417;</i> <span id="busuanzi_value_site_pv"></span></span> &nbsp;&nbsp;
+      
+    
+  </div>
+</footer>
+    
+    <button id="gotop" class="mdui-fab mdui-fab-fixed mdui-fab-hide mdui-ripple mdui-color-teal"><i class="mdui-icon material-icons">arrow_upward</i></button>
+    
+    <script async src="http://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+    
+<script src="/js/mdui.js"></script>
+<script src="/js/meadow.js"></script>
+
+</body>
+</html >

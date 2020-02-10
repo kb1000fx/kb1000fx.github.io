@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>小蜗熊的蜂蜜罐</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <script>if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href="https://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); </script>
+    
+    
+<link rel="stylesheet" href="/css/mdui.css">
+<link rel="stylesheet" href="/css/main.css">
+
+    
+<link rel="stylesheet" href="//lib.baomitu.com/font-awesome/5.11.2/css/all.min.css">
+
+
+    
+    
+    <title>htaccess文件格式 | 小蜗熊的蜂蜜罐</title>
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-primary-blue-grey mdui-theme-accent-blue">
+    
+    <header class="mdui-appbar mdui-appbar-fixed">
+  <div id="toolbar" class="mdui-toolbar mdui-color-theme">
+    <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#sidebar', swipe: true}"><i class="mdui-icon material-icons">menu</i></a>
+    <a href="/" class="mdui-typo-headline">小蜗熊的蜂蜜罐</a>
+    <div class="mdui-toolbar-spacer"></div>
+    <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-dialog="{target: '#search'}" mdui-tooltip="{content: 'search'}"><i class="mdui-icon material-icons">search</i></a>
+  </div>
+</header>
+
+<div class="mdui-dialog" id="search">
+  
+    <div class="search-form">
+      <input type="search" class="search-form-input" placeholder="请输入关键字">
+    </div>
+    <div class="search-result" data-resource="/search.xml"></div>
+  
+</div>
+
+    <aside id="sidebar" class="mdui-drawer">
+    <div class="mdui-tab" mdui-tab>
+        <a href="#sidebar-tab1" id="sidebartab" class="mdui-ripple mdui-tab-active">导航</a>
+        <a href="#sidebar-tab2" id="sidebartab" class="mdui-ripple">站点概览</a>
+    </div>
+
+    
+    <div id="sidebar-tab1" class="mdui-p-a-2">
+        <div class="mdui-list">
+            
+                
+                <a href="/" class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons">home</i>
+                    <div class="mdui-list-item-content">主页</div>
+                </a>
+            
+                
+                <a href="/tags/" class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons">bookmark</i>
+                    <div class="mdui-list-item-content">标签</div>
+                </a>
+            
+                
+                <a href="/categories/" class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons">folder</i>
+                    <div class="mdui-list-item-content">分类</div>
+                </a>
+            
+                
+                <a href="/archives/" class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons">archive</i>
+                    <div class="mdui-list-item-content">归档</div>
+                </a>
+            
+                
+                <a href="/NMSL/" class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons">attach_money</i>
+                    <div class="mdui-list-item-content">抽象话转换器</div>
+                </a>
+            
+                
+                <a href="/sitemap.xml" class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons">map</i>
+                    <div class="mdui-list-item-content">站点地图</div>
+                </a>
+            
+            <div class="mdui-list-item mdui-ripple">
+                <i class="mdui-list-item-icon mdui-icon material-icons">brightness_2</i>
+                <div class="mdui-list-item-content">夜间模式</div>
+                <label class="mdui-switch" id="darkmode">
+                  <input type="checkbox" id="nightmode_switch"/>
+                  <i class="mdui-switch-icon"></i>
+                </label>
+            </div>           
+        </div>
+    </div>
+
+    
+    <div id="sidebar-tab2" class="mdui-p-a-2">
+        <div class="sidebar-avatar">
+            <img src="/images/avatar.jpg"/>
+            <p class="sidebar-author-name">机智小蜗熊</p>
+            <p class="sidebar-description">有害辣鸡</p>
+        </div>
+
+        <div class="sidebar-links">
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="fab fa-github"></i></span>
+                    <a href="https://github.com/kb1000fx" target="_blank" rel="noopener" class="mdui-chip-title">GitHub</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="fab fa-steam"></i></span>
+                    <a href="https://steamcommunity.com/profiles/76561198346798163" target="_blank" rel="noopener" class="mdui-chip-title">Steam</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="fas fa-envelope"></i></span>
+                    <a href="mailto:kb1000fx@gmail.com" class="mdui-chip-title">E-Mail</a>
+                </div>
+            
+        </div>
+    </div>
+
+    <div class="mdui-divider"></div>
+    
+    
+    
+        <div class="adsense-contain">
+            侧边栏广告
+        </div>
+    
+    
+</aside>
+    
+    <main id="main-contain" class="mdui-container mdui-m-t-5">
+      <article id="article" class="mdui-card mdui-p-a-2 mdui-m-b-5">
+  
+  
+    
+  
+
+  <header class="mdui-card-media">
+    
+    
+      
+        <img src = ../images/33478/apache.jpg >
+      
+      <div class="mdui-card-media-covered">
+        <div class="post-header"> 
+  <a class="post-header-title" href="/t-65147/">htaccess文件格式</a>
+  <div class="post-header-meta">
+    <span>
+      <i class="fa fa-calendar"></i>
+      发布于:&nbsp;2018-03-09
+    </span>
+    <span>
+      <i class="fa fa-calendar-check"></i>
+      更新于:&nbsp;2020-02-10
+    </span>
+    <span>
+      <i class="fa fa-folder"></i>
+      分类于:&nbsp;<a class="category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a> > <a class="category-link" href="/categories/%E6%8A%80%E6%9C%AF/Linux/">Linux</a>
+    </span>
+  </div>
+</div>   
+    
+
+
+
+      </div>
+    
+      
+    
+    <div class="mdui-card-menu">
+    
+      <button class="mdui-btn mdui-btn-icon mdui-text-color-teal" mdui-menu="{target: '#share_menu', align: 'right'}"><i class="mdui-icon material-icons">share</i></button>
+      <ul class="mdui-menu" id="share_menu">
+        <li class="mdui-menu-item">
+          <a href="http://service.weibo.com/share/share.php?appkey=&title=htaccess文件格式&url=https://garybear.cn/t-65147/&pic=https://garybear.cn/images/favicon.png&searchPic=false&style=simple" target="_blank" class="mdui-ripple">分享到 Weibo</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://twitter.com/intent/tweet?text=htaccess文件格式&url=https://garybear.cn/t-65147/&via=机智小蜗熊" target="_blank" class="mdui-ripple">分享到 Twitter</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://garybear.cn/t-65147/" target="_blank" class="mdui-ripple">分享到 Facebook</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://plus.google.com/share?url=https://garybear.cn/t-65147/" target="_blank" class="mdui-ripple">分享到 Google+</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://garybear.cn/t-65147/&title=htaccess文件格式" target="_blank" class="mdui-ripple">分享到 LinkedIn</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="http://connect.qq.com/widget/shareqq/index.html?site=小蜗熊的蜂蜜罐&title=htaccess文件格式&summary=有害辣鸡&pics=https://garybear.cn/images/favicon.png&url=https://garybear.cn/t-65147/" target="_blank" class="mdui-ripple">分享到 QQ</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://telegram.me/share/url?url=https://garybear.cn/t-65147/&text=htaccess文件格式" target="_blank" class="mdui-ripple">分享到 Telegram</a>
+        </li>
+      </ul>
+    
+  </div>
+  </header>
+
+  
+  
+    <div class="adsense-contain">
+      页首广告
+    </div>
+  
+
+  
+  
+
+  <div class="mdui-card-content mdui-typo">
+    <h1 id="htaccess文件格式"><a href="#htaccess文件格式" class="headerlink" title=".htaccess文件格式"></a>.htaccess文件格式</h1><h1 id="htaccess文件简介"><a href="#htaccess文件简介" class="headerlink" title="htaccess文件简介"></a>htaccess文件简介</h1><p>htaccess文件是Apache服务器中的一个配置文件，负责相关目录下的网页配置。/www/html下的.htaccess文件与主配置文件中段中内容完全等效。.htaccess文件中的配置指令作用于.htaccess文件所在的目录及其所有子目录，且子目录中的指令会覆盖父目录或者主配置文件中的指令。 </p>
+<h1 id="rewrite的语法格式："><a href="#rewrite的语法格式：" class="headerlink" title="rewrite的语法格式："></a>rewrite的语法格式：</h1><pre><code>1. RewriteEngine On #启用rewrite起作用。
+2. RewriteBase url-path #设定基准目录。
+3. RewriteCond test-string condPattern #用于测试rewrite的匹配条件。
+4. RewriteRule Pattern Substitution #规则</code></pre><h2 id="RewriteEngine-On-Off"><a href="#RewriteEngine-On-Off" class="headerlink" title="RewriteEngine On|Off"></a>RewriteEngine On|Off</h2><p>RewriteEngine 用于开启或停用rewrite功能。rewrite configurations 不会自动继承。 </p>
+<h2 id="RewriteBase-URL-path"><a href="#RewriteBase-URL-path" class="headerlink" title="RewriteBase URL-path"></a>RewriteBase URL-path</h2><p>RewriteBase用于设定重写的基准URL。<br>RewriteRule可以用于目录级的配置文件中 (.htaccess)并在局部范围内起作用，即规则实际处理的只是剥离了本地路径前缀的一部分。处理结束后，这个路径会被自动地附着回去。默认值是”RewriteBase physical-directory-path”。 </p>
+<h2 id="RewriteCond-TestString-CondPattern-flags"><a href="#RewriteCond-TestString-CondPattern-flags" class="headerlink" title="RewriteCond TestString CondPattern [flags]"></a>RewriteCond TestString CondPattern [flags]</h2><p>RewriteCond指令定义了一个规则的条件，即，在一个RewriteRule指令之前有一个或多个RewriteCond指令。 条件之后的重写规则仅在当前URI与pattern匹配并且符合这些条件的时候才会起作用。<br>TestString是一个纯文本的字符串，但是还可以包含下列可扩展的成分： + RewriteRule反向引用: 引用方法是 $N (0 &lt;= N &lt;= 9) 引用当前(带有若干RewriteCond指令的)RewriteRule中的 与pattern匹配的分组成分(圆括号!)。<br>+ RewriteCond反向引用: 引用方法是 %N (1 &lt;= N &lt;= 9) 引用当前若干RewriteCond条件中最后符合的条件中的分组成分(圆括号!)。 + RewriteMap 扩展: 引用方法是 ${mapname:key|default} + 服务器变量: 引用方法是 %{ NAME_OF_VARIABLE } CondPattern是条件参数。<br>Flags标识是是第三个参数,可选OR、AND、NC，默认为AND。 </p>
+<h2 id="RewriteRule-Pattern-Substitution-Flags"><a href="#RewriteRule-Pattern-Substitution-Flags" class="headerlink" title="RewriteRule Pattern Substitution [Flags]"></a>RewriteRule Pattern Substitution [Flags]</h2><p>其中的Pattern就是参数，一般为一些文件的扩展名，Substitution是用来替换前面用的，这儿的Flags，常用的R表示 redirect（强制重定向），F表示forbidden（禁止访问），L表示last（最后），通常当你希望停止重写操作而立即重定向时，可用它。 </p>
+<h1 id="htaccess文件URL重写写法例子"><a href="#htaccess文件URL重写写法例子" class="headerlink" title=".htaccess文件URL重写写法例子"></a>.htaccess文件URL重写写法例子</h1><h2 id="1-反盗链"><a href="#1-反盗链" class="headerlink" title="1. 反盗链"></a>1. 反盗链</h2><pre><code>RewriteBase /
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^http://(www.)?yoursite.com/.*$ [NC]
+RewriteRule .(gif|jpg|swf|flv|png)$ /feed/ [R=302,L]</code></pre><h2 id="2-防止目录浏览"><a href="#2-防止目录浏览" class="headerlink" title="2. 防止目录浏览"></a>2. 防止目录浏览</h2><pre><code>Options All -Indexes</code></pre><h2 id="3-SEO友好的301永久重定向"><a href="#3-SEO友好的301永久重定向" class="headerlink" title="3. SEO友好的301永久重定向"></a>3. SEO友好的301永久重定向</h2><pre><code>Redirect 301 http://www.yoursite.com/article.html http://www.yoursite.com/archives/article</code></pre><h2 id="4-显示个性化的-404-错误页面"><a href="#4-显示个性化的-404-错误页面" class="headerlink" title="4. 显示个性化的 404 错误页面"></a>4. 显示个性化的 404 错误页面</h2><pre><code>ErrorDocument 404 /404.html</code></pre><h2 id="5-设置目录的默认页面"><a href="#5-设置目录的默认页面" class="headerlink" title="5. 设置目录的默认页面"></a>5. 设置目录的默认页面</h2><p>假如你需要为不同的目录设置不同的默认页面，你可以很容易的通过 .htaccess 实现： </p>
+<pre><code>DirectoryIndex about.html</code></pre><h2 id="6-基于referer来限制网站访问"><a href="#6-基于referer来限制网站访问" class="headerlink" title="6. 基于referer来限制网站访问"></a>6. 基于referer来限制网站访问</h2><pre><code>&lt;IfModule mod_rewrite.c&gt;
+RewriteEngine on  RewriteCond %{HTTP_REFERER} spamteam.com [NC,OR]
+RewriteCond %{HTTP_REFERER} trollteam.com [NC,OR]
+RewriteRule .* – [F]
+&lt;/ifModule&gt;</code></pre><ol start="7">
+<li>限制PHP上传文件大小</li>
+</ol>
+<pre><code>php_value upload_max_filesize 20M
+php_value post_max_size 20M
+php_value max_execution_time 200
+php_value max_input_time 200</code></pre><ol start="8">
+<li>通过压缩文件来减少网络流量</li>
+</ol>
+<pre><code>AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/xml
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE application/xml
+AddOutputFilterByType DEFLATE application/xhtml+xml
+AddOutputFilterByType DEFLATE application/rss+xml
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE application/x-javascript</code></pre><h2 id="9-缓存文件"><a href="#9-缓存文件" class="headerlink" title="9. 缓存文件"></a>9. 缓存文件</h2><pre><code>&lt;FilesMatch “.(flv|gif|jpg|jpeg|png|ico|swf|js|css|pdf)$”&gt;
+Header set Cache-Control “max-age=2592000〃
+&lt;/FilesMatch&gt;</code></pre><h2 id="10-添加尾部的反斜杠"><a href="#10-添加尾部的反斜杠" class="headerlink" title="10. 添加尾部的反斜杠"></a>10. 添加尾部的反斜杠</h2><pre><code>&lt;IfModule mod_rewrite.c&gt;
+RewriteCond %{REQUEST_URI} /+[^\.]+$
+RewriteRule ^(.+[^/])$ %{REQUEST_URI}/ [R=301,L]
+&lt;/IfModule&gt;</code></pre><h2 id="11-处理移动过的文件"><a href="#11-处理移动过的文件" class="headerlink" title="11. 处理移动过的文件"></a>11. 处理移动过的文件</h2><pre><code>Redirect 301 /old.html http://yoursite.com/new.html</code></pre><p>或者是 </p>
+<pre><code>RewriteRule /old.html http://yoursite.com/new.html [R=301,L]</code></pre><p>如果想隐式跳转 </p>
+<pre><code>RewriteRule /old.html http://yoursite.com/new.html [L]</code></pre><h2 id="12-html后缀的url链接到php文件"><a href="#12-html后缀的url链接到php文件" class="headerlink" title="12. html后缀的url链接到php文件"></a>12. html后缀的url链接到php文件</h2><pre><code>RewriteRule ^/?([a-z/]+)\.html$ $1.php [L]</code></pre><h2 id="13-旧文件夹的内容链接到新文件夹"><a href="#13-旧文件夹的内容链接到新文件夹" class="headerlink" title="13. 旧文件夹的内容链接到新文件夹"></a>13. 旧文件夹的内容链接到新文件夹</h2><pre><code>RewriteRule ^/?old_directory/([a-z/.]+)$ new_directory/$1 [R=301,L]</code></pre><h2 id="14-隐藏文件名"><a href="#14-隐藏文件名" class="headerlink" title="14. 隐藏文件名"></a>14. 隐藏文件名</h2><pre><code>RewriteRule ^/?([a-z]+)$ $1.php [L]</code></pre><h2 id="15-阻止-允许特定IP-IP段"><a href="#15-阻止-允许特定IP-IP段" class="headerlink" title="15. 阻止/允许特定IP/IP段"></a>15. 阻止/允许特定IP/IP段</h2><p>禁止所有IP，除了指定的 </p>
+<pre><code>order deny,allow
+deny from all</code></pre><p>如果想允许IP段，如123.123.123.0 ~ 123.123.123.255，则 </p>
+<pre><code>allow from 123.123.123.
+allow from 123.123.123.123
+
+ErrorDocument 403 /page.html
+
+&lt;Files page.html&gt;
+allow from all
+&lt;/Files&gt;</code></pre><p>如果想禁止特定IP </p>
+<pre><code>deny from 123.123.123.123</code></pre><h2 id="16-添加MIME类型"><a href="#16-添加MIME类型" class="headerlink" title="16. 添加MIME类型"></a>16. 添加MIME类型</h2><pre><code>AddType video/x-flv .flv</code></pre><p>如果设置类型为 application/octet-stream 将提示下载 </p>
+<pre><code>AddType application/octet-stream .pdf</code></pre>
+  </div>
+  
+  <!--文末结束语-->
+  
+    <div style="text-align:center;color: #ccc;font-size:24px;"> --- 本文结束 <i class="fa fa-heartbeat"></i> The End --- </div>
+  
+  
+  <!--页脚广告-->
+  
+    <div class="adsense-contain">
+      页脚广告
+    </div>
+  
+
+  <div class="mdui-divider-inset"></div>
+
+  
+  <nav >
+    
+      <a rel="prev" class="post-nav-item mdui-float-left" href="/t-15843/">
+        <i class="fa fa-chevron-left"></i>
+        <span>Windows及Office的KMS激活</span>
+      </a>
+    
+    
+      <a rel="next" class="post-nav-item mdui-float-right" href="/t-65310/">
+        <span>LAMP下使用Certbot自动配置SSL证书</span>
+        <i class="fa fa-chevron-right"></i>
+      </a>
+    
+  </nav>
+</article>
+
+
+
+
+  <div class="toc-button">
+    <button class="mdui-fab mdui-ripple mdui-color-teal" mdui-menu="{target: '#toc'}"><i class="mdui-icon material-icons">format_list_numbered</i></button>
+    <ul class="mdui-menu" id="toc">
+      <li class="mdui-menu-item">
+        <a href="/t-65147/" id="toc-header" class="mdui-ripple">文章目录</a>
+
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#htaccess文件格式"><span class="toc-number">1.</span> <span class="toc-text">.htaccess文件格式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#htaccess文件简介"><span class="toc-number">2.</span> <span class="toc-text">htaccess文件简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#rewrite的语法格式："><span class="toc-number">3.</span> <span class="toc-text">rewrite的语法格式：</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#RewriteEngine-On-Off"><span class="toc-number">3.1.</span> <span class="toc-text">RewriteEngine On|Off</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RewriteBase-URL-path"><span class="toc-number">3.2.</span> <span class="toc-text">RewriteBase URL-path</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RewriteCond-TestString-CondPattern-flags"><span class="toc-number">3.3.</span> <span class="toc-text">RewriteCond TestString CondPattern [flags]</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RewriteRule-Pattern-Substitution-Flags"><span class="toc-number">3.4.</span> <span class="toc-text">RewriteRule Pattern Substitution [Flags]</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#htaccess文件URL重写写法例子"><span class="toc-number">4.</span> <span class="toc-text">.htaccess文件URL重写写法例子</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-反盗链"><span class="toc-number">4.1.</span> <span class="toc-text">1. 反盗链</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-防止目录浏览"><span class="toc-number">4.2.</span> <span class="toc-text">2. 防止目录浏览</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-SEO友好的301永久重定向"><span class="toc-number">4.3.</span> <span class="toc-text">3. SEO友好的301永久重定向</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-显示个性化的-404-错误页面"><span class="toc-number">4.4.</span> <span class="toc-text">4. 显示个性化的 404 错误页面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-设置目录的默认页面"><span class="toc-number">4.5.</span> <span class="toc-text">5. 设置目录的默认页面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-基于referer来限制网站访问"><span class="toc-number">4.6.</span> <span class="toc-text">6. 基于referer来限制网站访问</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-缓存文件"><span class="toc-number">4.7.</span> <span class="toc-text">9. 缓存文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-添加尾部的反斜杠"><span class="toc-number">4.8.</span> <span class="toc-text">10. 添加尾部的反斜杠</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-处理移动过的文件"><span class="toc-number">4.9.</span> <span class="toc-text">11. 处理移动过的文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-html后缀的url链接到php文件"><span class="toc-number">4.10.</span> <span class="toc-text">12. html后缀的url链接到php文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-旧文件夹的内容链接到新文件夹"><span class="toc-number">4.11.</span> <span class="toc-text">13. 旧文件夹的内容链接到新文件夹</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14-隐藏文件名"><span class="toc-number">4.12.</span> <span class="toc-text">14. 隐藏文件名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15-阻止-允许特定IP-IP段"><span class="toc-number">4.13.</span> <span class="toc-text">15. 阻止&#x2F;允许特定IP&#x2F;IP段</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16-添加MIME类型"><span class="toc-number">4.14.</span> <span class="toc-text">16. 添加MIME类型</span></a></li></ol></li></ol>
+      </li>
+    </ul>
+  </div>
+
+
+
+
+  <div id="comment" class="mdui-card mdui-p-a-2 mdui-m-b-5">
+    <div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+  var gitalk = new Gitalk({
+    clientID: 'f3866882707e12e74c4a',
+    clientSecret: '04a037afee00b94e4b55e474aa270ac136a8c952',
+    repo: 'kb1000fx.github.io',
+    owner: 'kb1000fx',
+    admin: ['kb1000fx'],
+    id: '' || location.pathname,
+    distractionFreeMode: 'true',
+  });
+  gitalk.render('gitalk-container');
+</script>
+  </div>
+
+    </main>
+    <footer id="footer" class="mdui-m-t-5 mdui-p-y-3 mdui-color-theme">
+  <div class="mdui-p-y-1 mdui-text-center">
+    Copyright &copy; 2015 - 2020 机智小蜗熊<br>
+    Powered by <a href="https://hexo.io/" target="_blank" class="mdui-text-color-theme-accent">Hexo</a>
+    <br>
+      <span id="busuanzi_container_site_uv" style="display: none;"><i class="mdui-icon material-icons">&#xe7fd;</i> <span id="busuanzi_value_site_uv"></span></span>
+      <span id="busuanzi_container_site_pv" style="display: none;"><i class="mdui-icon material-icons">&#xe417;</i> <span id="busuanzi_value_site_pv"></span></span> &nbsp;&nbsp;
+      
+    
+  </div>
+</footer>
+    
+    <button id="gotop" class="mdui-fab mdui-fab-fixed mdui-fab-hide mdui-ripple mdui-color-teal"><i class="mdui-icon material-icons">arrow_upward</i></button>
+    
+    <script async src="http://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+    
+<script src="/js/mdui.js"></script>
+<script src="/js/meadow.js"></script>
+
+</body>
+</html >
