@@ -529,6 +529,8 @@ pre .javascript .function {
 }
 #sidebar {
   background-color: #fff;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 #sidebar #sidebartab {
   width: 48%;

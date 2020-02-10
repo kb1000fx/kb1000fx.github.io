@@ -181,6 +181,13 @@
       <i class="fa fa-folder"></i>
       分类于:&nbsp;<a class="category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a> > <a class="category-link" href="/categories/%E6%8A%80%E6%9C%AF/Windows/">Windows</a>
     </span>
+    
+      <span>
+        <i class="fa fa-eye"></i>
+        阅读次数:&nbsp;
+        <span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span>
+      </span>
+    
   </div>
 </div>   
     
@@ -323,7 +330,7 @@
     repo: 'kb1000fx.github.io',
     owner: 'kb1000fx',
     admin: ['kb1000fx'],
-    id: '' || location.pathname,
+    id: '' || md5(location.pathname),
     distractionFreeMode: 'true',
   });
   gitalk.render('gitalk-container');
@@ -335,9 +342,10 @@
   <div class="mdui-p-y-1 mdui-text-center">
     Copyright &copy; 2015 - 2020 机智小蜗熊<br>
     Powered by <a href="https://hexo.io/" target="_blank" class="mdui-text-color-theme-accent">Hexo</a>
-    <br>
+    
+      <br>
       <span id="busuanzi_container_site_uv" style="display: none;"><i class="mdui-icon material-icons">&#xe7fd;</i> <span id="busuanzi_value_site_uv"></span></span>
-      <span id="busuanzi_container_site_pv" style="display: none;"><i class="mdui-icon material-icons">&#xe417;</i> <span id="busuanzi_value_site_pv"></span></span> &nbsp;&nbsp;
+      <span id="busuanzi_container_site_pv" style="display: none;"><i class="mdui-icon material-icons">&#xe417;</i> <span id="busuanzi_value_site_pv"></span></span>
       
     
   </div>
