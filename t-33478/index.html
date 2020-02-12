@@ -10,6 +10,7 @@
     <meta name="force-rendering" content="webkit"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <script>if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href="https://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); </script>
+    <link rel="shortcut icon" href="/images/favicon.png">
     
     
 <link rel="stylesheet" href="/css/mdui.css">
@@ -19,7 +20,6 @@
 <link rel="stylesheet" href="//lib.baomitu.com/font-awesome/5.11.2/css/all.min.css">
 
 
-    
     
     <title>Ubuntu16.04下的LAMP环境搭建 | 小蜗熊的蜂蜜罐</title>
 <meta name="generator" content="Hexo 4.2.0"></head>
@@ -45,8 +45,8 @@
 
     <aside id="sidebar" class="mdui-drawer">
     <div class="mdui-tab" mdui-tab>
-        <a href="#sidebar-tab1" id="sidebartab" class="mdui-ripple mdui-tab-active">导航</a>
-        <a href="#sidebar-tab2" id="sidebartab" class="mdui-ripple">站点概览</a>
+        <a href="#sidebar-tab1" id="sidebartab" class="mdui-ripple mdui-tab-active">站点概览</a>
+        <a href="#sidebar-tab2" id="sidebartab" class="mdui-ripple">关于</a>
     </div>
 
     
@@ -154,16 +154,17 @@
     
     <main id="main-contain" class="mdui-container mdui-m-t-5">
       <article id="article" class="mdui-card mdui-p-a-2 mdui-m-b-5">
-  
-  
-    
+
   
 
+    
+
+  
   <header class="mdui-card-media">
     
     
       
-        <img src = ../images/33478/LAMP.png >
+        <img src = /images/33478/LAMP.png >
       
       <div class="mdui-card-media-covered">
         <div class="post-header"> 
@@ -249,7 +250,7 @@
   
 
   <div class="mdui-card-content mdui-typo">
-    <h1 id="Ubuntu16-04下的LAMP环境搭建"><a href="#Ubuntu16-04下的LAMP环境搭建" class="headerlink" title="Ubuntu16.04下的LAMP环境搭建"></a>Ubuntu16.04下的LAMP环境搭建</h1><p><img src="../images/33478/apache.jpg" alt="机智小蜗熊"></p>
+    <h1 id="Ubuntu16-04下的LAMP环境搭建"><a href="#Ubuntu16-04下的LAMP环境搭建" class="headerlink" title="Ubuntu16.04下的LAMP环境搭建"></a>Ubuntu16.04下的LAMP环境搭建</h1><p><img src="/images/33478/apache.jpg" alt="机智小蜗熊"></p>
 <h2 id="基本设置"><a href="#基本设置" class="headerlink" title="基本设置"></a>基本设置</h2><h3 id="1-开启root账号SSH登录"><a href="#1-开启root账号SSH登录" class="headerlink" title="1.开启root账号SSH登录"></a>1.开启root账号SSH登录</h3><p>腾讯云的Ubuntu默认账号是ubuntu，且无法以root身份远程登录，首先需要手动开启远程登录root账号并设置root密码。 </p>
 <pre><code>vim /etc/ssh.sshd_config
 
@@ -334,7 +335,7 @@ Ubuntu默认未开启Rewrite支持需手动开启，在此只是简单介绍，�
   <div class="mdui-divider-inset"></div>
 
   
-  <nav >
+  <nav>
     
       <a rel="prev" class="post-nav-item mdui-float-left" href="/t-65310/">
         <i class="fa fa-chevron-left"></i>
@@ -358,7 +359,6 @@ Ubuntu默认未开启Rewrite支持需手动开启，在此只是简单介绍，�
     <ul class="mdui-menu" id="toc">
       <li class="mdui-menu-item">
         <a href="/t-33478/" id="toc-header" class="mdui-ripple">文章目录</a>
-
         <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Ubuntu16-04下的LAMP环境搭建"><span class="toc-number">1.</span> <span class="toc-text">Ubuntu16.04下的LAMP环境搭建</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#基本设置"><span class="toc-number">1.1.</span> <span class="toc-text">基本设置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-开启root账号SSH登录"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.开启root账号SSH登录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-设置root密码"><span class="toc-number">1.1.2.</span> <span class="toc-text">2.设置root密码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-设置DNS"><span class="toc-number">1.1.3.</span> <span class="toc-text">3.设置DNS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-更新源"><span class="toc-number">1.1.4.</span> <span class="toc-text">4.更新源</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装常用软件"><span class="toc-number">1.2.</span> <span class="toc-text">安装常用软件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-SSH"><span class="toc-number">1.2.1.</span> <span class="toc-text">1.SSH</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Vim"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.Vim</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Tree"><span class="toc-number">1.2.3.</span> <span class="toc-text">3.Tree</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-Git"><span class="toc-number">1.2.4.</span> <span class="toc-text">4.Git</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#搭建LAMP"><span class="toc-number">1.3.</span> <span class="toc-text">搭建LAMP</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-安装Apache"><span class="toc-number">1.3.1.</span> <span class="toc-text">1.安装Apache</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-安装MySQL"><span class="toc-number">1.3.2.</span> <span class="toc-text">2.安装MySQL</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-安装PHP"><span class="toc-number">1.3.3.</span> <span class="toc-text">3.安装PHP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-安装其他模块"><span class="toc-number">1.3.4.</span> <span class="toc-text">4.安装其他模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-修改权限"><span class="toc-number">1.3.5.</span> <span class="toc-text">5.修改权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-安装phpMyAdmin"><span class="toc-number">1.3.6.</span> <span class="toc-text">6.安装phpMyAdmin</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#BEGIN"><span class="toc-number">2.</span> <span class="toc-text">BEGIN</span></a></li></ol>
       </li>
     </ul>
@@ -371,6 +371,7 @@ Ubuntu默认未开启Rewrite支持需手动开启，在此只是简单介绍，�
     <div id="gitalk-container"></div>
 <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
 <script>
   var gitalk = new Gitalk({
     clientID: 'f3866882707e12e74c4a',
@@ -378,23 +379,43 @@ Ubuntu默认未开启Rewrite支持需手动开启，在此只是简单介绍，�
     repo: 'kb1000fx.github.io',
     owner: 'kb1000fx',
     admin: ['kb1000fx'],
-    id: '' || md5(location.pathname),
+    id:  md5(location.pathname) ,
     distractionFreeMode: 'true',
   });
   gitalk.render('gitalk-container');
+  console.log(location.pathname)
 </script>
+    
   </div>
 
     </main>
-    <footer id="footer" class="mdui-m-t-5 mdui-p-y-3 mdui-color-theme">
-  <div class="mdui-p-y-1 mdui-text-center">
-    Copyright &copy; 2015 - 2020 机智小蜗熊<br>
-    Powered by <a href="https://hexo.io/" target="_blank" class="mdui-text-color-theme-accent">Hexo</a>
+    <footer id="footer" class="mdui-text-center mdui-m-t-5 mdui-p-b-2 mdui-p-t-4 mdui-color-theme">
+  <div class="footer-line">
     
-      <br>
-      <span id="busuanzi_container_site_uv" style="display: none;"><i class="mdui-icon material-icons">&#xe7fd;</i> <span id="busuanzi_value_site_uv"></span></span>
-      <span id="busuanzi_container_site_pv" style="display: none;"><i class="mdui-icon material-icons">&#xe417;</i> <span id="busuanzi_value_site_pv"></span></span>
+      <a href="http://www.beian.miit.gov.cn" rel="noopener" target="_blank">苏ICP备18025778号</a>
+    
+    <span>
+      &copy; 2015 - 2020 
       
+        <i style="color:#d9333f" class="fas fa-heart"></i>
+      
+      机智小蜗熊
+    </span>
+  </div>
+
+    
+  <div class="footer-line">
+    
+      <span>由 Hexo 强力驱动</span>
+    
+    
+      <span>主题 Meadow</span>
+    
+  </div>  
+  <div class="footer-line">
+    
+      <span id="busuanzi_container_site_uv" style="display: none;"> <i class="mdui-icon material-icons">person</i>总访客量 <span id="busuanzi_value_site_uv"></span></span>
+      <span id="busuanzi_container_site_pv" style="display: none;"> <i class="mdui-icon material-icons">remove_red_eye</i>总访问量 <span id="busuanzi_value_site_pv"></span></span>
     
   </div>
 </footer>

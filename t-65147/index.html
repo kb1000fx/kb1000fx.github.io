@@ -10,6 +10,7 @@
     <meta name="force-rendering" content="webkit"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <script>if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href="https://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); </script>
+    <link rel="shortcut icon" href="/images/favicon.png">
     
     
 <link rel="stylesheet" href="/css/mdui.css">
@@ -19,7 +20,6 @@
 <link rel="stylesheet" href="//lib.baomitu.com/font-awesome/5.11.2/css/all.min.css">
 
 
-    
     
     <title>htaccess文件格式 | 小蜗熊的蜂蜜罐</title>
 <meta name="generator" content="Hexo 4.2.0"></head>
@@ -45,8 +45,8 @@
 
     <aside id="sidebar" class="mdui-drawer">
     <div class="mdui-tab" mdui-tab>
-        <a href="#sidebar-tab1" id="sidebartab" class="mdui-ripple mdui-tab-active">导航</a>
-        <a href="#sidebar-tab2" id="sidebartab" class="mdui-ripple">站点概览</a>
+        <a href="#sidebar-tab1" id="sidebartab" class="mdui-ripple mdui-tab-active">站点概览</a>
+        <a href="#sidebar-tab2" id="sidebartab" class="mdui-ripple">关于</a>
     </div>
 
     
@@ -154,16 +154,17 @@
     
     <main id="main-contain" class="mdui-container mdui-m-t-5">
       <article id="article" class="mdui-card mdui-p-a-2 mdui-m-b-5">
-  
-  
-    
+
   
 
+    
+
+  
   <header class="mdui-card-media">
     
     
       
-        <img src = ../images/33478/apache.jpg >
+        <img src = /images/33478/apache.jpg >
       
       <div class="mdui-card-media-covered">
         <div class="post-header"> 
@@ -329,7 +330,7 @@ allow from all
   <div class="mdui-divider-inset"></div>
 
   
-  <nav >
+  <nav>
     
       <a rel="prev" class="post-nav-item mdui-float-left" href="/t-15843/">
         <i class="fa fa-chevron-left"></i>
@@ -353,7 +354,6 @@ allow from all
     <ul class="mdui-menu" id="toc">
       <li class="mdui-menu-item">
         <a href="/t-65147/" id="toc-header" class="mdui-ripple">文章目录</a>
-
         <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#htaccess文件格式"><span class="toc-number">1.</span> <span class="toc-text">.htaccess文件格式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#htaccess文件简介"><span class="toc-number">2.</span> <span class="toc-text">htaccess文件简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#rewrite的语法格式："><span class="toc-number">3.</span> <span class="toc-text">rewrite的语法格式：</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#RewriteEngine-On-Off"><span class="toc-number">3.1.</span> <span class="toc-text">RewriteEngine On|Off</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RewriteBase-URL-path"><span class="toc-number">3.2.</span> <span class="toc-text">RewriteBase URL-path</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RewriteCond-TestString-CondPattern-flags"><span class="toc-number">3.3.</span> <span class="toc-text">RewriteCond TestString CondPattern [flags]</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RewriteRule-Pattern-Substitution-Flags"><span class="toc-number">3.4.</span> <span class="toc-text">RewriteRule Pattern Substitution [Flags]</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#htaccess文件URL重写写法例子"><span class="toc-number">4.</span> <span class="toc-text">.htaccess文件URL重写写法例子</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-反盗链"><span class="toc-number">4.1.</span> <span class="toc-text">1. 反盗链</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-防止目录浏览"><span class="toc-number">4.2.</span> <span class="toc-text">2. 防止目录浏览</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-SEO友好的301永久重定向"><span class="toc-number">4.3.</span> <span class="toc-text">3. SEO友好的301永久重定向</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-显示个性化的-404-错误页面"><span class="toc-number">4.4.</span> <span class="toc-text">4. 显示个性化的 404 错误页面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-设置目录的默认页面"><span class="toc-number">4.5.</span> <span class="toc-text">5. 设置目录的默认页面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-基于referer来限制网站访问"><span class="toc-number">4.6.</span> <span class="toc-text">6. 基于referer来限制网站访问</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-缓存文件"><span class="toc-number">4.7.</span> <span class="toc-text">9. 缓存文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-添加尾部的反斜杠"><span class="toc-number">4.8.</span> <span class="toc-text">10. 添加尾部的反斜杠</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-处理移动过的文件"><span class="toc-number">4.9.</span> <span class="toc-text">11. 处理移动过的文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-html后缀的url链接到php文件"><span class="toc-number">4.10.</span> <span class="toc-text">12. html后缀的url链接到php文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-旧文件夹的内容链接到新文件夹"><span class="toc-number">4.11.</span> <span class="toc-text">13. 旧文件夹的内容链接到新文件夹</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14-隐藏文件名"><span class="toc-number">4.12.</span> <span class="toc-text">14. 隐藏文件名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15-阻止-允许特定IP-IP段"><span class="toc-number">4.13.</span> <span class="toc-text">15. 阻止&#x2F;允许特定IP&#x2F;IP段</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16-添加MIME类型"><span class="toc-number">4.14.</span> <span class="toc-text">16. 添加MIME类型</span></a></li></ol></li></ol>
       </li>
     </ul>
@@ -366,6 +366,7 @@ allow from all
     <div id="gitalk-container"></div>
 <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
 <script>
   var gitalk = new Gitalk({
     clientID: 'f3866882707e12e74c4a',
@@ -373,23 +374,43 @@ allow from all
     repo: 'kb1000fx.github.io',
     owner: 'kb1000fx',
     admin: ['kb1000fx'],
-    id: '' || md5(location.pathname),
+    id:  md5(location.pathname) ,
     distractionFreeMode: 'true',
   });
   gitalk.render('gitalk-container');
+  console.log(location.pathname)
 </script>
+    
   </div>
 
     </main>
-    <footer id="footer" class="mdui-m-t-5 mdui-p-y-3 mdui-color-theme">
-  <div class="mdui-p-y-1 mdui-text-center">
-    Copyright &copy; 2015 - 2020 机智小蜗熊<br>
-    Powered by <a href="https://hexo.io/" target="_blank" class="mdui-text-color-theme-accent">Hexo</a>
+    <footer id="footer" class="mdui-text-center mdui-m-t-5 mdui-p-b-2 mdui-p-t-4 mdui-color-theme">
+  <div class="footer-line">
     
-      <br>
-      <span id="busuanzi_container_site_uv" style="display: none;"><i class="mdui-icon material-icons">&#xe7fd;</i> <span id="busuanzi_value_site_uv"></span></span>
-      <span id="busuanzi_container_site_pv" style="display: none;"><i class="mdui-icon material-icons">&#xe417;</i> <span id="busuanzi_value_site_pv"></span></span>
+      <a href="http://www.beian.miit.gov.cn" rel="noopener" target="_blank">苏ICP备18025778号</a>
+    
+    <span>
+      &copy; 2015 - 2020 
       
+        <i style="color:#d9333f" class="fas fa-heart"></i>
+      
+      机智小蜗熊
+    </span>
+  </div>
+
+    
+  <div class="footer-line">
+    
+      <span>由 Hexo 强力驱动</span>
+    
+    
+      <span>主题 Meadow</span>
+    
+  </div>  
+  <div class="footer-line">
+    
+      <span id="busuanzi_container_site_uv" style="display: none;"> <i class="mdui-icon material-icons">person</i>总访客量 <span id="busuanzi_value_site_uv"></span></span>
+      <span id="busuanzi_container_site_pv" style="display: none;"> <i class="mdui-icon material-icons">remove_red_eye</i>总访问量 <span id="busuanzi_value_site_pv"></span></span>
     
   </div>
 </footer>

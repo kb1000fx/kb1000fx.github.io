@@ -10,6 +10,7 @@
     <meta name="force-rendering" content="webkit"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <script>if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href="https://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); </script>
+    <link rel="shortcut icon" href="/images/favicon.png">
     
     
 <link rel="stylesheet" href="/css/mdui.css">
@@ -19,7 +20,6 @@
 <link rel="stylesheet" href="//lib.baomitu.com/font-awesome/5.11.2/css/all.min.css">
 
 
-    
     
     <title>Windows及Office的KMS激活 | 小蜗熊的蜂蜜罐</title>
 <meta name="generator" content="Hexo 4.2.0"></head>
@@ -45,8 +45,8 @@
 
     <aside id="sidebar" class="mdui-drawer">
     <div class="mdui-tab" mdui-tab>
-        <a href="#sidebar-tab1" id="sidebartab" class="mdui-ripple mdui-tab-active">导航</a>
-        <a href="#sidebar-tab2" id="sidebartab" class="mdui-ripple">站点概览</a>
+        <a href="#sidebar-tab1" id="sidebartab" class="mdui-ripple mdui-tab-active">站点概览</a>
+        <a href="#sidebar-tab2" id="sidebartab" class="mdui-ripple">关于</a>
     </div>
 
     
@@ -154,16 +154,17 @@
     
     <main id="main-contain" class="mdui-container mdui-m-t-5">
       <article id="article" class="mdui-card mdui-p-a-2 mdui-m-b-5">
-  
-  
-    
+
   
 
+    
+
+  
   <header class="mdui-card-media">
     
     
       
-        <img src = ../images/15843/windows.png >
+        <img src = /images/15843/windows.png >
       
       <div class="mdui-card-media-covered">
         <div class="post-header"> 
@@ -286,7 +287,7 @@
   <div class="mdui-divider-inset"></div>
 
   
-  <nav >
+  <nav>
     
       <a rel="prev" class="post-nav-item mdui-float-left" href="/t-109/">
         <i class="fa fa-chevron-left"></i>
@@ -310,7 +311,6 @@
     <ul class="mdui-menu" id="toc">
       <li class="mdui-menu-item">
         <a href="/t-15843/" id="toc-header" class="mdui-ripple">文章目录</a>
-
         <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#更新："><span class="toc-number">1.</span> <span class="toc-text">更新：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2019-08"><span class="toc-number">2.</span> <span class="toc-text">2019.08</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2019-05"><span class="toc-number">3.</span> <span class="toc-text">2019.05</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-07"><span class="toc-number">4.</span> <span class="toc-text">2018.07</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Window激活"><span class="toc-number"></span> <span class="toc-text">Window激活</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#卸载当前密钥"><span class="toc-number">1.</span> <span class="toc-text">卸载当前密钥</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装新密钥"><span class="toc-number">2.</span> <span class="toc-text">安装新密钥</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#设置服务器地址"><span class="toc-number">3.</span> <span class="toc-text">设置服务器地址</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#激活"><span class="toc-number">4.</span> <span class="toc-text">激活</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Office激活"><span class="toc-number"></span> <span class="toc-text">Office激活</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#设置新密钥"><span class="toc-number">1.</span> <span class="toc-text">设置新密钥</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#进入Office目录"><span class="toc-number">2.</span> <span class="toc-text">进入Office目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#设置服务器地址："><span class="toc-number">3.</span> <span class="toc-text">设置服务器地址：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#激活-1"><span class="toc-number">4.</span> <span class="toc-text">激活</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Gvlk-Key及服务器地址"><span class="toc-number"></span> <span class="toc-text">Gvlk Key及服务器地址</span></a>
       </li>
     </ul>
@@ -323,6 +323,7 @@
     <div id="gitalk-container"></div>
 <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
 <script>
   var gitalk = new Gitalk({
     clientID: 'f3866882707e12e74c4a',
@@ -330,23 +331,43 @@
     repo: 'kb1000fx.github.io',
     owner: 'kb1000fx',
     admin: ['kb1000fx'],
-    id: '' || md5(location.pathname),
+    id:  md5(location.pathname) ,
     distractionFreeMode: 'true',
   });
   gitalk.render('gitalk-container');
+  console.log(location.pathname)
 </script>
+    
   </div>
 
     </main>
-    <footer id="footer" class="mdui-m-t-5 mdui-p-y-3 mdui-color-theme">
-  <div class="mdui-p-y-1 mdui-text-center">
-    Copyright &copy; 2015 - 2020 机智小蜗熊<br>
-    Powered by <a href="https://hexo.io/" target="_blank" class="mdui-text-color-theme-accent">Hexo</a>
+    <footer id="footer" class="mdui-text-center mdui-m-t-5 mdui-p-b-2 mdui-p-t-4 mdui-color-theme">
+  <div class="footer-line">
     
-      <br>
-      <span id="busuanzi_container_site_uv" style="display: none;"><i class="mdui-icon material-icons">&#xe7fd;</i> <span id="busuanzi_value_site_uv"></span></span>
-      <span id="busuanzi_container_site_pv" style="display: none;"><i class="mdui-icon material-icons">&#xe417;</i> <span id="busuanzi_value_site_pv"></span></span>
+      <a href="http://www.beian.miit.gov.cn" rel="noopener" target="_blank">苏ICP备18025778号</a>
+    
+    <span>
+      &copy; 2015 - 2020 
       
+        <i style="color:#d9333f" class="fas fa-heart"></i>
+      
+      机智小蜗熊
+    </span>
+  </div>
+
+    
+  <div class="footer-line">
+    
+      <span>由 Hexo 强力驱动</span>
+    
+    
+      <span>主题 Meadow</span>
+    
+  </div>  
+  <div class="footer-line">
+    
+      <span id="busuanzi_container_site_uv" style="display: none;"> <i class="mdui-icon material-icons">person</i>总访客量 <span id="busuanzi_value_site_uv"></span></span>
+      <span id="busuanzi_container_site_pv" style="display: none;"> <i class="mdui-icon material-icons">remove_red_eye</i>总访问量 <span id="busuanzi_value_site_pv"></span></span>
     
   </div>
 </footer>

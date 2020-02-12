@@ -10,6 +10,7 @@
     <meta name="force-rendering" content="webkit"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <script>if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href="https://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); </script>
+    <link rel="shortcut icon" href="/images/favicon.png">
     
     
 <link rel="stylesheet" href="/css/mdui.css">
@@ -19,7 +20,6 @@
 <link rel="stylesheet" href="//lib.baomitu.com/font-awesome/5.11.2/css/all.min.css">
 
 
-    
     
     <title>小蜗熊的蜂蜜罐</title>
 <meta name="generator" content="Hexo 4.2.0"></head>
@@ -45,8 +45,8 @@
 
     <aside id="sidebar" class="mdui-drawer">
     <div class="mdui-tab" mdui-tab>
-        <a href="#sidebar-tab1" id="sidebartab" class="mdui-ripple mdui-tab-active">导航</a>
-        <a href="#sidebar-tab2" id="sidebartab" class="mdui-ripple">站点概览</a>
+        <a href="#sidebar-tab1" id="sidebartab" class="mdui-ripple mdui-tab-active">站点概览</a>
+        <a href="#sidebar-tab2" id="sidebartab" class="mdui-ripple">关于</a>
     </div>
 
     
@@ -154,65 +154,55 @@
     
     <main id="main-contain" class="mdui-container mdui-m-t-5">
       
-    <article class="mdui-card mdui-m-b-5 mdui-p-a-2 mdui-hoverable">
-  
-      
-      
-        <div class="mdui-card-media">
-          
-            <img src = /images/65310/certbot-logo.png >
-          
-          <div class="mdui-card-media-covered">
-            <div class="post-header"> 
-  <a class="post-header-title" href="/t-65310/">LAMP下使用Certbot自动配置SSL证书</a>
-  <div class="post-header-meta">
-    <span>
-      <i class="fa fa-calendar"></i>
-      发布于:&nbsp;2018-03-01
-    </span>
-    <span>
-      <i class="fa fa-calendar-check"></i>
-      更新于:&nbsp;2020-02-10
-    </span>
-    <span>
-      <i class="fa fa-folder"></i>
-      分类于:&nbsp;<a class="category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a> > <a class="category-link" href="/categories/%E6%8A%80%E6%9C%AF/Linux/">Linux</a>
-    </span>
+
     
-  </div>
-</div>   
-    
-
-
-
-          </div>
-        </div>
-      
-  
-      
-      <div class="mdui-card-content">
-        <p class="post-abstract">
-          
-            LAMP下使用Certbot自动配置SSL证书Let’s Encrypt是ISRG运营一个免费、开放，自动化的证书颁发机构，可以申请到期限90天的免费SSL证书（包括单域名、多域名和泛域名）。 Certbot是Let’s Encrypt官方提供的一款SSL自动安装程序，官方网站 。使用Cert...
-          
-        </p>
         
-        <div style="text-align:center;">
-          <a class="post-readmore mdui-btn mdui-ripple mdui-btn-raised" href="/t-65310/">阅读更多</a>
-        </div>
-      </div>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+                "HTML-CSS": { 
+                    preferredFont: "TeX", 
+                    availableFonts: ["STIX","TeX"], 
+                    linebreaks: { automatic:true }, 
+                    EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) 
+                },
+                tex2jax: { 
+                    inlineMath: [ ["$", "$"], ["\\(","\\)"] ], 
+                    processEscapes: true, 
+                    ignoreClass: "tex2jax_ignore|dno",
+                    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+                },
+                TeX: {  
+                    equationNumbers: { autoNumber: "AMS" },
+                    noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, 
+                    Macros: { href: "{}" } 
+                },
+                messageStyle: "none"
+            }); 
+        </script>
+        
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Queue(function() {
+                var all = MathJax.Hub.getAllJax(), i;
+                for(i=0; i < all.length; i += 1) {
+                    all[i].SourceElement().parentNode.className += ' has-jax';
+                }
+            });
+        </script>
+        
+        <script type="text/javascript" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script>
+    
 
-      
-  
-    </article>
+
 
     <article class="mdui-card mdui-m-b-5 mdui-p-a-2 mdui-hoverable">
-  
+      
       
       
         <div class="mdui-card-media">
           
-            <img src = ../images/33478/LAMP.png >
+            <img src = /images/33478/LAMP.png >
           
           <div class="mdui-card-media-covered">
             <div class="post-header"> 
@@ -251,7 +241,8 @@ vim /etc/ssh.sshd_config
 
 
 
-- PermitRoo...
+- PermitRootLogin prohibit-password
++ PermitRootLogin yes2.设置root密码sudo passwd3.设置DNS有些服务器提供商并未设置DNS地址，这时需要先手动进行设置，否则接下来的步骤都将无法解析地址。 1.首先打开/etc/resolv.conf或/etc/...
           
         </p>
         
@@ -265,7 +256,7 @@ vim /etc/ssh.sshd_config
     </article>
 
     <article class="mdui-card mdui-m-b-5 mdui-p-a-2 mdui-hoverable">
-  
+      
       
       
         <div class="post-header"> 
@@ -297,7 +288,9 @@ vim /etc/ssh.sshd_config
         <p class="post-abstract">
           
             Edge浏览器无法连接到代理服务器Edge浏览器在全局代理模式下会出现无法连接到代理服务器的情况，除了使用PAC模式外还可以通过解除回环限制来解决。
-这是由于Edge属于UWP(Universal Windows Platform)应用，为了限制软件间的相互通信，UWP应用是无法访问 loca...
+这是由于Edge属于UWP(Universal Windows Platform)应用，为了限制软件间的相互通信，UWP应用是无法访问 localhost (127.0.0.1)的。使用CheckNetIsolation.exe将edge加入允许列表即可解除回环限制。
+以管理员身份打开CMD，输入以下内容即可：
+1CheckNetIsolation.exe LoopbackExempt -a -p=S-1-15-2-3624051433-2...
           
         </p>
         
@@ -311,7 +304,7 @@ vim /etc/ssh.sshd_config
     </article>
 
     <article class="mdui-card mdui-m-b-5 mdui-p-a-2 mdui-hoverable">
-  
+      
       
       
         <div class="post-header"> 
@@ -345,7 +338,9 @@ vim /etc/ssh.sshd_config
             后端设置安装ss-libev12sudo apt updatesudo apt install shadowsocks-libev
 
 对于14.04和16.04需从PPA安装
-12sudo apt-get install software-properties-common -ysudo ad...
+12sudo apt-get install software-properties-common -ysudo add-apt-repository ppa:max-c-lv/shadowsocks-libev -y
+
+配置与启动123456# 启动sudo ss-local -c &lt;config json path&gt;  start# 停止sudo ss-local -c &lt;config jso...
           
         </p>
         
@@ -359,12 +354,12 @@ vim /etc/ssh.sshd_config
     </article>
 
     <article class="mdui-card mdui-m-b-5 mdui-p-a-2 mdui-hoverable">
-  
+      
       
       
         <div class="mdui-card-media">
           
-            <img src = ../images/57950/EFI.png >
+            <img src = /images/57950/EFI.png >
           
           <div class="mdui-card-media-covered">
             <div class="post-header"> 
@@ -400,7 +395,11 @@ vim /etc/ssh.sshd_config
             管理员身份运行cmd
 1diskpart
 在 DISKPART&gt; 提示符下
-12345list diskselect disk 0           #选择磁盘list partitionselect partition 2      #efi分区序号，类型为系统assign lett...
+12345list diskselect disk 0           #选择磁盘list partitionselect partition 2      #efi分区序号，类型为系统assign letter=p
+以管理员身份再运行cmd
+123P:cd EFIrmdir /s/q Ubuntu
+或是以管理员身份执行程序(如记事本)，在打开界面切到对应位置删除最后在 DISKPART&gt; 提示符下移除盘符
+1remove letter=p
           
         </p>
         
@@ -414,7 +413,7 @@ vim /etc/ssh.sshd_config
     </article>
 
     <article class="mdui-card mdui-m-b-5 mdui-p-a-2 mdui-hoverable">
-  
+      
       
       
         <div class="post-header"> 
@@ -426,7 +425,7 @@ vim /etc/ssh.sshd_config
     </span>
     <span>
       <i class="fa fa-calendar-check"></i>
-      更新于:&nbsp;2020-02-10
+      更新于:&nbsp;2020-02-12
     </span>
     <span>
       <i class="fa fa-folder"></i>
@@ -446,8 +445,10 @@ vim /etc/ssh.sshd_config
         <p class="post-abstract">
           
             参见左侧目录或使用Ctrl+F进行搜索
-LatexMathjax公式标号与引用MathJax的公式语法与LaTex相同，使用\tag{yourtag}给公式添加编号，使用\label{somelabel}添加引用标签。代码：
-1$$ a = x^2-y^3 \tag&#123;eq1&#125...
+LatexMathjax公式标号与引用MathJax的公式语法与LaTex相同，使用\tag{yourtag}给公式添加编号，使用\label{somelabel}添加引用标签。
+代码：
+1$$ a = x^2-y^3 \tag&#123;eq1&#125; \label&#123;eq1&#125; $$
+其中\label仅对Mathjax有效，对于Katex无效
           
         </p>
         
@@ -461,7 +462,7 @@ LatexMathjax公式标号与引用MathJax的公式语法与LaTex相同，使用\t
     </article>
 
     <article class="mdui-card mdui-m-b-5 mdui-p-a-2 mdui-hoverable">
-  
+      
       
       
         <div class="mdui-card-media">
@@ -500,7 +501,7 @@ LatexMathjax公式标号与引用MathJax的公式语法与LaTex相同，使用\t
         <p class="post-abstract">
           
             更多详细内容参见 饥荒维基
-指令12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758#上帝模式：c_godmode()#物品栏中给予...
+指令12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758#上帝模式：c_godmode()#物品栏中给予物品：c_give("代码名称“，数量)  #鼠标指针处生成物品：c_spawn(“XX”，数量)#鼠标指针处生成物品：DebugSpawn"XX"#删除物品：TheInput:GetWorldEntityUnderMouse():Remove()#设置生命：c_sethealth(百分数)#设置精...
           
         </p>
         
@@ -523,15 +524,33 @@ LatexMathjax公式标号与引用MathJax的公式语法与LaTex相同，使用\t
 
   
     </main>
-    <footer id="footer" class="mdui-m-t-5 mdui-p-y-3 mdui-color-theme">
-  <div class="mdui-p-y-1 mdui-text-center">
-    Copyright &copy; 2015 - 2020 机智小蜗熊<br>
-    Powered by <a href="https://hexo.io/" target="_blank" class="mdui-text-color-theme-accent">Hexo</a>
+    <footer id="footer" class="mdui-text-center mdui-m-t-5 mdui-p-b-2 mdui-p-t-4 mdui-color-theme">
+  <div class="footer-line">
     
-      <br>
-      <span id="busuanzi_container_site_uv" style="display: none;"><i class="mdui-icon material-icons">&#xe7fd;</i> <span id="busuanzi_value_site_uv"></span></span>
-      <span id="busuanzi_container_site_pv" style="display: none;"><i class="mdui-icon material-icons">&#xe417;</i> <span id="busuanzi_value_site_pv"></span></span>
+      <a href="http://www.beian.miit.gov.cn" rel="noopener" target="_blank">苏ICP备18025778号</a>
+    
+    <span>
+      &copy; 2015 - 2020 
       
+        <i style="color:#d9333f" class="fas fa-heart"></i>
+      
+      机智小蜗熊
+    </span>
+  </div>
+
+    
+  <div class="footer-line">
+    
+      <span>由 Hexo 强力驱动</span>
+    
+    
+      <span>主题 Meadow</span>
+    
+  </div>  
+  <div class="footer-line">
+    
+      <span id="busuanzi_container_site_uv" style="display: none;"> <i class="mdui-icon material-icons">person</i>总访客量 <span id="busuanzi_value_site_uv"></span></span>
+      <span id="busuanzi_container_site_pv" style="display: none;"> <i class="mdui-icon material-icons">remove_red_eye</i>总访问量 <span id="busuanzi_value_site_pv"></span></span>
     
   </div>
 </footer>

@@ -10,6 +10,7 @@
     <meta name="force-rendering" content="webkit"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <script>if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href="https://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); </script>
+    <link rel="shortcut icon" href="/images/favicon.png">
     
     
 <link rel="stylesheet" href="/css/mdui.css">
@@ -19,7 +20,6 @@
 <link rel="stylesheet" href="//lib.baomitu.com/font-awesome/5.11.2/css/all.min.css">
 
 
-    
     
     <title>麦克斯韦方程组的推导及形式转换 | 小蜗熊的蜂蜜罐</title>
 <meta name="generator" content="Hexo 4.2.0"></head>
@@ -45,8 +45,8 @@
 
     <aside id="sidebar" class="mdui-drawer">
     <div class="mdui-tab" mdui-tab>
-        <a href="#sidebar-tab1" id="sidebartab" class="mdui-ripple mdui-tab-active">导航</a>
-        <a href="#sidebar-tab2" id="sidebartab" class="mdui-ripple">站点概览</a>
+        <a href="#sidebar-tab1" id="sidebartab" class="mdui-ripple mdui-tab-active">站点概览</a>
+        <a href="#sidebar-tab2" id="sidebartab" class="mdui-ripple">关于</a>
     </div>
 
     
@@ -154,53 +154,54 @@
     
     <main id="main-contain" class="mdui-container mdui-m-t-5">
       <article id="article" class="mdui-card mdui-p-a-2 mdui-m-b-5">
-  
-  
-    
-      <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-    "HTML-CSS": { 
-        preferredFont: "TeX", 
-        availableFonts: ["STIX","TeX"], 
-        linebreaks: { automatic:true }, 
-        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) 
-    },
-    tex2jax: { 
-        inlineMath: [ ["$", "$"], ["\\(","\\)"] ], 
-        processEscapes: true, 
-        ignoreClass: "tex2jax_ignore|dno",
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-    },
-    TeX: {  
-        equationNumbers: { autoNumber: "AMS" },
-        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, 
-        Macros: { href: "{}" } 
-    },
-    messageStyle: "none"
-    }); 
-</script>
-<!-- 给MathJax元素添加has-jax class -->
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for(i=0; i < all.length; i += 1) {
-            all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-    });
-</script>
-<!-- 通过连接CDN加载MathJax的js代码 -->
-<script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
-    
+
   
 
+    
+        
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+                "HTML-CSS": { 
+                    preferredFont: "TeX", 
+                    availableFonts: ["STIX","TeX"], 
+                    linebreaks: { automatic:true }, 
+                    EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) 
+                },
+                tex2jax: { 
+                    inlineMath: [ ["$", "$"], ["\\(","\\)"] ], 
+                    processEscapes: true, 
+                    ignoreClass: "tex2jax_ignore|dno",
+                    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+                },
+                TeX: {  
+                    equationNumbers: { autoNumber: "AMS" },
+                    noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, 
+                    Macros: { href: "{}" } 
+                },
+                messageStyle: "none"
+            }); 
+        </script>
+        
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Queue(function() {
+                var all = MathJax.Hub.getAllJax(), i;
+                for(i=0; i < all.length; i += 1) {
+                    all[i].SourceElement().parentNode.className += ' has-jax';
+                }
+            });
+        </script>
+        
+        <script type="text/javascript" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script>
+    
+
+  
   <header class="mdui-card-media">
     
     
       
-        <img src = ../images/44074/MaxwellGod.jpg >
+        <img src = /images/44074/MaxwellGod.jpg >
       
       <div class="mdui-card-media-covered">
         <div class="post-header"> 
@@ -212,7 +213,7 @@
     </span>
     <span>
       <i class="fa fa-calendar-check"></i>
-      更新于:&nbsp;2020-02-10
+      更新于:&nbsp;2020-02-12
     </span>
     <span>
       <i class="fa fa-folder"></i>
@@ -291,6 +292,7 @@
 <p><strong>推导方式如下：</strong></p>
 <p>根据库仑定律及电场强度的定义，空间内某一点出电场强度为：</p>
 <p>$$<br>\vec{E} = \frac{q}{4 \pi \varepsilon \cdot r^2} \space \vec{e}_r<br>$$</p>
+<a id="more"></a>
 <p>在空间内任取一封闭曲面，在曲面内任一点处放置一点电荷$q$，曲面电通量的微元为：</p>
 <p>$$<br>d \Phi =\vec{E} \cdot d \vec{S} = \frac{q}{4 \pi \varepsilon \cdot r^2} \space dS \space cos \theta = \frac{q}{4 \pi \varepsilon} \cdot\frac{d S^{‘}}{ r^2}<br>$$</p>
 <p>电通量之和为：</p>
@@ -393,7 +395,7 @@
   <div class="mdui-divider-inset"></div>
 
   
-  <nav >
+  <nav>
     
       <a rel="prev" class="post-nav-item mdui-float-left" href="/t-2023/">
         <i class="fa fa-chevron-left"></i>
@@ -417,7 +419,6 @@
     <ul class="mdui-menu" id="toc">
       <li class="mdui-menu-item">
         <a href="/t-44074/" id="toc-header" class="mdui-ripple">文章目录</a>
-
         <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#麦克斯韦方程组积分形式的推导和证明"><span class="toc-number">1.</span> <span class="toc-text">麦克斯韦方程组积分形式的推导和证明</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#高斯定律"><span class="toc-number">1.1.</span> <span class="toc-text">高斯定律</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#高斯磁定律"><span class="toc-number">1.2.</span> <span class="toc-text">高斯磁定律</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#法拉第电磁感应定律"><span class="toc-number">1.3.</span> <span class="toc-text">法拉第电磁感应定律</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#全电流定律"><span class="toc-number">1.4.</span> <span class="toc-text">全电流定律</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-number">1.5.</span> <span class="toc-text">总结</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#高斯定律-1"><span class="toc-number">1.5.1.</span> <span class="toc-text">高斯定律</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#高斯磁定律-1"><span class="toc-number">1.5.2.</span> <span class="toc-text">高斯磁定律</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#法拉第电磁感应定律-1"><span class="toc-number">1.5.3.</span> <span class="toc-text">法拉第电磁感应定律</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#全电流定律-1"><span class="toc-number">1.5.4.</span> <span class="toc-text">全电流定律</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#由麦克斯韦方程组的积分形式推导其微分形式"><span class="toc-number">2.</span> <span class="toc-text">由麦克斯韦方程组的积分形式推导其微分形式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Nabla算子简介"><span class="toc-number">2.1.</span> <span class="toc-text">Nabla算子简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#高斯定律-2"><span class="toc-number">2.2.</span> <span class="toc-text">高斯定律</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#高斯磁定律-2"><span class="toc-number">2.3.</span> <span class="toc-text">高斯磁定律</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#全电流定律-2"><span class="toc-number">2.4.</span> <span class="toc-text">全电流定律</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#法拉第电磁感应定律-2"><span class="toc-number">2.5.</span> <span class="toc-text">法拉第电磁感应定律</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结-1"><span class="toc-number">2.6.</span> <span class="toc-text">总结</span></a></li></ol></li></ol>
       </li>
     </ul>
@@ -430,6 +431,7 @@
     <div id="gitalk-container"></div>
 <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
 <script>
   var gitalk = new Gitalk({
     clientID: 'f3866882707e12e74c4a',
@@ -437,23 +439,43 @@
     repo: 'kb1000fx.github.io',
     owner: 'kb1000fx',
     admin: ['kb1000fx'],
-    id: '' || md5(location.pathname),
+    id:  md5(location.pathname) ,
     distractionFreeMode: 'true',
   });
   gitalk.render('gitalk-container');
+  console.log(location.pathname)
 </script>
+    
   </div>
 
     </main>
-    <footer id="footer" class="mdui-m-t-5 mdui-p-y-3 mdui-color-theme">
-  <div class="mdui-p-y-1 mdui-text-center">
-    Copyright &copy; 2015 - 2020 机智小蜗熊<br>
-    Powered by <a href="https://hexo.io/" target="_blank" class="mdui-text-color-theme-accent">Hexo</a>
+    <footer id="footer" class="mdui-text-center mdui-m-t-5 mdui-p-b-2 mdui-p-t-4 mdui-color-theme">
+  <div class="footer-line">
     
-      <br>
-      <span id="busuanzi_container_site_uv" style="display: none;"><i class="mdui-icon material-icons">&#xe7fd;</i> <span id="busuanzi_value_site_uv"></span></span>
-      <span id="busuanzi_container_site_pv" style="display: none;"><i class="mdui-icon material-icons">&#xe417;</i> <span id="busuanzi_value_site_pv"></span></span>
+      <a href="http://www.beian.miit.gov.cn" rel="noopener" target="_blank">苏ICP备18025778号</a>
+    
+    <span>
+      &copy; 2015 - 2020 
       
+        <i style="color:#d9333f" class="fas fa-heart"></i>
+      
+      机智小蜗熊
+    </span>
+  </div>
+
+    
+  <div class="footer-line">
+    
+      <span>由 Hexo 强力驱动</span>
+    
+    
+      <span>主题 Meadow</span>
+    
+  </div>  
+  <div class="footer-line">
+    
+      <span id="busuanzi_container_site_uv" style="display: none;"> <i class="mdui-icon material-icons">person</i>总访客量 <span id="busuanzi_value_site_uv"></span></span>
+      <span id="busuanzi_container_site_pv" style="display: none;"> <i class="mdui-icon material-icons">remove_red_eye</i>总访问量 <span id="busuanzi_value_site_pv"></span></span>
     
   </div>
 </footer>

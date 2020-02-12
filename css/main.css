@@ -527,6 +527,18 @@ pre .javascript .function {
 .category-list .category-list-child {
   padding-left: 10px;
 }
+.footer-line {
+  display: block;
+  margin: 5px 0;
+}
+.footer-line a:visited,
+.footer-line a:link {
+  color: unset;
+}
+.footer-line span + span::before {
+  content: '|';
+  margin: 5px;
+}
 #sidebar {
   background-color: #fff;
   overflow-y: hidden;

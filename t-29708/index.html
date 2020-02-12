@@ -10,6 +10,7 @@
     <meta name="force-rendering" content="webkit"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <script>if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href="https://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); </script>
+    <link rel="shortcut icon" href="/images/favicon.png">
     
     
 <link rel="stylesheet" href="/css/mdui.css">
@@ -19,7 +20,6 @@
 <link rel="stylesheet" href="//lib.baomitu.com/font-awesome/5.11.2/css/all.min.css">
 
 
-    
     
     <title>编辑技巧备忘 | 小蜗熊的蜂蜜罐</title>
 <meta name="generator" content="Hexo 4.2.0"></head>
@@ -45,8 +45,8 @@
 
     <aside id="sidebar" class="mdui-drawer">
     <div class="mdui-tab" mdui-tab>
-        <a href="#sidebar-tab1" id="sidebartab" class="mdui-ripple mdui-tab-active">导航</a>
-        <a href="#sidebar-tab2" id="sidebartab" class="mdui-ripple">站点概览</a>
+        <a href="#sidebar-tab1" id="sidebartab" class="mdui-ripple mdui-tab-active">站点概览</a>
+        <a href="#sidebar-tab2" id="sidebartab" class="mdui-ripple">关于</a>
     </div>
 
     
@@ -154,48 +154,49 @@
     
     <main id="main-contain" class="mdui-container mdui-m-t-5">
       <article id="article" class="mdui-card mdui-p-a-2 mdui-m-b-5">
-  
-  
-    
-      <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-    "HTML-CSS": { 
-        preferredFont: "TeX", 
-        availableFonts: ["STIX","TeX"], 
-        linebreaks: { automatic:true }, 
-        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) 
-    },
-    tex2jax: { 
-        inlineMath: [ ["$", "$"], ["\\(","\\)"] ], 
-        processEscapes: true, 
-        ignoreClass: "tex2jax_ignore|dno",
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-    },
-    TeX: {  
-        equationNumbers: { autoNumber: "AMS" },
-        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, 
-        Macros: { href: "{}" } 
-    },
-    messageStyle: "none"
-    }); 
-</script>
-<!-- 给MathJax元素添加has-jax class -->
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for(i=0; i < all.length; i += 1) {
-            all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-    });
-</script>
-<!-- 通过连接CDN加载MathJax的js代码 -->
-<script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
-    
+
   
 
+    
+        
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+                "HTML-CSS": { 
+                    preferredFont: "TeX", 
+                    availableFonts: ["STIX","TeX"], 
+                    linebreaks: { automatic:true }, 
+                    EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) 
+                },
+                tex2jax: { 
+                    inlineMath: [ ["$", "$"], ["\\(","\\)"] ], 
+                    processEscapes: true, 
+                    ignoreClass: "tex2jax_ignore|dno",
+                    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+                },
+                TeX: {  
+                    equationNumbers: { autoNumber: "AMS" },
+                    noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, 
+                    Macros: { href: "{}" } 
+                },
+                messageStyle: "none"
+            }); 
+        </script>
+        
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Queue(function() {
+                var all = MathJax.Hub.getAllJax(), i;
+                for(i=0; i < all.length; i += 1) {
+                    all[i].SourceElement().parentNode.className += ' has-jax';
+                }
+            });
+        </script>
+        
+        <script type="text/javascript" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script>
+    
+
+  
   <header class="mdui-card-media">
     
     
@@ -208,7 +209,7 @@
     </span>
     <span>
       <i class="fa fa-calendar-check"></i>
-      更新于:&nbsp;2020-02-10
+      更新于:&nbsp;2020-02-12
     </span>
     <span>
       <i class="fa fa-folder"></i>
@@ -282,9 +283,12 @@
 
   <div class="mdui-card-content mdui-typo">
     <p>参见左侧目录或使用<code>Ctrl+F</code>进行搜索</p>
-<h1 id="Latex"><a href="#Latex" class="headerlink" title="Latex"></a>Latex</h1><h2 id="Mathjax公式标号与引用"><a href="#Mathjax公式标号与引用" class="headerlink" title="Mathjax公式标号与引用"></a>Mathjax公式标号与引用</h2><p>MathJax的公式语法与LaTex相同，使用<code>\tag{yourtag}</code>给公式添加编号，使用<code>\label{somelabel}</code>添加引用标签。<br>代码：</p>
+<h1 id="Latex"><a href="#Latex" class="headerlink" title="Latex"></a>Latex</h1><h2 id="Mathjax公式标号与引用"><a href="#Mathjax公式标号与引用" class="headerlink" title="Mathjax公式标号与引用"></a>Mathjax公式标号与引用</h2><p>MathJax的公式语法与LaTex相同，使用<code>\tag{yourtag}</code>给公式添加编号，使用<code>\label{somelabel}</code>添加引用标签。</p>
+<p>代码：</p>
 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="formula">$$ a = x^2-y^3 <span class="tag">\<span class="name">tag</span><span class="string">&#123;eq1&#125;</span></span> <span class="tag">\<span class="name">label</span><span class="string">&#123;eq1&#125;</span></span> $$</span></span><br></pre></td></tr></table></figure>
 <p><strong>其中<code>\label</code>仅对Mathjax有效，对于Katex无效</strong></p>
+<a id="more"></a>
+
 <p>结果：</p>
 <p>$$ a = x^2-y^3 \tag{eq1} \label{eq1} $$</p>
 <p>引用时使用<code>\eqref{somelabel}</code>引用公式，代码：</p>
@@ -386,7 +390,7 @@
   <div class="mdui-divider-inset"></div>
 
   
-  <nav >
+  <nav>
     
       <a rel="prev" class="post-nav-item mdui-float-left" href="/t-57950/">
         <i class="fa fa-chevron-left"></i>
@@ -410,7 +414,6 @@
     <ul class="mdui-menu" id="toc">
       <li class="mdui-menu-item">
         <a href="/t-29708/" id="toc-header" class="mdui-ripple">文章目录</a>
-
         <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Latex"><span class="toc-number">1.</span> <span class="toc-text">Latex</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Mathjax公式标号与引用"><span class="toc-number">1.1.</span> <span class="toc-text">Mathjax公式标号与引用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Katex方程组左对齐"><span class="toc-number">1.2.</span> <span class="toc-text">Katex方程组左对齐</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Mathjax-矩阵表示"><span class="toc-number">1.3.</span> <span class="toc-text">Mathjax 矩阵表示</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#MarkDown"><span class="toc-number">2.</span> <span class="toc-text">MarkDown</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#MarkDown表格"><span class="toc-number">2.1.</span> <span class="toc-text">MarkDown表格</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MarkDown插入Base64图片"><span class="toc-number">2.2.</span> <span class="toc-text">MarkDown插入Base64图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用HTML标签进行段落折叠"><span class="toc-number">2.3.</span> <span class="toc-text">使用HTML标签进行段落折叠</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#杂项"><span class="toc-number">3.</span> <span class="toc-text">杂项</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#正则表达式清除空行"><span class="toc-number">3.1.</span> <span class="toc-text">正则表达式清除空行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结构式在线编辑网站"><span class="toc-number">3.2.</span> <span class="toc-text">结构式在线编辑网站</span></a></li></ol></li></ol>
       </li>
     </ul>
@@ -423,6 +426,7 @@
     <div id="gitalk-container"></div>
 <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
 <script>
   var gitalk = new Gitalk({
     clientID: 'f3866882707e12e74c4a',
@@ -430,23 +434,43 @@
     repo: 'kb1000fx.github.io',
     owner: 'kb1000fx',
     admin: ['kb1000fx'],
-    id: '' || md5(location.pathname),
+    id:  md5(location.pathname) ,
     distractionFreeMode: 'true',
   });
   gitalk.render('gitalk-container');
+  console.log(location.pathname)
 </script>
+    
   </div>
 
     </main>
-    <footer id="footer" class="mdui-m-t-5 mdui-p-y-3 mdui-color-theme">
-  <div class="mdui-p-y-1 mdui-text-center">
-    Copyright &copy; 2015 - 2020 机智小蜗熊<br>
-    Powered by <a href="https://hexo.io/" target="_blank" class="mdui-text-color-theme-accent">Hexo</a>
+    <footer id="footer" class="mdui-text-center mdui-m-t-5 mdui-p-b-2 mdui-p-t-4 mdui-color-theme">
+  <div class="footer-line">
     
-      <br>
-      <span id="busuanzi_container_site_uv" style="display: none;"><i class="mdui-icon material-icons">&#xe7fd;</i> <span id="busuanzi_value_site_uv"></span></span>
-      <span id="busuanzi_container_site_pv" style="display: none;"><i class="mdui-icon material-icons">&#xe417;</i> <span id="busuanzi_value_site_pv"></span></span>
+      <a href="http://www.beian.miit.gov.cn" rel="noopener" target="_blank">苏ICP备18025778号</a>
+    
+    <span>
+      &copy; 2015 - 2020 
       
+        <i style="color:#d9333f" class="fas fa-heart"></i>
+      
+      机智小蜗熊
+    </span>
+  </div>
+
+    
+  <div class="footer-line">
+    
+      <span>由 Hexo 强力驱动</span>
+    
+    
+      <span>主题 Meadow</span>
+    
+  </div>  
+  <div class="footer-line">
+    
+      <span id="busuanzi_container_site_uv" style="display: none;"> <i class="mdui-icon material-icons">person</i>总访客量 <span id="busuanzi_value_site_uv"></span></span>
+      <span id="busuanzi_container_site_pv" style="display: none;"> <i class="mdui-icon material-icons">remove_red_eye</i>总访问量 <span id="busuanzi_value_site_pv"></span></span>
     
   </div>
 </footer>
