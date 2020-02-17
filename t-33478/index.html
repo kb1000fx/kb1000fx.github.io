@@ -19,6 +19,37 @@
     
 <link rel="stylesheet" href="//lib.baomitu.com/font-awesome/5.11.2/css/all.min.css">
 
+    
+    
+
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144166423-1"></script>
+<script>
+  var host = window.location.hostname;
+  if (host != "localhost" || true == false) {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-144166423-1');
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+          
+
+    
+
 
     
     <title>Ubuntu16.04下的LAMP环境搭建 | 小蜗熊的蜂蜜罐</title>
@@ -29,6 +60,7 @@
   <div id="toolbar" class="mdui-toolbar mdui-color-theme">
     <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#sidebar', swipe: true}"><i class="mdui-icon material-icons">menu</i></a>
     <a href="/" class="mdui-typo-headline">小蜗熊的蜂蜜罐</a>
+    <a href="/" class="header-subtitle mdui-typo-headline"></a>
     <div class="mdui-toolbar-spacer"></div>
     <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-dialog="{target: '#search'}" mdui-tooltip="{content: 'search'}"><i class="mdui-icon material-icons">search</i></a>
   </div>
@@ -102,13 +134,20 @@
 
     
     <div id="sidebar-tab2" class="mdui-p-a-2">
-        <div class="sidebar-avatar">
-            <img src="/images/avatar.jpg"/>
-            <p class="sidebar-author-name">机智小蜗熊</p>
-            <p class="sidebar-description">有害辣鸡</p>
+        <div class="sidebar-overview">
+            <div class="sidebar-avatar">
+                <img src="/images/avatar.jpg"/>
+            </div>
+            <div class="sidebar-author-name">机智小蜗熊</div>
+            <div class="sidebar-description">人间五十年，岂有长生不灭者？</div>
         </div>
-
         <div class="sidebar-links">
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="fas fa-envelope"></i></span>
+                    <a href="mailto:kb1000fx@gmail.com" class="mdui-chip-title">E-Mail</a>
+                </div>
             
                 
                 <div class="mdui-chip">
@@ -124,15 +163,13 @@
             
                 
                 <div class="mdui-chip">
-                    <span class="mdui-chip-icon"><i class="fas fa-envelope"></i></span>
-                    <a href="mailto:kb1000fx@gmail.com" class="mdui-chip-title">E-Mail</a>
+                    <span class="mdui-chip-icon"><i class="fab fa-weibo"></i></span>
+                    <a href="https://weibo.com/kb1000fx" target="_blank" rel="noopener" class="mdui-chip-title">Weibo</a>
                 </div>
             
         </div>
     </div>
-
     <div class="mdui-divider"></div>
-    
     
     
         <div class="adsense-contain">
@@ -149,17 +186,10 @@
 </script>
         </div>
     
-    
 </aside>
     
     <main id="main-contain" class="mdui-container mdui-m-t-5">
       <article id="article" class="mdui-card mdui-p-a-2 mdui-m-b-5">
-
-  
-
-    
-
-  
   <header class="mdui-card-media">
     
     
@@ -197,7 +227,6 @@
 
       </div>
     
-      
     
     <div class="mdui-card-menu">
     
@@ -219,7 +248,7 @@
           <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://garybear.cn/t-33478/&title=Ubuntu16.04下的LAMP环境搭建" target="_blank" class="mdui-ripple">分享到 LinkedIn</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="http://connect.qq.com/widget/shareqq/index.html?site=小蜗熊的蜂蜜罐&title=Ubuntu16.04下的LAMP环境搭建&summary=有害辣鸡&pics=https://garybear.cn/images/favicon.png&url=https://garybear.cn/t-33478/" target="_blank" class="mdui-ripple">分享到 QQ</a>
+          <a href="http://connect.qq.com/widget/shareqq/index.html?site=小蜗熊的蜂蜜罐&title=Ubuntu16.04下的LAMP环境搭建&summary=人间五十年，岂有长生不灭者？&pics=https://garybear.cn/images/favicon.png&url=https://garybear.cn/t-33478/" target="_blank" class="mdui-ripple">分享到 QQ</a>
         </li>
         <li class="mdui-menu-item">
           <a href="https://telegram.me/share/url?url=https://garybear.cn/t-33478/&text=Ubuntu16.04下的LAMP环境搭建" target="_blank" class="mdui-ripple">分享到 Telegram</a>
@@ -228,7 +257,6 @@
     
   </div>
   </header>
-
   
   
     <div class="adsense-contain">
@@ -245,10 +273,9 @@
 </script>
     </div>
   
-
   
   
-
+  
   <div class="mdui-card-content mdui-typo">
     <h1 id="Ubuntu16-04下的LAMP环境搭建"><a href="#Ubuntu16-04下的LAMP环境搭建" class="headerlink" title="Ubuntu16.04下的LAMP环境搭建"></a>Ubuntu16.04下的LAMP环境搭建</h1><p><img src="/images/33478/apache.jpg" alt="机智小蜗熊"></p>
 <h2 id="基本设置"><a href="#基本设置" class="headerlink" title="基本设置"></a>基本设置</h2><h3 id="1-开启root账号SSH登录"><a href="#1-开启root账号SSH登录" class="headerlink" title="1.开启root账号SSH登录"></a>1.开启root账号SSH登录</h3><p>腾讯云的Ubuntu默认账号是ubuntu，且无法以root身份远程登录，首先需要手动开启远程登录root账号并设置root密码。 </p>
@@ -309,11 +336,9 @@ Ubuntu默认未开启Rewrite支持需手动开启，在此只是简单介绍，�
 <pre><code>测试Rewrite是否打开可在「.htaccess」中加入：</code></pre><h1 id="BEGIN"><a href="#BEGIN" class="headerlink" title="BEGIN"></a>BEGIN</h1><p>RewriteEngine on RewriteBase / RewriteRule .*$ http://欲跳转的页面 #END ``` 若能成功跳转，则说明Rewrite开启成功。</p>
 
   </div>
-  
   <!--文末结束语-->
   
     <div style="text-align:center;color: #ccc;font-size:24px;"> --- 本文结束 <i class="fa fa-heartbeat"></i> The End --- </div>
-  
   
   <!--页脚广告-->
   
@@ -331,9 +356,7 @@ Ubuntu默认未开启Rewrite支持需手动开启，在此只是简单介绍，�
 </script>
     </div>
   
-
-  <div class="mdui-divider-inset"></div>
-
+  </br><div class="mdui-divider-inset"></div>
   
   <nav>
     
@@ -366,9 +389,8 @@ Ubuntu默认未开启Rewrite支持需手动开启，在此只是简单介绍，�
 
 
 
-
-  <div id="comment" class="mdui-card mdui-p-a-2 mdui-m-b-5">
-    <div id="gitalk-container"></div>
+    <div id="comment" class="mdui-card mdui-p-a-2 mdui-m-b-5">
+      <div id="gitalk-container"></div>
 <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
@@ -383,46 +405,48 @@ Ubuntu默认未开启Rewrite支持需手动开启，在此只是简单介绍，�
     distractionFreeMode: 'true',
   });
   gitalk.render('gitalk-container');
-  console.log(location.pathname)
 </script>
-    
-  </div>
+    </div>
 
     </main>
     <footer id="footer" class="mdui-text-center mdui-m-t-5 mdui-p-b-2 mdui-p-t-4 mdui-color-theme">
-  <div class="footer-line">
-    
-      <a href="http://www.beian.miit.gov.cn" rel="noopener" target="_blank">苏ICP备18025778号</a>
-    
-    <span>
-      &copy; 2015 - 2020 
+  <div class="mdui-container">
+    <div class="mdui-row">
       
-        <i style="color:#d9333f" class="fas fa-heart"></i>
+        <a href="http://www.beian.miit.gov.cn" rel="noopener" target="_blank">苏ICP备18025778号</a>
       
-      机智小蜗熊
-    </span>
-  </div>
-
-    
-  <div class="footer-line">
-    
-      <span>由 Hexo 强力驱动</span>
-    
-    
-      <span>主题 Meadow</span>
-    
-  </div>  
-  <div class="footer-line">
-    
-      <span id="busuanzi_container_site_uv" style="display: none;"> <i class="mdui-icon material-icons">person</i>总访客量 <span id="busuanzi_value_site_uv"></span></span>
-      <span id="busuanzi_container_site_pv" style="display: none;"> <i class="mdui-icon material-icons">remove_red_eye</i>总访问量 <span id="busuanzi_value_site_pv"></span></span>
-    
-  </div>
+      <span>
+        &copy; 2015 - 2020 
+        
+          <i style="color:#d9333f" class="fas fa-heart"></i>
+        
+        机智小蜗熊
+      </span>
+    </div>
+    <div class="mdui-row">
+      
+        <div class="mdui-col-md-3 mdui-col-offset-md-3 mdui-text-right">
+          <span>Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a></span>
+        </div>
+        <div class="mdui-col-md-3 mdui-text-left">
+          <span>Theme: <a href="https://github.com/kb1000fx/Meadow" rel="noopener" target="_blank">Meadow</a></span>
+        </div>
+      
+    </div>
+    <div class="mdui-row">
+      
+        <div class="mdui-col-md-3 mdui-col-offset-md-3 mdui-text-right">
+          <span id="busuanzi_container_site_uv" style="display: none;"> <i class="mdui-icon material-icons">person</i>总访客量 <span id="busuanzi_value_site_uv"></span></span>
+        </div>
+        <div class="mdui-col-md-3 mdui-text-left">
+          <span id="busuanzi_container_site_pv" style="display: none;"> <i class="mdui-icon material-icons">remove_red_eye</i>总访问量 <span id="busuanzi_value_site_pv"></span></span>
+        </div>
+      
+    </div>
+ </div>
 </footer>
     
     <button id="gotop" class="mdui-fab mdui-fab-fixed mdui-fab-hide mdui-ripple mdui-color-teal"><i class="mdui-icon material-icons">arrow_upward</i></button>
-    
-    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
     
     
 <script src="/js/mdui.js"></script>

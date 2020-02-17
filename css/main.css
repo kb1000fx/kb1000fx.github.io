@@ -527,17 +527,16 @@ pre .javascript .function {
 .category-list .category-list-child {
   padding-left: 10px;
 }
-.footer-line {
-  display: block;
+.header-subtitle {
+  margin: 0;
+  font-size: 18px;
+}
+#footer .mdui-row {
   margin: 5px 0;
 }
-.footer-line a:visited,
-.footer-line a:link {
+#footer .mdui-row a:visited,
+#footer .mdui-row a:link {
   color: unset;
-}
-.footer-line span + span::before {
-  content: '|';
-  margin: 5px;
 }
 #sidebar {
   background-color: #fff;
@@ -551,20 +550,20 @@ pre .javascript .function {
 .mdui-theme-layout-dark #sidebar {
   background: #212121;
 }
-.sidebar-avatar {
+.sidebar-overview .sidebar-avatar {
   display: block;
   margin: 0 auto;
   max-width: 60%;
   height: auto;
 }
-.sidebar-avatar>img {
+.sidebar-overview .sidebar-avatar>img {
   width: auto;
   height: auto;
   max-width: 100%;
   max-height: 100%;
   border: 1px solid #eee;
 }
-.sidebar-avatar .sidebar-author-name {
+.sidebar-overview .sidebar-author-name {
   margin: 0;
   text-align: center;
   color: #222;
@@ -572,7 +571,8 @@ pre .javascript .function {
   line-height: 32px;
   font-weight: 600;
 }
-.sidebar-avatar .sidebar-description {
+.sidebar-overview .sidebar-description {
+  white-space: normal;
   margin-top: 0;
   text-align: center;
   font-size: 14px;

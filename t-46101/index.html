@@ -19,6 +19,37 @@
     
 <link rel="stylesheet" href="//lib.baomitu.com/font-awesome/5.11.2/css/all.min.css">
 
+    
+    
+
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144166423-1"></script>
+<script>
+  var host = window.location.hostname;
+  if (host != "localhost" || true == false) {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-144166423-1');
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+          
+
+    
+
 
     
     <title>Hexo的Next主题下接入Google AdSense广告 | 小蜗熊的蜂蜜罐</title>
@@ -29,6 +60,7 @@
   <div id="toolbar" class="mdui-toolbar mdui-color-theme">
     <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#sidebar', swipe: true}"><i class="mdui-icon material-icons">menu</i></a>
     <a href="/" class="mdui-typo-headline">小蜗熊的蜂蜜罐</a>
+    <a href="/" class="header-subtitle mdui-typo-headline"></a>
     <div class="mdui-toolbar-spacer"></div>
     <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-dialog="{target: '#search'}" mdui-tooltip="{content: 'search'}"><i class="mdui-icon material-icons">search</i></a>
   </div>
@@ -102,13 +134,20 @@
 
     
     <div id="sidebar-tab2" class="mdui-p-a-2">
-        <div class="sidebar-avatar">
-            <img src="/images/avatar.jpg"/>
-            <p class="sidebar-author-name">机智小蜗熊</p>
-            <p class="sidebar-description">有害辣鸡</p>
+        <div class="sidebar-overview">
+            <div class="sidebar-avatar">
+                <img src="/images/avatar.jpg"/>
+            </div>
+            <div class="sidebar-author-name">机智小蜗熊</div>
+            <div class="sidebar-description">人间五十年，岂有长生不灭者？</div>
         </div>
-
         <div class="sidebar-links">
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="fas fa-envelope"></i></span>
+                    <a href="mailto:kb1000fx@gmail.com" class="mdui-chip-title">E-Mail</a>
+                </div>
             
                 
                 <div class="mdui-chip">
@@ -124,15 +163,13 @@
             
                 
                 <div class="mdui-chip">
-                    <span class="mdui-chip-icon"><i class="fas fa-envelope"></i></span>
-                    <a href="mailto:kb1000fx@gmail.com" class="mdui-chip-title">E-Mail</a>
+                    <span class="mdui-chip-icon"><i class="fab fa-weibo"></i></span>
+                    <a href="https://weibo.com/kb1000fx" target="_blank" rel="noopener" class="mdui-chip-title">Weibo</a>
                 </div>
             
         </div>
     </div>
-
     <div class="mdui-divider"></div>
-    
     
     
         <div class="adsense-contain">
@@ -149,17 +186,10 @@
 </script>
         </div>
     
-    
 </aside>
     
     <main id="main-contain" class="mdui-container mdui-m-t-5">
       <article id="article" class="mdui-card mdui-p-a-2 mdui-m-b-5">
-
-  
-
-    
-
-  
   <header class="mdui-card-media">
     
     
@@ -192,7 +222,6 @@
 
 
     
-      
     
     <div class="mdui-card-menu">
     
@@ -214,7 +243,7 @@
           <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://garybear.cn/t-46101/&title=Hexo的Next主题下接入Google AdSense广告" target="_blank" class="mdui-ripple">分享到 LinkedIn</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="http://connect.qq.com/widget/shareqq/index.html?site=小蜗熊的蜂蜜罐&title=Hexo的Next主题下接入Google AdSense广告&summary=有害辣鸡&pics=https://garybear.cn/images/favicon.png&url=https://garybear.cn/t-46101/" target="_blank" class="mdui-ripple">分享到 QQ</a>
+          <a href="http://connect.qq.com/widget/shareqq/index.html?site=小蜗熊的蜂蜜罐&title=Hexo的Next主题下接入Google AdSense广告&summary=人间五十年，岂有长生不灭者？&pics=https://garybear.cn/images/favicon.png&url=https://garybear.cn/t-46101/" target="_blank" class="mdui-ripple">分享到 QQ</a>
         </li>
         <li class="mdui-menu-item">
           <a href="https://telegram.me/share/url?url=https://garybear.cn/t-46101/&text=Hexo的Next主题下接入Google AdSense广告" target="_blank" class="mdui-ripple">分享到 Telegram</a>
@@ -223,7 +252,6 @@
     
   </div>
   </header>
-
   
   
     <div class="adsense-contain">
@@ -240,7 +268,6 @@
 </script>
     </div>
   
-
   
   
     <div class="post-tags">
@@ -251,7 +278,7 @@
       
     </div>
 
-
+  
   <div class="mdui-card-content mdui-typo">
     <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>使用Google Adsense也好几个月了，先以 <strong><em>Next</em></strong> 主题为例，对Hexo下Google Adsense的使用方法做个记录，方便以后更改广告布局。</p>
 <h1 id="自动广告"><a href="#自动广告" class="headerlink" title="自动广告"></a>自动广告</h1><p>首先建立目录<code>~\themes\next\layout\google_adsense</code>。</p>
@@ -286,11 +313,9 @@
 <p>插入下列代码</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--谷歌广告--&gt;</span></span><br><span class="line">&#123;% if not is_index %&#125;</span><br><span class="line">    &#123;% include './google_adsense/footer_ads.swig' %&#125;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
   </div>
-  
   <!--文末结束语-->
   
     <div style="text-align:center;color: #ccc;font-size:24px;"> --- 本文结束 <i class="fa fa-heartbeat"></i> The End --- </div>
-  
   
   <!--页脚广告-->
   
@@ -308,9 +333,7 @@
 </script>
     </div>
   
-
-  <div class="mdui-divider-inset"></div>
-
+  </br><div class="mdui-divider-inset"></div>
   
   <nav>
     
@@ -343,9 +366,8 @@
 
 
 
-
-  <div id="comment" class="mdui-card mdui-p-a-2 mdui-m-b-5">
-    <div id="gitalk-container"></div>
+    <div id="comment" class="mdui-card mdui-p-a-2 mdui-m-b-5">
+      <div id="gitalk-container"></div>
 <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
@@ -360,46 +382,48 @@
     distractionFreeMode: 'true',
   });
   gitalk.render('gitalk-container');
-  console.log(location.pathname)
 </script>
-    
-  </div>
+    </div>
 
     </main>
     <footer id="footer" class="mdui-text-center mdui-m-t-5 mdui-p-b-2 mdui-p-t-4 mdui-color-theme">
-  <div class="footer-line">
-    
-      <a href="http://www.beian.miit.gov.cn" rel="noopener" target="_blank">苏ICP备18025778号</a>
-    
-    <span>
-      &copy; 2015 - 2020 
+  <div class="mdui-container">
+    <div class="mdui-row">
       
-        <i style="color:#d9333f" class="fas fa-heart"></i>
+        <a href="http://www.beian.miit.gov.cn" rel="noopener" target="_blank">苏ICP备18025778号</a>
       
-      机智小蜗熊
-    </span>
-  </div>
-
-    
-  <div class="footer-line">
-    
-      <span>由 Hexo 强力驱动</span>
-    
-    
-      <span>主题 Meadow</span>
-    
-  </div>  
-  <div class="footer-line">
-    
-      <span id="busuanzi_container_site_uv" style="display: none;"> <i class="mdui-icon material-icons">person</i>总访客量 <span id="busuanzi_value_site_uv"></span></span>
-      <span id="busuanzi_container_site_pv" style="display: none;"> <i class="mdui-icon material-icons">remove_red_eye</i>总访问量 <span id="busuanzi_value_site_pv"></span></span>
-    
-  </div>
+      <span>
+        &copy; 2015 - 2020 
+        
+          <i style="color:#d9333f" class="fas fa-heart"></i>
+        
+        机智小蜗熊
+      </span>
+    </div>
+    <div class="mdui-row">
+      
+        <div class="mdui-col-md-3 mdui-col-offset-md-3 mdui-text-right">
+          <span>Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a></span>
+        </div>
+        <div class="mdui-col-md-3 mdui-text-left">
+          <span>Theme: <a href="https://github.com/kb1000fx/Meadow" rel="noopener" target="_blank">Meadow</a></span>
+        </div>
+      
+    </div>
+    <div class="mdui-row">
+      
+        <div class="mdui-col-md-3 mdui-col-offset-md-3 mdui-text-right">
+          <span id="busuanzi_container_site_uv" style="display: none;"> <i class="mdui-icon material-icons">person</i>总访客量 <span id="busuanzi_value_site_uv"></span></span>
+        </div>
+        <div class="mdui-col-md-3 mdui-text-left">
+          <span id="busuanzi_container_site_pv" style="display: none;"> <i class="mdui-icon material-icons">remove_red_eye</i>总访问量 <span id="busuanzi_value_site_pv"></span></span>
+        </div>
+      
+    </div>
+ </div>
 </footer>
     
     <button id="gotop" class="mdui-fab mdui-fab-fixed mdui-fab-hide mdui-ripple mdui-color-teal"><i class="mdui-icon material-icons">arrow_upward</i></button>
-    
-    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
     
     
 <script src="/js/mdui.js"></script>

@@ -1,6 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Meadow主题使用说明</title>
+    <url>/t-4072/</url>
+    <content><![CDATA[<h1 id="Meadow"><a href="#Meadow" class="headerlink" title="Meadow"></a>Meadow</h1><p>Meadow is a Material Designed Hexo theme based on MDUI.</p>
+<p><a href="https://garybear.cn/">Demo</a></p>
+<p><a href="">中文文档</a></p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p><strong>1. 切换至Hexo根目录</strong></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> hexo</span></span><br></pre></td></tr></table></figure>
+<p><strong>2.从GitHub获取主题</strong><br>下载最新的master分支</p>
+<figure class="highlight crmsh"><table><tr><td class="code"><pre><span class="line">$ git <span class="keyword">clone</span> <span class="title">https</span>://github.com/kb1000fx/Meadow</span><br></pre></td></tr></table></figure>
+<p>或从<a href="https://github.com/kb1000fx/Meadow/releases" target="_blank" rel="noopener">Github Releases Page</a>下载发行版本</p>
+<p><strong>3. 切换主题</strong><br>编辑站点根目录下的<code>_config.yml</code>文件，并将主题设为meadow</p>
+<figure class="highlight avrasm"><table><tr><td class="code"><pre><span class="line"><span class="symbol">theme:</span> meadow</span><br></pre></td></tr></table></figure>
+<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><h3 id="部署至Github-Page"><a href="#部署至Github-Page" class="headerlink" title="部署至Github Page"></a>部署至Github Page</h3><p>安装 <a href="https://github.com/hexojs/hexo-deployer-git" target="_blank" rel="noopener">hexo-deployer-git</a></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">$ npm <span class="keyword">install</span> hexo-deployer-git <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
+<p>在站点目录的<code>_config.yml</code>文件中加入以下配置内容:</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">https://github.com/&lt;username&gt;/&lt;project&gt;</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">&lt;branch&gt;</span></span><br></pre></td></tr></table></figure>
+<p>使用 <code>hexo g -d</code> 命令进行部署</p>
+<h3 id="部署腾讯云COS"><a href="#部署腾讯云COS" class="headerlink" title="部署腾讯云COS"></a>部署腾讯云COS</h3><p>安装 <a href="https://github.com/sdlzhd/hexo-deployer-cos" target="_blank" rel="noopener">hexo-deployer-cos</a></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">$ npm <span class="keyword">install</span> hexo-deployer-<span class="keyword">cos</span> <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
+<p>在站点目录的<code>_config.yml</code>文件中加入以下配置内容:</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">cos</span></span><br><span class="line">  <span class="attr">secretId:</span> <span class="string">yourSecretId</span></span><br><span class="line">  <span class="attr">secretKey:</span> <span class="string">yourSecretKey</span></span><br><span class="line">  <span class="attr">bucket:</span> <span class="string">yourBucket</span></span><br><span class="line">  <span class="attr">region:</span> <span class="string">yourRegion</span></span><br></pre></td></tr></table></figure>
+<p>使用 <code>hexo g -d</code> 命令进行部署</p>
+<h1 id="主题设置"><a href="#主题设置" class="headerlink" title="主题设置"></a>主题设置</h1><h2 id="侧边栏目录"><a href="#侧边栏目录" class="headerlink" title="侧边栏目录"></a>侧边栏目录</h2><h3 id="标签页"><a href="#标签页" class="headerlink" title="标签页"></a>标签页</h3><blockquote>
+<p>添加一个包含站点内所有标签的标签页</p>
+</blockquote>
+<p><strong>1. 创建标签页</strong></p>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">$ hexo new<span class="built_in"> page </span><span class="string">"tags"</span></span><br></pre></td></tr></table></figure>
+<p><strong>2. 编辑标签页</strong></p>
+<p>将类型设为tag</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">All</span> <span class="string">Tags</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2020</span><span class="number">-02</span><span class="number">-02</span> <span class="number">20</span><span class="string">:00:02</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">"tags"</span></span><br></pre></td></tr></table></figure>
+<p><strong>3. 在主题的<code>_config.yml</code>文件中加入标签页</strong></p>
+<figure class="highlight vim"><table><tr><td class="code"><pre><span class="line"><span class="keyword">menu</span>:</span><br><span class="line">  ...</span><br><span class="line">  ...</span><br><span class="line">  <span class="keyword">tag</span><span class="variable">s:</span> /<span class="keyword">tags</span>/ || bookmark</span><br></pre></td></tr></table></figure>
+<h3 id="分类页"><a href="#分类页" class="headerlink" title="分类页"></a>分类页</h3><blockquote>
+<p>添加一个包含站点内所有分类的分类页</p>
+</blockquote>
+<p><strong>1. 创建分类页</strong></p>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">$ hexo new<span class="built_in"> page </span><span class="string">"categories"</span></span><br></pre></td></tr></table></figure>
+<p><strong>2. 编辑分类页</strong></p>
+<p>将类型设为categories</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">All</span> <span class="string">Categories</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2020</span><span class="number">-02</span><span class="number">-02</span> <span class="number">20</span><span class="string">:00:02</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">"categories"</span></span><br></pre></td></tr></table></figure>
+<p><strong>3. 在主题的<code>_config.yml</code>文件中加入分类页</strong></p>
+<figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="symbol">menu:</span></span><br><span class="line">  ...</span><br><span class="line">  ...</span><br><span class="line"><span class="symbol">  categories:</span> <span class="meta-keyword">/categories/</span> || folder</span><br></pre></td></tr></table></figure>
+<h3 id="其他菜单项"><a href="#其他菜单项" class="headerlink" title="其他菜单项"></a>其他菜单项</h3><p><strong>如下所示在主题<code>_config.yml</code>文件中添加侧边栏菜单项 , 图标名称可参考<a href="https://www.mdui.org/docs/material_icon" target="_blank" rel="noopener">MDUI Doc</a></strong></p>
+<figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="symbol">menu:</span></span><br><span class="line">  ...</span><br><span class="line"><span class="symbol">  menu_item:</span> ~path/ || icon_name</span><br><span class="line">  ...</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>技术</category>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>只狼Steam存档替换方法</title>
+    <url>/t-55399/</url>
+    <content><![CDATA[<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>Steam版的只狼由于存档中含有与账号相关的信息，无法直接复制文件来进行存档替换。如果需要使用他人存档或进行盗版存档转正，需要先对其进行修改。本文需要用到16进制编辑器，这里使用的是<a href="https://mh-nexus.de/downloads/HxDSetup.zip" target="_blank" rel="noopener">HXD</a>。</p>
+<a id="more"></a>
+<h1 id="修改步骤"><a href="#修改步骤" class="headerlink" title="修改步骤"></a>修改步骤</h1><p>存档文件位置：<code>%appdata%\Sekiro\{SteamID}\S0000.sl2</code></p>
+<p>具体步骤如下：</p>
+<ol>
+<li>查找待修改文件中<code>00A003D4-00A003DB</code>的位置，将其替换为自己的Steam 64位ID。</li>
+<li>根据下面的存档数据地址寻找欲修改的存档位，将表中该存档SteamID的位置也替换为自己的Steam 64位ID。</li>
+<li>根据下表选取修改的存档数据，对其进行md5校验后将结果覆盖至存档校验的位置。</li>
+<li>如需要融合两个存档中的多个角色，可根据下面的地址自由发挥，切记存档位置和总的SteamID都需替换为自己的。</li>
+</ol>
+<h1 id="存档数据地址"><a href="#存档数据地址" class="headerlink" title="存档数据地址"></a>存档数据地址</h1><p>存档文件共有5个存档位和一个含有SteamID的信息位，每个存档位又分为存档数据和存档校验两个部分，同时每个存档数据中都包含一份SteamID，结构如下。</p>
+<p>其中存档1、存档2地址已经验证过，其余存档的地址是根据数据长度与存档1、2中SteamID与数据头的偏移量<code>33E54</code>计算得到的，不保证其准确性。</p>
+<p>存档1</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">存档数据: <span class="number">00000310</span> - <span class="number">0010031</span>F</span><br><span class="line">存档校验: <span class="number">00000300</span> - <span class="number">0000030</span>F</span><br><span class="line">SteamID: <span class="number">00034164</span> - <span class="number">0003416</span>B</span><br></pre></td></tr></table></figure>
+<p>存档2</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">存档数据: <span class="number">00100320</span> - <span class="number">0020031</span>F</span><br><span class="line">存档校验: <span class="number">00100310</span> - <span class="number">0010031</span>F</span><br><span class="line">SteamID: <span class="number">00134174</span> - <span class="number">0013417</span>B</span><br></pre></td></tr></table></figure>
+<p>存档3</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">存档数据: <span class="number">00200330</span> - <span class="number">0030032</span>F</span><br><span class="line">存档校验: <span class="number">00200320</span> - <span class="number">0020032</span>F</span><br><span class="line">SteamID: <span class="number">00234184</span> - <span class="number">0023418</span>B</span><br></pre></td></tr></table></figure>
+<p>存档4</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">存档数据: <span class="number">00300340</span> - <span class="number">0040033</span>F</span><br><span class="line">存档校验: <span class="number">00300330</span> - <span class="number">0030033</span>F</span><br><span class="line">SteamID: <span class="number">00334194</span> - <span class="number">0033419</span>B</span><br></pre></td></tr></table></figure>
+<p>存档5</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">存档数据: <span class="number">00400350</span> - <span class="number">0050034</span>F</span><br><span class="line">存档校验: <span class="number">00400340</span> - <span class="number">0040034</span>F</span><br><span class="line">SteamID: <span class="number">004341</span>A4 - <span class="number">004341</span>A8</span><br></pre></td></tr></table></figure>
+<p>用户信息</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">总SteamID: <span class="number">00</span>A003D4 - <span class="number">00</span>A003DB</span><br></pre></td></tr></table></figure>
+<p>存档1的数据详情 (来源于Reddit，未验证)</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">角色: <span class="number">00016140</span> - <span class="number">000</span>A0F5F</span><br><span class="line">位置: <span class="number">000</span>A5A70 - <span class="number">000</span>A5B1F</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>参考：<a href="https://www.reddit.com/r/Sekiro/comments/ba44qp/how_to_edit_your_save_file_to_fix_various_issues/" target="_blank" rel="noopener">https://www.reddit.com/r/Sekiro/comments/ba44qp/how_to_edit_your_save_file_to_fix_various_issues/</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>游戏</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>华硕路由器自定义hosts方法</title>
+    <url>/t-48402/</url>
+    <content><![CDATA[<h1 id="开启SSH和JFFS分区"><a href="#开启SSH和JFFS分区" class="headerlink" title="开启SSH和JFFS分区"></a>开启SSH和JFFS分区</h1><h2 id="官方固件"><a href="#官方固件" class="headerlink" title="官方固件"></a>官方固件</h2><p>SSH可以在系统设置里找到，建议选择LAN only一项。然后就可以使用putty等软件登录到路由器，用户名和密码与路由器登陆的用户名密码相同。</p>
+<p>使用SSH登录到路由器，输入以下命令开启JFFS分区</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nvram <span class="built_in">set</span> jffs2_on=1</span><br><span class="line">nvram <span class="built_in">set</span> jffs2_enable=1</span><br><span class="line">nvram <span class="built_in">set</span> jffs2_format=1</span><br><span class="line">nvram <span class="built_in">set</span> jffs2_scripts=1</span><br><span class="line">nvram commit</span><br></pre></td></tr></table></figure>
+<p>最后使用<code>reboot</code>重启生效</p>
+<p>最后使用命令<code>nvram show | grep &quot;jffs&quot;</code>来检验是否启用了JFFS分区，显示如下信息即为开启成功。</p>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">size: 26089 bytes (35351 left)</span><br><span class="line"><span class="attribute">jffs2_enable</span>=1</span><br><span class="line"><span class="attribute">jffs2_format</span>=0</span><br><span class="line"><span class="attribute">jffs2_scripts</span>=1</span><br></pre></td></tr></table></figure>
+
+<h2 id="梅林固件"><a href="#梅林固件" class="headerlink" title="梅林固件"></a>梅林固件</h2><p>开启SSH方式与官方固件一样，在系统设置里选择启用SSH，建议选择LAN only选项。</p>
+<p>已刷梅林固件的路由器可以在系统设置里找到<strong>Persistent JFFS2 partition</strong>一项，将<strong>Enable JFFS custom scripts and configs</strong>设为是即可开启JFFS分区。</p>
+<h1 id="自定义DNS解析"><a href="#自定义DNS解析" class="headerlink" title="自定义DNS解析"></a>自定义DNS解析</h1><p>由于路由器运行过程中的配置文件是动态生成的，所以只修改<code>/etc/hosts</code>会使配置在重启DNSmasq服务后失效，可以通过修改DNSmasq配置来自定义DNS解析。</p>
+<p>在<code>/jffs/configs/</code>文件夹下建立配置文件<code>/jffs/configs/dnsmasq.conf.add</code>可以添加自定义的配置项，或是新建文件<code>/jffs/configs/dnsmasq.conf</code>来替代原配置项。</p>
+<p>在<code>/jffs/configs/dnsmasq.conf.add</code>文件中加入以下内容，即可将test.com的ip解析到127.0.0.1 (ipv4) 或::1 (ipv6)。</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">address=/test.com/<span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span></span><br><span class="line">address=/test.com/::<span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<p>或是在<code>dnsmasq.conf.add</code>文件中加入下面一行来引入新的hosts文件</p>
+<figure class="highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="attr">addn-hosts</span>=/jffs/configs/hosts</span><br></pre></td></tr></table></figure>
+
+<p>最后，执行<code>service restart_dnsmasq</code>重启DNSmasq服务或重启路由器使配置生效。</p>
+<p><strong>注：梅林固件下若使用ss插件会导致<code>/jffs/configs/</code>下的配置被覆盖，</strong></p>
+<p><strong>需要将所有配置填写到ss设置下的自定义DNSmasq一栏中</strong></p>
+<blockquote>
+<p><strong>参考资料</strong>：<br><a href="https://github.com/RMerl/asuswrt-merlin/wiki/Custom-domains-with-dnsmasq" target="_blank" rel="noopener">https://github.com/RMerl/asuswrt-merlin/wiki/Custom-domains-with-dnsmasq</a><br><a href="https://github.com/RMerl/asuswrt-merlin/wiki/Custom-config-files" target="_blank" rel="noopener">https://github.com/RMerl/asuswrt-merlin/wiki/Custom-config-files</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>技术</category>
+        <category>网络硬件</category>
+      </categories>
+  </entry>
+  <entry>
     <title>再见，2019</title>
     <url>/t-33718/</url>
     <content><![CDATA[<p>马上又要到新的一年了，今年的跨年和以往的不大一样。</p>
@@ -2014,6 +2137,26 @@ CEF即Chromium Embedded Framework，Steam使用CEF作为其内置的Web浏览器
 <figure class="highlight vim"><table><tr><td class="code"><pre><span class="line">wget http<span class="variable">s:</span>//raw.githubusercontent.<span class="keyword">com</span>/kb1000fx/Insurgency-Dedicated-Server-Setup/master/run_insurgency.<span class="keyword">sh</span> --<span class="keyword">no</span>-check-certificate</span><br><span class="line">chmod +<span class="keyword">x</span> run_insurgency.<span class="keyword">sh</span></span><br><span class="line">./run_insurgency.<span class="keyword">sh</span></span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>游戏</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>华硕路由器官方固件下设置中文SSID方法</title>
+    <url>/t-39744/</url>
+    <content><![CDATA[<p><strong>2018.7.20 更新：</strong></p>
+<p><strong>华硕官方固件在3.0.0.4.382.50470版本之后已支持Unicode，建议升级至最新固件</strong></p>
+<hr>
+<p>登录<a href="http://router.asus.com/" target="_blank" rel="noopener">Asus路由器管理页面</a>，在无线网络配置页面按F12打开浏览器控制台。输入以下内容：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">validator.stringSSID = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'fake stringSSID'</span>, <span class="built_in">arguments</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>确认后即可SSID栏中输入中文和其他Unicode字符</p>
+<p><strong>注意：输入后网页里可能会显示为空白SSID，实际SSID已修改成功</strong></p>
+<p><strong>除此之外也可安装梅林等第三方固件添加中文SSID</strong></p>
+<blockquote>
+<p>参考：<a href="https://gist.github.com/joar/671bf99258d0a0828ae5" target="_blank" rel="noopener">https://gist.github.com/joar/671bf99258d0a0828ae5</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>技术</category>
+        <category>网络硬件</category>
       </categories>
   </entry>
   <entry>
