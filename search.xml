@@ -48,12 +48,21 @@
 <figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="symbol">social:</span></span><br><span class="line"><span class="symbol">  social_item:</span> links_url || icon_name</span><br></pre></td></tr></table></figure>
 <h2 id="本文结束标签"><a href="#本文结束标签" class="headerlink" title="本文结束标签"></a>本文结束标签</h2><p>编辑主题文件夹中的 <code>_config.yml</code> 文件</p>
 <figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="symbol">passage_end_tag:</span></span><br><span class="line"><span class="symbol">  enabled:</span> true</span><br><span class="line"><span class="symbol">  text:</span> --- 本文结束 <span class="params">&lt;i class="fa fa-heartbeat"&gt;</span><span class="params">&lt;/i&gt;</span> The End ---</span><br></pre></td></tr></table></figure>
-<h2 id="数学公式渲染"><a href="#数学公式渲染" class="headerlink" title="数学公式渲染"></a>数学公式渲染</h2><p>编辑主题文件夹中的 <code>_config.yml</code> 文件</p>
+<h2 id="数学公式渲染"><a href="#数学公式渲染" class="headerlink" title="数学公式渲染"></a>数学公式渲染</h2><h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>编辑主题文件夹中的 <code>_config.yml</code> 文件</p>
 <figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">math:</span></span><br><span class="line">  <span class="attr">enabled:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">engine:</span> <span class="string">mathjax</span> <span class="comment">##可选渲染引擎：mathjax、katex</span></span><br><span class="line">  <span class="attr">mathjax:</span></span><br><span class="line">    <span class="attr">cdn:</span> <span class="string">https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js</span></span><br><span class="line">  <span class="attr">katex:</span></span><br><span class="line">    <span class="attr">cdn_css:</span> <span class="string">https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css</span></span><br><span class="line">    <span class="attr">cdn_js:</span> <span class="string">https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js</span></span><br><span class="line">    <span class="attr">auto_render:</span> <span class="string">https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js</span></span><br></pre></td></tr></table></figure>
 <h3 id="Mathjax"><a href="#Mathjax" class="headerlink" title="Mathjax"></a>Mathjax</h3><p>将enabled设为true，并将engine设为mathjax</p>
 <p>在你想要使用mathjax的文章的Front-matter中添加 <code>mathjax: true</code></p>
 <h3 id="Katex"><a href="#Katex" class="headerlink" title="Katex"></a>Katex</h3><p>将enabled设为true，并将engine设为katex </p>
 <p>在你想要使用katex的文章的Front-matter中添加 <code>katex: true</code></p>
+<blockquote>
+<p>我的博客中也有一些关于Mathjax和Katex的<a href="https://garybear.cn/t-29708/#Latex">用法备忘</a>。</p>
+</blockquote>
+<h2 id="Mermaid"><a href="#Mermaid" class="headerlink" title="Mermaid"></a>Mermaid</h2><h3 id="配置-1"><a href="#配置-1" class="headerlink" title="配置"></a>配置</h3><p>编辑主题目录下的 <code>_config.yml</code> 文件</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># mermaid </span></span><br><span class="line"><span class="attr">mermaid:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span> </span><br><span class="line">  <span class="attr">version:</span> <span class="string">"8.4.0"</span> </span><br><span class="line">  <span class="attr">startOnload:</span> <span class="literal">true</span>  <span class="comment">#default true</span></span><br><span class="line">  <span class="attr">theme:</span> <span class="string">'default'</span>    <span class="comment">#default, forest, dark, neutral.</span></span><br></pre></td></tr></table></figure>
+<h3 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h3><p>如下所示，将mermaid代码放在<code>&lt;div class=&quot;mermaid&quot;&gt;</code>和<code>&lt;/div&gt;</code>标签之中:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"mermaid"</span>&gt;</span></span><br><span class="line">  your mermaid code</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>更多mermaid代码的用法详见<a href="https://github.com/mermaid-js/mermaid" target="_blank" rel="noopener">Github: mermaid</a>。</p>
+<p>或者我博客中的<a href="https://garybear.cn/t-29708/#Mermaid">备忘</a>。</p>
 <h1 id="第三方设置"><a href="#第三方设置" class="headerlink" title="第三方设置"></a>第三方设置</h1><h2 id="评论服务"><a href="#评论服务" class="headerlink" title="评论服务"></a>评论服务</h2><p>编辑主题目录下的 <code>_config.yml</code> 文件中的<code>comment</code> 部分<br>通过设置<code>use</code>的值来选择启用的评论服务</p>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">comment:</span></span><br><span class="line">  <span class="attr">use:</span> <span class="comment">#OPTION：gitalk; disqus; livere; valine; changyan; false</span></span><br><span class="line">  <span class="comment">## Gitalk</span></span><br><span class="line">  <span class="comment">### https://github.com/gitalk/gitalk</span></span><br><span class="line">  <span class="attr">gitalk_client_id:</span> </span><br><span class="line">  <span class="attr">gitalk_client_secret:</span> </span><br><span class="line">  <span class="attr">gitalk_repo:</span> </span><br><span class="line">  <span class="attr">gitalk_owner:</span> </span><br><span class="line">  <span class="attr">gitalk_sid_type:</span>  <span class="comment">#Ensure uniqueness and length less than 50</span></span><br><span class="line">  <span class="attr">gitalk_distractionFreeMode:</span> <span class="comment">#Facebook-like distraction free mode</span></span><br><span class="line">  <span class="comment">## Disqus</span></span><br><span class="line">  <span class="attr">disqus_shortname:</span></span><br><span class="line">  <span class="comment">## Livere</span></span><br><span class="line">  <span class="attr">livere_data_uid:</span></span><br><span class="line">  <span class="comment">## Valine</span></span><br><span class="line">  <span class="attr">valine_leancloud_app_id:</span></span><br><span class="line">  <span class="attr">valine_leancloud_app_key:</span></span><br><span class="line">  <span class="attr">valine_placeholder:</span></span><br><span class="line">  <span class="attr">valine_page_size:</span></span><br><span class="line">  <span class="attr">valine_avatar:</span></span><br><span class="line">  <span class="attr">valine_lang:</span></span><br><span class="line">  <span class="attr">valine_guest_info:</span></span><br><span class="line">  <span class="attr">valine_notify:</span></span><br><span class="line">  <span class="attr">valine_verify:</span></span><br><span class="line">  <span class="comment">## 畅言</span></span><br><span class="line">  <span class="attr">changyan_app_id:</span></span><br><span class="line">  <span class="attr">changyan_app_key:</span></span><br><span class="line">  <span class="attr">changyan_sid_type:</span></span><br></pre></td></tr></table></figure>
 
@@ -77,11 +86,11 @@
 
 <h2 id="站点地图"><a href="#站点地图" class="headerlink" title="站点地图"></a>站点地图</h2><p><a href="https://github.com/hexojs/hexo-generator-sitemap" target="_blank" rel="noopener">Github: hexo-generator-sitemap</a></p>
 <h3 id="安装-1"><a href="#安装-1" class="headerlink" title="安装:"></a>安装:</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-generator-sitemap --save</span><br></pre></td></tr></table></figure>
-<h3 id="用法"><a href="#用法" class="headerlink" title="用法:"></a>用法:</h3><p>修改站点目录下<code>_config.yml</code>文件中的<code>sitemap</code>部分:</p>
+<h3 id="用法-1"><a href="#用法-1" class="headerlink" title="用法:"></a>用法:</h3><p>修改站点目录下<code>_config.yml</code>文件中的<code>sitemap</code>部分:</p>
 <figure class="highlight crmsh"><table><tr><td class="code"><pre><span class="line">sitemap:</span><br><span class="line">  path: sitemap.xml</span><br><span class="line">  template: ./sitemap_template.xml</span><br><span class="line">  rel: <span class="literal">false</span></span><br></pre></td></tr></table></figure>
 <h2 id="本地搜索"><a href="#本地搜索" class="headerlink" title="本地搜索"></a>本地搜索</h2><p><a href="https://github.com/theme-next/hexo-generator-searchdb" target="_blank" rel="noopener">Github: hexo-generator-searchdb</a></p>
-<h3 id="安装-2"><a href="#安装-2" class="headerlink" title="安装"></a>安装</h3><figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">$ npm <span class="keyword">install</span> hexo-generator-searchdb</span><br></pre></td></tr></table></figure>
-<h3 id="用法-1"><a href="#用法-1" class="headerlink" title="用法"></a>用法</h3><p>修改站点目录下<code>_config.yml</code>文件中的<code>search</code>部分:</p>
+<h3 id="安装-2"><a href="#安装-2" class="headerlink" title="安装"></a>安装</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">$ npm <span class="keyword">install</span> hexo-generator-searchdb <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
+<h3 id="用法-2"><a href="#用法-2" class="headerlink" title="用法"></a>用法</h3><p>修改站点目录下<code>_config.yml</code>文件中的<code>search</code>部分:</p>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">search:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">search.xml</span></span><br><span class="line">  <span class="attr">field:</span> <span class="string">post</span></span><br><span class="line">  <span class="attr">content:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">format:</span> <span class="string">html</span></span><br></pre></td></tr></table></figure>
 
 <p>编辑主题目录下的 <code>_config.yml</code> 文件</p>
@@ -2521,6 +2530,94 @@ Ubuntu默认未开启Rewrite支持需手动开启，在此只是简单介绍，�
 <summary><font color=darkred>点击查看详细内容</font></summary>
 隐藏内容
 </details>
+
+<h1 id="Mermaid"><a href="#Mermaid" class="headerlink" title="Mermaid"></a>Mermaid</h1><p>Mermaid在IE及Edge浏览器下显示效果不佳，建议使用Chrome或其他Chromium内核的浏览器。</p>
+<h2 id="流程图（Flow）"><a href="#流程图（Flow）" class="headerlink" title="流程图（Flow）"></a>流程图（Flow）</h2><p>代码：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"mermaid"</span>&gt;</span></span><br><span class="line">  graph TD</span><br><span class="line">  A[Hard] --&gt;|Text| B(Round)</span><br><span class="line">  B --&gt; C&#123;Decision&#125;</span><br><span class="line">  C --&gt;|One| D[Result 1]</span><br><span class="line">  C --&gt;|Two| E[Result 2]</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>效果：</p>
+<div class="mermaid">
+  graph TD
+  A[Hard] -->|Text| B(Round)
+  B --> C{Decision}
+  C -->|One| D[Result 1]
+  C -->|Two| E[Result 2]
+</div>
+
+<h2 id="时序图（Sequence）"><a href="#时序图（Sequence）" class="headerlink" title="时序图（Sequence）"></a>时序图（Sequence）</h2><p>代码：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"mermaid"</span>&gt;</span></span><br><span class="line">  sequenceDiagram</span><br><span class="line">    participant Alice</span><br><span class="line">    participant Bob</span><br><span class="line">    Alice-&gt;&gt;John: Hello John, how are you?</span><br><span class="line">    loop Healthcheck</span><br><span class="line">        John-&gt;&gt;John: Fight against hypochondria</span><br><span class="line">    end</span><br><span class="line">    Note right of John: Rational thoughts <span class="tag">&lt;<span class="name">br</span>/&gt;</span>prevail...</span><br><span class="line">    John--&gt;&gt;Alice: Great!</span><br><span class="line">    John-&gt;&gt;Bob: How about you?</span><br><span class="line">    Bob--&gt;&gt;John: Jolly good!</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>效果：</p>
+<div class="mermaid">
+  sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice->>John: Hello John, how are you?
+    loop Healthcheck
+        John->>John: Fight against hypochondria
+    end
+    Note right of John: Rational thoughts <br/>prevail...
+    John-->>Alice: Great!
+    John->>Bob: How about you?
+    Bob-->>John: Jolly good!
+</div>
+
+<h2 id="甘特图（Gantt）"><a href="#甘特图（Gantt）" class="headerlink" title="甘特图（Gantt）"></a>甘特图（Gantt）</h2><p>代码：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"mermaid"</span>&gt;</span></span><br><span class="line">  gantt</span><br><span class="line">  section Section</span><br><span class="line">  Completed :done,    des1, 2014-01-06,2014-01-08</span><br><span class="line">  Active        :active,  des2, 2014-01-07, 3d</span><br><span class="line">  Parallel 1   :         des3, after des1, 1d</span><br><span class="line">  Parallel 2   :         des4, after des1, 1d</span><br><span class="line">  Parallel 3   :         des5, after des3, 1d</span><br><span class="line">  Parallel 4   :         des6, after des4, 1d</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>效果：</p>
+<div class="mermaid">
+  gantt
+  section Section
+  Completed :done,    des1, 2014-01-06,2014-01-08
+  Active        :active,  des2, 2014-01-07, 3d
+  Parallel 1   :         des3, after des1, 1d
+  Parallel 2   :         des4, after des1, 1d
+  Parallel 3   :         des5, after des3, 1d
+  Parallel 4   :         des6, after des4, 1d
+</div>
+
+<h2 id="类图（Class）"><a href="#类图（Class）" class="headerlink" title="类图（Class）"></a>类图（Class）</h2><p>代码：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"mermaid"</span>&gt;</span></span><br><span class="line">  classDiagram</span><br><span class="line">  Class01 <span class="tag">&lt;<span class="name">|--</span> <span class="attr">AveryLongClass</span> <span class="attr">:</span> <span class="attr">Cool</span></span></span><br><span class="line"><span class="tag">  &amp;<span class="attr">lt</span>;&amp;<span class="attr">lt</span>;<span class="attr">interface</span>&gt;</span>&gt; Class01</span><br><span class="line">  Class09 --&gt; C2 : Where am i?</span><br><span class="line">  Class09 --* C3</span><br><span class="line">  Class09 --|&gt; Class07</span><br><span class="line">  Class07 : equals()</span><br><span class="line">  Class07 : Object[] elementData</span><br><span class="line">  Class01 : size()</span><br><span class="line">  Class01 : int chimp</span><br><span class="line">  Class01 : int gorilla</span><br><span class="line">  class Class10 &#123;</span><br><span class="line">    <span class="symbol">&amp;lt;</span><span class="symbol">&amp;lt;</span>service&gt;&gt;</span><br><span class="line">    int id</span><br><span class="line">    size()</span><br><span class="line">  &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>效果：</p>
+<div class="mermaid">
+  classDiagram
+  Class01 <|-- AveryLongClass : Cool
+  &lt;&lt;interface>> Class01
+  Class09 --> C2 : Where am i?
+  Class09 --* C3
+  Class09 --|> Class07
+  Class07 : equals()
+  Class07 : Object[] elementData
+  Class01 : size()
+  Class01 : int chimp
+  Class01 : int gorilla
+  class Class10 {
+    &lt;&lt;service>>
+    int id
+    size()
+  }
+</div>
+
+<h2 id="状态图（State）"><a href="#状态图（State）" class="headerlink" title="状态图（State）"></a>状态图（State）</h2><p>代码：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"mermaid"</span>&gt;</span></span><br><span class="line">  stateDiagram</span><br><span class="line">  [*] --&gt; Still</span><br><span class="line">  Still --&gt; [*]</span><br><span class="line">  Still --&gt; Moving</span><br><span class="line">  Moving --&gt; Still</span><br><span class="line">  Moving --&gt; Crash</span><br><span class="line">  Crash --&gt; [*]</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>效果：</p>
+<div class="mermaid">
+  stateDiagram
+  [*] --> Still
+  Still --> [*]
+  Still --> Moving
+  Moving --> Still
+  Moving --> Crash
+  Crash --> [*]
+</div>
+
+<h2 id="饼形图（Pie）"><a href="#饼形图（Pie）" class="headerlink" title="饼形图（Pie）"></a>饼形图（Pie）</h2><p>代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pie</span><br><span class="line">&quot;Dogs&quot; : 386</span><br><span class="line">&quot;Cats&quot; : 85</span><br><span class="line">&quot;Rats&quot; : 15</span><br></pre></td></tr></table></figure>
+<p>效果：</p>
+<div class="mermaid">
+  pie
+  "Dogs" : 386
+  "Cats" : 85
+  "Rats" : 15 
+</div>
 
 <h1 id="杂项"><a href="#杂项" class="headerlink" title="杂项"></a>杂项</h1><h2 id="正则表达式清除空行"><a href="#正则表达式清除空行" class="headerlink" title="正则表达式清除空行"></a>正则表达式清除空行</h2><p>VSCode替换时选取正则表达式：</p>
 <figure class="highlight taggerscript"><table><tr><td class="code"><pre><span class="line">^<span class="symbol">\s</span>*(?=<span class="symbol">\r</span>?$)<span class="symbol">\n</span></span><br></pre></td></tr></table></figure>

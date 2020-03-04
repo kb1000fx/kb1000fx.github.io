@@ -1,21 +1,42 @@
 /*Color Var 颜色变量*/
 /*Background Color 背景颜色*/
+body {
+  background: #d4dcd6;
+}
+.mdui-card {
+  background: #fff;
+}
 /*Dark Mode*/
 .mdui-theme-layout-dark #footer {
   background: #212121;
 }
+/* 页脚位置响应 */
 html {
   height: 100%;
 }
-body {
-  background: #d4dcd6;
-  height: calc(100% - 64px);
+@media screen and (min-width: 1024px) {
+  body {
+    height: calc(100% - 64px);
+  }
+  main {
+    min-height: calc(100% - 40px - 166px);
+  }
 }
-main {
-  min-height: 75%;
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+  body {
+    height: calc(100% - 64px);
+  }
+  main {
+    min-height: calc(100% - 40px - 164px);
+  }
 }
-.mdui-card {
-  background: #fff;
+@media screen and (max-width: 599px) {
+  body {
+    height: calc(100% - 56px);
+  }
+  main {
+    min-height: calc(100% - 40px - 164px);
+  }
 }
 /* Paginator Style 底部导航栏*/
 .pagination {
@@ -42,10 +63,6 @@ main {
 }
 .pagination a:hover:not(.current) {
   background-color: #ddd;
-}
-/*Google Adsense*/
-.adsense-contain {
-  margin: 10px;
 }
 pre,
 .highlight {
@@ -530,6 +547,9 @@ pre .javascript .function {
 .header-subtitle {
   margin: 0;
   font-size: 18px;
+}
+.adsense-contain {
+  margin: 10px;
 }
 #footer .mdui-row {
   margin: 5px 0;
