@@ -48,6 +48,62 @@
 
 
 
+    
+        <script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        
+            load: ['[tex]/mhchem'],
+        
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        
+            packages: {'[+]': ['mhchem']},
+        
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
           
 
 
@@ -55,7 +111,7 @@
 
     <title>
         
-            华硕路由器官方固件下设置中文SSID方法 | 小蜗熊的蜂蜜罐
+            酒精与84消毒液混用是否会中毒的分析 | 小蜗熊的蜂蜜罐
         
     </title>
 <meta name="generator" content="Hexo 4.2.0"></head>
@@ -201,19 +257,19 @@
     
     
       <div class="post-header"> 
-  <a class="post-header-title" href="/t-39744/">华硕路由器官方固件下设置中文SSID方法</a>
+  <a class="post-header-title" href="/t-58768/">酒精与84消毒液混用是否会中毒的分析</a>
   <div class="post-header-meta">
     <span>
       <i class="fa fa-calendar"></i>
-      发布于:&nbsp;2018-06-27
+      发布于:&nbsp;2020-02-07
     </span>
     <span>
       <i class="fa fa-calendar-check"></i>
-      更新于:&nbsp;2020-02-13
+      更新于:&nbsp;2020-03-09
     </span>
     <span>
       <i class="fa fa-folder"></i>
-      分类于:&nbsp;<a class="category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a> > <a class="category-link" href="/categories/%E6%8A%80%E6%9C%AF/%E7%BD%91%E7%BB%9C%E7%A1%AC%E4%BB%B6/">网络硬件</a>
+      分类于:&nbsp;<a class="category-link" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a>
     </span>
     
       <span>
@@ -235,25 +291,25 @@
       <button class="mdui-btn mdui-btn-icon mdui-text-color-teal" mdui-menu="{target: '#share_menu', align: 'right'}"><i class="mdui-icon material-icons">share</i></button>
       <ul class="mdui-menu" id="share_menu">
         <li class="mdui-menu-item">
-          <a href="http://service.weibo.com/share/share.php?appkey=&title=华硕路由器官方固件下设置中文SSID方法&url=https://garybear.cn/t-39744/&pic=https://garybear.cn/images/favicon.ico&searchPic=false&style=simple" target="_blank" class="mdui-ripple">分享到 Weibo</a>
+          <a href="http://service.weibo.com/share/share.php?appkey=&title=酒精与84消毒液混用是否会中毒的分析&url=https://garybear.cn/t-58768/&pic=https://garybear.cn/images/favicon.ico&searchPic=false&style=simple" target="_blank" class="mdui-ripple">分享到 Weibo</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="https://twitter.com/intent/tweet?text=华硕路由器官方固件下设置中文SSID方法&url=https://garybear.cn/t-39744/&via=机智小蜗熊" target="_blank" class="mdui-ripple">分享到 Twitter</a>
+          <a href="https://twitter.com/intent/tweet?text=酒精与84消毒液混用是否会中毒的分析&url=https://garybear.cn/t-58768/&via=机智小蜗熊" target="_blank" class="mdui-ripple">分享到 Twitter</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="https://www.facebook.com/sharer/sharer.php?u=https://garybear.cn/t-39744/" target="_blank" class="mdui-ripple">分享到 Facebook</a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://garybear.cn/t-58768/" target="_blank" class="mdui-ripple">分享到 Facebook</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="https://plus.google.com/share?url=https://garybear.cn/t-39744/" target="_blank" class="mdui-ripple">分享到 Google+</a>
+          <a href="https://plus.google.com/share?url=https://garybear.cn/t-58768/" target="_blank" class="mdui-ripple">分享到 Google+</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://garybear.cn/t-39744/&title=华硕路由器官方固件下设置中文SSID方法" target="_blank" class="mdui-ripple">分享到 LinkedIn</a>
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://garybear.cn/t-58768/&title=酒精与84消毒液混用是否会中毒的分析" target="_blank" class="mdui-ripple">分享到 LinkedIn</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="http://connect.qq.com/widget/shareqq/index.html?site=小蜗熊的蜂蜜罐&title=华硕路由器官方固件下设置中文SSID方法&summary=人间五十年，岂有长生不灭者？&pics=https://garybear.cn/images/favicon.ico&url=https://garybear.cn/t-39744/" target="_blank" class="mdui-ripple">分享到 QQ</a>
+          <a href="http://connect.qq.com/widget/shareqq/index.html?site=小蜗熊的蜂蜜罐&title=酒精与84消毒液混用是否会中毒的分析&summary=人间五十年，岂有长生不灭者？&pics=https://garybear.cn/images/favicon.ico&url=https://garybear.cn/t-58768/" target="_blank" class="mdui-ripple">分享到 QQ</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="https://telegram.me/share/url?url=https://garybear.cn/t-39744/&text=华硕路由器官方固件下设置中文SSID方法" target="_blank" class="mdui-ripple">分享到 Telegram</a>
+          <a href="https://telegram.me/share/url?url=https://garybear.cn/t-58768/&text=酒精与84消毒液混用是否会中毒的分析" target="_blank" class="mdui-ripple">分享到 Telegram</a>
         </li>
       </ul>
     
@@ -279,17 +335,48 @@
   
   
   <div class="mdui-card-content mdui-typo">
-    <p><strong>2018.7.20 更新：</strong></p>
-<p><strong>华硕官方固件在3.0.0.4.382.50470版本之后已支持Unicode，建议升级至最新固件</strong></p>
-<hr>
-<p>登录<a href="http://router.asus.com/" target="_blank" rel="noopener">Asus路由器管理页面</a>，在无线网络配置页面按F12打开浏览器控制台。输入以下内容：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">validator.stringSSID = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'fake stringSSID'</span>, <span class="built_in">arguments</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p>确认后即可SSID栏中输入中文和其他Unicode字符</p>
-<p><strong>注意：输入后网页里可能会显示为空白SSID，实际SSID已修改成功</strong></p>
-<p><strong>除此之外也可安装梅林等第三方固件添加中文SSID</strong></p>
-<blockquote>
-<p>参考：<a href="https://gist.github.com/joar/671bf99258d0a0828ae5" target="_blank" rel="noopener">https://gist.github.com/joar/671bf99258d0a0828ae5</a></p>
-</blockquote>
+    <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>最近网络上流传着酒精与84消毒液混用中毒的传言，在此讨论一下二者混用是否会使人中毒。</p>
+<p>首先先放上结论：酒精与84消毒液混合后会降低消毒效果，但<strong>不会使人中毒</strong>，分析过程如下。</p>
+<h1 id="分析过程"><a href="#分析过程" class="headerlink" title="分析过程"></a>分析过程</h1><h2 id="84消毒液中自身存在的平衡"><a href="#84消毒液中自身存在的平衡" class="headerlink" title="84消毒液中自身存在的平衡"></a>84消毒液中自身存在的平衡</h2><p>84消毒液中，自身存在以下三个平衡：</p>
+<p>$$\ce{ClO^- + H2O &lt;=&gt; HClO + OH^-} \tag{I}$$<br>$$\ce{2ClO^- \xlongequal{h\nu\text{ or heat}} O2 ^ + 2Cl^-} \tag{II}$$<br>$$\ce{HClO + H^+ + Cl^- &lt;=&gt; Cl2(aq) + H2O} \tag{III}$$</p>
+<a id="more"></a>
+<p>由于84消毒液中含有一定氢氧化钠，溶液为碱性。且由于日常生活中的84消毒液都需进行稀释后再使用，次氯酸钠浓度较低。因此$(\text{I})(\text{II})(\text{III})$的正向反应均收到抑制。<br>另一方面由于氯气的溶解度较大，即使产生了极微量的氯气也会溶解进溶液而不会逸出。因此84消毒液本身不会产生有毒气体使人中毒。</p>
+<h2 id="酒精与84消毒液混合后可能发生的反应"><a href="#酒精与84消毒液混合后可能发生的反应" class="headerlink" title="酒精与84消毒液混合后可能发生的反应"></a>酒精与84消毒液混合后可能发生的反应</h2><p>酒精与84消毒液的混合溶液中，可能发生以下反应：</p>
+<div class="mermaid">
+    stateDiagram
+    乙醇 --> 乙醛 : 氧化 (1)
+    乙醛 --> 乙酸钠 : 氧化 (2)
+    乙醛 --> node1 : 氯仿反应 (3)
+    node1: 三氯甲烷 + 甲酸钠
+    node1 --> 三氯甲烷
+    node1 --> 甲酸钠
+    三氯甲烷 --> 甲酸钠 : 卤仿水解(4)
+    三氯甲烷 --> 碳酰氯 : 卤仿分解(5)
+    甲酸钠 --> 碳酸钠 : 氧化(6)
+    碳酰氯 --> 碳酸钠 : 酰卤水解(7)
+    碳酰氯 --> 碳酸二乙酯 : 酰卤醇解(8)
+</div>
+
+<h2 id="乙醇氧化"><a href="#乙醇氧化" class="headerlink" title="乙醇氧化"></a>乙醇氧化</h2><p>乙醇与84消毒液混合后，可能会被84消毒液中的次氯酸钠氧化生成乙醛，即过程$(1)$：</p>
+<p>$$ \ce{CH_3CH_2OH -&gt;[{NaOCl}] CH_3CHO} \tag{1}$$</p>
+<p>但由于84消毒液中会加入一定的$\ce{NaOH}$来防止次氯酸分解失效，使得碱性条件下乙醇被氧化为乙醛的程度有限。</p>
+<h2 id="乙醛氧化"><a href="#乙醛氧化" class="headerlink" title="乙醛氧化"></a>乙醛氧化</h2><p>过程$(2)$为乙醛的氧化，乙醛在次氯酸钠的作用下进一步氧化生成乙酸钠：</p>
+<p>$$<br>\ce{CH_3CHO -&gt;[{NaOCl}] CH_3COONa} \tag{2}<br>$$</p>
+<p>同样由于碱性环境的原因，此反应进行的程度有限。乙酸钠由于$\ce{\alpha-H}$活性不足，不会进一步发生氯仿反应。</p>
+<h2 id="氯仿反应"><a href="#氯仿反应" class="headerlink" title="氯仿反应"></a>氯仿反应</h2><p>$$<br>\ce{\underset{乙醛}{CH_3CHO} -&gt;[{NaOCl}] CCl3-CHO -&gt;[NaOH] \underset{三氯甲烷}{CHCl3} + \underset{甲酸钠}{HCOONa}} \tag{3}<br>$$</p>
+<h2 id="氯仿水解"><a href="#氯仿水解" class="headerlink" title="氯仿水解"></a>氯仿水解</h2><p>氯仿在碱性条件下不稳定，会生成二氯卡宾并进一步水解生成甲酸钠，如过程$(4)$所示：</p>
+<p>$$<br>\ce{\underset{\text{三氯甲烷}}{CHCl3} -&gt;[OH-] \underset{\text{二氯卡宾}}{\text{:C}Cl2} -&gt;[NaOH] \underset{\text{甲酸钠}}{HCOONa}} \tag{4}<br>$$</p>
+<h2 id="氯仿分解"><a href="#氯仿分解" class="headerlink" title="氯仿分解"></a>氯仿分解</h2><p>氯仿在碱性条件下生成二氯卡宾后，也可能进一步被溶液中的次氯酸根，或者在光照条件下被氧气进一步氧化为光气，如过程$(5)$所示：</p>
+<p>$$<br>\ce{\underset{三氯甲烷}{CHCl3} -&gt;[OH-] \underset{二氯卡宾}{\text{:C}Cl2} -&gt;[NaOCl/OH^-] CCl3OOH -&gt;[-HOCl] \underset{碳酰氯}{COCl2}} \tag{5}<br>$$</p>
+<p>过程$(4)$与过程$(5)$之间为相互竞争的关系。</p>
+<h2 id="甲酸钠氧化"><a href="#甲酸钠氧化" class="headerlink" title="甲酸钠氧化"></a>甲酸钠氧化</h2><p>如过程$(6)$所示，氯仿反应中生成的以及氯仿水解生成的甲酸钠在溶液中可能会被次氯酸根进一步氧化生成碳酸钠：</p>
+<p>$$<br>\ce{HCOO^- + ClO^- + OH^- = CO3^2- + Cl^- + H2O} \tag{6}<br>$$</p>
+<h2 id="碳酰氯的水解"><a href="#碳酰氯的水解" class="headerlink" title="碳酰氯的水解"></a>碳酰氯的水解</h2><p>由于体系整体呈碱性，过程$(5)$中产生的光气会在碱性水溶液中迅速发生水解，即过程$(7)$：</p>
+<p>$$<br>\ce{COCl2 + 4OH^- = 2H2O + 2Cl^- + CO3^2-} \tag{7}<br>$$</p>
+<h2 id="碳酰氯的醇解"><a href="#碳酰氯的醇解" class="headerlink" title="碳酰氯的醇解"></a>碳酰氯的醇解</h2><p>同时光气也会与体系内的乙醇反应，发生酰卤的醇解，即过程$(8)$：</p>
+<p>$$<br>\ce{\underset{碳酰氯}{COCl2} -&gt;[EtOH] \underset{氯代甲酸乙酯}{CH3CH2OCOCl}  -&gt;[EtOH] \underset{碳酸二乙酯}{CO(OCH2CH3)2}} \tag{8}<br>$$</p>
+<p>由于过程$(7)$与过程$(8)$的存在，氯仿分解产生的光气大多会被吸收转化。</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>综上所述，由于在碱性环境下且缺少相转移催化剂，乙醇氧化生成的乙醛的速率并不高。所以后续反应中生成的氯仿、光气等有毒产物量也很少，且大多会在溶液中继续分解为甲酸根、氯离子、碳酸根等物质。因此将酒精和84消毒液混合使用后只会消耗部分有效物质，不会产生中毒的严重后果。</p>
 
   </div>
   <!--文末结束语-->
@@ -316,14 +403,9 @@
   
   <nav>
     
-      <a rel="prev" class="post-nav-item mdui-float-left" href="/t-109/">
-        <i class="fa fa-chevron-left"></i>
-        <span>Insurgency(叛乱)服务器架设脚本</span>
-      </a>
     
-    
-      <a rel="next" class="post-nav-item mdui-float-right" href="/t-15843/">
-        <span>Windows及Office的KMS激活</span>
+      <a rel="next" class="post-nav-item mdui-float-right" href="/t-4072/">
+        <span>Meadow主题使用说明</span>
         <i class="fa fa-chevron-right"></i>
       </a>
     
@@ -337,8 +419,8 @@
     <button class="mdui-fab mdui-ripple mdui-color-teal" mdui-menu="{target: '#toc'}"><i class="mdui-icon material-icons">format_list_numbered</i></button>
     <ul class="mdui-menu" id="toc">
       <li class="mdui-menu-item">
-        <a href="/t-39744/" id="toc-header" class="mdui-ripple">文章目录</a>
-        
+        <a href="/t-58768/" id="toc-header" class="mdui-ripple">文章目录</a>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#简介"><span class="toc-number">1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#分析过程"><span class="toc-number">2.</span> <span class="toc-text">分析过程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#84消毒液中自身存在的平衡"><span class="toc-number">2.1.</span> <span class="toc-text">84消毒液中自身存在的平衡</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#酒精与84消毒液混合后可能发生的反应"><span class="toc-number">2.2.</span> <span class="toc-text">酒精与84消毒液混合后可能发生的反应</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#乙醇氧化"><span class="toc-number">2.3.</span> <span class="toc-text">乙醇氧化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#乙醛氧化"><span class="toc-number">2.4.</span> <span class="toc-text">乙醛氧化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#氯仿反应"><span class="toc-number">2.5.</span> <span class="toc-text">氯仿反应</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#氯仿水解"><span class="toc-number">2.6.</span> <span class="toc-text">氯仿水解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#氯仿分解"><span class="toc-number">2.7.</span> <span class="toc-text">氯仿分解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#甲酸钠氧化"><span class="toc-number">2.8.</span> <span class="toc-text">甲酸钠氧化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#碳酰氯的水解"><span class="toc-number">2.9.</span> <span class="toc-text">碳酰氯的水解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#碳酰氯的醇解"><span class="toc-number">2.10.</span> <span class="toc-text">碳酰氯的醇解</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#总结"><span class="toc-number">3.</span> <span class="toc-text">总结</span></a></li></ol>
       </li>
     </ul>
   </div>

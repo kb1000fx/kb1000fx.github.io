@@ -24,6 +24,10 @@
     
     
 
+    <script data-ad-client="ca-pub-5888225880131847" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144166423-1"></script>
 <script>
   var host = window.location.hostname;
@@ -45,8 +49,6 @@
 
 
           
-
-    
 
 
     
@@ -207,7 +209,7 @@
     </span>
     <span>
       <i class="fa fa-calendar-check"></i>
-      更新于:&nbsp;2020-03-04
+      更新于:&nbsp;2020-03-07
     </span>
     <span>
       <i class="fa fa-folder"></i>
@@ -331,8 +333,9 @@
 <h2 id="本文结束标签"><a href="#本文结束标签" class="headerlink" title="本文结束标签"></a>本文结束标签</h2><p>编辑主题文件夹中的 <code>_config.yml</code> 文件</p>
 <figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">passage_end_tag:</span></span><br><span class="line"><span class="symbol">  enabled:</span> true</span><br><span class="line"><span class="symbol">  text:</span> --- 本文结束 <span class="params">&lt;i class="fa fa-heartbeat"&gt;</span><span class="params">&lt;/i&gt;</span> The End ---</span><br></pre></td></tr></table></figure>
 <h2 id="数学公式渲染"><a href="#数学公式渲染" class="headerlink" title="数学公式渲染"></a>数学公式渲染</h2><h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>编辑主题文件夹中的 <code>_config.yml</code> 文件</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">math:</span></span><br><span class="line">  <span class="attr">enabled:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">engine:</span> <span class="string">mathjax</span> <span class="comment">##可选渲染引擎：mathjax、katex</span></span><br><span class="line">  <span class="attr">mathjax:</span></span><br><span class="line">    <span class="attr">cdn:</span> <span class="string">https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js</span></span><br><span class="line">  <span class="attr">katex:</span></span><br><span class="line">    <span class="attr">cdn_css:</span> <span class="string">https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css</span></span><br><span class="line">    <span class="attr">cdn_js:</span> <span class="string">https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js</span></span><br><span class="line">    <span class="attr">auto_render:</span> <span class="string">https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">math:</span></span><br><span class="line">  <span class="attr">enabled:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">engine:</span> <span class="string">mathjax</span> <span class="comment">##可选渲染引擎：mathjax、katex</span></span><br><span class="line">  <span class="attr">mathjax:</span></span><br><span class="line">    <span class="attr">cdn:</span> <span class="string">https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js</span></span><br><span class="line">    <span class="attr">mhchem:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">katex:</span></span><br><span class="line">    <span class="attr">cdn_css:</span> <span class="string">https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css</span></span><br><span class="line">    <span class="attr">cdn_js:</span> <span class="string">https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js</span></span><br><span class="line">    <span class="attr">auto_render:</span> <span class="string">https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js</span></span><br></pre></td></tr></table></figure>
 <h3 id="Mathjax"><a href="#Mathjax" class="headerlink" title="Mathjax"></a>Mathjax</h3><p>将enabled设为true，并将engine设为mathjax</p>
+<p>如果需要使用<code>mhchem</code>来书写化学方程式，请将其设为<code>true</code></p>
 <p>在你想要使用mathjax的文章的Front-matter中添加 <code>mathjax: true</code></p>
 <h3 id="Katex"><a href="#Katex" class="headerlink" title="Katex"></a>Katex</h3><p>将enabled设为true，并将engine设为katex </p>
 <p>在你想要使用katex的文章的Front-matter中添加 <code>katex: true</code></p>
@@ -351,10 +354,15 @@
 <h2 id="不蒜子计数"><a href="#不蒜子计数" class="headerlink" title="不蒜子计数"></a>不蒜子计数</h2><p>编辑主题目录下的 <code>_config.yml</code> 文件</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">busuanzi:</span></span><br><span class="line">  <span class="attr">site:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">page:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">busuanzi_js:</span> <span class="string">https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="Google-Adsense"><a href="#Google-Adsense" class="headerlink" title="Google Adsense"></a>Google Adsense</h2><p>编辑<code>~hexo/themes/meadow/layout/_adsense</code>中的文件并加入你的Google Adsense代码</p>
-<p>编辑主题目录下的 <code>_config.yml</code> 文件来设置Google Adsense文件路径</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">google_adsense:</span></span><br><span class="line">  <span class="attr">enabled:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">footer:</span> <span class="string">../_adsense/footer.ejs</span></span><br><span class="line">  <span class="attr">sidebar:</span> <span class="string">../_adsense/sidebar.ejs</span></span><br><span class="line">  <span class="attr">banner:</span> <span class="string">../_adsense/banner.ejs</span></span><br></pre></td></tr></table></figure>
+<h2 id="Google-Adsense"><a href="#Google-Adsense" class="headerlink" title="Google Adsense"></a>Google Adsense</h2><p>编辑主题目录下的 <code>_config.yml</code> 文件来设置Google Adsense. 其中Pub Id 和 Slot Id 可以在Adsense设置中找到.</p>
+<p>主题中默认包含了 <code>sidebar</code>(抽屉侧边栏), <code>banner</code>(标题下方), <code>footer</code>(文章结尾) 这三个广告单元. 如果你想在其他位置设置广告单元可使用以下步骤: </p>
+<ul>
+<li>在<code>~hexo/themes/meadow/layout/_adsense</code>路径下新建文件.</li>
+<li>在文件中插入你的Google Adsense代码.</li>
+<li>编辑EJS文件，在你想要加入广告的位置加入 <code>partial(&#39;_adsense/{YOUR_FILE_NAME}&#39;)</code><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">google_adsense:</span></span><br><span class="line">  <span class="attr">enabled:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">auto_ad:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">pub_id:</span> </span><br><span class="line">  <span class="attr">footer_slot:</span> </span><br><span class="line">  <span class="attr">sidebar_slot:</span> </span><br><span class="line">  <span class="attr">banner_slot:</span></span><br></pre></td></tr></table></figure>
 
+</li>
+</ul>
 <h2 id="分析服务"><a href="#分析服务" class="headerlink" title="分析服务"></a>分析服务</h2><p>编辑主题目录下的 <code>_config.yml</code> 文件来设置你的分析服务</p>
 <blockquote>
 <p>与评论服务不同的是，可以同时开启多个分析服务</p>
@@ -405,6 +413,11 @@
   </br><div class="mdui-divider-inset"></div>
   
   <nav>
+    
+      <a rel="prev" class="post-nav-item mdui-float-left" href="/t-58768/">
+        <i class="fa fa-chevron-left"></i>
+        <span>酒精与84消毒液混用是否会中毒的分析</span>
+      </a>
     
     
       <a rel="next" class="post-nav-item mdui-float-right" href="/t-55399/">

@@ -24,6 +24,10 @@
     
     
 
+    <script data-ad-client="ca-pub-5888225880131847" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144166423-1"></script>
 <script>
   var host = window.location.hostname;
@@ -45,45 +49,62 @@
 
 
     
+        <script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
         
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        "HTML-CSS": { 
-            preferredFont: "TeX", 
-            availableFonts: ["STIX","TeX"], 
-            linebreaks: { automatic:true }, 
-            EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) 
-        },
-        tex2jax: { 
-            inlineMath: [ ["$", "$"], ["\\(","\\)"] ], 
-            processEscapes: true, 
-            ignoreClass: "tex2jax_ignore|dno",
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        },
-        TeX: {  
-            equationNumbers: { autoNumber: "AMS" },
-            noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, 
-            Macros: { href: "{}" } 
-        },
-        messageStyle: "none"
-    }); 
-</script>
-
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for(i=0; i < all.length; i += 1) {
-            all[i].SourceElement().parentNode.className += ' has-jax';
+            load: ['[tex]/mhchem'],
+        
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
         }
-    });
-</script>
-
-<script id="MathJax-script" async 
-    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        
+            packages: {'[+]': ['mhchem']},
+        
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
 </script>
           
-
-    
 
 
     
@@ -232,6 +253,57 @@
   
   <main id="main-contain" class="mdui-container mdui-m-t-5">
     
+    <article class="mdui-card mdui-m-b-5 mdui-p-a-2 mdui-hoverable">    
+      
+      
+        <div class="mdui-card-media">
+          
+            <img src = https://media.st.dl.bscstorage.net/steam/apps/222880/header.jpg >
+          
+          <div class="mdui-card-media-covered">
+            <div class="post-header"> 
+  <a class="post-header-title" href="/t-109/">Insurgency(叛乱)服务器架设脚本</a>
+  <div class="post-header-meta">
+    <span>
+      <i class="fa fa-calendar"></i>
+      发布于:&nbsp;2018-08-04
+    </span>
+    <span>
+      <i class="fa fa-calendar-check"></i>
+      更新于:&nbsp;2020-02-10
+    </span>
+    <span>
+      <i class="fa fa-folder"></i>
+      分类于:&nbsp;<a class="category-link" href="/categories/%E6%B8%B8%E6%88%8F/">游戏</a>
+    </span>
+    
+  </div>
+</div>   
+    
+
+
+
+          </div>
+        </div>
+      
+      
+      <div class="mdui-card-content">
+        <p class="post-abstract">
+          
+            Github地址
+测试环境Digital Ocean SFO21 vCPU1 GB Memory25 GB DiskUbuntu 18.04.1 x64 
+安装123wget https://raw.githubusercontent.com/kb1000fx/Insurgency-Dedicated-Server-Setup/master/install_insurgency.sh --no-check-certificatechmod +x install_insurgency.sh./install_insurgency.sh
+配置 server.cfg 文件安装时已自动下载了默认...
+          
+        </p>
+        
+        <div style="text-align:center;">
+          <a class="post-readmore mdui-btn mdui-ripple mdui-btn-raised" href="/t-109/">阅读更多</a>
+        </div>
+      </div>
+      
+    </article>
+
     <article class="mdui-card mdui-m-b-5 mdui-p-a-2 mdui-hoverable">    
       
       
@@ -681,63 +753,14 @@ LatexMathjax公式标号与引用MathJax的公式语法与LaTex相同，使用\t
       
     </article>
 
-    <article class="mdui-card mdui-m-b-5 mdui-p-a-2 mdui-hoverable">    
-      
-      
-        <div class="mdui-card-media">
-          
-            <img src = https://steamcdn-a.akamaihd.net/steam/apps/322330/header_alt_assets_3.jpg >
-          
-          <div class="mdui-card-media-covered">
-            <div class="post-header"> 
-  <a class="post-header-title" href="/t-51882/">饥荒联机版(Don&#39;t Starve Together)指令大全</a>
-  <div class="post-header-meta">
-    <span>
-      <i class="fa fa-calendar"></i>
-      发布于:&nbsp;2016-12-29
-    </span>
-    <span>
-      <i class="fa fa-calendar-check"></i>
-      更新于:&nbsp;2020-02-10
-    </span>
-    <span>
-      <i class="fa fa-folder"></i>
-      分类于:&nbsp;<a class="category-link" href="/categories/%E6%B8%B8%E6%88%8F/">游戏</a>
-    </span>
-    
-  </div>
-</div>   
-    
-
-
-
-          </div>
-        </div>
-      
-      
-      <div class="mdui-card-content">
-        <p class="post-abstract">
-          
-            更多详细内容参见 饥荒维基
-指令12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758#上帝模式：c_godmode()#物品栏中给予物品：c_give("代码名称“，数量)  #鼠标指针处生成物品：c_spawn(“XX”，数量)#鼠标指针处生成物品：DebugSpawn"XX"#删除物品：TheInput:GetWorldEntityUnderMouse():Remove()#设置生命：c_sethealth(百分数)#设置精...
-          
-        </p>
-        
-        <div style="text-align:center;">
-          <a class="post-readmore mdui-btn mdui-ripple mdui-btn-raised" href="/t-51882/">阅读更多</a>
-        </div>
-      </div>
-      
-    </article>
 
 
   <nav style="text-align: center;">
     <div class="pagination">
-      <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+      <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
     </div>
   </nav>
 
-  
   </main>
   <footer id="footer" class="mdui-text-center mdui-m-t-5 mdui-p-b-2 mdui-p-t-4 mdui-color-theme">
   <div class="mdui-container">

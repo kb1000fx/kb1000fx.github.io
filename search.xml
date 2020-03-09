@@ -1,6 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>酒精与84消毒液混用是否会中毒的分析</title>
+    <url>/t-58768/</url>
+    <content><![CDATA[<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>最近网络上流传着酒精与84消毒液混用中毒的传言，在此讨论一下二者混用是否会使人中毒。</p>
+<p>首先先放上结论：酒精与84消毒液混合后会降低消毒效果，但<strong>不会使人中毒</strong>，分析过程如下。</p>
+<h1 id="分析过程"><a href="#分析过程" class="headerlink" title="分析过程"></a>分析过程</h1><h2 id="84消毒液中自身存在的平衡"><a href="#84消毒液中自身存在的平衡" class="headerlink" title="84消毒液中自身存在的平衡"></a>84消毒液中自身存在的平衡</h2><p>84消毒液中，自身存在以下三个平衡：</p>
+<p>$$\ce{ClO^- + H2O &lt;=&gt; HClO + OH^-} \tag{I}$$<br>$$\ce{2ClO^- \xlongequal{h\nu\text{ or heat}} O2 ^ + 2Cl^-} \tag{II}$$<br>$$\ce{HClO + H^+ + Cl^- &lt;=&gt; Cl2(aq) + H2O} \tag{III}$$</p>
+<a id="more"></a>
+<p>由于84消毒液中含有一定氢氧化钠，溶液为碱性。且由于日常生活中的84消毒液都需进行稀释后再使用，次氯酸钠浓度较低。因此$(\text{I})(\text{II})(\text{III})$的正向反应均收到抑制。<br>另一方面由于氯气的溶解度较大，即使产生了极微量的氯气也会溶解进溶液而不会逸出。因此84消毒液本身不会产生有毒气体使人中毒。</p>
+<h2 id="酒精与84消毒液混合后可能发生的反应"><a href="#酒精与84消毒液混合后可能发生的反应" class="headerlink" title="酒精与84消毒液混合后可能发生的反应"></a>酒精与84消毒液混合后可能发生的反应</h2><p>酒精与84消毒液的混合溶液中，可能发生以下反应：</p>
+<div class="mermaid">
+    stateDiagram
+    乙醇 --> 乙醛 : 氧化 (1)
+    乙醛 --> 乙酸钠 : 氧化 (2)
+    乙醛 --> node1 : 氯仿反应 (3)
+    node1: 三氯甲烷 + 甲酸钠
+    node1 --> 三氯甲烷
+    node1 --> 甲酸钠
+    三氯甲烷 --> 甲酸钠 : 卤仿水解(4)
+    三氯甲烷 --> 碳酰氯 : 卤仿分解(5)
+    甲酸钠 --> 碳酸钠 : 氧化(6)
+    碳酰氯 --> 碳酸钠 : 酰卤水解(7)
+    碳酰氯 --> 碳酸二乙酯 : 酰卤醇解(8)
+</div>
+
+<h2 id="乙醇氧化"><a href="#乙醇氧化" class="headerlink" title="乙醇氧化"></a>乙醇氧化</h2><p>乙醇与84消毒液混合后，可能会被84消毒液中的次氯酸钠氧化生成乙醛，即过程$(1)$：</p>
+<p>$$ \ce{CH_3CH_2OH -&gt;[{NaOCl}] CH_3CHO} \tag{1}$$</p>
+<p>但由于84消毒液中会加入一定的$\ce{NaOH}$来防止次氯酸分解失效，使得碱性条件下乙醇被氧化为乙醛的程度有限。</p>
+<h2 id="乙醛氧化"><a href="#乙醛氧化" class="headerlink" title="乙醛氧化"></a>乙醛氧化</h2><p>过程$(2)$为乙醛的氧化，乙醛在次氯酸钠的作用下进一步氧化生成乙酸钠：</p>
+<p>$$<br>\ce{CH_3CHO -&gt;[{NaOCl}] CH_3COONa} \tag{2}<br>$$</p>
+<p>同样由于碱性环境的原因，此反应进行的程度有限。乙酸钠由于$\ce{\alpha-H}$活性不足，不会进一步发生氯仿反应。</p>
+<h2 id="氯仿反应"><a href="#氯仿反应" class="headerlink" title="氯仿反应"></a>氯仿反应</h2><p>$$<br>\ce{\underset{乙醛}{CH_3CHO} -&gt;[{NaOCl}] CCl3-CHO -&gt;[NaOH] \underset{三氯甲烷}{CHCl3} + \underset{甲酸钠}{HCOONa}} \tag{3}<br>$$</p>
+<h2 id="氯仿水解"><a href="#氯仿水解" class="headerlink" title="氯仿水解"></a>氯仿水解</h2><p>氯仿在碱性条件下不稳定，会生成二氯卡宾并进一步水解生成甲酸钠，如过程$(4)$所示：</p>
+<p>$$<br>\ce{\underset{\text{三氯甲烷}}{CHCl3} -&gt;[OH-] \underset{\text{二氯卡宾}}{\text{:C}Cl2} -&gt;[NaOH] \underset{\text{甲酸钠}}{HCOONa}} \tag{4}<br>$$</p>
+<h2 id="氯仿分解"><a href="#氯仿分解" class="headerlink" title="氯仿分解"></a>氯仿分解</h2><p>氯仿在碱性条件下生成二氯卡宾后，也可能进一步被溶液中的次氯酸根，或者在光照条件下被氧气进一步氧化为光气，如过程$(5)$所示：</p>
+<p>$$<br>\ce{\underset{三氯甲烷}{CHCl3} -&gt;[OH-] \underset{二氯卡宾}{\text{:C}Cl2} -&gt;[NaOCl/OH^-] CCl3OOH -&gt;[-HOCl] \underset{碳酰氯}{COCl2}} \tag{5}<br>$$</p>
+<p>过程$(4)$与过程$(5)$之间为相互竞争的关系。</p>
+<h2 id="甲酸钠氧化"><a href="#甲酸钠氧化" class="headerlink" title="甲酸钠氧化"></a>甲酸钠氧化</h2><p>如过程$(6)$所示，氯仿反应中生成的以及氯仿水解生成的甲酸钠在溶液中可能会被次氯酸根进一步氧化生成碳酸钠：</p>
+<p>$$<br>\ce{HCOO^- + ClO^- + OH^- = CO3^2- + Cl^- + H2O} \tag{6}<br>$$</p>
+<h2 id="碳酰氯的水解"><a href="#碳酰氯的水解" class="headerlink" title="碳酰氯的水解"></a>碳酰氯的水解</h2><p>由于体系整体呈碱性，过程$(5)$中产生的光气会在碱性水溶液中迅速发生水解，即过程$(7)$：</p>
+<p>$$<br>\ce{COCl2 + 4OH^- = 2H2O + 2Cl^- + CO3^2-} \tag{7}<br>$$</p>
+<h2 id="碳酰氯的醇解"><a href="#碳酰氯的醇解" class="headerlink" title="碳酰氯的醇解"></a>碳酰氯的醇解</h2><p>同时光气也会与体系内的乙醇反应，发生酰卤的醇解，即过程$(8)$：</p>
+<p>$$<br>\ce{\underset{碳酰氯}{COCl2} -&gt;[EtOH] \underset{氯代甲酸乙酯}{CH3CH2OCOCl}  -&gt;[EtOH] \underset{碳酸二乙酯}{CO(OCH2CH3)2}} \tag{8}<br>$$</p>
+<p>由于过程$(7)$与过程$(8)$的存在，氯仿分解产生的光气大多会被吸收转化。</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>综上所述，由于在碱性环境下且缺少相转移催化剂，乙醇氧化生成的乙醛的速率并不高。所以后续反应中生成的氯仿、光气等有毒产物量也很少，且大多会在溶液中继续分解为甲酸根、氯离子、碳酸根等物质。因此将酒精和84消毒液混合使用后只会消耗部分有效物质，不会产生中毒的严重后果。</p>
+]]></content>
+      <categories>
+        <category>杂谈</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Meadow主题使用说明</title>
     <url>/t-4072/</url>
     <content><![CDATA[<h1 id="Meadow简介"><a href="#Meadow简介" class="headerlink" title="Meadow简介"></a>Meadow简介</h1><p><img src="https://img.shields.io/badge/Hexo-3.0+-blue" alt="Hexo"> <img src="https://img.shields.io/badge/node.js-6.0-brightgreen" alt="Node.JS"></p>
@@ -49,8 +99,9 @@
 <h2 id="本文结束标签"><a href="#本文结束标签" class="headerlink" title="本文结束标签"></a>本文结束标签</h2><p>编辑主题文件夹中的 <code>_config.yml</code> 文件</p>
 <figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="symbol">passage_end_tag:</span></span><br><span class="line"><span class="symbol">  enabled:</span> true</span><br><span class="line"><span class="symbol">  text:</span> --- 本文结束 <span class="params">&lt;i class="fa fa-heartbeat"&gt;</span><span class="params">&lt;/i&gt;</span> The End ---</span><br></pre></td></tr></table></figure>
 <h2 id="数学公式渲染"><a href="#数学公式渲染" class="headerlink" title="数学公式渲染"></a>数学公式渲染</h2><h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>编辑主题文件夹中的 <code>_config.yml</code> 文件</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">math:</span></span><br><span class="line">  <span class="attr">enabled:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">engine:</span> <span class="string">mathjax</span> <span class="comment">##可选渲染引擎：mathjax、katex</span></span><br><span class="line">  <span class="attr">mathjax:</span></span><br><span class="line">    <span class="attr">cdn:</span> <span class="string">https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js</span></span><br><span class="line">  <span class="attr">katex:</span></span><br><span class="line">    <span class="attr">cdn_css:</span> <span class="string">https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css</span></span><br><span class="line">    <span class="attr">cdn_js:</span> <span class="string">https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js</span></span><br><span class="line">    <span class="attr">auto_render:</span> <span class="string">https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">math:</span></span><br><span class="line">  <span class="attr">enabled:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">engine:</span> <span class="string">mathjax</span> <span class="comment">##可选渲染引擎：mathjax、katex</span></span><br><span class="line">  <span class="attr">mathjax:</span></span><br><span class="line">    <span class="attr">cdn:</span> <span class="string">https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js</span></span><br><span class="line">    <span class="attr">mhchem:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">katex:</span></span><br><span class="line">    <span class="attr">cdn_css:</span> <span class="string">https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css</span></span><br><span class="line">    <span class="attr">cdn_js:</span> <span class="string">https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js</span></span><br><span class="line">    <span class="attr">auto_render:</span> <span class="string">https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js</span></span><br></pre></td></tr></table></figure>
 <h3 id="Mathjax"><a href="#Mathjax" class="headerlink" title="Mathjax"></a>Mathjax</h3><p>将enabled设为true，并将engine设为mathjax</p>
+<p>如果需要使用<code>mhchem</code>来书写化学方程式，请将其设为<code>true</code></p>
 <p>在你想要使用mathjax的文章的Front-matter中添加 <code>mathjax: true</code></p>
 <h3 id="Katex"><a href="#Katex" class="headerlink" title="Katex"></a>Katex</h3><p>将enabled设为true，并将engine设为katex </p>
 <p>在你想要使用katex的文章的Front-matter中添加 <code>katex: true</code></p>
@@ -69,10 +120,15 @@
 <h2 id="不蒜子计数"><a href="#不蒜子计数" class="headerlink" title="不蒜子计数"></a>不蒜子计数</h2><p>编辑主题目录下的 <code>_config.yml</code> 文件</p>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">busuanzi:</span></span><br><span class="line">  <span class="attr">site:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">page:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">busuanzi_js:</span> <span class="string">https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="Google-Adsense"><a href="#Google-Adsense" class="headerlink" title="Google Adsense"></a>Google Adsense</h2><p>编辑<code>~hexo/themes/meadow/layout/_adsense</code>中的文件并加入你的Google Adsense代码</p>
-<p>编辑主题目录下的 <code>_config.yml</code> 文件来设置Google Adsense文件路径</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">google_adsense:</span></span><br><span class="line">  <span class="attr">enabled:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">footer:</span> <span class="string">../_adsense/footer.ejs</span></span><br><span class="line">  <span class="attr">sidebar:</span> <span class="string">../_adsense/sidebar.ejs</span></span><br><span class="line">  <span class="attr">banner:</span> <span class="string">../_adsense/banner.ejs</span></span><br></pre></td></tr></table></figure>
+<h2 id="Google-Adsense"><a href="#Google-Adsense" class="headerlink" title="Google Adsense"></a>Google Adsense</h2><p>编辑主题目录下的 <code>_config.yml</code> 文件来设置Google Adsense. 其中Pub Id 和 Slot Id 可以在Adsense设置中找到.</p>
+<p>主题中默认包含了 <code>sidebar</code>(抽屉侧边栏), <code>banner</code>(标题下方), <code>footer</code>(文章结尾) 这三个广告单元. 如果你想在其他位置设置广告单元可使用以下步骤: </p>
+<ul>
+<li>在<code>~hexo/themes/meadow/layout/_adsense</code>路径下新建文件.</li>
+<li>在文件中插入你的Google Adsense代码.</li>
+<li>编辑EJS文件，在你想要加入广告的位置加入 <code>partial(&#39;_adsense/{YOUR_FILE_NAME}&#39;)</code><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">google_adsense:</span></span><br><span class="line">  <span class="attr">enabled:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">auto_ad:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">pub_id:</span> </span><br><span class="line">  <span class="attr">footer_slot:</span> </span><br><span class="line">  <span class="attr">sidebar_slot:</span> </span><br><span class="line">  <span class="attr">banner_slot:</span></span><br></pre></td></tr></table></figure>
 
+</li>
+</ul>
 <h2 id="分析服务"><a href="#分析服务" class="headerlink" title="分析服务"></a>分析服务</h2><p>编辑主题目录下的 <code>_config.yml</code> 文件来设置你的分析服务</p>
 <blockquote>
 <p>与评论服务不同的是，可以同时开启多个分析服务</p>
