@@ -142,7 +142,7 @@
         <div class="sidebar-overview">
             <div class="sidebar-avatar">
                 
-                    <img src="/images/avatar.jpg"/>
+                    <img src="/images/avatar.webp"/>
                 
             </div>
             <div class="sidebar-author-name">机智小蜗熊</div>
@@ -209,7 +209,7 @@
     </span>
     <span>
       <i class="fa fa-calendar-check"></i>
-      更新于:&nbsp;2020-02-10
+      更新于:&nbsp;2020-03-09
     </span>
     <span>
       <i class="fa fa-folder"></i>
@@ -281,7 +281,7 @@
   <div class="mdui-card-content mdui-typo">
     <h1 id="联通光猫改桥接模式"><a href="#联通光猫改桥接模式" class="headerlink" title="联通光猫改桥接模式"></a>联通光猫改桥接模式</h1><h2 id="管理员登录页面与管理员密码"><a href="#管理员登录页面与管理员密码" class="headerlink" title="管理员登录页面与管理员密码"></a>管理员登录页面与管理员密码</h2><p>管理员登录页面一般不固定，可能会在<code>192.168.1.1</code>上直接列出管理员账户，如果没有直接显示可以尝试<code>192.168.1.1/login.htm</code> 、 <code>192.168.1.1/cu.htm</code>等页面。</p>
 <p>联通光猫的超级密码一般比较固定，已验证多地的默认密码均为：<code>CUAdmin</code></p>
-<h2 id="桥接步骤"><a href="#桥接步骤" class="headerlink" title="桥接步骤"></a>桥接步骤</h2><p><img src="/images/2023/OM-bridge.png" alt="OM-bridge"></p>
+<h2 id="桥接步骤"><a href="#桥接步骤" class="headerlink" title="桥接步骤"></a>桥接步骤</h2><p><img src="/images/2023/OM-bridge.webp" alt="OM-bridge"></p>
 <p>登录光猫的管理界面，在已有连接中选择<code>INTERNET</code>一项(全称会和图中的不一样)，记录下其中的<code>VLanID</code>，通常情况下连接名称后的数字也是<code>VLanID</code>。</p>
 <p>桥接后需要在路由器或电脑上输入宽带账号和密码来拨号，如果记不清了可以找到含有账号信息的页面(如：<a href="http://192.168.1.1/Rapid.htm)，查看网页源代码并从中找到未加密的密码。" target="_blank" rel="noopener">http://192.168.1.1/Rapid.htm)，查看网页源代码并从中找到未加密的密码。</a></p>
 <p>准备完成后将光猫中的路由模式(Route)改为桥接模式(Bridge)后保存即可。随后将路由器WAN口连至光猫，并在路由器上进行拨号，此时光猫只负责光电信号转换。</p>
