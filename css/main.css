@@ -62,7 +62,7 @@ html {
   color: #fff;
 }
 .pagination a:hover:not(.current) {
-  background-color: #ddd;
+  background-color: #fff;
 }
 pre,
 .highlight {
@@ -614,6 +614,12 @@ pre .javascript .function {
 .sidebar-links .mdui-chip>a:visited,
 .sidebar-links .mdui-chip>a:link {
   color: unset;
+}
+.mdui-list-item-icon .iconfont {
+  font-size: 24px;
+}
+.mdui-chip .mdui-chip-icon .iconfont {
+  font-size: 22px;
 }
 #search {
   min-height: 80%;
