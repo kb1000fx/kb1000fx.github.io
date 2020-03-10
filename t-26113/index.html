@@ -10,9 +10,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <script>if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href="https://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); </script>
     
-    <link rel="preload" href="/icons/material-icons/MaterialIcons-Regular.woff2" as="font">
-    <link rel="preload" href="/fonts/roboto/Roboto-Bold.woff2" as="font">
-    <link rel="preload" href="/fonts/roboto/Roboto-Regular.woff2" as="font">
+    <link rel="preload" crossorigin="crossorigin" href="/icons/material-icons/MaterialIcons-Regular.woff2" as="font">
+    <link rel="preload" crossorigin="crossorigin" href="/fonts/roboto/Roboto-Bold.woff2" as="font">
+    <link rel="preload" crossorigin="crossorigin" href="/fonts/roboto/Roboto-Regular.woff2" as="font">
 
     
         <link rel="shortcut icon" href="/images/favicon.ico">
@@ -23,9 +23,8 @@
 <link rel="stylesheet" href="/css/mdui.min.css">
 <link rel="stylesheet" href="/css/main.css">
 
+    <script src="https://kit.fontawesome.com/e8b8819b94.js" crossorigin="anonymous"></script>
     
-<link rel="stylesheet" href="/href=%22https:/cdn.bootcss.com/font-awesome/5.12.1/css/all.min.css">
-
     
     
 
@@ -215,7 +214,7 @@
     </span>
     <span>
       <i class="fa fa-calendar-check"></i>
-      更新于:&nbsp;2020-02-10
+      更新于:&nbsp;2020-03-10
     </span>
     <span>
       <i class="fa fa-folder"></i>
@@ -308,7 +307,9 @@
 <p>代码：</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;iframe class="iframe_video" src="//player.bilibili.com/player.html?aid=74352571&amp;cid=127185886&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"&gt; &lt;/iframe&gt;</span><br></pre></td></tr></table></figure>
 <p>结果：</p>
-<iframe class="iframe_video" src="//player.bilibili.com/player.html?aid=74352571&cid=127185886&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<div class="mdui-video-container">
+  <iframe class="iframe_video" src="//player.bilibili.com/player.html?aid=74352571&cid=127185886&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
 </details>
 
 <h3 id="Youtube-1080P"><a href="#Youtube-1080P" class="headerlink" title="Youtube (1080P)"></a>Youtube (1080P)</h3><details>
@@ -317,7 +318,9 @@
 <p>代码：</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;iframe class="iframe_video" src="https://www.youtube.com/embed/G0W8ilpnsaU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;</span><br></pre></td></tr></table></figure>
 <p>结果：</p>
-<iframe class="iframe_video" src="https://www.youtube.com/embed/G0W8ilpnsaU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="mdui-video-container">
+  <iframe class="iframe_video" src="https://www.youtube.com/embed/G0W8ilpnsaU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 </details>
 
 <h3 id="优酷-360P"><a href="#优酷-360P" class="headerlink" title="优酷 (360P)"></a>优酷 (360P)</h3><details>
@@ -326,6 +329,11 @@
 <p>代码：</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;iframe class="iframe_video" src='//player.youku.com/embed/XMzcxMDUwMjE2' frameborder=0 allowfullscreen&gt;&lt;/iframe&gt;</span><br></pre></td></tr></table></figure>
 <p><strong>已经9102年了优酷居然还不支持HTTPS嵌入，为了网站的小绿锁在这就不放结果了。</strong></p>
+<div class="mdui-video-container">
+  <iframe class="iframe_video" src='//player.youku.com/embed/XMzcxMDUwMjE2' frameborder=0 allowfullscreen></iframe>
+</div>
+</details>
+
 <p>以上代码在Chrome中要手动选择加载未知脚本，Edge下可以自动运行。</p>
 <h3 id="niconico-1080P"><a href="#niconico-1080P" class="headerlink" title="niconico (1080P)"></a>niconico (1080P)</h3><details>
 <summary><b>点击查看详细内容</b></summary>
@@ -333,8 +341,16 @@
 <p>代码：</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;iframe class="iframe_video" src='https://embed.nicovideo.jp/watch/1559276347/' frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</span><br></pre></td></tr></table></figure>
 <p>结果：</p>
-<iframe class="iframe_video" src='https://embed.nicovideo.jp/watch/1559276347/' frameborder="0" allowfullscreen></iframe>
+<div class="mdui-video-container">
+  <iframe class="iframe_video" src='https://embed.nicovideo.jp/watch/1559276347/' frameborder="0" allowfullscreen></iframe>
+</div>
+</details>
 
+<h2 id="Meadow主题下的视频响应式"><a href="#Meadow主题下的视频响应式" class="headerlink" title="Meadow主题下的视频响应式"></a>Meadow主题下的视频响应式</h2><p>由于Meadow主题基于MDUI框架而开发，因此直接使用MDUI的媒体响应式布局会更加便捷。</p>
+<h3 id="嵌入式视频"><a href="#嵌入式视频" class="headerlink" title="嵌入式视频"></a>嵌入式视频</h3><p>在嵌入式视频的父元素上添加类 .mdui-video-container 使视频自适应父元素的宽度。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"mdui-video-container"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">iframe</span> <span class="attr">src</span>=<span class="string">"SRC_URL"</span> <span class="attr">frameborder</span>=<span class="string">0</span> <span class="attr">allowfullscreen</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="HTML5视频"><a href="#HTML5视频" class="headerlink" title="HTML5视频"></a>HTML5视频</h3><p>在<code>video</code>标签上添加类<code>.mdui-video-fluid</code>使视频自适应父元素的宽度。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">video</span> <span class="attr">class</span>=<span class="string">"mdui-video-fluid"</span> <span class="attr">controls</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">"video.mp4"</span> <span class="attr">type</span>=<span class="string">"video/mp4"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">video</span>&gt;</span></span><br></pre></td></tr></table></figure>
   </div>
   <!--文末结束语-->
   
@@ -381,7 +397,7 @@
     <ul class="mdui-menu" id="toc">
       <li class="mdui-menu-item">
         <a href="/t-26113/" id="toc-header" class="mdui-ripple">文章目录</a>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#简介"><span class="toc-number">1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方法和步骤"><span class="toc-number">2.</span> <span class="toc-text">方法和步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#修改CSS"><span class="toc-number">2.1.</span> <span class="toc-text">修改CSS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#插入视频"><span class="toc-number">2.2.</span> <span class="toc-text">插入视频</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#示例"><span class="toc-number">3.</span> <span class="toc-text">示例</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#B站-1080P"><span class="toc-number">3.1.</span> <span class="toc-text">B站 (1080P)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Youtube-1080P"><span class="toc-number">3.2.</span> <span class="toc-text">Youtube (1080P)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#优酷-360P"><span class="toc-number">3.3.</span> <span class="toc-text">优酷 (360P)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#niconico-1080P"><span class="toc-number">3.4.</span> <span class="toc-text">niconico (1080P)</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#简介"><span class="toc-number">1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方法和步骤"><span class="toc-number">2.</span> <span class="toc-text">方法和步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#修改CSS"><span class="toc-number">2.1.</span> <span class="toc-text">修改CSS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#插入视频"><span class="toc-number">2.2.</span> <span class="toc-text">插入视频</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#示例"><span class="toc-number">3.</span> <span class="toc-text">示例</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#B站-1080P"><span class="toc-number">3.1.</span> <span class="toc-text">B站 (1080P)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Youtube-1080P"><span class="toc-number">3.2.</span> <span class="toc-text">Youtube (1080P)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#优酷-360P"><span class="toc-number">3.3.</span> <span class="toc-text">优酷 (360P)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#niconico-1080P"><span class="toc-number">3.4.</span> <span class="toc-text">niconico (1080P)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Meadow主题下的视频响应式"><span class="toc-number">4.</span> <span class="toc-text">Meadow主题下的视频响应式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#嵌入式视频"><span class="toc-number">4.1.</span> <span class="toc-text">嵌入式视频</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML5视频"><span class="toc-number">4.2.</span> <span class="toc-text">HTML5视频</span></a></li></ol></li></ol>
       </li>
     </ul>
   </div>

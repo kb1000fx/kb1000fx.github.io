@@ -10,9 +10,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <script>if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href="https://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); </script>
     
-    <link rel="preload" href="/icons/material-icons/MaterialIcons-Regular.woff2" as="font">
-    <link rel="preload" href="/fonts/roboto/Roboto-Bold.woff2" as="font">
-    <link rel="preload" href="/fonts/roboto/Roboto-Regular.woff2" as="font">
+    <link rel="preload" crossorigin="crossorigin" href="/icons/material-icons/MaterialIcons-Regular.woff2" as="font">
+    <link rel="preload" crossorigin="crossorigin" href="/fonts/roboto/Roboto-Bold.woff2" as="font">
+    <link rel="preload" crossorigin="crossorigin" href="/fonts/roboto/Roboto-Regular.woff2" as="font">
 
     
         <link rel="shortcut icon" href="/images/favicon.ico">
@@ -23,9 +23,8 @@
 <link rel="stylesheet" href="/css/mdui.min.css">
 <link rel="stylesheet" href="/css/main.css">
 
+    <script src="https://kit.fontawesome.com/e8b8819b94.js" crossorigin="anonymous"></script>
     
-<link rel="stylesheet" href="/href=%22https:/cdn.bootcss.com/font-awesome/5.12.1/css/all.min.css">
-
     
     
 
@@ -219,7 +218,7 @@
     </span>
     <span>
       <i class="fa fa-calendar-check"></i>
-      更新于:&nbsp;2020-03-09
+      更新于:&nbsp;2020-03-10
     </span>
     <span>
       <i class="fa fa-folder"></i>
@@ -290,7 +289,7 @@
   
   <div class="mdui-card-content mdui-typo">
     <h1 id="LAMP下使用Certbot自动配置SSL证书"><a href="#LAMP下使用Certbot自动配置SSL证书" class="headerlink" title="LAMP下使用Certbot自动配置SSL证书"></a>LAMP下使用Certbot自动配置SSL证书</h1><p>Let’s Encrypt是ISRG运营一个免费、开放，自动化的证书颁发机构，可以申请到期限90天的免费SSL证书（包括单域名、多域名和泛域名）。 Certbot是Let’s Encrypt官方提供的一款SSL自动安装程序，<a href="https://certbot.eff.org/" target="_blank" rel="noopener">官方网站</a> 。使用Certbot可以自动完成获取密钥、申请证书、安装证书等一系列繁琐的操作，也提供了自动证书续期的功能。使用Certbot自动配置SSL证书，也可以免去手动申请证书中添加TXT解析的步骤。</p>
-<p><img src="/images/65310/certbot-logo.png" alt=""></p>
+<p><img src="/images/65310/certbot-logo.webp" alt=""></p>
 <h2 id="安装Certbot客户端"><a href="#安装Certbot客户端" class="headerlink" title="安装Certbot客户端"></a>安装Certbot客户端</h2><h3 id="方法一-Packages-for-Debian"><a href="#方法一-Packages-for-Debian" class="headerlink" title="方法一 (Packages for Debian)"></a>方法一 (Packages for Debian)</h3><p>Ubuntu下可以直接用预编译好的安装包进行安装，步骤如下： </p>
 <pre><code>sudo apt-get update
 sudo apt-get install software-properties-common  
