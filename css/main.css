@@ -64,8 +64,11 @@ html {
 .pagination a:hover:not(.current) {
   background-color: #fff;
 }
-/* 按钮 */
+/* 按钮图标尺寸 */
 .mdui-fab .iconfont {
+  font-size: 24px;
+}
+.mdui-btn-icon .iconfont {
   font-size: 24px;
 }
 pre,
