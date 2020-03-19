@@ -194,7 +194,29 @@
                 </div>
             
         </div>
+        <ul class="mdui-list" mdui-collapse="{accordion: true}">
+            <li class="mdui-collapse-item">
+                <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-link"></i>
+                    </div>
+                    <div class="mdui-list-item-content">友情链接</div>
+                    <div class="mdui-collapse-item-arrow">
+                        <i class="mdui-list-item-icon iconfont icon-angle-down"></i>
+                    </div>
+                </div>
+                <ul class="mdui-collapse-item-body mdui-list mdui-list-dense">
+                    
+                        <a href="https://garybear.cn/hexo-theme-meadow/" class="mdui-list-item mdui-ripple">
+                            Meadow说明文档
+                        </a>
+                    
+                </ul>
+            </li>
+        </ul>
+
     </div>
+
     <div class="mdui-divider"></div>
     
     
@@ -214,7 +236,7 @@
 </aside>
   
   <main id="main-contain" class="mdui-container mdui-m-t-5">
-    <article id="article" class="mdui-card mdui-p-a-2 mdui-m-b-5">
+    <article id="article" class="mdui-card mdui-p-b-2 mdui-m-b-5">
   <header class="mdui-card-media">
     
     
@@ -300,7 +322,7 @@
   
   
   
-  <div class="mdui-card-content mdui-typo">
+  <div class="mdui-card-content mdui-typo mdui-p-x-4">
     <h1 id="LAMP下使用Certbot自动配置SSL证书"><a href="#LAMP下使用Certbot自动配置SSL证书" class="headerlink" title="LAMP下使用Certbot自动配置SSL证书"></a>LAMP下使用Certbot自动配置SSL证书</h1><p>Let’s Encrypt是ISRG运营一个免费、开放，自动化的证书颁发机构，可以申请到期限90天的免费SSL证书（包括单域名、多域名和泛域名）。 Certbot是Let’s Encrypt官方提供的一款SSL自动安装程序，<a href="https://certbot.eff.org/" target="_blank" rel="noopener">官方网站</a> 。使用Certbot可以自动完成获取密钥、申请证书、安装证书等一系列繁琐的操作，也提供了自动证书续期的功能。使用Certbot自动配置SSL证书，也可以免去手动申请证书中添加TXT解析的步骤。</p>
 <p><img src="/images/65310/certbot-logo.webp" alt=""></p>
 <h2 id="安装Certbot客户端"><a href="#安装Certbot客户端" class="headerlink" title="安装Certbot客户端"></a>安装Certbot客户端</h2><h3 id="方法一-Packages-for-Debian"><a href="#方法一-Packages-for-Debian" class="headerlink" title="方法一 (Packages for Debian)"></a>方法一 (Packages for Debian)</h3><p>Ubuntu下可以直接用预编译好的安装包进行安装，步骤如下： </p>

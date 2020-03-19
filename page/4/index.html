@@ -250,7 +250,29 @@
                 </div>
             
         </div>
+        <ul class="mdui-list" mdui-collapse="{accordion: true}">
+            <li class="mdui-collapse-item">
+                <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-link"></i>
+                    </div>
+                    <div class="mdui-list-item-content">友情链接</div>
+                    <div class="mdui-collapse-item-arrow">
+                        <i class="mdui-list-item-icon iconfont icon-angle-down"></i>
+                    </div>
+                </div>
+                <ul class="mdui-collapse-item-body mdui-list mdui-list-dense">
+                    
+                        <a href="https://garybear.cn/hexo-theme-meadow/" class="mdui-list-item mdui-ripple">
+                            Meadow说明文档
+                        </a>
+                    
+                </ul>
+            </li>
+        </ul>
+
     </div>
+
     <div class="mdui-divider"></div>
     
     
@@ -271,7 +293,65 @@
   
   <main id="main-contain" class="mdui-container mdui-m-t-5">
     
-    <article class="mdui-card mdui-m-b-5 mdui-p-a-2 mdui-hoverable">    
+    <article class="mdui-card mdui-m-b-5 mdui-hoverable">    
+      
+      
+        <div class="mdui-card-media">
+          
+            <img src = /images/57950/EFI.png >
+          
+          <div class="mdui-card-media-covered">
+            <div class="post-header"> 
+  <a class="post-header-title" href="/t-57950/">删除EFI分区</a>
+  <div class="post-header-meta">
+    <span>
+      <span class="iconfont icon-calendar"></span>
+      发布于:&nbsp;2017-06-09
+    </span>
+    <span>
+      <span class="iconfont icon-calendar-check"></span>
+      更新于:&nbsp;2020-02-10
+    </span>
+    <span>
+      <span class="iconfont icon-folder"></span>
+      分类于:&nbsp;<a class="category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a> > <a class="category-link" href="/categories/%E6%8A%80%E6%9C%AF/Windows/">Windows</a>
+    </span>
+    
+  </div>
+</div>   
+    
+
+
+
+          </div>
+        </div>
+      
+      
+  <div class="tag-line-space"></div>
+
+      
+      <div id="achieve-abstract" class="mdui-card-content mdui-p-x-4">
+        <p class="post-abstract">
+          
+            管理员身份运行cmd
+1diskpart
+在 DISKPART&gt; 提示符下
+12345list diskselect disk 0           #选择磁盘list partitionselect partition 2      #efi分区序号，类型为系统assign letter=p
+以管理员身份再运行cmd
+123P:cd EFIrmdir /s/q Ubuntu
+或是以管理员身份执行程序(如记事本)，在打开界面切到对应位置删除最后在 DISKPART&gt; 提示符下移除盘符
+1remove letter=p
+          
+        </p>
+        
+        <div style="text-align:center;">
+          <a class="post-readmore mdui-btn mdui-ripple mdui-btn-raised" href="/t-57950/">阅读更多</a>
+        </div>
+      </div>
+      
+    </article>
+
+    <article class="mdui-card mdui-m-b-5 mdui-hoverable">    
       
       
         <div class="post-header"> 
@@ -298,7 +378,10 @@
 
       
       
-      <div class="mdui-card-content">
+  <div class="tag-line-space"></div>
+
+      
+      <div id="achieve-abstract" class="mdui-card-content mdui-p-x-4">
         <p class="post-abstract">
           
             参见左侧目录或使用Ctrl+F进行搜索
@@ -316,7 +399,7 @@ LatexMathjax公式标号与引用MathJax的公式语法与LaTex相同，使用\t
       
     </article>
 
-    <article class="mdui-card mdui-m-b-5 mdui-p-a-2 mdui-hoverable">    
+    <article class="mdui-card mdui-m-b-5 mdui-hoverable">    
       
       
         <div class="mdui-card-media">
@@ -350,7 +433,10 @@ LatexMathjax公式标号与引用MathJax的公式语法与LaTex相同，使用\t
         </div>
       
       
-      <div class="mdui-card-content">
+  <div class="tag-line-space"></div>
+
+      
+      <div id="achieve-abstract" class="mdui-card-content mdui-p-x-4">
         <p class="post-abstract">
           
             更多详细内容参见 饥荒维基

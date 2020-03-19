@@ -194,7 +194,29 @@
                 </div>
             
         </div>
+        <ul class="mdui-list" mdui-collapse="{accordion: true}">
+            <li class="mdui-collapse-item">
+                <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-link"></i>
+                    </div>
+                    <div class="mdui-list-item-content">友情链接</div>
+                    <div class="mdui-collapse-item-arrow">
+                        <i class="mdui-list-item-icon iconfont icon-angle-down"></i>
+                    </div>
+                </div>
+                <ul class="mdui-collapse-item-body mdui-list mdui-list-dense">
+                    
+                        <a href="https://garybear.cn/hexo-theme-meadow/" class="mdui-list-item mdui-ripple">
+                            Meadow说明文档
+                        </a>
+                    
+                </ul>
+            </li>
+        </ul>
+
     </div>
+
     <div class="mdui-divider"></div>
     
     
@@ -214,7 +236,7 @@
 </aside>
   
   <main id="main-contain" class="mdui-container mdui-m-t-5">
-    <article id="article" class="mdui-card mdui-p-a-2 mdui-m-b-5">
+    <article id="article" class="mdui-card mdui-p-b-2 mdui-m-b-5">
   <header class="mdui-card-media">
     
     
@@ -294,16 +316,16 @@
   
   
   
-    <div class="post-tags">
-      
-        <i class="iconfont icon-tag">
-          <a rel="tag" href = /tags/Hexo/ >Hexo</a>
-        </i>
-      
-    </div>
+  <div class="post-tags">
+    
+      <i class="iconfont icon-tag">
+        <a rel="tag" href = /tags/Hexo/ >Hexo</a>
+      </i>
+    
+  </div>
 
   
-  <div class="mdui-card-content mdui-typo">
+  <div class="mdui-card-content mdui-typo mdui-p-x-4">
     <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>使用Google Adsense也好几个月了，先以 <strong><em>Next</em></strong> 主题为例，对Hexo下Google Adsense的使用方法做个记录，方便以后更改广告布局。</p>
 <h1 id="自动广告"><a href="#自动广告" class="headerlink" title="自动广告"></a>自动广告</h1><p>首先建立目录<code>~\themes\next\layout\google_adsense</code>。</p>
 <p>在此目录下建立文件<code>auto_ads.swig</code>，内容如下。其中Publisher ID可以在Google Adsense的账号信息里找到。</p>

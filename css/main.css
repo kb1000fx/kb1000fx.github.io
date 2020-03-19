@@ -240,7 +240,10 @@ pre .javascript .function {
 .post-header {
   text-align: center;
   position: relative;
-  padding: 24px 16px 16px 16px;
+  padding: 40px 16px 0px 16px;
+}
+.mdui-card-media-covered .post-header {
+  padding: 24px;
 }
 .post-header .post-header-title {
   text-decoration: none;
@@ -273,7 +276,7 @@ pre .javascript .function {
 .post-tags {
   display: inline-flex;
   position: relative;
-  left: -20px;
+  left: 0px;
   height: 0;
   font-weight: bold;
   color: #fff;
@@ -390,6 +393,16 @@ pre .javascript .function {
 }
 .toc ol > ol {
   padding-left: 0;
+}
+#achieve-abstract {
+  padding-bottom: 24px;
+  padding-top: 0px;
+}
+.tag-line-space {
+  padding: 15px;
+}
+#article .mdui-card-content {
+  font-size: 16px;
 }
 .posts-collapse {
   position: relative;

@@ -194,7 +194,29 @@
                 </div>
             
         </div>
+        <ul class="mdui-list" mdui-collapse="{accordion: true}">
+            <li class="mdui-collapse-item">
+                <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-link"></i>
+                    </div>
+                    <div class="mdui-list-item-content">友情链接</div>
+                    <div class="mdui-collapse-item-arrow">
+                        <i class="mdui-list-item-icon iconfont icon-angle-down"></i>
+                    </div>
+                </div>
+                <ul class="mdui-collapse-item-body mdui-list mdui-list-dense">
+                    
+                        <a href="https://garybear.cn/hexo-theme-meadow/" class="mdui-list-item mdui-ripple">
+                            Meadow说明文档
+                        </a>
+                    
+                </ul>
+            </li>
+        </ul>
+
     </div>
+
     <div class="mdui-divider"></div>
     
     
@@ -214,7 +236,7 @@
 </aside>
   
   <main id="main-contain" class="mdui-container mdui-m-t-5">
-    <article id="article" class="mdui-card mdui-p-a-2 mdui-m-b-5">
+    <article id="article" class="mdui-card mdui-p-b-2 mdui-m-b-5">
   <header class="mdui-card-media">
     
     
@@ -300,7 +322,7 @@
   
   
   
-  <div class="mdui-card-content mdui-typo">
+  <div class="mdui-card-content mdui-typo mdui-p-x-4">
     <h1 id="Ubuntu16-04下的LAMP环境搭建"><a href="#Ubuntu16-04下的LAMP环境搭建" class="headerlink" title="Ubuntu16.04下的LAMP环境搭建"></a>Ubuntu16.04下的LAMP环境搭建</h1><p><img src="/images/33478/apache.webp" alt="机智小蜗熊"></p>
 <h2 id="基本设置"><a href="#基本设置" class="headerlink" title="基本设置"></a>基本设置</h2><h3 id="1-开启root账号SSH登录"><a href="#1-开启root账号SSH登录" class="headerlink" title="1.开启root账号SSH登录"></a>1.开启root账号SSH登录</h3><p>腾讯云的Ubuntu默认账号是ubuntu，且无法以root身份远程登录，首先需要手动开启远程登录root账号并设置root密码。 </p>
 <pre><code>vim /etc/ssh.sshd_config

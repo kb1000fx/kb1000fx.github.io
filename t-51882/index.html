@@ -194,7 +194,29 @@
                 </div>
             
         </div>
+        <ul class="mdui-list" mdui-collapse="{accordion: true}">
+            <li class="mdui-collapse-item">
+                <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-link"></i>
+                    </div>
+                    <div class="mdui-list-item-content">友情链接</div>
+                    <div class="mdui-collapse-item-arrow">
+                        <i class="mdui-list-item-icon iconfont icon-angle-down"></i>
+                    </div>
+                </div>
+                <ul class="mdui-collapse-item-body mdui-list mdui-list-dense">
+                    
+                        <a href="https://garybear.cn/hexo-theme-meadow/" class="mdui-list-item mdui-ripple">
+                            Meadow说明文档
+                        </a>
+                    
+                </ul>
+            </li>
+        </ul>
+
     </div>
+
     <div class="mdui-divider"></div>
     
     
@@ -214,7 +236,7 @@
 </aside>
   
   <main id="main-contain" class="mdui-container mdui-m-t-5">
-    <article id="article" class="mdui-card mdui-p-a-2 mdui-m-b-5">
+    <article id="article" class="mdui-card mdui-p-b-2 mdui-m-b-5">
   <header class="mdui-card-media">
     
     
@@ -300,7 +322,7 @@
   
   
   
-  <div class="mdui-card-content mdui-typo">
+  <div class="mdui-card-content mdui-typo mdui-p-x-4">
     <p>更多详细内容参见 <a href="http://dontstarve.wikia.com/wiki/Don%27t_Starve_Game_Wiki" target="_blank" rel="noopener">饥荒维基</a></p>
 <h1 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h1><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#上帝模式：</span></span><br><span class="line">c_godmode<span class="params">()</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#物品栏中给予物品：</span></span><br><span class="line">c_give<span class="params">("代码名称“，数量)</span>  </span><br><span class="line"></span><br><span class="line"><span class="comment">#鼠标指针处生成物品：</span></span><br><span class="line">c_spawn<span class="params">(“XX”，数量)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#鼠标指针处生成物品：</span></span><br><span class="line">DebugSpawn<span class="string">"XX"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#删除物品：</span></span><br><span class="line">TheInput<span class="function">:GetWorldEntityUnderMouse</span><span class="params">()</span><span class="function">:Remove</span><span class="params">()</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#设置生命：</span></span><br><span class="line">c_sethealth<span class="params">(百分数)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#设置精神：</span></span><br><span class="line">c_setsanity<span class="params">(百分数)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#设置饥饿：</span></span><br><span class="line">c_sethunger<span class="params">(百分数)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#设置速度：</span></span><br><span class="line">c_speed<span class="params">(默认为1)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#停止饥饿：</span></span><br><span class="line">GetPlayer<span class="params">()</span><span class="string">.components.hunger</span><span class="function">:Pause</span><span class="params">(true)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#变成海狸：</span></span><br><span class="line">GetPlayer<span class="params">()</span><span class="string">.components.beaverness</span><span class="function">:SetPercent</span><span class="params">(1)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#饥饿值上限：</span></span><br><span class="line">GetPlayer<span class="params">()</span><span class="string">.components.hunger</span><span class="function">:SetMax</span><span class="params">(500)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#精神值上限：</span></span><br><span class="line">GetPlayer<span class="params">()</span><span class="string">.components.sanity</span><span class="function">:SetMax</span><span class="params">(500)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#生命值上限：</span></span><br><span class="line">GetPlayer<span class="params">()</span><span class="string">.components.health</span><span class="function">:SetMaxHealth</span><span class="params">(300)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#全物品直接制造：</span></span><br><span class="line">GetPlayer<span class="params">()</span><span class="string">.components.builder</span><span class="function">:GiveAllRecipes</span><span class="params">()</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#传送：</span></span><br><span class="line">GetPlayer<span class="params">()</span><span class="string">.Transform</span><span class="function">:SetPosition</span><span class="params">(坐标，例：0,0,0)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#地图全开：</span></span><br><span class="line">GetWorld<span class="params">()</span><span class="string">.minimap.MiniMap</span><span class="function">:ShowArea</span><span class="params">(0,0,0,10000)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#列出玩家名称跟编号列表：</span></span><br><span class="line">c_listallplayers<span class="params">()</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#复活指定编号玩家：AllPlayers[number]:PushEvent('respawnfromghost')</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#玩家换角色：</span></span><br><span class="line">c_despawn<span class="params">(AllPlayers[NUMBER])</span></span><br></pre></td></tr></table></figure>
 

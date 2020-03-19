@@ -53,6 +53,62 @@
 
 
 
+    
+        <script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        
+            load: ['[tex]/mhchem'],
+        
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        
+            packages: {'[+]': ['mhchem']},
+        
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
           
 
 
@@ -60,7 +116,7 @@
     
     <title>
         
-            Insurgency(叛乱)服务器架设脚本 | 小蜗熊的蜂蜜罐
+            如何使用加农炮将特朗普发射至太阳上 | 小蜗熊的蜂蜜罐
         
     </title>
 <meta name="generator" content="Hexo 4.2.0"></head>
@@ -241,23 +297,23 @@
     
     
       
-        <img src = /images/109/insurgency.webp >
+        <img src = /images/1436/trump.webp >
       
       <div class="mdui-card-media-covered">
         <div class="post-header"> 
-  <a class="post-header-title" href="/t-109/">Insurgency(叛乱)服务器架设脚本</a>
+  <a class="post-header-title" href="/t-1436/">如何使用加农炮将特朗普发射至太阳上</a>
   <div class="post-header-meta">
     <span>
       <span class="iconfont icon-calendar"></span>
-      发布于:&nbsp;2018-08-04
+      发布于:&nbsp;2020-03-14
     </span>
     <span>
       <span class="iconfont icon-calendar-check"></span>
-      更新于:&nbsp;2020-03-11
+      更新于:&nbsp;2020-03-20
     </span>
     <span>
       <span class="iconfont icon-folder"></span>
-      分类于:&nbsp;<a class="category-link" href="/categories/%E6%B8%B8%E6%88%8F/">游戏</a>
+      分类于:&nbsp;<a class="category-link" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a>
     </span>
     
       <span>
@@ -280,25 +336,25 @@
       <button class="mdui-btn mdui-btn-icon mdui-text-color-teal" mdui-menu="{target: '#share_menu', align: 'right'}"><i class="iconfont icon-share"></i></button>
       <ul class="mdui-menu" id="share_menu">
         <li class="mdui-menu-item">
-          <a href="http://service.weibo.com/share/share.php?appkey=&title=Insurgency(叛乱)服务器架设脚本&url=https://garybear.cn/t-109/&pic=https://garybear.cn/images/favicon.ico&searchPic=false&style=simple" target="_blank" class="mdui-ripple">分享到 Weibo</a>
+          <a href="http://service.weibo.com/share/share.php?appkey=&title=如何使用加农炮将特朗普发射至太阳上&url=https://garybear.cn/t-1436/&pic=https://garybear.cn/images/favicon.ico&searchPic=false&style=simple" target="_blank" class="mdui-ripple">分享到 Weibo</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="https://twitter.com/intent/tweet?text=Insurgency(叛乱)服务器架设脚本&url=https://garybear.cn/t-109/&via=机智小蜗熊" target="_blank" class="mdui-ripple">分享到 Twitter</a>
+          <a href="https://twitter.com/intent/tweet?text=如何使用加农炮将特朗普发射至太阳上&url=https://garybear.cn/t-1436/&via=机智小蜗熊" target="_blank" class="mdui-ripple">分享到 Twitter</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="https://www.facebook.com/sharer/sharer.php?u=https://garybear.cn/t-109/" target="_blank" class="mdui-ripple">分享到 Facebook</a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://garybear.cn/t-1436/" target="_blank" class="mdui-ripple">分享到 Facebook</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="https://plus.google.com/share?url=https://garybear.cn/t-109/" target="_blank" class="mdui-ripple">分享到 Google+</a>
+          <a href="https://plus.google.com/share?url=https://garybear.cn/t-1436/" target="_blank" class="mdui-ripple">分享到 Google+</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://garybear.cn/t-109/&title=Insurgency(叛乱)服务器架设脚本" target="_blank" class="mdui-ripple">分享到 LinkedIn</a>
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://garybear.cn/t-1436/&title=如何使用加农炮将特朗普发射至太阳上" target="_blank" class="mdui-ripple">分享到 LinkedIn</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="http://connect.qq.com/widget/shareqq/index.html?site=小蜗熊的蜂蜜罐&title=Insurgency(叛乱)服务器架设脚本&summary=人间五十年，岂有长生不灭者？&pics=https://garybear.cn/images/favicon.ico&url=https://garybear.cn/t-109/" target="_blank" class="mdui-ripple">分享到 QQ</a>
+          <a href="http://connect.qq.com/widget/shareqq/index.html?site=小蜗熊的蜂蜜罐&title=如何使用加农炮将特朗普发射至太阳上&summary=人间五十年，岂有长生不灭者？&pics=https://garybear.cn/images/favicon.ico&url=https://garybear.cn/t-1436/" target="_blank" class="mdui-ripple">分享到 QQ</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="https://telegram.me/share/url?url=https://garybear.cn/t-109/&text=Insurgency(叛乱)服务器架设脚本" target="_blank" class="mdui-ripple">分享到 Telegram</a>
+          <a href="https://telegram.me/share/url?url=https://garybear.cn/t-1436/&text=如何使用加农炮将特朗普发射至太阳上" target="_blank" class="mdui-ripple">分享到 Telegram</a>
         </li>
       </ul>
     
@@ -323,17 +379,28 @@
   
   
   <div class="mdui-card-content mdui-typo mdui-p-x-4">
-    <p><a href="https://github.com/kb1000fx/Insurgency-Dedicated-Server-Setup" target="_blank" rel="noopener">Github地址</a></p>
-<h1 id="测试环境"><a href="#测试环境" class="headerlink" title="测试环境"></a>测试环境</h1><p>Digital Ocean SFO2<br>1 vCPU<br>1 GB Memory<br>25 GB Disk<br>Ubuntu 18.04.1 x64 </p>
-<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget https://raw.githubusercontent.com/kb1000fx/Insurgency-Dedicated-Server-Setup/master/install_insurgency.sh --no-check-certificate</span><br><span class="line">chmod +x install_insurgency.sh</span><br><span class="line">./install_insurgency.sh</span><br></pre></td></tr></table></figure>
-<h1 id="配置-server-cfg-文件"><a href="#配置-server-cfg-文件" class="headerlink" title="配置 server.cfg 文件"></a>配置 server.cfg 文件</h1><p>安装时已自动下载了默认文件.<br>编辑  <code>./insurgency/cfg/server.cfg</code> 来改变服务器设置.  </p>
-<p>更多内容参见：<br><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=854506744" target="_blank" rel="noopener">https://steamcommunity.com/sharedfiles/filedetails/?id=854506744</a><br><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=305605313" target="_blank" rel="noopener">https://steamcommunity.com/sharedfiles/filedetails/?id=305605313</a>  </p>
-<h1 id="添加创意工坊MOD"><a href="#添加创意工坊MOD" class="headerlink" title="添加创意工坊MOD"></a>添加创意工坊MOD</h1><p>创建并编辑 <code>subscribed_file_ids.txt</code> .<br>在其中添加MOD ID，每行一个<br>启动时末尾加 <code>-workshop</code>.</p>
-<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cd</span> <span class="string">./insurgency/subscribed_file_ids.txt</span></span><br><span class="line">vi subscribed_file_ids.txt</span><br></pre></td></tr></table></figure>
-<h1 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h1><p>使用 <code>srcds_run</code> 运行服务器<br>例如：</p>
-<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./srcds_run -port <span class="number">27015</span> +map district_coop +maxplayers <span class="number">32</span> -workshop</span><br></pre></td></tr></table></figure>
-<p>或使用脚本启动</p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget http<span class="variable">s:</span>//raw.githubusercontent.<span class="keyword">com</span>/kb1000fx/Insurgency-Dedicated-Server-Setup/master/run_insurgency.<span class="keyword">sh</span> --<span class="keyword">no</span>-check-certificate</span><br><span class="line">chmod +<span class="keyword">x</span> run_insurgency.<span class="keyword">sh</span></span><br><span class="line">./run_insurgency.<span class="keyword">sh</span></span><br></pre></td></tr></table></figure>
+    <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>特朗普曾表示，若道琼斯指数暴跌1000点，时任总统应被塞进加农炮射到太阳上。而最近美股动荡，一周之内多次熔断，特朗普终于实现了他曾立下的flag。<br>那么就来帮大统领计算一下要如何才能用加农炮将他自己发射到太阳上。</p>
+<a id="more"></a>
+<h1 id="发射所需的炮口速度"><a href="#发射所需的炮口速度" class="headerlink" title="发射所需的炮口速度"></a>发射所需的炮口速度</h1><p>第一步先计算要以多大的速度飞出才能让大统领登陆太阳。</p>
+<p>首先以太阳为参考系，由特朗普绕太阳椭圆运动过程中近日点、远日点的机械能守恒可得：<br>$$<br>\frac{1}{2}m{v_2}^2-\frac{GM_Sm}{R_{max}}=\frac{1}{2}m{v_3}^{2}-\frac{GM_Sm}{R_{min}} \tag{I}<br>$$</p>
+<p>又由此过程中角动量守恒可得：<br>$$<br>mv_2R_{max}=mv_3R_{min} \tag{II}<br>$$<br>联立$(I)(II)$式可得 $v_2=5.85km/s$</p>
+<p>这里$v_2$是特朗普在远日点处，即刚脱离地球时相对于太阳的线速度。因为此速度远小于地球公转的线速度，所以发射时需采取与地球公转相反的方向，以此来抵消公转带来的影响。根据速度的合成分解可得远日点处相对地球的速度为：</p>
+<p>$$<br>v_1 = v_E-v_2 = 29.78km/s - 5.85km/s = 23.93km/s<br>$$</p>
+<p>随后再以地球为参考系，由机械能守恒<br>$$<br>\frac{1}{2}mv^2-\frac{GM_Em}{R_E}=\frac{1}{2}m{v_1}^{2}<br>$$</p>
+<p>可得发射时的炮口初速$v=26.42km/s$ </p>
+<p>根据特朗普体重为243磅，即110.22千克，可求出发射所需的炮口动能为$3.847 \times 10^7 kJ$</p>
+<h1 id="发射药的用量"><a href="#发射药的用量" class="headerlink" title="发射药的用量"></a>发射药的用量</h1><p>然后再计算一下需要消耗多少的发射药才能获得如此高的动能。</p>
+<p>假设所使用的炮管为口径500mm的滑膛炮，发射药为硝化纤维-硝化甘油-硝基胍三基发射药。</p>
+<p>$$<br>\omega’ = \frac{E}{f} = \alpha \cdot \omega<br>$$</p>
+<p>因为发射药的定容火药力已知，可求出弹丸平动的动能需要35.3吨的三基发射药。根据火炮的一般能量分配规律，发射药释放的能量中仅有约32%转化为平动动能，因此估算总共需要约$110.3吨$的发射药。</p>
+<p>进一步可以得出药室容积约为$68.94m^3$，药室长度约为$351m$。</p>
+<h1 id="其他火炮参数"><a href="#其他火炮参数" class="headerlink" title="其他火炮参数"></a>其他火炮参数</h1><p>最后根据要求确定一下其他参数，设计出符合要求的炮身。</p>
+<p>假设发射过程为理想过程，整体可分为前期(未发生运动)、第一时期(发射药未燃烧尽)、第二时期(发射药已燃烧尽)三个阶段。<br>根据内弹道学原理，发射过程中满足以下方程组：</p>
+<p>$$<br>\begin{cases}<br> 形状函数:&amp;\psi=\chi\left(1+\lambda Z+\mu Z^2 \right) &amp; (1)\\\\<br> 燃速度方程:&amp;I_k \cdot dZ=p \cdot dt&amp; (2)\\\\<br> 运动方程:&amp;Sp \cdot dt=\varphi m \cdot dv&amp; (3)\\\\<br> 内弹道基本方程:&amp;Sp\left(l_\psi +l\right)=f\omega\psi-0.5\theta\varphi mv^2&amp; (4)\\\\<br> 速度微分:&amp;dl=v\cdot dt&amp; (5)<br>\end{cases}<br>$$</p>
+<p>参照其他滑膛炮，取$\chi=2.01$、$\lambda=-0.50$、$p_0=30Mpa$<br>使用Matlab对三个阶段进行模拟后可得:</p>
+<p>在发射后约$7ms$后膛压达到最大值，最大膛压约为$800Mpa$，此时速度约$10km/s$。<br>总发射时间约为$37ms$，发射全行程约为$720m$。 </p>
+<p><strong>综上所述，若想将特朗普发射至太阳上，需要炮管长720m、口径500mm、能承受800Mpa膛压的加农炮，并且需要消耗110吨发射药</strong></p>
+
   </div>
   <!--文末结束语-->
   
@@ -358,14 +425,9 @@
   
   <nav>
     
-      <a rel="prev" class="post-nav-item mdui-float-left" href="/t-64878/">
-        <i class="iconfont icon-angle-left"></i>
-        <span>Insurgency(叛乱)全成就指南</span>
-      </a>
     
-    
-      <a rel="next" class="post-nav-item mdui-float-right" href="/t-39744/">
-        <span>华硕路由器官方固件下设置中文SSID方法</span>
+      <a rel="next" class="post-nav-item mdui-float-right" href="/t-58768/">
+        <span>酒精与84消毒液混用是否会中毒的分析</span>
         <i class="iconfont icon-angle-right"></i>
       </a>
     
@@ -379,8 +441,8 @@
     <button class="mdui-fab mdui-ripple mdui-color-teal" mdui-menu="{target: '#toc'}"><i class="iconfont icon-list"></i></button>
     <ul class="mdui-menu" id="toc">
       <li class="mdui-menu-item">
-        <a href="/t-109/" id="toc-header" class="mdui-ripple">文章目录</a>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#测试环境"><span class="toc-number">1.</span> <span class="toc-text">测试环境</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#安装"><span class="toc-number">2.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#配置-server-cfg-文件"><span class="toc-number">3.</span> <span class="toc-text">配置 server.cfg 文件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#添加创意工坊MOD"><span class="toc-number">4.</span> <span class="toc-text">添加创意工坊MOD</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#运行"><span class="toc-number">5.</span> <span class="toc-text">运行</span></a></li></ol>
+        <a href="/t-1436/" id="toc-header" class="mdui-ripple">文章目录</a>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#简介"><span class="toc-number">1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#发射所需的炮口速度"><span class="toc-number">2.</span> <span class="toc-text">发射所需的炮口速度</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#发射药的用量"><span class="toc-number">3.</span> <span class="toc-text">发射药的用量</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#其他火炮参数"><span class="toc-number">4.</span> <span class="toc-text">其他火炮参数</span></a></li></ol>
       </li>
     </ul>
   </div>
