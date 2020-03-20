@@ -249,7 +249,7 @@
     </span>
     <span>
       <span class="iconfont icon-calendar-check"></span>
-      更新于:&nbsp;2020-02-13
+      更新于:&nbsp;2020-03-21
     </span>
     <span>
       <span class="iconfont icon-folder"></span>
@@ -322,6 +322,7 @@
 <p><strong>华硕官方固件在3.0.0.4.382.50470版本之后已支持Unicode，建议升级至最新固件</strong></p>
 <hr>
 <p>登录<a href="http://router.asus.com/" target="_blank" rel="noopener">Asus路由器管理页面</a>，在无线网络配置页面按F12打开浏览器控制台。输入以下内容：</p>
+<a id="more"></a>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">validator.stringSSID = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'fake stringSSID'</span>, <span class="built_in">arguments</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p>确认后即可SSID栏中输入中文和其他Unicode字符</p>
 <p><strong>注意：输入后网页里可能会显示为空白SSID，实际SSID已修改成功</strong></p>
@@ -383,7 +384,7 @@
 
 
 
-    <div id="comment" class="mdui-card mdui-p-a-2 mdui-m-b-5">
+    <div id="comment" class="mdui-card mdui-p-a-2 mdui-m-b-5" style="z-index: -1;">
       <div id="gitalk-container"></div>
 <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>

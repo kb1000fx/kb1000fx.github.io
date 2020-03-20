@@ -253,7 +253,7 @@
     </span>
     <span>
       <span class="iconfont icon-calendar-check"></span>
-      更新于:&nbsp;2020-03-09
+      更新于:&nbsp;2020-03-21
     </span>
     <span>
       <span class="iconfont icon-folder"></span>
@@ -323,14 +323,14 @@
   
   
   <div class="mdui-card-content mdui-typo mdui-p-x-4">
-    <h1 id="Ubuntu16-04下的LAMP环境搭建"><a href="#Ubuntu16-04下的LAMP环境搭建" class="headerlink" title="Ubuntu16.04下的LAMP环境搭建"></a>Ubuntu16.04下的LAMP环境搭建</h1><p><img src="/images/33478/apache.webp" alt="机智小蜗熊"></p>
-<h2 id="基本设置"><a href="#基本设置" class="headerlink" title="基本设置"></a>基本设置</h2><h3 id="1-开启root账号SSH登录"><a href="#1-开启root账号SSH登录" class="headerlink" title="1.开启root账号SSH登录"></a>1.开启root账号SSH登录</h3><p>腾讯云的Ubuntu默认账号是ubuntu，且无法以root身份远程登录，首先需要手动开启远程登录root账号并设置root密码。 </p>
+    <h1 id="Ubuntu16-04下的LAMP环境搭建"><a href="#Ubuntu16-04下的LAMP环境搭建" class="headerlink" title="Ubuntu16.04下的LAMP环境搭建"></a>Ubuntu16.04下的LAMP环境搭建</h1><h2 id="基本设置"><a href="#基本设置" class="headerlink" title="基本设置"></a>基本设置</h2><h3 id="1-开启root账号SSH登录"><a href="#1-开启root账号SSH登录" class="headerlink" title="1.开启root账号SSH登录"></a>1.开启root账号SSH登录</h3><p>腾讯云的Ubuntu默认账号是ubuntu，且无法以root身份远程登录，首先需要手动开启远程登录root账号并设置root密码。 </p>
 <pre><code>vim /etc/ssh.sshd_config
 
 
 
 - PermitRootLogin prohibit-password
-+ PermitRootLogin yes</code></pre><h3 id="2-设置root密码"><a href="#2-设置root密码" class="headerlink" title="2.设置root密码"></a>2.设置root密码</h3><pre><code>sudo passwd</code></pre><h3 id="3-设置DNS"><a href="#3-设置DNS" class="headerlink" title="3.设置DNS"></a>3.设置DNS</h3><p>有些服务器提供商并未设置DNS地址，这时需要先手动进行设置，否则接下来的步骤都将无法解析地址。 1.首先打开/etc/resolv.conf或/etc/resolvconf/resolv.conf.d/tail，前者在重启后会还原。 </p>
++ PermitRootLogin yes</code></pre><a id="more"></a>
+<h3 id="2-设置root密码"><a href="#2-设置root密码" class="headerlink" title="2.设置root密码"></a>2.设置root密码</h3><pre><code>sudo passwd</code></pre><h3 id="3-设置DNS"><a href="#3-设置DNS" class="headerlink" title="3.设置DNS"></a>3.设置DNS</h3><p>有些服务器提供商并未设置DNS地址，这时需要先手动进行设置，否则接下来的步骤都将无法解析地址。 1.首先打开/etc/resolv.conf或/etc/resolvconf/resolv.conf.d/tail，前者在重启后会还原。 </p>
 <pre><code>sudo vi /etc/resolv.conf
 或者
 sudo vi /etc/resolvconf/resolv.conf.d/tail</code></pre><p>2.在文件中加入“nameserver 114.114.114.114”这么一条配置，保存退出。 3.重启网络。 </p>
@@ -434,7 +434,7 @@ Ubuntu默认未开启Rewrite支持需手动开启，在此只是简单介绍，�
 
 
 
-    <div id="comment" class="mdui-card mdui-p-a-2 mdui-m-b-5">
+    <div id="comment" class="mdui-card mdui-p-a-2 mdui-m-b-5" style="z-index: -1;">
       <div id="gitalk-container"></div>
 <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>

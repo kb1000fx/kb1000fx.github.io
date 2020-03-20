@@ -249,7 +249,7 @@
     </span>
     <span>
       <span class="iconfont icon-calendar-check"></span>
-      更新于:&nbsp;2020-03-10
+      更新于:&nbsp;2020-03-21
     </span>
     <span>
       <span class="iconfont icon-folder"></span>
@@ -326,7 +326,8 @@
 
   
   <div class="mdui-card-content mdui-typo mdui-p-x-4">
-    <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>中午收到Google Search Console的一封邮件，提醒我网站存在移动端的错误。仔细检查后发现是一篇插入了B站视频的文章，在手机端浏览时会出现视频超出页面范围的问题。<br>对于网页中插入视频，通常视频网站提供的都是指定宽高度的iframe链接，由于本站采用了响应式布局，固定的视频尺寸就会和网页整体布局产生冲突。（Youtube链接虽然提供了固定的宽高，但仍会自动匹配页面布局）<br>使用<code>max-width=100%</code>的方法虽然可以解决手机等移动端超出页面的问题，但对于一些分辨率较低的视频，在PC端又会显得太小，与页面不协调。<br>因此最佳的方案就是通过修改CSS的方法使插入的视频也具备响应式的功能。</p>
+    <p>中午收到Google Search Console的一封邮件，提醒我网站存在移动端的错误。仔细检查后发现是一篇插入了B站视频的文章，在手机端浏览时会出现视频超出页面范围的问题。<br>对于网页中插入视频，通常视频网站提供的都是指定宽高度的iframe链接，由于本站采用了响应式布局，固定的视频尺寸就会和网页整体布局产生冲突。（Youtube链接虽然提供了固定的宽高，但仍会自动匹配页面布局）<br>使用<strong>max-width=100%</strong>的方法虽然可以解决手机等移动端超出页面的问题，但对于一些分辨率较低的视频，在PC端又会显得太小，与页面不协调。<br>因此最佳的方案就是通过修改CSS的方法使插入的视频也具备响应式的功能。</p>
+<a id="more"></a>
 <h2 id="方法和步骤"><a href="#方法和步骤" class="headerlink" title="方法和步骤"></a>方法和步骤</h2><h3 id="修改CSS"><a href="#修改CSS" class="headerlink" title="修改CSS"></a>修改CSS</h3><p>首先在 <code>~\themes\next\source\css\main.styl</code> 中插入下面一行代码以导入自定义CSS</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@import</span> <span class="string">"_custom/iframe"</span>;</span><br></pre></td></tr></table></figure>
 
@@ -432,14 +433,14 @@
     <ul class="mdui-menu" id="toc">
       <li class="mdui-menu-item">
         <a href="/t-26113/" id="toc-header" class="mdui-ripple">文章目录</a>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#简介"><span class="toc-number">1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方法和步骤"><span class="toc-number">2.</span> <span class="toc-text">方法和步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#修改CSS"><span class="toc-number">2.1.</span> <span class="toc-text">修改CSS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#插入视频"><span class="toc-number">2.2.</span> <span class="toc-text">插入视频</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#示例"><span class="toc-number">3.</span> <span class="toc-text">示例</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#B站-1080P"><span class="toc-number">3.1.</span> <span class="toc-text">B站 (1080P)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Youtube-1080P"><span class="toc-number">3.2.</span> <span class="toc-text">Youtube (1080P)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#优酷-360P"><span class="toc-number">3.3.</span> <span class="toc-text">优酷 (360P)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#niconico-1080P"><span class="toc-number">3.4.</span> <span class="toc-text">niconico (1080P)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Meadow主题下的视频响应式"><span class="toc-number">4.</span> <span class="toc-text">Meadow主题下的视频响应式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#嵌入式视频"><span class="toc-number">4.1.</span> <span class="toc-text">嵌入式视频</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML5视频"><span class="toc-number">4.2.</span> <span class="toc-text">HTML5视频</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#方法和步骤"><span class="toc-number">1.</span> <span class="toc-text">方法和步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#修改CSS"><span class="toc-number">1.1.</span> <span class="toc-text">修改CSS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#插入视频"><span class="toc-number">1.2.</span> <span class="toc-text">插入视频</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#示例"><span class="toc-number">2.</span> <span class="toc-text">示例</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#B站-1080P"><span class="toc-number">2.1.</span> <span class="toc-text">B站 (1080P)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Youtube-1080P"><span class="toc-number">2.2.</span> <span class="toc-text">Youtube (1080P)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#优酷-360P"><span class="toc-number">2.3.</span> <span class="toc-text">优酷 (360P)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#niconico-1080P"><span class="toc-number">2.4.</span> <span class="toc-text">niconico (1080P)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Meadow主题下的视频响应式"><span class="toc-number">3.</span> <span class="toc-text">Meadow主题下的视频响应式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#嵌入式视频"><span class="toc-number">3.1.</span> <span class="toc-text">嵌入式视频</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML5视频"><span class="toc-number">3.2.</span> <span class="toc-text">HTML5视频</span></a></li></ol></li></ol>
       </li>
     </ul>
   </div>
 
 
 
-    <div id="comment" class="mdui-card mdui-p-a-2 mdui-m-b-5">
+    <div id="comment" class="mdui-card mdui-p-a-2 mdui-m-b-5" style="z-index: -1;">
       <div id="gitalk-container"></div>
 <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>

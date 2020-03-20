@@ -249,7 +249,7 @@
     </span>
     <span>
       <span class="iconfont icon-calendar-check"></span>
-      更新于:&nbsp;2020-02-16
+      更新于:&nbsp;2020-03-21
     </span>
     <span>
       <span class="iconfont icon-folder"></span>
@@ -322,6 +322,7 @@
 <p>使用SSH登录到路由器，输入以下命令开启JFFS分区</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">nvram <span class="built_in">set</span> jffs2_on=1</span><br><span class="line">nvram <span class="built_in">set</span> jffs2_enable=1</span><br><span class="line">nvram <span class="built_in">set</span> jffs2_format=1</span><br><span class="line">nvram <span class="built_in">set</span> jffs2_scripts=1</span><br><span class="line">nvram commit</span><br></pre></td></tr></table></figure>
 <p>最后使用<code>reboot</code>重启生效</p>
+<a id="more"></a>
 <p>最后使用命令<code>nvram show | grep &quot;jffs&quot;</code>来检验是否启用了JFFS分区，显示如下信息即为开启成功。</p>
 <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">size: 26089 bytes (35351 left)</span><br><span class="line"><span class="attribute">jffs2_enable</span>=1</span><br><span class="line"><span class="attribute">jffs2_format</span>=0</span><br><span class="line"><span class="attribute">jffs2_scripts</span>=1</span><br></pre></td></tr></table></figure>
 
@@ -395,7 +396,7 @@
 
 
 
-    <div id="comment" class="mdui-card mdui-p-a-2 mdui-m-b-5">
+    <div id="comment" class="mdui-card mdui-p-a-2 mdui-m-b-5" style="z-index: -1;">
       <div id="gitalk-container"></div>
 <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>

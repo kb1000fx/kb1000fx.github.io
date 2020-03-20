@@ -249,7 +249,7 @@
     </span>
     <span>
       <span class="iconfont icon-calendar-check"></span>
-      更新于:&nbsp;2020-03-09
+      更新于:&nbsp;2020-03-21
     </span>
     <span>
       <span class="iconfont icon-folder"></span>
@@ -320,6 +320,8 @@
   <div class="mdui-card-content mdui-typo mdui-p-x-4">
     <h1 id="联通光猫改桥接模式"><a href="#联通光猫改桥接模式" class="headerlink" title="联通光猫改桥接模式"></a>联通光猫改桥接模式</h1><h2 id="管理员登录页面与管理员密码"><a href="#管理员登录页面与管理员密码" class="headerlink" title="管理员登录页面与管理员密码"></a>管理员登录页面与管理员密码</h2><p>管理员登录页面一般不固定，可能会在<code>192.168.1.1</code>上直接列出管理员账户，如果没有直接显示可以尝试<code>192.168.1.1/login.htm</code> 、 <code>192.168.1.1/cu.htm</code>等页面。</p>
 <p>联通光猫的超级密码一般比较固定，已验证多地的默认密码均为：<code>CUAdmin</code></p>
+<a id="more"></a>
+
 <h2 id="桥接步骤"><a href="#桥接步骤" class="headerlink" title="桥接步骤"></a>桥接步骤</h2><p><img src="/images/2023/OM-bridge.webp" alt="OM-bridge"></p>
 <p>登录光猫的管理界面，在已有连接中选择<code>INTERNET</code>一项(全称会和图中的不一样)，记录下其中的<code>VLanID</code>，通常情况下连接名称后的数字也是<code>VLanID</code>。</p>
 <p>桥接后需要在路由器或电脑上输入宽带账号和密码来拨号，如果记不清了可以找到含有账号信息的页面(如：<a href="http://192.168.1.1/Rapid.htm)，查看网页源代码并从中找到未加密的密码。" target="_blank" rel="noopener">http://192.168.1.1/Rapid.htm)，查看网页源代码并从中找到未加密的密码。</a></p>
@@ -398,7 +400,7 @@
 
 
 
-    <div id="comment" class="mdui-card mdui-p-a-2 mdui-m-b-5">
+    <div id="comment" class="mdui-card mdui-p-a-2 mdui-m-b-5" style="z-index: -1;">
       <div id="gitalk-container"></div>
 <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>

@@ -3,7 +3,7 @@
   <entry>
     <title>如何使用加农炮将特朗普发射至太阳上</title>
     <url>/t-1436/</url>
-    <content><![CDATA[<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>特朗普曾表示，若道琼斯指数暴跌1000点，时任总统应被塞进加农炮射到太阳上。而最近美股动荡，一周之内多次熔断，特朗普终于实现了他曾立下的flag。<br>那么就来帮大统领计算一下要如何才能用加农炮将他自己发射到太阳上。</p>
+    <content><![CDATA[<p>特朗普曾表示，若道琼斯指数暴跌1000点，时任总统应被塞进加农炮射到太阳上。而最近美股动荡，一周之内多次熔断，特朗普终于实现了他曾立下的flag。那么就来帮大统领计算一下要如何才能用加农炮将他自己发射到太阳上。</p>
 <a id="more"></a>
 <h1 id="发射所需的炮口速度"><a href="#发射所需的炮口速度" class="headerlink" title="发射所需的炮口速度"></a>发射所需的炮口速度</h1><p>第一步先计算要以多大的速度飞出才能让大统领登陆太阳。</p>
 <p>首先以太阳为参考系，由特朗普绕太阳椭圆运动过程中近日点、远日点的机械能守恒可得：<br>$$<br>\frac{1}{2}m{v_2}^2-\frac{GM_Sm}{R_{max}}=\frac{1}{2}m{v_3}^{2}-\frac{GM_Sm}{R_{min}} \tag{I}<br>$$</p>
@@ -32,11 +32,11 @@
   <entry>
     <title>酒精与84消毒液混用是否会中毒的分析</title>
     <url>/t-58768/</url>
-    <content><![CDATA[<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>最近网络上流传着酒精与84消毒液混用中毒的传言，在此讨论一下二者混用是否会使人中毒。</p>
-<p>首先先放上结论：酒精与84消毒液混合后会降低消毒效果，但<strong>不会使人中毒</strong>，分析过程如下。</p>
+    <content><![CDATA[<p>最近网络上流传着酒精与84消毒液混用中毒的传言，在此讨论一下二者混用是否会使人中毒。<br>首先先放上结论：酒精与84消毒液混合后会降低消毒效果，但<strong>不会使人中毒</strong>，分析过程如下。</p>
+<a id="more"></a>
 <h1 id="分析过程"><a href="#分析过程" class="headerlink" title="分析过程"></a>分析过程</h1><h2 id="84消毒液中自身存在的平衡"><a href="#84消毒液中自身存在的平衡" class="headerlink" title="84消毒液中自身存在的平衡"></a>84消毒液中自身存在的平衡</h2><p>84消毒液中，自身存在以下三个平衡：</p>
 <p>$$\ce{ClO^- + H2O &lt;=&gt; HClO + OH^-} \tag{I}$$<br>$$\ce{2ClO^- \xlongequal{h\nu\text{ or heat}} O2 ^ + 2Cl^-} \tag{II}$$<br>$$\ce{HClO + H^+ + Cl^- &lt;=&gt; Cl2(aq) + H2O} \tag{III}$$</p>
-<a id="more"></a>
+<!--more-->
 <p>由于84消毒液中含有一定氢氧化钠，溶液为碱性。且由于日常生活中的84消毒液都需进行稀释后再使用，次氯酸钠浓度较低。因此$(\text{I})(\text{II})(\text{III})$的正向反应均收到抑制。<br>另一方面由于氯气的溶解度较大，即使产生了极微量的氯气也会溶解进溶液而不会逸出。因此84消毒液本身不会产生有毒气体使人中毒。</p>
 <h2 id="酒精与84消毒液混合后可能发生的反应"><a href="#酒精与84消毒液混合后可能发生的反应" class="headerlink" title="酒精与84消毒液混合后可能发生的反应"></a>酒精与84消毒液混合后可能发生的反应</h2><p>酒精与84消毒液的混合溶液中，可能发生以下反应：</p>
 <div class="mermaid">
@@ -82,10 +82,9 @@
   <entry>
     <title>Meadow主题使用说明</title>
     <url>/t-4072/</url>
-    <content><![CDATA[<h2 id="Meadow主题的中文帮助文档已迁移至hexo-theme-meadow，本文将不再继续更新。"><a href="#Meadow主题的中文帮助文档已迁移至hexo-theme-meadow，本文将不再继续更新。" class="headerlink" title="Meadow主题的中文帮助文档已迁移至hexo-theme-meadow，本文将不再继续更新。"></a>Meadow主题的中文帮助文档已迁移至<a href="https://kb1000fx.github.io/hexo-theme-meadow/#/zh-CN/" target="_blank" rel="noopener">hexo-theme-meadow</a>，本文将不再继续更新。</h2><hr>
-<h1 id="Meadow简介"><a href="#Meadow简介" class="headerlink" title="Meadow简介"></a>Meadow简介</h1><p><img src="https://img.shields.io/badge/Hexo-3.0+-blue" alt="Hexo"> <img src="https://img.shields.io/badge/node.js-6.0-brightgreen" alt="Node.JS"></p>
-<p>Meadow 是一款基于MDUI开发的，符合Material Designed的Hexo主题。<br><a href="https://garybear.cn/">Demo</a><br><a href="https://github.com/kb1000fx/hexo-theme-meadow" target="_blank" rel="noopener">Github</a></p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p><strong>1. 切换至Hexo根目录</strong></p>
+    <content><![CDATA[<p><strong>Meadow主题的中文帮助文档已迁移至<a href="https://kb1000fx.github.io/hexo-theme-meadow/#/zh-CN/" target="_blank" rel="noopener">hexo-theme-meadow</a>，本文将不再继续更新。</strong><br><img src="https://img.shields.io/badge/Hexo-3.0+-blue" alt="Hexo"> <img src="https://img.shields.io/badge/node.js-6.0-brightgreen" alt="Node.JS"><br>Meadow 是一款基于MDUI开发的，符合Material Designed的Hexo主题。<br><a href="https://garybear.cn/">Demo</a><br><a href="https://github.com/kb1000fx/hexo-theme-meadow" target="_blank" rel="noopener">Github</a></p>
+<a id="more"></a>
+<h1 id="开始使用"><a href="#开始使用" class="headerlink" title="开始使用"></a>开始使用</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p><strong>1. 切换至Hexo根目录</strong></p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> hexo</span></span><br></pre></td></tr></table></figure>
 <p><strong>2.从GitHub获取主题</strong><br>下载最新的master分支</p>
 <figure class="highlight crmsh"><table><tr><td class="code"><pre><span class="line">$ git <span class="keyword">clone</span> <span class="title">https</span>://github.com/kb1000fx/Meadow</span><br></pre></td></tr></table></figure>
@@ -196,7 +195,7 @@
   <entry>
     <title>只狼Steam存档替换方法</title>
     <url>/t-55399/</url>
-    <content><![CDATA[<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>Steam版的只狼由于存档中含有与账号相关的信息，无法直接复制文件来进行存档替换。如果需要使用他人存档或进行盗版存档转正，需要先对其进行修改。本文需要用到16进制编辑器，这里使用的是<a href="https://mh-nexus.de/downloads/HxDSetup.zip" target="_blank" rel="noopener">HXD</a>。</p>
+    <content><![CDATA[<p>Steam版的只狼由于存档中含有与账号相关的信息，无法直接复制文件来进行存档替换。如果需要使用他人存档或进行盗版存档转正，需要先对其进行修改。本文需要用到16进制编辑器，这里使用的是<a href="https://mh-nexus.de/downloads/HxDSetup.zip" target="_blank" rel="noopener">HXD</a>。</p>
 <a id="more"></a>
 <h1 id="修改步骤"><a href="#修改步骤" class="headerlink" title="修改步骤"></a>修改步骤</h1><p>存档文件位置：<code>%appdata%\Sekiro\{SteamID}\S0000.sl2</code></p>
 <p>具体步骤如下：</p>
@@ -234,7 +233,8 @@
   <entry>
     <title>只狼图片整理收藏</title>
     <url>/t-55260/</url>
-    <content><![CDATA[<h1 id="提示：本文含有大量图片，请谨慎进入"><a href="#提示：本文含有大量图片，请谨慎进入" class="headerlink" title="提示：本文含有大量图片，请谨慎进入"></a>提示：本文含有大量图片，请谨慎进入</h1><a id="more"></a>
+    <content><![CDATA[<p><strong>提示：本文含有大量图片，请谨慎进入</strong></p>
+<a id="more"></a>
 
 <p><img src="https://steamuserimages-a.akamaihd.net/ugc/998017573087720434/CEEEC56E2C72A7D696D6125BC220238773E1B760/" alt=""></p>
 <p><img src="https://steamuserimages-a.akamaihd.net/ugc/791986132478111458/3D7A34AEE5F92CEEFD7D072FC6DEE186736D78D8/" alt=""></p>
@@ -264,6 +264,7 @@
 <p>使用SSH登录到路由器，输入以下命令开启JFFS分区</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nvram <span class="built_in">set</span> jffs2_on=1</span><br><span class="line">nvram <span class="built_in">set</span> jffs2_enable=1</span><br><span class="line">nvram <span class="built_in">set</span> jffs2_format=1</span><br><span class="line">nvram <span class="built_in">set</span> jffs2_scripts=1</span><br><span class="line">nvram commit</span><br></pre></td></tr></table></figure>
 <p>最后使用<code>reboot</code>重启生效</p>
+<a id="more"></a>
 <p>最后使用命令<code>nvram show | grep &quot;jffs&quot;</code>来检验是否启用了JFFS分区，显示如下信息即为开启成功。</p>
 <figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">size: 26089 bytes (35351 left)</span><br><span class="line"><span class="attribute">jffs2_enable</span>=1</span><br><span class="line"><span class="attribute">jffs2_format</span>=0</span><br><span class="line"><span class="attribute">jffs2_scripts</span>=1</span><br></pre></td></tr></table></figure>
 
@@ -305,7 +306,8 @@
   <entry>
     <title>Hexo下插入视频的响应式布局</title>
     <url>/t-26113/</url>
-    <content><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>中午收到Google Search Console的一封邮件，提醒我网站存在移动端的错误。仔细检查后发现是一篇插入了B站视频的文章，在手机端浏览时会出现视频超出页面范围的问题。<br>对于网页中插入视频，通常视频网站提供的都是指定宽高度的iframe链接，由于本站采用了响应式布局，固定的视频尺寸就会和网页整体布局产生冲突。（Youtube链接虽然提供了固定的宽高，但仍会自动匹配页面布局）<br>使用<code>max-width=100%</code>的方法虽然可以解决手机等移动端超出页面的问题，但对于一些分辨率较低的视频，在PC端又会显得太小，与页面不协调。<br>因此最佳的方案就是通过修改CSS的方法使插入的视频也具备响应式的功能。</p>
+    <content><![CDATA[<p>中午收到Google Search Console的一封邮件，提醒我网站存在移动端的错误。仔细检查后发现是一篇插入了B站视频的文章，在手机端浏览时会出现视频超出页面范围的问题。<br>对于网页中插入视频，通常视频网站提供的都是指定宽高度的iframe链接，由于本站采用了响应式布局，固定的视频尺寸就会和网页整体布局产生冲突。（Youtube链接虽然提供了固定的宽高，但仍会自动匹配页面布局）<br>使用<strong>max-width=100%</strong>的方法虽然可以解决手机等移动端超出页面的问题，但对于一些分辨率较低的视频，在PC端又会显得太小，与页面不协调。<br>因此最佳的方案就是通过修改CSS的方法使插入的视频也具备响应式的功能。</p>
+<a id="more"></a>
 <h2 id="方法和步骤"><a href="#方法和步骤" class="headerlink" title="方法和步骤"></a>方法和步骤</h2><h3 id="修改CSS"><a href="#修改CSS" class="headerlink" title="修改CSS"></a>修改CSS</h3><p>首先在 <code>~\themes\next\source\css\main.styl</code> 中插入下面一行代码以导入自定义CSS</p>
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@import</span> <span class="string">"_custom/iframe"</span>;</span><br></pre></td></tr></table></figure>
 
@@ -376,7 +378,8 @@
   <entry>
     <title>Hexo的Next主题下接入Google AdSense广告</title>
     <url>/t-46101/</url>
-    <content><![CDATA[<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>使用Google Adsense也好几个月了，先以 <strong><em>Next</em></strong> 主题为例，对Hexo下Google Adsense的使用方法做个记录，方便以后更改广告布局。</p>
+    <content><![CDATA[<p>使用Google Adsense也好几个月了，先以 <strong><em>Next</em></strong> 主题为例，对Hexo下Google Adsense的使用方法做个记录，方便以后更改广告布局。</p>
+<a id="more"></a>
 <h1 id="自动广告"><a href="#自动广告" class="headerlink" title="自动广告"></a>自动广告</h1><p>首先建立目录<code>~\themes\next\layout\google_adsense</code>。</p>
 <p>在此目录下建立文件<code>auto_ads.swig</code>，内容如下。其中Publisher ID可以在Google Adsense的账号信息里找到。</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">data-ad-client</span>=<span class="string">"你自己的Publisher ID"</span> <span class="attr">async</span> <span class="attr">src</span>=<span class="string">"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -419,10 +422,11 @@
   <entry>
     <title>达肯方程的推导过程</title>
     <url>/t-38683/</url>
-    <content><![CDATA[<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>达肯方程描述柯肯达尔效应的一个方程，是将物质的扩散和对流全部按照扩散的形式来表示，其思路类似于全电流定律。</p>
+    <content><![CDATA[<p>达肯方程描述柯肯达尔效应的一个方程，是将物质的扩散和对流全部按照扩散的形式来表示，其思路类似于全电流定律。下面是其推导过程：</p>
+<a id="more"></a>
 <h1 id="推导过程"><a href="#推导过程" class="headerlink" title="推导过程"></a>推导过程</h1><p>假设存在一个AB两组分组成的一维扩散偶，考虑对流的因素<br>根据扩散第一定律，对于成分A</p>
 <p>$$<br>J_A=J’_A + C_A \cdot v = -D_A \cdot \frac{\partial C_A}{\partial x} + C_A \cdot v  \tag{1}<br>$$</p>
-<a id="more"></a>
+<!--more-->
 <p>取其中一个微元体，由物质守恒可得</p>
 <p>$$<br>\iint_S - \vec{J} \cdot d\vec{S} = \iint_{S} - \left ( - \vec{D}_A \cdot \frac{\partial C_A}{\partial x} + C_A \cdot \vec{v} \right ) \cdot d\vec{S} = \iiint_V \frac{\partial C_A}{\partial t} \cdot dV \tag{2}<br>$$</p>
 <p>由高斯定理可得</p>
@@ -456,14 +460,14 @@
 <li>订阅合集 <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1871473594" target="_blank" rel="noopener">被删除的地图</a></li>
 <li>在Steam中右键CSGO依次选择属性-本地文件-浏览本地文件</li>
 <li>在打开的目录中，将<br><code>~\csgo\maps\workshop\1301364536\cs_office.bsp</code>、<br><code>~\csgo\maps\workshop\1561348377\de_aztec.bsp</code>、<br><code>~\csgo\maps\workshop\1561313710\de_dust.bsp</code>、<br><code>~\csgo\maps\workshop\416884493\de_shorttrain.bsp</code><br>四个文件复制到<code>~\map\</code>下 (新版的Office地图请提前备份)</li>
-<li>订阅合集 <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1872246348" target="_blank" rel="noopener">CSGO全成就地图集(2019.09)</a></li>
-</ul>
-<h1 id="成就指南"><a href="#成就指南" class="headerlink" title="成就指南"></a>成就指南</h1><p>本文按Steam成就内的顺序排列。<br>为方便查询，建议使用电脑浏览。<br>可以查看左侧的目录，或使用<code>Ctrl+F</code>快速查找。</p>
-<h2 id="来人安放炸弹啊"><a href="#来人安放炸弹啊" class="headerlink" title="来人安放炸弹啊"></a>来人安放炸弹啊</h2><table>
+<li>订阅合集 <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1872246348" target="_blank" rel="noopener">CSGO全成就地图集(2019.09)</a><a id="more"></a>
+<h1 id="成就指南"><a href="#成就指南" class="headerlink" title="成就指南"></a>成就指南</h1>本文按Steam成就内的顺序排列。<br>为方便查询，建议使用电脑浏览。<br>可以查看左侧的目录，或使用<code>Ctrl+F</code>快速查找。<h2 id="来人安放炸弹啊"><a href="#来人安放炸弹啊" class="headerlink" title="来人安放炸弹啊"></a>来人安放炸弹啊</h2><table>
 <tr><td> <img src="https://media.st.dl.bscstorage.net/steamcommunity/public/images/apps/730/9f60ea3c56b4ab248ab598bbd62568b953116301.jpg"></img></td><td> 来人安放炸弹啊</td><td>通过安放并成功引爆炸弹来赢得—回合胜利 </td></tr>
 </table>
 这个应该没有什么难道，随便一个图安好包等炸就行了
 
+</li>
+</ul>
 <h2 id="轰隆轰隆"><a href="#轰隆轰隆" class="headerlink" title="轰隆轰隆"></a>轰隆轰隆</h2><table>
 <tr><td> <img src="https://media.st.dl.bscstorage.net/steamcommunity/public/images/apps/730/325ccbd68e599083c1597fd90dc6d4265d1ca3b4.jpg"></img></td><td> 轰隆轰隆</td><td>累计安放 100 枚炸弹 </td></tr>
 </table>
@@ -1415,6 +1419,7 @@
 <li>在浏览器地址栏中输入 <code>steam://open/console</code></li>
 </ul>
 <h2 id="启动项总结"><a href="#启动项总结" class="headerlink" title="启动项总结"></a>启动项总结</h2><p>除<code>-console</code>和<code>-dev</code>，Steam客户端还可以加入其它启动项，对应内容如下。</p>
+<a id="more"></a>
 <p><strong>本段翻译自Valve官方文档</strong></p>
 <p>参考文档：<a href="https://developer.valvesoftware.com/wiki/Command_Line_Options#Steam_.28Windows.29" target="_blank" rel="noopener">Steam Wiki</a></p>
 <table>
@@ -1713,7 +1718,9 @@ CEF即Chromium Embedded Framework，Steam使用CEF作为其内置的Web浏览器
   <entry>
     <title>农历闰月杂谈</title>
     <url>/t-16170/</url>
-    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>大概一周之前，和朋友聊天时谈论到了闰月的问题，今天正好在知乎上回答了一个春分点移动的问题，就将这些内容整合一下，简单地做个记录。</p>
+    <content><![CDATA[<p>大概一周之前，和朋友聊天时谈论到了闰月的问题，今天正好在知乎上回答了一个春分点移动的问题，就将这些内容整合一下，简单地做个记录。</p>
+<a id="more"></a>
+
 <h1 id="产生闰月的原因"><a href="#产生闰月的原因" class="headerlink" title="产生闰月的原因"></a>产生闰月的原因</h1><p>历法是以一定参考物来记录时间的方式，按照其参考的标准可分为：阳历、阴历、阴阳历三种 (注意这里的阴历指的不是传统的农历而是以月亮为参考的历法，农历应该算作阴阳历)。</p>
 <p>阳历是以太阳经过春分点的周期（回归年）为基础的，通常将其定义为一年，在这种定义下一个月只是对一年时间的等长 (其实公历中并不是完全等长) 划分，并没有实际的意义。典型的阳历就是现在使用的公历，也就是格里高利历。</p>
 <p>阴历是以月相的变化周期（朔望月）为基础的，通常将其定义为一个月。在这种情况下一年只是一个月的整数倍，也没有实际代表的意义。典型的阴历就是伊斯兰历。</p>
@@ -1737,8 +1744,8 @@ CEF即Chromium Embedded Framework，Steam使用CEF作为其内置的Web浏览器
   <entry>
     <title>拼音中的一些读音问题</title>
     <url>/t-14446/</url>
-    <content><![CDATA[<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>之前和朋友讨论到了拼音中的一些读音问题，在此将问题与答案整理记录一下。</p>
-<p>其实这些问题答案都在《汉语拼音方案》有相关的解释，汉语拼音方案原文可以参考此链接： <a href="http://www.moe.gov.cn/ewebeditor/uploadfile/2015/03/02/20150302165814246.pdf" target="_blank" rel="noopener">中华人民共和国教育部-汉语拼音方案</a></p>
+    <content><![CDATA[<p>之前和朋友讨论到了拼音中的一些读音问题，在此将问题与答案整理记录一下。<br>其实这些问题答案都在《汉语拼音方案》有相关的解释，汉语拼音方案原文可以参考此链接： <a href="http://www.moe.gov.cn/ewebeditor/uploadfile/2015/03/02/20150302165814246.pdf" target="_blank" rel="noopener">中华人民共和国教育部-汉语拼音方案</a></p>
+<a id="more"></a>
 <h1 id="为何iu的发音与i和u连读不同"><a href="#为何iu的发音与i和u连读不同" class="headerlink" title="为何iu的发音与i和u连读不同"></a>为何iu的发音与i和u连读不同</h1><p>通常使用的韵母<strong>iu</strong>在汉语拼音方案韵母表中的完整写法应该是<strong>iou</strong>，根据其注音符号 <strong>∣ㄡ</strong> 也能感受到iu应该是<strong>i</strong>和<strong>ou</strong>的连读。</p>
 <p>根据韵母说明中的第五条：</p>
 <blockquote>
@@ -1786,9 +1793,10 @@ CEF即Chromium Embedded Framework，Steam使用CEF作为其内置的Web浏览器
   <entry>
     <title>手枪单动双动区别</title>
     <url>/t-12400/</url>
-    <content><![CDATA[<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p><strong>开了一个多星期的坑，既然有人看那就填上吧。</strong></p>
+    <content><![CDATA[<p><strong>开了一个多星期的坑，既然有人看那就填上吧。</strong></p>
 <p>这些视频和图片原本是之前给人解释游戏里左轮连射时收集的资料，正好现在扩展一下整理成一篇文章。</p>
 <p>本文所插入的视频来源均为Youtube<br>左轮手枪部分的两个动图来自Youtube用户C&amp;Rsenal<br>半自动手枪部分的动图来自Steam游戏World of Guns，<a href="https://store.steampowered.com/app/262410/" target="_blank" rel="noopener">Steam地址</a></p>
+<a id="more"></a>
 <p><strong>本文内容较多，PC端浏览时可使用左侧目录快速选择</strong></p>
 <h1 id="左轮手枪中的单动与双动"><a href="#左轮手枪中的单动与双动" class="headerlink" title="左轮手枪中的单动与双动"></a>左轮手枪中的单动与双动</h1><p>现代意义上的转轮手枪由美国人塞缪尔·柯尔特(Samuel Colt)发明，因其换弹时弹仓向左甩出常称为左轮手枪。左轮手枪具有结构简单可靠，便于维护等优点，但同时也有气密性差等明显的缺点。<br>对于左轮手枪和柯尔特有一个很经典的评价：<code>上帝创造了人类，塞缪尔·柯尔特让人人平等(God created men, Samuel Colt made them equal)</code><br>左轮手枪按扳机结构可以分为单动和双动两种。其中单动左轮扳机行程短容易击发且精度高，但操作麻烦。双动左轮与其相反，操作简单但由于需要靠扳机的力量完成一系列操作所以会影响到射击精度。</p>
 <h2 id="单动左轮-Single-Action-Revolvers"><a href="#单动左轮-Single-Action-Revolvers" class="headerlink" title="单动左轮 (Single Action Revolvers)"></a>单动左轮 (Single Action Revolvers)</h2><p>单动式左轮就是电影里西部牛仔常用的那种左轮手枪。<br>单动式左轮在扣动扳机前，需要用拇指或另一只手来先把击锤扳倒，联动机构会同时让转轮旋转，将下一个弹仓对准击锤和枪管。然后食指扣动扳机，机械装置会释放击锤，让它从扳倒的位置向前运动从而击发子弹。因为扣动扳机只完成了释放击锤这一个动作，所以被称为“单动式”。</p>
@@ -1942,6 +1950,8 @@ CEF即Chromium Embedded Framework，Steam使用CEF作为其内置的Web浏览器
     <url>/t-2023/</url>
     <content><![CDATA[<h1 id="联通光猫改桥接模式"><a href="#联通光猫改桥接模式" class="headerlink" title="联通光猫改桥接模式"></a>联通光猫改桥接模式</h1><h2 id="管理员登录页面与管理员密码"><a href="#管理员登录页面与管理员密码" class="headerlink" title="管理员登录页面与管理员密码"></a>管理员登录页面与管理员密码</h2><p>管理员登录页面一般不固定，可能会在<code>192.168.1.1</code>上直接列出管理员账户，如果没有直接显示可以尝试<code>192.168.1.1/login.htm</code> 、 <code>192.168.1.1/cu.htm</code>等页面。</p>
 <p>联通光猫的超级密码一般比较固定，已验证多地的默认密码均为：<code>CUAdmin</code></p>
+<a id="more"></a>
+
 <h2 id="桥接步骤"><a href="#桥接步骤" class="headerlink" title="桥接步骤"></a>桥接步骤</h2><p><img src="/images/2023/OM-bridge.webp" alt="OM-bridge"></p>
 <p>登录光猫的管理界面，在已有连接中选择<code>INTERNET</code>一项(全称会和图中的不一样)，记录下其中的<code>VLanID</code>，通常情况下连接名称后的数字也是<code>VLanID</code>。</p>
 <p>桥接后需要在路由器或电脑上输入宽带账号和密码来拨号，如果记不清了可以找到含有账号信息的页面(如：<a href="http://192.168.1.1/Rapid.htm)，查看网页源代码并从中找到未加密的密码。" target="_blank" rel="noopener">http://192.168.1.1/Rapid.htm)，查看网页源代码并从中找到未加密的密码。</a></p>
@@ -1975,12 +1985,13 @@ CEF即Chromium Embedded Framework，Steam使用CEF作为其内置的Web浏览器
   <entry>
     <title>麦克斯韦方程组的推导及形式转换</title>
     <url>/t-44074/</url>
-    <content><![CDATA[<h1 id="麦克斯韦方程组积分形式的推导和证明"><a href="#麦克斯韦方程组积分形式的推导和证明" class="headerlink" title="麦克斯韦方程组积分形式的推导和证明"></a>麦克斯韦方程组积分形式的推导和证明</h1><p>麦克斯韦方程组可以算得上是物理学史上最优美的一组方程了，就像镇楼图里说的那样，因为麦克斯韦方程组，所以才有了光。</p>
-<h2 id="高斯定律"><a href="#高斯定律" class="headerlink" title="高斯定律"></a>高斯定律</h2><p><strong>高斯定律表示任意曲面的电通量之和等于其中包含的电荷数，证明了电场是有源场</strong></p>
+    <content><![CDATA[<p>麦克斯韦方程组可以算得上是物理学史上最优美的一组方程了，就像镇楼图里说的那样，因为麦克斯韦方程组，所以才有了光。</p>
+<a id="more"></a>
+<h1 id="麦克斯韦方程组积分形式的推导和证明"><a href="#麦克斯韦方程组积分形式的推导和证明" class="headerlink" title="麦克斯韦方程组积分形式的推导和证明"></a>麦克斯韦方程组积分形式的推导和证明</h1><h2 id="高斯定律"><a href="#高斯定律" class="headerlink" title="高斯定律"></a>高斯定律</h2><p><strong>高斯定律表示任意曲面的电通量之和等于其中包含的电荷数，证明了电场是有源场</strong></p>
 <p><strong>推导方式如下：</strong></p>
 <p>根据库仑定律及电场强度的定义，空间内某一点出电场强度为：</p>
 <p>$$<br>\vec{E} = \frac{q}{4 \pi \varepsilon \cdot r^2} \space \vec{e}_r<br>$$</p>
-<a id="more"></a>
+<!--more-->
 <p>在空间内任取一封闭曲面，在曲面内任一点处放置一点电荷$q$，曲面电通量的微元为：</p>
 <p>$$<br>d \Phi =\vec{E} \cdot d \vec{S} = \frac{q}{4 \pi \varepsilon \cdot r^2} \space dS \space cos \theta = \frac{q}{4 \pi \varepsilon} \cdot\frac{d S^{‘}}{ r^2}<br>$$</p>
 <p>电通量之和为：</p>
@@ -2063,7 +2074,8 @@ CEF即Chromium Embedded Framework，Steam使用CEF作为其内置的Web浏览器
   <entry>
     <title>芳香性与Hückel规则</title>
     <url>/t-37139/</url>
-    <content><![CDATA[<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>之前在群里看到了镇楼图，一下子就被惊艳到了（<del>野兽先辈化学说</del>）。<br>在这里简单地介绍一下这个表情包相关的内容，也是回顾一下扔下很久的有机知识。</p>
+    <content><![CDATA[<p>之前在群里看到了镇楼图，一下子就被惊艳到了（<del>野兽先辈化学说</del>）。<br>在这里简单地介绍一下这个表情包相关的内容，也是回顾一下扔下很久的有机知识。</p>
+<a id="more"></a>
 <h1 id="芳香性"><a href="#芳香性" class="headerlink" title="芳香性"></a>芳香性</h1><p>芳香性是具有环状共轭体系的芳烃区别于脂肪烃的一种性质，表现为易取代（亲电取代）、难加成、难氧化。</p>
 <p>芳香性与物质的气味无关，比如镇楼图中的3-甲基吲哚气味就实在称不上芳香。</p>
 <h1 id="Huckel规则"><a href="#Huckel规则" class="headerlink" title="Hückel规则"></a>Hückel规则</h1><p>Hückel规则是判断物质是否有芳香性的依据，其规则是：</p>
@@ -2088,6 +2100,7 @@ CEF即Chromium Embedded Framework，Steam使用CEF作为其内置的Web浏览器
     <title>解除GTA5名钻假日赌场的锁区限制</title>
     <url>/t-54751/</url>
     <content><![CDATA[<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>GTA5在2019年7月23日新更新的DLC名钻假日赌场。由于R星对亚洲ip进行了限制，所以裸连或是使用香港、韩国等节点的加速器均无法玩到赌场相关内容。在这里我们使用<code>Proxifier</code>对GTA进行代理，从而解锁限制。</p>
+<a id="more"></a>
 <h1 id="安装与激活"><a href="#安装与激活" class="headerlink" title="安装与激活"></a>安装与激活</h1><h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p>下载地址：<a href="https://www.proxifier.com/download/" target="_blank" rel="noopener">官网</a>；<a href="../download/ProxifierSetup.zip">备份</a></p>
 <h2 id="激活"><a href="#激活" class="headerlink" title="激活"></a>激活</h2><p>根据下载的版本选择对应的激活码</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//Portable Edition</span></span><br><span class="line">L6Z8A-XY2J4-BTZ3P-ZZ7DF-A2Q9C</span><br><span class="line"></span><br><span class="line"><span class="comment">//Standard Edition </span></span><br><span class="line"><span class="number">5</span>EZ8G-C3WL5-B56YG-SCXM9<span class="number">-6</span>QZAP</span><br><span class="line"></span><br><span class="line"><span class="comment">//MAC</span></span><br><span class="line">P427L<span class="number">-9</span>Y552<span class="number">-5433E-8</span>DSR3<span class="number">-58</span>Z68</span><br></pre></td></tr></table></figure>
@@ -2112,6 +2125,7 @@ CEF即Chromium Embedded Framework，Steam使用CEF作为其内置的Web浏览器
 <p>全球成就统计：<a href="https://steamcommunity.com/stats/222880/achievements/" target="_blank" rel="noopener">https://steamcommunity.com/stats/222880/achievements/</a></p>
 <p>总成就数：100  </p>
 <p>总的来说叛乱的成就比较简单，比他的下一代耻辱日简单多了，大部分成就都是突突突刷刷刷。但有一些成就需要特别的技♂巧<br>最初只是想写一下最后两个隐藏成就的攻略，结果一不小心写了个全篇嘿嘿嘿·</p>
+<a id="more"></a>
 <h1 id="数量型成就"><a href="#数量型成就" class="headerlink" title="数量型成就"></a>数量型成就</h1><p>数量型成就一般的比较简单，只需要突突突、刷刷刷即可，在这里仅列出各成就所需的条件。</p>
 <h2 id="首杀成就-First-Blood-4个"><a href="#首杀成就-First-Blood-4个" class="headerlink" title="首杀成就 First Blood (4个)"></a>首杀成就 First Blood (4个)</h2><table>
 <tr><td> <img src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/222880/d114ac53b7d2c8ed244efb72e670195403b6ad14.jpg"></img></td><td> First Blood</td><td>PVP模式下，回合中首个杀敌 </td></tr>
@@ -2334,6 +2348,7 @@ CEF即Chromium Embedded Framework，Steam使用CEF作为其内置的Web浏览器
     <url>/t-109/</url>
     <content><![CDATA[<p><a href="https://github.com/kb1000fx/Insurgency-Dedicated-Server-Setup" target="_blank" rel="noopener">Github地址</a></p>
 <h1 id="测试环境"><a href="#测试环境" class="headerlink" title="测试环境"></a>测试环境</h1><p>Digital Ocean SFO2<br>1 vCPU<br>1 GB Memory<br>25 GB Disk<br>Ubuntu 18.04.1 x64 </p>
+<a id="more"></a>
 <h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><figure class="highlight"><table><tr><td class="code"><pre><span class="line">wget https://raw.githubusercontent.com/kb1000fx/Insurgency-Dedicated-Server-Setup/master/install_insurgency.sh --no-check-certificate</span><br><span class="line">chmod +x install_insurgency.sh</span><br><span class="line">./install_insurgency.sh</span><br></pre></td></tr></table></figure>
 <h1 id="配置-server-cfg-文件"><a href="#配置-server-cfg-文件" class="headerlink" title="配置 server.cfg 文件"></a>配置 server.cfg 文件</h1><p>安装时已自动下载了默认文件.<br>编辑  <code>./insurgency/cfg/server.cfg</code> 来改变服务器设置.  </p>
 <p>更多内容参见：<br><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=854506744" target="_blank" rel="noopener">https://steamcommunity.com/sharedfiles/filedetails/?id=854506744</a><br><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=305605313" target="_blank" rel="noopener">https://steamcommunity.com/sharedfiles/filedetails/?id=305605313</a>  </p>
@@ -2354,6 +2369,7 @@ CEF即Chromium Embedded Framework，Steam使用CEF作为其内置的Web浏览器
 <p><strong>华硕官方固件在3.0.0.4.382.50470版本之后已支持Unicode，建议升级至最新固件</strong></p>
 <hr>
 <p>登录<a href="http://router.asus.com/" target="_blank" rel="noopener">Asus路由器管理页面</a>，在无线网络配置页面按F12打开浏览器控制台。输入以下内容：</p>
+<a id="more"></a>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">validator.stringSSID = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'fake stringSSID'</span>, <span class="built_in">arguments</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p>确认后即可SSID栏中输入中文和其他Unicode字符</p>
 <p><strong>注意：输入后网页里可能会显示为空白SSID，实际SSID已修改成功</strong></p>
@@ -2376,6 +2392,7 @@ CEF即Chromium Embedded Framework，Steam使用CEF作为其内置的Web浏览器
 <h2 id="2018-07"><a href="#2018-07" class="headerlink" title="2018.07"></a>2018.07</h2><p><strong>新加Office16激活功能</strong></p>
 <hr>
 <p>脚本下载地址：<a href="../download/KMS.zip">本站下载</a>，<a href="https://github.com/kb1000fx/KMS-Client/" target="_blank" rel="noopener">Github下载</a></p>
+<a id="more"></a>
 <h1 id="Window激活"><a href="#Window激活" class="headerlink" title="Window激活"></a>Window激活</h1><h2 id="卸载当前密钥"><a href="#卸载当前密钥" class="headerlink" title="卸载当前密钥"></a>卸载当前密钥</h2><pre><code>slmgr.vbs /upk</code></pre><h2 id="安装新密钥"><a href="#安装新密钥" class="headerlink" title="安装新密钥"></a>安装新密钥</h2><pre><code>slmgr /ipk [gvlk key]</code></pre><h2 id="设置服务器地址"><a href="#设置服务器地址" class="headerlink" title="设置服务器地址"></a>设置服务器地址</h2><pre><code>slmgr /skms [Your IP or Domain]</code></pre><h2 id="激活"><a href="#激活" class="headerlink" title="激活"></a>激活</h2><pre><code>slmgr /ato</code></pre><h1 id="Office激活"><a href="#Office激活" class="headerlink" title="Office激活"></a>Office激活</h1><h2 id="设置新密钥"><a href="#设置新密钥" class="headerlink" title="设置新密钥"></a>设置新密钥</h2><p>KOL版可跳过 </p>
 <pre><code>cscript ospp.vbs /inpkey: [gvlk key]</code></pre><h2 id="进入Office目录"><a href="#进入Office目录" class="headerlink" title="进入Office目录"></a>进入Office目录</h2><p>路径依情况更改。<br>32 位默认一般为 C:\Program Files (x86)\Microsoft Office\Office16<br>64 位默认一般为 C:\Program Files\Microsoft Office\Office16<br>Office16 是 Office 2016，Office15 就是 Office 2013，Office14 就是 Office 2010。 </p>
 <pre><code>cd &quot;C:\Program Files (x86)\Microsoft Office\Office16&quot;</code></pre><h2 id="设置服务器地址："><a href="#设置服务器地址：" class="headerlink" title="设置服务器地址："></a>设置服务器地址：</h2><pre><code>cscript ospp.vbs /sethst:Your IP or Domain</code></pre><h2 id="激活-1"><a href="#激活-1" class="headerlink" title="激活"></a>激活</h2><pre><code>cscript ospp.vbs /act</code></pre><h1 id="Gvlk-Key及服务器地址"><a href="#Gvlk-Key及服务器地址" class="headerlink" title="Gvlk Key及服务器地址"></a>Gvlk Key及服务器地址</h1><p>新密钥形如：xxxxx-xxxxx-xxxxx-xxxxx-xxxxx，可在以下地址寻找符合自己版本的key。<br>+ Office 2016：<a href="https://technet.microsoft.com/zh-cn/library/dn385360(v=office.16).aspx" target="_blank" rel="noopener">https://technet.microsoft.com/zh-cn/library/dn385360(v=office.16).aspx</a> + Office 2013：<a href="https://technet.microsoft.com/ZH-CN/library/dn385360.aspx" target="_blank" rel="noopener">https://technet.microsoft.com/ZH-CN/library/dn385360.aspx</a> + Office 2010：<a href="https://technet.microsoft.com/ZH-CN/library/ee624355(v=office.14).aspx" target="_blank" rel="noopener">https://technet.microsoft.com/ZH-CN/library/ee624355(v=office.14).aspx</a> + Windows：<a href="https://docs.microsoft.com/zh-cn/windows-server/get-started/kmsclientkeys" target="_blank" rel="noopener">https://docs.microsoft.com/zh-cn/windows-server/get-started/kmsclientkeys</a> 服务器地址：kms.garybear.cn 若地址失效可留言联系。</p>
@@ -2449,8 +2466,9 @@ allow from all
   <entry>
     <title>LAMP下使用Certbot自动配置SSL证书</title>
     <url>/t-65310/</url>
-    <content><![CDATA[<h1 id="LAMP下使用Certbot自动配置SSL证书"><a href="#LAMP下使用Certbot自动配置SSL证书" class="headerlink" title="LAMP下使用Certbot自动配置SSL证书"></a>LAMP下使用Certbot自动配置SSL证书</h1><p>Let’s Encrypt是ISRG运营一个免费、开放，自动化的证书颁发机构，可以申请到期限90天的免费SSL证书（包括单域名、多域名和泛域名）。 Certbot是Let’s Encrypt官方提供的一款SSL自动安装程序，<a href="https://certbot.eff.org/" target="_blank" rel="noopener">官方网站</a> 。使用Certbot可以自动完成获取密钥、申请证书、安装证书等一系列繁琐的操作，也提供了自动证书续期的功能。使用Certbot自动配置SSL证书，也可以免去手动申请证书中添加TXT解析的步骤。</p>
-<p><img src="/images/65310/certbot-logo.webp" alt=""></p>
+    <content><![CDATA[<p>Let’s Encrypt是ISRG运营一个免费、开放，自动化的证书颁发机构，可以申请到期限90天的免费SSL证书（包括单域名、多域名和泛域名）。 Certbot是Let’s Encrypt官方提供的一款SSL自动安装程序，<a href="https://certbot.eff.org/" target="_blank" rel="noopener">官方网站</a> 。使用Certbot可以自动完成获取密钥、申请证书、安装证书等一系列繁琐的操作，也提供了自动证书续期的功能。使用Certbot自动配置SSL证书，也可以免去手动申请证书中添加TXT解析的步骤。</p>
+<a id="more"></a>
+
 <h2 id="安装Certbot客户端"><a href="#安装Certbot客户端" class="headerlink" title="安装Certbot客户端"></a>安装Certbot客户端</h2><h3 id="方法一-Packages-for-Debian"><a href="#方法一-Packages-for-Debian" class="headerlink" title="方法一 (Packages for Debian)"></a>方法一 (Packages for Debian)</h3><p>Ubuntu下可以直接用预编译好的安装包进行安装，步骤如下： </p>
 <pre><code>sudo apt-get update
 sudo apt-get install software-properties-common  
@@ -2482,14 +2500,14 @@ sudo rm /tmp/swapfile</code></pre><h3 id="Chrome下无法显示小绿锁"><a hre
   <entry>
     <title>Ubuntu16.04下的LAMP环境搭建</title>
     <url>/t-33478/</url>
-    <content><![CDATA[<h1 id="Ubuntu16-04下的LAMP环境搭建"><a href="#Ubuntu16-04下的LAMP环境搭建" class="headerlink" title="Ubuntu16.04下的LAMP环境搭建"></a>Ubuntu16.04下的LAMP环境搭建</h1><p><img src="/images/33478/apache.webp" alt="机智小蜗熊"></p>
-<h2 id="基本设置"><a href="#基本设置" class="headerlink" title="基本设置"></a>基本设置</h2><h3 id="1-开启root账号SSH登录"><a href="#1-开启root账号SSH登录" class="headerlink" title="1.开启root账号SSH登录"></a>1.开启root账号SSH登录</h3><p>腾讯云的Ubuntu默认账号是ubuntu，且无法以root身份远程登录，首先需要手动开启远程登录root账号并设置root密码。 </p>
+    <content><![CDATA[<h1 id="Ubuntu16-04下的LAMP环境搭建"><a href="#Ubuntu16-04下的LAMP环境搭建" class="headerlink" title="Ubuntu16.04下的LAMP环境搭建"></a>Ubuntu16.04下的LAMP环境搭建</h1><h2 id="基本设置"><a href="#基本设置" class="headerlink" title="基本设置"></a>基本设置</h2><h3 id="1-开启root账号SSH登录"><a href="#1-开启root账号SSH登录" class="headerlink" title="1.开启root账号SSH登录"></a>1.开启root账号SSH登录</h3><p>腾讯云的Ubuntu默认账号是ubuntu，且无法以root身份远程登录，首先需要手动开启远程登录root账号并设置root密码。 </p>
 <pre><code>vim /etc/ssh.sshd_config
 
 
 
 - PermitRootLogin prohibit-password
-+ PermitRootLogin yes</code></pre><h3 id="2-设置root密码"><a href="#2-设置root密码" class="headerlink" title="2.设置root密码"></a>2.设置root密码</h3><pre><code>sudo passwd</code></pre><h3 id="3-设置DNS"><a href="#3-设置DNS" class="headerlink" title="3.设置DNS"></a>3.设置DNS</h3><p>有些服务器提供商并未设置DNS地址，这时需要先手动进行设置，否则接下来的步骤都将无法解析地址。 1.首先打开/etc/resolv.conf或/etc/resolvconf/resolv.conf.d/tail，前者在重启后会还原。 </p>
++ PermitRootLogin yes</code></pre><a id="more"></a>
+<h3 id="2-设置root密码"><a href="#2-设置root密码" class="headerlink" title="2.设置root密码"></a>2.设置root密码</h3><pre><code>sudo passwd</code></pre><h3 id="3-设置DNS"><a href="#3-设置DNS" class="headerlink" title="3.设置DNS"></a>3.设置DNS</h3><p>有些服务器提供商并未设置DNS地址，这时需要先手动进行设置，否则接下来的步骤都将无法解析地址。 1.首先打开/etc/resolv.conf或/etc/resolvconf/resolv.conf.d/tail，前者在重启后会还原。 </p>
 <pre><code>sudo vi /etc/resolv.conf
 或者
 sudo vi /etc/resolvconf/resolv.conf.d/tail</code></pre><p>2.在文件中加入“nameserver 114.114.114.114”这么一条配置，保存退出。 3.重启网络。 </p>
@@ -2574,7 +2592,7 @@ Ubuntu默认未开启Rewrite支持需手动开启，在此只是简单介绍，�
 
 <p>对于14.04和16.04需从PPA安装</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get install software-properties-common -y</span><br><span class="line">sudo add-apt-repository ppa:max-c-lv/shadowsocks-libev -y</span><br></pre></td></tr></table></figure>
-
+<a id="more"></a>
 <h2 id="配置与启动"><a href="#配置与启动" class="headerlink" title="配置与启动"></a>配置与启动</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 启动</span></span><br><span class="line">sudo ss-local -c &lt;config json path&gt;  start</span><br><span class="line"><span class="comment"># 停止</span></span><br><span class="line">sudo ss-local -c &lt;config json path&gt;  stop</span><br><span class="line"><span class="comment"># 重启</span></span><br><span class="line">sudo ss-local -c &lt;config json path&gt;  restart</span><br></pre></td></tr></table></figure>
 
 <p>可以加入服务自动启动或是用screen手动启动</p>
@@ -2598,6 +2616,7 @@ Ubuntu默认未开启Rewrite支持需手动开启，在此只是简单介绍，�
     <content><![CDATA[<p>管理员身份运行cmd</p>
 <figure class="highlight ebnf"><table><tr><td class="code"><pre><span class="line"><span class="attribute">diskpart</span></span><br></pre></td></tr></table></figure>
 <p>在 <code>DISKPART&gt;</code> 提示符下</p>
+<a id="more"></a>
 <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">list disk</span><br><span class="line"><span class="keyword">select</span> disk <span class="number">0</span>           <span class="comment">#选择磁盘</span></span><br><span class="line"><span class="keyword">list</span> <span class="keyword">partition</span></span><br><span class="line"><span class="keyword">select</span> <span class="keyword">partition</span> <span class="number">2</span>      <span class="comment">#efi分区序号，类型为系统</span></span><br><span class="line">assign letter=p</span><br></pre></td></tr></table></figure>
 <p>以管理员身份再运行cmd</p>
 <figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">P</span>:<span class="string"></span></span><br><span class="line"><span class="attr">cd</span> <span class="string">EFI</span></span><br><span class="line"><span class="attr">rmdir</span> <span class="string">/s/q Ubuntu</span></span><br></pre></td></tr></table></figure>
@@ -2788,6 +2807,7 @@ Ubuntu默认未开启Rewrite支持需手动开启，在此只是简单介绍，�
     <title>饥荒联机版(Don&#39;t Starve Together)指令大全</title>
     <url>/t-51882/</url>
     <content><![CDATA[<p>更多详细内容参见 <a href="http://dontstarve.wikia.com/wiki/Don%27t_Starve_Game_Wiki" target="_blank" rel="noopener">饥荒维基</a></p>
+<a id="more"></a>
 <h1 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h1><figure class="highlight jboss-cli"><table><tr><td class="code"><pre><span class="line"><span class="comment">#上帝模式：</span></span><br><span class="line">c_godmode<span class="params">()</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#物品栏中给予物品：</span></span><br><span class="line">c_give<span class="params">("代码名称“，数量)</span>  </span><br><span class="line"></span><br><span class="line"><span class="comment">#鼠标指针处生成物品：</span></span><br><span class="line">c_spawn<span class="params">(“XX”，数量)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#鼠标指针处生成物品：</span></span><br><span class="line">DebugSpawn<span class="string">"XX"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#删除物品：</span></span><br><span class="line">TheInput<span class="function">:GetWorldEntityUnderMouse</span><span class="params">()</span><span class="function">:Remove</span><span class="params">()</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#设置生命：</span></span><br><span class="line">c_sethealth<span class="params">(百分数)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#设置精神：</span></span><br><span class="line">c_setsanity<span class="params">(百分数)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#设置饥饿：</span></span><br><span class="line">c_sethunger<span class="params">(百分数)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#设置速度：</span></span><br><span class="line">c_speed<span class="params">(默认为1)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#停止饥饿：</span></span><br><span class="line">GetPlayer<span class="params">()</span><span class="string">.components.hunger</span><span class="function">:Pause</span><span class="params">(true)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#变成海狸：</span></span><br><span class="line">GetPlayer<span class="params">()</span><span class="string">.components.beaverness</span><span class="function">:SetPercent</span><span class="params">(1)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#饥饿值上限：</span></span><br><span class="line">GetPlayer<span class="params">()</span><span class="string">.components.hunger</span><span class="function">:SetMax</span><span class="params">(500)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#精神值上限：</span></span><br><span class="line">GetPlayer<span class="params">()</span><span class="string">.components.sanity</span><span class="function">:SetMax</span><span class="params">(500)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#生命值上限：</span></span><br><span class="line">GetPlayer<span class="params">()</span><span class="string">.components.health</span><span class="function">:SetMaxHealth</span><span class="params">(300)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#全物品直接制造：</span></span><br><span class="line">GetPlayer<span class="params">()</span><span class="string">.components.builder</span><span class="function">:GiveAllRecipes</span><span class="params">()</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#传送：</span></span><br><span class="line">GetPlayer<span class="params">()</span><span class="string">.Transform</span><span class="function">:SetPosition</span><span class="params">(坐标，例：0,0,0)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#地图全开：</span></span><br><span class="line">GetWorld<span class="params">()</span><span class="string">.minimap.MiniMap</span><span class="function">:ShowArea</span><span class="params">(0,0,0,10000)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#列出玩家名称跟编号列表：</span></span><br><span class="line">c_listallplayers<span class="params">()</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#复活指定编号玩家：AllPlayers[number]:PushEvent('respawnfromghost')</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#玩家换角色：</span></span><br><span class="line">c_despawn<span class="params">(AllPlayers[NUMBER])</span></span><br></pre></td></tr></table></figure>
 
 <h1 id="材料"><a href="#材料" class="headerlink" title="材料"></a>材料</h1><table>

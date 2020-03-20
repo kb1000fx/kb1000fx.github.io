@@ -253,7 +253,7 @@
     </span>
     <span>
       <span class="iconfont icon-calendar-check"></span>
-      更新于:&nbsp;2020-02-10
+      更新于:&nbsp;2020-03-21
     </span>
     <span>
       <span class="iconfont icon-folder"></span>
@@ -326,6 +326,7 @@
     <p>管理员身份运行cmd</p>
 <figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">diskpart</span></span><br></pre></td></tr></table></figure>
 <p>在 <code>DISKPART&gt;</code> 提示符下</p>
+<a id="more"></a>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">list disk</span><br><span class="line"><span class="keyword">select</span> disk <span class="number">0</span>           <span class="comment">#选择磁盘</span></span><br><span class="line"><span class="keyword">list</span> <span class="keyword">partition</span></span><br><span class="line"><span class="keyword">select</span> <span class="keyword">partition</span> <span class="number">2</span>      <span class="comment">#efi分区序号，类型为系统</span></span><br><span class="line">assign letter=p</span><br></pre></td></tr></table></figure>
 <p>以管理员身份再运行cmd</p>
 <figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">P</span>:<span class="string"></span></span><br><span class="line"><span class="attr">cd</span> <span class="string">EFI</span></span><br><span class="line"><span class="attr">rmdir</span> <span class="string">/s/q Ubuntu</span></span><br></pre></td></tr></table></figure>
@@ -384,7 +385,7 @@
 
 
 
-    <div id="comment" class="mdui-card mdui-p-a-2 mdui-m-b-5">
+    <div id="comment" class="mdui-card mdui-p-a-2 mdui-m-b-5" style="z-index: -1;">
       <div id="gitalk-container"></div>
 <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>

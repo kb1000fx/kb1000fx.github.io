@@ -249,7 +249,7 @@
     </span>
     <span>
       <span class="iconfont icon-calendar-check"></span>
-      更新于:&nbsp;2020-02-10
+      更新于:&nbsp;2020-03-21
     </span>
     <span>
       <span class="iconfont icon-folder"></span>
@@ -326,7 +326,8 @@
 
   
   <div class="mdui-card-content mdui-typo mdui-p-x-4">
-    <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>使用Google Adsense也好几个月了，先以 <strong><em>Next</em></strong> 主题为例，对Hexo下Google Adsense的使用方法做个记录，方便以后更改广告布局。</p>
+    <p>使用Google Adsense也好几个月了，先以 <strong><em>Next</em></strong> 主题为例，对Hexo下Google Adsense的使用方法做个记录，方便以后更改广告布局。</p>
+<a id="more"></a>
 <h1 id="自动广告"><a href="#自动广告" class="headerlink" title="自动广告"></a>自动广告</h1><p>首先建立目录<code>~\themes\next\layout\google_adsense</code>。</p>
 <p>在此目录下建立文件<code>auto_ads.swig</code>，内容如下。其中Publisher ID可以在Google Adsense的账号信息里找到。</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">data-ad-client</span>=<span class="string">"你自己的Publisher ID"</span> <span class="attr">async</span> <span class="attr">src</span>=<span class="string">"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -404,14 +405,14 @@
     <ul class="mdui-menu" id="toc">
       <li class="mdui-menu-item">
         <a href="/t-46101/" id="toc-header" class="mdui-ripple">文章目录</a>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#简介"><span class="toc-number">1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#自动广告"><span class="toc-number">2.</span> <span class="toc-text">自动广告</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#正文内容前的广告单元"><span class="toc-number">3.</span> <span class="toc-text">正文内容前的广告单元</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#侧边栏广告单元"><span class="toc-number">4.</span> <span class="toc-text">侧边栏广告单元</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#文章页脚广告单元"><span class="toc-number">5.</span> <span class="toc-text">文章页脚广告单元</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#自动广告"><span class="toc-number">1.</span> <span class="toc-text">自动广告</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#正文内容前的广告单元"><span class="toc-number">2.</span> <span class="toc-text">正文内容前的广告单元</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#侧边栏广告单元"><span class="toc-number">3.</span> <span class="toc-text">侧边栏广告单元</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#文章页脚广告单元"><span class="toc-number">4.</span> <span class="toc-text">文章页脚广告单元</span></a></li></ol>
       </li>
     </ul>
   </div>
 
 
 
-    <div id="comment" class="mdui-card mdui-p-a-2 mdui-m-b-5">
+    <div id="comment" class="mdui-card mdui-p-a-2 mdui-m-b-5" style="z-index: -1;">
       <div id="gitalk-container"></div>
 <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
