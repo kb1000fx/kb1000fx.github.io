@@ -1,6 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Ubuntu环境下搭建方舟：生存进化服务器</title>
+    <url>/t-39628/</url>
+    <content><![CDATA[<p>目前介绍搭建方舟：生存进化服务器过程的文章中，多数使用Windows系统，还需要借助ARK Server Manager。这里介绍一下如何在Ubuntu下搭建方舟的服务器，且不需要借助第三方工具。</p>
+<a id="more"></a>
+
+<h1 id="测试环境"><a href="#测试环境" class="headerlink" title="测试环境"></a>测试环境</h1><p>华为云-上海二<br>4 vCPU (Intel Xeon Gold 6278C)<br>8 GB Memory<br>40 GB Disk<br>5Mbit/s Bandwidth<br>Ubuntu 18.04 x64 </p>
+<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><h2 id="替换国内源"><a href="#替换国内源" class="headerlink" title="替换国内源"></a>替换国内源</h2><p><strong>由于这里使用的是华为云，默认使用Ubuntu官方安装源，可能会出现下载速度过慢的问题 (我这里直接是time out连不上)</strong><br><strong>如果使用阿里云等或是官方源速度很快可忽略此步</strong></p>
+<p>首先备份源列表</p>
+<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">sudo cp <span class="regexp">/etc/</span>apt<span class="regexp">/sources.list /</span>etc<span class="regexp">/apt/</span>sources.list_backup</span><br></pre></td></tr></table></figure>
+<p>使用<code>sudo vi /etc/apt/sources.list</code>命令打开sources.list文件，删除原有内容并替换为：</p>
+<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 阿里源</span></span><br><span class="line">deb http:<span class="regexp">//mi</span>rrors.aliyun.com<span class="regexp">/ubuntu/</span> bionic main restricted universe multiverse</span><br><span class="line">deb http:<span class="regexp">//mi</span>rrors.aliyun.com<span class="regexp">/ubuntu/</span> bionic-security main restricted universe multiverse</span><br><span class="line">deb http:<span class="regexp">//mi</span>rrors.aliyun.com<span class="regexp">/ubuntu/</span> bionic-updates main restricted universe multiverse</span><br><span class="line">deb http:<span class="regexp">//mi</span>rrors.aliyun.com<span class="regexp">/ubuntu/</span> bionic-proposed main restricted universe multiverse</span><br><span class="line">deb http:<span class="regexp">//mi</span>rrors.aliyun.com<span class="regexp">/ubuntu/</span> bionic-backports main restricted universe multiverse</span><br><span class="line">deb-src http:<span class="regexp">//mi</span>rrors.aliyun.com<span class="regexp">/ubuntu/</span> bionic main restricted universe multiverse</span><br><span class="line">deb-src http:<span class="regexp">//mi</span>rrors.aliyun.com<span class="regexp">/ubuntu/</span> bionic-security main restricted universe multiverse</span><br><span class="line">deb-src http:<span class="regexp">//mi</span>rrors.aliyun.com<span class="regexp">/ubuntu/</span> bionic-updates main restricted universe multiverse</span><br><span class="line">deb-src http:<span class="regexp">//mi</span>rrors.aliyun.com<span class="regexp">/ubuntu/</span> bionic-proposed main restricted universe multiverse</span><br><span class="line">deb-src http:<span class="regexp">//mi</span>rrors.aliyun.com<span class="regexp">/ubuntu/</span> bionic-backports main restricted universe multiverse</span><br></pre></td></tr></table></figure>
+
+<h2 id="调整系统设置"><a href="#调整系统设置" class="headerlink" title="调整系统设置"></a>调整系统设置</h2><p>运行以下命令以增加允许的打开文件数：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"fs.file-max=100000"</span> &gt;&gt; /etc/sysctl.conf &amp;&amp; sysctl -p</span><br></pre></td></tr></table></figure>
+<p>运行以下命令更新文件限制：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"* soft nofile 1000000"</span> &gt;&gt; /etc/security/limits.conf</span><br><span class="line"><span class="built_in">echo</span> <span class="string">"* hard nofile 1000000"</span> &gt;&gt; /etc/security/limits.conf</span><br></pre></td></tr></table></figure>
+<p>通过以下命令启用PAM限制：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"session required pam_limits.so"</span> &gt;&gt; /etc/pam.d/common-session</span><br></pre></td></tr></table></figure>
+
+<h1 id="安装方舟服务端"><a href="#安装方舟服务端" class="headerlink" title="安装方舟服务端"></a>安装方舟服务端</h1><h2 id="安装SteamCMD："><a href="#安装SteamCMD：" class="headerlink" title="安装SteamCMD："></a>安装SteamCMD：</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt-get install steamcmd</span><br></pre></td></tr></table></figure>
+
+<h2 id="设置SteamCMD"><a href="#设置SteamCMD" class="headerlink" title="设置SteamCMD"></a>设置SteamCMD</h2><p>由于root用户权限极大，出于安全原因，建议建立新用户来启动服务端。</p>
+<p>添加并切换到用户：</p>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">adduser</span> <span class="string">steam</span></span><br><span class="line"><span class="attr">su</span> <span class="string">- steam</span></span><br></pre></td></tr></table></figure>
+<p>建立安装ARK服务端的文件夹</p>
+<figure class="highlight arduino"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> ark</span><br></pre></td></tr></table></figure>
+<p>为新建的steam用户的目录中加入steamcmd快捷方式</p>
+<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">ln -s <span class="regexp">/usr/g</span>ames<span class="regexp">/steamcmd steamcmd</span></span><br></pre></td></tr></table></figure>
+<h2 id="安装方舟客户端"><a href="#安装方舟客户端" class="headerlink" title="安装方舟客户端"></a>安装方舟客户端</h2><p>匿名登陆steam</p>
+<figure class="highlight autohotkey"><table><tr><td class="code"><pre><span class="line">steamcmd +login anonymous</span><br><span class="line">``` </span><br><span class="line">切换安装目录</span><br></pre></td></tr></table></figure>
+<p>force_install_dir /home/steam/ark</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">安装方舟服务端</span><br></pre></td></tr></table></figure>
+<p>app_update 376030 </p>
+<figure class="highlight autohotkey"><table><tr><td class="code"><pre><span class="line">待安装后使用`quit`命令退出steamcmd</span><br><span class="line"></span><br><span class="line"># 服务端的配置</span><br><span class="line">## Systemd设置</span><br><span class="line">切换会root用户</span><br><span class="line">使用以下命令创建新文件</span><br><span class="line">```bash</span><br><span class="line">vi /usr/lib/systemd/system/ark.service</span><br></pre></td></tr></table></figure>
+<p>在文件中添加以下内容后并保存退出</p>
+<figure class="highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="section">[Unit]</span></span><br><span class="line"><span class="attr">Description</span>=ARK Survival Evolved</span><br><span class="line"><span class="section">[Service]</span></span><br><span class="line"><span class="attr">Type</span>=simple</span><br><span class="line"><span class="attr">Restart</span>=<span class="literal">on</span>-failure</span><br><span class="line"><span class="attr">RestartSec</span>=<span class="number">5</span></span><br><span class="line"><span class="attr">StartLimitInterval</span>=<span class="number">60</span>s</span><br><span class="line"><span class="attr">StartLimitBurst</span>=<span class="number">3</span></span><br><span class="line"><span class="attr">User</span>=steam</span><br><span class="line"><span class="attr">Group</span>=steam</span><br><span class="line"><span class="attr">ExecStartPre</span>=/home/steam/steamcmd +login anonymous +force_install_dir /home/steam/ark +app_update <span class="number">376030</span> +quit</span><br><span class="line"><span class="attr">ExecStart</span>=/home/steam/ark/ShooterGame/Binaries/Linux/ShooterGameServer TheIsland?listen?SessionName=YOUR_SERVER_NAME -server -log</span><br><span class="line"><span class="section">[Install]</span></span><br><span class="line"><span class="attr">WantedBy</span>=multi-user.target</span><br></pre></td></tr></table></figure>
+
+<p>更新systemd使更改生效：</p>
+<figure class="highlight ebnf"><table><tr><td class="code"><pre><span class="line"><span class="attribute">systemctl daemon-reload</span></span><br></pre></td></tr></table></figure>
+
+<p>添加服务到开机启动：</p>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">systemctl <span class="builtin-name">enable</span> ark.service</span><br></pre></td></tr></table></figure>
+<p>如果不需要设置开机启动可以略过，同时可以删除<code>ark.service</code>文件中<code>Install</code>一节的内容</p>
+<p>至此可以使用以下命令来开启停止ARK服务端：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 启动</span></span><br><span class="line">systemctl start ark</span><br><span class="line"><span class="comment"># 停止</span></span><br><span class="line">systemctl stop ark</span><br><span class="line"><span class="comment"># 重启</span></span><br><span class="line">systemctl restart ark</span><br><span class="line"><span class="comment"># 查看运行状态</span></span><br><span class="line">systemctl status ark</span><br></pre></td></tr></table></figure>
+<h2 id="配置方舟：生存进化服务器"><a href="#配置方舟：生存进化服务器" class="headerlink" title="配置方舟：生存进化服务器"></a>配置方舟：生存进化服务器</h2><p>可以通过编辑<code>/home/steam/ark/ShooterGame/Saved/Config/LinuxServer</code>下的<code>GameUserSettings.ini</code>文件来进行设置。</p>
+<p>文件中配置说明，可以查看<a href="http://ark.gamepedia.com/Server_Configuration#GameUserSettings.ini" target="_blank" rel="noopener">ARK wiki</a>。</p>
+<h1 id="连接到服务器"><a href="#连接到服务器" class="headerlink" title="连接到服务器"></a>连接到服务器</h1><h2 id="通过游戏内部搜索"><a href="#通过游戏内部搜索" class="headerlink" title="通过游戏内部搜索"></a>通过游戏内部搜索</h2><p>通过游戏内的搜索连接可以很简单地加入服务器，有时在游戏内无法找到，可以使用第二种方式。</p>
+<h2 id="通过Steam连接"><a href="#通过Steam连接" class="headerlink" title="通过Steam连接"></a>通过Steam连接</h2><p>在Steam左上角依次选择<code>视图-服务器</code>，然后输入服务器ip并进行搜索。搜索到服务器后可以加入收藏夹方便下次使用。</p>
+]]></content>
+      <categories>
+        <category>游戏</category>
+      </categories>
+  </entry>
+  <entry>
     <title>如何使用加农炮将特朗普发射至太阳上</title>
     <url>/t-1436/</url>
     <content><![CDATA[<p>特朗普曾表示，若道琼斯指数暴跌1000点，时任总统应被塞进加农炮射到太阳上。而最近美股动荡，一周之内多次熔断，特朗普终于实现了他曾立下的flag。那么就来帮大统领计算一下要如何才能用加农炮将他自己发射到太阳上。</p>
@@ -32,7 +87,7 @@
   <entry>
     <title>酒精与84消毒液混用是否会中毒的分析</title>
     <url>/t-58768/</url>
-    <content><![CDATA[<p>最近网络上流传着酒精与84消毒液混用中毒的传言，在此讨论一下二者混用是否会使人中毒。<br>首先先放上结论：酒精与84消毒液混合后会降低消毒效果，但<strong>不会使人中毒</strong>，分析过程如下。</p>
+    <content><![CDATA[<p>最近网络上流传着酒精与84消毒液混用中毒的传言，在此讨论一下二者混用是否会使人中毒。首先先放上结论：酒精与84消毒液混合后会降低消毒效果，但<strong>不会使人中毒</strong>，分析过程如下。</p>
 <a id="more"></a>
 <h1 id="分析过程"><a href="#分析过程" class="headerlink" title="分析过程"></a>分析过程</h1><h2 id="84消毒液中自身存在的平衡"><a href="#84消毒液中自身存在的平衡" class="headerlink" title="84消毒液中自身存在的平衡"></a>84消毒液中自身存在的平衡</h2><p>84消毒液中，自身存在以下三个平衡：</p>
 <p>$$\ce{ClO^- + H2O &lt;=&gt; HClO + OH^-} \tag{I}$$<br>$$\ce{2ClO^- \xlongequal{h\nu\text{ or heat}} O2 ^ + 2Cl^-} \tag{II}$$<br>$$\ce{HClO + H^+ + Cl^- &lt;=&gt; Cl2(aq) + H2O} \tag{III}$$</p>
