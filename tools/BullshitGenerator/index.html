@@ -60,7 +60,7 @@
     
     <title>
         
-            抽象话转换器 | 小蜗熊的蜂蜜罐
+            狗屁不通文章生成器 | 小蜗熊的蜂蜜罐
         
     </title>
     
@@ -130,19 +130,19 @@
                 </a>
             
                 
-                <a href="/NMSL/" class="mdui-list-item mdui-ripple">
+                <a href="/tools/" class="mdui-list-item mdui-ripple">
                     <div class="mdui-list-item-icon">
-                        <i class="iconfont icon-dollar"></i>
+                        <i class="iconfont icon-tools"></i>
                     </div>
-                    <div class="mdui-list-item-content">抽象话转换器</div>
+                    <div class="mdui-list-item-content">工具箱</div>
                 </a>
             
                 
-                <a href="/categories/%E5%9B%BE%E9%9B%86/" class="mdui-list-item mdui-ripple">
+                <a href="/about/" class="mdui-list-item mdui-ripple">
                     <div class="mdui-list-item-icon">
-                        <i class="iconfont icon-gallery"></i>
+                        <i class="iconfont icon-user"></i>
                     </div>
-                    <div class="mdui-list-item-content">图集</div>
+                    <div class="mdui-list-item-content">关于</div>
                 </a>
             
             <div class="mdui-list-item mdui-ripple">
@@ -238,117 +238,105 @@
 </aside>
   
   <main id="main-contain" class="mdui-container mdui-m-t-5">
-    <div class="mdui-card mdui-p-a-2 mdui-m-b-5">
+    <div class="mdui-card mdui-p-b-2 mdui-m-b-5">
     <div class="post-header"> 
-        <a class="post-header-title" href="/NMSL/index.html">抽象话转换器</a>
+        <a class="post-header-title" href="/tools/BullshitGenerator/index.html">狗屁不通文章生成器</a>
     </div>
-    
-        <html>
+    <div id="page-card" class="mdui-card-content mdui-p-x-4">
+        
+            <script type="text/javascript" src="./main.js"></script>
+<div id="主体">
+  <div id="主题">
+    <input id="input" class="mdui-textfield-input" type="text" placeholder="主题"/>
+    <button class="mdui-btn" onclick="生成文章()">生成</button>
+  </div>
+  <div id="文章"></div>
+</div>
+<footer id="页脚" class="mdui-center mdui-text-center" >
+  <p>请勿将生成的文章用于正规用途</p>
+  <p>原作者: 
+  <a href="https://github.com/menzi11/BullshitGenerator" target="_blank" rel="noopener">@menzi11</a> , 
+  <a href="https://github.com/suulnnka/BullshitGenerator" target="_blank" rel="noopener">@suulnnka</a></p>
+</footer>
 
-<head>
-    <link rel="stylesheet" href="//cdnjs.loli.net/ajax/libs/mdui/0.4.3/css/mdui.min.css">
-    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+<style>
+  #页脚{
+    opacity: .89;
+  }
+  #页脚 a{
+    color: #6190e8;
+  }
+  body{
+    margin: 0;
+  }
+  #input{
+      border: none;
+      border-bottom: #666666 2px solid;
+      vertical-align: baseline;
+      font-size: 1.5rem;
+      background: #f8f8f8;
+      color: #333333;
+      text-align: center;
+      margin:0 auto;
+      max-width:40%;
+  }
+  #主题 button{
+    margin: 10px;
+    background: #454545;
+    color: #efefef;
+  }
+  @media screen and (max-width: 1024px) {
+    html{
+      font-size: 2vw;
+      color: #333333;
+    }
+    #主体{
+      border: 2px solid #333333;
+      margin: 6px;
+      padding: 6px;
+      background: #f8f8f8;
+    }
+    #主题{
+      text-align: center;
+      margin-top: 6px;
+      font-size: 0px;
+    }
+    #input{
+      font-size: 2rem;
+    }
+    #文章 div{
+      margin-top: 6px;
+      font-size: 2rem;
+      text-align: justify;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    html{
+      font-size: 1.3vw;
+      color: #333333;
+    }
+    #主体{
+      border: 2px solid #333333;
+      margin: 20px;
+      padding: 20px;
+      background: #f8f8f8;
+    }
+    #主题{
+      text-align: center;
+      margin-top: 20px;
+      font-size: 0px;
+    }
+    #input{
+      font-size: 1.25rem;
+    }
+    #文章 div{
+      margin-top: 20px;
+      text-align: justify;
+    }
+  }
+</style>
 
-    <style type="text/css">
-        body{
-            background: #d4dcd6;
-        }
-        .mdui-overlay-show{
-            visibility: hidden;
-        }
-    </style>
-<meta name="generator" content="Hexo 4.2.0"></head>
-
-<body class="mdui-theme-primary-blue-grey mdui-theme-accent-indigo">
-    
-    <div class="mdui-container">
-        <div class="mdui-textfield mdui-textfield-floating-label">
-            <label class="mdui-textfield-label">请输入需要抽象的话</label>
-            <textarea class="mdui-textfield-input" id="t" type="text" required></textarea>
-            <div class="mdui-textfield-helper">如果分词不准确，可自行加空格分词</div>
         </div>
-
-        <b>抽象程度:</b><br>
-        低 &ensp;
-        <label class="mdui-switch">
-            <input type="checkbox" id="gaodu" />
-            <i class="mdui-switch-icon"></i>
-        </label>
-        &ensp; 高<br>
-        <br>
-
-        <b>皮肤选择:</b><br>爷现在是：
-        <select id="skinSel" class="mdui-select" mdui-select>
-            <option value="0">👴</option>
-            <option value="1">👴🏻</option>
-            <option value="2">👴🏼</option>
-            <option value="3">👴🏽</option>
-            <option value="4">👴🏾</option>
-            <option value="5">👴🏿</option>
-            <option value="6">🎅</option>
-            <option value="7">👽</option>
-        </select>
-        <br>
-
-        <b>杂项:</b><br>
-        <label id="checkbox-1" class="mdui-checkbox">
-            <input type="checkbox" id="checkda" />
-            <i class="mdui-checkbox-icon"></i>
-            将所有“大”转换为“带”
-        </label><br>
-        <label class="mdui-checkbox">
-            <input type="checkbox" id="checkai" />
-            <i class="mdui-checkbox-icon"></i>
-            "爱"转化为"i"，而不是"💓"
-        </label><br>
-        <label class="mdui-checkbox">
-            <input type="checkbox" id="checkye" />
-            <i class="mdui-checkbox-icon"></i>
-            "我"转化为"👴"
-        </label><br>
-        <label class="mdui-checkbox" onclick="livere()">
-            <input type="checkbox" id="checklook" />
-            <i class="mdui-checkbox-icon"></i>
-            如果发现转换后的结果缺字或乱码，请选中这个
-        </label>
-    </div>
-
-    <div class="mdui-container">
-        <button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent mdui-col-xs-2 mdui-col-offset-xs-9"
-            id="up" mdui-dialog="{target: '#e'}">给👴转</button>
-    </div>
-    <div class="mdui-dialog" id="e">
-        <div class="mdui-dialog-title">抽象结果</div>
-        <div class="mdui-dialog-content" style="overflow-wrap: break-word;" id='res'>
-            <p id="te">出现错误，请重试</p>
-            <div id="p2" style="display: none;">
-                <div class="mdui-spinner mdui-spinner-colorful"></div>
-                正在加载，请稍后...
-            </div>
-        </div>
-        <div class="mdui-dialog-actions">
-            <button class="mdui-btn mdui-ripple" mdui-dialog-close>取消</button>
-            <button id="copy" class="btn mdui-btn mdui-ripple" data-clipboard-text="" mdui-dialog-confirm>复制</button>
-        </div>
-    </div>
-
-    <footer class="mdui-center mdui-text-center">
-        <div class="mdui-typo-caption-opacity">
-            <a href="./fast.html">快速版</a><br>
-            原作者地址: https://github.com/gaowanliang/NMSL
-        </div>
-    </footer>
-
-    <script src="//cdnjs.loli.net/ajax/libs/mdui/0.4.3/js/mdui.min.js"></script>
-    <script src="https://cdn.bootcss.com/clipboard.js/2.0.4/clipboard.min.js"></script>
-    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/gh/gaowanliang/pinyinjs/dict/pinyin_dict_withtone.js"></script>
-    <script type="text/javascript" src="./src/js/main.js"></script>
-
-</body>
-</html>
-
     </div>
     
     <div id="comment" class="mdui-card mdui-p-a-2 mdui-m-b-5">

@@ -59,8 +59,8 @@
     
     
     <title>
-          
-            小蜗熊的蜂蜜罐
+        
+            抽象话转换器-标准版 | 小蜗熊的蜂蜜罐
         
     </title>
     
@@ -238,81 +238,158 @@
 </aside>
   
   <main id="main-contain" class="mdui-container mdui-m-t-5">
-    
-
-<div class="mdui-card mdui-p-a-4 mdui-m-b-5">
-    <div class="page-describe">
-        目前共计 34 篇日志。
+    <div class="mdui-card mdui-p-b-2 mdui-m-b-5">
+    <div class="post-header"> 
+        <a class="post-header-title" href="/tools/NMSL/index.html">抽象话转换器-标准版</a>
     </div>
-    <div class="posts-collapse">
+    <div id="page-card" class="mdui-card-content mdui-p-x-4">
         
-            
-            
-                <div class="collection-title">
-                    <a href="/archives/2018"><h2>2018<small>归档</small></h2></a>
-                </div>
-                
-            
+            <style type="text/css">
+    body{
+        background: #d4dcd6;
+    }
+    .mdui-overlay-show{
+        visibility: hidden;
+    }
+    #页脚{
+        opacity: .89;
+    }
+    #页脚 a{
+        color: #6190e8;
+    }
+</style>
 
-            <div class="collection-item">
-                <h3><a href="/t-64878/">Insurgency(叛乱)全成就指南</a></h3>
-                <time itemprop="dateCreated" datetime=2018-12-04 >
-                    2018.12.04
-                </time>
-            </div>
-        
-            
-            
+<div class="mdui-container">
+    <div class="mdui-textfield mdui-textfield-floating-label">
+        <label class="mdui-textfield-label">请输入需要抽象的话</label>
+        <textarea class="mdui-textfield-input" id="t" type="text" required></textarea>
+        <div class="mdui-textfield-helper">如果分词不准确，可自行加空格分词</div>
+    </div>
+     <b>抽象程度:</b><br>
+    低 &ensp;
+    <label class="mdui-switch">
+        <input type="checkbox" id="gaodu" />
+        <i class="mdui-switch-icon"></i>
+    </label>
+    &ensp; 高<br>
+    <br>
+     <b>皮肤选择:</b><br>爷现在是：
+    <select id="skinSel" class="mdui-select" mdui-select>
+        <option value="0">👴</option>
+        <option value="1">👴🏻</option>
+        <option value="2">👴🏼</option>
+        <option value="3">👴🏽</option>
+        <option value="4">👴🏾</option>
+        <option value="5">👴🏿</option>
+        <option value="6">🎅</option>
+        <option value="7">👽</option>
+    </select>
+    <br>
+     <b>杂项:</b><br>
+    <label id="checkbox-1" class="mdui-checkbox">
+        <input type="checkbox" id="checkda" />
+        <i class="mdui-checkbox-icon"></i>
+        将所有“大”转换为“带”
+    </label><br>
+    <label class="mdui-checkbox">
+        <input type="checkbox" id="checkai" />
+        <i class="mdui-checkbox-icon"></i>
+        "爱"转化为"i"，而不是"💓"
+    </label><br>
+    <label class="mdui-checkbox">
+        <input type="checkbox" id="checkye" />
+        <i class="mdui-checkbox-icon"></i>
+        "我"转化为"👴"
+    </label><br>
+    <label class="mdui-checkbox" onclick="livere()">
+        <input type="checkbox" id="checklook" />
+        <i class="mdui-checkbox-icon"></i>
+        如果发现转换后的结果缺字或乱码，请选中这个
+    </label>
+</div>
 
-            <div class="collection-item">
-                <h3><a href="/t-109/">Insurgency(叛乱)服务器架设脚本</a></h3>
-                <time itemprop="dateCreated" datetime=2018-08-04 >
-                    2018.08.04
-                </time>
-            </div>
-        
-            
-            
+<div class="mdui-container">
+    <button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent mdui-col-xs-2 mdui-col-offset-xs-9"
+        id="up" mdui-dialog="{target: '#e'}">给👴转</button>
+</div>
 
-            <div class="collection-item">
-                <h3><a href="/t-39744/">华硕路由器官方固件下设置中文SSID方法</a></h3>
-                <time itemprop="dateCreated" datetime=2018-06-27 >
-                    2018.06.27
-                </time>
-            </div>
-        
-            
-            
-
-            <div class="collection-item">
-                <h3><a href="/t-15843/">Windows及Office的KMS激活</a></h3>
-                <time itemprop="dateCreated" datetime=2018-03-15 >
-                    2018.03.15
-                </time>
-            </div>
-        
-            
-            
-
-            <div class="collection-item">
-                <h3><a href="/t-65147/">htaccess文件格式</a></h3>
-                <time itemprop="dateCreated" datetime=2018-03-09 >
-                    2018.03.09
-                </time>
-            </div>
-        
-            
-            
-
-            <div class="collection-item">
-                <h3><a href="/t-65310/">LAMP下使用Certbot自动配置SSL证书</a></h3>
-                <time itemprop="dateCreated" datetime=2018-03-01 >
-                    2018.03.01
-                </time>
-            </div>
-        
+<div class="mdui-dialog" id="e">
+    <div class="mdui-dialog-title">抽象结果</div>
+    <div class="mdui-dialog-content" style="overflow-wrap: break-word;" id='res'>
+        <p id="te">出现错误，请重试</p>
+        <div id="p2" style="display: none;">
+            <div class="mdui-spinner mdui-spinner-colorful"></div>
+            正在加载，请稍后...
+        </div>
+    </div>
+    <div class="mdui-dialog-actions">
+        <button class="mdui-btn mdui-ripple" mdui-dialog-close>取消</button>
+        <button id="copy" class="btn mdui-btn mdui-ripple" data-clipboard-text="" mdui-dialog-confirm>复制</button>
     </div>
 </div>
+
+<footer id="页脚" class="mdui-center mdui-text-center">
+    <p><a href="./fast.html">快速版</a></p>
+    <p>原作者: 
+    <a href="https://github.com/gaowanliang/NMSL" target="_blank" rel="noopener">@gaowanliang</a></p>
+</footer>
+
+<script src="//cdnjs.loli.net/ajax/libs/mdui/0.4.3/js/mdui.min.js"></script>
+<script src="https://cdn.bootcss.com/clipboard.js/2.0.4/clipboard.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript"
+    src="https://cdn.jsdelivr.net/gh/gaowanliang/pinyinjs/dict/pinyin_dict_withtone.js"></script>
+<script type="text/javascript" src="./src/js/main.js"></script>
+
+        </div>
+    </div>
+    
+    <div id="comment" class="mdui-card mdui-p-a-2 mdui-m-b-5">
+      <div class="mdui-tab" mdui-tab>
+        
+          <a href="#comment-tab0" class="mdui-ripple">gitalk</a>
+        
+          <a href="#comment-tab1" class="mdui-ripple">livere</a>
+        
+      </div>
+      
+        <div id="comment-tab0" class="mdui-p-a-2">
+          <div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
+<script>
+  var gitalk = new Gitalk({
+    clientID: 'f3866882707e12e74c4a',
+    clientSecret: '04a037afee00b94e4b55e474aa270ac136a8c952',
+    repo: 'kb1000fx.github.io',
+    owner: 'kb1000fx',
+    admin: ['kb1000fx'],
+    id:  md5(location.pathname) ,
+    distractionFreeMode: 'true',
+  });
+  gitalk.render('gitalk-container');
+</script>
+        </div>
+      
+        <div id="comment-tab1" class="mdui-p-a-2">
+          <div id="lv-container" data-id="city" data-uid="MTAyMC80OTI2OS8yNTc2Mw==">
+  <script type="text/javascript">
+    (function (d, s) {
+      var j, e = d.getElementsByTagName(s)[0];
+      if (typeof LivereTower === 'function') { return; }
+      j = d.createElement(s);
+      j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+      j.async = true;
+      e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+  </script>
+  <noscript>Please enable JavaScript to view the comments powered by LiveRe.</noscript>
+</div>
+        </div>
+      
+    </div>
+
 
 
   </main>

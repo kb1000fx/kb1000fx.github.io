@@ -194,7 +194,7 @@ var bfl, bfsy, sy
 var done = true
 $("#up").click(function () {
     if (done) {
-        onDemandScript('/NMSL/src/data/emoji.json', function (data) {
+        onDemandScript('./src/data/emoji.json', function (data) {
             sj = data
             bfl = Object.assign({}, sj), bfsy = {}, sy = {}
             //console.log(data)
