@@ -60,7 +60,7 @@
     
     <title>
         
-            一个没有什么用的工具箱 | 小蜗熊的蜂蜜罐
+            营销号生成器 | 小蜗熊的蜂蜜罐
         
     </title>
     
@@ -240,48 +240,104 @@
   <main id="main-contain" class="mdui-container mdui-m-t-5">
     <div class="mdui-card mdui-p-b-2 mdui-m-b-5">
     <div class="post-header"> 
-        <a class="post-header-title" href="/tools/index.html">一个没有什么用的工具箱</a>
+        <a class="post-header-title" href="/tools/MarketingGenerator/index.html">营销号生成器</a>
     </div>
     <div id="page-card" class="mdui-card-content mdui-p-x-4">
         
-            <div id="tools-list" class="mdui-list">
-  <a href="./NMSL/" class="mdui-list-item mdui-ripple">
-    <div class="mdui-list-item-icon">
-      <i class="iconfont icon-dollar"></i>
-    </div>
-    <div class="mdui-list-item-content">抽象话转换器-标准版</div>
-  </a>
-  <a href="./NMSL/fast.html" class="mdui-list-item mdui-ripple">
-    <div class="mdui-list-item-icon">
-      <i class="iconfont icon-dollar"></i>
-    </div>
-    <div class="mdui-list-item-content">抽象话转换器-快速版</div>
-  </a>
-  <a href="./BullshitGenerator/" class="mdui-list-item mdui-ripple">
-    <div class="mdui-list-item-icon">
-      <i class="iconfont icon-bin"></i>
-    </div>
-    <div class="mdui-list-item-content">狗屁不通文章生成器</div>
-  </a>
-  <a href="./MarketingGenerator/" class="mdui-list-item mdui-ripple">
-    <div class="mdui-list-item-icon">
-      <i class="iconfont icon-bin"></i>
-    </div>
-    <div class="mdui-list-item-content">营销号生成器</div>
-  </a>
+            <div class="mdui-textfield mdui-textfield-floating-label">
+  <label class="mdui-textfield-label">主体：</label>
+  <input id="subject" class="mdui-textfield-input"/>
+</div>
+<div class="mdui-textfield mdui-textfield-floating-label">
+  <label class="mdui-textfield-label">事件：</label>
+  <input id="event" class="mdui-textfield-input"/>
+</div>
+<div class="mdui-textfield mdui-textfield-floating-label">
+  <label class="mdui-textfield-label">另一种说法：</label>
+  <input id="event2" class="mdui-textfield-input"/>
+</div>
+<div class="mdui-textfield">
+    <label class="mdui-textfield-label">生成结果：</label>
+    <textarea id="result" class="mdui-textfield-input" rows="6"></textarea>
+</div>
+<div style="text-align:center;">
+    <button class="mdui-btn mdui-ripple mdui-color-theme-accent" onclick="generate()">生成</button>
 </div>
 
+<footer id="footer" class="mdui-center mdui-text-center" >
+    <p>原作者: 
+    <a href="https://codepen.io/kasei-dis/full/JjYjwza" target="_blank" rel="noopener">@Kasei</a>
+</footer>
+
 <style>
-  #tools-list{
-    margin-left: 15%;
-    margin-right: 15%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-  }
+    #footer{
+        opacity: .89;
+    }
+    #footer a{
+        color: #6190e8;
+    }
 </style>
+
+<script>
+    function generate() {
+        subject = document.getElementById("subject").value;
+        event = document.getElementById("event").value;
+        event2 = document.getElementById("event2").value;
+        if (subject.length==0 || event.length==0 || event2.length==0)
+            return;
+        result = `　　${subject}${event}是怎么回事呢？${subject}相信大家都很熟悉，但是${subject}${event}是怎么回事呢，下面就让小编带大家一起了解吧。\r\n　　${subject}${event}，其实就是${event2}，大家可能会很惊讶${subject}怎么会 ${event}呢？但事实就是这样，小编也感到非常惊讶。\r\n　　这就是关于${subject}${event}的事情了，大家有什么想法呢，欢迎在评论区告诉小编一起讨论哦！`;
+        document.getElementById("result").value = result;
+    }
+</script>
         </div>
     </div>
     
+    <div id="comment" class="mdui-card mdui-p-a-2 mdui-m-b-5">
+      <div class="mdui-tab" mdui-tab>
+        
+          <a href="#comment-tab0" class="mdui-ripple">gitalk</a>
+        
+          <a href="#comment-tab1" class="mdui-ripple">livere</a>
+        
+      </div>
+      
+        <div id="comment-tab0" class="mdui-p-a-2">
+          <div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
+<script>
+  var gitalk = new Gitalk({
+    clientID: 'f3866882707e12e74c4a',
+    clientSecret: '04a037afee00b94e4b55e474aa270ac136a8c952',
+    repo: 'kb1000fx.github.io',
+    owner: 'kb1000fx',
+    admin: ['kb1000fx'],
+    id:  md5(location.pathname) ,
+    distractionFreeMode: 'true',
+  });
+  gitalk.render('gitalk-container');
+</script>
+        </div>
+      
+        <div id="comment-tab1" class="mdui-p-a-2">
+          <div id="lv-container" data-id="city" data-uid="MTAyMC80OTI2OS8yNTc2Mw==">
+  <script type="text/javascript">
+    (function (d, s) {
+      var j, e = d.getElementsByTagName(s)[0];
+      if (typeof LivereTower === 'function') { return; }
+      j = d.createElement(s);
+      j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+      j.async = true;
+      e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+  </script>
+  <noscript>Please enable JavaScript to view the comments powered by LiveRe.</noscript>
+</div>
+        </div>
+      
+    </div>
+
 
 
   </main>
