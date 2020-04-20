@@ -1,6 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>使用代理服务播放网易云下架音乐</title>
+    <url>/t-14321/</url>
+    <content><![CDATA[<p>目前网易云上越来越多的音乐因为版权原因被下架，而且很多音乐也变成了vip才能播放（甚至包括大悲咒、国际歌这种音乐）。<br>在这里我们可以使用 <a href="https://github.com/nondanee/UnblockNeteaseMusic" target="_blank" rel="noopener">UnblockNeteaseMusic</a> 来搭建一个网易云代理服务，从而解锁因下架变成灰色的音乐或是需要vip才能播放的音乐。</p>
+<a id="more"></a>
+<h1 id="安装与配置"><a href="#安装与配置" class="headerlink" title="安装与配置"></a>安装与配置</h1><h2 id="docker部署"><a href="#docker部署" class="headerlink" title="docker部署"></a>docker部署</h2><h3 id="拉取镜像"><a href="#拉取镜像" class="headerlink" title="拉取镜像"></a>拉取镜像</h3><figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="attribute">docker</span> pull nondanee/unblockneteasemusic</span><br></pre></td></tr></table></figure>
+<h3 id="运行docker"><a href="#运行docker" class="headerlink" title="运行docker"></a>运行docker</h3><figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">docker <span class="builtin-name">run</span> <span class="attribute">--restart</span>=always --name 163 -d -p 8999:8080 nondanee/unblockneteasemusic</span><br></pre></td></tr></table></figure>
+<p>其中 <code>--name 163</code> 是自定义的名字<br><code>8999:8080</code> 是映射端口，表示本地的8999端口映射到docker的8080端口  </p>
+<h2 id="使用npx运行"><a href="#使用npx运行" class="headerlink" title="使用npx运行"></a>使用npx运行</h2><figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line"><span class="variable">$ </span>npx <span class="variable">@nondanee</span>/unblockneteasemusic</span><br></pre></td></tr></table></figure>
+<p><strong>每次使用npx时会自动安装在临时目录，退出后会自动删除</strong></p>
+<h2 id="源码部署"><a href="#源码部署" class="headerlink" title="源码部署"></a>源码部署</h2><p>目前我使用的是这个方法。<br>首先在<a href="https://github.com/nondanee/UnblockNeteaseMusic" target="_blank" rel="noopener">Github</a>上下载最新的源码，并安装node js环境。<br>建立bat脚本并输入以下内容</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="built_in">cd</span> C:\Users\Administrator\UnblockNeteaseMusic</span><br><span class="line">node app.js -p 606:605 -s -e http://music.163.com</span><br></pre></td></tr></table></figure>
+<p>运行脚本即可启动服务</p>
+<h2 id="参数配置"><a href="#参数配置" class="headerlink" title="参数配置"></a>参数配置</h2><figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">$ unblockneteasemusic -h</span><br><span class="line">usage: unblockneteasemusic [-v] [-p port] [-a address] [-u url] [-f host]</span><br><span class="line">                           [-o source [source <span class="built_in">..</span>.]] [-t token] [-e url] [-s]</span><br><span class="line">                           [-h]</span><br><span class="line"></span><br><span class="line">optional arguments:</span><br><span class="line">  -v, --version                   output the version number</span><br><span class="line">  -p port, --port<span class="built_in"> port </span>           specify<span class="built_in"> server </span>port</span><br><span class="line">  -a address, --address<span class="built_in"> address </span>  specify<span class="built_in"> server </span>host</span><br><span class="line">  -u url, --proxy-url url         request through upstream proxy</span><br><span class="line">  -f host, --force-host host      force the netease<span class="built_in"> server </span>ip</span><br><span class="line">  -o source [source <span class="built_in">..</span>.], --match-order source [source <span class="built_in">..</span>.]</span><br><span class="line">                                  <span class="builtin-name">set</span> priority of sources</span><br><span class="line">  -t token, --token token         <span class="builtin-name">set</span> up<span class="built_in"> proxy </span>authentication</span><br><span class="line">  -e url, --endpoint url          replace virtual endpoint with public host</span><br><span class="line">  -s, --strict                    <span class="builtin-name">enable</span><span class="built_in"> proxy </span>limitation</span><br><span class="line">  -h, --help                      output usage information</span><br></pre></td></tr></table></figure>
+<p>其他配置问题可参考Github Issue中的说明</p>
+<h1 id="使用代理模式解锁音乐"><a href="#使用代理模式解锁音乐" class="headerlink" title="使用代理模式解锁音乐"></a>使用代理模式解锁音乐</h1><blockquote>
+<p>若将服务部署到公网，强烈建议使用严格模式 (此模式下仅放行网易云音乐所属域名的请求) -s 限制代理范围 (需使用 PAC 或 hosts)，以防代理被他人滥用</p>
+</blockquote>
+<h2 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h2><p>在网易云客户端的设置-工具选项中设置自定义代理，模式选择HTTP代理，服务器和端口分别填写对应的ip(或域名)与端口号</p>
+<h2 id="UWP"><a href="#UWP" class="headerlink" title="UWP"></a>UWP</h2><p>在 <code>Windows 设置 &gt; 网络和 Internet &gt; 代理</code> 中设置代理，建议使用自动模式并使用pac<br>脚本地址为<code>http://yoururl:port/proxy.pac</code></p>
+<blockquote>
+<p>由于UWP应用存在网络隔离，需手动开启loopback才能使用，类似问题: <a href="https://garybear.cn/t-1358/">Windows10下Edge浏览器等UWP应用无法连接到代理服务器的解决方案</a></p>
+</blockquote>
+<p>请以管理员身份执行命令:</p>
+<figure class="highlight dns"><table><tr><td class="code"><pre><span class="line">checknetisolation loopbackexempt -a -n="<span class="number">1F8B0F94</span>.<span class="number">122165</span>AE053F_j2p0p<span class="number">5q0044a6</span>"</span><br></pre></td></tr></table></figure>
+<h2 id="Android"><a href="#Android" class="headerlink" title="Android"></a>Android</h2><p>在<code>WLAN &gt; 修改网络 &gt; 高级选项 &gt; 代理</code>中进行设置，建议使用自动模式并使用pac   </p>
+<blockquote>
+<p>由于网易云app的原因Android下无法通过修改hosts使用</p>
+</blockquote>
+<h2 id="Linux-macOS"><a href="#Linux-macOS" class="headerlink" title="Linux / macOS"></a>Linux / macOS</h2><p>Ubuntu下使用<code>系统设置 &gt; 网络 &gt; 网络代理</code>，macOS下使用<code>系统偏好设置 &gt; 网络 &gt; 高级 &gt; 代理</code>来设置代理</p>
+<h3 id="自签证书"><a href="#自签证书" class="headerlink" title="自签证书"></a>自签证书</h3><p>由于Linux客户端1.2以上版本及macOS客户端700以上版本无法通过握手后返回空数据的方式降级https请求使用http接口，需要进行自签证书。自签证书过程参考<a href="https://github.com/nondanee/UnblockNeteaseMusic/issues/48" target="_blank" rel="noopener">这里</a>，现ubuntu为例进行信任证书添加：</p>
+<figure class="highlight stata"><table><tr><td class="code"><pre><span class="line">$ ~/Downloads$ sudo cp <span class="keyword">ca</span>.crt /usr/<span class="keyword">local</span>/share/<span class="keyword">ca</span>-certificates/</span><br><span class="line">$ ~/Downloads$ sudo <span class="keyword">update</span>-<span class="keyword">ca</span>-certificates </span><br><span class="line"></span><br><span class="line">Updating certificates <span class="keyword">in</span> /etc/ssl/certs...</span><br><span class="line">1 added, 0 removed; done.</span><br><span class="line">Running hooks <span class="keyword">in</span> /etc/<span class="keyword">ca</span>-certificates/<span class="keyword">update</span>.<span class="keyword">d</span>...</span><br><span class="line"></span><br><span class="line">Adding debian:<span class="keyword">ca</span>.pem</span><br><span class="line">done.</span><br><span class="line">done.</span><br></pre></td></tr></table></figure>
+<h3 id="增加默认启动参数"><a href="#增加默认启动参数" class="headerlink" title="增加默认启动参数"></a>增加默认启动参数</h3><p>自签完成后，启动客户端需要增加<code>--ignore-certificate-errors</code>参数  </p>
+<figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line"><span class="variable">$ </span>/usr/share/applications<span class="variable">$ </span>ls | grep netease</span><br><span class="line">netease-cloud-music.desktop</span><br><span class="line"><span class="variable">$ </span>/usr/share/applications<span class="variable">$ </span>sudo vim netease-cloud-music.desktop</span><br></pre></td></tr></table></figure>
+<p>在Exec这行末尾增加<code>--ignore-certificate-errors</code>参数</p>
+<h2 id="IOS"><a href="#IOS" class="headerlink" title="IOS"></a>IOS</h2><blockquote>
+<p>IOS下的配置方式我并未试过，在此仅搬运issue中的一些总结</p>
+</blockquote>
+<ul>
+<li>在ios设备上点击<a href="https://raw.githubusercontent.com/nondanee/UnblockNeteaseMusic/master/ca.crt" target="_blank" rel="noopener">安装CA证书</a></li>
+<li>在设置 &gt; 通用 &gt; 关于本机 &gt; 证书信任设置，手动开启证书。<a href="https://support.apple.com/zh-cn/HT204477" target="_blank" rel="noopener">官方教程</a></li>
+<li>在<code>无线局域网 &gt; HTTP 代理 &gt; 配置代理</code>里开启 http 代理，手动填IP、端口号，也可以配合代理软件使用，详见 <a href="https://github.com/nondanee/UnblockNeteaseMusic/issues/56" target="_blank" rel="noopener">配合 Surge 或 Clash 食用</a>、<a href="https://github.com/nondanee/UnblockNeteaseMusic/issues/65" target="_blank" rel="noopener">Shadowrocket</a></li>
+</ul>
+<p>另外可以采用配置 https endpoint 转发音源的方法免除安装证书的过程，具体详见：  </p>
+<ul>
+<li><a href="https://github.com/nondanee/UnblockNeteaseMusic/issues/444" target="_blank" rel="noopener">IOS解决方案</a>  </li>
+<li><a href="https://github.com/nondanee/UnblockNeteaseMusic/issues/65" target="_blank" rel="noopener">iOS食用指南</a></li>
+<li><a href="https://github.com/nondanee/UnblockNeteaseMusic/issues/368" target="_blank" rel="noopener">iOS配置经验分享</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>技术</category>
+        <category>网络硬件</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Ubuntu环境下搭建方舟：生存进化服务器</title>
     <url>/t-39628/</url>
     <content><![CDATA[<p>目前介绍搭建方舟：生存进化服务器过程的文章中，多数使用Windows系统，还需要借助ARK Server Manager。这里介绍一下如何在Ubuntu下搭建方舟的服务器，且不需要借助第三方工具。</p>
