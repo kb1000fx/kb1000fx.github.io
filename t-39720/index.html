@@ -115,8 +115,8 @@
     
     
     <title>
-          
-            小蜗熊的蜂蜜罐
+        
+            塔板理论简介及色谱流出曲线方程的推导 | 小蜗熊的蜂蜜罐
         
     </title>
     
@@ -294,214 +294,16 @@
 </aside>
   
   <main id="main-contain" class="mdui-container mdui-m-t-5">
+    <article id="article" class="mdui-card mdui-p-b-2 mdui-m-b-5">
+  <header class="mdui-card-media">
     
-    <article class="mdui-card mdui-m-b-5 mdui-hoverable">    
-      
-      
-        <div class="mdui-card-media">
-          
-            <img src = /images/33478/LAMP.webp >
-          
-          <div class="mdui-card-media-covered">
-            <div class="post-header"> 
-  <a class="post-header-title" href="/t-33478/">Ubuntu16.04下的LAMP环境搭建</a>
+    
+      <div class="post-header"> 
+  <a class="post-header-title" href="/t-39720/">塔板理论简介及色谱流出曲线方程的推导</a>
   <div class="post-header-meta">
     <span>
       <span class="iconfont icon-calendar"></span>
-      发布于:&nbsp;2017-09-03
-    </span>
-    <span>
-      <span class="iconfont icon-calendar-check"></span>
-      更新于:&nbsp;2020-03-21
-    </span>
-    <span>
-      <span class="iconfont icon-folder"></span>
-      分类于:&nbsp;<a class="category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a> > <a class="category-link" href="/categories/%E6%8A%80%E6%9C%AF/Linux/">Linux</a>
-    </span>
-    
-  </div>
-</div>   
-    
-
-
-
-          </div>
-        </div>
-      
-      
-  <div class="tag-line-space"></div>
-
-      
-      <div id="achieve-abstract" class="mdui-card-content mdui-p-x-4">
-        <div class="post-abstract mdui-typo ">
-          
-            <h1 id="Ubuntu16-04下的LAMP环境搭建"><a href="#Ubuntu16-04下的LAMP环境搭建" class="headerlink" title="Ubuntu16.04下的LAMP环境搭建"></a>Ubuntu16.04下的LAMP环境搭建</h1><h2 id="基本设置"><a href="#基本设置" class="headerlink" title="基本设置"></a>基本设置</h2><h3 id="1-开启root账号SSH登录"><a href="#1-开启root账号SSH登录" class="headerlink" title="1.开启root账号SSH登录"></a>1.开启root账号SSH登录</h3><p>腾讯云的Ubuntu默认账号是ubuntu，且无法以root身份远程登录，首先需要手动开启远程登录root账号并设置root密码。 </p>
-<pre><code>vim /etc/ssh.sshd_config
-
-
-
-- PermitRootLogin prohibit-password
-+ PermitRootLogin yes</code></pre>
-          
-          </div>
-        
-        <div style="text-align:center;">
-          <a class="post-readmore mdui-btn mdui-ripple mdui-btn-raised" href="/t-33478/">阅读更多</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="mdui-card mdui-m-b-5 mdui-hoverable">    
-      
-      
-        <div class="post-header"> 
-  <a class="post-header-title" href="/t-1358/">Windows10下Edge浏览器等UWP应用无法连接到代理服务器的解决方案</a>
-  <div class="post-header-meta">
-    <span>
-      <span class="iconfont icon-calendar"></span>
-      发布于:&nbsp;2017-08-15
-    </span>
-    <span>
-      <span class="iconfont icon-calendar-check"></span>
-      更新于:&nbsp;2020-02-10
-    </span>
-    <span>
-      <span class="iconfont icon-folder"></span>
-      分类于:&nbsp;<a class="category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a> > <a class="category-link" href="/categories/%E6%8A%80%E6%9C%AF/Windows/">Windows</a>
-    </span>
-    
-  </div>
-</div>   
-    
-
-
-
-      
-      
-  <div class="tag-line-space"></div>
-
-      
-      <div id="achieve-abstract" class="mdui-card-content mdui-p-x-4">
-        <div class="post-abstract mdui-typo ">
-          
-            <h1 id="Edge浏览器无法连接到代理服务器"><a href="#Edge浏览器无法连接到代理服务器" class="headerlink" title="Edge浏览器无法连接到代理服务器"></a>Edge浏览器无法连接到代理服务器</h1><p>Edge浏览器在全局代理模式下会出现无法连接到代理服务器的情况，除了使用PAC模式外还可以通过解除回环限制来解决。</p>
-<p>这是由于Edge属于<strong>UWP</strong>(Universal Windows Platform)应用，为了限制软件间的相互通信，UWP应用是无法访问 localhost (127.0....
-          
-          </div>
-        
-        <div style="text-align:center;">
-          <a class="post-readmore mdui-btn mdui-ripple mdui-btn-raised" href="/t-1358/">阅读更多</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="mdui-card mdui-m-b-5 mdui-hoverable">    
-      
-      
-        <div class="post-header"> 
-  <a class="post-header-title" href="/t-47161/">Ubuntu下系统及应用的代理设置</a>
-  <div class="post-header-meta">
-    <span>
-      <span class="iconfont icon-calendar"></span>
-      发布于:&nbsp;2017-07-09
-    </span>
-    <span>
-      <span class="iconfont icon-calendar-check"></span>
-      更新于:&nbsp;2020-03-21
-    </span>
-    <span>
-      <span class="iconfont icon-folder"></span>
-      分类于:&nbsp;<a class="category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a> > <a class="category-link" href="/categories/%E6%8A%80%E6%9C%AF/Linux/">Linux</a>
-    </span>
-    
-  </div>
-</div>   
-    
-
-
-
-      
-      
-  <div class="tag-line-space"></div>
-
-      
-      <div id="achieve-abstract" class="mdui-card-content mdui-p-x-4">
-        <div class="post-abstract mdui-typo ">
-          
-            <h1 id="后端设置"><a href="#后端设置" class="headerlink" title="后端设置"></a>后端设置</h1><h2 id="安装ss-libev"><a href="#安装ss-libev" class="headerlink" title="安装ss-libev"></a>安装ss-libev</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt install shadowsocks-libev</span><br></pre></td></tr></table></figure>
-
-<p>对于14.04和16.04需从PPA安装</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install software-properties-common -y</span><br><span class="line">sudo add-apt-repository ppa:max-c-lv/shadowsocks-libev -y</span><br></pre></td></tr></table></figure>
-          
-          </div>
-        
-        <div style="text-align:center;">
-          <a class="post-readmore mdui-btn mdui-ripple mdui-btn-raised" href="/t-47161/">阅读更多</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="mdui-card mdui-m-b-5 mdui-hoverable">    
-      
-      
-        <div class="mdui-card-media">
-          
-            <img src = /images/57950/EFI.png >
-          
-          <div class="mdui-card-media-covered">
-            <div class="post-header"> 
-  <a class="post-header-title" href="/t-57950/">删除EFI分区</a>
-  <div class="post-header-meta">
-    <span>
-      <span class="iconfont icon-calendar"></span>
-      发布于:&nbsp;2017-06-09
-    </span>
-    <span>
-      <span class="iconfont icon-calendar-check"></span>
-      更新于:&nbsp;2020-03-21
-    </span>
-    <span>
-      <span class="iconfont icon-folder"></span>
-      分类于:&nbsp;<a class="category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a> > <a class="category-link" href="/categories/%E6%8A%80%E6%9C%AF/Windows/">Windows</a>
-    </span>
-    
-  </div>
-</div>   
-    
-
-
-
-          </div>
-        </div>
-      
-      
-  <div class="tag-line-space"></div>
-
-      
-      <div id="achieve-abstract" class="mdui-card-content mdui-p-x-4">
-        <div class="post-abstract mdui-typo ">
-          
-            <p>管理员身份运行cmd</p>
-<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">diskpart</span></span><br></pre></td></tr></table></figure>
-<p>在 <code>DISKPART&gt;</code> 提示符下</p>
-          
-          </div>
-        
-        <div style="text-align:center;">
-          <a class="post-readmore mdui-btn mdui-ripple mdui-btn-raised" href="/t-57950/">阅读更多</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="mdui-card mdui-m-b-5 mdui-hoverable">    
-      
-      
-        <div class="post-header"> 
-  <a class="post-header-title" href="/t-29708/">编辑技巧备忘</a>
-  <div class="post-header-meta">
-    <span>
-      <span class="iconfont icon-calendar"></span>
-      发布于:&nbsp;2017-02-09
+      发布于:&nbsp;2020-04-29
     </span>
     <span>
       <span class="iconfont icon-calendar-check"></span>
@@ -509,8 +311,14 @@
     </span>
     <span>
       <span class="iconfont icon-folder"></span>
-      分类于:&nbsp;<a class="category-link" href="/categories/%E5%A4%87%E5%BF%98/">备忘</a>
+      分类于:&nbsp;<a class="category-link" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a>
     </span>
+    
+      <span>
+        <span class="iconfont icon-eye"></span>
+        阅读次数:&nbsp;
+        <span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span>
+      </span>
     
   </div>
 </div>   
@@ -518,85 +326,175 @@
 
 
 
-      
-      
-  <div class="tag-line-space"></div>
-
-      
-      <div id="achieve-abstract" class="mdui-card-content mdui-p-x-4">
-        <div class="post-abstract mdui-typo ">
-          
-            <p>参见左侧目录或使用<code>Ctrl+F</code>进行搜索</p>
-<h1 id="Latex"><a href="#Latex" class="headerlink" title="Latex"></a>Latex</h1><h2 id="Mathjax公式标号与引用"><a href="#Mathjax公式标号与引用" class="headerlink" title="Mathjax公式标号与引用"></a>Mathjax公式标号与引用</h2><p>MathJax的公式语法与LaTex相同，使用<code>\tag{yourtag}</code>给公式添加编号，使用<code>\label{somelabel}</code>添加引用标签。</p>
-<p>代码：</p>
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="formula">$$ a = x^2-y^3 <span class="tag">\<span class="name">tag</span><span class="string">&#123;eq1&#125;</span></span> <span class="tag">\<span class="name">label</span><span class="string">&#123;eq1&#125;</span></span> $$</span></span><br></pre></td></tr></table></figure>
-<p><strong>其中<code>\label</code>仅对Mathjax有效，对于Katex无效</strong></p>
-          
-          </div>
-        
-        <div style="text-align:center;">
-          <a class="post-readmore mdui-btn mdui-ripple mdui-btn-raised" href="/t-29708/">阅读更多</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="mdui-card mdui-m-b-5 mdui-hoverable">    
-      
-      
-        <div class="mdui-card-media">
-          
-            <img src = /images/51882/dst.webp >
-          
-          <div class="mdui-card-media-covered">
-            <div class="post-header"> 
-  <a class="post-header-title" href="/t-51882/">饥荒联机版(Don&#39;t Starve Together)指令大全</a>
-  <div class="post-header-meta">
-    <span>
-      <span class="iconfont icon-calendar"></span>
-      发布于:&nbsp;2016-12-29
-    </span>
-    <span>
-      <span class="iconfont icon-calendar-check"></span>
-      更新于:&nbsp;2020-03-21
-    </span>
-    <span>
-      <span class="iconfont icon-folder"></span>
-      分类于:&nbsp;<a class="category-link" href="/categories/%E6%B8%B8%E6%88%8F/">游戏</a>
-    </span>
+    
+    
+    <div class="mdui-card-menu">
+    
+      <button class="mdui-btn mdui-btn-icon mdui-text-color-teal" mdui-menu="{target: '#share_menu', align: 'right'}"><i class="iconfont icon-share"></i></button>
+      <ul class="mdui-menu" id="share_menu">
+        <li class="mdui-menu-item">
+          <a href="http://service.weibo.com/share/share.php?appkey=&title=塔板理论简介及色谱流出曲线方程的推导&url=https://garybear.cn/t-39720/&pic=https://garybear.cn/images/favicon.ico&searchPic=false&style=simple" target="_blank" class="mdui-ripple">分享到 Weibo</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://twitter.com/intent/tweet?text=塔板理论简介及色谱流出曲线方程的推导&url=https://garybear.cn/t-39720/&via=机智小蜗熊" target="_blank" class="mdui-ripple">分享到 Twitter</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://garybear.cn/t-39720/" target="_blank" class="mdui-ripple">分享到 Facebook</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://plus.google.com/share?url=https://garybear.cn/t-39720/" target="_blank" class="mdui-ripple">分享到 Google+</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://garybear.cn/t-39720/&title=塔板理论简介及色谱流出曲线方程的推导" target="_blank" class="mdui-ripple">分享到 LinkedIn</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="http://connect.qq.com/widget/shareqq/index.html?site=小蜗熊的蜂蜜罐&title=塔板理论简介及色谱流出曲线方程的推导&summary=人间五十年，岂有长生不灭者？&pics=https://garybear.cn/images/favicon.ico&url=https://garybear.cn/t-39720/" target="_blank" class="mdui-ripple">分享到 QQ</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://telegram.me/share/url?url=https://garybear.cn/t-39720/&text=塔板理论简介及色谱流出曲线方程的推导" target="_blank" class="mdui-ripple">分享到 Telegram</a>
+        </li>
+      </ul>
     
   </div>
-</div>   
-    
-
-
-
-          </div>
-        </div>
-      
-      
-  <div class="tag-line-space"></div>
-
-      
-      <div id="achieve-abstract" class="mdui-card-content mdui-p-x-4">
-        <div class="post-abstract mdui-typo ">
-          
-            <p>更多详细内容参见 <a href="http://dontstarve.wikia.com/wiki/Don%27t_Starve_Game_Wiki" target="_blank" rel="noopener">饥荒维基</a></p>
-          
-          </div>
-        
-        <div style="text-align:center;">
-          <a class="post-readmore mdui-btn mdui-ripple mdui-btn-raised" href="/t-51882/">阅读更多</a>
-        </div>
-      </div>
-    </article>
-
-
-
-  <nav style="text-align: center;">
-    <div class="pagination">
-      <a class="extend prev" rel="prev" href="/page/3/"><i class="iconfont icon-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span>
+  </header>
+  
+  
+    <div class="adsense-contain">
+      <!-- Banner Ads -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5888225880131847"
+     data-ad-slot="3949852758"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
     </div>
+  
+  
+  
+  
+  <div class="mdui-card-content mdui-typo mdui-p-x-4">
+    <p>塔板理论是色谱分析中的一种理论，可以用于解释色谱曲线的形状及其影响因素。塔板理论的思路是将色谱柱类比为蒸馏塔，将色谱分离过程类比为蒸馏过程。具体过程是把色谱柱分成许多小段(即理论塔板)，每个理论塔板内都存在固定相与流动相。经过多次分配平衡，不同分配系数的组分会先后分离出来。根据塔板理论，待分离组分流出色谱柱时的浓度与时间之间符合二项分布，当塔板数很高时，二项分布趋向于正态分布。这一曲线方程称作色谱流出曲线方程。</p>
+<a id="more"></a>
+
+<h1 id="塔板理论的基本假设"><a href="#塔板理论的基本假设" class="headerlink" title="塔板理论的基本假设"></a>塔板理论的基本假设</h1><ul>
+<li>流动相进入色谱柱不是连续的而是脉动式的，每次进入量未一个塔板体积</li>
+<li>初始时所有组分存在与0号塔板上</li>
+<li>组分在两相内瞬间达到平衡</li>
+<li>塔板间无纵向扩散(柱向扩散)</li>
+<li>所有塔板上的分配系数为常数</li>
+</ul>
+<h1 id="色谱流出曲线方程的推导"><a href="#色谱流出曲线方程的推导" class="headerlink" title="色谱流出曲线方程的推导"></a>色谱流出曲线方程的推导</h1><p>流动相在通过色谱柱的过程可以视作一个塔板体积的单向多次运动，每次运动中某一分子可能处于流动相或是固定相。</p>
+<p>在塔板上某一分子出现在流动相中的概率等于流动相中分子数与全部分子数之比，即：<br>$$<br>P_m=\frac{M_m}{M_m+M_s}=\frac{1}{1+\frac{M_s}{M_m}}=\frac{1}{1+\kappa} \tag{1}<br>$$<br>其中$\kappa$是平衡时组分在固定相和流动相中的物质的量之比，因此分子出现在固定相中的概率为:<br>$$<br>P_s=1-P_m=\frac{\kappa}{1+\kappa}<br>$$<br>设流动相运动r次，若要使某分子出现在第n个塔板上，需要在这r次运动中有n次位于流动相中，r-n次位于固定相中。概率为：<br>$$<br>P=P_{m}^{n}\cdot(1-P_m)^{r-n}=\frac{\kappa^{r-n}}{(1+\kappa)^r}<br>$$<br>对于n和r存在以下关系：<br>$$<br>n=\frac{L}{H} \tag{2}<br>$$<br>$$<br>r=\frac{V}{Hqw} \tag{3}<br>$$<br>其中L为色谱柱长度，H为塔板间隔长度，V为通过色谱柱的流动相体积，q为柱内横截面积，w为流动相横截面积所占比例。</p>
+<p>在r次运动中n次位于流动相相当于一个排列组合问题，所以某分子出现在第n个塔板上的概率为<br>$$<br>P(r,n)=P \cdot C^n_r=\frac{\kappa^{r-n} \cdot r!}{(1+\kappa)^r \cdot n! \cdot (r-n)!}<br>$$<br>将上式两侧同时取对数可得<br>$$<br>lnP(r,n)=nlnP_{m}+(r-n)ln(1-P_m)+ln(r!)-ln(n!)-ln(r-n!)<br>$$<br>使用斯特林公式替换掉阶乘后可得：<br>$$<br>lnP(r,n)=nlnP_{m}+(r-n)ln(1-P_m)+rlnr-nlnn-(r-n)ln(r-n)<br>$$<br>对r求偏导数可得：<br>$$<br>\frac{\partial lnP(r,n)}{\partial r}=lnr-ln(r-n)+ln(1-P_m)<br>$$<br>令偏导数为0，可得在$r=n/P_m$处曲线取得极值<br>继续对$lnP(r,n)$取二阶偏导数可得：<br>$$<br>\frac{\partial^2 lnP(r,n)}{\partial r^2}=\frac{1}{r}-\frac{1}{r-n}<br>$$<br>在极值点处二阶导数取值为：<br>$$<br>\frac{\partial^2 lnP(r,n)}{\partial r^2} \Bigg|_{r=n/P_m} = \frac{P_m^2}{n(1-P_m)}<br>$$</p>
+<p>将$lnP(r,n)$在极值点$r=n/P_m$处进行二阶泰勒展开可得：<br>$$<br>\begin{split}<br>  lnP(r,n) &amp;= lnP(\frac{n}{P_m} ,n) + \frac{r-\frac{n}{P_m}}{1!} \cdot \frac{\partial lnP(r,n)}{\partial r} + \frac{(r-\frac{n}{P_m})^2}{2!} \cdot \frac{\partial^2 lnP(r,n)}{\partial r^2} + o \left[\left(r-\frac{n}{P_m}\right)^3 \right] \\<br>  &amp;= lnP(\frac{n}{P_m},n) + 0 - \frac{(r-\frac{n}{P_m})^2}{2!} \cdot \frac{P_m^2}{n(1-P_m)} + o \left[\left(r-\frac{n}{P_m}\right)^3 \right] \\<br>\end{split}<br>$$<br>两侧同时取e的对数可得：<br>$$<br>P(r,n) = P(\frac{n}{P_m} ,n) \cdot exp\left[ - \frac{(rP_m-n)^2}{2n(1-P_m)} \right]<br>$$</p>
+<p>将$(1)(2)(3)$式代入上式，同时令$V_R=nHqw(1+\kappa)$，得：</p>
+<p>$$<br>P(r,n) = P(\frac{n}{P_m} ,n) \cdot exp\left[ - \frac{(V-V_R)^2}{2HL\kappa(1+\kappa)q^2w^2} \right] \tag{*}<br>$$</p>
+<p>其中$V_R$为保留体积，指柱后浓度达到最大时流过的流动相体积<br>由于体积无穷大时一定会出现：</p>
+<p>$$<br>\int_{0}^{+\infty}P(r,n)dV=1<br>$$</p>
+<p>带入$(*)$式可得：</p>
+<p>$$<br>\int_{0}^{+\infty}P(\frac{n}{P_m},n)\cdot exp\left[ - \frac{(V-V_R)^2}{2HL\kappa(1+\kappa)q^2w^2} \right]dV=P(\frac{n}{P_m},n)\cdot\sqrt{2\pi HLq^2w^2\kappa(1+\kappa)}=1<br>$$</p>
+<p>整理后再与$(*)$式联立，并用浓度替换单个分子的概率可得：</p>
+<p>$$<br>c=\frac{m}{\sqrt{2\pi HLq^2w^2\kappa(1+\kappa)}}exp\left[ - \frac{(V-V_R)^2}{2HL\kappa(1+\kappa)q^2w^2} \right] \tag{**}<br>$$</p>
+<p>或者写成下面的形式：</p>
+<p>$$<br>c=\frac{m\sqrt{n}}{V_R\sqrt{2\pi}}exp\left[ - \frac{n(V-V_R)^2}{2{V_R}^2} \right] \tag{***}<br>$$</p>
+<p>从$(***)$式的形式中可以看出，色谱流出曲线是以$V_R$为对称轴的正态分布曲线。</p>
+
+  </div>
+  <!--文末结束语-->
+  
+    <div style="text-align:center;color: #ccc;font-size:24px;"> --- 本文结束 <i class="iconfont icon-heartbeat" style="font-size:24px;"></i> The End --- </div>
+  
+  <!--页脚广告-->
+  
+    <div class="adsense-contain">
+      <!-- Footer Ads -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5888225880131847"
+     data-ad-slot="2212253348"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    </div>
+  
+  <div class="mdui-divider"></div>
+  
+  <nav>
+    
+    
+      <a rel="next" class="post-nav-item mdui-float-right" href="/t-14321/">
+        <span>使用代理服务播放网易云下架音乐</span>
+        <i class="iconfont icon-angle-right"></i>
+      </a>
+    
   </nav>
+</article>
+
+
+
+
+  <div class="toc-button"  style="z-index: 100;">
+    <button class="mdui-fab mdui-ripple mdui-color-teal" mdui-menu="{target: '#toc'}"><i class="iconfont icon-list"></i></button>
+    <ul class="mdui-menu" id="toc">
+      <li class="mdui-menu-item">
+        <a href="/t-39720/" id="toc-header" class="mdui-ripple">文章目录</a>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#塔板理论的基本假设"><span class="toc-number">1.</span> <span class="toc-text">塔板理论的基本假设</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#色谱流出曲线方程的推导"><span class="toc-number">2.</span> <span class="toc-text">色谱流出曲线方程的推导</span></a></li></ol>
+      </li>
+    </ul>
+  </div>
+
+
+
+    <div id="comment" class="mdui-card mdui-p-a-2 mdui-m-b-5">
+      <div class="mdui-tab" mdui-tab>
+        
+          <a href="#comment-tab0" class="mdui-ripple">gitalk</a>
+        
+          <a href="#comment-tab1" class="mdui-ripple">livere</a>
+        
+      </div>
+      
+        <div id="comment-tab0" class="mdui-p-a-2">
+          <div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
+<script>
+  var gitalk = new Gitalk({
+    clientID: 'f3866882707e12e74c4a',
+    clientSecret: '04a037afee00b94e4b55e474aa270ac136a8c952',
+    repo: 'kb1000fx.github.io',
+    owner: 'kb1000fx',
+    admin: ['kb1000fx'],
+    id:  md5(location.pathname) ,
+    distractionFreeMode: 'true',
+  });
+  gitalk.render('gitalk-container');
+</script>
+        </div>
+      
+        <div id="comment-tab1" class="mdui-p-a-2">
+          <div id="lv-container" data-id="city" data-uid="MTAyMC80OTI2OS8yNTc2Mw==">
+  <script type="text/javascript">
+    (function (d, s) {
+      var j, e = d.getElementsByTagName(s)[0];
+      if (typeof LivereTower === 'function') { return; }
+      j = d.createElement(s);
+      j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+      j.async = true;
+      e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+  </script>
+  <noscript>Please enable JavaScript to view the comments powered by LiveRe.</noscript>
+</div>
+        </div>
+      
+    </div>
 
   </main>
   <footer id="footer" class="mdui-text-center mdui-m-t-5 mdui-p-b-2 mdui-p-t-4 mdui-color-theme">
@@ -644,6 +542,12 @@
 
 
 
+
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({
+        startOnLoad: true,
+        theme: "default"
+    });</script>
 
 
 

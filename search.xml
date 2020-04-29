@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>塔板理论简介及色谱流出曲线方程的推导</title>
+    <url>/t-39720/</url>
+    <content><![CDATA[<p>塔板理论是色谱分析中的一种理论，可以用于解释色谱曲线的形状及其影响因素。塔板理论的思路是将色谱柱类比为蒸馏塔，将色谱分离过程类比为蒸馏过程。具体过程是把色谱柱分成许多小段(即理论塔板)，每个理论塔板内都存在固定相与流动相。经过多次分配平衡，不同分配系数的组分会先后分离出来。根据塔板理论，待分离组分流出色谱柱时的浓度与时间之间符合二项分布，当塔板数很高时，二项分布趋向于正态分布。这一曲线方程称作色谱流出曲线方程。</p>
+<a id="more"></a>
+
+<h1 id="塔板理论的基本假设"><a href="#塔板理论的基本假设" class="headerlink" title="塔板理论的基本假设"></a>塔板理论的基本假设</h1><ul>
+<li>流动相进入色谱柱不是连续的而是脉动式的，每次进入量未一个塔板体积</li>
+<li>初始时所有组分存在与0号塔板上</li>
+<li>组分在两相内瞬间达到平衡</li>
+<li>塔板间无纵向扩散(柱向扩散)</li>
+<li>所有塔板上的分配系数为常数</li>
+</ul>
+<h1 id="色谱流出曲线方程的推导"><a href="#色谱流出曲线方程的推导" class="headerlink" title="色谱流出曲线方程的推导"></a>色谱流出曲线方程的推导</h1><p>流动相在通过色谱柱的过程可以视作一个塔板体积的单向多次运动，每次运动中某一分子可能处于流动相或是固定相。</p>
+<p>在塔板上某一分子出现在流动相中的概率等于流动相中分子数与全部分子数之比，即：<br>$$<br>P_m=\frac{M_m}{M_m+M_s}=\frac{1}{1+\frac{M_s}{M_m}}=\frac{1}{1+\kappa} \tag{1}<br>$$<br>其中$\kappa$是平衡时组分在固定相和流动相中的物质的量之比，因此分子出现在固定相中的概率为:<br>$$<br>P_s=1-P_m=\frac{\kappa}{1+\kappa}<br>$$<br>设流动相运动r次，若要使某分子出现在第n个塔板上，需要在这r次运动中有n次位于流动相中，r-n次位于固定相中。概率为：<br>$$<br>P=P_{m}^{n}\cdot(1-P_m)^{r-n}=\frac{\kappa^{r-n}}{(1+\kappa)^r}<br>$$<br>对于n和r存在以下关系：<br>$$<br>n=\frac{L}{H} \tag{2}<br>$$<br>$$<br>r=\frac{V}{Hqw} \tag{3}<br>$$<br>其中L为色谱柱长度，H为塔板间隔长度，V为通过色谱柱的流动相体积，q为柱内横截面积，w为流动相横截面积所占比例。</p>
+<p>在r次运动中n次位于流动相相当于一个排列组合问题，所以某分子出现在第n个塔板上的概率为<br>$$<br>P(r,n)=P \cdot C^n_r=\frac{\kappa^{r-n} \cdot r!}{(1+\kappa)^r \cdot n! \cdot (r-n)!}<br>$$<br>将上式两侧同时取对数可得<br>$$<br>lnP(r,n)=nlnP_{m}+(r-n)ln(1-P_m)+ln(r!)-ln(n!)-ln(r-n!)<br>$$<br>使用斯特林公式替换掉阶乘后可得：<br>$$<br>lnP(r,n)=nlnP_{m}+(r-n)ln(1-P_m)+rlnr-nlnn-(r-n)ln(r-n)<br>$$<br>对r求偏导数可得：<br>$$<br>\frac{\partial lnP(r,n)}{\partial r}=lnr-ln(r-n)+ln(1-P_m)<br>$$<br>令偏导数为0，可得在$r=n/P_m$处曲线取得极值<br>继续对$lnP(r,n)$取二阶偏导数可得：<br>$$<br>\frac{\partial^2 lnP(r,n)}{\partial r^2}=\frac{1}{r}-\frac{1}{r-n}<br>$$<br>在极值点处二阶导数取值为：<br>$$<br>\frac{\partial^2 lnP(r,n)}{\partial r^2} \Bigg|_{r=n/P_m} = \frac{P_m^2}{n(1-P_m)}<br>$$</p>
+<p>将$lnP(r,n)$在极值点$r=n/P_m$处进行二阶泰勒展开可得：<br>$$<br>\begin{split}<br>  lnP(r,n) &amp;= lnP(\frac{n}{P_m} ,n) + \frac{r-\frac{n}{P_m}}{1!} \cdot \frac{\partial lnP(r,n)}{\partial r} + \frac{(r-\frac{n}{P_m})^2}{2!} \cdot \frac{\partial^2 lnP(r,n)}{\partial r^2} + o \left[\left(r-\frac{n}{P_m}\right)^3 \right] \\<br>  &amp;= lnP(\frac{n}{P_m},n) + 0 - \frac{(r-\frac{n}{P_m})^2}{2!} \cdot \frac{P_m^2}{n(1-P_m)} + o \left[\left(r-\frac{n}{P_m}\right)^3 \right] \\<br>\end{split}<br>$$<br>两侧同时取e的对数可得：<br>$$<br>P(r,n) = P(\frac{n}{P_m} ,n) \cdot exp\left[ - \frac{(rP_m-n)^2}{2n(1-P_m)} \right]<br>$$</p>
+<p>将$(1)(2)(3)$式代入上式，同时令$V_R=nHqw(1+\kappa)$，得：</p>
+<p>$$<br>P(r,n) = P(\frac{n}{P_m} ,n) \cdot exp\left[ - \frac{(V-V_R)^2}{2HL\kappa(1+\kappa)q^2w^2} \right] \tag{*}<br>$$</p>
+<p>其中$V_R$为保留体积，指柱后浓度达到最大时流过的流动相体积<br>由于体积无穷大时一定会出现：</p>
+<p>$$<br>\int_{0}^{+\infty}P(r,n)dV=1<br>$$</p>
+<p>带入$(*)$式可得：</p>
+<p>$$<br>\int_{0}^{+\infty}P(\frac{n}{P_m},n)\cdot exp\left[ - \frac{(V-V_R)^2}{2HL\kappa(1+\kappa)q^2w^2} \right]dV=P(\frac{n}{P_m},n)\cdot\sqrt{2\pi HLq^2w^2\kappa(1+\kappa)}=1<br>$$</p>
+<p>整理后再与$(*)$式联立，并用浓度替换单个分子的概率可得：</p>
+<p>$$<br>c=\frac{m}{\sqrt{2\pi HLq^2w^2\kappa(1+\kappa)}}exp\left[ - \frac{(V-V_R)^2}{2HL\kappa(1+\kappa)q^2w^2} \right] \tag{**}<br>$$</p>
+<p>或者写成下面的形式：</p>
+<p>$$<br>c=\frac{m\sqrt{n}}{V_R\sqrt{2\pi}}exp\left[ - \frac{n(V-V_R)^2}{2{V_R}^2} \right] \tag{***}<br>$$</p>
+<p>从$(***)$式的形式中可以看出，色谱流出曲线是以$V_R$为对称轴的正态分布曲线。</p>
+]]></content>
+      <categories>
+        <category>杂谈</category>
+      </categories>
+  </entry>
+  <entry>
     <title>使用代理服务播放网易云下架音乐</title>
     <url>/t-14321/</url>
     <content><![CDATA[<p>目前网易云上越来越多的音乐因为版权原因被下架，而且很多音乐也变成了vip才能播放（甚至包括大悲咒、国际歌这种音乐）。<br>在这里我们可以使用 <a href="https://github.com/nondanee/UnblockNeteaseMusic" target="_blank" rel="noopener">UnblockNeteaseMusic</a> 来搭建一个网易云代理服务，从而解锁因下架变成灰色的音乐或是需要vip才能播放的音乐。</p>
@@ -2755,6 +2788,12 @@ Ubuntu默认未开启Rewrite支持需手动开启，在此只是简单介绍，�
 <p>$$<br>a+y^3 \stackrel{\eqref{eq1}}= x^2<br>$$</p>
 <p>或是使用<code>\ref{somelabel}</code>，结果：</p>
 <p>$$ a+y^3 \stackrel{\ref{eq1}}= x^2 $$</p>
+<h2 id="Mathjax公式等号对齐-带编号"><a href="#Mathjax公式等号对齐-带编号" class="headerlink" title="Mathjax公式等号对齐(带编号)"></a>Mathjax公式等号对齐(带编号)</h2><p>代码：</p>
+<figure class="highlight tex"><table><tr><td class="code"><pre><span class="line"><span class="formula">$$</span></span><br><span class="line"><span class="formula"><span class="tag">\<span class="name">begin</span><span class="string">&#123;align&#125;</span></span></span></span><br><span class="line"><span class="formula">  x+1 &amp;= y+2 <span class="tag">\<span class="name">\</span></span><span class="tag">\<span class="name">\</span></span></span></span><br><span class="line"><span class="formula">  &amp;= z+3 <span class="tag">\<span class="name">\</span></span><span class="tag">\<span class="name">\</span></span></span></span><br><span class="line"><span class="formula">  &amp;= w+4</span></span><br><span class="line"><span class="formula"><span class="tag">\<span class="name">end</span><span class="string">&#123;align&#125;</span></span></span></span><br><span class="line"><span class="formula">$$</span></span><br></pre></td></tr></table></figure>
+<p>效果：<br>$$<br>\begin{align}<br>  x+1 &amp;= y+2 \\<br>  &amp;= z+3 \\<br>  &amp;= w+4<br>\end{align}<br>$$</p>
+<h2 id="Mathjax公式等号对齐-无编号"><a href="#Mathjax公式等号对齐-无编号" class="headerlink" title="Mathjax公式等号对齐(无编号)"></a>Mathjax公式等号对齐(无编号)</h2><p>代码：</p>
+<figure class="highlight tex"><table><tr><td class="code"><pre><span class="line"><span class="formula">$$</span></span><br><span class="line"><span class="formula"><span class="tag">\<span class="name">begin</span><span class="string">&#123;split&#125;</span></span></span></span><br><span class="line"><span class="formula">  x+1 &amp;= y+2 <span class="tag">\<span class="name">\</span></span><span class="tag">\<span class="name">\</span></span></span></span><br><span class="line"><span class="formula">  &amp;= z+3 <span class="tag">\<span class="name">\</span></span><span class="tag">\<span class="name">\</span></span></span></span><br><span class="line"><span class="formula">  &amp;= w+4</span></span><br><span class="line"><span class="formula"><span class="tag">\<span class="name">end</span><span class="string">&#123;split&#125;</span></span></span></span><br><span class="line"><span class="formula">$$</span></span><br></pre></td></tr></table></figure>
+<p>效果：<br>$$<br>\begin{split}<br>  x+1 &amp;= y+2 \\<br>  &amp;= z+3 \\<br>  &amp;= w+4<br>\end{split}<br>$$</p>
 <h2 id="Katex方程组左对齐"><a href="#Katex方程组左对齐" class="headerlink" title="Katex方程组左对齐"></a>Katex方程组左对齐</h2><p>代码：</p>
 <figure class="highlight tex"><table><tr><td class="code"><pre><span class="line"><span class="formula">$$</span></span><br><span class="line"><span class="formula">  <span class="tag">\<span class="name">begin</span><span class="string">&#123;cases&#125;</span></span></span></span><br><span class="line"><span class="formula">    x=<span class="tag">\<span class="name">dfrac</span><span class="string">&#123;3\pi&#125;</span><span class="string">&#123;2&#125;</span></span>(1+2t)<span class="tag">\<span class="name">cos</span></span>(<span class="tag">\<span class="name">dfrac</span><span class="string">&#123;3\pi&#125;</span><span class="string">&#123;2&#125;</span></span>(1+2t)), </span></span><br><span class="line"><span class="formula">    <span class="tag">\<span class="name">\</span></span><span class="tag">\<span class="name">\</span></span>             </span></span><br><span class="line"><span class="formula">    y=s, &amp; 0<span class="tag">\<span class="name">leq</span></span> s<span class="tag">\<span class="name">leq</span></span> L,|t|<span class="tag">\<span class="name">leq</span></span>1.</span></span><br><span class="line"><span class="formula">    <span class="tag">\<span class="name">\</span></span><span class="tag">\<span class="name">\</span></span></span></span><br><span class="line"><span class="formula">    z=<span class="tag">\<span class="name">dfrac</span><span class="string">&#123;3\pi&#125;</span><span class="string">&#123;2&#125;</span></span>(1+2t)<span class="tag">\<span class="name">sin</span></span>(<span class="tag">\<span class="name">dfrac</span><span class="string">&#123;3\pi&#125;</span><span class="string">&#123;2&#125;</span></span>(1+2t)), &amp;               </span></span><br><span class="line"><span class="formula">  <span class="tag">\<span class="name">end</span><span class="string">&#123;cases&#125;</span></span></span></span><br><span class="line"><span class="formula">$$</span></span><br></pre></td></tr></table></figure>
 
