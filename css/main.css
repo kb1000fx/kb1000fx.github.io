@@ -12,6 +12,14 @@ h1 {
 h2 {
   font-size: 1.5em !important;
 }
+/*表格边框*/
+table {
+  border-collapse: collapse;
+}
+tr td,
+th {
+  border: 1px solid #444;
+}
 /*Dark Mode*/
 .mdui-theme-layout-dark #footer {
   background: #212121;

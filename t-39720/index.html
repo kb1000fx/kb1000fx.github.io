@@ -269,6 +269,10 @@
                             Meadow说明文档
                         </a>
                     
+                        <a href="https://note.garybear.cn/" target="_blank" rel="noopener" class="mdui-list-item mdui-ripple">
+                            Gary Bear的笔记本
+                        </a>
+                    
                 </ul>
             </li>
         </ul>
@@ -307,7 +311,7 @@
     </span>
     <span>
       <span class="iconfont icon-calendar-check"></span>
-      更新于:&nbsp;2020-04-29
+      更新于:&nbsp;2020-05-17
     </span>
     <span>
       <span class="iconfont icon-folder"></span>
@@ -388,8 +392,8 @@
 </ul>
 <h1 id="色谱流出曲线方程的推导"><a href="#色谱流出曲线方程的推导" class="headerlink" title="色谱流出曲线方程的推导"></a>色谱流出曲线方程的推导</h1><p>流动相在通过色谱柱的过程可以视作一个塔板体积的单向多次运动，每次运动中某一分子可能处于流动相或是固定相。</p>
 <p>在塔板上某一分子出现在流动相中的概率等于流动相中分子数与全部分子数之比，即：<br>$$<br>P_m=\frac{M_m}{M_m+M_s}=\frac{1}{1+\frac{M_s}{M_m}}=\frac{1}{1+\kappa} \tag{1}<br>$$<br>其中$\kappa$是平衡时组分在固定相和流动相中的物质的量之比，因此分子出现在固定相中的概率为:<br>$$<br>P_s=1-P_m=\frac{\kappa}{1+\kappa}<br>$$<br>设流动相运动r次，若要使某分子出现在第n个塔板上，需要在这r次运动中有n次位于流动相中，r-n次位于固定相中。概率为：<br>$$<br>P=P_{m}^{n}\cdot(1-P_m)^{r-n}=\frac{\kappa^{r-n}}{(1+\kappa)^r}<br>$$<br>对于n和r存在以下关系：<br>$$<br>n=\frac{L}{H} \tag{2}<br>$$<br>$$<br>r=\frac{V}{Hqw} \tag{3}<br>$$<br>其中L为色谱柱长度，H为塔板间隔长度，V为通过色谱柱的流动相体积，q为柱内横截面积，w为流动相横截面积所占比例。</p>
-<p>在r次运动中n次位于流动相相当于一个排列组合问题，所以某分子出现在第n个塔板上的概率为<br>$$<br>P(r,n)=P \cdot C^n_r=\frac{\kappa^{r-n} \cdot r!}{(1+\kappa)^r \cdot n! \cdot (r-n)!}<br>$$<br>将上式两侧同时取对数可得<br>$$<br>lnP(r,n)=nlnP_{m}+(r-n)ln(1-P_m)+ln(r!)-ln(n!)-ln(r-n!)<br>$$<br>使用斯特林公式替换掉阶乘后可得：<br>$$<br>lnP(r,n)=nlnP_{m}+(r-n)ln(1-P_m)+rlnr-nlnn-(r-n)ln(r-n)<br>$$<br>对r求偏导数可得：<br>$$<br>\frac{\partial lnP(r,n)}{\partial r}=lnr-ln(r-n)+ln(1-P_m)<br>$$<br>令偏导数为0，可得在$r=n/P_m$处曲线取得极值<br>继续对$lnP(r,n)$取二阶偏导数可得：<br>$$<br>\frac{\partial^2 lnP(r,n)}{\partial r^2}=\frac{1}{r}-\frac{1}{r-n}<br>$$<br>在极值点处二阶导数取值为：<br>$$<br>\frac{\partial^2 lnP(r,n)}{\partial r^2} \Bigg|_{r=n/P_m} = \frac{P_m^2}{n(1-P_m)}<br>$$</p>
-<p>将$lnP(r,n)$在极值点$r=n/P_m$处进行二阶泰勒展开可得：<br>$$<br>\begin{split}<br>  lnP(r,n) &amp;= lnP(\frac{n}{P_m} ,n) + \frac{r-\frac{n}{P_m}}{1!} \cdot \frac{\partial lnP(r,n)}{\partial r} + \frac{(r-\frac{n}{P_m})^2}{2!} \cdot \frac{\partial^2 lnP(r,n)}{\partial r^2} + o \left[\left(r-\frac{n}{P_m}\right)^3 \right] \\<br>  &amp;= lnP(\frac{n}{P_m},n) + 0 - \frac{(r-\frac{n}{P_m})^2}{2!} \cdot \frac{P_m^2}{n(1-P_m)} + o \left[\left(r-\frac{n}{P_m}\right)^3 \right] \\<br>\end{split}<br>$$<br>两侧同时取e的对数可得：<br>$$<br>P(r,n) = P(\frac{n}{P_m} ,n) \cdot exp\left[ - \frac{(rP_m-n)^2}{2n(1-P_m)} \right]<br>$$</p>
+<p>在r次运动中n次位于流动相相当于一个排列组合问题，所以某分子出现在第n个塔板上的概率为<br>$$<br>P(r,n)=P \cdot C^n_r=\frac{\kappa^{r-n} \cdot r!}{(1+\kappa)^r \cdot n! \cdot (r-n)!}<br>$$<br>将上式两侧同时取对数可得<br>$$<br>\ln P(r,n)=n\ln P_{m}+(r-n)\ln (1-P_m)+\ln (r!)-\ln (n!)-\ln (r-n!)<br>$$<br>使用斯特林公式替换掉阶乘后可得：<br>$$<br>\ln P(r,n)=n\ln P_{m}+(r-n)\ln (1-P_m)+r\ln r-n\ln n-(r-n)\ln (r-n)<br>$$<br>对r求偏导数可得：<br>$$<br>\frac{\partial \ln P(r,n)}{\partial r}=\ln r-\ln (r-n)+\ln (1-P_m)<br>$$<br>令偏导数为0，可得在$r=n/P_m$处曲线取得极值<br>继续对$\ln P(r,n)$取二阶偏导数可得：<br>$$<br>\frac{\partial^2 \ln P(r,n)}{\partial r^2}=\frac{1}{r}-\frac{1}{r-n}<br>$$<br>在极值点处二阶导数取值为：<br>$$<br>\frac{\partial^2 \ln P(r,n)}{\partial r^2} \Bigg|_{r=n/P_m} = \frac{P_m^2}{n(1-P_m)}<br>$$</p>
+<p>将$\ln P(r,n)$在极值点$r=n/P_m$处进行二阶泰勒展开可得：<br>$$<br>\begin{split}<br>  \ln P(r,n) &amp;= \ln P(\frac{n}{P_m} ,n) + \frac{r-\frac{n}{P_m}}{1!} \cdot \frac{\partial \ln P(r,n)}{\partial r} + \frac{(r-\frac{n}{P_m})^2}{2!} \cdot \frac{\partial^2 \ln P(r,n)}{\partial r^2} + o \left[\left(r-\frac{n}{P_m}\right)^3 \right] \\<br>  &amp;= \ln P(\frac{n}{P_m},n) + 0 - \frac{(r-\frac{n}{P_m})^2}{2!} \cdot \frac{P_m^2}{n(1-P_m)} + o \left[\left(r-\frac{n}{P_m}\right)^3 \right] \\<br>\end{split}<br>$$<br>两侧同时取e的对数可得：<br>$$<br>P(r,n) = P(\frac{n}{P_m} ,n) \cdot exp\left[ - \frac{(rP_m-n)^2}{2n(1-P_m)} \right]<br>$$</p>
 <p>将$(1)(2)(3)$式代入上式，同时令$V_R=nHqw(1+\kappa)$，得：</p>
 <p>$$<br>P(r,n) = P(\frac{n}{P_m} ,n) \cdot exp\left[ - \frac{(V-V_R)^2}{2HL\kappa(1+\kappa)q^2w^2} \right] \tag{*}<br>$$</p>
 <p>其中$V_R$为保留体积，指柱后浓度达到最大时流过的流动相体积<br>由于体积无穷大时一定会出现：</p>
