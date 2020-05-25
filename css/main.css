@@ -254,7 +254,7 @@ pre .javascript .function {
 .post-header {
   text-align: center;
   position: relative;
-  padding: 40px 16px 0px 16px;
+  padding: 40px 16px 0px 32px;
 }
 .mdui-card-media-covered .post-header {
   padding: 24px;
@@ -725,4 +725,10 @@ pre .javascript .function {
   font-style: normal;
   color: #fff;
   background: #009688;
+}
+.math-fluid {
+  overflow-x: auto;
+}
+.mermaid {
+  overflow-x: auto;
 }

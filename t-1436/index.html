@@ -315,7 +315,7 @@
     </span>
     <span>
       <span class="iconfont icon-calendar-check"></span>
-      更新于:&nbsp;2020-03-21
+      更新于:&nbsp;2020-05-25
     </span>
     <span>
       <span class="iconfont icon-folder"></span>
@@ -388,22 +388,61 @@
     <p>特朗普曾表示，若道琼斯指数暴跌1000点，时任总统应被塞进加农炮射到太阳上。而最近美股动荡，一周之内多次熔断，特朗普终于实现了他曾立下的flag。那么就来帮大统领计算一下要如何才能用加农炮将他自己发射到太阳上。</p>
 <a id="more"></a>
 <h1 id="发射所需的炮口速度"><a href="#发射所需的炮口速度" class="headerlink" title="发射所需的炮口速度"></a>发射所需的炮口速度</h1><p>第一步先计算要以多大的速度飞出才能让大统领登陆太阳。</p>
-<p>首先以太阳为参考系，由特朗普绕太阳椭圆运动过程中近日点、远日点的机械能守恒可得：<br>$$<br>\frac{1}{2}m{v_2}^2-\frac{GM_Sm}{R_{max}}=\frac{1}{2}m{v_3}^{2}-\frac{GM_Sm}{R_{min}} \tag{I}<br>$$</p>
-<p>又由此过程中角动量守恒可得：<br>$$<br>mv_2R_{max}=mv_3R_{min} \tag{II}<br>$$<br>联立$(I)(II)$式可得 $v_2=5.85km/s$</p>
+<p>首先以太阳为参考系，由特朗普绕太阳椭圆运动过程中近日点、远日点的机械能守恒可得：</p>
+<div class="math-fluid">
+$$
+\frac{1}{2}m{v_2}^2-\frac{GM_Sm}{R_{max}}=\frac{1}{2}m{v_3}^{2}-\frac{GM_Sm}{R_{min}} \tag{I}
+$$
+</div>
+又由此过程中角动量守恒可得：
+<div class="math-fluid">
+$$
+mv_2R_{max}=mv_3R_{min} \tag{II}
+$$
+</div>
+联立$(I)(II)$式可得 $v_2=5.85km/s$
+
 <p>这里$v_2$是特朗普在远日点处，即刚脱离地球时相对于太阳的线速度。因为此速度远小于地球公转的线速度，所以发射时需采取与地球公转相反的方向，以此来抵消公转带来的影响。根据速度的合成分解可得远日点处相对地球的速度为：</p>
-<p>$$<br>v_1 = v_E-v_2 = 29.78km/s - 5.85km/s = 23.93km/s<br>$$</p>
-<p>随后再以地球为参考系，由机械能守恒<br>$$<br>\frac{1}{2}mv^2-\frac{GM_Em}{R_E}=\frac{1}{2}m{v_1}^{2}<br>$$</p>
-<p>可得发射时的炮口初速$v=26.42km/s$ </p>
+<div class="math-fluid">
+$$
+v_1 = v_E-v_2 = 29.78km/s - 5.85km/s = 23.93km/s
+$$
+</div>
+随后再以地球为参考系，由机械能守恒
+<div class="math-fluid">
+$$
+\frac{1}{2}mv^2-\frac{GM_Em}{R_E}=\frac{1}{2}m{v_1}^{2}
+$$
+</div>
+可得发射时的炮口初速$v=26.42km/s$ 
+
 <p>根据特朗普体重为243磅，即110.22千克，可求出发射所需的炮口动能为$3.847 \times 10^7 kJ$</p>
 <h1 id="发射药的用量"><a href="#发射药的用量" class="headerlink" title="发射药的用量"></a>发射药的用量</h1><p>然后再计算一下需要消耗多少的发射药才能获得如此高的动能。</p>
 <p>假设所使用的炮管为口径500mm的滑膛炮，发射药为硝化纤维-硝化甘油-硝基胍三基发射药。</p>
-<p>$$<br>\omega’ = \frac{E}{f} = \alpha \cdot \omega<br>$$</p>
-<p>因为发射药的定容火药力已知，可求出弹丸平动的动能需要35.3吨的三基发射药。根据火炮的一般能量分配规律，发射药释放的能量中仅有约32%转化为平动动能，因此估算总共需要约$110.3吨$的发射药。</p>
+<div class="math-fluid">
+$$
+\omega' = \frac{E}{f} = \alpha \cdot \omega
+$$
+</div>
+因为发射药的定容火药力已知，可求出弹丸平动的动能需要35.3吨的三基发射药。根据火炮的一般能量分配规律，发射药释放的能量中仅有约32%转化为平动动能，因此估算总共需要约$110.3吨$的发射药。
+
 <p>进一步可以得出药室容积约为$68.94m^3$，药室长度约为$351m$。</p>
 <h1 id="其他火炮参数"><a href="#其他火炮参数" class="headerlink" title="其他火炮参数"></a>其他火炮参数</h1><p>最后根据要求确定一下其他参数，设计出符合要求的炮身。</p>
 <p>假设发射过程为理想过程，整体可分为前期(未发生运动)、第一时期(发射药未燃烧尽)、第二时期(发射药已燃烧尽)三个阶段。<br>根据内弹道学原理，发射过程中满足以下方程组：</p>
-<p>$$<br>\begin{cases}<br> 形状函数:&amp;\psi=\chi\left(1+\lambda Z+\mu Z^2 \right) &amp; (1)\\\\<br> 燃速度方程:&amp;I_k \cdot dZ=p \cdot dt&amp; (2)\\\\<br> 运动方程:&amp;Sp \cdot dt=\varphi m \cdot dv&amp; (3)\\\\<br> 内弹道基本方程:&amp;Sp\left(l_\psi +l\right)=f\omega\psi-0.5\theta\varphi mv^2&amp; (4)\\\\<br> 速度微分:&amp;dl=v\cdot dt&amp; (5)<br>\end{cases}<br>$$</p>
-<p>参照其他滑膛炮，取$\chi=2.01$、$\lambda=-0.50$、$p_0=30Mpa$<br>使用Matlab对三个阶段进行模拟后可得:</p>
+<div class="math-fluid">
+$$
+\begin{cases}
+ 形状函数:&\psi=\chi\left(1+\lambda Z+\mu Z^2 \right) & (1)\\\\\\\\
+ 燃速度方程:&I_k \cdot dZ=p \cdot dt& (2)\\\\\\\\
+ 运动方程:&Sp \cdot dt=\varphi m \cdot dv& (3)\\\\\\\\
+ 内弹道基本方程:&Sp\left(l_\psi +l\right)=f\omega\psi-0.5\theta\varphi mv^2& (4)\\\\\\\\
+ 速度微分:&dl=v\cdot dt& (5)
+\end{cases}
+$$
+</div>
+参照其他滑膛炮，取$\chi=2.01$、$\lambda=-0.50$、$p_0=30Mpa$
+使用Matlab对三个阶段进行模拟后可得:
+
 <p>在发射后约$7ms$后膛压达到最大值，最大膛压约为$800Mpa$，此时速度约$10km/s$。<br>总发射时间约为$37ms$，发射全行程约为$720m$。 </p>
 <p><strong>综上所述，若想将特朗普发射至太阳上，需要炮管长720m、口径500mm、能承受800Mpa膛压的加农炮，并且需要消耗110吨发射药</strong></p>
 

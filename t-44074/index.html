@@ -315,7 +315,7 @@
     </span>
     <span>
       <span class="iconfont icon-calendar-check"></span>
-      更新于:&nbsp;2020-05-17
+      更新于:&nbsp;2020-05-25
     </span>
     <span>
       <span class="iconfont icon-folder"></span>
@@ -390,18 +390,43 @@
 <h1 id="麦克斯韦方程组积分形式的推导和证明"><a href="#麦克斯韦方程组积分形式的推导和证明" class="headerlink" title="麦克斯韦方程组积分形式的推导和证明"></a>麦克斯韦方程组积分形式的推导和证明</h1><h2 id="高斯定律"><a href="#高斯定律" class="headerlink" title="高斯定律"></a>高斯定律</h2><p><strong>高斯定律表示任意曲面的电通量之和等于其中包含的电荷数，证明了电场是有源场</strong></p>
 <p><strong>推导方式如下：</strong></p>
 <p>根据库仑定律及电场强度的定义，空间内某一点出电场强度为：</p>
-<p>$$<br>\vec{E} = \frac{q}{4 \pi \varepsilon \cdot r^2} \space \vec{e}_r<br>$$</p>
-<!--more-->
-<p>在空间内任取一封闭曲面，在曲面内任一点处放置一点电荷$q$，曲面电通量的微元为：</p>
-<p>$$<br>d \Phi =\vec{E} \cdot d \vec{S} = \frac{q}{4 \pi \varepsilon \cdot r^2} \space dS \space cos \theta = \frac{q}{4 \pi \varepsilon} \cdot\frac{d S^{\prime}}{ r^2}<br>$$</p>
-<p>电通量之和为：</p>
-<p>$$<br>\begin{split}<br>  \Phi &amp; = \oint_{S} \vec{E} \cdot d\vec{S}<br>  \\<br>  &amp; = \oint_{S} \frac{q}{4 \pi \varepsilon} \cdot\frac{d S^{\prime}}{r^2}<br>  \\<br>  &amp; = \frac{q}{4 \pi \varepsilon} \cdot\frac{4 \pi r^2}{r^2}<br>  \\<br>  &amp; = \frac{q}{\varepsilon}<br>\end{split}<br>$$</p>
+<div class="math-fluid">
+$$
+\vec{E} = \frac{q}{4 \pi \varepsilon \cdot r^2} \space \vec{e}_r
+$$
+</div>
+在空间内任取一封闭曲面，在曲面内任一点处放置一点电荷$q$，曲面电通量的微元为：
+<div class="math-fluid">
+$$
+d \Phi =\vec{E} \cdot d \vec{S} = \frac{q}{4 \pi \varepsilon \cdot r^2} \space dS \space cos \theta = \frac{q}{4 \pi \varepsilon} \cdot\frac{d S^{\prime}}{ r^2}
+$$
+</div>
+电通量之和为：
+<div class="math-fluid">
+$$ 
+\begin{split}
+  \Phi & = \oint_{S} \vec{E} \cdot d\vec{S}
+  \\\\
+  & = \oint_{S} \frac{q}{4 \pi \varepsilon} \cdot\frac{d S^{\prime}}{r^2}
+  \\\\
+  & = \frac{q}{4 \pi \varepsilon} \cdot\frac{4 \pi r^2}{r^2}
+  \\\\
+  & = \frac{q}{\varepsilon} 
+\end{split}
+$$
+</div>
+
 <h2 id="高斯磁定律"><a href="#高斯磁定律" class="headerlink" title="高斯磁定律"></a>高斯磁定律</h2><p><strong>高斯磁定律表示任意曲面的磁通量之和为零，证明了磁场是无源场</strong></p>
 <p><strong>推导方式如下：</strong></p>
 <p>根据毕奥-萨伐尔定律：</p>
-<p>$$d \vec{B} = \frac{\mu}{4 \pi} \cdot \frac{Id \vec{l} \times \vec{r}}{r^2}$$</p>
-<p>曲面的磁通量为：</p>
-<p>$$ \oint_{S} \vec{B} \cdot d\vec{S}= \frac{\mu I}{4 \pi} \oint_{S} \frac{d \vec{l} \times \vec{r}}{r^2} \cdot d \vec{S}$$</p>
+<div class="math-fluid">
+$$d \vec{B} = \frac{\mu}{4 \pi} \cdot \frac{Id \vec{l} \times \vec{r}}{r^2}$$
+</div>
+曲面的磁通量为：
+<div class="math-fluid">
+$$ \oint_{S} \vec{B} \cdot d\vec{S}= \frac{\mu I}{4 \pi} \oint_{S} \frac{d \vec{l} \times \vec{r}}{r^2} \cdot d \vec{S}$$
+</div>
+
 <ul>
 <li>当电流元位于曲面内部时，$\vec{r}$与$\vec{S}$间相互平行，磁通量积分$ \oint_{S} \vec{B} \cdot d\vec{S}= 0 $</li>
 <li>当电流元位于曲面外侧时，做一个包含电流元在内的辅助曲面，由增补法可得磁通量积分$ \oint_{S} \vec{B} \cdot d\vec{S}= 0 $</li>
@@ -409,29 +434,65 @@
 <h2 id="法拉第电磁感应定律"><a href="#法拉第电磁感应定律" class="headerlink" title="法拉第电磁感应定律"></a>法拉第电磁感应定律</h2><p><strong>法拉第电磁感应定律是由实验现象归纳得到的，表明了变化的磁场产生电场</strong></p>
 <p><strong>推导方式如下：</strong></p>
 <p>设一变化的磁场中放置一个环形线圈，回路中的电动势是电场强度的环路积分：</p>
-<p>$$ \varepsilon = \oint_{l} \vec{E} \cdot d\vec{l} $$</p>
-<p>同时实验表明回路中电动势等于磁通量的变化率：</p>
-<p>$$ \varepsilon = - \frac{d \Phi}{dt} = - \iint_{S} \frac{\partial \vec{B}}{\partial t} \cdot d\vec{S} $$</p>
-<p>综合两式可得法拉第电磁感应定律的积分形式：</p>
-<p>$$ \oint_{l} \vec{E} \cdot d\vec{l}= - \iint_{S} \frac{\partial \vec{B}}{\partial t} \cdot d\vec{S} $$</p>
+<div class="math-fluid">
+$$ \varepsilon = \oint_{l} \vec{E} \cdot d\vec{l} $$
+</div>
+同时实验表明回路中电动势等于磁通量的变化率：
+<div class="math-fluid">
+$$ \varepsilon = - \frac{d \Phi}{dt} = - \iint_{S} \frac{\partial \vec{B}}{\partial t} \cdot d\vec{S} $$
+</div>
+综合两式可得法拉第电磁感应定律的积分形式：
+<div class="math-fluid">
+$$ \oint_{l} \vec{E} \cdot d\vec{l}= - \iint_{S} \frac{\partial \vec{B}}{\partial t} \cdot d\vec{S} $$
+</div>
+
 <h2 id="全电流定律"><a href="#全电流定律" class="headerlink" title="全电流定律"></a>全电流定律</h2><p><strong>全电流定律是麦克斯韦根据安培环路定理扩展了位移电流的部分而得到的</strong><br><strong>表明了电流和变化的电场产生磁场</strong></p>
 <p><strong>推导方式如下：</strong></p>
 <p>根据毕奥-萨伐尔定律：</p>
-<p>$$d \vec{B} = \frac{\mu}{4 \pi} \cdot \frac{Id \vec{l} \times \vec{r}}{r^2}$$</p>
-<p>竖直导线周围某点的磁场强度为</p>
-<p>$$<br>B = \frac{\mu I}{2 \pi r}<br>$$</p>
-<p>对任意闭合路径存在环路积分：</p>
-<p>$$ \oint_{l} \vec{B} \cdot d\vec{l} = \oint_{l} B \space r \space d \varphi = \oint_{l} \frac{\mu I}{2 \pi r} \space r \space d \varphi = \mu I  \tag{*} $$</p>
+<div class="math-fluid">
+$$d \vec{B} = \frac{\mu}{4 \pi} \cdot \frac{Id \vec{l} \times \vec{r}}{r^2}$$
+</div>
+竖直导线周围某点的磁场强度为
+<div class="math-fluid">
+$$
+B = \frac{\mu I}{2 \pi r}
+$$
+</div>
+对任意闭合路径存在环路积分：
+<div class="math-fluid">
+$$ \oint_{l} \vec{B} \cdot d\vec{l} = \oint_{l} B \space r \space d \varphi = \oint_{l} \frac{\mu I}{2 \pi r} \space r \space d \varphi = \mu I  \tag{*} $$
+</div>
+
 <p><strong>以上标星号(*)的公式即安培环路定理</strong></p>
 <p>同时引入位移电流的概念：位移电流是由电场变化引起的电流变化，不产生焦耳热但仍具有磁效应，电容器极板间的充放电就是位移电流，位移电流的表达式：</p>
-<p>$$ I_D = \mu \iint_{S} \frac{\partial \vec{D}}{\partial t} \cdot d\vec{S} $$</p>
-<p>综合可得全电流定律：</p>
-<p>$$ \oint_{l} \vec{H} \cdot d\vec{l}= I + \iint_{S} \frac{\partial \vec{D}}{\partial t} \cdot d\vec{S} $$</p>
+<div class="math-fluid">
+$$ I_D = \mu \iint_{S} \frac{\partial \vec{D}}{\partial t} \cdot d\vec{S} $$
+</div>
+综合可得全电流定律：
+<div class="math-fluid">
+$$ \oint_{l} \vec{H} \cdot d\vec{l}= I + \iint_{S} \frac{\partial \vec{D}}{\partial t} \cdot d\vec{S} $$
+</div>
+
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>一般情况下积分形式的麦克斯韦方程组如下：</p>
-<h3 id="高斯定律-1"><a href="#高斯定律-1" class="headerlink" title="高斯定律"></a>高斯定律</h3><p>$$ \oint_{S} \vec{D} \cdot d\vec{S}= q \tag{1} $$</p>
-<h3 id="高斯磁定律-1"><a href="#高斯磁定律-1" class="headerlink" title="高斯磁定律"></a>高斯磁定律</h3><p>$$ \oint_{S} \vec{B} \cdot d\vec{S}= 0 \tag{2} $$</p>
-<h3 id="法拉第电磁感应定律-1"><a href="#法拉第电磁感应定律-1" class="headerlink" title="法拉第电磁感应定律"></a>法拉第电磁感应定律</h3><p>$$ \oint_{l} \vec{E} \cdot d\vec{l}= - \iint_{S} \frac{\partial \vec{B}}{\partial t} \cdot d\vec{S} \tag{3} $$</p>
-<h3 id="全电流定律-1"><a href="#全电流定律-1" class="headerlink" title="全电流定律"></a>全电流定律</h3><p>$$ \oint_{l} \vec{H} \cdot d\vec{l}= I + \iint_{S} \frac{\partial \vec{D}}{\partial t} \cdot d\vec{S} \tag{4} \label{4} $$</p>
+<h3 id="高斯定律-1"><a href="#高斯定律-1" class="headerlink" title="高斯定律"></a>高斯定律</h3><div class="math-fluid">
+$$ \oint_{S} \vec{D} \cdot d\vec{S}= q \tag{1} $$
+</div>
+
+<h3 id="高斯磁定律-1"><a href="#高斯磁定律-1" class="headerlink" title="高斯磁定律"></a>高斯磁定律</h3><div class="math-fluid">
+$$ \oint_{S} \vec{B} \cdot d\vec{S}= 0 \tag{2} $$
+</div>
+
+<h3 id="法拉第电磁感应定律-1"><a href="#法拉第电磁感应定律-1" class="headerlink" title="法拉第电磁感应定律"></a>法拉第电磁感应定律</h3><div class="math-fluid">
+$$ \oint_{l} \vec{E} \cdot d\vec{l}= - \iint_{S} \frac{\partial \vec{B}}{\partial t} \cdot d\vec{S} \tag{3} $$
+</div>
+
+<h3 id="全电流定律-1"><a href="#全电流定律-1" class="headerlink" title="全电流定律"></a>全电流定律</h3><div class="math-fluid">
+$$ \oint_{l} \vec{H} \cdot d\vec{l}= I + \iint_{S} \frac{\partial \vec{D}}{\partial t} \cdot d\vec{S} \tag{4} \label{4} $$
+</div>
+
+
+
+
 <h1 id="由麦克斯韦方程组的积分形式推导其微分形式"><a href="#由麦克斯韦方程组的积分形式推导其微分形式" class="headerlink" title="由麦克斯韦方程组的积分形式推导其微分形式"></a>由麦克斯韦方程组的积分形式推导其微分形式</h1><h2 id="Nabla算子简介"><a href="#Nabla算子简介" class="headerlink" title="Nabla算子简介"></a>Nabla算子简介</h2><p>Nabla算子($\nabla$)是一种矢量算符，可以将标量场转化为梯度的矢量场，借助它及其点积、叉积能够方便地表示$梯度(grand)$、$散度(div)$、$旋度(curl)$ 等概念：</p>
 <p>$$\nabla = \frac{\partial }{\partial x} \vec{i} + \frac{\partial }{\partial y} \vec{j} + \frac{\partial }{\partial z} \vec{k} $$</p>
 <p>$$\nabla E = grand({E}) = \frac{\partial E }{\partial x} \vec{i} + \frac{\partial E }{\partial y} \vec{j} + \frac{\partial E }{\partial z} \vec{k} $$</p>

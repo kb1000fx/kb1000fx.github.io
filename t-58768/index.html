@@ -311,7 +311,7 @@
     </span>
     <span>
       <span class="iconfont icon-calendar-check"></span>
-      更新于:&nbsp;2020-04-02
+      更新于:&nbsp;2020-05-25
     </span>
     <span>
       <span class="iconfont icon-folder"></span>
@@ -383,9 +383,14 @@
     <p>最近网络上流传着酒精与84消毒液混用中毒的传言，在此讨论一下二者混用是否会使人中毒。首先先放上结论：酒精与84消毒液混合后会降低消毒效果，但<strong>不会使人中毒</strong>，分析过程如下。</p>
 <a id="more"></a>
 <h1 id="分析过程"><a href="#分析过程" class="headerlink" title="分析过程"></a>分析过程</h1><h2 id="84消毒液中自身存在的平衡"><a href="#84消毒液中自身存在的平衡" class="headerlink" title="84消毒液中自身存在的平衡"></a>84消毒液中自身存在的平衡</h2><p>84消毒液中，自身存在以下三个平衡：</p>
-<p>$$\ce{ClO^- + H2O &lt;=&gt; HClO + OH^-} \tag{I}$$<br>$$\ce{2ClO^- \xlongequal{h\nu\text{ or heat}} O2 ^ + 2Cl^-} \tag{II}$$<br>$$\ce{HClO + H^+ + Cl^- &lt;=&gt; Cl2(aq) + H2O} \tag{III}$$</p>
-<!--more-->
-<p>由于84消毒液中含有一定氢氧化钠，溶液为碱性。且由于日常生活中的84消毒液都需进行稀释后再使用，次氯酸钠浓度较低。因此$(\text{I})(\text{II})(\text{III})$的正向反应均收到抑制。<br>另一方面由于氯气的溶解度较大，即使产生了极微量的氯气也会溶解进溶液而不会逸出。因此84消毒液本身不会产生有毒气体使人中毒。</p>
+<div class="math-fluid">
+$$\ce{ClO^- + H2O <=> HClO + OH^-} \tag{I}$$
+$$\ce{2ClO^- \xlongequal{h\nu\text{ or heat}} O2 ^ + 2Cl^-} \tag{II}$$
+$$\ce{HClO + H^+ + Cl^- <=> Cl2(aq) + H2O} \tag{III}$$
+</div>
+由于84消毒液中含有一定氢氧化钠，溶液为碱性。且由于日常生活中的84消毒液都需进行稀释后再使用，次氯酸钠浓度较低。因此$(\text{I})(\text{II})(\text{III})$的正向反应均收到抑制。
+另一方面由于氯气的溶解度较大，即使产生了极微量的氯气也会溶解进溶液而不会逸出。因此84消毒液本身不会产生有毒气体使人中毒。
+
 <h2 id="酒精与84消毒液混合后可能发生的反应"><a href="#酒精与84消毒液混合后可能发生的反应" class="headerlink" title="酒精与84消毒液混合后可能发生的反应"></a>酒精与84消毒液混合后可能发生的反应</h2><p>酒精与84消毒液的混合溶液中，可能发生以下反应：</p>
 <div class="mermaid">
     stateDiagram
@@ -403,24 +408,62 @@
 </div>
 
 <h2 id="乙醇氧化"><a href="#乙醇氧化" class="headerlink" title="乙醇氧化"></a>乙醇氧化</h2><p>乙醇与84消毒液混合后，可能会被84消毒液中的次氯酸钠氧化生成乙醛，即过程$(1)$：</p>
-<p>$$ \ce{CH_3CH_2OH -&gt;[{NaOCl}] CH_3CHO} \tag{1}$$</p>
-<p>但由于84消毒液中会加入一定的$\ce{NaOH}$来防止次氯酸分解失效，使得碱性条件下乙醇被氧化为乙醛的程度有限。</p>
+<div class="math-fluid">
+$$ \ce{CH_3CH_2OH ->[{NaOCl}] CH_3CHO} \tag{1}$$
+</div>
+但由于84消毒液中会加入一定的$\ce{NaOH}$来防止次氯酸分解失效，使得碱性条件下乙醇被氧化为乙醛的程度有限。
+
 <h2 id="乙醛氧化"><a href="#乙醛氧化" class="headerlink" title="乙醛氧化"></a>乙醛氧化</h2><p>过程$(2)$为乙醛的氧化，乙醛在次氯酸钠的作用下进一步氧化生成乙酸钠：</p>
-<p>$$<br>\ce{CH_3CHO -&gt;[{NaOCl}] CH_3COONa} \tag{2}<br>$$</p>
-<p>同样由于碱性环境的原因，此反应进行的程度有限。乙酸钠由于$\ce{\alpha-H}$活性不足，不会进一步发生氯仿反应。</p>
-<h2 id="氯仿反应"><a href="#氯仿反应" class="headerlink" title="氯仿反应"></a>氯仿反应</h2><p>$$<br>\ce{\underset{乙醛}{CH_3CHO} -&gt;[{NaOCl}] CCl3-CHO -&gt;[NaOH] \underset{三氯甲烷}{CHCl3} + \underset{甲酸钠}{HCOONa}} \tag{3}<br>$$</p>
+<div class="math-fluid">
+$$
+\ce{CH_3CHO ->[{NaOCl}] CH_3COONa} \tag{2}
+$$
+</div>
+同样由于碱性环境的原因，此反应进行的程度有限。乙酸钠由于$\ce{\alpha-H}$活性不足，不会进一步发生氯仿反应。
+
+<h2 id="氯仿反应"><a href="#氯仿反应" class="headerlink" title="氯仿反应"></a>氯仿反应</h2><div class="math-fluid">
+$$
+\ce{\underset{乙醛}{CH_3CHO} ->[{NaOCl}] CCl3-CHO ->[NaOH] \underset{三氯甲烷}{CHCl3} + \underset{甲酸钠}{HCOONa}} \tag{3}
+$$
+</div>
+
 <h2 id="氯仿水解"><a href="#氯仿水解" class="headerlink" title="氯仿水解"></a>氯仿水解</h2><p>氯仿在碱性条件下不稳定，会生成二氯卡宾并进一步水解生成甲酸钠，如过程$(4)$所示：</p>
-<p>$$<br>\ce{\underset{\text{三氯甲烷}}{CHCl3} -&gt;[OH-] \underset{\text{二氯卡宾}}{\text{:C}Cl2} -&gt;[NaOH] \underset{\text{甲酸钠}}{HCOONa}} \tag{4}<br>$$</p>
+<div class="math-fluid">
+$$
+\ce{\underset{\text{三氯甲烷}}{CHCl3} ->[OH-] \underset{\text{二氯卡宾}}{\text{:C}Cl2} ->[NaOH] \underset{\text{甲酸钠}}{HCOONa}} \tag{4}
+$$
+</div>
+
 <h2 id="氯仿分解"><a href="#氯仿分解" class="headerlink" title="氯仿分解"></a>氯仿分解</h2><p>氯仿在碱性条件下生成二氯卡宾后，也可能进一步被溶液中的次氯酸根，或者在光照条件下被氧气进一步氧化为光气，如过程$(5)$所示：</p>
-<p>$$<br>\ce{\underset{三氯甲烷}{CHCl3} -&gt;[OH-] \underset{二氯卡宾}{\text{:C}Cl2} -&gt;[NaOCl/OH^-] CCl3OOH -&gt;[-HOCl] \underset{碳酰氯}{COCl2}} \tag{5}<br>$$</p>
-<p>过程$(4)$与过程$(5)$之间为相互竞争的关系。</p>
+<div class="math-fluid">
+$$
+\ce{\underset{三氯甲烷}{CHCl3} ->[OH-] \underset{二氯卡宾}{\text{:C}Cl2} ->[NaOCl/OH^-] CCl3OOH ->[-HOCl] \underset{碳酰氯}{COCl2}} \tag{5}
+$$
+</div>
+过程$(4)$与过程$(5)$之间为相互竞争的关系。
+
 <h2 id="甲酸钠氧化"><a href="#甲酸钠氧化" class="headerlink" title="甲酸钠氧化"></a>甲酸钠氧化</h2><p>如过程$(6)$所示，氯仿反应中生成的以及氯仿水解生成的甲酸钠在溶液中可能会被次氯酸根进一步氧化生成碳酸钠：</p>
-<p>$$<br>\ce{HCOO^- + ClO^- + OH^- = CO3^2- + Cl^- + H2O} \tag{6}<br>$$</p>
+<div class="math-fluid">
+$$
+\ce{HCOO^- + ClO^- + OH^- = CO3^2- + Cl^- + H2O} \tag{6}
+$$
+</div>
+
 <h2 id="碳酰氯的水解"><a href="#碳酰氯的水解" class="headerlink" title="碳酰氯的水解"></a>碳酰氯的水解</h2><p>由于体系整体呈碱性，过程$(5)$中产生的光气会在碱性水溶液中迅速发生水解，即过程$(7)$：</p>
-<p>$$<br>\ce{COCl2 + 4OH^- = 2H2O + 2Cl^- + CO3^2-} \tag{7}<br>$$</p>
+<div class="math-fluid">
+$$
+\ce{COCl2 + 4OH^- = 2H2O + 2Cl^- + CO3^2-} \tag{7}
+$$
+</div>
+
 <h2 id="碳酰氯的醇解"><a href="#碳酰氯的醇解" class="headerlink" title="碳酰氯的醇解"></a>碳酰氯的醇解</h2><p>同时光气也会与体系内的乙醇反应，发生酰卤的醇解，即过程$(8)$：</p>
-<p>$$<br>\ce{\underset{碳酰氯}{COCl2} -&gt;[EtOH] \underset{氯代甲酸乙酯}{CH3CH2OCOCl}  -&gt;[EtOH] \underset{碳酸二乙酯}{CO(OCH2CH3)2}} \tag{8}<br>$$</p>
-<p>由于过程$(7)$与过程$(8)$的存在，氯仿分解产生的光气大多会被吸收转化。</p>
+<div class="math-fluid">
+$$
+\ce{\underset{碳酰氯}{COCl2} ->[EtOH] \underset{氯代甲酸乙酯}{CH3CH2OCOCl}  ->[EtOH] \underset{碳酸二乙酯}{CO(OCH2CH3)2}} \tag{8}
+$$
+</div>
+由于过程$(7)$与过程$(8)$的存在，氯仿分解产生的光气大多会被吸收转化。
+
 <h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>综上所述，由于在碱性环境下且缺少相转移催化剂，乙醇氧化生成的乙醛的速率并不高。所以后续反应中生成的氯仿、光气等有毒产物量也很少，且大多会在溶液中继续分解为甲酸根、氯离子、碳酸根等物质。因此将酒精和84消毒液混合使用后只会消耗部分有效物质，不会产生中毒的严重后果。</p>
 
   </div>

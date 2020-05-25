@@ -302,11 +302,7 @@
   <header class="mdui-card-media">
     
     
-      
-        <img src = /images/58552/lightspeed.webp >
-      
-      <div class="mdui-card-media-covered">
-        <div class="post-header"> 
+      <div class="post-header"> 
   <a class="post-header-title" href="/t-58552/">真空光速推导</a>
   <div class="post-header-meta">
     <span>
@@ -315,7 +311,7 @@
     </span>
     <span>
       <span class="iconfont icon-calendar-check"></span>
-      更新于:&nbsp;2020-03-09
+      更新于:&nbsp;2020-05-25
     </span>
     <span>
       <span class="iconfont icon-folder"></span>
@@ -334,7 +330,6 @@
 
 
 
-      </div>
     
     
     <div class="mdui-card-menu">
@@ -388,74 +383,169 @@
     <h1 id="预备知识"><a href="#预备知识" class="headerlink" title="预备知识"></a>预备知识</h1><h2 id="真空中的麦克斯韦方程组"><a href="#真空中的麦克斯韦方程组" class="headerlink" title="真空中的麦克斯韦方程组"></a>真空中的麦克斯韦方程组</h2><p><strong>关于麦克斯韦方程组的积分及微分形式推导参见上一篇：<a href="https://garybear.cn/t-44074/">麦克斯韦方程组的推导及形式转换</a></strong><br>真空中的麦克斯韦方程组需进行相应的修正，即:</p>
 <ul>
 <li>空间内净电荷数为0</li>
-<li>空间内无传导电流，磁场仅由位移电流产生</li>
+<li>空间内无传导电流，磁场仅由位移电流产生<a id="more"></a>
+<h2 id="Nabla算子与Laplace算子"><a href="#Nabla算子与Laplace算子" class="headerlink" title="Nabla算子与Laplace算子"></a>Nabla算子与Laplace算子</h2></li>
 </ul>
-<h2 id="Nabla算子与Laplace算子"><a href="#Nabla算子与Laplace算子" class="headerlink" title="Nabla算子与Laplace算子"></a>Nabla算子与Laplace算子</h2><p>Nabla算子：</p>
-<p>$$\nabla = grand = \frac{\partial }{\partial x} \vec{i} + \frac{\partial }{\partial y} \vec{j} + \frac{\partial }{\partial z} \vec{k} $$</p>
-<a id="more"></a>
+<p>Nabla算子：</p>
+<div class="math-fluid">
+$$\nabla = grand = \frac{\partial }{\partial x} \vec{i} + \frac{\partial }{\partial y} \vec{j} + \frac{\partial }{\partial z} \vec{k} $$
+</div>
+
 <p>Laplace算子：</p>
-<p>$$ \Delta = \nabla^2 = \nabla \cdot \nabla = div(grand) = \frac{\partial^2 }{\partial x^2} + \frac{\partial^2 }{\partial y^2} + \frac{\partial^2 }{\partial z^2} $$</p>
+<div class="math-fluid">
+$$ \Delta = \nabla^2 = \nabla \cdot \nabla = div(grand) = \frac{\partial^2 }{\partial x^2} + \frac{\partial^2 }{\partial y^2} + \frac{\partial^2 }{\partial z^2} $$
+</div>
+
 <p>对于标量场：</p>
-<p>$$ \nabla^2 f = \nabla \cdot ( \nabla f) = \frac{\partial^2 f }{\partial x^2 } + \frac{\partial^2 f}{\partial y^2} + \frac{\partial^2 f}{\partial z^2} $$</p>
+<div class="math-fluid">
+$$ \nabla^2 f = \nabla \cdot ( \nabla f) = \frac{\partial^2 f }{\partial x^2 } + \frac{\partial^2 f}{\partial y^2} + \frac{\partial^2 f}{\partial z^2} $$
+</div>
+
 <p>对于矢量场：</p>
-<p>$$ \nabla^2 \vec{F} = \nabla \cdot ( \nabla \vec{F}) = (\nabla^2 F_x) \vec{i} + (\nabla^2 F_y) \vec{j} + (\nabla^2 F_z0) \vec{k} $$</p>
+<div class="math-fluid">
+$$ \nabla^2 \vec{F} = \nabla \cdot ( \nabla \vec{F}) = (\nabla^2 F_x) \vec{i} + (\nabla^2 F_y) \vec{j} + (\nabla^2 F_z0) \vec{k} $$
+</div>
+
 <p>运算法则：</p>
-<p>$$ \nabla \times ( \nabla \times \vec{f} ) =\nabla ( \nabla \cdot \vec{f} ) - \nabla^2 \vec{f} $$</p>
+<div class="math-fluid">
+$$ \nabla \times ( \nabla \times \vec{f} ) =\nabla ( \nabla \cdot \vec{f} ) - \nabla^2 \vec{f} $$
+</div>
+
 <h1 id="由微分形式推导真空光速"><a href="#由微分形式推导真空光速" class="headerlink" title="由微分形式推导真空光速"></a>由微分形式推导真空光速</h1><h2 id="真空中的修正形式"><a href="#真空中的修正形式" class="headerlink" title="真空中的修正形式"></a>真空中的修正形式</h2><p>真空中的麦克斯韦方程组微分形式：</p>
-<p>$$ \nabla \cdot \vec{E}=0\tag{1} $$</p>
+<div class="math-fluid">
+$$ \nabla \cdot \vec{E}=0\tag{1} $$
+
 <p>$$ \nabla \cdot \vec{B}=0 \tag{2} $$</p>
 <p>$$ \nabla \times \vec{E} = -\frac{\partial \vec{B}}{\partial t} \tag{3} $$</p>
 <p>$$ \nabla \times \vec{B} = \mu_0 \varepsilon_0 \frac{\partial \vec{E}}{\partial t} \tag{4} $$</p>
-<h2 id="推导过程"><a href="#推导过程" class="headerlink" title="推导过程"></a>推导过程</h2><p>$$ \nabla \times ( \nabla \times \vec{E} ) = -\nabla \times \frac{\partial \vec{B}}{\partial t} = \frac{\partial }{\partial t} (\nabla \times \vec{B}) = -\mu_0 \varepsilon_0 \frac{\partial^2 \vec{E}}{\partial t^2} \tag{5} $$</p>
-<p>由$\nabla$算子的运算法则可知：</p>
-<p>$$ \nabla \times ( \nabla \times \vec{E} ) =\nabla ( \nabla \cdot \vec{E} ) - \nabla^2 \vec{E} \tag{6} $$</p>
-<p>联立(1)、(5)、(6)式可得：</p>
-<p>$$\nabla^2 \vec{E} = \mu_0 \varepsilon_0 \frac{\partial^2 \vec{E}}{\partial t^2} $$</p>
-<p>同理可得：</p>
-<p>$$\nabla^2 \vec{B} = \mu_0 \varepsilon_0 \frac{\partial^2 \vec{B}}{\partial t^2} $$</p>
-<p>设一电磁波沿X轴方向传播，则电场、磁场方向分别为Y、Z轴方向，可得两方程，即单向传播时的<strong>麦克斯韦波动方程</strong>：</p>
-<p>$$\frac{\partial^2 E_y}{\partial x^2} = \mu_0 \varepsilon_0 \frac{\partial^2 E_y}{\partial t^2}$$</p>
+</div>
+
+<h2 id="推导过程"><a href="#推导过程" class="headerlink" title="推导过程"></a>推导过程</h2><div class="math-fluid">
+$$ \nabla \times ( \nabla \times \vec{E} ) = -\nabla \times \frac{\partial \vec{B}}{\partial t} = \frac{\partial }{\partial t} (\nabla \times \vec{B}) = -\mu_0 \varepsilon_0 \frac{\partial^2 \vec{E}}{\partial t^2} \tag{5} $$
+</div>
+由$\nabla$算子的运算法则可知：
+<div class="math-fluid">
+$$ \nabla \times ( \nabla \times \vec{E} ) =\nabla ( \nabla \cdot \vec{E} ) - \nabla^2 \vec{E} \tag{6} $$
+</div>
+联立(1)、(5)、(6)式可得：
+<div class="math-fluid">
+$$\nabla^2 \vec{E} = \mu_0 \varepsilon_0 \frac{\partial^2 \vec{E}}{\partial t^2} $$
+</div>
+同理可得：
+<div class="math-fluid">
+$$\nabla^2 \vec{B} = \mu_0 \varepsilon_0 \frac{\partial^2 \vec{B}}{\partial t^2} $$
+</div>
+设一电磁波沿X轴方向传播，则电场、磁场方向分别为Y、Z轴方向，可得两方程，即单向传播时的**麦克斯韦波动方程**：
+<div class="math-fluid">
+$$\frac{\partial^2 E_y}{\partial x^2} = \mu_0 \varepsilon_0 \frac{\partial^2 E_y}{\partial t^2}$$
+
 <p>$$\frac{\partial^2 B_z}{\partial x^2} = \mu_0 \varepsilon_0 \frac{\partial^2 B_z}{\partial t^2}$$</p>
-<p>这里以其中电场的方程为例，使用磁场方程可以得到同样的结果：</p>
-<p>$$<br>\begin{split}<br>  \frac{\partial^2 E_y}{\partial t^2} &amp;= \frac{\partial^2 E_y}{\partial x^2} \cdot \frac{x^2}{t^2}<br>  \\<br>  &amp;= \frac{\partial^2 E_y}{\partial x^2} \cdot c^2<br>  \\<br>  &amp;= \frac{1}{\mu_0 \varepsilon_0} \cdot \frac{\partial^2 E_y}{\partial x^2}<br>\end{split}<br>$$</p>
-<p>整理可得：</p>
-<p>$$c^2 = \frac{x^2}{t^2} = \frac{1}{\mu_0 \varepsilon_0} $$</p>
-<p>最终得到真空中光速的表达形式为：</p>
-<p>$$c=\frac{1}{\sqrt{\mu_0 \varepsilon_0}}$$</p>
+</div>
+这里以其中电场的方程为例，使用磁场方程可以得到同样的结果：
+<div class="math-fluid">
+$$
+\begin{split}
+  \frac{\partial^2 E_y}{\partial t^2} &= \frac{\partial^2 E_y}{\partial x^2} \cdot \frac{x^2}{t^2}
+  \\\\ 
+  &= \frac{\partial^2 E_y}{\partial x^2} \cdot c^2
+  \\\\
+  &= \frac{1}{\mu_0 \varepsilon_0} \cdot \frac{\partial^2 E_y}{\partial x^2}
+\end{split}
+$$
+</div>
+整理可得：
+<div class="math-fluid">
+$$c^2 = \frac{x^2}{t^2} = \frac{1}{\mu_0 \varepsilon_0} $$
+</div>
+最终得到真空中光速的表达形式为：
+<div class="math-fluid">
+$$c=\frac{1}{\sqrt{\mu_0 \varepsilon_0}}$$
+</div>
+
 <h1 id="由积分形式推导真空光速"><a href="#由积分形式推导真空光速" class="headerlink" title="由积分形式推导真空光速"></a>由积分形式推导真空光速</h1><h2 id="真空中的修正形式-1"><a href="#真空中的修正形式-1" class="headerlink" title="真空中的修正形式"></a>真空中的修正形式</h2><p>真空中的麦克斯韦方程组积分形式：</p>
-<p>$$ \oint_{S} \vec{E} \cdot d\vec{S}= 0 \tag{7} $$</p>
+<div class="math-fluid">
+$$ \oint_{S} \vec{E} \cdot d\vec{S}= 0 \tag{7} $$
+
 <p>$$ \oint_{S} \vec{B} \cdot d\vec{S}= 0 \tag{8} $$</p>
 <p>$$ \oint_{l} \vec{E} \cdot d\vec{l}= - \iint_{S} \frac{\partial \vec{B}}{\partial t} \cdot d\vec{S} \tag{9} $$</p>
 <p>$$ \oint_{l} \vec{B} \cdot d\vec{l}= \mu_0 \varepsilon_0 \iint_{S} \frac{\partial \vec{E}}{\partial t} \cdot d\vec{S} \tag{10}$$</p>
+</div>
+
 <h2 id="推导过程-1"><a href="#推导过程-1" class="headerlink" title="推导过程"></a>推导过程</h2><p>设电磁波沿X轴方向传播，则电场方向为Y轴方向，磁场方向为Z轴方向。</p>
 <p>在$xOy$平面内取一矩形回路，设其中一顶点坐标为$(x,y,0)$，回路的长、宽分别为$\Delta x 、\Delta y$。<br>对其应用法拉第电磁感应定律可得：</p>
-<p>$$ \oint_{l} \vec{E} \cdot d\vec{l}= - \iint_{S} \frac{\partial \vec{B}}{\partial t} \cdot d\vec{S} = - \frac{\partial B_z}{\partial t} \Delta x \Delta y \tag{11} $$</p>
-<p>对电场强度的环路积分应用泰勒公式：</p>
-<p>$$<br>\begin{equation}<br>\begin{split}<br>  \oint_{l} \vec{E} \cdot d\vec{l} &amp;= E_y(x+ \Delta x) \Delta y - E_y(x) \Delta y<br>  \\<br>  &amp;= \left [ E_y(x) + \frac{\partial E_y}{\partial x} \Delta x + o(\Delta x)^2 \right ] \cdot \Delta y - E_y(x) \Delta y<br>  \\<br>  &amp;= \frac{\partial E_y}{\partial x} \Delta x \Delta y<br>\end{split}<br>\tag{12}<br>\end{equation}<br>$$</p>
-<p>整理(11)、(12)二式可得：</p>
-<p>$$\frac{\partial E_y}{\partial x} \Delta x \Delta y =  - \frac{\partial B_z}{\partial t} \Delta x \Delta y$$</p>
-<p>消去$\Delta x \Delta y$后即：</p>
-<p>$$ \frac{\partial E_y}{\partial x} =  - \frac{\partial B_z}{\partial t} \tag{13} $$</p>
+<div class="math-fluid">
+$$ \oint_{l} \vec{E} \cdot d\vec{l}= - \iint_{S} \frac{\partial \vec{B}}{\partial t} \cdot d\vec{S} = - \frac{\partial B_z}{\partial t} \Delta x \Delta y \tag{11} $$
+</div>
+对电场强度的环路积分应用泰勒公式：
+<div class="math-fluid">
+$$
+\begin{equation}
+\begin{split}
+  \oint_{l} \vec{E} \cdot d\vec{l} &= E_y(x+ \Delta x) \Delta y - E_y(x) \Delta y 
+  \\\\
+  &= \left [ E_y(x) + \frac{\partial E_y}{\partial x} \Delta x + o(\Delta x)^2 \right ] \cdot \Delta y - E_y(x) \Delta y 
+  \\\\
+  &= \frac{\partial E_y}{\partial x} \Delta x \Delta y 
+\end{split}
+\tag{12}
+\end{equation}
+$$
+</div>
+整理(11)、(12)二式可得：
+<div class="math-fluid">
+$$\frac{\partial E_y}{\partial x} \Delta x \Delta y =  - \frac{\partial B_z}{\partial t} \Delta x \Delta y$$
+</div>
+消去$\Delta x \Delta y$后即：
+<div class="math-fluid">
+$$ \frac{\partial E_y}{\partial x} =  - \frac{\partial B_z}{\partial t} \tag{13} $$
+</div>
+
 <p>在$xOz$平面内再取一矩形回路，设其中一顶点坐标为$(x,y,0)$，回路的长、宽分别为$\Delta x 、\Delta y$。<br>对其应用全电流定律可得：</p>
-<p>$$ \oint_{l} \vec{B} \cdot d\vec{l} = \mu_0 \varepsilon_0  \iint_{S} \frac{\partial \vec{E}}{\partial t} \cdot d\vec{S} = \mu_0 \varepsilon_0 \frac{\partial E_y}{\partial t} \Delta x \Delta z $$</p>
-<p>依照上文中的方式对磁场强度的环路积分应用泰勒公式并进行整理，可得：</p>
-<p>$$ - \frac{\partial B_z}{\partial x} =  \mu_0 \varepsilon_0 \frac{\partial E_y}{\partial t} \tag{14}$$</p>
-<p>由偏微分的性质可得：</p>
-<p>$$ \frac{\partial}{\partial t} \left (\frac{\partial B_z}{\partial x} \right ) = \frac{\partial}{\partial x} \left (\frac{\partial B_z}{\partial t} \right ) $$</p>
-<p>带入(13)、(14)式可得：</p>
-<p>$$ \frac{\partial}{\partial t} \left (-\mu_0 \varepsilon_0 \frac{\partial E_y}{\partial t} \right ) = \frac{\partial}{\partial x} \left (-\frac{\partial E_z}{\partial x} \right ) $$</p>
-<p>整理后可得：</p>
-<p>$$\frac{\partial^2 E_y}{\partial x^2} = \mu_0 \varepsilon_0 \frac{\partial^2 E_y}{\partial t^2} \tag{15} $$</p>
-<p>同理，换用$E_y$的偏微分性质可得：</p>
-<p>$$\frac{\partial^2 B_z}{\partial x^2} = \mu_0 \varepsilon_0 \frac{\partial^2 B_z}{\partial t^2} \tag{16}$$</p>
+<div class="math-fluid">
+$$ \oint_{l} \vec{B} \cdot d\vec{l} = \mu_0 \varepsilon_0  \iint_{S} \frac{\partial \vec{E}}{\partial t} \cdot d\vec{S} = \mu_0 \varepsilon_0 \frac{\partial E_y}{\partial t} \Delta x \Delta z $$
+</div>
+依照上文中的方式对磁场强度的环路积分应用泰勒公式并进行整理，可得：
+<div class="math-fluid">
+$$ - \frac{\partial B_z}{\partial x} =  \mu_0 \varepsilon_0 \frac{\partial E_y}{\partial t} \tag{14}$$
+</div>
+由偏微分的性质可得：
+<div class="math-fluid">
+$$ \frac{\partial}{\partial t} \left (\frac{\partial B_z}{\partial x} \right ) = \frac{\partial}{\partial x} \left (\frac{\partial B_z}{\partial t} \right ) $$
+</div>
+带入(13)、(14)式可得：
+<div class="math-fluid">
+$$ \frac{\partial}{\partial t} \left (-\mu_0 \varepsilon_0 \frac{\partial E_y}{\partial t} \right ) = \frac{\partial}{\partial x} \left (-\frac{\partial E_z}{\partial x} \right ) $$
+</div>
+整理后可得：
+<div class="math-fluid">
+$$\frac{\partial^2 E_y}{\partial x^2} = \mu_0 \varepsilon_0 \frac{\partial^2 E_y}{\partial t^2} \tag{15} $$
+</div>
+同理，换用$E_y$的偏微分性质可得：
+<div class="math-fluid">
+$$\frac{\partial^2 B_z}{\partial x^2} = \mu_0 \varepsilon_0 \frac{\partial^2 B_z}{\partial t^2} \tag{16}$$
+</div>
+
 <p><strong>(15)、(16)式即第二节中所说的单向传播时的麦克斯韦波动方程</strong></p>
 <p>之后的计算过程与第二节微分形式时完全相同，在方程一侧凑出光速的平方$c^2$再消掉相同项，这里补充一下使用磁场方程的例子：</p>
-<p>$$<br>\begin{split}<br>  \frac{\partial^2 B_z}{\partial t^2} &amp;= \frac{\partial^2 B_z}{\partial x^2} \cdot \frac{x^2}{t^2}<br>  \\<br>  &amp;= \frac{\partial^2 E_y}{\partial x^2} \cdot c^2<br>  \\<br>  &amp;= \frac{1}{\mu_0 \varepsilon_0} \cdot \frac{\partial^2 E_y}{\partial x^2}<br>\end{split}<br>$$</p>
-<p>整理可得：</p>
-<p>$$c^2 = \frac{x^2}{t^2} = \frac{1}{\mu_0 \varepsilon_0} $$</p>
-<p>最终得到真空中光速的表达形式为：</p>
-<p>$$c=\frac{1}{\sqrt{\mu_0 \varepsilon_0}}$$</p>
-
+<div class="math-fluid">
+$$
+\begin{split}
+  \frac{\partial^2 B_z}{\partial t^2} &= \frac{\partial^2 B_z}{\partial x^2} \cdot \frac{x^2}{t^2}
+  \\\\ 
+  &= \frac{\partial^2 E_y}{\partial x^2} \cdot c^2
+  \\\\
+  &= \frac{1}{\mu_0 \varepsilon_0} \cdot \frac{\partial^2 E_y}{\partial x^2}
+\end{split}
+$$
+</div>
+整理可得：
+<div class="math-fluid">
+$$c^2 = \frac{x^2}{t^2} = \frac{1}{\mu_0 \varepsilon_0} $$
+</div>
+最终得到真空中光速的表达形式为：
+<div class="math-fluid">
+$$c=\frac{1}{\sqrt{\mu_0 \varepsilon_0}}$$
+</div>
   </div>
   <!--文末结束语-->
   
