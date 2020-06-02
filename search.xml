@@ -1,6 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Insulin主题说明</title>
+    <url>/t-24497/</url>
+    <content><![CDATA[<p><img src="https://img.shields.io/badge/Hexo-3.0+-blue" alt="Hexo">  <img src="https://img.shields.io/badge/node.js-6.0-brightgreen" alt="Node.JS"></p>
+<p>Insulin是一款响应式的Hexo主题。如有任何问题请发Github Issue，或通过邮箱<a href="mailto:kb1000fx@gmail.com">kb1000fx@gmail.com</a>与我联系。<br>更多内容详见<a href="https://garybear.cn/">我的博客</a>。<br>我的另一个主题: <a href="https://github.com/kb1000fx/hexo-theme-meadow" target="_blank" rel="noopener">Meadow</a></p>
+<a id="more"></a>
+
+<h1 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h1><p>如果使用了这个主题，欢迎留言贴上预览链接。</p>
+<ul>
+<li><a href="https://kb1000fx.github.io/hexo-theme-insulin/" target="_blank" rel="noopener">Demo1</a></li>
+<li><a href="https://note.garybear.cn/" target="_blank" rel="noopener">Demo2</a></li>
+</ul>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p>在此下载Release版本：<a href="https://github.com/kb1000fx/hexo-theme-insulin/releases" target="_blank" rel="noopener">https://github.com/kb1000fx/hexo-theme-insulin/releases</a><br>或直接点击<code>Download Zip</code>下载最新版。</p>
+<h2 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h2><p>将下载的主题文件解压后放入Hexo目录下的theme文件夹中</p>
+<p>修改Hexo目录下的<code>_config.yml</code>，把<code>theme:</code>的值改为解压后的文件夹名。</p>
+<h1 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h1><p>更多使用说明详见下面的说明文档：</p>
+<ul>
+<li><p><a href="https://kb1000fx.github.io/hexo-theme-insulin/doc/#/en/" target="_blank" rel="noopener">Doc</a></p>
+</li>
+<li><p><a href="https://kb1000fx.github.io/hexo-theme-insulin/doc/#/" target="_blank" rel="noopener">中文文档</a></p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>技术</category>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>葛底斯堡演说(Gettysburg Address)原文及翻译</title>
     <url>/t-47599/</url>
     <content><![CDATA[<p>葛底斯堡演说(Gettysburg Address)是1863年11月19日美国总统林肯在宾夕法尼亚州葛底斯堡发表的著名的哀悼阵亡将士的著名演说。尽管葛底斯堡演说全文只有10句话，272个单词，可它却是美国公认的最伟大的演讲，也是美国历史上被引用最多的演说。包括他在内的很多名人也都曾朗读背诵过此篇演说。</p>

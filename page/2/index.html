@@ -265,12 +265,16 @@
                 </div>
                 <ul class="mdui-collapse-item-body mdui-list mdui-list-dense">
                     
+                        <a href="https://note.garybear.cn/" target="_blank" rel="noopener" class="mdui-list-item mdui-ripple">
+                            小蜗熊的笔记本
+                        </a>
+                    
                         <a href="https://garybear.cn/hexo-theme-meadow/" class="mdui-list-item mdui-ripple">
                             Meadow说明文档
                         </a>
                     
-                        <a href="https://note.garybear.cn/" target="_blank" rel="noopener" class="mdui-list-item mdui-ripple">
-                            Gary Bear的笔记本
+                        <a href="https://garybear.cn/hexo-theme-insulin/" class="mdui-list-item mdui-ripple">
+                            Insulin说明文档
                         </a>
                     
                 </ul>
@@ -299,6 +303,52 @@
   
   <main id="main-contain" class="mdui-container mdui-m-t-5">
     
+    <article class="mdui-card mdui-m-b-5 mdui-hoverable">    
+      
+      
+        <div class="post-header"> 
+  <a class="post-header-title" href="/t-48402/">华硕路由器自定义hosts方法</a>
+  <div class="post-header-meta">
+    <span>
+      <span class="iconfont icon-calendar"></span>
+      发布于:&nbsp;2020-01-07
+    </span>
+    <span>
+      <span class="iconfont icon-calendar-check"></span>
+      更新于:&nbsp;2020-03-21
+    </span>
+    <span>
+      <span class="iconfont icon-folder"></span>
+      分类于:&nbsp;<a class="category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a> > <a class="category-link" href="/categories/%E6%8A%80%E6%9C%AF/%E7%BD%91%E7%BB%9C%E7%A1%AC%E4%BB%B6/">网络硬件</a>
+    </span>
+    
+  </div>
+</div>   
+    
+
+
+
+      
+      
+  <div class="tag-line-space"></div>
+
+      
+      <div id="achieve-abstract" class="mdui-card-content mdui-p-x-4">
+        <div class="post-abstract mdui-typo ">
+          
+            <h1 id="开启SSH和JFFS分区"><a href="#开启SSH和JFFS分区" class="headerlink" title="开启SSH和JFFS分区"></a>开启SSH和JFFS分区</h1><h2 id="官方固件"><a href="#官方固件" class="headerlink" title="官方固件"></a>官方固件</h2><p>SSH可以在系统设置里找到，建议选择LAN only一项。然后就可以使用putty等软件登录到路由器，用户名和密码与路由器登陆的用户名密码相同。</p>
+<p>使用SSH登录到路由器，输入以下命令开启JFFS分区</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">nvram <span class="built_in">set</span> jffs2_on=1</span><br><span class="line">nvram <span class="built_in">set</span> jffs2_enable=1</span><br><span class="line">nvram <span class="built_in">set</span> jffs2_format=1</span><br><span class="line">nvram <span class="built_in">set</span> jffs2_scripts=1</span><br><span class="line">nvram commit</span><br></pre></td></tr></table></figure>
+<p>最后使用<code>reboot</code>重启生效</p>
+          
+          </div>
+        
+        <div style="text-align:center;">
+          <a class="post-readmore mdui-btn mdui-ripple mdui-btn-raised" href="/t-48402/">阅读更多</a>
+        </div>
+      </div>
+    </article>
+
     <article class="mdui-card mdui-m-b-5 mdui-hoverable">    
       
       
@@ -729,58 +779,6 @@
         
         <div style="text-align:center;">
           <a class="post-readmore mdui-btn mdui-ripple mdui-btn-raised" href="/t-31700/">阅读更多</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="mdui-card mdui-m-b-5 mdui-hoverable">    
-      
-      
-        <div class="mdui-card-media">
-          
-            <img src = /images/12400/title_pic.webp >
-          
-          <div class="mdui-card-media-covered">
-            <div class="post-header"> 
-  <a class="post-header-title" href="/t-12400/">手枪单动双动区别</a>
-  <div class="post-header-meta">
-    <span>
-      <span class="iconfont icon-calendar"></span>
-      发布于:&nbsp;2019-08-24
-    </span>
-    <span>
-      <span class="iconfont icon-calendar-check"></span>
-      更新于:&nbsp;2020-03-21
-    </span>
-    <span>
-      <span class="iconfont icon-folder"></span>
-      分类于:&nbsp;<a class="category-link" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a>
-    </span>
-    
-  </div>
-</div>   
-    
-
-
-
-          </div>
-        </div>
-      
-      
-  <div class="tag-line-space"></div>
-
-      
-      <div id="achieve-abstract" class="mdui-card-content mdui-p-x-4">
-        <div class="post-abstract mdui-typo ">
-          
-            <p><strong>开了一个多星期的坑，既然有人看那就填上吧。</strong></p>
-<p>这些视频和图片原本是之前给人解释游戏里左轮连射时收集的资料，正好现在扩展一下整理成一篇文章。</p>
-<p>本文所插入的视频来源均为Youtube<br>左轮手枪部分的两个动图来自Youtube用户C&amp;Rsenal<br>半自动手枪部分的动图来自Steam游戏World of Guns，<a href="https://store.steampowered.com/app/262410/" target="_blank" rel="noopener">Steam地址</a></p>
-          
-          </div>
-        
-        <div style="text-align:center;">
-          <a class="post-readmore mdui-btn mdui-ripple mdui-btn-raised" href="/t-12400/">阅读更多</a>
         </div>
       </div>
     </article>

@@ -79,6 +79,13 @@ main {
 .mdui-btn-icon .iconfont {
   font-size: 24px;
 }
+/*横向滚动条*/
+.math-fluid {
+  overflow-x: auto;
+}
+.mermaid {
+  overflow-x: auto;
+}
 pre,
 .highlight {
   background: #2d2d2d;
@@ -725,10 +732,4 @@ pre .javascript .function {
   font-style: normal;
   color: #fff;
   background: #009688;
-}
-.math-fluid {
-  overflow-x: auto;
-}
-.mermaid {
-  overflow-x: auto;
 }
