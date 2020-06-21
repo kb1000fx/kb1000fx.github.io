@@ -1,6 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>JavaScript的闭包原理与垃圾回收机制</title>
+    <url>/t-37956/</url>
+    <content><![CDATA[<p>JavaScript中的闭包是指能够访问其他函数作用域内变量的函数，即一个函数内部的函数。闭包是一种保护私有变量的机制，在函数执行时形成私有的作用域，保护里面的私有变量不受外界干扰，即形成一个不销毁的栈环境。但由于闭包会使得函数中的变量都被保存在内存中，所以滥用闭包会造成性能问题或是导致内存泄漏。</p>
+<a id="more"></a>
+
+<h1 id="JavaScript闭包简介"><a href="#JavaScript闭包简介" class="headerlink" title="JavaScript闭包简介"></a>JavaScript闭包简介</h1><p>首先来看一个简单的例子：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn1</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  a += <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">return</span> a;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//函数中的a为全局变量</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn2</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line">  a += <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">return</span> a;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//函数中的a为局部变量</span></span><br><span class="line">fn1();</span><br><span class="line"><span class="built_in">console</span>.log(fn1());</span><br><span class="line"><span class="comment">//控制台输出3</span></span><br><span class="line">fn2();</span><br><span class="line"><span class="built_in">console</span>.log(fn2());</span><br><span class="line"><span class="comment">//控制台输出2</span></span><br></pre></td></tr></table></figure>
+<p>在这个例子中，fn1使用的是全局变量a，fn2使用的是局部变量a。多次执行函数后，f1返回的是多次累加的结果，而f2由于使用的是局部变量执行结果始终与单次执行相同。如果希望多次对一个变量进行操作，同时又不希望将其暴露在全局之中，此时上面的两个函数均无法满足需求，可使用嵌套函数的方法。在JavaScript中，所有函数都能访问它们上一层的作用域。嵌套函数可以访问上一层的函数变量。例如：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> add = (<span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> counter = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> <span class="title">f2</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">          <span class="keyword">return</span> counter += <span class="number">1</span>;</span><br><span class="line">      &#125;</span><br><span class="line">&#125;)();</span><br><span class="line"> </span><br><span class="line">add();</span><br><span class="line">add();</span><br><span class="line">add();</span><br><span class="line"><span class="comment">//此时counter为3</span></span><br></pre></td></tr></table></figure>
+<p>上面的这个函数就是一个JavaScript闭包，它使得函数拥有私有变量变成可能。</p>
+<h1 id="作用域与作用域链"><a href="#作用域与作用域链" class="headerlink" title="作用域与作用域链"></a>作用域与作用域链</h1><p>JavaScript中存在如下三种作用域：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 全局作用域</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 函数作用域</span></span><br><span class="line">  &#123;</span><br><span class="line">    <span class="comment">// 块级作用域</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>当同时存在多个作用域对象时，所有函数的作用域对象会被环境栈所管理。环境栈中的作用域对象是按顺序访问的，最先能够访问的是当前函数的作用域，如果访问的变量在当前作用域没有，会访问上一层作用域，直到找到全局作用域。如果访问到全局作用域也没有这个对象，会抛出ReferenceError的异常。</p>
+<p>简单来说就是前面提到过的<code>所有函数都能访问它们上一层的作用域</code>，子对象会一级级向上寻找所有父对象的变量，函数内部可以读取全局变量，这就是所谓的作用域链。</p>
+<h1 id="JavaScript闭包原理"><a href="#JavaScript闭包原理" class="headerlink" title="JavaScript闭包原理"></a>JavaScript闭包原理</h1><p>还是以上面提到的闭包为例，上面的例子中多次调用add函数后变量counter的值能够持续增加，原因就在于每次执行完add之后counter并没有被回收。<br>简单来说，其过程就是：</p>
+<ul>
+<li>全局变量add引用了函数f1自我调用后的返回值，即函数f2。</li>
+<li>f1在自我调用时只执行一次，并将counter初始化为0。</li>
+<li>add变量可以作为一个函数使用，它可以访问函数上一层作用域的变量，即f1中的counter。</li>
+<li>在执行完一次add()之后，由于f2被全局变量add引用了，所以不会被回收销毁。</li>
+<li>而f1又引用了f2中的变量，所以f2作用域也不会被销毁，下一次执行时counter值不会重置。</li>
+</ul>
+<p>这样一来，就可以对变量counter进行多次操作，同时counter受函数f1的作用域保护，只能通过add方法修改，不会暴露在全局中，上一节中提到的需求通过闭包实现了。<br>闭包产生的三个必要条件为：</p>
+<ul>
+<li>在函数A内部直接或者间接返回一个函数B</li>
+<li>B函数内部使用着A函数的私有变量(私有数据)</li>
+<li>A函数外部有一个变量接受着函数B</li>
+</ul>
+<h1 id="JavaScript垃圾回收机制"><a href="#JavaScript垃圾回收机制" class="headerlink" title="JavaScript垃圾回收机制"></a>JavaScript垃圾回收机制</h1><p>JavaScript具有自动垃圾回收机制。后台的垃圾回收器会监视所有对象，按照固定的时间间隔周期性地执行垃圾回收，删除那些不可达的对象。<br>对象的可达性遵循下面的原则：</p>
+<ul>
+<li>本地函数的局部变量和参数、当前嵌套调用链上的其他函数的变量和参数、全局变量等是可达的。</li>
+<li>如果一个对象被引用，则它是可达的</li>
+<li>如果若干个对象互相引用成环，且没被其他对象引用，则这些对象都是不可达的</li>
+</ul>
+]]></content>
+      <categories>
+        <category>技术</category>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>金属离子的水解-絮凝-沉淀过程</title>
     <url>/t-53706/</url>
     <content><![CDATA[<p>金属离子的水解-絮凝-沉淀是一个复杂的过程，其中会产生多种单体与聚合体，沉淀产物也会根据反应条件的不同而有所区别。这里以铝离子和铁离子为例进行简单介绍：</p>

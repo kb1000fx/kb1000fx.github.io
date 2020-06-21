@@ -53,62 +53,6 @@
 
 
 
-    
-        <script>
-  if (typeof MathJax === 'undefined') {
-    window.MathJax = {
-      loader: {
-        
-            load: ['[tex]/mhchem'],
-        
-        source: {
-          '[tex]/amsCd': '[tex]/amscd',
-          '[tex]/AMScd': '[tex]/amscd'
-        }
-      },
-      tex: {
-        inlineMath: {'[+]': [['$', '$']]},
-        
-            packages: {'[+]': ['mhchem']},
-        
-        tags: 'ams'
-      },
-      options: {
-        renderActions: {
-          findScript: [10, doc => {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-              const display = !!node.type.match(/; *mode=display/);
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-              const text = document.createTextNode('');
-              node.parentNode.replaceChild(text, node);
-              math.start = {node: text, delim: '', n: 0};
-              math.end = {node: text, delim: '', n: 0};
-              doc.math.push(math);
-            });
-          }, '', false],
-          insertedScript: [200, () => {
-            document.querySelectorAll('mjx-container').forEach(node => {
-              let target = node.parentNode;
-              if (target.nodeName.toLowerCase() === 'li') {
-                target.parentNode.classList.add('has-jax');
-              }
-            });
-          }, '', false]
-        }
-      }
-    };
-    (function () {
-      var script = document.createElement('script');
-      script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
-      script.defer = true;
-      document.head.appendChild(script);
-    })();
-  } else {
-    MathJax.startup.document.state(0);
-    MathJax.texReset();
-    MathJax.typeset();
-  }
-</script>
           
 
 
@@ -116,7 +60,7 @@
     
     <title>
         
-            金属离子的水解-絮凝-沉淀过程 | 小蜗熊的蜂蜜罐
+            JavaScript的闭包原理与垃圾回收机制 | 小蜗熊的蜂蜜罐
         
     </title>
     
@@ -307,19 +251,19 @@
     
     
       <div class="post-header"> 
-  <a class="post-header-title" href="/t-53706/">金属离子的水解-絮凝-沉淀过程</a>
+  <a class="post-header-title" href="/t-37956/">JavaScript的闭包原理与垃圾回收机制</a>
   <div class="post-header-meta">
     <span>
       <span class="iconfont icon-calendar"></span>
-      发布于:&nbsp;2020-06-09
+      发布于:&nbsp;2020-06-16
     </span>
     <span>
       <span class="iconfont icon-calendar-check"></span>
-      更新于:&nbsp;2020-06-15
+      更新于:&nbsp;2020-06-21
     </span>
     <span>
       <span class="iconfont icon-folder"></span>
-      分类于:&nbsp;<a class="category-link" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a>
+      分类于:&nbsp;<a class="category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a> > <a class="category-link" href="/categories/%E6%8A%80%E6%9C%AF/Web/">Web</a>
     </span>
     
       <span>
@@ -341,25 +285,25 @@
       <button class="mdui-btn mdui-btn-icon mdui-text-color-teal" mdui-menu="{target: '#share_menu', align: 'right'}"><i class="iconfont icon-share"></i></button>
       <ul class="mdui-menu" id="share_menu">
         <li class="mdui-menu-item">
-          <a href="http://service.weibo.com/share/share.php?appkey=&title=金属离子的水解-絮凝-沉淀过程&url=https://garybear.cn/t-53706/&pic=https://garybear.cn/images/favicon.ico&searchPic=false&style=simple" target="_blank" class="mdui-ripple">分享到 Weibo</a>
+          <a href="http://service.weibo.com/share/share.php?appkey=&title=JavaScript的闭包原理与垃圾回收机制&url=https://garybear.cn/t-37956/&pic=https://garybear.cn/images/favicon.ico&searchPic=false&style=simple" target="_blank" class="mdui-ripple">分享到 Weibo</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="https://twitter.com/intent/tweet?text=金属离子的水解-絮凝-沉淀过程&url=https://garybear.cn/t-53706/&via=机智小蜗熊" target="_blank" class="mdui-ripple">分享到 Twitter</a>
+          <a href="https://twitter.com/intent/tweet?text=JavaScript的闭包原理与垃圾回收机制&url=https://garybear.cn/t-37956/&via=机智小蜗熊" target="_blank" class="mdui-ripple">分享到 Twitter</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="https://www.facebook.com/sharer/sharer.php?u=https://garybear.cn/t-53706/" target="_blank" class="mdui-ripple">分享到 Facebook</a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://garybear.cn/t-37956/" target="_blank" class="mdui-ripple">分享到 Facebook</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="https://plus.google.com/share?url=https://garybear.cn/t-53706/" target="_blank" class="mdui-ripple">分享到 Google+</a>
+          <a href="https://plus.google.com/share?url=https://garybear.cn/t-37956/" target="_blank" class="mdui-ripple">分享到 Google+</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://garybear.cn/t-53706/&title=金属离子的水解-絮凝-沉淀过程" target="_blank" class="mdui-ripple">分享到 LinkedIn</a>
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://garybear.cn/t-37956/&title=JavaScript的闭包原理与垃圾回收机制" target="_blank" class="mdui-ripple">分享到 LinkedIn</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="http://connect.qq.com/widget/shareqq/index.html?site=小蜗熊的蜂蜜罐&title=金属离子的水解-絮凝-沉淀过程&summary=人间五十年，岂有长生不灭者？&pics=https://garybear.cn/images/favicon.ico&url=https://garybear.cn/t-53706/" target="_blank" class="mdui-ripple">分享到 QQ</a>
+          <a href="http://connect.qq.com/widget/shareqq/index.html?site=小蜗熊的蜂蜜罐&title=JavaScript的闭包原理与垃圾回收机制&summary=人间五十年，岂有长生不灭者？&pics=https://garybear.cn/images/favicon.ico&url=https://garybear.cn/t-37956/" target="_blank" class="mdui-ripple">分享到 QQ</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="https://telegram.me/share/url?url=https://garybear.cn/t-53706/&text=金属离子的水解-絮凝-沉淀过程" target="_blank" class="mdui-ripple">分享到 Telegram</a>
+          <a href="https://telegram.me/share/url?url=https://garybear.cn/t-37956/&text=JavaScript的闭包原理与垃圾回收机制" target="_blank" class="mdui-ripple">分享到 Telegram</a>
         </li>
       </ul>
     
@@ -382,76 +326,49 @@
   
   
   
+  <div class="post-tags">
+    
+      <i class="iconfont icon-tag">
+        <a rel="tag" href = /tags/%E5%89%8D%E7%AB%AF/ >前端</a>
+      </i>
+    
+  </div>
+
   
   <div class="mdui-card-content mdui-typo mdui-p-x-4">
-    <p>金属离子的水解-絮凝-沉淀是一个复杂的过程，其中会产生多种单体与聚合体，沉淀产物也会根据反应条件的不同而有所区别。这里以铝离子和铁离子为例进行简单介绍：</p>
+    <p>JavaScript中的闭包是指能够访问其他函数作用域内变量的函数，即一个函数内部的函数。闭包是一种保护私有变量的机制，在函数执行时形成私有的作用域，保护里面的私有变量不受外界干扰，即形成一个不销毁的栈环境。但由于闭包会使得函数中的变量都被保存在内存中，所以滥用闭包会造成性能问题或是导致内存泄漏。</p>
 <a id="more"></a>
 
-<h1 id="铝离子的水解-絮凝-沉淀"><a href="#铝离子的水解-絮凝-沉淀" class="headerlink" title="铝离子的水解-絮凝-沉淀"></a>铝离子的水解-絮凝-沉淀</h1><p>对于Al(Ⅲ)的水解产物，除 $\ce{Al^3+}$ 、 $\ce{Al(OH)^2+}$ 、$\ce{Al(OH)_2^+}$ 、$\ce{Al(OH)_4^-}$ 等单体外，还存在$\ce{Al_2(OH)_5^+}$ 、 $\ce{Al_3(OH)_4^5+}$ 等多种聚合形态。</p>
-<h2 id="铝离子的水解过程"><a href="#铝离子的水解过程" class="headerlink" title="铝离子的水解过程"></a>铝离子的水解过程</h2><p>Al(Ⅲ)的水解过程如下：</p>
-<div class="math-fluid">
-$$
-\ce{
-    Al^{3+} + H_2O/OH^-
-    <=>
-    \begin{matrix}
-        \ce{Al(OH)^{2+}}
-        \\ 
-        \ce{Al(OH)_2^{+}}
-        \\ 
-        \ce{Al(OH)_4^{-}}
-    \end{matrix}
-    <=>
-    Al_X(OH)_Y^{(3X-Y)+}
-    ->
-    Al_XO_Z(OH)_Y^{(3X-Y-2Z)+}
-    ->
-    Al(OH)_3 (v) (无定形)
-}
-$$
-</div>
+<h1 id="JavaScript闭包简介"><a href="#JavaScript闭包简介" class="headerlink" title="JavaScript闭包简介"></a>JavaScript闭包简介</h1><p>首先来看一个简单的例子：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn1</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  a += <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">return</span> a;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//函数中的a为全局变量</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn2</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line">  a += <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">return</span> a;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//函数中的a为局部变量</span></span><br><span class="line">fn1();</span><br><span class="line"><span class="built_in">console</span>.log(fn1());</span><br><span class="line"><span class="comment">//控制台输出3</span></span><br><span class="line">fn2();</span><br><span class="line"><span class="built_in">console</span>.log(fn2());</span><br><span class="line"><span class="comment">//控制台输出2</span></span><br></pre></td></tr></table></figure>
+<p>在这个例子中，fn1使用的是全局变量a，fn2使用的是局部变量a。多次执行函数后，f1返回的是多次累加的结果，而f2由于使用的是局部变量执行结果始终与单次执行相同。如果希望多次对一个变量进行操作，同时又不希望将其暴露在全局之中，此时上面的两个函数均无法满足需求，可使用嵌套函数的方法。在JavaScript中，所有函数都能访问它们上一层的作用域。嵌套函数可以访问上一层的函数变量。例如：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> add = (<span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> counter = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> <span class="title">f2</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">          <span class="keyword">return</span> counter += <span class="number">1</span>;</span><br><span class="line">      &#125;</span><br><span class="line">&#125;)();</span><br><span class="line"> </span><br><span class="line">add();</span><br><span class="line">add();</span><br><span class="line">add();</span><br><span class="line"><span class="comment">//此时counter为3</span></span><br></pre></td></tr></table></figure>
+<p>上面的这个函数就是一个JavaScript闭包，它使得函数拥有私有变量变成可能。</p>
+<h1 id="作用域与作用域链"><a href="#作用域与作用域链" class="headerlink" title="作用域与作用域链"></a>作用域与作用域链</h1><p>JavaScript中存在如下三种作用域：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 全局作用域</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 函数作用域</span></span><br><span class="line">  &#123;</span><br><span class="line">    <span class="comment">// 块级作用域</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>当同时存在多个作用域对象时，所有函数的作用域对象会被环境栈所管理。环境栈中的作用域对象是按顺序访问的，最先能够访问的是当前函数的作用域，如果访问的变量在当前作用域没有，会访问上一层作用域，直到找到全局作用域。如果访问到全局作用域也没有这个对象，会抛出ReferenceError的异常。</p>
+<p>简单来说就是前面提到过的<code>所有函数都能访问它们上一层的作用域</code>，子对象会一级级向上寻找所有父对象的变量，函数内部可以读取全局变量，这就是所谓的作用域链。</p>
+<h1 id="JavaScript闭包原理"><a href="#JavaScript闭包原理" class="headerlink" title="JavaScript闭包原理"></a>JavaScript闭包原理</h1><p>还是以上面提到的闭包为例，上面的例子中多次调用add函数后变量counter的值能够持续增加，原因就在于每次执行完add之后counter并没有被回收。<br>简单来说，其过程就是：</p>
+<ul>
+<li>全局变量add引用了函数f1自我调用后的返回值，即函数f2。</li>
+<li>f1在自我调用时只执行一次，并将counter初始化为0。</li>
+<li>add变量可以作为一个函数使用，它可以访问函数上一层作用域的变量，即f1中的counter。</li>
+<li>在执行完一次add()之后，由于f2被全局变量add引用了，所以不会被回收销毁。</li>
+<li>而f1又引用了f2中的变量，所以f2作用域也不会被销毁，下一次执行时counter值不会重置。</li>
+</ul>
+<p>这样一来，就可以对变量counter进行多次操作，同时counter受函数f1的作用域保护，只能通过add方法修改，不会暴露在全局中，上一节中提到的需求通过闭包实现了。<br>闭包产生的三个必要条件为：</p>
+<ul>
+<li>在函数A内部直接或者间接返回一个函数B</li>
+<li>B函数内部使用着A函数的私有变量(私有数据)</li>
+<li>A函数外部有一个变量接受着函数B</li>
+</ul>
+<h1 id="JavaScript垃圾回收机制"><a href="#JavaScript垃圾回收机制" class="headerlink" title="JavaScript垃圾回收机制"></a>JavaScript垃圾回收机制</h1><p>JavaScript具有自动垃圾回收机制。后台的垃圾回收器会监视所有对象，按照固定的时间间隔周期性地执行垃圾回收，删除那些不可达的对象。<br>对象的可达性遵循下面的原则：</p>
+<ul>
+<li>本地函数的局部变量和参数、当前嵌套调用链上的其他函数的变量和参数、全局变量等是可达的。</li>
+<li>如果一个对象被引用，则它是可达的</li>
+<li>如果若干个对象互相引用成环，且没被其他对象引用，则这些对象都是不可达的</li>
+</ul>
 
-<p>其中$X、Y、Z$与铝离子和氢氧根浓度之比，即$\ce{[Al^3+]/[OH^-]}$有关</p>
-<p>由上图，其中前几个步骤均为可逆反应，所以在絮凝初期溶液中会存在一定数量的$\ce{Al^3+}$。<br>类比可得，使用新制氢氧化铜悬浊液检测醛基的原理与斐林试剂、班氏试剂类似，均是依靠其中碱性环境下的$\ce{Cu^2+}$。</p>
-<h2 id="铝离子水解的聚合体"><a href="#铝离子水解的聚合体" class="headerlink" title="铝离子水解的聚合体"></a>铝离子水解的聚合体</h2><p>在水解过程中，尤其是碱性较强时，溶液中会产生多种Al(Ⅲ)的聚集体，其中一种典型的就是聚十三铝$\ce{Al_12AlO_4(OH)_24^{7+}}$<br>其结构由中心的铝氧四面体和外围的$\ce{Al^{3+}-OH^-}$八面体结构组成。</p>
-<div class="math-fluid">
-$$
-\ce{
-    \underset{中心四面体}{Al(OH)_4^{-}}
-    +
-    \underset{八面体结构单元}{12Al(OH)_2^{+}}
-    ->
-    \underset{聚十三铝}{Al_12AlO_4(OH)_24^{7+}}
-    ->
-    \underset{聚合体}{nAl_13}
-}
-$$
-</div>
-
-<h1 id="铁离子的水解-絮凝-沉淀"><a href="#铁离子的水解-絮凝-沉淀" class="headerlink" title="铁离子的水解-絮凝-沉淀"></a>铁离子的水解-絮凝-沉淀</h1><p>Fe(Ⅲ)的水解过程与Al(Ⅲ)类似，但铁离子的絮凝产物存在不同的晶型，因此结果更为复杂:</p>
-<div class="math-fluid">
-$$
-\ce{
-    Fe^{3+} + H_2O/OH^-
-    <=>
-    \begin{matrix}
-        \ce{Fe(OH)^{2+}}
-        \\ 
-        \ce{Fe(OH)_2^{+}}
-        \\ 
-        \ce{Fe(OH)_4^{-}}
-    \end{matrix}
-    <=>
-    \begin{cases}
-        {\gamma-FeOOH} (v) + Fe(OH)_3 (无定形) (v)
-        \\  
-        \\
-        \\     
-        Fe_X(OH)_Y^{(3X-Y)+} -> Fe_XO_Z(OH)_Y^{(3X-Y-2Z)+} -> {\alpha-FeOOH} (v) + Fe(OH)_3 (v) (无定形)       
-    \end{cases}
-}
-$$
-</div>
   </div>
   <!--文末结束语-->
   
@@ -476,14 +393,9 @@ $$
   
   <nav>
     
-      <a rel="prev" class="post-nav-item mdui-float-left" href="/t-37956/">
-        <i class="iconfont icon-angle-left"></i>
-        <span>JavaScript的闭包原理与垃圾回收机制</span>
-      </a>
     
-    
-      <a rel="next" class="post-nav-item mdui-float-right" href="/t-20376/">
-        <span>北方游牧民族关系整理</span>
+      <a rel="next" class="post-nav-item mdui-float-right" href="/t-53706/">
+        <span>金属离子的水解-絮凝-沉淀过程</span>
         <i class="iconfont icon-angle-right"></i>
       </a>
     
@@ -497,8 +409,8 @@ $$
     <button class="mdui-fab mdui-ripple mdui-color-teal" mdui-menu="{target: '#toc'}"><i class="iconfont icon-list"></i></button>
     <ul class="mdui-menu" id="toc">
       <li class="mdui-menu-item">
-        <a href="/t-53706/" id="toc-header" class="mdui-ripple">文章目录</a>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#铝离子的水解-絮凝-沉淀"><span class="toc-number">1.</span> <span class="toc-text">铝离子的水解-絮凝-沉淀</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#铝离子的水解过程"><span class="toc-number">1.1.</span> <span class="toc-text">铝离子的水解过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#铝离子水解的聚合体"><span class="toc-number">1.2.</span> <span class="toc-text">铝离子水解的聚合体</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#铁离子的水解-絮凝-沉淀"><span class="toc-number">2.</span> <span class="toc-text">铁离子的水解-絮凝-沉淀</span></a></li></ol>
+        <a href="/t-37956/" id="toc-header" class="mdui-ripple">文章目录</a>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#JavaScript闭包简介"><span class="toc-number">1.</span> <span class="toc-text">JavaScript闭包简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#作用域与作用域链"><span class="toc-number">2.</span> <span class="toc-text">作用域与作用域链</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#JavaScript闭包原理"><span class="toc-number">3.</span> <span class="toc-text">JavaScript闭包原理</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#JavaScript垃圾回收机制"><span class="toc-number">4.</span> <span class="toc-text">JavaScript垃圾回收机制</span></a></li></ol>
       </li>
     </ul>
   </div>
