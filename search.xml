@@ -2900,6 +2900,35 @@ $$ \oint_{l} \vec{H} \cdot d\vec{l}= I + \iint_{S} \frac{\partial \vec{D}}{\part
       </tags>
   </entry>
   <entry>
+    <title>解决Android-x86无法进入图形界面的问题</title>
+    <url>/t-52966/</url>
+    <content><![CDATA[<p>在安装Android-x86后，由于nVidia显卡驱动的原因启动过程中可能会卡住无法进入图形界面。此时在需要在启动参数中添加nomodeset选项来禁用显卡。其他Linux系统中遇到同样的问题也可以使用此方法解决。</p>
+<a id="more"></a>
+<h1 id="产生原因"><a href="#产生原因" class="headerlink" title="产生原因"></a>产生原因</h1><blockquote>
+<p>The newest kernels have moved the video mode setting into the kernel. So all the programming of the hardware specific clock rates and registers on the video card happen in the kernel rather than in the X driver when the X server starts.. This makes it possible to have high resolution nice looking splash (boot) screens and flicker free transitions from boot splash to login screen. Unfortunately, on some cards this doesnt work properly and you end up with a black screen. Adding the nomodeset parameter instructs the kernel to not load video drivers and use BIOS modes instead until X is loaded.</p>
+</blockquote>
+<p>某些显卡下Linux内核无法正常工作导致黑屏。</p>
+<h1 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h1><p>开机后在grub界面选择第二项<code>Debug mode</code>，输入</p>
+<figure class="highlight jboss-cli"><table><tr><td class="code"><pre><span class="line">mount –o remount,rw <span class="string">/mnt</span></span><br></pre></td></tr></table></figure>
+<p>再输入</p>
+<figure class="highlight vim"><table><tr><td class="code"><pre><span class="line"><span class="keyword">vi</span> /mnt/grub/<span class="keyword">menu</span>.lst</span><br></pre></td></tr></table></figure>
+<p>在第七行的root前加入<code>quiet nomodeset</code>，修改后内容如下：</p>
+<figure class="highlight armasm"><table><tr><td class="code"><pre><span class="line"><span class="symbol">...</span></span><br><span class="line"><span class="symbol">title</span> <span class="keyword">Android-x86 </span><span class="number">8</span>.<span class="number">1</span>-<span class="built_in">r5</span></span><br><span class="line">    kernel /<span class="keyword">android-8. </span><span class="number">1</span>-<span class="built_in">r5</span>/kernel quiet nomodeset root=/dev/ram0 SRC=/<span class="keyword">android-8. </span><span class="number">1</span>-<span class="built_in">r5</span></span><br><span class="line">    initrd /<span class="keyword">android-8. </span><span class="number">1</span>-<span class="built_in">r5</span>/ initrd. img</span><br><span class="line"><span class="symbol">...</span></span><br></pre></td></tr></table></figure>
+
+<p>按<code>ESC</code>退出编辑，并输入<code>:wq</code>保存退出。<br>重启后即可进入图形界面。</p>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ul>
+<li><a href="https://android.stackexchange.com/questions/144535/android-x86-marshmallow-not-booting-on-virtualbox-and-vmware-workstation" target="_blank" rel="noopener">Android x86 Marshmallow not booting on Virtualbox and VMware Workstation</a></li>
+<li><a href="https://ubuntuforums.org/showthread.php?t=1613132" target="_blank" rel="noopener">How to set NOMODESET and other kernel boot options in grub2</a></li>
+<li><a href="https://www.android-x86.org/documentation/graphic_card.html" target="_blank" rel="noopener">How to boot the Android-x86 Live-CD when you have problems with your graphiccard</a></li>
+<li><a href="https://www.dell.com/support/article/en-us/sln306327/manual-nomodeset-kernel-boot-line-option-for-linux-booting?lang=en" target="_blank" rel="noopener">Manual “nomodeset” Kernel Boot Line Option for Linux Booting</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>技术</category>
+        <category>Linux</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Insurgency(叛乱)全成就指南</title>
     <url>/t-64878/</url>
     <content><![CDATA[<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p><strong>本文同步发于SteamCN，<a href="https://steamcn.com/t445765-1-1" target="_blank" rel="noopener">点我查看</a></strong></p>
