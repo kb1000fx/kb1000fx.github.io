@@ -213,11 +213,11 @@
                             小蜗熊的笔记本
                         </a>
                     
-                        <a href="https://garybear.cn/hexo-theme-meadow/" class="mdui-list-item mdui-ripple">
+                        <a href="https://garybear.cn/hexo-theme-meadow/doc/#/" class="mdui-list-item mdui-ripple">
                             Meadow说明文档
                         </a>
                     
-                        <a href="https://garybear.cn/hexo-theme-insulin/" class="mdui-list-item mdui-ripple">
+                        <a href="https://garybear.cn/hexo-theme-insulin/doc/#/" class="mdui-list-item mdui-ripple">
                             Insulin说明文档
                         </a>
                     
@@ -259,7 +259,7 @@
     </span>
     <span>
       <span class="iconfont icon-calendar-check"></span>
-      更新于:&nbsp;2020-02-10
+      更新于:&nbsp;2020-06-29
     </span>
     <span>
       <span class="iconfont icon-folder"></span>
@@ -339,8 +339,10 @@
 <p>在注册表项</p>
 <p><code>HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppContainer\Mappings</code></p>
 <p>中根据右侧的<code>DisplayName</code>找到对应UWP应用的SID，在CMD下代入相关的命令即可。</p>
-<hr>
+<blockquote>
 <p>详见Windows开发者文档：<a href="https://docs.microsoft.com/zh-cn/previous-versions/windows/apps/hh780593(v=win.10)" target="_blank" rel="noopener">如何启用环回和排除网络隔离故障-Microsoft Docs</a></p>
+</blockquote>
+<h1 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h1><p>Windows 10 1803 (Edge 42.17134.1.0)中已支持Edge访问localhost，原因如下：<br>更新后使用<code>CheckNetIsolation.exe loopbackexempt-s</code>命令可发现当前列表中存在一个名为001的SID，001实际上是Edge的子AC，因此Edge得以访问localhost。</p>
 
   </div>
   <!--文末结束语-->
@@ -388,7 +390,7 @@
     <ul class="mdui-menu" id="toc">
       <li class="mdui-menu-item">
         <a href="/t-1358/" id="toc-header" class="mdui-ripple">文章目录</a>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Edge浏览器无法连接到代理服务器"><span class="toc-number">1.</span> <span class="toc-text">Edge浏览器无法连接到代理服务器</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#其他UWP应用的代理设置"><span class="toc-number">2.</span> <span class="toc-text">其他UWP应用的代理设置</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Edge浏览器无法连接到代理服务器"><span class="toc-number">1.</span> <span class="toc-text">Edge浏览器无法连接到代理服务器</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#其他UWP应用的代理设置"><span class="toc-number">2.</span> <span class="toc-text">其他UWP应用的代理设置</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#更新"><span class="toc-number">3.</span> <span class="toc-text">更新</span></a></li></ol>
       </li>
     </ul>
   </div>

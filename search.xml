@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>JavaScript的闭包原理与垃圾回收机制</title>
+    <title>JavaScript闭包原理与垃圾回收机制</title>
     <url>/t-37956/</url>
     <content><![CDATA[<p>JavaScript中的闭包是指能够访问其他函数作用域内变量的函数，即一个函数内部的函数。闭包是一种保护私有变量的机制，在函数执行时形成私有的作用域，保护里面的私有变量不受外界干扰，即形成一个不销毁的栈环境。但由于闭包会使得函数中的变量都被保存在内存中，所以滥用闭包会造成性能问题或是导致内存泄漏。</p>
 <a id="more"></a>
@@ -660,7 +660,8 @@ $$
   <entry>
     <title>Meadow主题使用说明</title>
     <url>/t-4072/</url>
-    <content><![CDATA[<p><strong>Meadow主题的中文帮助文档已迁移至<a href="https://kb1000fx.github.io/hexo-theme-meadow/#/zh-CN/" target="_blank" rel="noopener">hexo-theme-meadow</a>，本文将不再继续更新。</strong><br><img src="https://img.shields.io/badge/Hexo-3.0+-blue" alt="Hexo"> <img src="https://img.shields.io/badge/node.js-6.0-brightgreen" alt="Node.JS"><br>Meadow 是一款基于MDUI开发的，符合Material Designed的Hexo主题。<br><a href="https://garybear.cn/">Demo</a><br><a href="https://github.com/kb1000fx/hexo-theme-meadow" target="_blank" rel="noopener">Github</a></p>
+    <content><![CDATA[<p><strong>Meadow主题的中文帮助文档已迁移至<a href="https://kb1000fx.github.io/hexo-theme-meadow/doc/#/" target="_blank" rel="noopener">hexo-theme-meadow说明文档</a>，本文将不再继续更新。</strong></p>
+<p><img src="https://img.shields.io/badge/Hexo-3.0+-blue" alt="Hexo"> <img src="https://img.shields.io/badge/node.js-6.0-brightgreen" alt="Node.JS"><br>Meadow 是一款基于MDUI开发的，符合Material Designed的Hexo主题。<br><a href="https://garybear.cn/">Demo</a><br><a href="https://github.com/kb1000fx/hexo-theme-meadow" target="_blank" rel="noopener">Github</a></p>
 <a id="more"></a>
 <h1 id="开始使用"><a href="#开始使用" class="headerlink" title="开始使用"></a>开始使用</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p><strong>1. 切换至Hexo根目录</strong></p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> hexo</span></span><br></pre></td></tr></table></figure>
@@ -3388,8 +3389,10 @@ Ubuntu默认未开启Rewrite支持需手动开启，在此只是简单介绍，�
 <p>在注册表项</p>
 <p><code>HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppContainer\Mappings</code></p>
 <p>中根据右侧的<code>DisplayName</code>找到对应UWP应用的SID，在CMD下代入相关的命令即可。</p>
-<hr>
+<blockquote>
 <p>详见Windows开发者文档：<a href="https://docs.microsoft.com/zh-cn/previous-versions/windows/apps/hh780593(v=win.10)" target="_blank" rel="noopener">如何启用环回和排除网络隔离故障-Microsoft Docs</a></p>
+</blockquote>
+<h1 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h1><p>Windows 10 1803 (Edge 42.17134.1.0)中已支持Edge访问localhost，原因如下：<br>更新后使用<code>CheckNetIsolation.exe loopbackexempt-s</code>命令可发现当前列表中存在一个名为001的SID，001实际上是Edge的子AC，因此Edge得以访问localhost。</p>
 ]]></content>
       <categories>
         <category>技术</category>
