@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <script>if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href="https://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); </script>
+    
+    
+        <link rel="preload" crossorigin="crossorigin" href="/fonts/roboto/Roboto-Regular.woff2" as="font">
+        <link rel="preload" crossorigin="crossorigin" href="/fonts/roboto/Roboto-Bold.woff2" as="font">
+    
+    
+    
+        <link rel="shortcut icon" href="/images/favicon.ico">
+    
+    
+    
+<link rel="stylesheet" href="/css/mdui.min.css">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/iconfont.css">
+
+    
+    
+
+    
+        <script data-ad-client="ca-pub-5888225880131847" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    
+
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144166423-1"></script>
+<script>
+  var host = window.location.hostname;
+  if (host != "localhost" || true == false) {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-144166423-1');
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+          
+
+
+    
+    
+    <title>
+        
+            JavaScript设计模式简介之工厂模式 | 小蜗熊的蜂蜜罐
+        
+    </title>
+    
+    
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-primary-teal mdui-theme-accent-blue">
+  
+  <header class="mdui-appbar mdui-appbar-fixed">
+  <div id="toolbar" class="mdui-toolbar mdui-color-theme">
+    <button class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#sidebar', swipe: true}"><i class="iconfont icon-menu"></i></button>
+    <a href="/" class="mdui-typo-headline">小蜗熊的蜂蜜罐</a>
+    <a href="/" class="header-subtitle mdui-typo-headline"></a>
+    <div class="mdui-toolbar-spacer"></div>
+    <button class="mdui-btn mdui-btn-icon" mdui-dialog="{target: '#search'}" mdui-tooltip="{content: 'search'}"><i class="iconfont icon-search"></i></button>
+  </div>
+</header>
+
+<div class="mdui-dialog" id="search">
+  
+    <div class="search-form">
+      <input type="search" class="search-form-input" placeholder="请输入关键字" onfocus="listenSearchFunc()">
+    </div>
+    <div class="search-result" data-resource="/search.xml"></div>
+  
+</div>
+
+  <aside id="sidebar" class="mdui-drawer">
+    <div class="mdui-tab" mdui-tab>
+        <a href="#sidebar-tab1" id="sidebartab" class="mdui-ripple mdui-tab-active">站点概览</a>
+        <a href="#sidebar-tab2" id="sidebartab" class="mdui-ripple">关于</a>
+    </div>
+
+    
+    <div id="sidebar-tab1" class="mdui-p-a-2">
+        <div class="mdui-list">
+            
+                
+                <a href="/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-home"></i>
+                    </div>
+                    <div class="mdui-list-item-content">主页</div>
+                </a>
+            
+                
+                <a href="/tags/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-bookmark"></i>
+                    </div>
+                    <div class="mdui-list-item-content">标签</div>
+                </a>
+            
+                
+                <a href="/categories/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-folder"></i>
+                    </div>
+                    <div class="mdui-list-item-content">分类</div>
+                </a>
+            
+                
+                <a href="/archives/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-archive"></i>
+                    </div>
+                    <div class="mdui-list-item-content">归档</div>
+                </a>
+            
+                
+                <a href="/tools/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-tools"></i>
+                    </div>
+                    <div class="mdui-list-item-content">工具箱</div>
+                </a>
+            
+                
+                <a href="/about/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-user"></i>
+                    </div>
+                    <div class="mdui-list-item-content">关于</div>
+                </a>
+            
+            <div class="mdui-list-item mdui-ripple">
+                <div class="mdui-list-item-icon">
+                    <i class="iconfont icon-moon"></i>
+                </div>
+                <div class="mdui-list-item-content">夜间模式</div>
+                <label class="mdui-switch" id="darkmode">
+                  <input type="checkbox" id="nightmode_switch"/>
+                  <i class="mdui-switch-icon"></i>
+                </label>
+            </div>           
+        </div>
+    </div>
+
+    
+    <div id="sidebar-tab2" class="mdui-p-a-2">
+        <div class="sidebar-overview">
+            <div class="sidebar-avatar">
+                
+                    <img src="/images/avatar.webp"/>
+                
+            </div>
+            <div class="sidebar-author-name">机智小蜗熊</div>
+            <div class="sidebar-description">人间五十年，岂有长生不灭者？</div>
+        </div>
+        <div class="sidebar-links">
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-mail"></i></span>
+                    <a href="mailto:kb1000fx@gmail.com" class="mdui-chip-title">E-Mail</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-github"></i></span>
+                    <a href="https://github.com/kb1000fx" target="_blank" rel="noopener" class="mdui-chip-title">GitHub</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-steam"></i></span>
+                    <a href="https://steamcommunity.com/profiles/76561198346798163" target="_blank" rel="noopener" class="mdui-chip-title">Steam</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-weibo"></i></span>
+                    <a href="https://weibo.com/kb1000fx" target="_blank" rel="noopener" class="mdui-chip-title">Weibo</a>
+                </div>
+            
+        </div>
+        <ul class="mdui-list" mdui-collapse="{accordion: true}">
+            <li class="mdui-collapse-item">
+                <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-link"></i>
+                    </div>
+                    <div class="mdui-list-item-content">友情链接</div>
+                    <div class="mdui-collapse-item-arrow">
+                        <i class="mdui-list-item-icon iconfont icon-angle-down"></i>
+                    </div>
+                </div>
+                <ul class="mdui-collapse-item-body mdui-list mdui-list-dense">
+                    
+                        <a href="https://note.garybear.cn/" target="_blank" rel="noopener" class="mdui-list-item mdui-ripple">
+                            小蜗熊的笔记本
+                        </a>
+                    
+                        <a href="https://garybear.cn/hexo-theme-meadow/doc/#/" class="mdui-list-item mdui-ripple">
+                            Meadow说明文档
+                        </a>
+                    
+                        <a href="https://garybear.cn/hexo-theme-insulin/doc/#/" class="mdui-list-item mdui-ripple">
+                            Insulin说明文档
+                        </a>
+                    
+                </ul>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="mdui-divider"></div>
+    
+    
+        <div class="adsense-contain">
+            <!-- Sidebar Ads -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5888225880131847"
+     data-ad-slot="4752632688"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+        </div>
+    
+</aside>
+  
+  <main id="main-contain" class="mdui-container mdui-m-t-5">
+    <article id="article" class="mdui-card mdui-p-b-2 mdui-m-b-5">
+  <header class="mdui-card-media">
+    
+    
+      
+        <img src = /images/43842/factory.webp >
+      
+      <div class="mdui-card-media-covered">
+        <div class="post-header"> 
+  <a class="post-header-title" href="/t-43842/">JavaScript设计模式简介之工厂模式</a>
+  <div class="post-header-meta">
+    <span>
+      <span class="iconfont icon-calendar"></span>
+      发布于:&nbsp;2020-06-29
+    </span>
+    <span>
+      <span class="iconfont icon-calendar-check"></span>
+      更新于:&nbsp;2020-07-02
+    </span>
+    <span>
+      <span class="iconfont icon-folder"></span>
+      分类于:&nbsp;<a class="category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a> > <a class="category-link" href="/categories/%E6%8A%80%E6%9C%AF/Web/">Web</a>
+    </span>
+    
+      <span>
+        <span class="iconfont icon-eye"></span>
+        阅读次数:&nbsp;
+        <span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span>
+      </span>
+    
+  </div>
+</div>   
+    
+
+
+
+      </div>
+    
+    
+    <div class="mdui-card-menu">
+    
+      <button class="mdui-btn mdui-btn-icon mdui-text-color-teal" mdui-menu="{target: '#share_menu', align: 'right'}"><i class="iconfont icon-share"></i></button>
+      <ul class="mdui-menu" id="share_menu">
+        <li class="mdui-menu-item">
+          <a href="http://service.weibo.com/share/share.php?appkey=&title=JavaScript设计模式简介之工厂模式&url=https://garybear.cn/t-43842/&pic=https://garybear.cn/images/favicon.ico&searchPic=false&style=simple" target="_blank" class="mdui-ripple">分享到 Weibo</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://twitter.com/intent/tweet?text=JavaScript设计模式简介之工厂模式&url=https://garybear.cn/t-43842/&via=机智小蜗熊" target="_blank" class="mdui-ripple">分享到 Twitter</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://garybear.cn/t-43842/" target="_blank" class="mdui-ripple">分享到 Facebook</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://plus.google.com/share?url=https://garybear.cn/t-43842/" target="_blank" class="mdui-ripple">分享到 Google+</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://garybear.cn/t-43842/&title=JavaScript设计模式简介之工厂模式" target="_blank" class="mdui-ripple">分享到 LinkedIn</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="http://connect.qq.com/widget/shareqq/index.html?site=小蜗熊的蜂蜜罐&title=JavaScript设计模式简介之工厂模式&summary=人间五十年，岂有长生不灭者？&pics=https://garybear.cn/images/favicon.ico&url=https://garybear.cn/t-43842/" target="_blank" class="mdui-ripple">分享到 QQ</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://telegram.me/share/url?url=https://garybear.cn/t-43842/&text=JavaScript设计模式简介之工厂模式" target="_blank" class="mdui-ripple">分享到 Telegram</a>
+        </li>
+      </ul>
+    
+  </div>
+  </header>
+  
+  
+    <div class="adsense-contain">
+      <!-- Banner Ads -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5888225880131847"
+     data-ad-slot="3949852758"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    </div>
+  
+  
+  
+  <div class="post-tags">
+    
+      <i class="iconfont icon-tag">
+        <a rel="tag" href = /tags/%E5%89%8D%E7%AB%AF/ >前端</a>
+      </i>
+    
+  </div>
+
+  
+  <div class="mdui-card-content mdui-typo mdui-p-x-4">
+    <p>工厂模式是JavaScript中最常用的一种用于创建对象的设计模式，其核心就是将逻辑封装在一个函数中不暴露创建对象的具体逻辑。工厂模式适用于对象的构建十分复杂、需要依赖具体环境创建不同实例、处理大量具有相同属性的小对象等情况，但滥用工厂模式也给代码增加不必要的复杂度，使用时需要谨慎。根据抽象程度的不同，工厂模式又可以分为简单工厂、工厂方法和抽象工厂三种。</p>
+<a id="more"></a>
+
+<h1 id="简单工厂"><a href="#简单工厂" class="headerlink" title="简单工厂"></a>简单工厂</h1><p>简单工厂模式又称为静态工厂模式，是由一个工厂函数来实例化多个产品对象，主要用来创建同一类对象。其过程图如下：</p>
+<div class="mermaid">
+  classDiagram
+    Client -- Factory
+    Factory <-- productOne
+    Factory <-- productTwo
+    class Factory{
+      + createProduct()
+    }
+    class productOne{
+      data
+      method()
+    }
+    class productTwo{
+      data
+      method()
+    }
+</div>
+
+<p>下面举一个简单的例子：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> factory=<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> product = <span class="keyword">new</span> <span class="built_in">Object</span>;</span><br><span class="line">    product.data = data;</span><br><span class="line">    product.method = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">"I am Product "</span>+<span class="keyword">this</span>.data);</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">return</span> product</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//调用</span></span><br><span class="line"><span class="keyword">var</span> product1 = factory(<span class="number">1</span>);</span><br><span class="line"><span class="keyword">var</span> product2 = <span class="keyword">new</span> factory(<span class="number">2</span>);</span><br><span class="line"><span class="comment">//这里使用了new结果相同</span></span><br><span class="line">product1.method()</span><br><span class="line"><span class="comment">//输出：I am Product 1</span></span><br><span class="line">product2.method()</span><br><span class="line"><span class="comment">//输出：I am Product 2</span></span><br></pre></td></tr></table></figure>
+
+<p>其中<code>Factory</code>就是一个简单工厂，通过传入不同的参数生成许多同类的对象。对于这个例子而言，由于<code>Factory</code>的返回值是一个对象，所以在使用时无论是否作为构造函数调用(即是否加new)运行结果均相同，都是生成的对象。</p>
+<p>值得一提的是，上面的例子中的对象<code>productOne</code>与<code>productTwo</code>在内存中均含一个method方法，二者并不共用，这会导致一定程度的浪费。详见<a href="#工厂模式与构造函数">工厂模式与构造函数</a>一节</p>
+<h1 id="工厂方法"><a href="#工厂方法" class="headerlink" title="工厂方法"></a>工厂方法</h1><p>对于生成不同种类的对象，上面介绍的简单工厂无法做到，可以使用下面的工厂方法。工厂方法模式与上面的不同在于将实际创建对象的工作推迟到子类中，使得核心类就变成了抽象类，只作为接口来调用子类的构造函数。但是由于在JavaScript中很难像传统面向对象那样去实现创建抽象类。所以参考其核心思想可以将工厂方法看作是一个实例化对象的工厂类。具体过程如下：</p>
+<div class="mermaid">
+  classDiagram
+    Client -- Factory
+    Factory <-- ConcreteFactoryOne
+    Factory <-- ConcreteFactoryTwo
+    ConcreteFactoryOne <-- ProductOne
+    ConcreteFactoryTwo <-- ProductTwo
+    class ConcreteFactoryOne{
+      + createProductOne()
+    }
+    class ConcreteFactoryTwo{
+      + createProductTwo()
+    }
+    class ProductOne{
+      data
+      method()
+    }
+    class ProductTwo{
+      data
+      method()
+    }
+</div>
+
+<p>对上面的例子进行改写，使用Factory同时产生两种对象。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//使用安全模式创建工厂方法函数</span></span><br><span class="line"><span class="keyword">var</span> Factory = <span class="function"><span class="keyword">function</span>(<span class="params">child,data</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(<span class="keyword">this</span> <span class="keyword">instanceof</span> Factory) &#123;</span><br><span class="line">      <span class="keyword">var</span> product = <span class="keyword">new</span> <span class="keyword">this</span>[child](data);</span><br><span class="line">      <span class="keyword">return</span> product;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">new</span> Factory(child,data);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//设置子类构造函数</span></span><br><span class="line">Factory.prototype = &#123;</span><br><span class="line">    ConcreteFactoryOne: <span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">this</span>.data = data;</span><br><span class="line">      <span class="keyword">this</span>.method = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"Product 1, data "</span> + <span class="keyword">this</span>.data)</span><br><span class="line">      &#125;;</span><br><span class="line">    &#125;,</span><br><span class="line">    ConcreteFactoryTwo: <span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">this</span>.data = data,</span><br><span class="line">      <span class="keyword">this</span>.method = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"Product 2, data "</span> + <span class="keyword">this</span>.data)</span><br><span class="line">      &#125;;</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;</span><br><span class="line">Factory(<span class="string">'ConcreteFactoryOne'</span>,<span class="number">1</span>).method();</span><br><span class="line"><span class="comment">//这里没用使用new结果相同</span></span><br><span class="line"><span class="comment">//输出：Product 1, data 1</span></span><br><span class="line"><span class="keyword">new</span> Factory(<span class="string">'ConcreteFactoryTwo'</span>,<span class="number">2</span>).method();</span><br><span class="line"><span class="comment">//输出：Product 2, data 2</span></span><br></pre></td></tr></table></figure>
+
+<p>第二个例子中，Factory主要是起一个接口的作用，真正实例化的操作在其子类之中。如果直接使用<code>switch-case</code>一类的流程判断也可以完成接口逻辑，但添加新子类后也需对接口进行修改。因此使用上例中的方法可以减少改动的位置。</p>
+<p>由于两个子类的构造函数保存在<code>Factory.prototype</code>中，所以必须先对父类<code>Factory</code>进行实例化才能调用这两个函数再实例化子类。开头使用的安全模式是为了确保父类被成功实例化，防止因在使用过程中忘记使用<code>new</code>(如例中所示) 而导致的错误。把构造函数保存在<code>Factory.prototype</code>中而不直接在<code>Factory</code>中是因为安全模式可能会实例化多个父类对象Factory，避免同一个函数在多次实例化过程对内存的浪费。这两个问题其实是相互作用相互影响的。</p>
+<h1 id="抽象工厂"><a href="#抽象工厂" class="headerlink" title="抽象工厂"></a>抽象工厂</h1><p>抽象工厂与上面的两种方法不同，它并不直接生成实例而是生成簇。抽象工厂实际上是一个实现子类继承父类的方法，在这个方法中需要传递子类以及要继承父类的名称。并且在抽象工厂方法中增加了一次对抽象类存在性的一次判断，如果抽象类存在，则将子类通过寄生式继承父类的方法。过程如下：</p>
+<div class="mermaid">
+  classDiagram
+    Client -- AbstractFactory
+    AbstractFactory <-- ConcreteFactoryOne
+    AbstractFactory <-- ConcreteFactoryTwo
+    ConcreteFactoryOne <-- ProductOneA
+    ConcreteFactoryOne <-- ProductOneB
+    ConcreteFactoryTwo <-- ProductTwoA
+    ConcreteFactoryTwo <-- ProductTwoB
+    ProductOneA -- AbstractProductA
+    ProductTwoA -- AbstractProductA
+    ProductOneB -- AbstractProductB
+    ProductTwoB -- AbstractProductB
+    class ConcreteFactoryOne{
+      + createProductOneA()
+      + createProductOneB()
+    }
+    class ConcreteFactoryTwo{
+      + createProductTwoA()
+      + createProductTwoB()
+    }
+    class ProductOneA{
+      data
+      method()
+    }
+    class ProductOneB{
+      data
+      method()
+    }
+    class ProductTwoA{
+      data
+      method()
+    }
+    class ProductTwoB{
+      data
+      method()
+    }
+</div>
+
+<p>在JavaScript中，由于无法像其他传统面向对象的语言中那样使用abstract声明抽象类，需要通过在类的方法中抛出错误来对抽象类进行模拟。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//抽象工厂方法</span></span><br><span class="line"><span class="keyword">var</span> AbstractFactory = <span class="function"><span class="keyword">function</span>(<span class="params">subType, superType</span>) </span>&#123;</span><br><span class="line">  <span class="comment">//判断抽象工厂中是否有该抽象类</span></span><br><span class="line">  <span class="keyword">if</span>(<span class="keyword">typeof</span> AbstractFactory[superType] === <span class="string">'function'</span>) &#123;</span><br><span class="line">    <span class="comment">//缓存类</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">F</span>(<span class="params"></span>) </span>&#123;&#125;;</span><br><span class="line">    <span class="comment">//继承父类属性和方法</span></span><br><span class="line">    F.prototype = <span class="keyword">new</span> AbstractFactory[superType] ();</span><br><span class="line">    <span class="comment">//将子类的constructor指向子类</span></span><br><span class="line">    subType.constructor = subType;</span><br><span class="line">    <span class="comment">//子类原型继承父类</span></span><br><span class="line">    subType.prototype = <span class="keyword">new</span> F();</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">'抽象类不存在!'</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//抽象类Product A</span></span><br><span class="line">AbstractFactory.AbstractProductA = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.type = <span class="string">'ProductA'</span>;</span><br><span class="line">&#125;</span><br><span class="line">AbstractFactory.AbstractProductA.prototype = &#123;</span><br><span class="line">  getData: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">'抽象方法不能调用'</span>);</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//抽象类Product B</span></span><br><span class="line">AbstractFactory.AbstractProductB = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.type = <span class="string">'ProductB'</span>;</span><br><span class="line">&#125;</span><br><span class="line">AbstractFactory.AbstractProductB.prototype = &#123;</span><br><span class="line">  getData: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">'抽象方法不能调用'</span>);</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//抽象工厂实现对抽象类的继承</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">ConcreteFactoryOne</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.data = data;</span><br><span class="line">&#125;</span><br><span class="line">AbstractFactory(ConcreteFactoryOne, <span class="string">'AbstractProductA'</span>);</span><br><span class="line"><span class="comment">//子类中重写抽象方法</span></span><br><span class="line">ConcreteFactoryOne.prototype.getData = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"Data: "</span>+ <span class="keyword">this</span>.data + <span class="string">" Type: "</span> + <span class="keyword">this</span>.type);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">ConcreteFactoryTwo</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.data = data;</span><br><span class="line">&#125;</span><br><span class="line">AbstractFactory(ConcreteFactoryTwo, <span class="string">'AbstractProductB'</span>);</span><br><span class="line">ConcreteFactoryTwo.prototype.getData = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"Data: "</span>+ <span class="keyword">this</span>.data + <span class="string">" Type: "</span> + <span class="keyword">this</span>.type);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//测试</span></span><br><span class="line"><span class="keyword">var</span> productOneA = <span class="keyword">new</span> ConcreteFactoryOne(<span class="string">"I am productOneA"</span>);</span><br><span class="line"><span class="keyword">var</span> productTwoB = <span class="keyword">new</span> ConcreteFactoryTwo(<span class="string">"I am productTwoB"</span>);</span><br><span class="line">productOneA.getData();</span><br><span class="line"><span class="comment">//输出 Data: I am productOneA Type: ProductA</span></span><br><span class="line">productTwoB.getData();</span><br><span class="line"><span class="comment">//输出 Data: I am productTwoB Type: ProductB</span></span><br></pre></td></tr></table></figure>
+<p>在这个例子中AbstractFactory并不直接创建实例，而是通过类的继承进行类簇的管理。抽象工厂模式的优点在于具体产品在应用层代码隔离，无须关心创建细节，但同时也增加了系统的抽象性和理解难度。通常使用场景是：</p>
+<ul>
+<li>创建的对象和使用它们的系统是分离的</li>
+<li>需要创建的对象是家族式的</li>
+<li>创建的众多对象是在一起使用的</li>
+<li>具体创建对象的类和系统解耦</li>
+</ul>
+<h1 id="工厂模式与构造函数"><a href="#工厂模式与构造函数" class="headerlink" title="工厂模式与构造函数"></a>工厂模式与构造函数</h1><p><a href="#简单工厂">简单工厂</a>一节中的例子用构造函数可以写成：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Product</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.data = data;</span><br><span class="line">&#125;;</span><br><span class="line">Product.prototype.method = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"I am Product "</span>+<span class="keyword">this</span>.data);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//调用</span></span><br><span class="line"><span class="keyword">var</span> product1 = <span class="keyword">new</span> Product(<span class="number">1</span>);</span><br><span class="line"><span class="keyword">var</span> product2 = <span class="keyword">new</span> Product(<span class="number">2</span>);</span><br><span class="line">product1.method()</span><br><span class="line"><span class="comment">//I am Product 1</span></span><br><span class="line">product2.method()</span><br><span class="line"><span class="comment">//I am Product 2</span></span><br></pre></td></tr></table></figure>
+
+<p>工厂模式与构造函数都可以完成对象的创建，主要区别有以下几点：</p>
+<ul>
+<li>构造函数需使用<code>new</code>来创建对象，工厂模式可以直接调用函数(使用<code>new</code>的话结果一样都是返回对象但与工厂模式的思想不符)</li>
+<li>构造函数创造的对象有固定的父类(如上面的例子中执行<code>product1 instanceof Product</code>结果为true)，工厂模式没有。</li>
+<li>构造函数可以定义原型，多个对象可以共用同一个原型函数减少内存开销。简单工厂不行(工厂方法的方式就可以做到)。</li>
+<li>构造函数中this指的是当前类，工厂函数中this指全局对象window(严格模式下为undefined)。</li>
+</ul>
+<h1 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h1><p>本来是计划写一个系列的设计模式介绍，可最近心情不太好，光是这一篇就拖了好几天，硬生生地从六月拖到了七月。下一篇应该会介绍单例模式，就是不知道什么时候能完成了，最近心烦意乱，先冷静一下思考下人生吧。</p>
+
+  </div>
+  <!--文末结束语-->
+  
+    <div style="text-align:center;color: #ccc;font-size:24px;"> --- 本文结束 <i class="iconfont icon-heartbeat" style="font-size:24px;"></i> The End --- </div>
+  
+  <!--页脚广告-->
+  
+    <div class="adsense-contain">
+      <!-- Footer Ads -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5888225880131847"
+     data-ad-slot="2212253348"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    </div>
+  
+  <div class="mdui-divider"></div>
+  
+  <nav>
+    
+    
+      <a rel="next" class="post-nav-item mdui-float-right" href="/t-37956/">
+        <span>JavaScript闭包原理与垃圾回收机制</span>
+        <i class="iconfont icon-angle-right"></i>
+      </a>
+    
+  </nav>
+</article>
+
+
+
+
+  <div class="toc-button"  style="z-index: 100;">
+    <button class="mdui-fab mdui-ripple mdui-color-teal" mdui-menu="{target: '#toc'}"><i class="iconfont icon-list"></i></button>
+    <ul class="mdui-menu" id="toc">
+      <li class="mdui-menu-item">
+        <a href="/t-43842/" id="toc-header" class="mdui-ripple">文章目录</a>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#简单工厂"><span class="toc-number">1.</span> <span class="toc-text">简单工厂</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#工厂方法"><span class="toc-number">2.</span> <span class="toc-text">工厂方法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#抽象工厂"><span class="toc-number">3.</span> <span class="toc-text">抽象工厂</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#工厂模式与构造函数"><span class="toc-number">4.</span> <span class="toc-text">工厂模式与构造函数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#后记"><span class="toc-number">5.</span> <span class="toc-text">后记</span></a></li></ol>
+      </li>
+    </ul>
+  </div>
+
+
+
+    <div id="comment" class="mdui-card mdui-p-a-2 mdui-m-b-5">
+      <div class="mdui-tab" mdui-tab>
+        
+          <a href="#comment-tab0" class="mdui-ripple">gitalk</a>
+        
+          <a href="#comment-tab1" class="mdui-ripple">livere</a>
+        
+      </div>
+      
+        <div id="comment-tab0" class="mdui-p-a-2">
+          <div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
+<script>
+  var gitalk = new Gitalk({
+    clientID: 'f3866882707e12e74c4a',
+    clientSecret: '04a037afee00b94e4b55e474aa270ac136a8c952',
+    repo: 'kb1000fx.github.io',
+    owner: 'kb1000fx',
+    admin: ['kb1000fx'],
+    id:  md5(location.pathname) ,
+    distractionFreeMode: 'true',
+  });
+  gitalk.render('gitalk-container');
+</script>
+        </div>
+      
+        <div id="comment-tab1" class="mdui-p-a-2">
+          <div id="lv-container" data-id="city" data-uid="MTAyMC80OTI2OS8yNTc2Mw==">
+  <script type="text/javascript">
+    (function (d, s) {
+      var j, e = d.getElementsByTagName(s)[0];
+      if (typeof LivereTower === 'function') { return; }
+      j = d.createElement(s);
+      j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+      j.async = true;
+      e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+  </script>
+  <noscript>Please enable JavaScript to view the comments powered by LiveRe.</noscript>
+</div>
+        </div>
+      
+    </div>
+
+  </main>
+  <footer id="footer" class="mdui-text-center mdui-m-t-5 mdui-p-b-2 mdui-p-t-4 mdui-color-theme">
+  <div class="mdui-container">
+    <div class="mdui-row">
+      
+        <a href="http://www.beian.miit.gov.cn" rel="noopener" target="_blank">苏ICP备18025778号</a>
+      
+      <span>
+        &copy; 2015 - 2020 
+        
+          <span style="color:#d9333f" class="iconfont icon-heart"></span>
+        
+        机智小蜗熊
+      </span>
+    </div>
+    <div class="mdui-row">
+      
+        <div class="mdui-col-xs-6 mdui-text-right">
+          <span>Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a></span>
+        </div>
+        <div class="mdui-col-xs-6 mdui-text-left">
+          <span>Theme: <a href="https://github.com/kb1000fx/Meadow" rel="noopener" target="_blank">Meadow</a></span>
+        </div>
+      
+    </div>
+    <div class="mdui-row">
+      
+        <div class="mdui-col-xs-6 mdui-text-right">
+          <span id="busuanzi_container_site_uv" style="display: none;"> <span class="iconfont icon-user"></span>总访客量 <span id="busuanzi_value_site_uv"></span></span>
+        </div>
+        <div class="mdui-col-xs-6 mdui-text-left">
+          <span id="busuanzi_container_site_pv" style="display: none;"> <span class="iconfont icon-eye"></span>总访问量 <span id="busuanzi_value_site_pv"></span></span>
+        </div>
+      
+    </div>
+ </div>
+</footer>
+  
+  <button id="gotop" class="mdui-fab mdui-fab-fixed mdui-fab-hide mdui-ripple mdui-color-teal" style="z-index:100;"><i class="iconfont icon-arrowup"></i></button>
+  
+  
+
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({
+        startOnLoad: true,
+        theme: "default"
+    });</script>
+
+
+
+
+<script src="/js/mdui.min.js"></script>
+<script src="/js/meadow.js"></script>
+
+</body>
+</html >
