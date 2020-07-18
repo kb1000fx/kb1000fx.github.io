@@ -201,7 +201,7 @@ $("#up").click(function () {
             $("#te").hide();
             $("#p2").show();
             t = 0
-            onDemandScript('https://cdn.jsdelivr.net/gh/kb1000fx/ResBackup/NMSL/js/segmentCXH.min.js', function () {
+            onDemandScript('./src/js/segmentCXH.min.js', function () {
                 console.log("segmentit.js done")
                 const {
                     Segment,
@@ -217,7 +217,7 @@ $("#up").click(function () {
                 onDemandScript(p2, function () {
                     console.log("pinyinUtil.min.js done")
                     addProcess()
-                    onDemandScript('https://cdn.jsdelivr.net/gh/kb1000fx/ResBackup/NMSL/js/emoji-regex.js', function () {
+                    onDemandScript('./src/js/emoji-regex.js', function () {
                         console.log("emoji-regex.js done")
                         const emojiRegex = require('emoji-regex');
                         regex = emojiRegex();
