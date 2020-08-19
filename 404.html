@@ -207,7 +207,7 @@
                         <i class="mdui-list-item-icon iconfont icon-angle-down"></i>
                     </div>
                 </div>
-                <ul class="mdui-collapse-item-body mdui-list mdui-list-dense">
+                <ul id="linksList" class="mdui-collapse-item-body mdui-list mdui-list-dense">
                     
                         <a href="https://note.garybear.cn/" target="_blank" rel="noopener" class="mdui-list-item mdui-ripple">
                             小蜗熊的笔记本
@@ -224,7 +224,6 @@
                 </ul>
             </li>
         </ul>
-
     </div>
 
     <div class="mdui-divider"></div>
@@ -248,70 +247,53 @@
   <main id="main-contain" class="mdui-container mdui-m-t-5">
     <div class="mdui-card mdui-p-b-2 mdui-m-b-5">
     <div class="post-header"> 
-        <a class="post-header-title" href="/404.html">404 not found：该页无法显示</a>
+        <a class="post-header-title" href="/404.html">404 Not Found：该页无法显示</a>
     </div>
     <div id="page-card" class="mdui-card-content mdui-p-x-4">
         
             
             
             
-            <style type="text/css">
-    .article-header {
-        padding: 0;
-        padding-top: 26px;
-        border-left: none;
-        text-align: center;
+            <link href="/404/ASCII404.css" type="text/css" rel="stylesheet">
+
+<div id='ASCII404' class="mdui-hidden-xs-down">   
+    <span></span>                                                                                                                                                                   
+</div>
+
+<div id="code">
+    <span class="comments">/*</span><br>
+    <span class="space"></span><span class="comments">* Sorry, the web page you asked for has been lost.</span><br />
+    <span class="space"></span><span class="comments">* Please check the link you input and refresh the browser.</span><br>
+    <span class="space"></span><span class="comments">* Type the codes below in the browser console, you will find something interesting.</span><br>
+    <span class="space"></span><span class="comments">*/</span><br>
+    ((num)<span class="keyword">=></span>{<br>
+    <span class="placeholder"></span><span class="keyword">var</span> div = <span class="keyword">$$</span>("#ASCII404")[0];<br>
+    <span class="placeholder"></span><span class="keyword">var</span> str = <span class="string">"&lt;span&gt;"</span> + ascii404List[num] + <span class="string">"&lt;/span&gt;"</span>;<br>
+    <span class="placeholder"></span>div.innerHTML = str;<br>
+    })((<br>
+    <span class="placeholder"></span><span class="keyword">function</span>(){<br>
+    <span class="placeholder"></span><span class="placeholder"></span><span class="keyword">var</span> randNum = Math.random() * ascii404List.length;<br>
+    <span class="placeholder"></span><span class="placeholder"></span><span class="keyword">var</span> res = parseInt(randNum,10);<br>
+    <span class="placeholder"></span><span class="placeholder"></span><span class="keyword">return</span> res<br>
+    <span class="placeholder"></span>}<br>
+    )());
+</div>
+
+<script type="text/javascript" src="/js/mdui.min.v1.0.0.js"></script>
+<script type="text/javascript" src="/404/ASCII404.js"></script>
+
+<script>
+((num)=>{
+    var div = $$("#ASCII404")[0];
+    var str = "<span>" + ascii404List[num] + "</span>";
+    div.innerHTML = str;
+})((function(){
+        var randNum = Math.random() * ascii404List.length;
+        var res = parseInt(randNum,10);
+        return res
     }
-    .article-header:hover {
-        border-left: none;
-    }
-    .article-title {
-        font-size: 2.1em;
-    }
-    strong a {
-        color: #747474;
-    }
-    .article-meta {
-        display: none;
-    }
-    .share {
-        display: none;
-    }
-    .ds-meta {
-        display: none;
-    }
-    .player {
-        margin-left: -10px;
-    }
-    .sign {
-        text-align: right;
-        font-style: italic;
-    }
-      #page-visit {
-        display: none;
-    }
-    .center {
-        text-align: center;
-        height: 2.5em;
-        font-weight: bold;
-    }
-    .article-entry hr {
-        margin: 0;
-    }
-    .pic {
-        text-align: center;
-        margin: 0;
-    }
-    .pic br {
-          display: none;
-      }
-    #container .article-info-post.article-info {
-      display: none;
-      }
-    #container .article .article-title {
-    padding: 0;
-    }
-</style>
+)());
+</script>
             
         </div>
     </div>
@@ -323,7 +305,7 @@
   <div class="mdui-container">
     <div class="mdui-row">
       
-        <a href="http://www.beian.miit.gov.cn" rel="noopener" target="_blank">苏ICP备18025778号</a>
+        <a href="https://beian.miit.gov.cn" rel="noopener" target="_blank">苏ICP备18025778号</a>
       
       <span>
         &copy; 2015 - 2020 
@@ -368,7 +350,10 @@
 
 
 
-<script src="/js/mdui.min.js"></script>
+    
+
+
+
 <script src="/js/meadow.js"></script>
 
 </body>

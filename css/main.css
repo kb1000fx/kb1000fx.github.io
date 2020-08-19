@@ -595,12 +595,14 @@ pre .javascript .function {
 }
 #sidebar {
   background-color: #fff;
-  overflow-y: hidden;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 #sidebar #sidebartab {
   width: 48%;
   min-width: unset;
+}
+#sidebar::-webkit-scrollbar {
+  display: none;
 }
 .mdui-theme-layout-dark #sidebar {
   background: #212121;
@@ -655,6 +657,13 @@ pre .javascript .function {
 }
 .mdui-chip .mdui-chip-icon .iconfont {
   font-size: 22px;
+}
+#linksList {
+  overflow-y: auto;
+  max-height: calc(100vh - 414px);
+}
+#linksList::-webkit-scrollbar {
+  display: none;
 }
 #search {
   min-height: 80%;
