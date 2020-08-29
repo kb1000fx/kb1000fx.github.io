@@ -251,6 +251,10 @@ pre .keyword,
 pre .javascript .function {
   color: #c9c;
 }
+figure,
+.highlight {
+  text-align: unset !important;
+}
 .post-readmore {
   border: 2px solid #4caf50;
 }
