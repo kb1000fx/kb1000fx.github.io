@@ -59,62 +59,6 @@
 
 
 
-    
-        <script>
-  if (typeof MathJax === 'undefined') {
-    window.MathJax = {
-      loader: {
-        
-            load: ['[tex]/mhchem'],
-        
-        source: {
-          '[tex]/amsCd': '[tex]/amscd',
-          '[tex]/AMScd': '[tex]/amscd'
-        }
-      },
-      tex: {
-        inlineMath: {'[+]': [['$', '$']]},
-        
-            packages: {'[+]': ['mhchem']},
-        
-        tags: 'ams'
-      },
-      options: {
-        renderActions: {
-          findScript: [10, doc => {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-              const display = !!node.type.match(/; *mode=display/);
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-              const text = document.createTextNode('');
-              node.parentNode.replaceChild(text, node);
-              math.start = {node: text, delim: '', n: 0};
-              math.end = {node: text, delim: '', n: 0};
-              doc.math.push(math);
-            });
-          }, '', false],
-          insertedScript: [200, () => {
-            document.querySelectorAll('mjx-container').forEach(node => {
-              let target = node.parentNode;
-              if (target.nodeName.toLowerCase() === 'li') {
-                target.parentNode.classList.add('has-jax');
-              }
-            });
-          }, '', false]
-        }
-      }
-    };
-    (function () {
-      var script = document.createElement('script');
-      script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
-      script.defer = true;
-      document.head.appendChild(script);
-    })();
-  } else {
-    MathJax.startup.document.state(0);
-    MathJax.texReset();
-    MathJax.typeset();
-  }
-</script>
           
 
 
@@ -122,7 +66,7 @@
     
     <title>
         
-            酒精与84消毒液混用是否会中毒的分析 | 小蜗熊的蜂蜜罐
+            JavaScript设计模式简介之单例模式 | 小蜗熊的蜂蜜罐
         
     </title>
     
@@ -312,11 +256,11 @@
     
     
       <div class="post-header"> 
-  <a class="post-header-title" href="/t-58768/">酒精与84消毒液混用是否会中毒的分析</a>
+  <a class="post-header-title" href="/t-2056/">JavaScript设计模式简介之单例模式</a>
   <div class="post-header-meta">
     <span>
       <span class="iconfont icon-calendar"></span>
-      发布于:&nbsp;2020-02-07
+      发布于:&nbsp;2020-09-04
     </span>
     <span>
       <span class="iconfont icon-calendar-check"></span>
@@ -324,7 +268,7 @@
     </span>
     <span>
       <span class="iconfont icon-folder"></span>
-      分类于:&nbsp;<a class="category-link" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a>
+      分类于:&nbsp;<a class="category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a> > <a class="category-link" href="/categories/%E6%8A%80%E6%9C%AF/Web/">Web</a>
     </span>
     
       <span>
@@ -346,25 +290,25 @@
       <button class="mdui-btn mdui-btn-icon mdui-text-color-teal" mdui-menu="{target: '#share_menu', align: 'right'}"><i class="iconfont icon-share"></i></button>
       <ul class="mdui-menu" id="share_menu">
         <li class="mdui-menu-item">
-          <a href="http://service.weibo.com/share/share.php?appkey=&title=酒精与84消毒液混用是否会中毒的分析&url=https://garybear.cn/t-58768/&pic=https://garybear.cn/images/favicon.ico&searchPic=false&style=simple" target="_blank" class="mdui-ripple">分享到 Weibo</a>
+          <a href="http://service.weibo.com/share/share.php?appkey=&title=JavaScript设计模式简介之单例模式&url=https://garybear.cn/t-2056/&pic=https://garybear.cn/images/favicon.ico&searchPic=false&style=simple" target="_blank" class="mdui-ripple">分享到 Weibo</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="https://twitter.com/intent/tweet?text=酒精与84消毒液混用是否会中毒的分析&url=https://garybear.cn/t-58768/&via=机智小蜗熊" target="_blank" class="mdui-ripple">分享到 Twitter</a>
+          <a href="https://twitter.com/intent/tweet?text=JavaScript设计模式简介之单例模式&url=https://garybear.cn/t-2056/&via=机智小蜗熊" target="_blank" class="mdui-ripple">分享到 Twitter</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="https://www.facebook.com/sharer/sharer.php?u=https://garybear.cn/t-58768/" target="_blank" class="mdui-ripple">分享到 Facebook</a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://garybear.cn/t-2056/" target="_blank" class="mdui-ripple">分享到 Facebook</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="https://plus.google.com/share?url=https://garybear.cn/t-58768/" target="_blank" class="mdui-ripple">分享到 Google+</a>
+          <a href="https://plus.google.com/share?url=https://garybear.cn/t-2056/" target="_blank" class="mdui-ripple">分享到 Google+</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://garybear.cn/t-58768/&title=酒精与84消毒液混用是否会中毒的分析" target="_blank" class="mdui-ripple">分享到 LinkedIn</a>
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://garybear.cn/t-2056/&title=JavaScript设计模式简介之单例模式" target="_blank" class="mdui-ripple">分享到 LinkedIn</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="http://connect.qq.com/widget/shareqq/index.html?site=小蜗熊的蜂蜜罐&title=酒精与84消毒液混用是否会中毒的分析&summary=人间五十年，岂有长生不灭者？&pics=https://garybear.cn/images/favicon.ico&url=https://garybear.cn/t-58768/" target="_blank" class="mdui-ripple">分享到 QQ</a>
+          <a href="http://connect.qq.com/widget/shareqq/index.html?site=小蜗熊的蜂蜜罐&title=JavaScript设计模式简介之单例模式&summary=人间五十年，岂有长生不灭者？&pics=https://garybear.cn/images/favicon.ico&url=https://garybear.cn/t-2056/" target="_blank" class="mdui-ripple">分享到 QQ</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="https://telegram.me/share/url?url=https://garybear.cn/t-58768/&text=酒精与84消毒液混用是否会中毒的分析" target="_blank" class="mdui-ripple">分享到 Telegram</a>
+          <a href="https://telegram.me/share/url?url=https://garybear.cn/t-2056/&text=JavaScript设计模式简介之单例模式" target="_blank" class="mdui-ripple">分享到 Telegram</a>
         </li>
       </ul>
     
@@ -387,93 +331,52 @@
   
   
   
+  <div class="post-tags">
+    
+      <i class="iconfont icon-tag">
+        <a rel="tag" href = /tags/%E5%89%8D%E7%AB%AF/ >前端</a>
+      </i>
+    
+  </div>
+
   
   <div class="mdui-card-content mdui-typo mdui-p-x-4">
-    <p>最近网络上流传着酒精与84消毒液混用中毒的传言，在此讨论一下二者混用是否会使人中毒。首先先放上结论：酒精与84消毒液混合后会降低消毒效果，但<strong>不会使人中毒</strong>，分析过程如下。</p>
+    <p>休整了一阵子，身体和心理都慢慢恢复了一些。鸽了这么久终于补上这篇单例模式了，下面开始正题。<br>单例模式，顾名思义即一个类仅有一个实例。单例模式下即使多次调用构造函数(使用new操作符创建多个对象)，得到的都是同一个实例对象。</p>
 <a id="more"></a>
-<h1 id="分析过程"><a href="#分析过程" class="headerlink" title="分析过程"></a>分析过程</h1><h2 id="84消毒液中自身存在的平衡"><a href="#84消毒液中自身存在的平衡" class="headerlink" title="84消毒液中自身存在的平衡"></a>84消毒液中自身存在的平衡</h2><p>84消毒液中，自身存在以下三个平衡：</p>
-<div class="math-fluid">
-$$\ce{ClO^- + H2O <=> HClO + OH^-} \tag{I}$$
-$$\ce{2ClO^- \xlongequal{h\nu\text{ or heat}} O2 ^ + 2Cl^-} \tag{II}$$
-$$\ce{HClO + H^+ + Cl^- <=> Cl2(aq) + H2O} \tag{III}$$
-</div>
-由于84消毒液中含有一定氢氧化钠，溶液为碱性。且由于日常生活中的84消毒液都需进行稀释后再使用，次氯酸钠浓度较低。因此$(\text{I})(\text{II})(\text{III})$的正向反应均收到抑制。
-另一方面由于氯气的溶解度较大，即使产生了极微量的氯气也会溶解进溶液而不会逸出。因此84消毒液本身不会产生有毒气体使人中毒。
 
-<h2 id="酒精与84消毒液混合后可能发生的反应"><a href="#酒精与84消毒液混合后可能发生的反应" class="headerlink" title="酒精与84消毒液混合后可能发生的反应"></a>酒精与84消毒液混合后可能发生的反应</h2><p>酒精与84消毒液的混合溶液中，可能发生以下反应：</p>
+<h1 id="使用静态属性的单例模式"><a href="#使用静态属性的单例模式" class="headerlink" title="使用静态属性的单例模式"></a>使用静态属性的单例模式</h1><p>使用构造函数本身的静态属性可以实现此功能，方法如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">ClassA</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">typeof</span> ClassA.instance === <span class="string">'object'</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> ClassA.instance</span><br><span class="line">    &#125;</span><br><span class="line">    ClassA.instance = <span class="keyword">this</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> ins1 = <span class="keyword">new</span> ClassA()</span><br><span class="line"><span class="keyword">var</span> insi2 = <span class="keyword">new</span> ClassA()</span><br><span class="line">ins1 === ins2   <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<p>此方法的缺点在于静态属性instance可以在外部公开访问和修改，为解决此问题可以使用下面的方法。</p>
+<h1 id="使用闭包的单例模式"><a href="#使用闭包的单例模式" class="headerlink" title="使用闭包的单例模式"></a>使用闭包的单例模式</h1><h2 id="闭包方式"><a href="#闭包方式" class="headerlink" title="闭包方式"></a>闭包方式</h2><p>使用闭包进行封装可以确保instance变量的私有性，缺点是增加了额外的闭包开销。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">ClassB</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> instance = <span class="keyword">this</span></span><br><span class="line">    ClassB = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;    <span class="comment">// 重写构造函数</span></span><br><span class="line">        <span class="keyword">return</span> instance</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> ins1 = <span class="keyword">new</span> ClassB()</span><br><span class="line"><span class="keyword">var</span> ins2 = <span class="keyword">new</span> ClassB()</span><br><span class="line">ins1 === ins2         <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="原型链的继承关系"><a href="#原型链的继承关系" class="headerlink" title="原型链的继承关系"></a>原型链的继承关系</h2><p>使用上面的闭包方式存在一个问题：由于构造函数被重写，在初始定义和重定义之间添加到类中的属性都会丢失。例如：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">ClassC</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> instance = <span class="keyword">this</span></span><br><span class="line">    ClassC = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> instance</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">ClassC.prototype.pro1 = <span class="literal">true</span></span><br><span class="line"><span class="keyword">var</span> ins1 = <span class="keyword">new</span> ClassC()</span><br><span class="line">ClassC.prototype.pro2 = <span class="literal">true</span></span><br><span class="line"><span class="keyword">var</span> ins2 = <span class="keyword">new</span> ClassC()</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(ins1.pro1)  <span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(ins1.pro2)  <span class="comment">//underfined</span></span><br><span class="line"><span class="built_in">console</span>.log(ins2.pro1)  <span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(ins2.pro2)  <span class="comment">//underfined</span></span><br><span class="line"><span class="built_in">console</span>.log(ins1.constructor.name)  <span class="comment">// "ClassC"</span></span><br><span class="line"><span class="built_in">console</span>.log(ins1.constructor === ClassC)    <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+<p>造成这种现象的原因是，重写构造函数后原先的构造函数因为使用了闭包还保留在内存中，但是构造函数指针已经指向了一个新的函数了。<br>与此同时<code>ins1.constructor</code>仍然指向原始的构造函数而不是重定义之后的构造函数，因此<code>ins1.constructor === ClassC</code>。原型链的继承关系可参见下面两个图：</p>
 <div class="mermaid">
-  stateDiagram
-    乙醇 --> 乙醛 : 氧化 (1)
-    乙醛 --> 乙酸钠 : 氧化 (2)
-    乙醛 --> node1 : 氯仿反应 (3)
-    node1: 三氯甲烷 + 甲酸钠
-    node1 --> 三氯甲烷
-    node1 --> 甲酸钠
-    三氯甲烷 --> 甲酸钠 : 卤仿水解(4)
-    三氯甲烷 --> 碳酰氯 : 卤仿分解(5)
-    甲酸钠 --> 碳酸钠 : 氧化(6)
-    碳酰氯 --> 碳酸钠 : 酰卤水解(7)
-    碳酰氯 --> 碳酸二乙酯 : 酰卤醇解(8)
+  classDiagram
+    Class --> ClassPrototype
+    ClassPrototype ..> Class
+    ClassPrototype <-- ins1: Prototype
+    ClassPrototype <-- ins2: Prototype
+    class Class{
+        prototype
+    }
+    class ClassPrototype{
+        constructor
+    }
+    class ins1{
+        prototype
+    }
+    class ins2{
+        prototype
+    }
 </div>
 
-<h2 id="乙醇氧化"><a href="#乙醇氧化" class="headerlink" title="乙醇氧化"></a>乙醇氧化</h2><p>乙醇与84消毒液混合后，可能会被84消毒液中的次氯酸钠氧化生成乙醛，即过程$(1)$：</p>
-<div class="math-fluid">
-$$ \ce{CH_3CH_2OH ->[{NaOCl}] CH_3CHO} \tag{1}$$
-</div>
-但由于84消毒液中会加入一定的$\ce{NaOH}$来防止次氯酸分解失效，使得碱性条件下乙醇被氧化为乙醛的程度有限。
+<h2 id="原型链修复"><a href="#原型链修复" class="headerlink" title="原型链修复"></a>原型链修复</h2><p>对于上面提到的问题，我们需要对原型链进行修改。方法如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">ClassC</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> instance = <span class="keyword">this</span></span><br><span class="line">    ClassC = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> instance</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//新构造函数的原型对象指向原来的原型对象</span></span><br><span class="line">    ClassC.prototype = <span class="keyword">this</span>.constructor.prototype</span><br><span class="line">    <span class="comment">//原型对象指回新构造函数</span></span><br><span class="line">    instance.constructor = ClassC</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">ClassC.prototype.pro1 = <span class="literal">true</span></span><br><span class="line"><span class="keyword">var</span> ins1 = <span class="keyword">new</span> ClassC()</span><br><span class="line">ClassC.prototype.pro2 = <span class="literal">true</span></span><br><span class="line"><span class="keyword">var</span> ins2 = <span class="keyword">new</span> ClassC()</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(ins1.pro1)  <span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(ins1.pro2)  <span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(ins2.pro1)  <span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(ins2.pro2)  <span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(ins1.constructor.name)  <span class="comment">// "ClassC"</span></span><br><span class="line"><span class="built_in">console</span>.log(ins1.constructor === ClassC)    <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="乙醛氧化"><a href="#乙醛氧化" class="headerlink" title="乙醛氧化"></a>乙醛氧化</h2><p>过程$(2)$为乙醛的氧化，乙醛在次氯酸钠的作用下进一步氧化生成乙酸钠：</p>
-<div class="math-fluid">
-$$
-\ce{CH_3CHO ->[{NaOCl}] CH_3COONa} \tag{2}
-$$
-</div>
-同样由于碱性环境的原因，此反应进行的程度有限。乙酸钠由于$\ce{\alpha-H}$活性不足，不会进一步发生氯仿反应。
-
-<h2 id="氯仿反应"><a href="#氯仿反应" class="headerlink" title="氯仿反应"></a>氯仿反应</h2><div class="math-fluid">
-$$
-\ce{\underset{乙醛}{CH_3CHO} ->[{NaOCl}] CCl3-CHO ->[NaOH] \underset{三氯甲烷}{CHCl3} + \underset{甲酸钠}{HCOONa}} \tag{3}
-$$
-</div>
-
-<h2 id="氯仿水解"><a href="#氯仿水解" class="headerlink" title="氯仿水解"></a>氯仿水解</h2><p>氯仿在碱性条件下不稳定，会生成二氯卡宾并进一步水解生成甲酸钠，如过程$(4)$所示：</p>
-<div class="math-fluid">
-$$
-\ce{\underset{\text{三氯甲烷}}{CHCl3} ->[OH-] \underset{\text{二氯卡宾}}{\text{:C}Cl2} ->[NaOH] \underset{\text{甲酸钠}}{HCOONa}} \tag{4}
-$$
-</div>
-
-<h2 id="氯仿分解"><a href="#氯仿分解" class="headerlink" title="氯仿分解"></a>氯仿分解</h2><p>氯仿在碱性条件下生成二氯卡宾后，也可能进一步被溶液中的次氯酸根，或者在光照条件下被氧气进一步氧化为光气，如过程$(5)$所示：</p>
-<div class="math-fluid">
-$$
-\ce{\underset{三氯甲烷}{CHCl3} ->[OH-] \underset{二氯卡宾}{\text{:C}Cl2} ->[NaOCl/OH^-] CCl3OOH ->[-HOCl] \underset{碳酰氯}{COCl2}} \tag{5}
-$$
-</div>
-过程$(4)$与过程$(5)$之间为相互竞争的关系。
-
-<h2 id="甲酸钠氧化"><a href="#甲酸钠氧化" class="headerlink" title="甲酸钠氧化"></a>甲酸钠氧化</h2><p>如过程$(6)$所示，氯仿反应中生成的以及氯仿水解生成的甲酸钠在溶液中可能会被次氯酸根进一步氧化生成碳酸钠：</p>
-<div class="math-fluid">
-$$
-\ce{HCOO^- + ClO^- + OH^- = CO3^2- + Cl^- + H2O} \tag{6}
-$$
-</div>
-
-<h2 id="碳酰氯的水解"><a href="#碳酰氯的水解" class="headerlink" title="碳酰氯的水解"></a>碳酰氯的水解</h2><p>由于体系整体呈碱性，过程$(5)$中产生的光气会在碱性水溶液中迅速发生水解，即过程$(7)$：</p>
-<div class="math-fluid">
-$$
-\ce{COCl2 + 4OH^- = 2H2O + 2Cl^- + CO3^2-} \tag{7}
-$$
-</div>
-
-<h2 id="碳酰氯的醇解"><a href="#碳酰氯的醇解" class="headerlink" title="碳酰氯的醇解"></a>碳酰氯的醇解</h2><p>同时光气也会与体系内的乙醇反应，发生酰卤的醇解，即过程$(8)$：</p>
-<div class="math-fluid">
-$$
-\ce{\underset{碳酰氯}{COCl2} ->[EtOH] \underset{氯代甲酸乙酯}{CH3CH2OCOCl}  ->[EtOH] \underset{碳酸二乙酯}{CO(OCH2CH3)2}} \tag{8}
-$$
-</div>
-由于过程$(7)$与过程$(8)$的存在，氯仿分解产生的光气大多会被吸收转化。
-
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>综上所述，由于在碱性环境下且缺少相转移催化剂，乙醇氧化生成的乙醛的速率并不高。所以后续反应中生成的氯仿、光气等有毒产物量也很少，且大多会在溶液中继续分解为甲酸根、氯离子、碳酸根等物质。因此将酒精和84消毒液混合使用后只会消耗部分有效物质，不会产生中毒的严重后果。</p>
+<h1 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h1><p>简简单单把这篇的内容讲完了，虽然感觉还有很多细节没来得及说明，就这样吧。该填的坑总算填完了，以后再也不立flag了。设计模式剩下的几篇什么时候更新，随缘吧。</p>
 
   </div>
   <!--文末结束语-->
@@ -499,14 +402,9 @@ $$
   
   <nav>
     
-      <a rel="prev" class="post-nav-item mdui-float-left" href="/t-1436/">
-        <i class="iconfont icon-angle-left"></i>
-        <span>如何使用加农炮将特朗普发射至太阳上</span>
-      </a>
     
-    
-      <a rel="next" class="post-nav-item mdui-float-right" href="/t-4072/">
-        <span>Meadow主题使用说明</span>
+      <a rel="next" class="post-nav-item mdui-float-right" href="/t-23929/">
+        <span>2020.08.10</span>
         <i class="iconfont icon-angle-right"></i>
       </a>
     
@@ -520,8 +418,8 @@ $$
     <button class="mdui-fab mdui-ripple mdui-color-teal" mdui-menu="{target: '#toc'}"><i class="iconfont icon-list"></i></button>
     <ul class="mdui-menu" id="toc">
       <li class="mdui-menu-item">
-        <a href="/t-58768/" id="toc-header" class="mdui-ripple">文章目录</a>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#分析过程"><span class="toc-number">1.</span> <span class="toc-text">分析过程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#84消毒液中自身存在的平衡"><span class="toc-number">1.1.</span> <span class="toc-text">84消毒液中自身存在的平衡</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#酒精与84消毒液混合后可能发生的反应"><span class="toc-number">1.2.</span> <span class="toc-text">酒精与84消毒液混合后可能发生的反应</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#乙醇氧化"><span class="toc-number">1.3.</span> <span class="toc-text">乙醇氧化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#乙醛氧化"><span class="toc-number">1.4.</span> <span class="toc-text">乙醛氧化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#氯仿反应"><span class="toc-number">1.5.</span> <span class="toc-text">氯仿反应</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#氯仿水解"><span class="toc-number">1.6.</span> <span class="toc-text">氯仿水解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#氯仿分解"><span class="toc-number">1.7.</span> <span class="toc-text">氯仿分解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#甲酸钠氧化"><span class="toc-number">1.8.</span> <span class="toc-text">甲酸钠氧化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#碳酰氯的水解"><span class="toc-number">1.9.</span> <span class="toc-text">碳酰氯的水解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#碳酰氯的醇解"><span class="toc-number">1.10.</span> <span class="toc-text">碳酰氯的醇解</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#总结"><span class="toc-number">2.</span> <span class="toc-text">总结</span></a></li></ol>
+        <a href="/t-2056/" id="toc-header" class="mdui-ripple">文章目录</a>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#使用静态属性的单例模式"><span class="toc-number">1.</span> <span class="toc-text">使用静态属性的单例模式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#使用闭包的单例模式"><span class="toc-number">2.</span> <span class="toc-text">使用闭包的单例模式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#闭包方式"><span class="toc-number">2.1.</span> <span class="toc-text">闭包方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#原型链的继承关系"><span class="toc-number">2.2.</span> <span class="toc-text">原型链的继承关系</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#原型链修复"><span class="toc-number">2.3.</span> <span class="toc-text">原型链修复</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#后记"><span class="toc-number">3.</span> <span class="toc-text">后记</span></a></li></ol>
       </li>
     </ul>
   </div>

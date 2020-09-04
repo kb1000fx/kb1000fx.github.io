@@ -1,13 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>JavaScript设计模式简介之单例模式</title>
+    <url>/t-2056/</url>
+    <content><![CDATA[<p>休整了一阵子，身体和心理都慢慢恢复了一些。鸽了这么久终于补上这篇单例模式了，下面开始正题。<br>单例模式，顾名思义即一个类仅有一个实例。单例模式下即使多次调用构造函数(使用new操作符创建多个对象)，得到的都是同一个实例对象。</p>
+<a id="more"></a>
+
+<h1 id="使用静态属性的单例模式"><a href="#使用静态属性的单例模式" class="headerlink" title="使用静态属性的单例模式"></a>使用静态属性的单例模式</h1><p>使用构造函数本身的静态属性可以实现此功能，方法如下：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">ClassA</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">typeof</span> ClassA.instance === <span class="string">'object'</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> ClassA.instance</span><br><span class="line">    &#125;</span><br><span class="line">    ClassA.instance = <span class="keyword">this</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> ins1 = <span class="keyword">new</span> ClassA()</span><br><span class="line"><span class="keyword">var</span> insi2 = <span class="keyword">new</span> ClassA()</span><br><span class="line">ins1 === ins2   <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<p>此方法的缺点在于静态属性instance可以在外部公开访问和修改，为解决此问题可以使用下面的方法。</p>
+<h1 id="使用闭包的单例模式"><a href="#使用闭包的单例模式" class="headerlink" title="使用闭包的单例模式"></a>使用闭包的单例模式</h1><h2 id="闭包方式"><a href="#闭包方式" class="headerlink" title="闭包方式"></a>闭包方式</h2><p>使用闭包进行封装可以确保instance变量的私有性，缺点是增加了额外的闭包开销。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">ClassB</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> instance = <span class="keyword">this</span></span><br><span class="line">    ClassB = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;    <span class="comment">// 重写构造函数</span></span><br><span class="line">        <span class="keyword">return</span> instance</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> ins1 = <span class="keyword">new</span> ClassB()</span><br><span class="line"><span class="keyword">var</span> ins2 = <span class="keyword">new</span> ClassB()</span><br><span class="line">ins1 === ins2         <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="原型链的继承关系"><a href="#原型链的继承关系" class="headerlink" title="原型链的继承关系"></a>原型链的继承关系</h2><p>使用上面的闭包方式存在一个问题：由于构造函数被重写，在初始定义和重定义之间添加到类中的属性都会丢失。例如：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">ClassC</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> instance = <span class="keyword">this</span></span><br><span class="line">    ClassC = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> instance</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">ClassC.prototype.pro1 = <span class="literal">true</span></span><br><span class="line"><span class="keyword">var</span> ins1 = <span class="keyword">new</span> ClassC()</span><br><span class="line">ClassC.prototype.pro2 = <span class="literal">true</span></span><br><span class="line"><span class="keyword">var</span> ins2 = <span class="keyword">new</span> ClassC()</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(ins1.pro1)  <span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(ins1.pro2)  <span class="comment">//underfined</span></span><br><span class="line"><span class="built_in">console</span>.log(ins2.pro1)  <span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(ins2.pro2)  <span class="comment">//underfined</span></span><br><span class="line"><span class="built_in">console</span>.log(ins1.constructor.name)  <span class="comment">// "ClassC"</span></span><br><span class="line"><span class="built_in">console</span>.log(ins1.constructor === ClassC)    <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+<p>造成这种现象的原因是，重写构造函数后原先的构造函数因为使用了闭包还保留在内存中，但是构造函数指针已经指向了一个新的函数了。<br>与此同时<code>ins1.constructor</code>仍然指向原始的构造函数而不是重定义之后的构造函数，因此<code>ins1.constructor === ClassC</code>。原型链的继承关系可参见下面两个图：</p>
+<div class="mermaid">
+  classDiagram
+    Class --> ClassPrototype
+    ClassPrototype ..> Class
+    ClassPrototype <-- ins1: Prototype
+    ClassPrototype <-- ins2: Prototype
+    class Class{
+        prototype
+    }
+    class ClassPrototype{
+        constructor
+    }
+    class ins1{
+        prototype
+    }
+    class ins2{
+        prototype
+    }
+</div>
+
+<h2 id="原型链修复"><a href="#原型链修复" class="headerlink" title="原型链修复"></a>原型链修复</h2><p>对于上面提到的问题，我们需要对原型链进行修改。方法如下：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">ClassC</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> instance = <span class="keyword">this</span></span><br><span class="line">    ClassC = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> instance</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//新构造函数的原型对象指向原来的原型对象</span></span><br><span class="line">    ClassC.prototype = <span class="keyword">this</span>.constructor.prototype</span><br><span class="line">    <span class="comment">//原型对象指回新构造函数</span></span><br><span class="line">    instance.constructor = ClassC</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">ClassC.prototype.pro1 = <span class="literal">true</span></span><br><span class="line"><span class="keyword">var</span> ins1 = <span class="keyword">new</span> ClassC()</span><br><span class="line">ClassC.prototype.pro2 = <span class="literal">true</span></span><br><span class="line"><span class="keyword">var</span> ins2 = <span class="keyword">new</span> ClassC()</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(ins1.pro1)  <span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(ins1.pro2)  <span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(ins2.pro1)  <span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(ins2.pro2)  <span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(ins1.constructor.name)  <span class="comment">// "ClassC"</span></span><br><span class="line"><span class="built_in">console</span>.log(ins1.constructor === ClassC)    <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h1><p>简简单单把这篇的内容讲完了，虽然感觉还有很多细节没来得及说明，就这样吧。该填的坑总算填完了，以后再也不立flag了。设计模式剩下的几篇什么时候更新，随缘吧。</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>2020.08.10</title>
     <url>/t-23929/</url>
-    <content><![CDATA[<p>2020的前八个月并没有我期待的那么顺利，诸事不顺，一地鸡毛。这些不顺，有些是因为自己能力不足、好高骛远，有些则是因为自己的眼和心被一双来自家庭的手拦住了。拦住的理由，则是那句已经快听腻了的“疫情严重”。</p>
-<p>当然还有一部分没说出来的，我想就是我自己身体的原因了。半年前的不规律生活差不多把我给熬垮了，去年年底的那次雪崩之前根本没意识到自己居然这么虚弱。这几天偶尔感到腰部些许的钝痛，可能是肾里又要开始结舍利子了吧。秋天快来了，又到了过敏的季节。今年过敏现象尤其严重，唉~</p>
-<p>理想这东西啊居然也会有贤者时间，大半年以来求之不得的东西下一秒就觉得索然无味了。追不到的东西就不要追了，停下脚步回头吧，人总是要吃饭的嘛。之前自己做的很多差不多都是在不求回报地用爱发电，KMS也好，云激活挂卡也好，包括今年整的网易云解锁和小黑盒炸鱼都是如此。甚至小黑盒的事还引来一群哈批搞得我Google Adsense也被封了。我也差不多明白了，除了工作用得到的之外，其他的技能都是毫无卵用。</p>
-<p>最后还有一件事就是这里要暂时(<del>说不定万一是永久呢</del>)停更了，这个博客最初就是写着玩的，现在琐事缠身，再加上身体状况不佳，也就无暇顾及了。上个月初承诺的那篇单例模式的文章，就先欠着吧。至于什么时候继续更新，一切随缘了。</p>
-]]></content>
+    <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <div class="hbe-input-container">
+  <input type="password" id="hbePass" placeholder="" />
+    <label for="hbePass">请输入密码</label>
+    <div class="bottom-line"></div>
+  </div>
+  <script id="hbeData" type="hbeData" data-hmacdigest="7750057eea985536b09ccc62ba36b2647bb02533de8c553758ae2f13b64a18db">2a75c4fae0ab76433541b34537090855c9dc8238ad2294d1a60f5bf917d7679818292625462269590aa9390ae06997813f08a921bedea5ef5b3e6bbd5fefbe6082dffb39199ccdfda2705c024a06bcaeabb1a69676f3fc31ebf1bd054dc66c3febb76362849f975e39154cc73816e8ecd76a7b028f840d4b78d35f3af25940aae550ae281e94b2d7992b86b17e03e07bb4ca8521251419858565a11347fed05b056a0f71f71a925664df03afbebb86c1407e9506caec0feec37f8cd3aaa72e62289d57b78766a240a9855aaa98889e6781e4e84cff205d63d8de6f463f8d616fb9e731e595de8e78885978a558695049987614a395d2c9490ab7f1545b85ced58a22bd4fc99980279a8e01cc50477584ef78a95b360b169afd0da75a5f1f1af3f9211549ba85839a712b097d34b77c966bea4621dd1997e2a66cb32349cd67748658098131cca876c00181c88f122a552083e42bd099a9380fefbb7b8407a01ee5cc6a539edbe9c971c6c32a29fe010b9ab043ca42892a0bd5fd62f125958497532f8aa6bbb6b95b9cdd638b38920d5cddf6d29429dd68aff439c83e3afda841a949a34fdde3e693a38d21cb56c18277ff543988f6bec00902a97c22bfc312d2a39b49aef1a3f88b72f58c1086807b0501dd160ccb44bd9359d23e4900ead232585f7807bddb6cb784e871d367f44c679be1a978cd50460650bf9f7a7d68d4eac7328843f88c6c48fe7066f12c9b1e66790c4355e95e1a6b4ce311365ec154cb9ef6b986ad8fdfa053043dbe7f449cff90f83083e6d5fb43a0797f742fb3058af7352001236e87374cb332037ede7278fdbfc1115c2b9c50d2f1676d2ec43442cc1fd885ad074437e9d8a73fd660d79b3cf59101e23bb58b784fba2224bba3d418b43c00049d141a86722c92968d7df9bde6757f3b2083384f9c79dcfee3621c6fbfa324b1d60d3202ae0686eb93b132f55b79f8cacc29ad7ed4281a40bc6f67019b57c45645cb45d53b91705984f39516707c3caeb31bbb8052c9913e022f41ff8e6a7563ed29906a966226159caee7a81fed7582d1d99ba1b6aa31d9c127028ee4eba6115e2d5ab0c6997bbaaec5ca3ee6ed8c5fe186f4ac0f1fc4755863692440fe025b3ca5c20978c806bd46cd78125c8de96ece14fb147a149a2e1e118fceddb25745a633400235ad03a3f966ea376802d0a03cdf5e07f54c516a7d89e116eb0f3731df4a37ab5a93ed8a54c28280680e4c7892b85c134ec4a457b9bd9087a74cab14d063674959ef6a8c0e846bbb6c2bcc2186a0ddb72256779d0fe17627e2e55573248c75d3cf87ebc091d446a8c8ac8bba6b5114ad889728de07759e97ea7ee32a3788cbb86af7e94e838d91156f05ed62352003a9df472eb0cba7d041d9a9f82759d0cfcd8197d78dab47fc6a58fb4eb03a9edf41ec3e645917a4eb289ebe6925ac2653f1d195344f116319280243a70f84ca266e79520c808ab1b4f8460a6f506f9e145c81de00e27d482a6c59237405e2d5d634ae49d44c5a478e098a2976059dba5bc53a15d5c9c1a7a0671af486ff2c08933e0468813c253efdba912d6a871ea75aa6dede6e3032bf222c0927a926f0f1d7f2b1b92398d22ecb5f4950e745ffa1294bf0f5d2bfcdea7310220a4881b51db28d9e65c8a04726fd7ebece30702986f93200cd78d3fca2b4c86e5d0ffc7fe55afe4a0610a19d1c6674e6233509b34b49e6cc43ea62aac1ea122672a7b93aa588f728b655f8af0245f550e345201127071edf0a47b7d9576c9d5434e1fdab4941f3ce5a4f274396f3969ddf257ee3ebe77299c3d1236a5f0028ac2816d5b8f2775bc2f525009641c36f4bbd7b3c9f3eafaa12754f5cc3babd9668d8414dde948caa1ed12746855a296d46ca98f7db6f648dfea2effb6b5d82a2c064807d8771765f713332daf3434af4c06ec48476f1a9c075cb375dae7a49a45c0c63b0202fe44878ff8de7d6d1c7628dae6e9f9650a23b8d05c7a5db5b23f12fc388cffd09232dd68348068952c9ea1bb77a09bde8a6da804efd48776f1148bc99557e5a36918686ddca05e5a6cb545a34d00c9e1e2bb79d805c6ffa1573008912057e2c5dbbff1c56be9b2cbafad6cc775bfc16b336ff781020584dfa234aa50c93e7064e64a7964f813a465f44914198c6ecea149f3a83d91d6bc94ae4c1447e63f911a11aa2163d6547cf1d0abec7d9301ea6c55f585422a66163b1908bc3c68f9305eb248521371f2d4a561a38c4940c257b0b4e064ca0ca4cc07782</script>
+</div>
+<script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
       <categories>
         <category>碎碎念</category>
       </categories>
@@ -729,7 +781,7 @@ $$\ce{HClO + H^+ + Cl^- <=> Cl2(aq) + H2O} \tag{III}$$
 
 <h2 id="酒精与84消毒液混合后可能发生的反应"><a href="#酒精与84消毒液混合后可能发生的反应" class="headerlink" title="酒精与84消毒液混合后可能发生的反应"></a>酒精与84消毒液混合后可能发生的反应</h2><p>酒精与84消毒液的混合溶液中，可能发生以下反应：</p>
 <div class="mermaid">
-    stateDiagram
+  stateDiagram
     乙醇 --> 乙醛 : 氧化 (1)
     乙醛 --> 乙酸钠 : 氧化 (2)
     乙醛 --> node1 : 氯仿反应 (3)
