@@ -613,7 +613,9 @@ $$c=\frac{1}{\sqrt{\mu_0 \varepsilon_0}}$$
         
           <a href="#comment-tab0" class="mdui-ripple">gitalk</a>
         
-          <a href="#comment-tab1" class="mdui-ripple">livere</a>
+          <a href="#comment-tab1" class="mdui-ripple">valine</a>
+        
+          <a href="#comment-tab2" class="mdui-ripple">livere</a>
         
       </div>
       
@@ -637,6 +639,33 @@ $$c=\frac{1}{\sqrt{\mu_0 \varepsilon_0}}$$
         </div>
       
         <div id="comment-tab1" class="mdui-p-a-2">
+          <div id="vcomments"></div>
+<script src="//cdnjs.loli.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+  var GUEST_INFO = ['nick', 'mail', 'link'];
+  var guest_info = ''.split(',').filter(function (item) {
+    return GUEST_INFO.indexOf(item) > -1;
+  });
+  var notify = '' === 'true';
+  var verify = '' === 'true';
+  new Valine({
+    el: '#vcomments',
+    notify: notify,
+    verify: verify,
+    appId: '9J3H5T0CaVVKvypbpuFLbq8d-gzGzoHsz',
+    appKey: '7KXF5yiKhXgkkwO1reve8XRl',
+    placeholder: '说点什么',
+    pageSize: '',
+    avatar: '',
+    lang: '',
+    guest_info: guest_info
+  });
+</script>
+        </div>
+      
+        <div id="comment-tab2" class="mdui-p-a-2">
           <div id="lv-container" data-id="city" data-uid="MTAyMC80OTI2OS8yNTc2Mw==">
   <script type="text/javascript">
     (function (d, s) {
