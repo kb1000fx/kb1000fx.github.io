@@ -423,7 +423,6 @@ $$
 
 <h1 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h1><p>如果使用了这个主题，欢迎留言贴上预览链接。</p>
 <ul>
-<li><a href="https://kb1000fx.github.io/hexo-theme-insulin/" target="_blank" rel="noopener">Demo1</a></li>
 <li><a href="https://note.garybear.cn/" target="_blank" rel="noopener">Demo2</a></li>
 </ul>
 <h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p>在此下载Release版本：<a href="https://github.com/kb1000fx/hexo-theme-insulin/releases" target="_blank" rel="noopener">https://github.com/kb1000fx/hexo-theme-insulin/releases</a><br>或直接点击<code>Download Zip</code>下载最新版。</p>
@@ -431,10 +430,8 @@ $$
 <p>修改Hexo目录下的<code>_config.yml</code>，把<code>theme:</code>的值改为解压后的文件夹名。</p>
 <h1 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h1><p>更多使用说明详见下面的说明文档：</p>
 <ul>
-<li><p><a href="https://kb1000fx.github.io/hexo-theme-insulin/doc/#/en/" target="_blank" rel="noopener">Doc</a></p>
-</li>
-<li><p><a href="https://kb1000fx.github.io/hexo-theme-insulin/doc/#/" target="_blank" rel="noopener">中文文档</a></p>
-</li>
+<li><a href="https://kb1000fx.github.io/hexo-theme-insulin/#/en/" target="_blank" rel="noopener">Doc</a> </li>
+<li><a href="https://kb1000fx.github.io/hexo-theme-insulin/#/" target="_blank" rel="noopener">中文文档</a></li>
 </ul>
 ]]></content>
       <categories>
@@ -889,7 +886,7 @@ $$
   <entry>
     <title>Meadow主题使用说明</title>
     <url>/t-4072/</url>
-    <content><![CDATA[<p><strong>Meadow主题的中文帮助文档已迁移至<a href="https://kb1000fx.github.io/hexo-theme-meadow/doc/#/" target="_blank" rel="noopener">hexo-theme-meadow说明文档</a>，本文将不再继续更新。</strong></p>
+    <content><![CDATA[<p><strong>Meadow主题的中文帮助文档已迁移至<a href="https://kb1000fx.github.io/hexo-theme-meadow/#/" target="_blank" rel="noopener">hexo-theme-meadow说明文档</a>，本文将不再继续更新。</strong></p>
 <p><img src="https://img.shields.io/badge/Hexo-3.0+-blue" alt="Hexo"> <img src="https://img.shields.io/badge/node.js-6.0-brightgreen" alt="Node.JS"><br>Meadow 是一款基于MDUI开发的，符合Material Designed的Hexo主题。<br><a href="https://garybear.cn/">Demo</a><br><a href="https://github.com/kb1000fx/hexo-theme-meadow" target="_blank" rel="noopener">Github</a></p>
 <a id="more"></a>
 <h1 id="开始使用"><a href="#开始使用" class="headerlink" title="开始使用"></a>开始使用</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p><strong>1. 切换至Hexo根目录</strong></p>
