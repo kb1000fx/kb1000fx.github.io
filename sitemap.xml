@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://garybear.cn/about/index.html</loc>
+    
+    <lastmod>2020-11-15T12:22:33.197Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://garybear.cn/t-24497/</loc>
     
     <lastmod>2020-11-03T11:19:40.440Z</lastmod>
@@ -89,13 +96,6 @@
     <loc>https://garybear.cn/tools/index.html</loc>
     
     <lastmod>2020-07-30T05:07:27.430Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://garybear.cn/about/index.html</loc>
-    
-    <lastmod>2020-07-30T05:04:04.362Z</lastmod>
     
   </url>
   
