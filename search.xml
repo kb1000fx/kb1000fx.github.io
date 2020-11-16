@@ -1,6 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>朝鲜Red Star OS 3.0初体验</title>
+    <url>/t-46143/</url>
+    <content><![CDATA[<p>Red Star OS是朝鲜基于Red Hat开发的一款操作系统，用于朝鲜国内图书馆和学校中的计算机。在这里简单记录一下，如何配置和使用这款由隔壁邻居开发的，在界面风格上与Mac OS X极度相似的操作系统。</p>
+<a id="more"></a>
+
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>下载地址: <a href="https://drive.google.com/file/d/1G2hLOXBR44ZT2dOyC7HkVrplqrsenwtA/" target="_blank" rel="noopener">Red Star OS 3.0</a></p>
+<p>直接使用下载好的iso进行安装即可，需要注意的是镜像在加载过程中没有任何提示，会一直处于黑屏状态。安装过程中的语言问题参考下一节。</p>
+<p><img src="/images/46143/install.webp" alt="install"></p>
+<h1 id="修改语言"><a href="#修改语言" class="headerlink" title="修改语言"></a>修改语言</h1><h2 id="安装过程中使用英文界面"><a href="#安装过程中使用英文界面" class="headerlink" title="安装过程中使用英文界面"></a>安装过程中使用英文界面</h2><p>使用上面下载的iso安装后默认语言是朝文，可以通过修改iso来修改语言。<br>打开iso文件内的<code>~/ isolinux / isolinux.cfg</code>，内容如下：</p>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">default linux</span><br><span class="line">prompt 0</span><br><span class="line">timeout 0</span><br><span class="line">label linux</span><br><span class="line">  kernel vmlinuz</span><br><span class="line">  append <span class="attribute">initrd</span>=initrd.img quiet <span class="attribute">lang</span>=ko <span class="attribute">keymap</span>=us <span class="attribute">selinux</span>=1</span><br></pre></td></tr></table></figure>
+<p>将<code>lang=ko</code>改成<code>lang=en</code>，重新打包并安装即可</p>
+<h2 id="桌面使用英文界面"><a href="#桌面使用英文界面" class="headerlink" title="桌面使用英文界面"></a>桌面使用英文界面</h2><p>修改iso后桌面的系统语言仍然是朝文，需要在完成安装后修改<code>/etc/sysconfig/i18n</code>和<code>/usr/share/config/kdeglobals</code>，将这两个文件中所有的<code>ko_KP</code>修改成<code>en_US</code>。  </p>
+<blockquote>
+<p>关于修改这两个文件内容的方式，可以采用Live CD进行操作或者是在虚拟机外使用Disk Genius，我的操作方法是新建一块虚拟磁盘并安装Ubuntu，使用Ubuntu环境操作Red Star的文件。</p>
+</blockquote>
+<p><img src="/images/46143/ko.webp" alt="install"></p>
+<h2 id="浏览器使用英文界面"><a href="#浏览器使用英文界面" class="headerlink" title="浏览器使用英文界面"></a>浏览器使用英文界面</h2><p>自带的浏览器是实际就是魔改的FireFox，由于Linux下FireFox的语言不会随系统改变而改变，需要进行下面的设置。</p>
+<ul>
+<li>打开浏览器选择倒数第二个菜单的选择第三个选项</li>
+<li>在打开的界面里选择倒数第二个选项卡</li>
+<li>选择ko-KP的加载项并将其禁用</li>
+<li>重新启动浏览器</li>
+</ul>
+<p><img src="/images/46143/en.webp" alt="install"></p>
+<h1 id="获取root权限"><a href="#获取root权限" class="headerlink" title="获取root权限"></a>获取root权限</h1><p>Red Star下root用户是默认禁用的，可以通过终端获取root权限(很庆幸居然没有禁用终端)</p>
+<ul>
+<li>依次点击<code>Applications</code>-<code>AppLink</code>-<code>Utilities</code>-<code>Terminal</code>打开终端</li>
+<li>在终端中执行<code>rootsetting</code></li>
+<li>点击锁头图标并输入密码解锁root权限</li>
+</ul>
+<blockquote>
+<p>执行sudo命令的时候可能需要先使用root账号修改sudo组内容</p>
+</blockquote>
+<h1 id="解禁网络限制"><a href="#解禁网络限制" class="headerlink" title="解禁网络限制"></a>解禁网络限制</h1><p>Red Star的自带防火墙设置中仅允许连接指定的内网ip，如需访问外网要手动删除iptables防火墙规则。</p>
+<p>使用root用户在终端执行</p>
+<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">rm <span class="regexp">/etc/</span>sysconfig<span class="regexp">/iptables</span></span><br></pre></td></tr></table></figure>
+<p>重启后即可解禁网络限制</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+        <category>Linux</category>
+      </categories>
+  </entry>
+  <entry>
     <title>JavaScript中forEach方法的async/await异步问题</title>
     <url>/t-4423/</url>
     <content><![CDATA[<p>最近在帮同学用Node JS写个小项目的时候发现了一个之前没有注意过的问题：数组使用forEach方法进行异步操作时执行顺序可能会出现问题。这篇文章就来简单谈一谈产生这个问题具体原因以及解决方法。</p>
