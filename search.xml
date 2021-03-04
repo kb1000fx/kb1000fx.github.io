@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>XGP版控制(CONTROL)存档迁移到Steam的方法</title>
+    <url>/t-28659/</url>
+    <content><![CDATA[<p>之前在XGP for PC上玩了一阵控制(CONTROL)，进度大概打了一半，最近趁着进月包又补了一份Steam版。由于不太想从头重新再来一遍，就摸索出来了一个将XGP版控制存档迁移到Steam上的方法。存档迁移后游戏进度可以继承，但原存档中已达成的成就在Steam中不会直接解锁。</p>
+<a id="more"></a>
+
+<h1 id="存档储存位置"><a href="#存档储存位置" class="headerlink" title="存档储存位置"></a>存档储存位置</h1><p>Steam版存档</p>
+<figure class="highlight taggerscript"><table><tr><td class="code"><pre><span class="line">&lt;Steam-folder&gt;<span class="symbol">\u</span>serdata<span class="symbol">\&lt;</span>user-id&gt;<span class="symbol">\8</span>70780<span class="symbol">\r</span>emote\</span><br></pre></td></tr></table></figure>
+<p>XGP版存档</p>
+<figure class="highlight taggerscript"><table><tr><td class="code"><pre><span class="line">C:<span class="symbol">\U</span>sers<span class="symbol">\&lt;</span>user-name&gt;<span class="symbol">\A</span>ppData<span class="symbol">\L</span>ocal<span class="symbol">\P</span>ackages<span class="symbol">\5</span>05GAMESS.PAControlPCGP_tefn33qh9azfc<span class="symbol">\S</span>ysteamppData<span class="symbol">\w</span>gs<span class="symbol">\&lt;</span>id&gt;</span><br></pre></td></tr></table></figure>
+<h1 id="替换方法"><a href="#替换方法" class="headerlink" title="替换方法"></a>替换方法</h1><blockquote>
+<p>注意！替换存档后原存档中已达成的成就在Steam中不会直接解锁！</p>
+</blockquote>
+<ul>
+<li>如图在XGP存档文件夹中选择修改日期最近的一个子文件夹，可以在替换前先运行一下XGP版游戏<br><img src="/images/28659/pic1.png" alt=""></li>
+<li>文件夹中会有六个字符串命名的文件和一个container开头的文件，使用文本编辑器(VS Code、Atom、记事本之类)打开任意一个字符串名字文件，在第一二行会有一个明文的单词<br><img src="/images/28659/pic2.png" alt=""></li>
+<li>将这个文件重命名为<code>savegame-slot-00_xxx</code>的形式，其中名字里的<code>xxx</code>就是在文件第二行找到的单词</li>
+<li>重复对剩余的字符串名字的文件进行操作，不需要用到名字为container的那个文件，最后能得到以下这六个文件<br><img src="/images/28659/pic3.png" alt=""></li>
+<li>将这六个文件移动到Steam版的存档位置<code>&lt;Steam-folder&gt;\userdata\&lt;user-id&gt;\870780 \remote\</code>就大功告成了</li>
+</ul>
+]]></content>
+      <categories>
+        <category>游戏</category>
+      </categories>
+  </entry>
+  <entry>
     <title>自签CA对Steam社区进行反代</title>
     <url>/t-43393/</url>
     <content><![CDATA[<p>由于众所周知的原因Steam社区被屏蔽已久，使得部署在国内Linux云服务器上的ASF在使用上存在诸多不便。在此参照羽翼城大佬的Steam302工具的思路，使用自签CA+Nginx反代来绕过SNI过滤，由此解决Linux挂卡服务器或443端口被占用等特殊情况下的Steam社区访问问题。一般的Windows玩家直接使用羽翼城大佬的<a href="https://www.dogfight360.com/blog/686/" target="_blank" rel="noopener">SteamCommunity 302</a>更加方便。</p>
