@@ -1145,7 +1145,7 @@ $$
 <h1 id="存档数据地址"><a href="#存档数据地址" class="headerlink" title="存档数据地址"></a>存档数据地址</h1><p>存档文件共有5个存档位和一个含有SteamID的信息位，每个存档位又分为存档数据和存档校验两个部分，同时每个存档数据中都包含一份SteamID，结构如下。</p>
 <p>其中存档1、存档2地址已经验证过，其余存档的地址是根据数据长度与存档1、2中SteamID与数据头的偏移量<code>33E54</code>计算得到的，不保证其准确性。</p>
 <p>存档1</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">存档数据: <span class="number">00000310</span> - <span class="number">0010031</span>F</span><br><span class="line">存档校验: <span class="number">00000300</span> - <span class="number">0000030</span>F</span><br><span class="line">SteamID: <span class="number">00034164</span> - <span class="number">0003416</span>B</span><br></pre></td></tr></table></figure>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">存档数据: <span class="number">00000310</span> - <span class="number">0010030</span>F</span><br><span class="line">存档校验: <span class="number">00000300</span> - <span class="number">0000030</span>F</span><br><span class="line">SteamID: <span class="number">00034164</span> - <span class="number">0003416</span>B</span><br></pre></td></tr></table></figure>
 <p>存档2</p>
 <figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">存档数据: <span class="number">00100320</span> - <span class="number">0020031</span>F</span><br><span class="line">存档校验: <span class="number">00100310</span> - <span class="number">0010031</span>F</span><br><span class="line">SteamID: <span class="number">00134174</span> - <span class="number">0013417</span>B</span><br></pre></td></tr></table></figure>
 <p>存档3</p>
