@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>华硕路由器官方固件下设置中文SSID方法</title>
+    <url>/t-39744/</url>
+    <content><![CDATA[<p><strong>2018.7.20 更新：</strong></p>
+<p><strong>华硕官方固件在3.0.0.4.382.50470版本之后已支持Unicode，建议升级至最新固件</strong></p>
+<hr>
+<p>登录<a href="http://router.asus.com/" target="_blank" rel="noopener">Asus路由器管理页面</a>，在无线网络配置页面按F12打开浏览器控制台。输入以下内容：</p>
+<a id="more"></a>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">validator.stringSSID = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'fake stringSSID'</span>, <span class="built_in">arguments</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>确认后即可SSID栏中输入中文和其他Unicode字符</p>
+<p><strong>注意：输入后网页里可能会显示为空白SSID，实际SSID已修改成功</strong></p>
+<p><strong>除此之外也可安装梅林等第三方固件添加中文SSID</strong></p>
+<blockquote>
+<p>参考：<a href="https://gist.github.com/joar/671bf99258d0a0828ae5" target="_blank" rel="noopener">https://gist.github.com/joar/671bf99258d0a0828ae5</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>技术</category>
+        <category>网络硬件</category>
+      </categories>
+  </entry>
+  <entry>
     <title>2020.08.10</title>
     <url>/t-23929/</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
@@ -17,6 +38,23 @@
 <script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
       <categories>
         <category>碎碎念</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Cheat Engine脚本汇总</title>
+    <url>/t-54320/</url>
+    <content><![CDATA[<p>本文脚本均收集自网络<br>Cheat Engine下载地址：<a href="https://www.cheatengine.org/" target="_blank" rel="noopener">Cheat Engine</a></p>
+<a id="more"></a>
+
+<h1 id="光明记忆-无限-Bright-Memory-Infinite"><a href="#光明记忆-无限-Bright-Memory-Infinite" class="headerlink" title="光明记忆: 无限 (Bright Memory: Infinite)"></a>光明记忆: 无限 (Bright Memory: Infinite)</h1><h2 id="原帖"><a href="#原帖" class="headerlink" title="原帖"></a>原帖</h2><p><a href="https://fearlessrevolution.com/viewtopic.php?t=18155" target="_blank" rel="noopener">(REQUEST) Bright Memory infinite steam cheat table</a></p>
+<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p><a href="../download/CT/BrightMemoryInfinite-Win64-Shipping.CT">本站下载</a><br><a href="https://fearlessrevolution.com/download/file.php?id=37229&sid=3fb94ad9c75217af02719d5065dfacca" target="_blank" rel="noopener">Download</a></p>
+<h1 id="钢铁雄心4-Hearts-of-Iron-IV"><a href="#钢铁雄心4-Hearts-of-Iron-IV" class="headerlink" title="钢铁雄心4 (Hearts of Iron IV)"></a>钢铁雄心4 (Hearts of Iron IV)</h1><h2 id="原帖-1"><a href="#原帖-1" class="headerlink" title="原帖"></a>原帖</h2><p><a href="https://fearlessrevolution.com/viewtopic.php?t=9636" target="_blank" rel="noopener">Hearts of Iron IV x64 v1.10.5 (GM and More) 2021-Apr-18</a><br><a href="https://bbs.52pcgame.net/forum.php?mod=viewthread&tid=381477&fromuid=1158223" target="_blank" rel="noopener">52PCGame</a></p>
+<h2 id="下载-1"><a href="#下载-1" class="headerlink" title="下载"></a>下载</h2><p><a href="../download/CT/hoi1.10.5.CT">本站下载-EN</a><br><a href="../download/CT/1.10.5.CT">本站下载-CN</a><br><a href="https://fearlessrevolution.com/download/file.php?id=31511" target="_blank" rel="noopener">Download</a><br><a href="https://bbs.52pcgame.net/forum.php?mod=attachment&aid=MjgzNDQ4fDJlMzgyODBiOWQ3NTAxZTcxOGUzODFiOGY1ZjBiN2Q0fDE2MzY3MjU0Njc%3D&request=yes&_f=.rar" target="_blank" rel="noopener">52PC下载</a></p>
+<h1 id="Cyber-Shadow"><a href="#Cyber-Shadow" class="headerlink" title="Cyber Shadow"></a>Cyber Shadow</h1><h2 id="原帖-2"><a href="#原帖-2" class="headerlink" title="原帖"></a>原帖</h2><p><a href="https://fearlessrevolution.com/viewtopic.php?t=15052" target="_blank" rel="noopener">Cyber Shadow Steam Gamepass</a></p>
+<h2 id="下载-2"><a href="#下载-2" class="headerlink" title="下载"></a>下载</h2><p><a href="../download/CT/CyberShadow.CT">本站下载-</a><br><a href="https://fearlessrevolution.com/download/file.php?id=29158" target="_blank" rel="noopener">Download</a></p>
+]]></content>
+      <categories>
+        <category>游戏</category>
       </categories>
   </entry>
   <entry>
@@ -133,6 +171,50 @@
       </categories>
       <tags>
         <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JavaScript闭包原理与垃圾回收机制</title>
+    <url>/t-37956/</url>
+    <content><![CDATA[<p>JavaScript中的闭包是指能够访问其他函数作用域内变量的函数，即一个函数内部的函数。闭包是一种保护私有变量的机制，在函数执行时形成私有的作用域，保护里面的私有变量不受外界干扰，即形成一个不销毁的栈环境。但由于闭包会使得函数中的变量都被保存在内存中，所以滥用闭包会造成性能问题或是导致内存泄漏。</p>
+<a id="more"></a>
+
+<h1 id="JavaScript闭包简介"><a href="#JavaScript闭包简介" class="headerlink" title="JavaScript闭包简介"></a>JavaScript闭包简介</h1><p>首先来看一个简单的例子：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn1</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  a += <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">return</span> a;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//函数中的a为全局变量</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn2</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line">  a += <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">return</span> a;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//函数中的a为局部变量</span></span><br><span class="line">fn1();</span><br><span class="line"><span class="built_in">console</span>.log(fn1());</span><br><span class="line"><span class="comment">//控制台输出3</span></span><br><span class="line">fn2();</span><br><span class="line"><span class="built_in">console</span>.log(fn2());</span><br><span class="line"><span class="comment">//控制台输出2</span></span><br></pre></td></tr></table></figure>
+<p>在这个例子中，fn1使用的是全局变量a，fn2使用的是局部变量a。多次执行函数后，f1返回的是多次累加的结果，而f2由于使用的是局部变量执行结果始终与单次执行相同。如果希望多次对一个变量进行操作，同时又不希望将其暴露在全局之中，此时上面的两个函数均无法满足需求，可使用嵌套函数的方法。在JavaScript中，所有函数都能访问它们上一层的作用域。嵌套函数可以访问上一层的函数变量。例如：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> add = (<span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> counter = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> <span class="title">f2</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">          <span class="keyword">return</span> counter += <span class="number">1</span>;</span><br><span class="line">      &#125;</span><br><span class="line">&#125;)();</span><br><span class="line"> </span><br><span class="line">add();</span><br><span class="line">add();</span><br><span class="line">add();</span><br><span class="line"><span class="comment">//此时counter为3</span></span><br></pre></td></tr></table></figure>
+<p>上面的这个函数就是一个JavaScript闭包，它使得函数拥有私有变量变成可能。</p>
+<h1 id="作用域与作用域链"><a href="#作用域与作用域链" class="headerlink" title="作用域与作用域链"></a>作用域与作用域链</h1><p>JavaScript中存在如下三种作用域：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 全局作用域</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 函数作用域</span></span><br><span class="line">  &#123;</span><br><span class="line">    <span class="comment">// 块级作用域</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>当同时存在多个作用域对象时，所有函数的作用域对象会被环境栈所管理。环境栈中的作用域对象是按顺序访问的，最先能够访问的是当前函数的作用域，如果访问的变量在当前作用域没有，会访问上一层作用域，直到找到全局作用域。如果访问到全局作用域也没有这个对象，会抛出ReferenceError的异常。</p>
+<p>简单来说就是前面提到过的<code>所有函数都能访问它们上一层的作用域</code>，子对象会一级级向上寻找所有父对象的变量，函数内部可以读取全局变量，这就是所谓的作用域链。</p>
+<h1 id="JavaScript闭包原理"><a href="#JavaScript闭包原理" class="headerlink" title="JavaScript闭包原理"></a>JavaScript闭包原理</h1><p>还是以上面提到的闭包为例，上面的例子中多次调用add函数后变量counter的值能够持续增加，原因就在于每次执行完add之后counter并没有被回收。<br>简单来说，其过程就是：</p>
+<ul>
+<li>全局变量add引用了函数f1自我调用后的返回值，即函数f2。</li>
+<li>f1在自我调用时只执行一次，并将counter初始化为0。</li>
+<li>add变量可以作为一个函数使用，它可以访问函数上一层作用域的变量，即f1中的counter。</li>
+<li>在执行完一次add()之后，由于f2被全局变量add引用了，所以不会被回收销毁。</li>
+<li>而f1又引用了f2中的变量，所以f2作用域也不会被销毁，下一次执行时counter值不会重置。</li>
+</ul>
+<p>这样一来，就可以对变量counter进行多次操作，同时counter受函数f1的作用域保护，只能通过add方法修改，不会暴露在全局中，上一节中提到的需求通过闭包实现了。<br>闭包产生的三个必要条件为：</p>
+<ul>
+<li>在函数A内部直接或者间接返回一个函数B</li>
+<li>B函数内部使用着A函数的私有变量(私有数据)</li>
+<li>A函数外部有一个变量接受着函数B</li>
+</ul>
+<h1 id="JavaScript垃圾回收机制"><a href="#JavaScript垃圾回收机制" class="headerlink" title="JavaScript垃圾回收机制"></a>JavaScript垃圾回收机制</h1><p>JavaScript具有自动垃圾回收机制。后台的垃圾回收器会监视所有对象，按照固定的时间间隔周期性地执行垃圾回收，删除那些不可达的对象。<br>对象的可达性遵循下面的原则：</p>
+<ul>
+<li>本地函数的局部变量和参数、当前嵌套调用链上的其他函数的变量和参数、全局变量等是可达的。</li>
+<li>如果一个对象被引用，则它是可达的</li>
+<li>如果若干个对象互相引用成环，且没被其他对象引用，则这些对象都是不可达的</li>
+</ul>
+]]></content>
+      <categories>
+        <category>技术</category>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
@@ -1124,71 +1206,6 @@
       </tags>
   </entry>
   <entry>
-    <title>华硕路由器官方固件下设置中文SSID方法</title>
-    <url>/t-39744/</url>
-    <content><![CDATA[<p><strong>2018.7.20 更新：</strong></p>
-<p><strong>华硕官方固件在3.0.0.4.382.50470版本之后已支持Unicode，建议升级至最新固件</strong></p>
-<hr>
-<p>登录<a href="http://router.asus.com/" target="_blank" rel="noopener">Asus路由器管理页面</a>，在无线网络配置页面按F12打开浏览器控制台。输入以下内容：</p>
-<a id="more"></a>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">validator.stringSSID = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'fake stringSSID'</span>, <span class="built_in">arguments</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p>确认后即可SSID栏中输入中文和其他Unicode字符</p>
-<p><strong>注意：输入后网页里可能会显示为空白SSID，实际SSID已修改成功</strong></p>
-<p><strong>除此之外也可安装梅林等第三方固件添加中文SSID</strong></p>
-<blockquote>
-<p>参考：<a href="https://gist.github.com/joar/671bf99258d0a0828ae5" target="_blank" rel="noopener">https://gist.github.com/joar/671bf99258d0a0828ae5</a></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>技术</category>
-        <category>网络硬件</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>JavaScript闭包原理与垃圾回收机制</title>
-    <url>/t-37956/</url>
-    <content><![CDATA[<p>JavaScript中的闭包是指能够访问其他函数作用域内变量的函数，即一个函数内部的函数。闭包是一种保护私有变量的机制，在函数执行时形成私有的作用域，保护里面的私有变量不受外界干扰，即形成一个不销毁的栈环境。但由于闭包会使得函数中的变量都被保存在内存中，所以滥用闭包会造成性能问题或是导致内存泄漏。</p>
-<a id="more"></a>
-
-<h1 id="JavaScript闭包简介"><a href="#JavaScript闭包简介" class="headerlink" title="JavaScript闭包简介"></a>JavaScript闭包简介</h1><p>首先来看一个简单的例子：</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn1</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  a += <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">return</span> a;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//函数中的a为全局变量</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn2</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line">  a += <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">return</span> a;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//函数中的a为局部变量</span></span><br><span class="line">fn1();</span><br><span class="line"><span class="built_in">console</span>.log(fn1());</span><br><span class="line"><span class="comment">//控制台输出3</span></span><br><span class="line">fn2();</span><br><span class="line"><span class="built_in">console</span>.log(fn2());</span><br><span class="line"><span class="comment">//控制台输出2</span></span><br></pre></td></tr></table></figure>
-<p>在这个例子中，fn1使用的是全局变量a，fn2使用的是局部变量a。多次执行函数后，f1返回的是多次累加的结果，而f2由于使用的是局部变量执行结果始终与单次执行相同。如果希望多次对一个变量进行操作，同时又不希望将其暴露在全局之中，此时上面的两个函数均无法满足需求，可使用嵌套函数的方法。在JavaScript中，所有函数都能访问它们上一层的作用域。嵌套函数可以访问上一层的函数变量。例如：</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> add = (<span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> counter = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> <span class="title">f2</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">          <span class="keyword">return</span> counter += <span class="number">1</span>;</span><br><span class="line">      &#125;</span><br><span class="line">&#125;)();</span><br><span class="line"> </span><br><span class="line">add();</span><br><span class="line">add();</span><br><span class="line">add();</span><br><span class="line"><span class="comment">//此时counter为3</span></span><br></pre></td></tr></table></figure>
-<p>上面的这个函数就是一个JavaScript闭包，它使得函数拥有私有变量变成可能。</p>
-<h1 id="作用域与作用域链"><a href="#作用域与作用域链" class="headerlink" title="作用域与作用域链"></a>作用域与作用域链</h1><p>JavaScript中存在如下三种作用域：</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 全局作用域</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 函数作用域</span></span><br><span class="line">  &#123;</span><br><span class="line">    <span class="comment">// 块级作用域</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>当同时存在多个作用域对象时，所有函数的作用域对象会被环境栈所管理。环境栈中的作用域对象是按顺序访问的，最先能够访问的是当前函数的作用域，如果访问的变量在当前作用域没有，会访问上一层作用域，直到找到全局作用域。如果访问到全局作用域也没有这个对象，会抛出ReferenceError的异常。</p>
-<p>简单来说就是前面提到过的<code>所有函数都能访问它们上一层的作用域</code>，子对象会一级级向上寻找所有父对象的变量，函数内部可以读取全局变量，这就是所谓的作用域链。</p>
-<h1 id="JavaScript闭包原理"><a href="#JavaScript闭包原理" class="headerlink" title="JavaScript闭包原理"></a>JavaScript闭包原理</h1><p>还是以上面提到的闭包为例，上面的例子中多次调用add函数后变量counter的值能够持续增加，原因就在于每次执行完add之后counter并没有被回收。<br>简单来说，其过程就是：</p>
-<ul>
-<li>全局变量add引用了函数f1自我调用后的返回值，即函数f2。</li>
-<li>f1在自我调用时只执行一次，并将counter初始化为0。</li>
-<li>add变量可以作为一个函数使用，它可以访问函数上一层作用域的变量，即f1中的counter。</li>
-<li>在执行完一次add()之后，由于f2被全局变量add引用了，所以不会被回收销毁。</li>
-<li>而f1又引用了f2中的变量，所以f2作用域也不会被销毁，下一次执行时counter值不会重置。</li>
-</ul>
-<p>这样一来，就可以对变量counter进行多次操作，同时counter受函数f1的作用域保护，只能通过add方法修改，不会暴露在全局中，上一节中提到的需求通过闭包实现了。<br>闭包产生的三个必要条件为：</p>
-<ul>
-<li>在函数A内部直接或者间接返回一个函数B</li>
-<li>B函数内部使用着A函数的私有变量(私有数据)</li>
-<li>A函数外部有一个变量接受着函数B</li>
-</ul>
-<h1 id="JavaScript垃圾回收机制"><a href="#JavaScript垃圾回收机制" class="headerlink" title="JavaScript垃圾回收机制"></a>JavaScript垃圾回收机制</h1><p>JavaScript具有自动垃圾回收机制。后台的垃圾回收器会监视所有对象，按照固定的时间间隔周期性地执行垃圾回收，删除那些不可达的对象。<br>对象的可达性遵循下面的原则：</p>
-<ul>
-<li>本地函数的局部变量和参数、当前嵌套调用链上的其他函数的变量和参数、全局变量等是可达的。</li>
-<li>如果一个对象被引用，则它是可达的</li>
-<li>如果若干个对象互相引用成环，且没被其他对象引用，则这些对象都是不可达的</li>
-</ul>
-]]></content>
-      <categories>
-        <category>技术</category>
-        <category>Web</category>
-      </categories>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>JavaScript设计模式简介之单例模式</title>
     <url>/t-2056/</url>
     <content><![CDATA[<p>休整了一阵子，身体和心理都慢慢恢复了一些。鸽了这么久终于补上这篇单例模式了，下面开始正题。<br>单例模式，顾名思义即一个类仅有一个实例。单例模式下即使多次调用构造函数(使用new操作符创建多个对象)，得到的都是同一个实例对象。</p>
@@ -1237,6 +1254,31 @@
       </tags>
   </entry>
   <entry>
+    <title>Ubuntu下系统及应用的代理设置</title>
+    <url>/t-47161/</url>
+    <content><![CDATA[<h1 id="后端设置"><a href="#后端设置" class="headerlink" title="后端设置"></a>后端设置</h1><h2 id="安装ss-libev"><a href="#安装ss-libev" class="headerlink" title="安装ss-libev"></a>安装ss-libev</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt install shadowsocks-libev</span><br></pre></td></tr></table></figure>
+
+<p>对于14.04和16.04需从PPA安装</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get install software-properties-common -y</span><br><span class="line">sudo add-apt-repository ppa:max-c-lv/shadowsocks-libev -y</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="配置与启动"><a href="#配置与启动" class="headerlink" title="配置与启动"></a>配置与启动</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 启动</span></span><br><span class="line">sudo ss-local -c &lt;config json path&gt;  start</span><br><span class="line"><span class="comment"># 停止</span></span><br><span class="line">sudo ss-local -c &lt;config json path&gt;  stop</span><br><span class="line"><span class="comment"># 重启</span></span><br><span class="line">sudo ss-local -c &lt;config json path&gt;  restart</span><br></pre></td></tr></table></figure>
+
+<p>可以加入服务自动启动或是用screen手动启动</p>
+<h1 id="Chrome浏览器代理设置"><a href="#Chrome浏览器代理设置" class="headerlink" title="Chrome浏览器代理设置"></a>Chrome浏览器代理设置</h1><p>打开开发者模式，使用<code>crx</code>文件安装<code>SwtichyOmega</code>插件。</p>
+<p><code>SwtichyOmega</code>插件地址：<a href="https://github.com/FelisCatus/SwitchyOmega/releases" target="_blank" rel="noopener">Github release</a> ； <a href="../download/SwitchyOmega_Chromium.crx">本站下载</a></p>
+<h1 id="git代理设置"><a href="#git代理设置" class="headerlink" title="git代理设置"></a>git代理设置</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#设置代理</span></span><br><span class="line">git config --global http.proxy <span class="string">'socks5://127.0.0.1:1080'</span> </span><br><span class="line">git config --global https.proxy <span class="string">'socks5://127.0.0.1:1080'</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#删除代理</span></span><br><span class="line">git config --global --<span class="built_in">unset</span> http.proxy</span><br><span class="line">git config --global --<span class="built_in">unset</span> https.proxy</span><br></pre></td></tr></table></figure>
+
+<h1 id="npm代理设置方式"><a href="#npm代理设置方式" class="headerlink" title="npm代理设置方式"></a>npm代理设置方式</h1><p>设置代理</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> proxy socks5://127.0.0.1:1080</span><br><span class="line">npm config <span class="built_in">set</span> https-proxy socks5://127.0.0.1:1080</span><br></pre></td></tr></table></figure>
+
+<p>删除代理</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config delete proxy</span><br><span class="line">npm config delete https-proxy</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>技术</category>
+        <category>Linux</category>
+      </categories>
+  </entry>
+  <entry>
     <title>LAMP下使用Certbot自动配置SSL证书</title>
     <url>/t-65310/</url>
     <content><![CDATA[<p>Let’s Encrypt是ISRG运营一个免费、开放，自动化的证书颁发机构，可以申请到期限90天的免费SSL证书（包括单域名、多域名和泛域名）。 Certbot是Let’s Encrypt官方提供的一款SSL自动安装程序，<a href="https://certbot.eff.org/" target="_blank" rel="noopener">官方网站</a> 。使用Certbot可以自动完成获取密钥、申请证书、安装证书等一系列繁琐的操作，也提供了自动证书续期的功能。使用Certbot自动配置SSL证书，也可以免去手动申请证书中添加TXT解析的步骤。</p>
@@ -1269,6 +1311,134 @@ sudo rm /tmp/swapfile</code></pre><h3 id="Chrome下无法显示小绿锁"><a hre
         <category>技术</category>
         <category>Linux</category>
       </categories>
+  </entry>
+  <entry>
+    <title>JavaScript设计模式简介之工厂模式</title>
+    <url>/t-43842/</url>
+    <content><![CDATA[<p>工厂模式是JavaScript中最常用的一种用于创建对象的设计模式，其核心就是将逻辑封装在一个函数中不暴露创建对象的具体逻辑。工厂模式适用于对象的构建十分复杂、需要依赖具体环境创建不同实例、处理大量具有相同属性的小对象等情况，但滥用工厂模式也给代码增加不必要的复杂度，使用时需要谨慎。根据抽象程度的不同，工厂模式又可以分为简单工厂、工厂方法和抽象工厂三种。</p>
+<a id="more"></a>
+
+<h1 id="简单工厂"><a href="#简单工厂" class="headerlink" title="简单工厂"></a>简单工厂</h1><p>简单工厂模式又称为静态工厂模式，是由一个工厂函数来实例化多个产品对象，主要用来创建同一类对象。其过程图如下：</p>
+<div class="mermaid">
+  classDiagram
+    Client -- Factory
+    Factory <-- productOne
+    Factory <-- productTwo
+    class Factory{
+      + createProduct()
+    }
+    class productOne{
+      data
+      method()
+    }
+    class productTwo{
+      data
+      method()
+    }
+</div>
+
+<p>下面举一个简单的例子：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> factory=<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> product = <span class="keyword">new</span> <span class="built_in">Object</span>;</span><br><span class="line">    product.data = data;</span><br><span class="line">    product.method = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">"I am Product "</span>+<span class="keyword">this</span>.data);</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">return</span> product</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//调用</span></span><br><span class="line"><span class="keyword">var</span> product1 = factory(<span class="number">1</span>);</span><br><span class="line"><span class="keyword">var</span> product2 = <span class="keyword">new</span> factory(<span class="number">2</span>);</span><br><span class="line"><span class="comment">//这里使用了new结果相同</span></span><br><span class="line">product1.method()</span><br><span class="line"><span class="comment">//输出：I am Product 1</span></span><br><span class="line">product2.method()</span><br><span class="line"><span class="comment">//输出：I am Product 2</span></span><br></pre></td></tr></table></figure>
+
+<p>其中<code>Factory</code>就是一个简单工厂，通过传入不同的参数生成许多同类的对象。对于这个例子而言，由于<code>Factory</code>的返回值是一个对象，所以在使用时无论是否作为构造函数调用(即是否加new)运行结果均相同，都是生成的对象。</p>
+<p>值得一提的是，上面的例子中的对象<code>productOne</code>与<code>productTwo</code>在内存中均含一个method方法，二者并不共用，这会导致一定程度的浪费。详见<a href="#工厂模式与构造函数">工厂模式与构造函数</a>一节</p>
+<h1 id="工厂方法"><a href="#工厂方法" class="headerlink" title="工厂方法"></a>工厂方法</h1><p>对于生成不同种类的对象，上面介绍的简单工厂无法做到，可以使用下面的工厂方法。工厂方法模式与上面的不同在于将实际创建对象的工作推迟到子类中，使得核心类就变成了抽象类，只作为接口来调用子类的构造函数。但是由于在JavaScript中很难像传统面向对象那样去实现创建抽象类。所以参考其核心思想可以将工厂方法看作是一个实例化对象的工厂类。具体过程如下：</p>
+<div class="mermaid">
+  classDiagram
+    Client -- Factory
+    Factory <-- ConcreteFactoryOne
+    Factory <-- ConcreteFactoryTwo
+    ConcreteFactoryOne <-- ProductOne
+    ConcreteFactoryTwo <-- ProductTwo
+    class ConcreteFactoryOne{
+      + createProductOne()
+    }
+    class ConcreteFactoryTwo{
+      + createProductTwo()
+    }
+    class ProductOne{
+      data
+      method()
+    }
+    class ProductTwo{
+      data
+      method()
+    }
+</div>
+
+<p>对上面的例子进行改写，使用Factory同时产生两种对象。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//使用安全模式创建工厂方法函数</span></span><br><span class="line"><span class="keyword">var</span> Factory = <span class="function"><span class="keyword">function</span>(<span class="params">child,data</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(<span class="keyword">this</span> <span class="keyword">instanceof</span> Factory) &#123;</span><br><span class="line">      <span class="keyword">var</span> product = <span class="keyword">new</span> <span class="keyword">this</span>[child](data);</span><br><span class="line">      <span class="keyword">return</span> product;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">new</span> Factory(child,data);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//设置子类构造函数</span></span><br><span class="line">Factory.prototype = &#123;</span><br><span class="line">    ConcreteFactoryOne: <span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">this</span>.data = data;</span><br><span class="line">      <span class="keyword">this</span>.method = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"Product 1, data "</span> + <span class="keyword">this</span>.data)</span><br><span class="line">      &#125;;</span><br><span class="line">    &#125;,</span><br><span class="line">    ConcreteFactoryTwo: <span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">this</span>.data = data,</span><br><span class="line">      <span class="keyword">this</span>.method = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"Product 2, data "</span> + <span class="keyword">this</span>.data)</span><br><span class="line">      &#125;;</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;</span><br><span class="line">Factory(<span class="string">'ConcreteFactoryOne'</span>,<span class="number">1</span>).method();</span><br><span class="line"><span class="comment">//这里没用使用new结果相同</span></span><br><span class="line"><span class="comment">//输出：Product 1, data 1</span></span><br><span class="line"><span class="keyword">new</span> Factory(<span class="string">'ConcreteFactoryTwo'</span>,<span class="number">2</span>).method();</span><br><span class="line"><span class="comment">//输出：Product 2, data 2</span></span><br></pre></td></tr></table></figure>
+
+<p>第二个例子中，Factory主要是起一个接口的作用，真正实例化的操作在其子类之中。如果直接使用<code>switch-case</code>一类的流程判断也可以完成接口逻辑，但添加新子类后也需对接口进行修改。因此使用上例中的方法可以减少改动的位置。</p>
+<p>由于两个子类的构造函数保存在<code>Factory.prototype</code>中，所以必须先对父类<code>Factory</code>进行实例化才能调用这两个函数再实例化子类。开头使用的安全模式是为了确保父类被成功实例化，防止因在使用过程中忘记使用<code>new</code>(如例中所示) 而导致的错误。把构造函数保存在<code>Factory.prototype</code>中而不直接在<code>Factory</code>中是因为安全模式可能会实例化多个父类对象Factory，避免同一个函数在多次实例化过程对内存的浪费。这两个问题其实是相互作用相互影响的。</p>
+<h1 id="抽象工厂"><a href="#抽象工厂" class="headerlink" title="抽象工厂"></a>抽象工厂</h1><p>抽象工厂与上面的两种方法不同，它并不直接生成实例而是生成簇。抽象工厂实际上是一个实现子类继承父类的方法，在这个方法中需要传递子类以及要继承父类的名称。并且在抽象工厂方法中增加了一次对抽象类存在性的一次判断，如果抽象类存在，则将子类通过寄生式继承父类的方法。过程如下：</p>
+<div class="mermaid">
+  classDiagram
+    Client -- AbstractFactory
+    AbstractFactory <-- ConcreteFactoryOne
+    AbstractFactory <-- ConcreteFactoryTwo
+    ConcreteFactoryOne <-- ProductOneA
+    ConcreteFactoryOne <-- ProductOneB
+    ConcreteFactoryTwo <-- ProductTwoA
+    ConcreteFactoryTwo <-- ProductTwoB
+    ProductOneA -- AbstractProductA
+    ProductTwoA -- AbstractProductA
+    ProductOneB -- AbstractProductB
+    ProductTwoB -- AbstractProductB
+    class ConcreteFactoryOne{
+      + createProductOneA()
+      + createProductOneB()
+    }
+    class ConcreteFactoryTwo{
+      + createProductTwoA()
+      + createProductTwoB()
+    }
+    class ProductOneA{
+      data
+      method()
+    }
+    class ProductOneB{
+      data
+      method()
+    }
+    class ProductTwoA{
+      data
+      method()
+    }
+    class ProductTwoB{
+      data
+      method()
+    }
+</div>
+
+<p>在JavaScript中，由于无法像其他传统面向对象的语言中那样使用abstract声明抽象类，需要通过在类的方法中抛出错误来对抽象类进行模拟。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//抽象工厂方法</span></span><br><span class="line"><span class="keyword">var</span> AbstractFactory = <span class="function"><span class="keyword">function</span>(<span class="params">subType, superType</span>) </span>&#123;</span><br><span class="line">  <span class="comment">//判断抽象工厂中是否有该抽象类</span></span><br><span class="line">  <span class="keyword">if</span>(<span class="keyword">typeof</span> AbstractFactory[superType] === <span class="string">'function'</span>) &#123;</span><br><span class="line">    <span class="comment">//缓存类</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">F</span>(<span class="params"></span>) </span>&#123;&#125;;</span><br><span class="line">    <span class="comment">//继承父类属性和方法</span></span><br><span class="line">    F.prototype = <span class="keyword">new</span> AbstractFactory[superType] ();</span><br><span class="line">    <span class="comment">//将子类的constructor指向子类</span></span><br><span class="line">    subType.constructor = subType;</span><br><span class="line">    <span class="comment">//子类原型继承父类</span></span><br><span class="line">    subType.prototype = <span class="keyword">new</span> F();</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">'抽象类不存在!'</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//抽象类Product A</span></span><br><span class="line">AbstractFactory.AbstractProductA = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.type = <span class="string">'ProductA'</span>;</span><br><span class="line">&#125;</span><br><span class="line">AbstractFactory.AbstractProductA.prototype = &#123;</span><br><span class="line">  getData: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">'抽象方法不能调用'</span>);</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//抽象类Product B</span></span><br><span class="line">AbstractFactory.AbstractProductB = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.type = <span class="string">'ProductB'</span>;</span><br><span class="line">&#125;</span><br><span class="line">AbstractFactory.AbstractProductB.prototype = &#123;</span><br><span class="line">  getData: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">'抽象方法不能调用'</span>);</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//抽象工厂实现对抽象类的继承</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">ConcreteFactoryOne</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.data = data;</span><br><span class="line">&#125;</span><br><span class="line">AbstractFactory(ConcreteFactoryOne, <span class="string">'AbstractProductA'</span>);</span><br><span class="line"><span class="comment">//子类中重写抽象方法</span></span><br><span class="line">ConcreteFactoryOne.prototype.getData = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"Data: "</span>+ <span class="keyword">this</span>.data + <span class="string">" Type: "</span> + <span class="keyword">this</span>.type);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">ConcreteFactoryTwo</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.data = data;</span><br><span class="line">&#125;</span><br><span class="line">AbstractFactory(ConcreteFactoryTwo, <span class="string">'AbstractProductB'</span>);</span><br><span class="line">ConcreteFactoryTwo.prototype.getData = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"Data: "</span>+ <span class="keyword">this</span>.data + <span class="string">" Type: "</span> + <span class="keyword">this</span>.type);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//测试</span></span><br><span class="line"><span class="keyword">var</span> productOneA = <span class="keyword">new</span> ConcreteFactoryOne(<span class="string">"I am productOneA"</span>);</span><br><span class="line"><span class="keyword">var</span> productTwoB = <span class="keyword">new</span> ConcreteFactoryTwo(<span class="string">"I am productTwoB"</span>);</span><br><span class="line">productOneA.getData();</span><br><span class="line"><span class="comment">//输出 Data: I am productOneA Type: ProductA</span></span><br><span class="line">productTwoB.getData();</span><br><span class="line"><span class="comment">//输出 Data: I am productTwoB Type: ProductB</span></span><br></pre></td></tr></table></figure>
+<p>在这个例子中AbstractFactory并不直接创建实例，而是通过类的继承进行类簇的管理。抽象工厂模式的优点在于具体产品在应用层代码隔离，无须关心创建细节，但同时也增加了系统的抽象性和理解难度。通常使用场景是：</p>
+<ul>
+<li>创建的对象和使用它们的系统是分离的</li>
+<li>需要创建的对象是家族式的</li>
+<li>创建的众多对象是在一起使用的</li>
+<li>具体创建对象的类和系统解耦</li>
+</ul>
+<h1 id="工厂模式与构造函数"><a href="#工厂模式与构造函数" class="headerlink" title="工厂模式与构造函数"></a>工厂模式与构造函数</h1><p><a href="#简单工厂">简单工厂</a>一节中的例子用构造函数可以写成：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Product</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.data = data;</span><br><span class="line">&#125;;</span><br><span class="line">Product.prototype.method = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"I am Product "</span>+<span class="keyword">this</span>.data);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//调用</span></span><br><span class="line"><span class="keyword">var</span> product1 = <span class="keyword">new</span> Product(<span class="number">1</span>);</span><br><span class="line"><span class="keyword">var</span> product2 = <span class="keyword">new</span> Product(<span class="number">2</span>);</span><br><span class="line">product1.method()</span><br><span class="line"><span class="comment">//I am Product 1</span></span><br><span class="line">product2.method()</span><br><span class="line"><span class="comment">//I am Product 2</span></span><br></pre></td></tr></table></figure>
+
+<p>工厂模式与构造函数都可以完成对象的创建，主要区别有以下几点：</p>
+<ul>
+<li>构造函数需使用<code>new</code>来创建对象，工厂模式可以直接调用函数(使用<code>new</code>的话结果一样都是返回对象但与工厂模式的思想不符)</li>
+<li>构造函数创造的对象有固定的父类(如上面的例子中执行<code>product1 instanceof Product</code>结果为true)，工厂模式没有。</li>
+<li>构造函数可以定义原型，多个对象可以共用同一个原型函数减少内存开销。简单工厂不行(工厂方法的方式就可以做到)。</li>
+<li>构造函数中this指的是当前类，工厂函数中this指全局对象window(严格模式下为undefined)。</li>
+</ul>
+<h1 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h1><p>本来是计划写一个系列的设计模式介绍，可最近心情不太好，光是这一篇就拖了好几天，硬生生地从六月拖到了七月。下一篇应该会介绍单例模式，就是不知道什么时候能完成了，最近心烦意乱，先冷静一下思考下人生吧。</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+      </tags>
   </entry>
   <entry>
     <title>Meadow主题使用说明</title>
@@ -1690,132 +1860,25 @@ CEF即Chromium Embedded Framework，Steam使用CEF作为其内置的Web浏览器
       </categories>
   </entry>
   <entry>
-    <title>JavaScript设计模式简介之工厂模式</title>
-    <url>/t-43842/</url>
-    <content><![CDATA[<p>工厂模式是JavaScript中最常用的一种用于创建对象的设计模式，其核心就是将逻辑封装在一个函数中不暴露创建对象的具体逻辑。工厂模式适用于对象的构建十分复杂、需要依赖具体环境创建不同实例、处理大量具有相同属性的小对象等情况，但滥用工厂模式也给代码增加不必要的复杂度，使用时需要谨慎。根据抽象程度的不同，工厂模式又可以分为简单工厂、工厂方法和抽象工厂三种。</p>
+    <title>Ubuntu下网易云问题修复</title>
+    <url>/t-10915/</url>
+    <content><![CDATA[<p><strong>目前官网已更新1.2.0版，此问题已修复</strong><br>Linux版网易云在Ubuntu 17.10下存在缺少依赖、打开后无法显示界面的问题，在此整理了一下问题出现的原因及几种解决方式。 </p>
 <a id="more"></a>
 
-<h1 id="简单工厂"><a href="#简单工厂" class="headerlink" title="简单工厂"></a>简单工厂</h1><p>简单工厂模式又称为静态工厂模式，是由一个工厂函数来实例化多个产品对象，主要用来创建同一类对象。其过程图如下：</p>
-<div class="mermaid">
-  classDiagram
-    Client -- Factory
-    Factory <-- productOne
-    Factory <-- productTwo
-    class Factory{
-      + createProduct()
-    }
-    class productOne{
-      data
-      method()
-    }
-    class productTwo{
-      data
-      method()
-    }
-</div>
-
-<p>下面举一个简单的例子：</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> factory=<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> product = <span class="keyword">new</span> <span class="built_in">Object</span>;</span><br><span class="line">    product.data = data;</span><br><span class="line">    product.method = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">"I am Product "</span>+<span class="keyword">this</span>.data);</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">return</span> product</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//调用</span></span><br><span class="line"><span class="keyword">var</span> product1 = factory(<span class="number">1</span>);</span><br><span class="line"><span class="keyword">var</span> product2 = <span class="keyword">new</span> factory(<span class="number">2</span>);</span><br><span class="line"><span class="comment">//这里使用了new结果相同</span></span><br><span class="line">product1.method()</span><br><span class="line"><span class="comment">//输出：I am Product 1</span></span><br><span class="line">product2.method()</span><br><span class="line"><span class="comment">//输出：I am Product 2</span></span><br></pre></td></tr></table></figure>
-
-<p>其中<code>Factory</code>就是一个简单工厂，通过传入不同的参数生成许多同类的对象。对于这个例子而言，由于<code>Factory</code>的返回值是一个对象，所以在使用时无论是否作为构造函数调用(即是否加new)运行结果均相同，都是生成的对象。</p>
-<p>值得一提的是，上面的例子中的对象<code>productOne</code>与<code>productTwo</code>在内存中均含一个method方法，二者并不共用，这会导致一定程度的浪费。详见<a href="#工厂模式与构造函数">工厂模式与构造函数</a>一节</p>
-<h1 id="工厂方法"><a href="#工厂方法" class="headerlink" title="工厂方法"></a>工厂方法</h1><p>对于生成不同种类的对象，上面介绍的简单工厂无法做到，可以使用下面的工厂方法。工厂方法模式与上面的不同在于将实际创建对象的工作推迟到子类中，使得核心类就变成了抽象类，只作为接口来调用子类的构造函数。但是由于在JavaScript中很难像传统面向对象那样去实现创建抽象类。所以参考其核心思想可以将工厂方法看作是一个实例化对象的工厂类。具体过程如下：</p>
-<div class="mermaid">
-  classDiagram
-    Client -- Factory
-    Factory <-- ConcreteFactoryOne
-    Factory <-- ConcreteFactoryTwo
-    ConcreteFactoryOne <-- ProductOne
-    ConcreteFactoryTwo <-- ProductTwo
-    class ConcreteFactoryOne{
-      + createProductOne()
-    }
-    class ConcreteFactoryTwo{
-      + createProductTwo()
-    }
-    class ProductOne{
-      data
-      method()
-    }
-    class ProductTwo{
-      data
-      method()
-    }
-</div>
-
-<p>对上面的例子进行改写，使用Factory同时产生两种对象。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//使用安全模式创建工厂方法函数</span></span><br><span class="line"><span class="keyword">var</span> Factory = <span class="function"><span class="keyword">function</span>(<span class="params">child,data</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(<span class="keyword">this</span> <span class="keyword">instanceof</span> Factory) &#123;</span><br><span class="line">      <span class="keyword">var</span> product = <span class="keyword">new</span> <span class="keyword">this</span>[child](data);</span><br><span class="line">      <span class="keyword">return</span> product;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">new</span> Factory(child,data);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//设置子类构造函数</span></span><br><span class="line">Factory.prototype = &#123;</span><br><span class="line">    ConcreteFactoryOne: <span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">this</span>.data = data;</span><br><span class="line">      <span class="keyword">this</span>.method = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"Product 1, data "</span> + <span class="keyword">this</span>.data)</span><br><span class="line">      &#125;;</span><br><span class="line">    &#125;,</span><br><span class="line">    ConcreteFactoryTwo: <span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">this</span>.data = data,</span><br><span class="line">      <span class="keyword">this</span>.method = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"Product 2, data "</span> + <span class="keyword">this</span>.data)</span><br><span class="line">      &#125;;</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;</span><br><span class="line">Factory(<span class="string">'ConcreteFactoryOne'</span>,<span class="number">1</span>).method();</span><br><span class="line"><span class="comment">//这里没用使用new结果相同</span></span><br><span class="line"><span class="comment">//输出：Product 1, data 1</span></span><br><span class="line"><span class="keyword">new</span> Factory(<span class="string">'ConcreteFactoryTwo'</span>,<span class="number">2</span>).method();</span><br><span class="line"><span class="comment">//输出：Product 2, data 2</span></span><br></pre></td></tr></table></figure>
-
-<p>第二个例子中，Factory主要是起一个接口的作用，真正实例化的操作在其子类之中。如果直接使用<code>switch-case</code>一类的流程判断也可以完成接口逻辑，但添加新子类后也需对接口进行修改。因此使用上例中的方法可以减少改动的位置。</p>
-<p>由于两个子类的构造函数保存在<code>Factory.prototype</code>中，所以必须先对父类<code>Factory</code>进行实例化才能调用这两个函数再实例化子类。开头使用的安全模式是为了确保父类被成功实例化，防止因在使用过程中忘记使用<code>new</code>(如例中所示) 而导致的错误。把构造函数保存在<code>Factory.prototype</code>中而不直接在<code>Factory</code>中是因为安全模式可能会实例化多个父类对象Factory，避免同一个函数在多次实例化过程对内存的浪费。这两个问题其实是相互作用相互影响的。</p>
-<h1 id="抽象工厂"><a href="#抽象工厂" class="headerlink" title="抽象工厂"></a>抽象工厂</h1><p>抽象工厂与上面的两种方法不同，它并不直接生成实例而是生成簇。抽象工厂实际上是一个实现子类继承父类的方法，在这个方法中需要传递子类以及要继承父类的名称。并且在抽象工厂方法中增加了一次对抽象类存在性的一次判断，如果抽象类存在，则将子类通过寄生式继承父类的方法。过程如下：</p>
-<div class="mermaid">
-  classDiagram
-    Client -- AbstractFactory
-    AbstractFactory <-- ConcreteFactoryOne
-    AbstractFactory <-- ConcreteFactoryTwo
-    ConcreteFactoryOne <-- ProductOneA
-    ConcreteFactoryOne <-- ProductOneB
-    ConcreteFactoryTwo <-- ProductTwoA
-    ConcreteFactoryTwo <-- ProductTwoB
-    ProductOneA -- AbstractProductA
-    ProductTwoA -- AbstractProductA
-    ProductOneB -- AbstractProductB
-    ProductTwoB -- AbstractProductB
-    class ConcreteFactoryOne{
-      + createProductOneA()
-      + createProductOneB()
-    }
-    class ConcreteFactoryTwo{
-      + createProductTwoA()
-      + createProductTwoB()
-    }
-    class ProductOneA{
-      data
-      method()
-    }
-    class ProductOneB{
-      data
-      method()
-    }
-    class ProductTwoA{
-      data
-      method()
-    }
-    class ProductTwoB{
-      data
-      method()
-    }
-</div>
-
-<p>在JavaScript中，由于无法像其他传统面向对象的语言中那样使用abstract声明抽象类，需要通过在类的方法中抛出错误来对抽象类进行模拟。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//抽象工厂方法</span></span><br><span class="line"><span class="keyword">var</span> AbstractFactory = <span class="function"><span class="keyword">function</span>(<span class="params">subType, superType</span>) </span>&#123;</span><br><span class="line">  <span class="comment">//判断抽象工厂中是否有该抽象类</span></span><br><span class="line">  <span class="keyword">if</span>(<span class="keyword">typeof</span> AbstractFactory[superType] === <span class="string">'function'</span>) &#123;</span><br><span class="line">    <span class="comment">//缓存类</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">F</span>(<span class="params"></span>) </span>&#123;&#125;;</span><br><span class="line">    <span class="comment">//继承父类属性和方法</span></span><br><span class="line">    F.prototype = <span class="keyword">new</span> AbstractFactory[superType] ();</span><br><span class="line">    <span class="comment">//将子类的constructor指向子类</span></span><br><span class="line">    subType.constructor = subType;</span><br><span class="line">    <span class="comment">//子类原型继承父类</span></span><br><span class="line">    subType.prototype = <span class="keyword">new</span> F();</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">'抽象类不存在!'</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//抽象类Product A</span></span><br><span class="line">AbstractFactory.AbstractProductA = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.type = <span class="string">'ProductA'</span>;</span><br><span class="line">&#125;</span><br><span class="line">AbstractFactory.AbstractProductA.prototype = &#123;</span><br><span class="line">  getData: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">'抽象方法不能调用'</span>);</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//抽象类Product B</span></span><br><span class="line">AbstractFactory.AbstractProductB = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.type = <span class="string">'ProductB'</span>;</span><br><span class="line">&#125;</span><br><span class="line">AbstractFactory.AbstractProductB.prototype = &#123;</span><br><span class="line">  getData: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">'抽象方法不能调用'</span>);</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//抽象工厂实现对抽象类的继承</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">ConcreteFactoryOne</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.data = data;</span><br><span class="line">&#125;</span><br><span class="line">AbstractFactory(ConcreteFactoryOne, <span class="string">'AbstractProductA'</span>);</span><br><span class="line"><span class="comment">//子类中重写抽象方法</span></span><br><span class="line">ConcreteFactoryOne.prototype.getData = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"Data: "</span>+ <span class="keyword">this</span>.data + <span class="string">" Type: "</span> + <span class="keyword">this</span>.type);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">ConcreteFactoryTwo</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.data = data;</span><br><span class="line">&#125;</span><br><span class="line">AbstractFactory(ConcreteFactoryTwo, <span class="string">'AbstractProductB'</span>);</span><br><span class="line">ConcreteFactoryTwo.prototype.getData = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"Data: "</span>+ <span class="keyword">this</span>.data + <span class="string">" Type: "</span> + <span class="keyword">this</span>.type);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//测试</span></span><br><span class="line"><span class="keyword">var</span> productOneA = <span class="keyword">new</span> ConcreteFactoryOne(<span class="string">"I am productOneA"</span>);</span><br><span class="line"><span class="keyword">var</span> productTwoB = <span class="keyword">new</span> ConcreteFactoryTwo(<span class="string">"I am productTwoB"</span>);</span><br><span class="line">productOneA.getData();</span><br><span class="line"><span class="comment">//输出 Data: I am productOneA Type: ProductA</span></span><br><span class="line">productTwoB.getData();</span><br><span class="line"><span class="comment">//输出 Data: I am productTwoB Type: ProductB</span></span><br></pre></td></tr></table></figure>
-<p>在这个例子中AbstractFactory并不直接创建实例，而是通过类的继承进行类簇的管理。抽象工厂模式的优点在于具体产品在应用层代码隔离，无须关心创建细节，但同时也增加了系统的抽象性和理解难度。通常使用场景是：</p>
-<ul>
-<li>创建的对象和使用它们的系统是分离的</li>
-<li>需要创建的对象是家族式的</li>
-<li>创建的众多对象是在一起使用的</li>
-<li>具体创建对象的类和系统解耦</li>
+<h1 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h1><p>运行时报错的原因是最新的Ubuntu中图形库<code>libqt5libqgtk2</code>被替换为了<code>qt5-style-plugins</code>，而在使用缺省的QT5库时因为缺少<code>/tmp</code>目录下的权限导致无法程序打开。所以也引出了最简单的方法，即在终端执行<code>sudo netease-cloud-music</code>。</p>
+<h1 id="方法1-重新打包依赖"><a href="#方法1-重新打包依赖" class="headerlink" title="方法1-重新打包依赖"></a>方法1-重新打包依赖</h1><p>对deb文件进行解包，替换<code>libqt5libqgtk2</code>依赖为<code>qt5-style-plugins</code>，最后重新进行打包，以下是重新打包好的deb</p>
+<p>修复依赖版安装包: <a href="http://mirrors.ustc.edu.cn/debiancn/pool/main/n/netease-cloud-music/" target="_blank" rel="noopener">http://mirrors.ustc.edu.cn/debiancn/pool/main/n/netease-cloud-music/</a></p>
+<h1 id="方法2-修改桌面图标"><a href="#方法2-修改桌面图标" class="headerlink" title="方法2-修改桌面图标"></a>方法2-修改桌面图标</h1><p>修改<code>/usr/share/applications/netease-cloud-music.desktop</code>，将<code>Exec=netease-cloud-music %U</code>一行修改为<code>Exec=netease-cloud-music --no-sandbox %U</code></p>
+<h1 id="方法3-危险"><a href="#方法3-危险" class="headerlink" title="方法3-危险"></a>方法3-危险</h1><ul>
+<li>修改<code>/etc/sudoers</code>，添加<code>用户名 ALL = NOPASSWD: /usr/bin/netease-cloud-music</code>  </li>
+<li>修改<code>/usr/share/applications/netease-cloud-music.desktop</code>，将<code>Exec=netease-cloud-music %U</code>一行修改为<code>Exec=sudo netease-cloud-music %U</code></li>
 </ul>
-<h1 id="工厂模式与构造函数"><a href="#工厂模式与构造函数" class="headerlink" title="工厂模式与构造函数"></a>工厂模式与构造函数</h1><p><a href="#简单工厂">简单工厂</a>一节中的例子用构造函数可以写成：</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Product</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.data = data;</span><br><span class="line">&#125;;</span><br><span class="line">Product.prototype.method = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"I am Product "</span>+<span class="keyword">this</span>.data);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//调用</span></span><br><span class="line"><span class="keyword">var</span> product1 = <span class="keyword">new</span> Product(<span class="number">1</span>);</span><br><span class="line"><span class="keyword">var</span> product2 = <span class="keyword">new</span> Product(<span class="number">2</span>);</span><br><span class="line">product1.method()</span><br><span class="line"><span class="comment">//I am Product 1</span></span><br><span class="line">product2.method()</span><br><span class="line"><span class="comment">//I am Product 2</span></span><br></pre></td></tr></table></figure>
-
-<p>工厂模式与构造函数都可以完成对象的创建，主要区别有以下几点：</p>
-<ul>
-<li>构造函数需使用<code>new</code>来创建对象，工厂模式可以直接调用函数(使用<code>new</code>的话结果一样都是返回对象但与工厂模式的思想不符)</li>
-<li>构造函数创造的对象有固定的父类(如上面的例子中执行<code>product1 instanceof Product</code>结果为true)，工厂模式没有。</li>
-<li>构造函数可以定义原型，多个对象可以共用同一个原型函数减少内存开销。简单工厂不行(工厂方法的方式就可以做到)。</li>
-<li>构造函数中this指的是当前类，工厂函数中this指全局对象window(严格模式下为undefined)。</li>
-</ul>
-<h1 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h1><p>本来是计划写一个系列的设计模式介绍，可最近心情不太好，光是这一篇就拖了好几天，硬生生地从六月拖到了七月。下一篇应该会介绍单例模式，就是不知道什么时候能完成了，最近心烦意乱，先冷静一下思考下人生吧。</p>
+<h1 id="玄学方法"><a href="#玄学方法" class="headerlink" title="玄学方法"></a>玄学方法</h1><p>点击电源按钮，在弹出关机/睡眠/重启的选项时网易云音乐界面会弹出，关闭关机对话框即可</p>
 ]]></content>
       <categories>
         <category>技术</category>
-        <category>Web</category>
+        <category>Linux</category>
       </categories>
-      <tags>
-        <tag>前端</tag>
-      </tags>
   </entry>
   <entry>
     <title>解决Android-x86无法进入图形界面的问题</title>
@@ -1913,46 +1976,6 @@ Ubuntu默认未开启Rewrite支持需手动开启，在此只是简单介绍，�
       </categories>
   </entry>
   <entry>
-    <title>Ubuntu下网易云问题修复</title>
-    <url>/t-10915/</url>
-    <content><![CDATA[<p><strong>目前官网已更新1.2.0版，此问题已修复</strong><br>Linux版网易云在Ubuntu 17.10下存在缺少依赖、打开后无法显示界面的问题，在此整理了一下问题出现的原因及几种解决方式。 </p>
-<a id="more"></a>
-
-<h1 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h1><p>运行时报错的原因是最新的Ubuntu中图形库<code>libqt5libqgtk2</code>被替换为了<code>qt5-style-plugins</code>，而在使用缺省的QT5库时因为缺少<code>/tmp</code>目录下的权限导致无法程序打开。所以也引出了最简单的方法，即在终端执行<code>sudo netease-cloud-music</code>。</p>
-<h1 id="方法1-重新打包依赖"><a href="#方法1-重新打包依赖" class="headerlink" title="方法1-重新打包依赖"></a>方法1-重新打包依赖</h1><p>对deb文件进行解包，替换<code>libqt5libqgtk2</code>依赖为<code>qt5-style-plugins</code>，最后重新进行打包，以下是重新打包好的deb</p>
-<p>修复依赖版安装包: <a href="http://mirrors.ustc.edu.cn/debiancn/pool/main/n/netease-cloud-music/" target="_blank" rel="noopener">http://mirrors.ustc.edu.cn/debiancn/pool/main/n/netease-cloud-music/</a></p>
-<h1 id="方法2-修改桌面图标"><a href="#方法2-修改桌面图标" class="headerlink" title="方法2-修改桌面图标"></a>方法2-修改桌面图标</h1><p>修改<code>/usr/share/applications/netease-cloud-music.desktop</code>，将<code>Exec=netease-cloud-music %U</code>一行修改为<code>Exec=netease-cloud-music --no-sandbox %U</code></p>
-<h1 id="方法3-危险"><a href="#方法3-危险" class="headerlink" title="方法3-危险"></a>方法3-危险</h1><ul>
-<li>修改<code>/etc/sudoers</code>，添加<code>用户名 ALL = NOPASSWD: /usr/bin/netease-cloud-music</code>  </li>
-<li>修改<code>/usr/share/applications/netease-cloud-music.desktop</code>，将<code>Exec=netease-cloud-music %U</code>一行修改为<code>Exec=sudo netease-cloud-music %U</code></li>
-</ul>
-<h1 id="玄学方法"><a href="#玄学方法" class="headerlink" title="玄学方法"></a>玄学方法</h1><p>点击电源按钮，在弹出关机/睡眠/重启的选项时网易云音乐界面会弹出，关闭关机对话框即可</p>
-]]></content>
-      <categories>
-        <category>技术</category>
-        <category>Linux</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Windows及Office的KMS激活</title>
-    <url>/t-15843/</url>
-    <content><![CDATA[<hr>
-<h2 id="更新："><a href="#更新：" class="headerlink" title="更新："></a><strong>更新：</strong></h2><h2 id="2019-08"><a href="#2019-08" class="headerlink" title="2019.08"></a>2019.08</h2><p><strong>暂停原自建KMS服务器，脚本改用03k服务器激活</strong></p>
-<h2 id="2019-05"><a href="#2019-05" class="headerlink" title="2019.05"></a>2019.05</h2><p><strong>新加Visio激活功能</strong></p>
-<h2 id="2018-07"><a href="#2018-07" class="headerlink" title="2018.07"></a>2018.07</h2><p><strong>新加Office16激活功能</strong></p>
-<hr>
-<p>脚本下载地址：<a href="../download/KMS.zip">本站下载</a>，<a href="https://github.com/kb1000fx/KMS-Client/" target="_blank" rel="noopener">Github下载</a></p>
-<a id="more"></a>
-<h1 id="Window激活"><a href="#Window激活" class="headerlink" title="Window激活"></a>Window激活</h1><h2 id="卸载当前密钥"><a href="#卸载当前密钥" class="headerlink" title="卸载当前密钥"></a>卸载当前密钥</h2><pre><code>slmgr.vbs /upk</code></pre><h2 id="安装新密钥"><a href="#安装新密钥" class="headerlink" title="安装新密钥"></a>安装新密钥</h2><pre><code>slmgr /ipk [gvlk key]</code></pre><h2 id="设置服务器地址"><a href="#设置服务器地址" class="headerlink" title="设置服务器地址"></a>设置服务器地址</h2><pre><code>slmgr /skms [Your IP or Domain]</code></pre><h2 id="激活"><a href="#激活" class="headerlink" title="激活"></a>激活</h2><pre><code>slmgr /ato</code></pre><h1 id="Office激活"><a href="#Office激活" class="headerlink" title="Office激活"></a>Office激活</h1><h2 id="设置新密钥"><a href="#设置新密钥" class="headerlink" title="设置新密钥"></a>设置新密钥</h2><p>KOL版可跳过 </p>
-<pre><code>cscript ospp.vbs /inpkey: [gvlk key]</code></pre><h2 id="进入Office目录"><a href="#进入Office目录" class="headerlink" title="进入Office目录"></a>进入Office目录</h2><p>路径依情况更改。<br>32 位默认一般为 C:\Program Files (x86)\Microsoft Office\Office16<br>64 位默认一般为 C:\Program Files\Microsoft Office\Office16<br>Office16 是 Office 2016，Office15 就是 Office 2013，Office14 就是 Office 2010。 </p>
-<pre><code>cd &quot;C:\Program Files (x86)\Microsoft Office\Office16&quot;</code></pre><h2 id="设置服务器地址："><a href="#设置服务器地址：" class="headerlink" title="设置服务器地址："></a>设置服务器地址：</h2><pre><code>cscript ospp.vbs /sethst:Your IP or Domain</code></pre><h2 id="激活-1"><a href="#激活-1" class="headerlink" title="激活"></a>激活</h2><pre><code>cscript ospp.vbs /act</code></pre><h1 id="Gvlk-Key及服务器地址"><a href="#Gvlk-Key及服务器地址" class="headerlink" title="Gvlk Key及服务器地址"></a>Gvlk Key及服务器地址</h1><p>新密钥形如：xxxxx-xxxxx-xxxxx-xxxxx-xxxxx，可在以下地址寻找符合自己版本的key。<br>+ Office 2016：<a href="https://technet.microsoft.com/zh-cn/library/dn385360(v=office.16).aspx" target="_blank" rel="noopener">https://technet.microsoft.com/zh-cn/library/dn385360(v=office.16).aspx</a> + Office 2013：<a href="https://technet.microsoft.com/ZH-CN/library/dn385360.aspx" target="_blank" rel="noopener">https://technet.microsoft.com/ZH-CN/library/dn385360.aspx</a> + Office 2010：<a href="https://technet.microsoft.com/ZH-CN/library/ee624355(v=office.14).aspx" target="_blank" rel="noopener">https://technet.microsoft.com/ZH-CN/library/ee624355(v=office.14).aspx</a> + Windows：<a href="https://docs.microsoft.com/zh-cn/windows-server/get-started/kmsclientkeys" target="_blank" rel="noopener">https://docs.microsoft.com/zh-cn/windows-server/get-started/kmsclientkeys</a> 服务器地址：kms.garybear.cn 若地址失效可留言联系。</p>
-]]></content>
-      <categories>
-        <category>技术</category>
-        <category>Windows</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Windows10下Edge浏览器等UWP应用无法连接到代理服务器的解决方案</title>
     <url>/t-1358/</url>
     <content><![CDATA[<h1 id="Edge浏览器无法连接到代理服务器"><a href="#Edge浏览器无法连接到代理服务器" class="headerlink" title="Edge浏览器无法连接到代理服务器"></a>Edge浏览器无法连接到代理服务器</h1><p>Edge浏览器在全局代理模式下会出现无法连接到代理服务器的情况，除了使用PAC模式外还可以通过解除回环限制来解决。</p>
@@ -2035,6 +2058,25 @@ allow from all
       <categories>
         <category>技术</category>
         <category>Linux</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Windows及Office的KMS激活</title>
+    <url>/t-15843/</url>
+    <content><![CDATA[<hr>
+<h2 id="更新："><a href="#更新：" class="headerlink" title="更新："></a><strong>更新：</strong></h2><h2 id="2019-08"><a href="#2019-08" class="headerlink" title="2019.08"></a>2019.08</h2><p><strong>暂停原自建KMS服务器，脚本改用03k服务器激活</strong></p>
+<h2 id="2019-05"><a href="#2019-05" class="headerlink" title="2019.05"></a>2019.05</h2><p><strong>新加Visio激活功能</strong></p>
+<h2 id="2018-07"><a href="#2018-07" class="headerlink" title="2018.07"></a>2018.07</h2><p><strong>新加Office16激活功能</strong></p>
+<hr>
+<p>脚本下载地址：<a href="../download/KMS.zip">本站下载</a>，<a href="https://github.com/kb1000fx/KMS-Client/" target="_blank" rel="noopener">Github下载</a></p>
+<a id="more"></a>
+<h1 id="Window激活"><a href="#Window激活" class="headerlink" title="Window激活"></a>Window激活</h1><h2 id="卸载当前密钥"><a href="#卸载当前密钥" class="headerlink" title="卸载当前密钥"></a>卸载当前密钥</h2><pre><code>slmgr.vbs /upk</code></pre><h2 id="安装新密钥"><a href="#安装新密钥" class="headerlink" title="安装新密钥"></a>安装新密钥</h2><pre><code>slmgr /ipk [gvlk key]</code></pre><h2 id="设置服务器地址"><a href="#设置服务器地址" class="headerlink" title="设置服务器地址"></a>设置服务器地址</h2><pre><code>slmgr /skms [Your IP or Domain]</code></pre><h2 id="激活"><a href="#激活" class="headerlink" title="激活"></a>激活</h2><pre><code>slmgr /ato</code></pre><h1 id="Office激活"><a href="#Office激活" class="headerlink" title="Office激活"></a>Office激活</h1><h2 id="设置新密钥"><a href="#设置新密钥" class="headerlink" title="设置新密钥"></a>设置新密钥</h2><p>KOL版可跳过 </p>
+<pre><code>cscript ospp.vbs /inpkey: [gvlk key]</code></pre><h2 id="进入Office目录"><a href="#进入Office目录" class="headerlink" title="进入Office目录"></a>进入Office目录</h2><p>路径依情况更改。<br>32 位默认一般为 C:\Program Files (x86)\Microsoft Office\Office16<br>64 位默认一般为 C:\Program Files\Microsoft Office\Office16<br>Office16 是 Office 2016，Office15 就是 Office 2013，Office14 就是 Office 2010。 </p>
+<pre><code>cd &quot;C:\Program Files (x86)\Microsoft Office\Office16&quot;</code></pre><h2 id="设置服务器地址："><a href="#设置服务器地址：" class="headerlink" title="设置服务器地址："></a>设置服务器地址：</h2><pre><code>cscript ospp.vbs /sethst:Your IP or Domain</code></pre><h2 id="激活-1"><a href="#激活-1" class="headerlink" title="激活"></a>激活</h2><pre><code>cscript ospp.vbs /act</code></pre><h1 id="Gvlk-Key及服务器地址"><a href="#Gvlk-Key及服务器地址" class="headerlink" title="Gvlk Key及服务器地址"></a>Gvlk Key及服务器地址</h1><p>新密钥形如：xxxxx-xxxxx-xxxxx-xxxxx-xxxxx，可在以下地址寻找符合自己版本的key。<br>+ Office 2016：<a href="https://technet.microsoft.com/zh-cn/library/dn385360(v=office.16).aspx" target="_blank" rel="noopener">https://technet.microsoft.com/zh-cn/library/dn385360(v=office.16).aspx</a> + Office 2013：<a href="https://technet.microsoft.com/ZH-CN/library/dn385360.aspx" target="_blank" rel="noopener">https://technet.microsoft.com/ZH-CN/library/dn385360.aspx</a> + Office 2010：<a href="https://technet.microsoft.com/ZH-CN/library/ee624355(v=office.14).aspx" target="_blank" rel="noopener">https://technet.microsoft.com/ZH-CN/library/ee624355(v=office.14).aspx</a> + Windows：<a href="https://docs.microsoft.com/zh-cn/windows-server/get-started/kmsclientkeys" target="_blank" rel="noopener">https://docs.microsoft.com/zh-cn/windows-server/get-started/kmsclientkeys</a> 服务器地址：kms.garybear.cn 若地址失效可留言联系。</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+        <category>Windows</category>
       </categories>
   </entry>
   <entry>
@@ -2157,100 +2199,6 @@ allow from all
       </categories>
   </entry>
   <entry>
-    <title>Ubuntu下系统及应用的代理设置</title>
-    <url>/t-47161/</url>
-    <content><![CDATA[<h1 id="后端设置"><a href="#后端设置" class="headerlink" title="后端设置"></a>后端设置</h1><h2 id="安装ss-libev"><a href="#安装ss-libev" class="headerlink" title="安装ss-libev"></a>安装ss-libev</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt install shadowsocks-libev</span><br></pre></td></tr></table></figure>
-
-<p>对于14.04和16.04需从PPA安装</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get install software-properties-common -y</span><br><span class="line">sudo add-apt-repository ppa:max-c-lv/shadowsocks-libev -y</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<h2 id="配置与启动"><a href="#配置与启动" class="headerlink" title="配置与启动"></a>配置与启动</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 启动</span></span><br><span class="line">sudo ss-local -c &lt;config json path&gt;  start</span><br><span class="line"><span class="comment"># 停止</span></span><br><span class="line">sudo ss-local -c &lt;config json path&gt;  stop</span><br><span class="line"><span class="comment"># 重启</span></span><br><span class="line">sudo ss-local -c &lt;config json path&gt;  restart</span><br></pre></td></tr></table></figure>
-
-<p>可以加入服务自动启动或是用screen手动启动</p>
-<h1 id="Chrome浏览器代理设置"><a href="#Chrome浏览器代理设置" class="headerlink" title="Chrome浏览器代理设置"></a>Chrome浏览器代理设置</h1><p>打开开发者模式，使用<code>crx</code>文件安装<code>SwtichyOmega</code>插件。</p>
-<p><code>SwtichyOmega</code>插件地址：<a href="https://github.com/FelisCatus/SwitchyOmega/releases" target="_blank" rel="noopener">Github release</a> ； <a href="../download/SwitchyOmega_Chromium.crx">本站下载</a></p>
-<h1 id="git代理设置"><a href="#git代理设置" class="headerlink" title="git代理设置"></a>git代理设置</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#设置代理</span></span><br><span class="line">git config --global http.proxy <span class="string">'socks5://127.0.0.1:1080'</span> </span><br><span class="line">git config --global https.proxy <span class="string">'socks5://127.0.0.1:1080'</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#删除代理</span></span><br><span class="line">git config --global --<span class="built_in">unset</span> http.proxy</span><br><span class="line">git config --global --<span class="built_in">unset</span> https.proxy</span><br></pre></td></tr></table></figure>
-
-<h1 id="npm代理设置方式"><a href="#npm代理设置方式" class="headerlink" title="npm代理设置方式"></a>npm代理设置方式</h1><p>设置代理</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> proxy socks5://127.0.0.1:1080</span><br><span class="line">npm config <span class="built_in">set</span> https-proxy socks5://127.0.0.1:1080</span><br></pre></td></tr></table></figure>
-
-<p>删除代理</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config delete proxy</span><br><span class="line">npm config delete https-proxy</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>技术</category>
-        <category>Linux</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>再见，2019</title>
-    <url>/t-33718/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="18f5b2bfaf30635979b54eb917f742a88cc6c020ac9ed22f83301f49b0435c3b">8a96d2fbfb40177628686d330ad8f8979e002f3e8d424251db7964ff61564b3c4f9faa556920076ffda299c491bc94136c020b2f04bf915ef75bfae45adea33a7028cb0372de586a13613bd3d84d40460f51155e15e75d030864ee900c51c4a22ce822c97e14163c88ccb166051b9ea12240cc5dc2114dd4abb3722ba2bcb6f6b4744af8251d3a960b0dccd367827d82f90f7d5135b05e659a61d5aaa59a95e91aee9a578a8f9e1382fcc7fea6a8b410ec1f8391c492e2b928c85afaf036b93f8aa51fc51c6c614fc00d9b9e07414fe81dae603c1686327251f32ae85871322e618eb7251c49006217266db0175ed5727d3c4bc6eacf40e484590ea26e64017ecba4962e37a19580a23ed29f8ce53c7055bdf28baa62140446137585cc1a34f5be6ea4457be4964d81bb66e47c1185edab4c139ffd56f06ff8174bd6bdc3e9afde26d27611e7aa012b43ae9e652fdff5ca2933d092f00672d5fcd5419b1290d035fa8f2b2503cf67e570d3ef7df14f72870f4fe931cdda87a6275ad13fdd9272db41291c2cf750d8e67d6771403f015745e2d31594a995d11bac618bf62a669d5b1840d916b877fcd3380e61bbecb01328491ef0796351d23a9d87d6acdaa6099bb3d37b2cdc1806084cd207e98237182e6aeed83e3a9babb82cf03ca20d7b329e1c7bb1a44bdb59722a7885e172b4ee8ace270f94c4aef20ccd37405b446590818ab59a471cca8185812740e269e8ebcc9be3988635d516c9b6820a3fe6a600f46f6b9d3235b7a6b4661539298920df2152b6266d00aa201bbe6737d5b855809455cb9d00982bbb0ad8d962227e42a331af73f557ac89f64be0fe9c21dbbc012d8e93dc6fe8012fa07e822ff70797dc17a77b5e3693ecf3f17fe523b03a41d5c4bd9ff3a3db39f842570cad15bd77216e6d886b94f0b72d27ab2bf644b6db9a82991bf764114cd25b2b6993b95aec39f6624eaac85dc46ca02355a7cbc02ac6516f7ce4ebedce52e93e340e6aa59d40140db8e5e5e481ba5fa3721f313e92c87e4e4714681e178d894071af3ac1cc676da8bdb485d24ffd82cd1efb4b40dc57c54dc164f1d42cffbb636fd0111359b665425eb91e72450e27b64d6bea3c6b38e8b4580fd07780bd1342b6268faaf030d55b3e327e372c56b61d2e13f3fcd3305644ee1865b3f1421d8f1f31a0e9f0d68c857ed6f3852becef816da771f481dffbc62c189602de13ae56fe566e0846dc3216ae4c04d6a6c38725e25f32c5b2fec4cf0f80a39fefdae5f0e3cd2be30416f30a1585a746e55d81d919f96ee6aff4a3c59c082e924673870f7aa3f7532de2599e0174b07be640d91b51e6281b3d025cc2904fdcb086430c1cbee1b4326306aa525d939bb058af05199263d1b8a7967d9e70467894da2226b58fd8442ce006e136abfca797f6c8099fae2e95e4c18d346553855769d2b16436fc4dcb1ff07928183eb2d09d2f0335ca576f9d849365552203c25e25cdc74b56b37cc8c7147d4631d4ca4793832a113856aec3798749</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入密码</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-      <categories>
-        <category>碎碎念</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>删除EFI分区</title>
-    <url>/t-57950/</url>
-    <content><![CDATA[<p>管理员身份运行cmd</p>
-<figure class="highlight ebnf"><table><tr><td class="code"><pre><span class="line"><span class="attribute">diskpart</span></span><br></pre></td></tr></table></figure>
-<p>在 <code>DISKPART&gt;</code> 提示符下</p>
-<a id="more"></a>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">list disk</span><br><span class="line"><span class="keyword">select</span> disk <span class="number">0</span>           <span class="comment">#选择磁盘</span></span><br><span class="line"><span class="keyword">list</span> <span class="keyword">partition</span></span><br><span class="line"><span class="keyword">select</span> <span class="keyword">partition</span> <span class="number">2</span>      <span class="comment">#efi分区序号，类型为系统</span></span><br><span class="line">assign letter=p</span><br></pre></td></tr></table></figure>
-<p>以管理员身份再运行cmd</p>
-<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">P</span>:<span class="string"></span></span><br><span class="line"><span class="attr">cd</span> <span class="string">EFI</span></span><br><span class="line"><span class="attr">rmdir</span> <span class="string">/s/q Ubuntu</span></span><br></pre></td></tr></table></figure>
-<p>或是以管理员身份执行程序(如记事本)，在打开界面切到对应位置删除<br>最后在 <code>DISKPART&gt;</code> 提示符下移除盘符</p>
-<figure class="highlight basic"><table><tr><td class="code"><pre><span class="line"><span class="comment">remove letter=p</span></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>技术</category>
-        <category>Windows</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>华硕路由器自定义hosts方法</title>
-    <url>/t-48402/</url>
-    <content><![CDATA[<h1 id="开启SSH和JFFS分区"><a href="#开启SSH和JFFS分区" class="headerlink" title="开启SSH和JFFS分区"></a>开启SSH和JFFS分区</h1><h2 id="官方固件"><a href="#官方固件" class="headerlink" title="官方固件"></a>官方固件</h2><p>SSH可以在系统设置里找到，建议选择LAN only一项。然后就可以使用putty等软件登录到路由器，用户名和密码与路由器登陆的用户名密码相同。</p>
-<p>使用SSH登录到路由器，输入以下命令开启JFFS分区</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nvram <span class="built_in">set</span> jffs2_on=1</span><br><span class="line">nvram <span class="built_in">set</span> jffs2_enable=1</span><br><span class="line">nvram <span class="built_in">set</span> jffs2_format=1</span><br><span class="line">nvram <span class="built_in">set</span> jffs2_scripts=1</span><br><span class="line">nvram commit</span><br></pre></td></tr></table></figure>
-<p>最后使用<code>reboot</code>重启生效</p>
-<a id="more"></a>
-<p>最后使用命令<code>nvram show | grep &quot;jffs&quot;</code>来检验是否启用了JFFS分区，显示如下信息即为开启成功。</p>
-<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">size: 26089 bytes (35351 left)</span><br><span class="line"><span class="attribute">jffs2_enable</span>=1</span><br><span class="line"><span class="attribute">jffs2_format</span>=0</span><br><span class="line"><span class="attribute">jffs2_scripts</span>=1</span><br></pre></td></tr></table></figure>
-
-<h2 id="梅林固件"><a href="#梅林固件" class="headerlink" title="梅林固件"></a>梅林固件</h2><p>开启SSH方式与官方固件一样，在系统设置里选择启用SSH，建议选择LAN only选项。</p>
-<p>已刷梅林固件的路由器可以在系统设置里找到<strong>Persistent JFFS2 partition</strong>一项，将<strong>Enable JFFS custom scripts and configs</strong>设为是即可开启JFFS分区。</p>
-<h1 id="自定义DNS解析"><a href="#自定义DNS解析" class="headerlink" title="自定义DNS解析"></a>自定义DNS解析</h1><p>由于路由器运行过程中的配置文件是动态生成的，所以只修改<code>/etc/hosts</code>会使配置在重启DNSmasq服务后失效，可以通过修改DNSmasq配置来自定义DNS解析。</p>
-<p>在<code>/jffs/configs/</code>文件夹下建立配置文件<code>/jffs/configs/dnsmasq.conf.add</code>可以添加自定义的配置项，或是新建文件<code>/jffs/configs/dnsmasq.conf</code>来替代原配置项。</p>
-<p>在<code>/jffs/configs/dnsmasq.conf.add</code>文件中加入以下内容，即可将test.com的ip解析到127.0.0.1 (ipv4) 或::1 (ipv6)。</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">address=/test.com/<span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span></span><br><span class="line">address=/test.com/::<span class="number">1</span></span><br></pre></td></tr></table></figure>
-
-<p>或是在<code>dnsmasq.conf.add</code>文件中加入下面一行来引入新的hosts文件</p>
-<figure class="highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="attr">addn-hosts</span>=/jffs/configs/hosts</span><br></pre></td></tr></table></figure>
-
-<p>最后，执行<code>service restart_dnsmasq</code>重启DNSmasq服务或重启路由器使配置生效。</p>
-<p><strong>注：梅林固件下若使用ss插件会导致<code>/jffs/configs/</code>下的配置被覆盖，</strong></p>
-<p><strong>需要将所有配置填写到ss设置下的自定义DNSmasq一栏中</strong></p>
-<blockquote>
-<p><strong>参考资料</strong>：<br><a href="https://github.com/RMerl/asuswrt-merlin/wiki/Custom-domains-with-dnsmasq" target="_blank" rel="noopener">https://github.com/RMerl/asuswrt-merlin/wiki/Custom-domains-with-dnsmasq</a><br><a href="https://github.com/RMerl/asuswrt-merlin/wiki/Custom-config-files" target="_blank" rel="noopener">https://github.com/RMerl/asuswrt-merlin/wiki/Custom-config-files</a></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>技术</category>
-        <category>网络硬件</category>
-      </categories>
-  </entry>
-  <entry>
     <title>自签CA对Steam社区进行反代</title>
     <url>/t-43393/</url>
     <content><![CDATA[<p>由于众所周知的原因Steam社区被屏蔽已久，使得部署在国内Linux云服务器上的ASF在使用上存在诸多不便。在此参照羽翼城大佬的Steam302工具的思路，使用自签CA+Nginx反代来绕过SNI过滤，由此解决Linux挂卡服务器或443端口被占用等特殊情况下的Steam社区访问问题。一般的Windows玩家直接使用羽翼城大佬的<a href="https://www.dogfight360.com/blog/686/" target="_blank" rel="noopener">SteamCommunity 302</a>更加方便。</p>
@@ -2275,35 +2223,6 @@ allow from all
 ]]></content>
       <categories>
         <category>游戏</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>农历闰月杂谈</title>
-    <url>/t-16170/</url>
-    <content><![CDATA[<p>大概一周之前，和朋友聊天时谈论到了闰月的问题，今天正好在知乎上回答了一个春分点移动的问题，就将这些内容整合一下，简单地做个记录。</p>
-<a id="more"></a>
-
-<h1 id="产生闰月的原因"><a href="#产生闰月的原因" class="headerlink" title="产生闰月的原因"></a>产生闰月的原因</h1><p>历法是以一定参考物来记录时间的方式，按照其参考的标准可分为：阳历、阴历、阴阳历三种 (注意这里的阴历指的不是传统的农历而是以月亮为参考的历法，农历应该算作阴阳历)。</p>
-<p>阳历是以太阳经过春分点的周期（回归年）为基础的，通常将其定义为一年，在这种定义下一个月只是对一年时间的等长 (其实公历中并不是完全等长) 划分，并没有实际的意义。典型的阳历就是现在使用的公历，也就是格里高利历。</p>
-<p>阴历是以月相的变化周期（朔望月）为基础的，通常将其定义为一个月。在这种情况下一年只是一个月的整数倍，也没有实际代表的意义。典型的阴历就是伊斯兰历。</p>
-<p>阴阳历结合了以上二者的特点，分别以月相周期为一个月，以地球公转周期为一年，农历就是一种阴阳历。<br>但是很显然这种定义方式有一个问题，就是无论朔望月或是回归年都不是一天的整数倍，所以一年并不能用整数个月来表示。为了解决这个问题，农历中采用了闰月的方式。即在定义一年为12个月的基础上，在个别年份中多加一个月，使得在一定周期内农历年和回归年天数相等。</p>
-<h1 id="确定闰月的方法"><a href="#确定闰月的方法" class="headerlink" title="确定闰月的方法"></a>确定闰月的方法</h1><p><strong>注意！闰月是指农历中多一个月，和公历中二月有29天的闰年不是一回事！</strong></p>
-<p>根据上一节可知，闰月是农历中用于调和朔望月和回归年之间矛盾的一种方式，下面是两种确定闰月的具体方法：</p>
-<h2 id="十九年七闰法"><a href="#十九年七闰法" class="headerlink" title="十九年七闰法"></a>十九年七闰法</h2><p>太阳经过春分点的周期（不等于地球绕太阳公转周期），也就是回归年，为365.24天。<br>月相变化的平均时间（不等于月球绕地球公转周期），也就是朔望月，为29.53天。<br>如果简单地以12个朔望月为一年的话，一年共有$12 \times 29.53 = 354.36天$，与正常的回归年相比相差10.88天。<br>根据年月时间的最小公倍数可以确定插入闰月的数量。方式如下：</p>
-<div class="math-fluid">
-$$\frac{月}{年} = \frac{29.53}{354.36}  \approx \frac{19}{235} = \frac{19}{19 \times 12 +7}$$
-</div>
-即每19年额外插入7个月，可以使得农历年与回归年大致相等。这就是中国最古老的的置闰方式，十九年七闰法。
-
-<h2 id="无中气置闰法"><a href="#无中气置闰法" class="headerlink" title="无中气置闰法"></a>无中气置闰法</h2><p>现行农历使用的是无中气置闰法，没有设置固定的闰月，而是靠节气来进行置闰。此种方式下更接近于回归年，同时也近似符合<code>“十九年七闰”</code>的规律。</p>
-<p>前面讲过，农历是一种阴阳历，月份的划分与太阳无关。而太阳的运动又与农业生产息息相关，因此产生了二十四节气。二十四节气是在黄道上每隔15°划分而成的，又可分为12节气和12中气。各节气间太阳运动的角度是相等的，时间不相同，平均间隔时间为15.22天。</p>
-<p>无中气置闰法规定<strong>两个冬至之间，若存在13个月，则第一个没有中气的月份为闰月</strong>。将节气与农历的朔望月相比较可以发现，每个月的中气出现时间都会比上个月晚0.91天，32.45个月后中气就会比最初晚一个月。因此将无中气的月份设为闰月，相当于每32.45个月添加一个闰月，近似就是<code>十九年七闰</code>。</p>
-<h1 id="杂项"><a href="#杂项" class="headerlink" title="杂项"></a>杂项</h1><h2 id="朔望月和月球公转周期"><a href="#朔望月和月球公转周期" class="headerlink" title="朔望月和月球公转周期"></a>朔望月和月球公转周期</h2><p>朔望月是月相的变化周期，即月球从位于太阳和地球之间的状态到达下一个位于太阳地球间状态的时间长度，这个时长比月球公转周期长。原因是当月球完成一次公转后由于地球的公转使得地球也前进了一段距离，所以月球需要再运行一段时间才能重新回到太阳和地球之间。</p>
-<h2 id="恒星年和回归年"><a href="#恒星年和回归年" class="headerlink" title="恒星年和回归年"></a>恒星年和回归年</h2><p>恒星年是地球公转的真实周期，回归年是太阳经过春分点的周期。<br>由于地球的自转，地轴会围绕黄轴做缓慢的圆周运动，称为<strong>地轴进动</strong>。地轴进动与陀螺的旋转类似，地轴围绕黄轴扫成一个锥面。由于赤道平面垂直于地轴，所以在地轴进动的同时赤道平面也进行同方向的缓慢的转动（转动这个词可能不准确，就当是移动吧）。<br>黄道平面与赤道平面在天球上就有两个交点，春分点就是黄道由南向北与赤道相交的点。随着地轴带动赤道面转动，两个交点也在黄道上同方向（自东向西，与自转公转相反）移动。所以一个回归年内太阳运动的距离实际上是一个圆周的距离减掉春分点反向移动的距离，回归年的时长也就小于实际的公转周期恒星年。</p>
-<p>春分点移动的图就不放了，需要的去原回答里看吧。<br><strong>今天在知乎上的原回答:</strong> <a href="https://www.zhihu.com/question/344409756/answer/819512503" target="_blank" rel="noopener">为什么地球自转春分点要在天球上不断西移？</a></p>
-]]></content>
-      <categories>
-        <category>杂谈</category>
       </categories>
   </entry>
   <entry>
@@ -2344,6 +2263,104 @@ $$\frac{月}{年} = \frac{29.53}{354.36}  \approx \frac{19}{235} = \frac{19}{19 
       </categories>
   </entry>
   <entry>
+    <title>再见，2019</title>
+    <url>/t-33718/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="18f5b2bfaf30635979b54eb917f742a88cc6c020ac9ed22f83301f49b0435c3b">8a96d2fbfb40177628686d330ad8f8979e002f3e8d424251db7964ff61564b3c4f9faa556920076ffda299c491bc94136c020b2f04bf915ef75bfae45adea33a7028cb0372de586a13613bd3d84d40460f51155e15e75d030864ee900c51c4a22ce822c97e14163c88ccb166051b9ea12240cc5dc2114dd4abb3722ba2bcb6f6b4744af8251d3a960b0dccd367827d82f90f7d5135b05e659a61d5aaa59a95e91aee9a578a8f9e1382fcc7fea6a8b410ec1f8391c492e2b928c85afaf036b93f8aa51fc51c6c614fc00d9b9e07414fe81dae603c1686327251f32ae85871322e618eb7251c49006217266db0175ed5727d3c4bc6eacf40e484590ea26e64017ecba4962e37a19580a23ed29f8ce53c7055bdf28baa62140446137585cc1a34f5be6ea4457be4964d81bb66e47c1185edab4c139ffd56f06ff8174bd6bdc3e9afde26d27611e7aa012b43ae9e652fdff5ca2933d092f00672d5fcd5419b1290d035fa8f2b2503cf67e570d3ef7df14f72870f4fe931cdda87a6275ad13fdd9272db41291c2cf750d8e67d6771403f015745e2d31594a995d11bac618bf62a669d5b1840d916b877fcd3380e61bbecb01328491ef0796351d23a9d87d6acdaa6099bb3d37b2cdc1806084cd207e98237182e6aeed83e3a9babb82cf03ca20d7b329e1c7bb1a44bdb59722a7885e172b4ee8ace270f94c4aef20ccd37405b446590818ab59a471cca8185812740e269e8ebcc9be3988635d516c9b6820a3fe6a600f46f6b9d3235b7a6b4661539298920df2152b6266d00aa201bbe6737d5b855809455cb9d00982bbb0ad8d962227e42a331af73f557ac89f64be0fe9c21dbbc012d8e93dc6fe8012fa07e822ff70797dc17a77b5e3693ecf3f17fe523b03a41d5c4bd9ff3a3db39f842570cad15bd77216e6d886b94f0b72d27ab2bf644b6db9a82991bf764114cd25b2b6993b95aec39f6624eaac85dc46ca02355a7cbc02ac6516f7ce4ebedce52e93e340e6aa59d40140db8e5e5e481ba5fa3721f313e92c87e4e4714681e178d894071af3ac1cc676da8bdb485d24ffd82cd1efb4b40dc57c54dc164f1d42cffbb636fd0111359b665425eb91e72450e27b64d6bea3c6b38e8b4580fd07780bd1342b6268faaf030d55b3e327e372c56b61d2e13f3fcd3305644ee1865b3f1421d8f1f31a0e9f0d68c857ed6f3852becef816da771f481dffbc62c189602de13ae56fe566e0846dc3216ae4c04d6a6c38725e25f32c5b2fec4cf0f80a39fefdae5f0e3cd2be30416f30a1585a746e55d81d919f96ee6aff4a3c59c082e924673870f7aa3f7532de2599e0174b07be640d91b51e6281b3d025cc2904fdcb086430c1cbee1b4326306aa525d939bb058af05199263d1b8a7967d9e70467894da2226b58fd8442ce006e136abfca797f6c8099fae2e95e4c18d346553855769d2b16436fc4dcb1ff07928183eb2d09d2f0335ca576f9d849365552203c25e25cdc74b56b37cc8c7147d4631d4ca4793832a113856aec3798749</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入密码</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>碎碎念</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>农历闰月杂谈</title>
+    <url>/t-16170/</url>
+    <content><![CDATA[<p>大概一周之前，和朋友聊天时谈论到了闰月的问题，今天正好在知乎上回答了一个春分点移动的问题，就将这些内容整合一下，简单地做个记录。</p>
+<a id="more"></a>
+
+<h1 id="产生闰月的原因"><a href="#产生闰月的原因" class="headerlink" title="产生闰月的原因"></a>产生闰月的原因</h1><p>历法是以一定参考物来记录时间的方式，按照其参考的标准可分为：阳历、阴历、阴阳历三种 (注意这里的阴历指的不是传统的农历而是以月亮为参考的历法，农历应该算作阴阳历)。</p>
+<p>阳历是以太阳经过春分点的周期（回归年）为基础的，通常将其定义为一年，在这种定义下一个月只是对一年时间的等长 (其实公历中并不是完全等长) 划分，并没有实际的意义。典型的阳历就是现在使用的公历，也就是格里高利历。</p>
+<p>阴历是以月相的变化周期（朔望月）为基础的，通常将其定义为一个月。在这种情况下一年只是一个月的整数倍，也没有实际代表的意义。典型的阴历就是伊斯兰历。</p>
+<p>阴阳历结合了以上二者的特点，分别以月相周期为一个月，以地球公转周期为一年，农历就是一种阴阳历。<br>但是很显然这种定义方式有一个问题，就是无论朔望月或是回归年都不是一天的整数倍，所以一年并不能用整数个月来表示。为了解决这个问题，农历中采用了闰月的方式。即在定义一年为12个月的基础上，在个别年份中多加一个月，使得在一定周期内农历年和回归年天数相等。</p>
+<h1 id="确定闰月的方法"><a href="#确定闰月的方法" class="headerlink" title="确定闰月的方法"></a>确定闰月的方法</h1><p><strong>注意！闰月是指农历中多一个月，和公历中二月有29天的闰年不是一回事！</strong></p>
+<p>根据上一节可知，闰月是农历中用于调和朔望月和回归年之间矛盾的一种方式，下面是两种确定闰月的具体方法：</p>
+<h2 id="十九年七闰法"><a href="#十九年七闰法" class="headerlink" title="十九年七闰法"></a>十九年七闰法</h2><p>太阳经过春分点的周期（不等于地球绕太阳公转周期），也就是回归年，为365.24天。<br>月相变化的平均时间（不等于月球绕地球公转周期），也就是朔望月，为29.53天。<br>如果简单地以12个朔望月为一年的话，一年共有$12 \times 29.53 = 354.36天$，与正常的回归年相比相差10.88天。<br>根据年月时间的最小公倍数可以确定插入闰月的数量。方式如下：</p>
+<div class="math-fluid">
+$$\frac{月}{年} = \frac{29.53}{354.36}  \approx \frac{19}{235} = \frac{19}{19 \times 12 +7}$$
+</div>
+即每19年额外插入7个月，可以使得农历年与回归年大致相等。这就是中国最古老的的置闰方式，十九年七闰法。
+
+<h2 id="无中气置闰法"><a href="#无中气置闰法" class="headerlink" title="无中气置闰法"></a>无中气置闰法</h2><p>现行农历使用的是无中气置闰法，没有设置固定的闰月，而是靠节气来进行置闰。此种方式下更接近于回归年，同时也近似符合<code>“十九年七闰”</code>的规律。</p>
+<p>前面讲过，农历是一种阴阳历，月份的划分与太阳无关。而太阳的运动又与农业生产息息相关，因此产生了二十四节气。二十四节气是在黄道上每隔15°划分而成的，又可分为12节气和12中气。各节气间太阳运动的角度是相等的，时间不相同，平均间隔时间为15.22天。</p>
+<p>无中气置闰法规定<strong>两个冬至之间，若存在13个月，则第一个没有中气的月份为闰月</strong>。将节气与农历的朔望月相比较可以发现，每个月的中气出现时间都会比上个月晚0.91天，32.45个月后中气就会比最初晚一个月。因此将无中气的月份设为闰月，相当于每32.45个月添加一个闰月，近似就是<code>十九年七闰</code>。</p>
+<h1 id="杂项"><a href="#杂项" class="headerlink" title="杂项"></a>杂项</h1><h2 id="朔望月和月球公转周期"><a href="#朔望月和月球公转周期" class="headerlink" title="朔望月和月球公转周期"></a>朔望月和月球公转周期</h2><p>朔望月是月相的变化周期，即月球从位于太阳和地球之间的状态到达下一个位于太阳地球间状态的时间长度，这个时长比月球公转周期长。原因是当月球完成一次公转后由于地球的公转使得地球也前进了一段距离，所以月球需要再运行一段时间才能重新回到太阳和地球之间。</p>
+<h2 id="恒星年和回归年"><a href="#恒星年和回归年" class="headerlink" title="恒星年和回归年"></a>恒星年和回归年</h2><p>恒星年是地球公转的真实周期，回归年是太阳经过春分点的周期。<br>由于地球的自转，地轴会围绕黄轴做缓慢的圆周运动，称为<strong>地轴进动</strong>。地轴进动与陀螺的旋转类似，地轴围绕黄轴扫成一个锥面。由于赤道平面垂直于地轴，所以在地轴进动的同时赤道平面也进行同方向的缓慢的转动（转动这个词可能不准确，就当是移动吧）。<br>黄道平面与赤道平面在天球上就有两个交点，春分点就是黄道由南向北与赤道相交的点。随着地轴带动赤道面转动，两个交点也在黄道上同方向（自东向西，与自转公转相反）移动。所以一个回归年内太阳运动的距离实际上是一个圆周的距离减掉春分点反向移动的距离，回归年的时长也就小于实际的公转周期恒星年。</p>
+<p>春分点移动的图就不放了，需要的去原回答里看吧。<br><strong>今天在知乎上的原回答:</strong> <a href="https://www.zhihu.com/question/344409756/answer/819512503" target="_blank" rel="noopener">为什么地球自转春分点要在天球上不断西移？</a></p>
+]]></content>
+      <categories>
+        <category>杂谈</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>华硕路由器自定义hosts方法</title>
+    <url>/t-48402/</url>
+    <content><![CDATA[<h1 id="开启SSH和JFFS分区"><a href="#开启SSH和JFFS分区" class="headerlink" title="开启SSH和JFFS分区"></a>开启SSH和JFFS分区</h1><h2 id="官方固件"><a href="#官方固件" class="headerlink" title="官方固件"></a>官方固件</h2><p>SSH可以在系统设置里找到，建议选择LAN only一项。然后就可以使用putty等软件登录到路由器，用户名和密码与路由器登陆的用户名密码相同。</p>
+<p>使用SSH登录到路由器，输入以下命令开启JFFS分区</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nvram <span class="built_in">set</span> jffs2_on=1</span><br><span class="line">nvram <span class="built_in">set</span> jffs2_enable=1</span><br><span class="line">nvram <span class="built_in">set</span> jffs2_format=1</span><br><span class="line">nvram <span class="built_in">set</span> jffs2_scripts=1</span><br><span class="line">nvram commit</span><br></pre></td></tr></table></figure>
+<p>最后使用<code>reboot</code>重启生效</p>
+<a id="more"></a>
+<p>最后使用命令<code>nvram show | grep &quot;jffs&quot;</code>来检验是否启用了JFFS分区，显示如下信息即为开启成功。</p>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">size: 26089 bytes (35351 left)</span><br><span class="line"><span class="attribute">jffs2_enable</span>=1</span><br><span class="line"><span class="attribute">jffs2_format</span>=0</span><br><span class="line"><span class="attribute">jffs2_scripts</span>=1</span><br></pre></td></tr></table></figure>
+
+<h2 id="梅林固件"><a href="#梅林固件" class="headerlink" title="梅林固件"></a>梅林固件</h2><p>开启SSH方式与官方固件一样，在系统设置里选择启用SSH，建议选择LAN only选项。</p>
+<p>已刷梅林固件的路由器可以在系统设置里找到<strong>Persistent JFFS2 partition</strong>一项，将<strong>Enable JFFS custom scripts and configs</strong>设为是即可开启JFFS分区。</p>
+<h1 id="自定义DNS解析"><a href="#自定义DNS解析" class="headerlink" title="自定义DNS解析"></a>自定义DNS解析</h1><p>由于路由器运行过程中的配置文件是动态生成的，所以只修改<code>/etc/hosts</code>会使配置在重启DNSmasq服务后失效，可以通过修改DNSmasq配置来自定义DNS解析。</p>
+<p>在<code>/jffs/configs/</code>文件夹下建立配置文件<code>/jffs/configs/dnsmasq.conf.add</code>可以添加自定义的配置项，或是新建文件<code>/jffs/configs/dnsmasq.conf</code>来替代原配置项。</p>
+<p>在<code>/jffs/configs/dnsmasq.conf.add</code>文件中加入以下内容，即可将test.com的ip解析到127.0.0.1 (ipv4) 或::1 (ipv6)。</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">address=/test.com/<span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span></span><br><span class="line">address=/test.com/::<span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<p>或是在<code>dnsmasq.conf.add</code>文件中加入下面一行来引入新的hosts文件</p>
+<figure class="highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="attr">addn-hosts</span>=/jffs/configs/hosts</span><br></pre></td></tr></table></figure>
+
+<p>最后，执行<code>service restart_dnsmasq</code>重启DNSmasq服务或重启路由器使配置生效。</p>
+<p><strong>注：梅林固件下若使用ss插件会导致<code>/jffs/configs/</code>下的配置被覆盖，</strong></p>
+<p><strong>需要将所有配置填写到ss设置下的自定义DNSmasq一栏中</strong></p>
+<blockquote>
+<p><strong>参考资料</strong>：<br><a href="https://github.com/RMerl/asuswrt-merlin/wiki/Custom-domains-with-dnsmasq" target="_blank" rel="noopener">https://github.com/RMerl/asuswrt-merlin/wiki/Custom-domains-with-dnsmasq</a><br><a href="https://github.com/RMerl/asuswrt-merlin/wiki/Custom-config-files" target="_blank" rel="noopener">https://github.com/RMerl/asuswrt-merlin/wiki/Custom-config-files</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>技术</category>
+        <category>网络硬件</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>删除EFI分区</title>
+    <url>/t-57950/</url>
+    <content><![CDATA[<p>管理员身份运行cmd</p>
+<figure class="highlight ebnf"><table><tr><td class="code"><pre><span class="line"><span class="attribute">diskpart</span></span><br></pre></td></tr></table></figure>
+<p>在 <code>DISKPART&gt;</code> 提示符下</p>
+<a id="more"></a>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">list disk</span><br><span class="line"><span class="keyword">select</span> disk <span class="number">0</span>           <span class="comment">#选择磁盘</span></span><br><span class="line"><span class="keyword">list</span> <span class="keyword">partition</span></span><br><span class="line"><span class="keyword">select</span> <span class="keyword">partition</span> <span class="number">2</span>      <span class="comment">#efi分区序号，类型为系统</span></span><br><span class="line">assign letter=p</span><br></pre></td></tr></table></figure>
+<p>以管理员身份再运行cmd</p>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">P</span>:<span class="string"></span></span><br><span class="line"><span class="attr">cd</span> <span class="string">EFI</span></span><br><span class="line"><span class="attr">rmdir</span> <span class="string">/s/q Ubuntu</span></span><br></pre></td></tr></table></figure>
+<p>或是以管理员身份执行程序(如记事本)，在打开界面切到对应位置删除<br>最后在 <code>DISKPART&gt;</code> 提示符下移除盘符</p>
+<figure class="highlight basic"><table><tr><td class="code"><pre><span class="line"><span class="comment">remove letter=p</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>技术</category>
+        <category>Windows</category>
+      </categories>
+  </entry>
+  <entry>
     <title>只狼图片整理收藏</title>
     <url>/t-55260/</url>
     <content><![CDATA[<p><strong>提示：本文含有大量图片，请谨慎进入</strong></p>
@@ -2368,6 +2385,25 @@ $$\frac{月}{年} = \frac{29.53}{354.36}  \approx \frac{19}{235} = \frac{19}{19 
 ]]></content>
       <categories>
         <category>图集</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Insurgency(叛乱)服务器架设脚本</title>
+    <url>/t-109/</url>
+    <content><![CDATA[<p><a href="https://github.com/kb1000fx/Insurgency-Dedicated-Server-Setup" target="_blank" rel="noopener">Github地址</a></p>
+<h1 id="测试环境"><a href="#测试环境" class="headerlink" title="测试环境"></a>测试环境</h1><p>Digital Ocean SFO2<br>1 vCPU<br>1 GB Memory<br>25 GB Disk<br>Ubuntu 18.04.1 x64 </p>
+<a id="more"></a>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><figure class="highlight"><table><tr><td class="code"><pre><span class="line">wget https://raw.githubusercontent.com/kb1000fx/Insurgency-Dedicated-Server-Setup/master/install_insurgency.sh --no-check-certificate</span><br><span class="line">chmod +x install_insurgency.sh</span><br><span class="line">./install_insurgency.sh</span><br></pre></td></tr></table></figure>
+<h1 id="配置-server-cfg-文件"><a href="#配置-server-cfg-文件" class="headerlink" title="配置 server.cfg 文件"></a>配置 server.cfg 文件</h1><p>安装时已自动下载了默认文件.<br>编辑  <code>./insurgency/cfg/server.cfg</code> 来改变服务器设置.  </p>
+<p>更多内容参见：<br><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=854506744" target="_blank" rel="noopener">https://steamcommunity.com/sharedfiles/filedetails/?id=854506744</a><br><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=305605313" target="_blank" rel="noopener">https://steamcommunity.com/sharedfiles/filedetails/?id=305605313</a>  </p>
+<h1 id="添加创意工坊MOD"><a href="#添加创意工坊MOD" class="headerlink" title="添加创意工坊MOD"></a>添加创意工坊MOD</h1><p>创建并编辑 <code>subscribed_file_ids.txt</code> .<br>在其中添加MOD ID，每行一个<br>启动时末尾加 <code>-workshop</code>.</p>
+<figure class="highlight jboss-cli"><table><tr><td class="code"><pre><span class="line"><span class="keyword">cd</span> <span class="string">./insurgency/subscribed_file_ids.txt</span></span><br><span class="line">vi subscribed_file_ids.txt</span><br></pre></td></tr></table></figure>
+<h1 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h1><p>使用 <code>srcds_run</code> 运行服务器<br>例如：</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">./srcds_run -port <span class="number">27015</span> +map district_coop +maxplayers <span class="number">32</span> -workshop</span><br></pre></td></tr></table></figure>
+<p>或使用脚本启动</p>
+<figure class="highlight vim"><table><tr><td class="code"><pre><span class="line">wget http<span class="variable">s:</span>//raw.githubusercontent.<span class="keyword">com</span>/kb1000fx/Insurgency-Dedicated-Server-Setup/master/run_insurgency.<span class="keyword">sh</span> --<span class="keyword">no</span>-check-certificate</span><br><span class="line">chmod +<span class="keyword">x</span> run_insurgency.<span class="keyword">sh</span></span><br><span class="line">./run_insurgency.<span class="keyword">sh</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>游戏</category>
       </categories>
   </entry>
   <entry>
@@ -2597,112 +2633,6 @@ $$\frac{月}{年} = \frac{29.53}{354.36}  \approx \frac{19}{235} = \frac{19}{19 
       </categories>
   </entry>
   <entry>
-    <title>如何使用加农炮将特朗普发射至太阳上</title>
-    <url>/t-1436/</url>
-    <content><![CDATA[<p>特朗普曾表示，若道琼斯指数暴跌1000点，时任总统应被塞进加农炮射到太阳上。而最近美股动荡，一周之内多次熔断，特朗普终于实现了他曾立下的flag。那么就来帮大统领计算一下要如何才能用加农炮将他自己发射到太阳上。</p>
-<a id="more"></a>
-<h1 id="发射所需的炮口速度"><a href="#发射所需的炮口速度" class="headerlink" title="发射所需的炮口速度"></a>发射所需的炮口速度</h1><p>第一步先计算要以多大的速度飞出才能让大统领登陆太阳。</p>
-<p>首先以太阳为参考系，由特朗普绕太阳椭圆运动过程中近日点、远日点的机械能守恒可得：</p>
-<div class="math-fluid">
-$$
-\frac{1}{2}m{v_2}^2-\frac{GM_Sm}{R_{max}}=\frac{1}{2}m{v_3}^{2}-\frac{GM_Sm}{R_{min}} \tag{I}
-$$
-</div>
-又由此过程中角动量守恒可得：
-<div class="math-fluid">
-$$
-mv_2R_{max}=mv_3R_{min} \tag{II}
-$$
-</div>
-联立$(I)(II)$式可得 $v_2=5.85km/s$
-
-<p>这里$v_2$是特朗普在远日点处，即刚脱离地球时相对于太阳的线速度。因为此速度远小于地球公转的线速度，所以发射时需采取与地球公转相反的方向，以此来抵消公转带来的影响。根据速度的合成分解可得远日点处相对地球的速度为：</p>
-<div class="math-fluid">
-$$
-v_1 = v_E-v_2 = 29.78km/s - 5.85km/s = 23.93km/s
-$$
-</div>
-随后再以地球为参考系，由机械能守恒
-<div class="math-fluid">
-$$
-\frac{1}{2}mv^2-\frac{GM_Em}{R_E}=\frac{1}{2}m{v_1}^{2}
-$$
-</div>
-可得发射时的炮口初速$v=26.42km/s$ 
-
-<p>根据特朗普体重为243磅，即110.22千克，可求出发射所需的炮口动能为$3.847 \times 10^7 kJ$</p>
-<h1 id="发射药的用量"><a href="#发射药的用量" class="headerlink" title="发射药的用量"></a>发射药的用量</h1><p>然后再计算一下需要消耗多少的发射药才能获得如此高的动能。</p>
-<p>假设所使用的炮管为口径500mm的滑膛炮，发射药为硝化纤维-硝化甘油-硝基胍三基发射药。</p>
-<div class="math-fluid">
-$$
-\omega' = \frac{E}{f} = \alpha \cdot \omega
-$$
-</div>
-因为发射药的定容火药力已知，可求出弹丸平动的动能需要35.3吨的三基发射药。根据火炮的一般能量分配规律，发射药释放的能量中仅有约32%转化为平动动能，因此估算总共需要约$110.3吨$的发射药。
-
-<p>进一步可以得出药室容积约为$68.94m^3$，药室长度约为$351m$。</p>
-<h1 id="其他火炮参数"><a href="#其他火炮参数" class="headerlink" title="其他火炮参数"></a>其他火炮参数</h1><p>最后根据要求确定一下其他参数，设计出符合要求的炮身。</p>
-<p>假设发射过程为理想过程，整体可分为前期(未发生运动)、第一时期(发射药未燃烧尽)、第二时期(发射药已燃烧尽)三个阶段。<br>根据内弹道学原理，发射过程中满足以下方程组：</p>
-<div class="math-fluid">
-$$
-\begin{cases}
- 形状函数:&\psi=\chi\left(1+\lambda Z+\mu Z^2 \right) & (1)\\\\\\\\
- 燃速度方程:&I_k \cdot dZ=p \cdot dt& (2)\\\\\\\\
- 运动方程:&Sp \cdot dt=\varphi m \cdot dv& (3)\\\\\\\\
- 内弹道基本方程:&Sp\left(l_\psi +l\right)=f\omega\psi-0.5\theta\varphi mv^2& (4)\\\\\\\\
- 速度微分:&dl=v\cdot dt& (5)
-\end{cases}
-$$
-</div>
-参照其他滑膛炮，取$\chi=2.01$、$\lambda=-0.50$、$p_0=30Mpa$
-使用Matlab对三个阶段进行模拟后可得:
-
-<p>在发射后约$7ms$后膛压达到最大值，最大膛压约为$800Mpa$，此时速度约$10km/s$。<br>总发射时间约为$37ms$，发射全行程约为$720m$。 </p>
-<p><strong>综上所述，若想将特朗普发射至太阳上，需要炮管长720m、口径500mm、能承受800Mpa膛压的加农炮，并且需要消耗110吨发射药</strong></p>
-]]></content>
-      <categories>
-        <category>杂谈</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>只狼Steam存档替换方法</title>
-    <url>/t-55399/</url>
-    <content><![CDATA[<p>Steam版的只狼由于存档中含有与账号相关的信息，无法直接复制文件来进行存档替换。如果需要使用他人存档或进行盗版存档转正，需要先对其进行修改。本文需要用到16进制编辑器，这里使用的是<a href="https://mh-nexus.de/downloads/HxDSetup.zip" target="_blank" rel="noopener">HXD</a>。</p>
-<a id="more"></a>
-<h1 id="修改步骤"><a href="#修改步骤" class="headerlink" title="修改步骤"></a>修改步骤</h1><p>存档文件位置：<code>%appdata%\Sekiro\{SteamID}\S0000.sl2</code></p>
-<p>具体步骤如下：</p>
-<ol>
-<li>查找待修改文件中<code>00A003D4-00A003DB</code>的位置，将其替换为自己的Steam 64位ID。</li>
-<li>根据下面的存档数据地址寻找欲修改的存档位，将表中该存档SteamID的位置也替换为自己的Steam 64位ID。</li>
-<li>根据下表选取修改的存档数据，对其进行md5校验后将结果覆盖至存档校验的位置。</li>
-<li>如需要融合两个存档中的多个角色，可根据下面的地址自由发挥，切记存档位置和总的SteamID都需替换为自己的。</li>
-</ol>
-<h1 id="存档数据地址"><a href="#存档数据地址" class="headerlink" title="存档数据地址"></a>存档数据地址</h1><p>存档文件共有5个存档位和一个含有SteamID的信息位，每个存档位又分为存档数据和存档校验两个部分，同时每个存档数据中都包含一份SteamID，结构如下。</p>
-<p>其中存档1、存档2地址已经验证过，其余存档的地址是根据数据长度与存档1、2中SteamID与数据头的偏移量<code>33E54</code>计算得到的，不保证其准确性。</p>
-<p>存档1</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">存档数据: <span class="number">00000310</span> - <span class="number">0010030</span>F</span><br><span class="line">存档校验: <span class="number">00000300</span> - <span class="number">0000030</span>F</span><br><span class="line">SteamID: <span class="number">00034164</span> - <span class="number">0003416</span>B</span><br></pre></td></tr></table></figure>
-<p>存档2</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">存档数据: <span class="number">00100320</span> - <span class="number">0020031</span>F</span><br><span class="line">存档校验: <span class="number">00100310</span> - <span class="number">0010031</span>F</span><br><span class="line">SteamID: <span class="number">00134174</span> - <span class="number">0013417</span>B</span><br></pre></td></tr></table></figure>
-<p>存档3</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">存档数据: <span class="number">00200330</span> - <span class="number">0030032</span>F</span><br><span class="line">存档校验: <span class="number">00200320</span> - <span class="number">0020032</span>F</span><br><span class="line">SteamID: <span class="number">00234184</span> - <span class="number">0023418</span>B</span><br></pre></td></tr></table></figure>
-<p>存档4</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">存档数据: <span class="number">00300340</span> - <span class="number">0040033</span>F</span><br><span class="line">存档校验: <span class="number">00300330</span> - <span class="number">0030033</span>F</span><br><span class="line">SteamID: <span class="number">00334194</span> - <span class="number">0033419</span>B</span><br></pre></td></tr></table></figure>
-<p>存档5</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">存档数据: <span class="number">00400350</span> - <span class="number">0050034</span>F</span><br><span class="line">存档校验: <span class="number">00400340</span> - <span class="number">0040034</span>F</span><br><span class="line">SteamID: <span class="number">004341</span>A4 - <span class="number">004341</span>A8</span><br></pre></td></tr></table></figure>
-<p>用户信息</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">总SteamID: <span class="number">00</span>A003D4 - <span class="number">00</span>A003DB</span><br></pre></td></tr></table></figure>
-<p>存档1的数据详情 (来源于Reddit，未验证)</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">角色: <span class="number">00016140</span> - <span class="number">000</span>A0F5F</span><br><span class="line">位置: <span class="number">000</span>A5A70 - <span class="number">000</span>A5B1F</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>参考：<a href="https://www.reddit.com/r/Sekiro/comments/ba44qp/how_to_edit_your_save_file_to_fix_various_issues/" target="_blank" rel="noopener">https://www.reddit.com/r/Sekiro/comments/ba44qp/how_to_edit_your_save_file_to_fix_various_issues/</a></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>游戏</category>
-      </categories>
-  </entry>
-  <entry>
     <title>塔板理论简介及色谱流出曲线方程的推导</title>
     <url>/t-39720/</url>
     <content><![CDATA[<p>塔板理论是色谱分析中的一种理论，可以用于解释色谱曲线的形状及其影响因素。塔板理论的思路是将色谱柱类比为蒸馏塔，将色谱分离过程类比为蒸馏过程。具体过程是把色谱柱分成许多小段(即理论塔板)，每个理论塔板内都存在固定相与流动相。经过多次分配平衡，不同分配系数的组分会先后分离出来。根据塔板理论，待分离组分流出色谱柱时的浓度与时间之间符合二项分布，当塔板数很高时，二项分布趋向于正态分布。这一曲线方程称作色谱流出曲线方程。</p>
@@ -2835,6 +2765,112 @@ $$
       </categories>
   </entry>
   <entry>
+    <title>只狼Steam存档替换方法</title>
+    <url>/t-55399/</url>
+    <content><![CDATA[<p>Steam版的只狼由于存档中含有与账号相关的信息，无法直接复制文件来进行存档替换。如果需要使用他人存档或进行盗版存档转正，需要先对其进行修改。本文需要用到16进制编辑器，这里使用的是<a href="https://mh-nexus.de/downloads/HxDSetup.zip" target="_blank" rel="noopener">HXD</a>。</p>
+<a id="more"></a>
+<h1 id="修改步骤"><a href="#修改步骤" class="headerlink" title="修改步骤"></a>修改步骤</h1><p>存档文件位置：<code>%appdata%\Sekiro\{SteamID}\S0000.sl2</code></p>
+<p>具体步骤如下：</p>
+<ol>
+<li>查找待修改文件中<code>00A003D4-00A003DB</code>的位置，将其替换为自己的Steam 64位ID。</li>
+<li>根据下面的存档数据地址寻找欲修改的存档位，将表中该存档SteamID的位置也替换为自己的Steam 64位ID。</li>
+<li>根据下表选取修改的存档数据，对其进行md5校验后将结果覆盖至存档校验的位置。</li>
+<li>如需要融合两个存档中的多个角色，可根据下面的地址自由发挥，切记存档位置和总的SteamID都需替换为自己的。</li>
+</ol>
+<h1 id="存档数据地址"><a href="#存档数据地址" class="headerlink" title="存档数据地址"></a>存档数据地址</h1><p>存档文件共有5个存档位和一个含有SteamID的信息位，每个存档位又分为存档数据和存档校验两个部分，同时每个存档数据中都包含一份SteamID，结构如下。</p>
+<p>其中存档1、存档2地址已经验证过，其余存档的地址是根据数据长度与存档1、2中SteamID与数据头的偏移量<code>33E54</code>计算得到的，不保证其准确性。</p>
+<p>存档1</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">存档数据: <span class="number">00000310</span> - <span class="number">0010030</span>F</span><br><span class="line">存档校验: <span class="number">00000300</span> - <span class="number">0000030</span>F</span><br><span class="line">SteamID: <span class="number">00034164</span> - <span class="number">0003416</span>B</span><br></pre></td></tr></table></figure>
+<p>存档2</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">存档数据: <span class="number">00100320</span> - <span class="number">0020031</span>F</span><br><span class="line">存档校验: <span class="number">00100310</span> - <span class="number">0010031</span>F</span><br><span class="line">SteamID: <span class="number">00134174</span> - <span class="number">0013417</span>B</span><br></pre></td></tr></table></figure>
+<p>存档3</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">存档数据: <span class="number">00200330</span> - <span class="number">0030032</span>F</span><br><span class="line">存档校验: <span class="number">00200320</span> - <span class="number">0020032</span>F</span><br><span class="line">SteamID: <span class="number">00234184</span> - <span class="number">0023418</span>B</span><br></pre></td></tr></table></figure>
+<p>存档4</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">存档数据: <span class="number">00300340</span> - <span class="number">0040033</span>F</span><br><span class="line">存档校验: <span class="number">00300330</span> - <span class="number">0030033</span>F</span><br><span class="line">SteamID: <span class="number">00334194</span> - <span class="number">0033419</span>B</span><br></pre></td></tr></table></figure>
+<p>存档5</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">存档数据: <span class="number">00400350</span> - <span class="number">0050034</span>F</span><br><span class="line">存档校验: <span class="number">00400340</span> - <span class="number">0040034</span>F</span><br><span class="line">SteamID: <span class="number">004341</span>A4 - <span class="number">004341</span>A8</span><br></pre></td></tr></table></figure>
+<p>用户信息</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">总SteamID: <span class="number">00</span>A003D4 - <span class="number">00</span>A003DB</span><br></pre></td></tr></table></figure>
+<p>存档1的数据详情 (来源于Reddit，未验证)</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">角色: <span class="number">00016140</span> - <span class="number">000</span>A0F5F</span><br><span class="line">位置: <span class="number">000</span>A5A70 - <span class="number">000</span>A5B1F</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>参考：<a href="https://www.reddit.com/r/Sekiro/comments/ba44qp/how_to_edit_your_save_file_to_fix_various_issues/" target="_blank" rel="noopener">https://www.reddit.com/r/Sekiro/comments/ba44qp/how_to_edit_your_save_file_to_fix_various_issues/</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>游戏</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>如何使用加农炮将特朗普发射至太阳上</title>
+    <url>/t-1436/</url>
+    <content><![CDATA[<p>特朗普曾表示，若道琼斯指数暴跌1000点，时任总统应被塞进加农炮射到太阳上。而最近美股动荡，一周之内多次熔断，特朗普终于实现了他曾立下的flag。那么就来帮大统领计算一下要如何才能用加农炮将他自己发射到太阳上。</p>
+<a id="more"></a>
+<h1 id="发射所需的炮口速度"><a href="#发射所需的炮口速度" class="headerlink" title="发射所需的炮口速度"></a>发射所需的炮口速度</h1><p>第一步先计算要以多大的速度飞出才能让大统领登陆太阳。</p>
+<p>首先以太阳为参考系，由特朗普绕太阳椭圆运动过程中近日点、远日点的机械能守恒可得：</p>
+<div class="math-fluid">
+$$
+\frac{1}{2}m{v_2}^2-\frac{GM_Sm}{R_{max}}=\frac{1}{2}m{v_3}^{2}-\frac{GM_Sm}{R_{min}} \tag{I}
+$$
+</div>
+又由此过程中角动量守恒可得：
+<div class="math-fluid">
+$$
+mv_2R_{max}=mv_3R_{min} \tag{II}
+$$
+</div>
+联立$(I)(II)$式可得 $v_2=5.85km/s$
+
+<p>这里$v_2$是特朗普在远日点处，即刚脱离地球时相对于太阳的线速度。因为此速度远小于地球公转的线速度，所以发射时需采取与地球公转相反的方向，以此来抵消公转带来的影响。根据速度的合成分解可得远日点处相对地球的速度为：</p>
+<div class="math-fluid">
+$$
+v_1 = v_E-v_2 = 29.78km/s - 5.85km/s = 23.93km/s
+$$
+</div>
+随后再以地球为参考系，由机械能守恒
+<div class="math-fluid">
+$$
+\frac{1}{2}mv^2-\frac{GM_Em}{R_E}=\frac{1}{2}m{v_1}^{2}
+$$
+</div>
+可得发射时的炮口初速$v=26.42km/s$ 
+
+<p>根据特朗普体重为243磅，即110.22千克，可求出发射所需的炮口动能为$3.847 \times 10^7 kJ$</p>
+<h1 id="发射药的用量"><a href="#发射药的用量" class="headerlink" title="发射药的用量"></a>发射药的用量</h1><p>然后再计算一下需要消耗多少的发射药才能获得如此高的动能。</p>
+<p>假设所使用的炮管为口径500mm的滑膛炮，发射药为硝化纤维-硝化甘油-硝基胍三基发射药。</p>
+<div class="math-fluid">
+$$
+\omega' = \frac{E}{f} = \alpha \cdot \omega
+$$
+</div>
+因为发射药的定容火药力已知，可求出弹丸平动的动能需要35.3吨的三基发射药。根据火炮的一般能量分配规律，发射药释放的能量中仅有约32%转化为平动动能，因此估算总共需要约$110.3吨$的发射药。
+
+<p>进一步可以得出药室容积约为$68.94m^3$，药室长度约为$351m$。</p>
+<h1 id="其他火炮参数"><a href="#其他火炮参数" class="headerlink" title="其他火炮参数"></a>其他火炮参数</h1><p>最后根据要求确定一下其他参数，设计出符合要求的炮身。</p>
+<p>假设发射过程为理想过程，整体可分为前期(未发生运动)、第一时期(发射药未燃烧尽)、第二时期(发射药已燃烧尽)三个阶段。<br>根据内弹道学原理，发射过程中满足以下方程组：</p>
+<div class="math-fluid">
+$$
+\begin{cases}
+ 形状函数:&\psi=\chi\left(1+\lambda Z+\mu Z^2 \right) & (1)\\\\\\\\
+ 燃速度方程:&I_k \cdot dZ=p \cdot dt& (2)\\\\\\\\
+ 运动方程:&Sp \cdot dt=\varphi m \cdot dv& (3)\\\\\\\\
+ 内弹道基本方程:&Sp\left(l_\psi +l\right)=f\omega\psi-0.5\theta\varphi mv^2& (4)\\\\\\\\
+ 速度微分:&dl=v\cdot dt& (5)
+\end{cases}
+$$
+</div>
+参照其他滑膛炮，取$\chi=2.01$、$\lambda=-0.50$、$p_0=30Mpa$
+使用Matlab对三个阶段进行模拟后可得:
+
+<p>在发射后约$7ms$后膛压达到最大值，最大膛压约为$800Mpa$，此时速度约$10km/s$。<br>总发射时间约为$37ms$，发射全行程约为$720m$。 </p>
+<p><strong>综上所述，若想将特朗普发射至太阳上，需要炮管长720m、口径500mm、能承受800Mpa膛压的加农炮，并且需要消耗110吨发射药</strong></p>
+]]></content>
+      <categories>
+        <category>杂谈</category>
+      </categories>
+  </entry>
+  <entry>
     <title>手枪单动双动区别</title>
     <url>/t-12400/</url>
     <content><![CDATA[<p><strong>开了一个多星期的坑，既然有人看那就填上吧。</strong></p>
@@ -2909,6 +2945,63 @@ $$
 ]]></content>
       <categories>
         <category>杂谈</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>拼音中的一些读音问题</title>
+    <url>/t-14446/</url>
+    <content><![CDATA[<p>之前和朋友讨论到了拼音中的一些读音问题，在此将问题与答案整理记录一下。<br>其实这些问题答案都在《汉语拼音方案》有相关的解释，汉语拼音方案原文可以参考此链接： <a href="http://www.moe.gov.cn/ewebeditor/uploadfile/2015/03/02/20150302165814246.pdf" target="_blank" rel="noopener">中华人民共和国教育部-汉语拼音方案</a></p>
+<a id="more"></a>
+<h1 id="为何iu的发音与i和u连读不同"><a href="#为何iu的发音与i和u连读不同" class="headerlink" title="为何iu的发音与i和u连读不同"></a>为何iu的发音与i和u连读不同</h1><p>通常使用的韵母<strong>iu</strong>在汉语拼音方案韵母表中的完整写法应该是<strong>iou</strong>，根据其注音符号 <strong>∣ㄡ</strong> 也能感受到iu应该是<strong>i</strong>和<strong>ou</strong>的连读。</p>
+<p>根据韵母说明中的第五条：</p>
+<blockquote>
+<p>iou，uei，uen前面加声母的时候，写成iu，ui，un。例如niu（牛），gui（归），lun（论）。</p>
+</blockquote>
+<h1 id="为何ei与e和i连读不同"><a href="#为何ei与e和i连读不同" class="headerlink" title="为何ei与e和i连读不同"></a>为何ei与e和i连读不同</h1><p>这个问题与上一个问题不同，并不是韵母缩写的问题，而是用常用的字母代替了不常用的字母。</p>
+<p>根据韵母说明第三条</p>
+<blockquote>
+<p>韵母ㄝ单用的时候写成ê。</p>
+</blockquote>
+<p>所以通常写的韵母<strong>e</strong>表示两个元音，即注音符号中的<strong>ㄜ</strong>和<strong>ㄝ</strong>，按拼音字母的写法分别是<strong>e</strong>和<strong>ê</strong>。<br>因为<strong>ê</strong>单独使用时对应的字只有<code>诶</code>，所以为了方便书写将其整合为<strong>e</strong>，即<strong>e</strong>代表了两个音。<br>复韵母中的e读音都是<strong>ㄝ</strong>，<strong>ei</strong>对应的是就是ê和i的连读，同理还有<strong>ie</strong>和<strong>ue</strong>。</p>
+<p>和这种情况类似的还有<strong>u</strong>和<strong>ü</strong>，韵母说明中第四条中 <code>声母为**j、q、x**时将**ü**省略成**u**</code> 原因与其相似。因为j、q、x与韵母u相拼没有对应的汉字，所以为了书写简便（感觉其实是规则复杂了）将<strong>ü</strong>省略成<strong>u</strong>。因此在拼音输入法中，输入<strong>jv</strong>和<strong>ju</strong>的效果实际上是相同的。</p>
+<h1 id="o应该怎么读"><a href="#o应该怎么读" class="headerlink" title="o应该怎么读"></a>o应该怎么读</h1><p>对于韵母<strong>o</strong>的读音，常见的有<code>窝</code>和<code>哦</code>两种读法（这种汉字标注不是很准确）。其中<code>窝</code>是错误的读法，正确读法应该是<code>哦</code>（虽然我在幼儿园时学到的读音也是接近于uo）。</p>
+<p><strong>o</strong>是一个单韵母，即只发一个音嘴型不变，而<code>窝</code>的读法中有一个嘴型的变化。同时，两个单韵母<strong>o</strong>和<strong>u</strong>连读组成复韵母<strong>ou</strong>，对于这两种读法分别和<strong>u</strong>连读也能体会到区别。</p>
+<p>产生这种现象除了<strong>uo</strong>和<strong>o</strong>易混淆外也有一些其他的原因，比如在汉语拼音方案中韵母边上都标注了与其读音相同的汉字作为参考。而<strong>o</strong>标注的汉字为<code>喔</code>，喔字常读成wo来形容鸡叫，所以拼音<strong>o</strong>也会被误读为wo。</p>
+<h1 id="波应该读成bo还是buo"><a href="#波应该读成bo还是buo" class="headerlink" title="波应该读成bo还是buo"></a>波应该读成bo还是buo</h1><p>bo、buo这两种读法的人都有，而且后一种读buo的人比较多，但按照拼音来说应该读成bo。就像上一个问题中说的一样，<strong>o</strong>和<strong>uo</strong>两个音很接近，发音时很容易混淆。从bo变成buo属于拼音发布至今的时间里发音的一种变化，在一些比较久远的录音里bo、po等音节的读法和现在接近buo、puo的读法有很大区别。</p>
+<p>韵母o和拼音bo的读音可以参考这个视频：</p>
+<div class="mdui-video-container">
+  <iframe src="//player.bilibili.com/player.html?aid=28083740&cid=48530448&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
+<p>同样的，还有<code>熊</code>字。拼音写作<strong>xiong</strong>，但多数人发音更接近<strong>xüong</strong>（为了避免误解<strong>ü</strong>没有省略成<strong>u</strong>），这也是发音在变化的例子。</p>
+]]></content>
+      <categories>
+        <category>杂谈</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>XGP版控制(CONTROL)存档迁移到Steam的方法</title>
+    <url>/t-28659/</url>
+    <content><![CDATA[<p>之前在XGP for PC上玩了一阵控制(CONTROL)，进度大概打了一半，最近趁着进月包又补了一份Steam版。由于不太想从头重新再来一遍，就摸索出来了一个将XGP版控制存档迁移到Steam上的方法。存档迁移后游戏进度可以继承，但原存档中已达成的成就在Steam中不会直接解锁。</p>
+<a id="more"></a>
+
+<h1 id="存档储存位置"><a href="#存档储存位置" class="headerlink" title="存档储存位置"></a>存档储存位置</h1><p>Steam版存档</p>
+<figure class="highlight taggerscript"><table><tr><td class="code"><pre><span class="line">&lt;Steam-folder&gt;<span class="symbol">\u</span>serdata<span class="symbol">\&lt;</span>user-id&gt;<span class="symbol">\8</span>70780<span class="symbol">\r</span>emote\</span><br></pre></td></tr></table></figure>
+<p>XGP版存档</p>
+<figure class="highlight taggerscript"><table><tr><td class="code"><pre><span class="line">C:<span class="symbol">\U</span>sers<span class="symbol">\&lt;</span>user-name&gt;<span class="symbol">\A</span>ppData<span class="symbol">\L</span>ocal<span class="symbol">\P</span>ackages<span class="symbol">\5</span>05GAMESS.PAControlPCGP_tefn33qh9azfc<span class="symbol">\S</span>ysteamppData<span class="symbol">\w</span>gs<span class="symbol">\&lt;</span>id&gt;</span><br></pre></td></tr></table></figure>
+<h1 id="替换方法"><a href="#替换方法" class="headerlink" title="替换方法"></a>替换方法</h1><blockquote>
+<p>注意！替换存档后原存档中已达成的成就在Steam中不会直接解锁！</p>
+</blockquote>
+<ul>
+<li>如图在XGP存档文件夹中选择修改日期最近的一个子文件夹，可以在替换前先运行一下XGP版游戏<br><img src="/images/28659/pic1.png" alt=""></li>
+<li>文件夹中会有六个字符串命名的文件和一个container开头的文件，使用文本编辑器(VS Code、Atom、记事本之类)打开任意一个字符串名字文件，在第一二行会有一个明文的单词<br><img src="/images/28659/pic2.png" alt=""></li>
+<li>将这个文件重命名为<code>savegame-slot-00_xxx</code>的形式，其中名字里的<code>xxx</code>就是在文件第二行找到的单词</li>
+<li>重复对剩余的字符串名字的文件进行操作，不需要用到名字为container的那个文件，最后能得到以下这六个文件<br><img src="/images/28659/pic3.png" alt=""></li>
+<li>将这六个文件移动到Steam版的存档位置<code>&lt;Steam-folder&gt;\userdata\&lt;user-id&gt;\870780 \remote\</code>就大功告成了</li>
+</ul>
+]]></content>
+      <categories>
+        <category>游戏</category>
       </categories>
   </entry>
   <entry>
@@ -3160,60 +3253,111 @@ $$c=\frac{1}{\sqrt{\mu_0 \varepsilon_0}}$$
       </categories>
   </entry>
   <entry>
-    <title>XGP版控制(CONTROL)存档迁移到Steam的方法</title>
-    <url>/t-28659/</url>
-    <content><![CDATA[<p>之前在XGP for PC上玩了一阵控制(CONTROL)，进度大概打了一半，最近趁着进月包又补了一份Steam版。由于不太想从头重新再来一遍，就摸索出来了一个将XGP版控制存档迁移到Steam上的方法。存档迁移后游戏进度可以继承，但原存档中已达成的成就在Steam中不会直接解锁。</p>
+    <title>朝鲜Red Star OS 3.0初体验</title>
+    <url>/t-46143/</url>
+    <content><![CDATA[<p>Red Star OS是朝鲜基于Red Hat开发的一款操作系统，用于朝鲜国内图书馆和学校中的计算机。在这里简单记录一下，如何配置和使用这款由隔壁邻居开发的，在界面风格上与Mac OS X极度相似的操作系统。</p>
 <a id="more"></a>
 
-<h1 id="存档储存位置"><a href="#存档储存位置" class="headerlink" title="存档储存位置"></a>存档储存位置</h1><p>Steam版存档</p>
-<figure class="highlight taggerscript"><table><tr><td class="code"><pre><span class="line">&lt;Steam-folder&gt;<span class="symbol">\u</span>serdata<span class="symbol">\&lt;</span>user-id&gt;<span class="symbol">\8</span>70780<span class="symbol">\r</span>emote\</span><br></pre></td></tr></table></figure>
-<p>XGP版存档</p>
-<figure class="highlight taggerscript"><table><tr><td class="code"><pre><span class="line">C:<span class="symbol">\U</span>sers<span class="symbol">\&lt;</span>user-name&gt;<span class="symbol">\A</span>ppData<span class="symbol">\L</span>ocal<span class="symbol">\P</span>ackages<span class="symbol">\5</span>05GAMESS.PAControlPCGP_tefn33qh9azfc<span class="symbol">\S</span>ysteamppData<span class="symbol">\w</span>gs<span class="symbol">\&lt;</span>id&gt;</span><br></pre></td></tr></table></figure>
-<h1 id="替换方法"><a href="#替换方法" class="headerlink" title="替换方法"></a>替换方法</h1><blockquote>
-<p>注意！替换存档后原存档中已达成的成就在Steam中不会直接解锁！</p>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>下载地址: <a href="https://drive.google.com/file/d/1G2hLOXBR44ZT2dOyC7HkVrplqrsenwtA/" target="_blank" rel="noopener">Red Star OS 3.0</a></p>
+<p>直接使用下载好的iso进行安装即可，需要注意的是镜像在加载过程中没有任何提示，会一直处于黑屏状态。安装过程中的语言问题参考下一节。</p>
+<p><img src="/images/46143/install.webp" alt="install"></p>
+<h1 id="修改语言"><a href="#修改语言" class="headerlink" title="修改语言"></a>修改语言</h1><h2 id="安装过程中使用英文界面"><a href="#安装过程中使用英文界面" class="headerlink" title="安装过程中使用英文界面"></a>安装过程中使用英文界面</h2><p>使用上面下载的iso安装后默认语言是朝文，可以通过修改iso来修改语言。<br>打开iso文件内的<code>~/ isolinux / isolinux.cfg</code>，内容如下：</p>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">default linux</span><br><span class="line">prompt 0</span><br><span class="line">timeout 0</span><br><span class="line">label linux</span><br><span class="line">  kernel vmlinuz</span><br><span class="line">  append <span class="attribute">initrd</span>=initrd.img quiet <span class="attribute">lang</span>=ko <span class="attribute">keymap</span>=us <span class="attribute">selinux</span>=1</span><br></pre></td></tr></table></figure>
+<p>将<code>lang=ko</code>改成<code>lang=en</code>，重新打包并安装即可</p>
+<h2 id="桌面使用英文界面"><a href="#桌面使用英文界面" class="headerlink" title="桌面使用英文界面"></a>桌面使用英文界面</h2><p>修改iso后桌面的系统语言仍然是朝文，需要在完成安装后修改<code>/etc/sysconfig/i18n</code>和<code>/usr/share/config/kdeglobals</code>，将这两个文件中所有的<code>ko_KP</code>修改成<code>en_US</code>。  </p>
+<blockquote>
+<p>关于修改这两个文件内容的方式，可以采用Live CD进行操作或者是在虚拟机外使用Disk Genius，我的操作方法是新建一块虚拟磁盘并安装Ubuntu，使用Ubuntu环境操作Red Star的文件。</p>
 </blockquote>
+<p><img src="/images/46143/ko.webp" alt="install"></p>
+<h2 id="浏览器使用英文界面"><a href="#浏览器使用英文界面" class="headerlink" title="浏览器使用英文界面"></a>浏览器使用英文界面</h2><p>自带的浏览器是实际就是魔改的FireFox，由于Linux下FireFox的语言不会随系统改变而改变，需要进行下面的设置。</p>
 <ul>
-<li>如图在XGP存档文件夹中选择修改日期最近的一个子文件夹，可以在替换前先运行一下XGP版游戏<br><img src="/images/28659/pic1.png" alt=""></li>
-<li>文件夹中会有六个字符串命名的文件和一个container开头的文件，使用文本编辑器(VS Code、Atom、记事本之类)打开任意一个字符串名字文件，在第一二行会有一个明文的单词<br><img src="/images/28659/pic2.png" alt=""></li>
-<li>将这个文件重命名为<code>savegame-slot-00_xxx</code>的形式，其中名字里的<code>xxx</code>就是在文件第二行找到的单词</li>
-<li>重复对剩余的字符串名字的文件进行操作，不需要用到名字为container的那个文件，最后能得到以下这六个文件<br><img src="/images/28659/pic3.png" alt=""></li>
-<li>将这六个文件移动到Steam版的存档位置<code>&lt;Steam-folder&gt;\userdata\&lt;user-id&gt;\870780 \remote\</code>就大功告成了</li>
+<li>打开浏览器选择倒数第二个菜单的选择第三个选项</li>
+<li>在打开的界面里选择倒数第二个选项卡</li>
+<li>选择ko-KP的加载项并将其禁用</li>
+<li>重新启动浏览器</li>
 </ul>
+<p><img src="/images/46143/en.webp" alt="install"></p>
+<h1 id="获取root权限"><a href="#获取root权限" class="headerlink" title="获取root权限"></a>获取root权限</h1><p>Red Star下root用户是默认禁用的，可以通过终端获取root权限(很庆幸居然没有禁用终端)</p>
+<ul>
+<li>依次点击<code>Applications</code>-<code>AppLink</code>-<code>Utilities</code>-<code>Terminal</code>打开终端</li>
+<li>在终端中执行<code>rootsetting</code></li>
+<li>点击锁头图标并输入密码解锁root权限</li>
+</ul>
+<blockquote>
+<p>执行sudo命令的时候可能需要先使用root账号修改sudo组内容</p>
+</blockquote>
+<h1 id="解禁网络限制"><a href="#解禁网络限制" class="headerlink" title="解禁网络限制"></a>解禁网络限制</h1><p>Red Star的自带防火墙设置中仅允许连接指定的内网ip，如需访问外网要手动删除iptables防火墙规则。</p>
+<p>使用root用户在终端执行</p>
+<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">rm <span class="regexp">/etc/</span>sysconfig<span class="regexp">/iptables</span></span><br></pre></td></tr></table></figure>
+<p>重启后即可解禁网络限制</p>
 ]]></content>
       <categories>
-        <category>游戏</category>
+        <category>技术</category>
+        <category>Linux</category>
       </categories>
   </entry>
   <entry>
-    <title>拼音中的一些读音问题</title>
-    <url>/t-14446/</url>
-    <content><![CDATA[<p>之前和朋友讨论到了拼音中的一些读音问题，在此将问题与答案整理记录一下。<br>其实这些问题答案都在《汉语拼音方案》有相关的解释，汉语拼音方案原文可以参考此链接： <a href="http://www.moe.gov.cn/ewebeditor/uploadfile/2015/03/02/20150302165814246.pdf" target="_blank" rel="noopener">中华人民共和国教育部-汉语拼音方案</a></p>
+    <title>使用代理服务播放网易云下架音乐</title>
+    <url>/t-14321/</url>
+    <content><![CDATA[<p>目前网易云上越来越多的音乐因为版权原因被下架，而且很多音乐也变成了vip才能播放（甚至包括大悲咒、国际歌这种音乐）。<br>在这里我们可以使用 <a href="https://github.com/nondanee/UnblockNeteaseMusic" target="_blank" rel="noopener">UnblockNeteaseMusic</a> 来搭建一个网易云代理服务，从而解锁因下架变成灰色的音乐或是需要vip才能播放的音乐。</p>
 <a id="more"></a>
-<h1 id="为何iu的发音与i和u连读不同"><a href="#为何iu的发音与i和u连读不同" class="headerlink" title="为何iu的发音与i和u连读不同"></a>为何iu的发音与i和u连读不同</h1><p>通常使用的韵母<strong>iu</strong>在汉语拼音方案韵母表中的完整写法应该是<strong>iou</strong>，根据其注音符号 <strong>∣ㄡ</strong> 也能感受到iu应该是<strong>i</strong>和<strong>ou</strong>的连读。</p>
-<p>根据韵母说明中的第五条：</p>
+<h1 id="安装与配置"><a href="#安装与配置" class="headerlink" title="安装与配置"></a>安装与配置</h1><h2 id="docker部署"><a href="#docker部署" class="headerlink" title="docker部署"></a>docker部署</h2><h3 id="拉取镜像"><a href="#拉取镜像" class="headerlink" title="拉取镜像"></a>拉取镜像</h3><figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="attribute">docker</span> pull nondanee/unblockneteasemusic</span><br></pre></td></tr></table></figure>
+<h3 id="运行docker"><a href="#运行docker" class="headerlink" title="运行docker"></a>运行docker</h3><figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">docker <span class="builtin-name">run</span> <span class="attribute">--restart</span>=always --name 163 -d -p 8999:8080 nondanee/unblockneteasemusic</span><br></pre></td></tr></table></figure>
+<p>其中 <code>--name 163</code> 是自定义的名字<br><code>8999:8080</code> 是映射端口，表示本地的8999端口映射到docker的8080端口  </p>
+<h2 id="使用npx运行"><a href="#使用npx运行" class="headerlink" title="使用npx运行"></a>使用npx运行</h2><figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line"><span class="variable">$ </span>npx <span class="variable">@nondanee</span>/unblockneteasemusic</span><br></pre></td></tr></table></figure>
+<p><strong>每次使用npx时会自动安装在临时目录，退出后会自动删除</strong></p>
+<h2 id="源码部署"><a href="#源码部署" class="headerlink" title="源码部署"></a>源码部署</h2><p>目前我使用的是这个方法。<br>首先在<a href="https://github.com/nondanee/UnblockNeteaseMusic" target="_blank" rel="noopener">Github</a>上下载最新的源码，并安装node js环境。<br>执行以下内容</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~\UnblockNeteaseMusic</span><br><span class="line">node app.js -p 606:605 -s -e http://music.163.com   <span class="comment">#PC &amp; Android</span></span><br><span class="line">node app.js -p 606:605 -s -e https://music.163.com  <span class="comment">#IOS</span></span><br></pre></td></tr></table></figure>
+<p>也可写成bat脚本方便启动服务</p>
 <blockquote>
-<p>iou，uei，uen前面加声母的时候，写成iu，ui，un。例如niu（牛），gui（归），lun（论）。</p>
+<p>对于设置endpoint音源，对于不同设备需使用不同方式<br>PC版由于不信任用户添加的证书需使用 <code>-e http://music.163.com</code>，IOS版由于无法降级为http必须<code>-e https://music.163.com</code> </p>
 </blockquote>
-<h1 id="为何ei与e和i连读不同"><a href="#为何ei与e和i连读不同" class="headerlink" title="为何ei与e和i连读不同"></a>为何ei与e和i连读不同</h1><p>这个问题与上一个问题不同，并不是韵母缩写的问题，而是用常用的字母代替了不常用的字母。</p>
-<p>根据韵母说明第三条</p>
+<h2 id="参数配置"><a href="#参数配置" class="headerlink" title="参数配置"></a>参数配置</h2><figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">$ unblockneteasemusic -h</span><br><span class="line">usage: unblockneteasemusic [-v] [-p port] [-a address] [-u url] [-f host]</span><br><span class="line">                           [-o source [source <span class="built_in">..</span>.]] [-t token] [-e url] [-s]</span><br><span class="line">                           [-h]</span><br><span class="line"></span><br><span class="line">optional arguments:</span><br><span class="line">  -v, --version                   output the version number</span><br><span class="line">  -p port, --port<span class="built_in"> port </span>           specify<span class="built_in"> server </span>port</span><br><span class="line">  -a address, --address<span class="built_in"> address </span>  specify<span class="built_in"> server </span>host</span><br><span class="line">  -u url, --proxy-url url         request through upstream proxy</span><br><span class="line">  -f host, --force-host host      force the netease<span class="built_in"> server </span>ip</span><br><span class="line">  -o source [source <span class="built_in">..</span>.], --match-order source [source <span class="built_in">..</span>.]</span><br><span class="line">                                  <span class="builtin-name">set</span> priority of sources</span><br><span class="line">  -t token, --token token         <span class="builtin-name">set</span> up<span class="built_in"> proxy </span>authentication</span><br><span class="line">  -e url, --endpoint url          replace virtual endpoint with public host</span><br><span class="line">  -s, --strict                    <span class="builtin-name">enable</span><span class="built_in"> proxy </span>limitation</span><br><span class="line">  -h, --help                      output usage information</span><br></pre></td></tr></table></figure>
+<p>其他配置问题可参考Github Issue中的说明</p>
+<h1 id="使用代理模式解锁音乐"><a href="#使用代理模式解锁音乐" class="headerlink" title="使用代理模式解锁音乐"></a>使用代理模式解锁音乐</h1><blockquote>
+<p>若将服务部署到公网，强烈建议使用严格模式 (此模式下仅放行网易云音乐所属域名的请求) -s 限制代理范围 (需使用 PAC 或 hosts)，以防代理被他人滥用</p>
+</blockquote>
+<h2 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h2><p>在网易云客户端的设置-工具选项中设置自定义代理，模式选择HTTP代理，服务器和端口分别填写对应的ip(或域名)与端口号</p>
+<h2 id="UWP"><a href="#UWP" class="headerlink" title="UWP"></a>UWP</h2><p>在 <code>Windows 设置 &gt; 网络和 Internet &gt; 代理</code> 中设置代理，建议使用自动模式并使用pac<br>脚本地址为<code>http://yoururl:port/proxy.pac</code></p>
 <blockquote>
-<p>韵母ㄝ单用的时候写成ê。</p>
+<p>由于UWP应用存在网络隔离，需手动开启loopback才能使用，类似问题: <a href="https://garybear.cn/t-1358/">Windows10下Edge浏览器等UWP应用无法连接到代理服务器的解决方案</a></p>
 </blockquote>
-<p>所以通常写的韵母<strong>e</strong>表示两个元音，即注音符号中的<strong>ㄜ</strong>和<strong>ㄝ</strong>，按拼音字母的写法分别是<strong>e</strong>和<strong>ê</strong>。<br>因为<strong>ê</strong>单独使用时对应的字只有<code>诶</code>，所以为了方便书写将其整合为<strong>e</strong>，即<strong>e</strong>代表了两个音。<br>复韵母中的e读音都是<strong>ㄝ</strong>，<strong>ei</strong>对应的是就是ê和i的连读，同理还有<strong>ie</strong>和<strong>ue</strong>。</p>
-<p>和这种情况类似的还有<strong>u</strong>和<strong>ü</strong>，韵母说明中第四条中 <code>声母为**j、q、x**时将**ü**省略成**u**</code> 原因与其相似。因为j、q、x与韵母u相拼没有对应的汉字，所以为了书写简便（感觉其实是规则复杂了）将<strong>ü</strong>省略成<strong>u</strong>。因此在拼音输入法中，输入<strong>jv</strong>和<strong>ju</strong>的效果实际上是相同的。</p>
-<h1 id="o应该怎么读"><a href="#o应该怎么读" class="headerlink" title="o应该怎么读"></a>o应该怎么读</h1><p>对于韵母<strong>o</strong>的读音，常见的有<code>窝</code>和<code>哦</code>两种读法（这种汉字标注不是很准确）。其中<code>窝</code>是错误的读法，正确读法应该是<code>哦</code>（虽然我在幼儿园时学到的读音也是接近于uo）。</p>
-<p><strong>o</strong>是一个单韵母，即只发一个音嘴型不变，而<code>窝</code>的读法中有一个嘴型的变化。同时，两个单韵母<strong>o</strong>和<strong>u</strong>连读组成复韵母<strong>ou</strong>，对于这两种读法分别和<strong>u</strong>连读也能体会到区别。</p>
-<p>产生这种现象除了<strong>uo</strong>和<strong>o</strong>易混淆外也有一些其他的原因，比如在汉语拼音方案中韵母边上都标注了与其读音相同的汉字作为参考。而<strong>o</strong>标注的汉字为<code>喔</code>，喔字常读成wo来形容鸡叫，所以拼音<strong>o</strong>也会被误读为wo。</p>
-<h1 id="波应该读成bo还是buo"><a href="#波应该读成bo还是buo" class="headerlink" title="波应该读成bo还是buo"></a>波应该读成bo还是buo</h1><p>bo、buo这两种读法的人都有，而且后一种读buo的人比较多，但按照拼音来说应该读成bo。就像上一个问题中说的一样，<strong>o</strong>和<strong>uo</strong>两个音很接近，发音时很容易混淆。从bo变成buo属于拼音发布至今的时间里发音的一种变化，在一些比较久远的录音里bo、po等音节的读法和现在接近buo、puo的读法有很大区别。</p>
-<p>韵母o和拼音bo的读音可以参考这个视频：</p>
-<div class="mdui-video-container">
-  <iframe src="//player.bilibili.com/player.html?aid=28083740&cid=48530448&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-</div>
-
-<p>同样的，还有<code>熊</code>字。拼音写作<strong>xiong</strong>，但多数人发音更接近<strong>xüong</strong>（为了避免误解<strong>ü</strong>没有省略成<strong>u</strong>），这也是发音在变化的例子。</p>
+<p>请以管理员身份执行命令:</p>
+<figure class="highlight dns"><table><tr><td class="code"><pre><span class="line">checknetisolation loopbackexempt -a -n="<span class="number">1F8B0F94</span>.<span class="number">122165</span>AE053F_j2p0p<span class="number">5q0044a6</span>"</span><br></pre></td></tr></table></figure>
+<h2 id="Android"><a href="#Android" class="headerlink" title="Android"></a>Android</h2><h3 id="PAC"><a href="#PAC" class="headerlink" title="PAC"></a>PAC</h3><p>在<code>WLAN &gt; 修改网络 &gt; 高级选项 &gt; 代理</code>中进行设置，建议使用自动模式并使用pac   </p>
+<blockquote>
+<p>由于网易云app的原因Android下无法通过修改hosts使用</p>
+</blockquote>
+<blockquote>
+<p>部分安卓设备存在运行一定时间后不走pac的情况，可以使用下面的方法配合Clash for Android进行使用</p>
+</blockquote>
+<h3 id="Clash"><a href="#Clash" class="headerlink" title="Clash"></a>Clash</h3><p>使用Clash可以无视wifi或者流量使得网易云走代理，在这里列举一下一些配置文件的要点：</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">mode:</span> <span class="string">Rule</span></span><br><span class="line"><span class="attr">proxies:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">&#123;</span> <span class="attr">name:</span> <span class="string">"UnblockNeteaseMusic_Network"</span><span class="string">,</span> <span class="attr">type:</span> <span class="string">http,</span> <span class="attr">server:</span> <span class="string">YOUR</span> <span class="string">SERVER,</span> <span class="attr">port:</span> <span class="string">YOUR</span> <span class="string">PORT</span> <span class="string">&#125;</span></span><br><span class="line"><span class="attr">proxy-groups:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">&#123;</span> <span class="attr">name:</span> <span class="string">"UnblockNeteaseMusic"</span><span class="string">,</span> <span class="attr">type:</span> <span class="string">url-test,</span> <span class="attr">proxies:</span> <span class="string">["UnblockNeteaseMusic_Network"],</span> <span class="attr">url:</span> <span class="string">"http://www.gstatic.com/generate_204"</span><span class="string">,</span> <span class="attr">interval:</span> <span class="number">60</span> <span class="string">&#125;</span></span><br><span class="line"><span class="attr">rules:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,music.163.com,UnblockNeteaseMusic</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,interface.music.163.com,UnblockNeteaseMusic</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,interface3.music.163.com,UnblockNeteaseMusic</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,apm.music.163.com,UnblockNeteaseMusic</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,apm3.music.163.com,UnblockNeteaseMusic</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,man.netease.com,UnblockNeteaseMusic</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,api.iplay.163.com,UnblockNeteaseMusic</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">IP-CIDR,39.105.63.80/32,UnblockNeteaseMusic</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">IP-CIDR,45.254.48.1/32,UnblockNeteaseMusic</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">IP-CIDR,47.100.127.239/32,UnblockNeteaseMusic</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">IP-CIDR,59.111.160.195/32,UnblockNeteaseMusic</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">IP-CIDR,59.111.160.197/32,UnblockNeteaseMusic</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">IP-CIDR,59.111.181.35/32,UnblockNeteaseMusic</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">IP-CIDR,59.111.181.38/32,UnblockNeteaseMusic</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">IP-CIDR,59.111.181.60/32,UnblockNeteaseMusic</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">IP-CIDR,101.71.154.241/32,UnblockNeteaseMusic</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">IP-CIDR,103.126.92.132/32,UnblockNeteaseMusic</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">IP-CIDR,103.126.92.133/32,UnblockNeteaseMusic</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">IP-CIDR,112.13.119.17/32,UnblockNeteaseMusic</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">IP-CIDR,112.13.122.1/32,UnblockNeteaseMusic</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">IP-CIDR,115.236.118.33/32,UnblockNeteaseMusic</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">IP-CIDR,115.236.121.1/32,UnblockNeteaseMusic</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">IP-CIDR,118.24.63.156/32,UnblockNeteaseMusic</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">IP-CIDR,193.112.159.225/32,UnblockNeteaseMusic</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">IP-CIDR,223.252.199.66/32,UnblockNeteaseMusic</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">IP-CIDR,223.252.199.67/32,UnblockNeteaseMusic</span></span><br></pre></td></tr></table></figure>
+<p>配置好的文件可以放在服务器上方便通过URL添加使用</p>
+<h2 id="Linux-macOS"><a href="#Linux-macOS" class="headerlink" title="Linux / macOS"></a>Linux / macOS</h2><p>Ubuntu下使用<code>系统设置 &gt; 网络 &gt; 网络代理</code>，macOS下使用<code>系统偏好设置 &gt; 网络 &gt; 高级 &gt; 代理</code>来设置代理</p>
+<h3 id="自签证书"><a href="#自签证书" class="headerlink" title="自签证书"></a>自签证书</h3><p>由于Linux客户端1.2以上版本及macOS客户端700以上版本无法通过握手后返回空数据的方式降级https请求使用http接口，需要进行自签证书。自签证书过程参考<a href="https://github.com/nondanee/UnblockNeteaseMusic/issues/48" target="_blank" rel="noopener">这里</a>，现ubuntu为例进行信任证书添加：</p>
+<figure class="highlight stata"><table><tr><td class="code"><pre><span class="line">$ ~/Downloads$ sudo cp <span class="keyword">ca</span>.crt /usr/<span class="keyword">local</span>/share/<span class="keyword">ca</span>-certificates/</span><br><span class="line">$ ~/Downloads$ sudo <span class="keyword">update</span>-<span class="keyword">ca</span>-certificates </span><br><span class="line"></span><br><span class="line">Updating certificates <span class="keyword">in</span> /etc/ssl/certs...</span><br><span class="line">1 added, 0 removed; done.</span><br><span class="line">Running hooks <span class="keyword">in</span> /etc/<span class="keyword">ca</span>-certificates/<span class="keyword">update</span>.<span class="keyword">d</span>...</span><br><span class="line"></span><br><span class="line">Adding debian:<span class="keyword">ca</span>.pem</span><br><span class="line">done.</span><br><span class="line">done.</span><br></pre></td></tr></table></figure>
+<h3 id="增加默认启动参数"><a href="#增加默认启动参数" class="headerlink" title="增加默认启动参数"></a>增加默认启动参数</h3><p>自签完成后，启动客户端需要增加<code>--ignore-certificate-errors</code>参数  </p>
+<figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line"><span class="variable">$ </span>/usr/share/applications<span class="variable">$ </span>ls | grep netease</span><br><span class="line">netease-cloud-music.desktop</span><br><span class="line"><span class="variable">$ </span>/usr/share/applications<span class="variable">$ </span>sudo vim netease-cloud-music.desktop</span><br></pre></td></tr></table></figure>
+<p>在Exec这行末尾增加<code>--ignore-certificate-errors</code>参数</p>
+<h2 id="IOS"><a href="#IOS" class="headerlink" title="IOS"></a>IOS</h2><blockquote>
+<p>IOS下的配置方式我并未试过，在此仅搬运issue中的一些总结</p>
+</blockquote>
+<ul>
+<li>在ios设备上点击<a href="https://raw.githubusercontent.com/nondanee/UnblockNeteaseMusic/master/ca.crt" target="_blank" rel="noopener">安装CA证书</a></li>
+<li>在设置 &gt; 通用 &gt; 关于本机 &gt; 证书信任设置，手动开启证书。<a href="https://support.apple.com/zh-cn/HT204477" target="_blank" rel="noopener">官方教程</a></li>
+<li>在<code>无线局域网 &gt; HTTP 代理 &gt; 配置代理</code>里开启 http 代理，手动填IP、端口号，也可以配合代理软件使用，详见 <a href="https://github.com/nondanee/UnblockNeteaseMusic/issues/56" target="_blank" rel="noopener">配合 Surge 或 Clash 食用</a>、<a href="https://github.com/nondanee/UnblockNeteaseMusic/issues/65" target="_blank" rel="noopener">Shadowrocket</a></li>
+</ul>
+<p>另外可以采用配置 https endpoint 转发音源的方法免除安装证书的过程，具体详见：  </p>
+<ul>
+<li><a href="https://github.com/nondanee/UnblockNeteaseMusic/issues/444" target="_blank" rel="noopener">IOS解决方案</a>  </li>
+<li><a href="https://github.com/nondanee/UnblockNeteaseMusic/issues/65" target="_blank" rel="noopener">iOS食用指南</a></li>
+<li><a href="https://github.com/nondanee/UnblockNeteaseMusic/issues/368" target="_blank" rel="noopener">iOS配置经验分享</a></li>
+</ul>
 ]]></content>
       <categories>
-        <category>杂谈</category>
+        <category>技术</category>
+        <category>网络硬件</category>
       </categories>
   </entry>
   <entry>
@@ -3399,111 +3543,49 @@ $$c=\frac{1}{\sqrt{\mu_0 \varepsilon_0}}$$
       </categories>
   </entry>
   <entry>
-    <title>使用代理服务播放网易云下架音乐</title>
-    <url>/t-14321/</url>
-    <content><![CDATA[<p>目前网易云上越来越多的音乐因为版权原因被下架，而且很多音乐也变成了vip才能播放（甚至包括大悲咒、国际歌这种音乐）。<br>在这里我们可以使用 <a href="https://github.com/nondanee/UnblockNeteaseMusic" target="_blank" rel="noopener">UnblockNeteaseMusic</a> 来搭建一个网易云代理服务，从而解锁因下架变成灰色的音乐或是需要vip才能播放的音乐。</p>
-<a id="more"></a>
-<h1 id="安装与配置"><a href="#安装与配置" class="headerlink" title="安装与配置"></a>安装与配置</h1><h2 id="docker部署"><a href="#docker部署" class="headerlink" title="docker部署"></a>docker部署</h2><h3 id="拉取镜像"><a href="#拉取镜像" class="headerlink" title="拉取镜像"></a>拉取镜像</h3><figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="attribute">docker</span> pull nondanee/unblockneteasemusic</span><br></pre></td></tr></table></figure>
-<h3 id="运行docker"><a href="#运行docker" class="headerlink" title="运行docker"></a>运行docker</h3><figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">docker <span class="builtin-name">run</span> <span class="attribute">--restart</span>=always --name 163 -d -p 8999:8080 nondanee/unblockneteasemusic</span><br></pre></td></tr></table></figure>
-<p>其中 <code>--name 163</code> 是自定义的名字<br><code>8999:8080</code> 是映射端口，表示本地的8999端口映射到docker的8080端口  </p>
-<h2 id="使用npx运行"><a href="#使用npx运行" class="headerlink" title="使用npx运行"></a>使用npx运行</h2><figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line"><span class="variable">$ </span>npx <span class="variable">@nondanee</span>/unblockneteasemusic</span><br></pre></td></tr></table></figure>
-<p><strong>每次使用npx时会自动安装在临时目录，退出后会自动删除</strong></p>
-<h2 id="源码部署"><a href="#源码部署" class="headerlink" title="源码部署"></a>源码部署</h2><p>目前我使用的是这个方法。<br>首先在<a href="https://github.com/nondanee/UnblockNeteaseMusic" target="_blank" rel="noopener">Github</a>上下载最新的源码，并安装node js环境。<br>执行以下内容</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~\UnblockNeteaseMusic</span><br><span class="line">node app.js -p 606:605 -s -e http://music.163.com   <span class="comment">#PC &amp; Android</span></span><br><span class="line">node app.js -p 606:605 -s -e https://music.163.com  <span class="comment">#IOS</span></span><br></pre></td></tr></table></figure>
-<p>也可写成bat脚本方便启动服务</p>
-<blockquote>
-<p>对于设置endpoint音源，对于不同设备需使用不同方式<br>PC版由于不信任用户添加的证书需使用 <code>-e http://music.163.com</code>，IOS版由于无法降级为http必须<code>-e https://music.163.com</code> </p>
-</blockquote>
-<h2 id="参数配置"><a href="#参数配置" class="headerlink" title="参数配置"></a>参数配置</h2><figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">$ unblockneteasemusic -h</span><br><span class="line">usage: unblockneteasemusic [-v] [-p port] [-a address] [-u url] [-f host]</span><br><span class="line">                           [-o source [source <span class="built_in">..</span>.]] [-t token] [-e url] [-s]</span><br><span class="line">                           [-h]</span><br><span class="line"></span><br><span class="line">optional arguments:</span><br><span class="line">  -v, --version                   output the version number</span><br><span class="line">  -p port, --port<span class="built_in"> port </span>           specify<span class="built_in"> server </span>port</span><br><span class="line">  -a address, --address<span class="built_in"> address </span>  specify<span class="built_in"> server </span>host</span><br><span class="line">  -u url, --proxy-url url         request through upstream proxy</span><br><span class="line">  -f host, --force-host host      force the netease<span class="built_in"> server </span>ip</span><br><span class="line">  -o source [source <span class="built_in">..</span>.], --match-order source [source <span class="built_in">..</span>.]</span><br><span class="line">                                  <span class="builtin-name">set</span> priority of sources</span><br><span class="line">  -t token, --token token         <span class="builtin-name">set</span> up<span class="built_in"> proxy </span>authentication</span><br><span class="line">  -e url, --endpoint url          replace virtual endpoint with public host</span><br><span class="line">  -s, --strict                    <span class="builtin-name">enable</span><span class="built_in"> proxy </span>limitation</span><br><span class="line">  -h, --help                      output usage information</span><br></pre></td></tr></table></figure>
-<p>其他配置问题可参考Github Issue中的说明</p>
-<h1 id="使用代理模式解锁音乐"><a href="#使用代理模式解锁音乐" class="headerlink" title="使用代理模式解锁音乐"></a>使用代理模式解锁音乐</h1><blockquote>
-<p>若将服务部署到公网，强烈建议使用严格模式 (此模式下仅放行网易云音乐所属域名的请求) -s 限制代理范围 (需使用 PAC 或 hosts)，以防代理被他人滥用</p>
-</blockquote>
-<h2 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h2><p>在网易云客户端的设置-工具选项中设置自定义代理，模式选择HTTP代理，服务器和端口分别填写对应的ip(或域名)与端口号</p>
-<h2 id="UWP"><a href="#UWP" class="headerlink" title="UWP"></a>UWP</h2><p>在 <code>Windows 设置 &gt; 网络和 Internet &gt; 代理</code> 中设置代理，建议使用自动模式并使用pac<br>脚本地址为<code>http://yoururl:port/proxy.pac</code></p>
-<blockquote>
-<p>由于UWP应用存在网络隔离，需手动开启loopback才能使用，类似问题: <a href="https://garybear.cn/t-1358/">Windows10下Edge浏览器等UWP应用无法连接到代理服务器的解决方案</a></p>
-</blockquote>
-<p>请以管理员身份执行命令:</p>
-<figure class="highlight dns"><table><tr><td class="code"><pre><span class="line">checknetisolation loopbackexempt -a -n="<span class="number">1F8B0F94</span>.<span class="number">122165</span>AE053F_j2p0p<span class="number">5q0044a6</span>"</span><br></pre></td></tr></table></figure>
-<h2 id="Android"><a href="#Android" class="headerlink" title="Android"></a>Android</h2><h3 id="PAC"><a href="#PAC" class="headerlink" title="PAC"></a>PAC</h3><p>在<code>WLAN &gt; 修改网络 &gt; 高级选项 &gt; 代理</code>中进行设置，建议使用自动模式并使用pac   </p>
-<blockquote>
-<p>由于网易云app的原因Android下无法通过修改hosts使用</p>
-</blockquote>
-<blockquote>
-<p>部分安卓设备存在运行一定时间后不走pac的情况，可以使用下面的方法配合Clash for Android进行使用</p>
-</blockquote>
-<h3 id="Clash"><a href="#Clash" class="headerlink" title="Clash"></a>Clash</h3><p>使用Clash可以无视wifi或者流量使得网易云走代理，在这里列举一下一些配置文件的要点：</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">mode:</span> <span class="string">Rule</span></span><br><span class="line"><span class="attr">proxies:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">&#123;</span> <span class="attr">name:</span> <span class="string">"UnblockNeteaseMusic_Network"</span><span class="string">,</span> <span class="attr">type:</span> <span class="string">http,</span> <span class="attr">server:</span> <span class="string">YOUR</span> <span class="string">SERVER,</span> <span class="attr">port:</span> <span class="string">YOUR</span> <span class="string">PORT</span> <span class="string">&#125;</span></span><br><span class="line"><span class="attr">proxy-groups:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">&#123;</span> <span class="attr">name:</span> <span class="string">"UnblockNeteaseMusic"</span><span class="string">,</span> <span class="attr">type:</span> <span class="string">url-test,</span> <span class="attr">proxies:</span> <span class="string">["UnblockNeteaseMusic_Network"],</span> <span class="attr">url:</span> <span class="string">"http://www.gstatic.com/generate_204"</span><span class="string">,</span> <span class="attr">interval:</span> <span class="number">60</span> <span class="string">&#125;</span></span><br><span class="line"><span class="attr">rules:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,music.163.com,UnblockNeteaseMusic</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,interface.music.163.com,UnblockNeteaseMusic</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,interface3.music.163.com,UnblockNeteaseMusic</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,apm.music.163.com,UnblockNeteaseMusic</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,apm3.music.163.com,UnblockNeteaseMusic</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,man.netease.com,UnblockNeteaseMusic</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,api.iplay.163.com,UnblockNeteaseMusic</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">IP-CIDR,39.105.63.80/32,UnblockNeteaseMusic</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">IP-CIDR,45.254.48.1/32,UnblockNeteaseMusic</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">IP-CIDR,47.100.127.239/32,UnblockNeteaseMusic</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">IP-CIDR,59.111.160.195/32,UnblockNeteaseMusic</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">IP-CIDR,59.111.160.197/32,UnblockNeteaseMusic</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">IP-CIDR,59.111.181.35/32,UnblockNeteaseMusic</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">IP-CIDR,59.111.181.38/32,UnblockNeteaseMusic</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">IP-CIDR,59.111.181.60/32,UnblockNeteaseMusic</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">IP-CIDR,101.71.154.241/32,UnblockNeteaseMusic</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">IP-CIDR,103.126.92.132/32,UnblockNeteaseMusic</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">IP-CIDR,103.126.92.133/32,UnblockNeteaseMusic</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">IP-CIDR,112.13.119.17/32,UnblockNeteaseMusic</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">IP-CIDR,112.13.122.1/32,UnblockNeteaseMusic</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">IP-CIDR,115.236.118.33/32,UnblockNeteaseMusic</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">IP-CIDR,115.236.121.1/32,UnblockNeteaseMusic</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">IP-CIDR,118.24.63.156/32,UnblockNeteaseMusic</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">IP-CIDR,193.112.159.225/32,UnblockNeteaseMusic</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">IP-CIDR,223.252.199.66/32,UnblockNeteaseMusic</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">IP-CIDR,223.252.199.67/32,UnblockNeteaseMusic</span></span><br></pre></td></tr></table></figure>
-<p>配置好的文件可以放在服务器上方便通过URL添加使用</p>
-<h2 id="Linux-macOS"><a href="#Linux-macOS" class="headerlink" title="Linux / macOS"></a>Linux / macOS</h2><p>Ubuntu下使用<code>系统设置 &gt; 网络 &gt; 网络代理</code>，macOS下使用<code>系统偏好设置 &gt; 网络 &gt; 高级 &gt; 代理</code>来设置代理</p>
-<h3 id="自签证书"><a href="#自签证书" class="headerlink" title="自签证书"></a>自签证书</h3><p>由于Linux客户端1.2以上版本及macOS客户端700以上版本无法通过握手后返回空数据的方式降级https请求使用http接口，需要进行自签证书。自签证书过程参考<a href="https://github.com/nondanee/UnblockNeteaseMusic/issues/48" target="_blank" rel="noopener">这里</a>，现ubuntu为例进行信任证书添加：</p>
-<figure class="highlight stata"><table><tr><td class="code"><pre><span class="line">$ ~/Downloads$ sudo cp <span class="keyword">ca</span>.crt /usr/<span class="keyword">local</span>/share/<span class="keyword">ca</span>-certificates/</span><br><span class="line">$ ~/Downloads$ sudo <span class="keyword">update</span>-<span class="keyword">ca</span>-certificates </span><br><span class="line"></span><br><span class="line">Updating certificates <span class="keyword">in</span> /etc/ssl/certs...</span><br><span class="line">1 added, 0 removed; done.</span><br><span class="line">Running hooks <span class="keyword">in</span> /etc/<span class="keyword">ca</span>-certificates/<span class="keyword">update</span>.<span class="keyword">d</span>...</span><br><span class="line"></span><br><span class="line">Adding debian:<span class="keyword">ca</span>.pem</span><br><span class="line">done.</span><br><span class="line">done.</span><br></pre></td></tr></table></figure>
-<h3 id="增加默认启动参数"><a href="#增加默认启动参数" class="headerlink" title="增加默认启动参数"></a>增加默认启动参数</h3><p>自签完成后，启动客户端需要增加<code>--ignore-certificate-errors</code>参数  </p>
-<figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line"><span class="variable">$ </span>/usr/share/applications<span class="variable">$ </span>ls | grep netease</span><br><span class="line">netease-cloud-music.desktop</span><br><span class="line"><span class="variable">$ </span>/usr/share/applications<span class="variable">$ </span>sudo vim netease-cloud-music.desktop</span><br></pre></td></tr></table></figure>
-<p>在Exec这行末尾增加<code>--ignore-certificate-errors</code>参数</p>
-<h2 id="IOS"><a href="#IOS" class="headerlink" title="IOS"></a>IOS</h2><blockquote>
-<p>IOS下的配置方式我并未试过，在此仅搬运issue中的一些总结</p>
-</blockquote>
-<ul>
-<li>在ios设备上点击<a href="https://raw.githubusercontent.com/nondanee/UnblockNeteaseMusic/master/ca.crt" target="_blank" rel="noopener">安装CA证书</a></li>
-<li>在设置 &gt; 通用 &gt; 关于本机 &gt; 证书信任设置，手动开启证书。<a href="https://support.apple.com/zh-cn/HT204477" target="_blank" rel="noopener">官方教程</a></li>
-<li>在<code>无线局域网 &gt; HTTP 代理 &gt; 配置代理</code>里开启 http 代理，手动填IP、端口号，也可以配合代理软件使用，详见 <a href="https://github.com/nondanee/UnblockNeteaseMusic/issues/56" target="_blank" rel="noopener">配合 Surge 或 Clash 食用</a>、<a href="https://github.com/nondanee/UnblockNeteaseMusic/issues/65" target="_blank" rel="noopener">Shadowrocket</a></li>
-</ul>
-<p>另外可以采用配置 https endpoint 转发音源的方法免除安装证书的过程，具体详见：  </p>
-<ul>
-<li><a href="https://github.com/nondanee/UnblockNeteaseMusic/issues/444" target="_blank" rel="noopener">IOS解决方案</a>  </li>
-<li><a href="https://github.com/nondanee/UnblockNeteaseMusic/issues/65" target="_blank" rel="noopener">iOS食用指南</a></li>
-<li><a href="https://github.com/nondanee/UnblockNeteaseMusic/issues/368" target="_blank" rel="noopener">iOS配置经验分享</a></li>
-</ul>
+    <title>网站重回腾讯云的感想</title>
+    <url>/t-31700/</url>
+    <content><![CDATA[<p>2019年8月26日，这个小网站兜兜转转，又回到了腾讯云，这个她诞生的地方。</p>
+<p>2015年的时候，为了和同学一起联机玩MC，我在腾讯云租下了一台学生版的云服务器。在一起联机游戏之余，我整理了一些游戏攻略和指令，写成静态的html页面，用python开了一个简单的http服务器，供自己平日里在游戏时查阅指令。从MC到饥荒再到叛乱，再到各种架设过的游戏，这些攻略与指南和我一起度过了大一大二时当“辣鸡房管”的日子。</p>
+<p>后来，因为学习上的事情需要用到Windows Server，腾讯云的服务器被我重装成了Windows Server 2012，这个小网站就在DigitalOcean、CenTex等各大廉价Linux服务商间流浪。在这期间，小站也迎来了一次重大的升级，从几个简单的静态页面变成了WordPress驱动的动态博客，内容上也渐渐加入了一些IT方面的文章。</p>
+<p>再后来，腾讯云这面的机器闲置了下来，博客又重新迁了回来，还是 <em>Powered by WordPress</em> 。只不过几个月后，用Nginx替换掉了原先一直在用的Apache。2017年刚回到腾讯云的时候，我就顺手注册了 <a href="https://garybear.cn">garybear.cn</a> 这个域名。但是因为那时刚换了新身份证，再加上自己懒癌晚期，就一直没有去备案，域名也一直扔在这吃灰。一年后终于想起来这件事，忙里忙外几趟程序跑下来，这个域名终于正式启用的。在博客之外还开了一个<code>status</code>子域名，在同一台服务器上借助 <em>vhost</em> 开了一个云监控，随时查看各服务器是否宕机。</p>
+<p>WordPress是一个很优秀的博客程序，插件丰富，功能强大，可是时间久了也会觉得他过于臃肿，希望换一个简洁、轻量一些的博客。大概是2018年末，我开始关注到了Typecho。之前在WordPress上面我也是通过插件用MarkDown在写文章，所以Typecho的原生支持MarkDown这一点对我还是很有吸引力的。趁着寒假的时间，我把服务器重新拾掇了一遍，服务器环境还是LNMP，还是原来的云监控，只不过这次博客换成了 <em>Powered by Typecho</em> 。寒假的时候正好在家里忙毕设，学习了一下Julia语言，顺便用家里的电脑尝试了一下CUDA GPU计算。其中的一些心得，一些体会，还有毕设项目里的注意点，都让我记录在了博客里。</p>
+<p>2019年上半年算是过得比较痛苦吧，半年的时间都在忙毕设，只不过前两个月在家的时候兴致高昂，开学后逐渐咸鱼化，想着已经如此了干脆混个毕业算了。四月份从武汉偷着跑回学校之后心情糟到了极点，直接就把服务器给停了，没备份任何资料直接停的。心里想着反正六月末学生认证就到期了，不如提前和这些东西做个了断。等到快毕业的时候，其实有些后悔，后悔当时太冲动没来得及备份。Julia的资料，毕设项目的整理，还有我做的毕设论文Latex模板的说明，这些东西其实留给下一届的孩子就好了。可惜辛辛苦苦攒齐的这些东西，被我一把全删了。</p>
+<p>七月份的时候，我在Github Page上又把小网站搭了起来。这次又变回了最初的静态博客，不过不是简单的小网页了，而是 <em>Powered by Hexo</em> 。之前的大部分文章都找不到了，只是零星的找到了以前的几篇草稿和一些搜索引擎的缓存页面。迁到Github之后又重新提交了一次Google Adsense的申请，之前的服务器因为网络原因一直审核不过，这次居然一次通过了，估计这广告挂着也不会有什么人点，就挂着玩玩了。</p>
+<p>网站放在Github上最大的问题就是国内访问速度不稳定，所以打算再加一个国内节点。思考了一下最终还是选择了腾讯云的COS，之前用WordPress和Typecho的时候用COS做过图床，对这个还是比较熟悉的。忙了大半天之后，今天算是正式回来了。</p>
+<p>就这样，这个小破站又回到了她最初的起点，她长大了，也变强了。</p>
 ]]></content>
       <categories>
-        <category>技术</category>
-        <category>网络硬件</category>
+        <category>碎碎念</category>
       </categories>
   </entry>
   <entry>
-    <title>朝鲜Red Star OS 3.0初体验</title>
-    <url>/t-46143/</url>
-    <content><![CDATA[<p>Red Star OS是朝鲜基于Red Hat开发的一款操作系统，用于朝鲜国内图书馆和学校中的计算机。在这里简单记录一下，如何配置和使用这款由隔壁邻居开发的，在界面风格上与Mac OS X极度相似的操作系统。</p>
+    <title>葛底斯堡演说(Gettysburg Address)原文及翻译</title>
+    <url>/t-47599/</url>
+    <content><![CDATA[<p>葛底斯堡演说(Gettysburg Address)是1863年11月19日美国总统林肯在宾夕法尼亚州葛底斯堡发表的著名的哀悼阵亡将士的著名演说。尽管葛底斯堡演说全文只有10句话，272个单词，可它却是美国公认的最伟大的演讲，也是美国历史上被引用最多的演说。包括他在内的很多名人也都曾朗读背诵过此篇演说。</p>
 <a id="more"></a>
 
-<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>下载地址: <a href="https://drive.google.com/file/d/1G2hLOXBR44ZT2dOyC7HkVrplqrsenwtA/" target="_blank" rel="noopener">Red Star OS 3.0</a></p>
-<p>直接使用下载好的iso进行安装即可，需要注意的是镜像在加载过程中没有任何提示，会一直处于黑屏状态。安装过程中的语言问题参考下一节。</p>
-<p><img src="/images/46143/install.webp" alt="install"></p>
-<h1 id="修改语言"><a href="#修改语言" class="headerlink" title="修改语言"></a>修改语言</h1><h2 id="安装过程中使用英文界面"><a href="#安装过程中使用英文界面" class="headerlink" title="安装过程中使用英文界面"></a>安装过程中使用英文界面</h2><p>使用上面下载的iso安装后默认语言是朝文，可以通过修改iso来修改语言。<br>打开iso文件内的<code>~/ isolinux / isolinux.cfg</code>，内容如下：</p>
-<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">default linux</span><br><span class="line">prompt 0</span><br><span class="line">timeout 0</span><br><span class="line">label linux</span><br><span class="line">  kernel vmlinuz</span><br><span class="line">  append <span class="attribute">initrd</span>=initrd.img quiet <span class="attribute">lang</span>=ko <span class="attribute">keymap</span>=us <span class="attribute">selinux</span>=1</span><br></pre></td></tr></table></figure>
-<p>将<code>lang=ko</code>改成<code>lang=en</code>，重新打包并安装即可</p>
-<h2 id="桌面使用英文界面"><a href="#桌面使用英文界面" class="headerlink" title="桌面使用英文界面"></a>桌面使用英文界面</h2><p>修改iso后桌面的系统语言仍然是朝文，需要在完成安装后修改<code>/etc/sysconfig/i18n</code>和<code>/usr/share/config/kdeglobals</code>，将这两个文件中所有的<code>ko_KP</code>修改成<code>en_US</code>。  </p>
-<blockquote>
-<p>关于修改这两个文件内容的方式，可以采用Live CD进行操作或者是在虚拟机外使用Disk Genius，我的操作方法是新建一块虚拟磁盘并安装Ubuntu，使用Ubuntu环境操作Red Star的文件。</p>
+<h1 id="葛底斯堡演说全文"><a href="#葛底斯堡演说全文" class="headerlink" title="葛底斯堡演说全文"></a>葛底斯堡演说全文</h1><blockquote>
+<p>Four score and seven years ago our fathers brought forth ,on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.  </p>
 </blockquote>
-<p><img src="/images/46143/ko.webp" alt="install"></p>
-<h2 id="浏览器使用英文界面"><a href="#浏览器使用英文界面" class="headerlink" title="浏览器使用英文界面"></a>浏览器使用英文界面</h2><p>自带的浏览器是实际就是魔改的FireFox，由于Linux下FireFox的语言不会随系统改变而改变，需要进行下面的设置。</p>
-<ul>
-<li>打开浏览器选择倒数第二个菜单的选择第三个选项</li>
-<li>在打开的界面里选择倒数第二个选项卡</li>
-<li>选择ko-KP的加载项并将其禁用</li>
-<li>重新启动浏览器</li>
-</ul>
-<p><img src="/images/46143/en.webp" alt="install"></p>
-<h1 id="获取root权限"><a href="#获取root权限" class="headerlink" title="获取root权限"></a>获取root权限</h1><p>Red Star下root用户是默认禁用的，可以通过终端获取root权限(很庆幸居然没有禁用终端)</p>
-<ul>
-<li>依次点击<code>Applications</code>-<code>AppLink</code>-<code>Utilities</code>-<code>Terminal</code>打开终端</li>
-<li>在终端中执行<code>rootsetting</code></li>
-<li>点击锁头图标并输入密码解锁root权限</li>
-</ul>
+<p>87年前，我们的先辈们在这个大陆上创立了一个新国家，它孕育于自由之中，奉行一切人生来平等的原则。</p>
 <blockquote>
-<p>执行sudo命令的时候可能需要先使用root账号修改sudo组内容</p>
+<p>Now we are engaged in a great civil war, testing whether that nation, or any nation so conceived and so dedicated, can long endure. We are met on a great battle-field of that war. We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that nation might live. It is altogether fitting and proper that we should do this.  </p>
 </blockquote>
-<h1 id="解禁网络限制"><a href="#解禁网络限制" class="headerlink" title="解禁网络限制"></a>解禁网络限制</h1><p>Red Star的自带防火墙设置中仅允许连接指定的内网ip，如需访问外网要手动删除iptables防火墙规则。</p>
-<p>使用root用户在终端执行</p>
-<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">rm <span class="regexp">/etc/</span>sysconfig<span class="regexp">/iptables</span></span><br></pre></td></tr></table></figure>
-<p>重启后即可解禁网络限制</p>
-]]></content>
+<p>现在我们正从事一场伟大的内战，以考验这个国家，或者任何一个孕育于自由和奉行上述原则的国家是否能够长久存在下去。我们在这场战争中的一个伟大战场上集会。烈士们为使这个国家能够生存下去而献出了自己的生命，我们来到这里，是要把这个战场的一部分奉献给他们作为最后安息之所。我们这样做是完全应该而且是非常恰当的。</p>
+<blockquote>
+<p>But, in a larger sense, we can not dedicate – we can not consecrate – we can not hallow – this ground. The brave men, living and dead, who struggled here, have consecrated it, far above our poor power to add or detract. The world will little note, nor long remember what we say here, but it can never forget what they did here. It is for us the living, rather, to be dedicated here to the unfinished work which they who fought here have thus far so nobly advanced. It is rather for us to be here dedicated to the great task remaining before us – that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion – that we here highly resolve that these dead shall not have died in vain – that this nation, under God, shall have a new birth of freedom – and that government of the people, by the people, for the people, shall not perish from the earth.</p>
+</blockquote>
+<p>但是，从更广泛的意义上来说，这块土地我们不能够奉献，不能够圣化，不能够神化。那些曾在这里战斗过的勇士们，活着的和去世的，已经把这块土地圣化了，这远不是我们微薄的力量所能增减的。我们今天在这里所说的话，全世界不大会注意，也不会长久地记住，但勇士们在这里所做过的事，全世界却永远不会忘记。毋宁说，倒是我们这些还活着的人，应该在这里把自己奉献于勇士们已经如此崇高地向前推进但尚未完成的事业。倒是我们应该在这里把自己奉献于仍然留在我们面前的伟大任务–我们要从这些光荣的死者身上汲取更多的献身精神，来完成他们已经完全彻底为之献身的事业；我们要在这里下定最大的决心，不让这些死者白白牺牲；我们要使国家在上帝福佑下得到自由的新生，要使这个民有、民治、民享的政府永世长存。</p>
+<h1 id="葛底斯堡演说朗读视频"><a href="#葛底斯堡演说朗读视频" class="headerlink" title="葛底斯堡演说朗读视频"></a>葛底斯堡演说朗读视频</h1><h2 id="美国领导人接力背诵版"><a href="#美国领导人接力背诵版" class="headerlink" title="美国领导人接力背诵版"></a>美国领导人接力背诵版</h2><div class="mdui-video-container">
+  <iframe src="//player.bilibili.com/player.html?aid=57269257&bvid=BV1Rx41197zE&cid=99995759&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
+<h2 id="中英文电影版"><a href="#中英文电影版" class="headerlink" title="中英文电影版"></a>中英文电影版</h2><div class="mdui-video-container">
+  <iframe src="//player.bilibili.com/player.html?aid=45620254&bvid=BV1nb411v7y6&cid=79878020&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>]]></content>
       <categories>
-        <category>技术</category>
-        <category>Linux</category>
+        <category>杂谈</category>
       </categories>
   </entry>
   <entry>
@@ -3526,82 +3608,6 @@ $$c=\frac{1}{\sqrt{\mu_0 \varepsilon_0}}$$
       <tags>
         <tag>GTA</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>达肯方程的推导过程</title>
-    <url>/t-38683/</url>
-    <content><![CDATA[<p>达肯方程描述柯肯达尔效应的一个方程，是将物质的扩散和对流全部按照扩散的形式来表示，其思路类似于全电流定律。下面是其推导过程：</p>
-<a id="more"></a>
-<h1 id="推导过程"><a href="#推导过程" class="headerlink" title="推导过程"></a>推导过程</h1><p>假设存在一个AB两组分组成的一维扩散偶，考虑对流的因素<br>根据扩散第一定律，对于成分A</p>
-<div class="math-fluid">
-$$
-J_A=J'_A + C_A \cdot v = -D_A \cdot \frac{\partial C_A}{\partial x} + C_A \cdot v  \tag{1}
-$$
-</div>
-
-<p>取其中一个微元体，由物质守恒可得</p>
-<div class="math-fluid">
-$$
-\iint_S - \vec{J} \cdot d\vec{S} = \iint_{S} - \left ( - \vec{D}_A \cdot \frac{\partial C_A}{\partial x} + C_A \cdot \vec{v} \right ) \cdot d\vec{S} = \iiint_V \frac{\partial C_A}{\partial t} \cdot dV \tag{2}
-$$
-</div>
-由高斯定理可得
-<div class="math-fluid">
-$$
-\iint_S \left ( \vec{D}_A \cdot \frac{\partial C_A}{\partial x} - C_A \cdot \vec{v} \right ) \cdot d \vec{S} = \iiint_V \frac{\partial}{\partial x} \left ( D_A \cdot \frac{\partial C_A}{\partial x} - C_A \cdot v \right ) \cdot dV \tag{3}
-$$
-</div>
-联立$(2)、(3)$二式可得
-<div class="math-fluid">
-$$
-\frac{\partial C_A}{\partial t} = \frac{\partial}{\partial x} \left ( D_A \cdot \frac{\partial C_A}{\partial x} - C_A \cdot v \right ) \tag{4}
-$$
-</div>
-同理对于成分B可得
-<div class="math-fluid">
-$$
-\frac{\partial C_B}{\partial t} = \frac{\partial}{\partial x} \left ( D_B \cdot \frac{\partial C_B}{\partial x} - C_B \cdot v \right ) \tag{5}
-$$
-</div>
-由于晶体内部各处成分不变，即 $C_A+C_B = const$，两边求导可得
-<div class="math-fluid">
-$$
-\frac{\partial C}{\partial x} = \frac{\partial C_A}{\partial x} + \frac{\partial C_B}{\partial x} = 0 \tag{6}
-$$
-</div>
-将$(4)、(5)$式相加，并代入$(6)$式可得
-<div class="math-fluid">
-$$
-\left ( D_A - D_B \right ) \cdot \frac{\partial C_A}{\partial x} - C \cdot v = const = 0
-$$
-</div>
-整理可得标记面的移动速度
-<div class="math-fluid">
-$$
-v = \frac{\left ( D_A - D_B \right )}{C} \cdot \frac{\partial C_A}{\partial x} = \left ( D_A - D_B \right ) \cdot \frac{\partial{x_A}}{\partial x} \tag{7}
-$$
-</div>
-将$(7)$式代入$(1)$式中可得
-<div class="math-fluid">
-$$
-J_A = -D_A \cdot \frac{\partial C_A}{\partial x} + C_A \cdot v = -\tilde {D} \cdot \frac{\partial C_A}{\partial x} \tag{8}
-$$
-</div>
-同理对于B组分有
-<div class="math-fluid">
-$$
-J_B = -D_B \cdot \frac{\partial C_B}{\partial x} + C_B \cdot v = -\tilde {D} \cdot \frac{\partial C_B}{\partial x} \tag{9}
-$$
-</div>
-其中$\tilde {D}$是互扩散系数，联立$(6)(7)(8)(9)$式可得
-<div class="math-fluid">
-$$
-\tilde {D}=\frac{C_B}{C_A+C_B} \cdot D_A + \frac{C_A}{C_A+C_B} \cdot D_B = x_B \cdot D_A + x_A \cdot D_B
-$$
-</div>]]></content>
-      <categories>
-        <category>杂谈</category>
-      </categories>
   </entry>
   <entry>
     <title>酒精与84消毒液混用是否会中毒的分析</title>
@@ -3697,6 +3703,82 @@ $$
       </categories>
   </entry>
   <entry>
+    <title>达肯方程的推导过程</title>
+    <url>/t-38683/</url>
+    <content><![CDATA[<p>达肯方程描述柯肯达尔效应的一个方程，是将物质的扩散和对流全部按照扩散的形式来表示，其思路类似于全电流定律。下面是其推导过程：</p>
+<a id="more"></a>
+<h1 id="推导过程"><a href="#推导过程" class="headerlink" title="推导过程"></a>推导过程</h1><p>假设存在一个AB两组分组成的一维扩散偶，考虑对流的因素<br>根据扩散第一定律，对于成分A</p>
+<div class="math-fluid">
+$$
+J_A=J'_A + C_A \cdot v = -D_A \cdot \frac{\partial C_A}{\partial x} + C_A \cdot v  \tag{1}
+$$
+</div>
+
+<p>取其中一个微元体，由物质守恒可得</p>
+<div class="math-fluid">
+$$
+\iint_S - \vec{J} \cdot d\vec{S} = \iint_{S} - \left ( - \vec{D}_A \cdot \frac{\partial C_A}{\partial x} + C_A \cdot \vec{v} \right ) \cdot d\vec{S} = \iiint_V \frac{\partial C_A}{\partial t} \cdot dV \tag{2}
+$$
+</div>
+由高斯定理可得
+<div class="math-fluid">
+$$
+\iint_S \left ( \vec{D}_A \cdot \frac{\partial C_A}{\partial x} - C_A \cdot \vec{v} \right ) \cdot d \vec{S} = \iiint_V \frac{\partial}{\partial x} \left ( D_A \cdot \frac{\partial C_A}{\partial x} - C_A \cdot v \right ) \cdot dV \tag{3}
+$$
+</div>
+联立$(2)、(3)$二式可得
+<div class="math-fluid">
+$$
+\frac{\partial C_A}{\partial t} = \frac{\partial}{\partial x} \left ( D_A \cdot \frac{\partial C_A}{\partial x} - C_A \cdot v \right ) \tag{4}
+$$
+</div>
+同理对于成分B可得
+<div class="math-fluid">
+$$
+\frac{\partial C_B}{\partial t} = \frac{\partial}{\partial x} \left ( D_B \cdot \frac{\partial C_B}{\partial x} - C_B \cdot v \right ) \tag{5}
+$$
+</div>
+由于晶体内部各处成分不变，即 $C_A+C_B = const$，两边求导可得
+<div class="math-fluid">
+$$
+\frac{\partial C}{\partial x} = \frac{\partial C_A}{\partial x} + \frac{\partial C_B}{\partial x} = 0 \tag{6}
+$$
+</div>
+将$(4)、(5)$式相加，并代入$(6)$式可得
+<div class="math-fluid">
+$$
+\left ( D_A - D_B \right ) \cdot \frac{\partial C_A}{\partial x} - C \cdot v = const = 0
+$$
+</div>
+整理可得标记面的移动速度
+<div class="math-fluid">
+$$
+v = \frac{\left ( D_A - D_B \right )}{C} \cdot \frac{\partial C_A}{\partial x} = \left ( D_A - D_B \right ) \cdot \frac{\partial{x_A}}{\partial x} \tag{7}
+$$
+</div>
+将$(7)$式代入$(1)$式中可得
+<div class="math-fluid">
+$$
+J_A = -D_A \cdot \frac{\partial C_A}{\partial x} + C_A \cdot v = -\tilde {D} \cdot \frac{\partial C_A}{\partial x} \tag{8}
+$$
+</div>
+同理对于B组分有
+<div class="math-fluid">
+$$
+J_B = -D_B \cdot \frac{\partial C_B}{\partial x} + C_B \cdot v = -\tilde {D} \cdot \frac{\partial C_B}{\partial x} \tag{9}
+$$
+</div>
+其中$\tilde {D}$是互扩散系数，联立$(6)(7)(8)(9)$式可得
+<div class="math-fluid">
+$$
+\tilde {D}=\frac{C_B}{C_A+C_B} \cdot D_A + \frac{C_A}{C_A+C_B} \cdot D_B = x_B \cdot D_A + x_A \cdot D_B
+$$
+</div>]]></content>
+      <categories>
+        <category>杂谈</category>
+      </categories>
+  </entry>
+  <entry>
     <title>金属离子的水解-絮凝-沉淀过程</title>
     <url>/t-53706/</url>
     <content><![CDATA[<p>金属离子的水解-絮凝-沉淀是一个复杂的过程，其中会产生多种单体与聚合体，沉淀产物也会根据反应条件的不同而有所区别。这里以铝离子和铁离子为例进行简单介绍：</p>
@@ -3767,202 +3849,6 @@ $$
 }
 $$
 </div>]]></content>
-      <categories>
-        <category>杂谈</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>网站重回腾讯云的感想</title>
-    <url>/t-31700/</url>
-    <content><![CDATA[<p>2019年8月26日，这个小网站兜兜转转，又回到了腾讯云，这个她诞生的地方。</p>
-<p>2015年的时候，为了和同学一起联机玩MC，我在腾讯云租下了一台学生版的云服务器。在一起联机游戏之余，我整理了一些游戏攻略和指令，写成静态的html页面，用python开了一个简单的http服务器，供自己平日里在游戏时查阅指令。从MC到饥荒再到叛乱，再到各种架设过的游戏，这些攻略与指南和我一起度过了大一大二时当“辣鸡房管”的日子。</p>
-<p>后来，因为学习上的事情需要用到Windows Server，腾讯云的服务器被我重装成了Windows Server 2012，这个小网站就在DigitalOcean、CenTex等各大廉价Linux服务商间流浪。在这期间，小站也迎来了一次重大的升级，从几个简单的静态页面变成了WordPress驱动的动态博客，内容上也渐渐加入了一些IT方面的文章。</p>
-<p>再后来，腾讯云这面的机器闲置了下来，博客又重新迁了回来，还是 <em>Powered by WordPress</em> 。只不过几个月后，用Nginx替换掉了原先一直在用的Apache。2017年刚回到腾讯云的时候，我就顺手注册了 <a href="https://garybear.cn">garybear.cn</a> 这个域名。但是因为那时刚换了新身份证，再加上自己懒癌晚期，就一直没有去备案，域名也一直扔在这吃灰。一年后终于想起来这件事，忙里忙外几趟程序跑下来，这个域名终于正式启用的。在博客之外还开了一个<code>status</code>子域名，在同一台服务器上借助 <em>vhost</em> 开了一个云监控，随时查看各服务器是否宕机。</p>
-<p>WordPress是一个很优秀的博客程序，插件丰富，功能强大，可是时间久了也会觉得他过于臃肿，希望换一个简洁、轻量一些的博客。大概是2018年末，我开始关注到了Typecho。之前在WordPress上面我也是通过插件用MarkDown在写文章，所以Typecho的原生支持MarkDown这一点对我还是很有吸引力的。趁着寒假的时间，我把服务器重新拾掇了一遍，服务器环境还是LNMP，还是原来的云监控，只不过这次博客换成了 <em>Powered by Typecho</em> 。寒假的时候正好在家里忙毕设，学习了一下Julia语言，顺便用家里的电脑尝试了一下CUDA GPU计算。其中的一些心得，一些体会，还有毕设项目里的注意点，都让我记录在了博客里。</p>
-<p>2019年上半年算是过得比较痛苦吧，半年的时间都在忙毕设，只不过前两个月在家的时候兴致高昂，开学后逐渐咸鱼化，想着已经如此了干脆混个毕业算了。四月份从武汉偷着跑回学校之后心情糟到了极点，直接就把服务器给停了，没备份任何资料直接停的。心里想着反正六月末学生认证就到期了，不如提前和这些东西做个了断。等到快毕业的时候，其实有些后悔，后悔当时太冲动没来得及备份。Julia的资料，毕设项目的整理，还有我做的毕设论文Latex模板的说明，这些东西其实留给下一届的孩子就好了。可惜辛辛苦苦攒齐的这些东西，被我一把全删了。</p>
-<p>七月份的时候，我在Github Page上又把小网站搭了起来。这次又变回了最初的静态博客，不过不是简单的小网页了，而是 <em>Powered by Hexo</em> 。之前的大部分文章都找不到了，只是零星的找到了以前的几篇草稿和一些搜索引擎的缓存页面。迁到Github之后又重新提交了一次Google Adsense的申请，之前的服务器因为网络原因一直审核不过，这次居然一次通过了，估计这广告挂着也不会有什么人点，就挂着玩玩了。</p>
-<p>网站放在Github上最大的问题就是国内访问速度不稳定，所以打算再加一个国内节点。思考了一下最终还是选择了腾讯云的COS，之前用WordPress和Typecho的时候用COS做过图床，对这个还是比较熟悉的。忙了大半天之后，今天算是正式回来了。</p>
-<p>就这样，这个小破站又回到了她最初的起点，她长大了，也变强了。</p>
-]]></content>
-      <categories>
-        <category>碎碎念</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>葛底斯堡演说(Gettysburg Address)原文及翻译</title>
-    <url>/t-47599/</url>
-    <content><![CDATA[<p>葛底斯堡演说(Gettysburg Address)是1863年11月19日美国总统林肯在宾夕法尼亚州葛底斯堡发表的著名的哀悼阵亡将士的著名演说。尽管葛底斯堡演说全文只有10句话，272个单词，可它却是美国公认的最伟大的演讲，也是美国历史上被引用最多的演说。包括他在内的很多名人也都曾朗读背诵过此篇演说。</p>
-<a id="more"></a>
-
-<h1 id="葛底斯堡演说全文"><a href="#葛底斯堡演说全文" class="headerlink" title="葛底斯堡演说全文"></a>葛底斯堡演说全文</h1><blockquote>
-<p>Four score and seven years ago our fathers brought forth ,on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.  </p>
-</blockquote>
-<p>87年前，我们的先辈们在这个大陆上创立了一个新国家，它孕育于自由之中，奉行一切人生来平等的原则。</p>
-<blockquote>
-<p>Now we are engaged in a great civil war, testing whether that nation, or any nation so conceived and so dedicated, can long endure. We are met on a great battle-field of that war. We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that nation might live. It is altogether fitting and proper that we should do this.  </p>
-</blockquote>
-<p>现在我们正从事一场伟大的内战，以考验这个国家，或者任何一个孕育于自由和奉行上述原则的国家是否能够长久存在下去。我们在这场战争中的一个伟大战场上集会。烈士们为使这个国家能够生存下去而献出了自己的生命，我们来到这里，是要把这个战场的一部分奉献给他们作为最后安息之所。我们这样做是完全应该而且是非常恰当的。</p>
-<blockquote>
-<p>But, in a larger sense, we can not dedicate – we can not consecrate – we can not hallow – this ground. The brave men, living and dead, who struggled here, have consecrated it, far above our poor power to add or detract. The world will little note, nor long remember what we say here, but it can never forget what they did here. It is for us the living, rather, to be dedicated here to the unfinished work which they who fought here have thus far so nobly advanced. It is rather for us to be here dedicated to the great task remaining before us – that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion – that we here highly resolve that these dead shall not have died in vain – that this nation, under God, shall have a new birth of freedom – and that government of the people, by the people, for the people, shall not perish from the earth.</p>
-</blockquote>
-<p>但是，从更广泛的意义上来说，这块土地我们不能够奉献，不能够圣化，不能够神化。那些曾在这里战斗过的勇士们，活着的和去世的，已经把这块土地圣化了，这远不是我们微薄的力量所能增减的。我们今天在这里所说的话，全世界不大会注意，也不会长久地记住，但勇士们在这里所做过的事，全世界却永远不会忘记。毋宁说，倒是我们这些还活着的人，应该在这里把自己奉献于勇士们已经如此崇高地向前推进但尚未完成的事业。倒是我们应该在这里把自己奉献于仍然留在我们面前的伟大任务–我们要从这些光荣的死者身上汲取更多的献身精神，来完成他们已经完全彻底为之献身的事业；我们要在这里下定最大的决心，不让这些死者白白牺牲；我们要使国家在上帝福佑下得到自由的新生，要使这个民有、民治、民享的政府永世长存。</p>
-<h1 id="葛底斯堡演说朗读视频"><a href="#葛底斯堡演说朗读视频" class="headerlink" title="葛底斯堡演说朗读视频"></a>葛底斯堡演说朗读视频</h1><h2 id="美国领导人接力背诵版"><a href="#美国领导人接力背诵版" class="headerlink" title="美国领导人接力背诵版"></a>美国领导人接力背诵版</h2><div class="mdui-video-container">
-  <iframe src="//player.bilibili.com/player.html?aid=57269257&bvid=BV1Rx41197zE&cid=99995759&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-</div>
-
-<h2 id="中英文电影版"><a href="#中英文电影版" class="headerlink" title="中英文电影版"></a>中英文电影版</h2><div class="mdui-video-container">
-  <iframe src="//player.bilibili.com/player.html?aid=45620254&bvid=BV1nb411v7y6&cid=79878020&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-</div>]]></content>
-      <categories>
-        <category>杂谈</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>麦克斯韦方程组的推导及形式转换</title>
-    <url>/t-44074/</url>
-    <content><![CDATA[<p>麦克斯韦方程组可以算得上是物理学史上最优美的一组方程了，就像镇楼图里说的那样，因为麦克斯韦方程组，所以才有了光。</p>
-<a id="more"></a>
-<h1 id="麦克斯韦方程组积分形式的推导和证明"><a href="#麦克斯韦方程组积分形式的推导和证明" class="headerlink" title="麦克斯韦方程组积分形式的推导和证明"></a>麦克斯韦方程组积分形式的推导和证明</h1><h2 id="高斯定律"><a href="#高斯定律" class="headerlink" title="高斯定律"></a>高斯定律</h2><p><strong>高斯定律表示任意曲面的电通量之和等于其中包含的电荷数，证明了电场是有源场</strong></p>
-<p><strong>推导方式如下：</strong></p>
-<p>根据库仑定律及电场强度的定义，空间内某一点出电场强度为：</p>
-<div class="math-fluid">
-$$
-\vec{E} = \frac{q}{4 \pi \varepsilon \cdot r^2} \space \vec{e}_r
-$$
-</div>
-在空间内任取一封闭曲面，在曲面内任一点处放置一点电荷$q$，曲面电通量的微元为：
-<div class="math-fluid">
-$$
-d \Phi =\vec{E} \cdot d \vec{S} = \frac{q}{4 \pi \varepsilon \cdot r^2} \space dS \space cos \theta = \frac{q}{4 \pi \varepsilon} \cdot\frac{d S^{\prime}}{ r^2}
-$$
-</div>
-电通量之和为：
-<div class="math-fluid">
-$$ 
-\begin{split}
-  \Phi & = \oint_{S} \vec{E} \cdot d\vec{S}
-  \\\\
-  & = \oint_{S} \frac{q}{4 \pi \varepsilon} \cdot\frac{d S^{\prime}}{r^2}
-  \\\\
-  & = \frac{q}{4 \pi \varepsilon} \cdot\frac{4 \pi r^2}{r^2}
-  \\\\
-  & = \frac{q}{\varepsilon} 
-\end{split}
-$$
-</div>
-
-<h2 id="高斯磁定律"><a href="#高斯磁定律" class="headerlink" title="高斯磁定律"></a>高斯磁定律</h2><p><strong>高斯磁定律表示任意曲面的磁通量之和为零，证明了磁场是无源场</strong></p>
-<p><strong>推导方式如下：</strong></p>
-<p>根据毕奥-萨伐尔定律：</p>
-<div class="math-fluid">
-$$d \vec{B} = \frac{\mu}{4 \pi} \cdot \frac{Id \vec{l} \times \vec{r}}{r^2}$$
-</div>
-曲面的磁通量为：
-<div class="math-fluid">
-$$ \oint_{S} \vec{B} \cdot d\vec{S}= \frac{\mu I}{4 \pi} \oint_{S} \frac{d \vec{l} \times \vec{r}}{r^2} \cdot d \vec{S}$$
-</div>
-
-<ul>
-<li>当电流元位于曲面内部时，$\vec{r}$与$\vec{S}$间相互平行，磁通量积分$ \oint_{S} \vec{B} \cdot d\vec{S}= 0 $</li>
-<li>当电流元位于曲面外侧时，做一个包含电流元在内的辅助曲面，由增补法可得磁通量积分$ \oint_{S} \vec{B} \cdot d\vec{S}= 0 $</li>
-</ul>
-<h2 id="法拉第电磁感应定律"><a href="#法拉第电磁感应定律" class="headerlink" title="法拉第电磁感应定律"></a>法拉第电磁感应定律</h2><p><strong>法拉第电磁感应定律是由实验现象归纳得到的，表明了变化的磁场产生电场</strong></p>
-<p><strong>推导方式如下：</strong></p>
-<p>设一变化的磁场中放置一个环形线圈，回路中的电动势是电场强度的环路积分：</p>
-<div class="math-fluid">
-$$ \varepsilon = \oint_{l} \vec{E} \cdot d\vec{l} $$
-</div>
-同时实验表明回路中电动势等于磁通量的变化率：
-<div class="math-fluid">
-$$ \varepsilon = - \frac{d \Phi}{dt} = - \iint_{S} \frac{\partial \vec{B}}{\partial t} \cdot d\vec{S} $$
-</div>
-综合两式可得法拉第电磁感应定律的积分形式：
-<div class="math-fluid">
-$$ \oint_{l} \vec{E} \cdot d\vec{l}= - \iint_{S} \frac{\partial \vec{B}}{\partial t} \cdot d\vec{S} $$
-</div>
-
-<h2 id="全电流定律"><a href="#全电流定律" class="headerlink" title="全电流定律"></a>全电流定律</h2><p><strong>全电流定律是麦克斯韦根据安培环路定理扩展了位移电流的部分而得到的</strong><br><strong>表明了电流和变化的电场产生磁场</strong></p>
-<p><strong>推导方式如下：</strong></p>
-<p>根据毕奥-萨伐尔定律：</p>
-<div class="math-fluid">
-$$d \vec{B} = \frac{\mu}{4 \pi} \cdot \frac{Id \vec{l} \times \vec{r}}{r^2}$$
-</div>
-竖直导线周围某点的磁场强度为
-<div class="math-fluid">
-$$
-B = \frac{\mu I}{2 \pi r}
-$$
-</div>
-对任意闭合路径存在环路积分：
-<div class="math-fluid">
-$$ \oint_{l} \vec{B} \cdot d\vec{l} = \oint_{l} B \space r \space d \varphi = \oint_{l} \frac{\mu I}{2 \pi r} \space r \space d \varphi = \mu I  \tag{*} $$
-</div>
-
-<p><strong>以上标星号(*)的公式即安培环路定理</strong></p>
-<p>同时引入位移电流的概念：位移电流是由电场变化引起的电流变化，不产生焦耳热但仍具有磁效应，电容器极板间的充放电就是位移电流，位移电流的表达式：</p>
-<div class="math-fluid">
-$$ I_D = \mu \iint_{S} \frac{\partial \vec{D}}{\partial t} \cdot d\vec{S} $$
-</div>
-综合可得全电流定律：
-<div class="math-fluid">
-$$ \oint_{l} \vec{H} \cdot d\vec{l}= I + \iint_{S} \frac{\partial \vec{D}}{\partial t} \cdot d\vec{S} $$
-</div>
-
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>一般情况下积分形式的麦克斯韦方程组如下：</p>
-<h3 id="高斯定律-1"><a href="#高斯定律-1" class="headerlink" title="高斯定律"></a>高斯定律</h3><div class="math-fluid">
-$$ \oint_{S} \vec{D} \cdot d\vec{S}= q \tag{1} $$
-</div>
-
-<h3 id="高斯磁定律-1"><a href="#高斯磁定律-1" class="headerlink" title="高斯磁定律"></a>高斯磁定律</h3><div class="math-fluid">
-$$ \oint_{S} \vec{B} \cdot d\vec{S}= 0 \tag{2} $$
-</div>
-
-<h3 id="法拉第电磁感应定律-1"><a href="#法拉第电磁感应定律-1" class="headerlink" title="法拉第电磁感应定律"></a>法拉第电磁感应定律</h3><div class="math-fluid">
-$$ \oint_{l} \vec{E} \cdot d\vec{l}= - \iint_{S} \frac{\partial \vec{B}}{\partial t} \cdot d\vec{S} \tag{3} $$
-</div>
-
-<h3 id="全电流定律-1"><a href="#全电流定律-1" class="headerlink" title="全电流定律"></a>全电流定律</h3><div class="math-fluid">
-$$ \oint_{l} \vec{H} \cdot d\vec{l}= I + \iint_{S} \frac{\partial \vec{D}}{\partial t} \cdot d\vec{S} \tag{4} \label{4} $$
-</div>
-
-
-
-
-<h1 id="由麦克斯韦方程组的积分形式推导其微分形式"><a href="#由麦克斯韦方程组的积分形式推导其微分形式" class="headerlink" title="由麦克斯韦方程组的积分形式推导其微分形式"></a>由麦克斯韦方程组的积分形式推导其微分形式</h1><h2 id="Nabla算子简介"><a href="#Nabla算子简介" class="headerlink" title="Nabla算子简介"></a>Nabla算子简介</h2><p>Nabla算子($\nabla$)是一种矢量算符，可以将标量场转化为梯度的矢量场，借助它及其点积、叉积能够方便地表示$梯度(grand)$、$散度(div)$、$旋度(curl)$ 等概念：</p>
-<p>$$\nabla = \frac{\partial }{\partial x} \vec{i} + \frac{\partial }{\partial y} \vec{j} + \frac{\partial }{\partial z} \vec{k} $$</p>
-<p>$$\nabla E = grand({E}) = \frac{\partial E }{\partial x} \vec{i} + \frac{\partial E }{\partial y} \vec{j} + \frac{\partial E }{\partial z} \vec{k} $$</p>
-<p>$$\nabla \cdot \vec{E} = div(\vec{E}) = \frac{\partial E_x }{\partial x} + \frac{\partial E_y }{\partial y} + \frac{\partial E_z }{\partial z} $$</p>
-<p>$$\nabla \times \vec{E} = curl(\vec{E}) = \left ( \frac{\partial E_z}{\partial y} - \frac{\partial E_y}{\partial z} \right ) \vec{i} + \left ( \frac{\partial E_x}{\partial z} - \frac{\partial E_z}{\partial x} \right ) \vec{j} + \left ( \frac{\partial E_y}{\partial x} - \frac{\partial E_x}{\partial y} \right ) \vec{k}$$</p>
-<h2 id="高斯定律-2"><a href="#高斯定律-2" class="headerlink" title="高斯定律"></a>高斯定律</h2><p>取空间内任一六面体的体积元，以三条棱为轴建立xyz直角坐标系。则对于任意两个相对的面，电通量之和为：</p>
-<p>$$<br>\left ( \vec{D} + \frac{\partial \vec{D}}{\partial x} \right ) \cdot \vec{i} \space dydz - \vec{D} \cdot \vec{i} \space dydz = \frac{\partial \vec{D}}{\partial x} \cdot \vec{i} \space dydz = \frac{\partial D_x}{\partial x} \space dxdydz<br>$$</p>
-<p>对于整个体积元来说，六个面的电通量之和为：</p>
-<p>$$<br>\oint_{S} \vec{D} \cdot d\vec{S} = \left ( \frac{\partial D_x}{\partial x} + \frac{\partial D_y}{\partial y} + \frac{\partial D_z}{\partial z} \right ) dxdydz = \rho dxdydz<br>$$</p>
-<p>引入哈密顿算子$\nabla$，可得微分形式如下：</p>
-<p>$$\nabla \cdot \vec{D}=\rho$$</p>
-<h2 id="高斯磁定律-2"><a href="#高斯磁定律-2" class="headerlink" title="高斯磁定律"></a>高斯磁定律</h2><p>形式与方法与高斯电定律相同，同理可得：</p>
-<p>$$<br>\oint_{S} \vec{B} \cdot d\vec{S} = \left ( \frac{\partial B_x}{\partial x} + \frac{\partial B_y}{\partial y} + \frac{\partial B_z}{\partial z} \right ) dxdydz = 0<br>$$</p>
-<p>引入哈密顿算子$\nabla$，可得微分形式如下：</p>
-<p>$$\nabla \cdot \vec{B}=0$$</p>
-<h2 id="全电流定律-2"><a href="#全电流定律-2" class="headerlink" title="全电流定律"></a>全电流定律</h2><p>取空间内一点P，过P点在平行于$xOy$的平面上作一矩形闭合回路。设P处磁场强度为$H$,则距离P点$dx$处磁场强度为$H+\frac{\partial H}{\partial y} dx$，距离P点$dy$处磁场强度为$H+\frac{\partial H}{\partial x} dy$。在$xOy$平面上存在：</p>
-<p>$$<br>\begin{split}<br>  \oint_{l} \vec{H} \cdot d\vec{l} &amp; = - \vec{H} \cdot \vec{j} \space dy + \vec{H} \cdot \vec{i} \space dx + \left ( \vec{H} + \frac{\partial \vec{H}}{\partial x} \space dx \right ) \cdot \vec{j} \space dy - \left ( \vec{H} + \frac{\partial \vec{H}}{\partial y} \space dy \right ) \cdot \vec{i} \space dx<br>  \\<br>  &amp; = \left ( \frac{\partial H_y}{\partial x} - \frac{\partial H_x}{\partial y} \right ) \space dxdy<br>\end{split}<br>$$</p>
-<p>矩形回路内包含的电流元与电通量变化率分别为：<br>$$<br>\vec{I} = \vec{J} \cdot dS = J_z \space dxdy<br>$$</p>
-<p>$$<br>\iint_{S} \frac{\partial \vec{D}}{\partial t} \cdot d \vec{S} = \frac{\partial D_z}{\partial t} \space dxdy<br>$$</p>
-<p>将以上三部分带入$\eqref{4}$式消去$dxdy$后可得：</p>
-<p>$$<br>\left ( \frac{\partial H_y}{\partial x} - \frac{\partial H_x}{\partial y} \right ) = J_z + \frac{\partial D_z}{\partial t}<br>$$</p>
-<p>同理对$yOz$平面和$xOz$平面进行同样的处理可得到另两个方程，综合三式可得：</p>
-<p>$$curl \vec{H} = \vec{J} + \frac{\partial \vec{D}}{\partial t}$$</p>
-<p>引入$\nabla$算子后可写成：</p>
-<p>$$\nabla \times \vec{H} = \vec{J} + \frac{\partial \vec{D}}{\partial t}$$</p>
-<h2 id="法拉第电磁感应定律-2"><a href="#法拉第电磁感应定律-2" class="headerlink" title="法拉第电磁感应定律"></a>法拉第电磁感应定律</h2><p>形式与方法与全电流定律类似，同理可得：</p>
-<p>$$curl \vec{E} = - \frac{\partial \vec{B}}{\partial t}$$</p>
-<p>引入$\nabla$算子后可写成：</p>
-<p>$$\nabla \times \vec{E} = -\frac{\partial \vec{B}}{\partial t}$$</p>
-<h2 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h2><p>微分形式下的麦克斯韦方程组如下：</p>
-<p>$$ \nabla \cdot \vec{D}=\rho \tag{1*} $$</p>
-<p>$$ \nabla \cdot \vec{B}=0 \tag{2*} $$</p>
-<p>$$ \nabla \times \vec{E} = -\frac{\partial \vec{B}}{\partial t} \tag{3*} $$</p>
-<p>$$ \nabla \times \vec{H} = \vec{J} + \frac{\partial \vec{D}}{\partial t} \tag{4*} $$</p>
-]]></content>
       <categories>
         <category>杂谈</category>
       </categories>
@@ -4828,22 +4714,153 @@ $$ \oint_{l} \vec{H} \cdot d\vec{l}= I + \iint_{S} \frac{\partial \vec{D}}{\part
       </categories>
   </entry>
   <entry>
-    <title>Insurgency(叛乱)服务器架设脚本</title>
-    <url>/t-109/</url>
-    <content><![CDATA[<p><a href="https://github.com/kb1000fx/Insurgency-Dedicated-Server-Setup" target="_blank" rel="noopener">Github地址</a></p>
-<h1 id="测试环境"><a href="#测试环境" class="headerlink" title="测试环境"></a>测试环境</h1><p>Digital Ocean SFO2<br>1 vCPU<br>1 GB Memory<br>25 GB Disk<br>Ubuntu 18.04.1 x64 </p>
+    <title>麦克斯韦方程组的推导及形式转换</title>
+    <url>/t-44074/</url>
+    <content><![CDATA[<p>麦克斯韦方程组可以算得上是物理学史上最优美的一组方程了，就像镇楼图里说的那样，因为麦克斯韦方程组，所以才有了光。</p>
 <a id="more"></a>
-<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><figure class="highlight"><table><tr><td class="code"><pre><span class="line">wget https://raw.githubusercontent.com/kb1000fx/Insurgency-Dedicated-Server-Setup/master/install_insurgency.sh --no-check-certificate</span><br><span class="line">chmod +x install_insurgency.sh</span><br><span class="line">./install_insurgency.sh</span><br></pre></td></tr></table></figure>
-<h1 id="配置-server-cfg-文件"><a href="#配置-server-cfg-文件" class="headerlink" title="配置 server.cfg 文件"></a>配置 server.cfg 文件</h1><p>安装时已自动下载了默认文件.<br>编辑  <code>./insurgency/cfg/server.cfg</code> 来改变服务器设置.  </p>
-<p>更多内容参见：<br><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=854506744" target="_blank" rel="noopener">https://steamcommunity.com/sharedfiles/filedetails/?id=854506744</a><br><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=305605313" target="_blank" rel="noopener">https://steamcommunity.com/sharedfiles/filedetails/?id=305605313</a>  </p>
-<h1 id="添加创意工坊MOD"><a href="#添加创意工坊MOD" class="headerlink" title="添加创意工坊MOD"></a>添加创意工坊MOD</h1><p>创建并编辑 <code>subscribed_file_ids.txt</code> .<br>在其中添加MOD ID，每行一个<br>启动时末尾加 <code>-workshop</code>.</p>
-<figure class="highlight jboss-cli"><table><tr><td class="code"><pre><span class="line"><span class="keyword">cd</span> <span class="string">./insurgency/subscribed_file_ids.txt</span></span><br><span class="line">vi subscribed_file_ids.txt</span><br></pre></td></tr></table></figure>
-<h1 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h1><p>使用 <code>srcds_run</code> 运行服务器<br>例如：</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">./srcds_run -port <span class="number">27015</span> +map district_coop +maxplayers <span class="number">32</span> -workshop</span><br></pre></td></tr></table></figure>
-<p>或使用脚本启动</p>
-<figure class="highlight vim"><table><tr><td class="code"><pre><span class="line">wget http<span class="variable">s:</span>//raw.githubusercontent.<span class="keyword">com</span>/kb1000fx/Insurgency-Dedicated-Server-Setup/master/run_insurgency.<span class="keyword">sh</span> --<span class="keyword">no</span>-check-certificate</span><br><span class="line">chmod +<span class="keyword">x</span> run_insurgency.<span class="keyword">sh</span></span><br><span class="line">./run_insurgency.<span class="keyword">sh</span></span><br></pre></td></tr></table></figure>]]></content>
+<h1 id="麦克斯韦方程组积分形式的推导和证明"><a href="#麦克斯韦方程组积分形式的推导和证明" class="headerlink" title="麦克斯韦方程组积分形式的推导和证明"></a>麦克斯韦方程组积分形式的推导和证明</h1><h2 id="高斯定律"><a href="#高斯定律" class="headerlink" title="高斯定律"></a>高斯定律</h2><p><strong>高斯定律表示任意曲面的电通量之和等于其中包含的电荷数，证明了电场是有源场</strong></p>
+<p><strong>推导方式如下：</strong></p>
+<p>根据库仑定律及电场强度的定义，空间内某一点出电场强度为：</p>
+<div class="math-fluid">
+$$
+\vec{E} = \frac{q}{4 \pi \varepsilon \cdot r^2} \space \vec{e}_r
+$$
+</div>
+在空间内任取一封闭曲面，在曲面内任一点处放置一点电荷$q$，曲面电通量的微元为：
+<div class="math-fluid">
+$$
+d \Phi =\vec{E} \cdot d \vec{S} = \frac{q}{4 \pi \varepsilon \cdot r^2} \space dS \space cos \theta = \frac{q}{4 \pi \varepsilon} \cdot\frac{d S^{\prime}}{ r^2}
+$$
+</div>
+电通量之和为：
+<div class="math-fluid">
+$$ 
+\begin{split}
+  \Phi & = \oint_{S} \vec{E} \cdot d\vec{S}
+  \\\\
+  & = \oint_{S} \frac{q}{4 \pi \varepsilon} \cdot\frac{d S^{\prime}}{r^2}
+  \\\\
+  & = \frac{q}{4 \pi \varepsilon} \cdot\frac{4 \pi r^2}{r^2}
+  \\\\
+  & = \frac{q}{\varepsilon} 
+\end{split}
+$$
+</div>
+
+<h2 id="高斯磁定律"><a href="#高斯磁定律" class="headerlink" title="高斯磁定律"></a>高斯磁定律</h2><p><strong>高斯磁定律表示任意曲面的磁通量之和为零，证明了磁场是无源场</strong></p>
+<p><strong>推导方式如下：</strong></p>
+<p>根据毕奥-萨伐尔定律：</p>
+<div class="math-fluid">
+$$d \vec{B} = \frac{\mu}{4 \pi} \cdot \frac{Id \vec{l} \times \vec{r}}{r^2}$$
+</div>
+曲面的磁通量为：
+<div class="math-fluid">
+$$ \oint_{S} \vec{B} \cdot d\vec{S}= \frac{\mu I}{4 \pi} \oint_{S} \frac{d \vec{l} \times \vec{r}}{r^2} \cdot d \vec{S}$$
+</div>
+
+<ul>
+<li>当电流元位于曲面内部时，$\vec{r}$与$\vec{S}$间相互平行，磁通量积分$ \oint_{S} \vec{B} \cdot d\vec{S}= 0 $</li>
+<li>当电流元位于曲面外侧时，做一个包含电流元在内的辅助曲面，由增补法可得磁通量积分$ \oint_{S} \vec{B} \cdot d\vec{S}= 0 $</li>
+</ul>
+<h2 id="法拉第电磁感应定律"><a href="#法拉第电磁感应定律" class="headerlink" title="法拉第电磁感应定律"></a>法拉第电磁感应定律</h2><p><strong>法拉第电磁感应定律是由实验现象归纳得到的，表明了变化的磁场产生电场</strong></p>
+<p><strong>推导方式如下：</strong></p>
+<p>设一变化的磁场中放置一个环形线圈，回路中的电动势是电场强度的环路积分：</p>
+<div class="math-fluid">
+$$ \varepsilon = \oint_{l} \vec{E} \cdot d\vec{l} $$
+</div>
+同时实验表明回路中电动势等于磁通量的变化率：
+<div class="math-fluid">
+$$ \varepsilon = - \frac{d \Phi}{dt} = - \iint_{S} \frac{\partial \vec{B}}{\partial t} \cdot d\vec{S} $$
+</div>
+综合两式可得法拉第电磁感应定律的积分形式：
+<div class="math-fluid">
+$$ \oint_{l} \vec{E} \cdot d\vec{l}= - \iint_{S} \frac{\partial \vec{B}}{\partial t} \cdot d\vec{S} $$
+</div>
+
+<h2 id="全电流定律"><a href="#全电流定律" class="headerlink" title="全电流定律"></a>全电流定律</h2><p><strong>全电流定律是麦克斯韦根据安培环路定理扩展了位移电流的部分而得到的</strong><br><strong>表明了电流和变化的电场产生磁场</strong></p>
+<p><strong>推导方式如下：</strong></p>
+<p>根据毕奥-萨伐尔定律：</p>
+<div class="math-fluid">
+$$d \vec{B} = \frac{\mu}{4 \pi} \cdot \frac{Id \vec{l} \times \vec{r}}{r^2}$$
+</div>
+竖直导线周围某点的磁场强度为
+<div class="math-fluid">
+$$
+B = \frac{\mu I}{2 \pi r}
+$$
+</div>
+对任意闭合路径存在环路积分：
+<div class="math-fluid">
+$$ \oint_{l} \vec{B} \cdot d\vec{l} = \oint_{l} B \space r \space d \varphi = \oint_{l} \frac{\mu I}{2 \pi r} \space r \space d \varphi = \mu I  \tag{*} $$
+</div>
+
+<p><strong>以上标星号(*)的公式即安培环路定理</strong></p>
+<p>同时引入位移电流的概念：位移电流是由电场变化引起的电流变化，不产生焦耳热但仍具有磁效应，电容器极板间的充放电就是位移电流，位移电流的表达式：</p>
+<div class="math-fluid">
+$$ I_D = \mu \iint_{S} \frac{\partial \vec{D}}{\partial t} \cdot d\vec{S} $$
+</div>
+综合可得全电流定律：
+<div class="math-fluid">
+$$ \oint_{l} \vec{H} \cdot d\vec{l}= I + \iint_{S} \frac{\partial \vec{D}}{\partial t} \cdot d\vec{S} $$
+</div>
+
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>一般情况下积分形式的麦克斯韦方程组如下：</p>
+<h3 id="高斯定律-1"><a href="#高斯定律-1" class="headerlink" title="高斯定律"></a>高斯定律</h3><div class="math-fluid">
+$$ \oint_{S} \vec{D} \cdot d\vec{S}= q \tag{1} $$
+</div>
+
+<h3 id="高斯磁定律-1"><a href="#高斯磁定律-1" class="headerlink" title="高斯磁定律"></a>高斯磁定律</h3><div class="math-fluid">
+$$ \oint_{S} \vec{B} \cdot d\vec{S}= 0 \tag{2} $$
+</div>
+
+<h3 id="法拉第电磁感应定律-1"><a href="#法拉第电磁感应定律-1" class="headerlink" title="法拉第电磁感应定律"></a>法拉第电磁感应定律</h3><div class="math-fluid">
+$$ \oint_{l} \vec{E} \cdot d\vec{l}= - \iint_{S} \frac{\partial \vec{B}}{\partial t} \cdot d\vec{S} \tag{3} $$
+</div>
+
+<h3 id="全电流定律-1"><a href="#全电流定律-1" class="headerlink" title="全电流定律"></a>全电流定律</h3><div class="math-fluid">
+$$ \oint_{l} \vec{H} \cdot d\vec{l}= I + \iint_{S} \frac{\partial \vec{D}}{\partial t} \cdot d\vec{S} \tag{4} \label{4} $$
+</div>
+
+
+
+
+<h1 id="由麦克斯韦方程组的积分形式推导其微分形式"><a href="#由麦克斯韦方程组的积分形式推导其微分形式" class="headerlink" title="由麦克斯韦方程组的积分形式推导其微分形式"></a>由麦克斯韦方程组的积分形式推导其微分形式</h1><h2 id="Nabla算子简介"><a href="#Nabla算子简介" class="headerlink" title="Nabla算子简介"></a>Nabla算子简介</h2><p>Nabla算子($\nabla$)是一种矢量算符，可以将标量场转化为梯度的矢量场，借助它及其点积、叉积能够方便地表示$梯度(grand)$、$散度(div)$、$旋度(curl)$ 等概念：</p>
+<p>$$\nabla = \frac{\partial }{\partial x} \vec{i} + \frac{\partial }{\partial y} \vec{j} + \frac{\partial }{\partial z} \vec{k} $$</p>
+<p>$$\nabla E = grand({E}) = \frac{\partial E }{\partial x} \vec{i} + \frac{\partial E }{\partial y} \vec{j} + \frac{\partial E }{\partial z} \vec{k} $$</p>
+<p>$$\nabla \cdot \vec{E} = div(\vec{E}) = \frac{\partial E_x }{\partial x} + \frac{\partial E_y }{\partial y} + \frac{\partial E_z }{\partial z} $$</p>
+<p>$$\nabla \times \vec{E} = curl(\vec{E}) = \left ( \frac{\partial E_z}{\partial y} - \frac{\partial E_y}{\partial z} \right ) \vec{i} + \left ( \frac{\partial E_x}{\partial z} - \frac{\partial E_z}{\partial x} \right ) \vec{j} + \left ( \frac{\partial E_y}{\partial x} - \frac{\partial E_x}{\partial y} \right ) \vec{k}$$</p>
+<h2 id="高斯定律-2"><a href="#高斯定律-2" class="headerlink" title="高斯定律"></a>高斯定律</h2><p>取空间内任一六面体的体积元，以三条棱为轴建立xyz直角坐标系。则对于任意两个相对的面，电通量之和为：</p>
+<p>$$<br>\left ( \vec{D} + \frac{\partial \vec{D}}{\partial x} \right ) \cdot \vec{i} \space dydz - \vec{D} \cdot \vec{i} \space dydz = \frac{\partial \vec{D}}{\partial x} \cdot \vec{i} \space dydz = \frac{\partial D_x}{\partial x} \space dxdydz<br>$$</p>
+<p>对于整个体积元来说，六个面的电通量之和为：</p>
+<p>$$<br>\oint_{S} \vec{D} \cdot d\vec{S} = \left ( \frac{\partial D_x}{\partial x} + \frac{\partial D_y}{\partial y} + \frac{\partial D_z}{\partial z} \right ) dxdydz = \rho dxdydz<br>$$</p>
+<p>引入哈密顿算子$\nabla$，可得微分形式如下：</p>
+<p>$$\nabla \cdot \vec{D}=\rho$$</p>
+<h2 id="高斯磁定律-2"><a href="#高斯磁定律-2" class="headerlink" title="高斯磁定律"></a>高斯磁定律</h2><p>形式与方法与高斯电定律相同，同理可得：</p>
+<p>$$<br>\oint_{S} \vec{B} \cdot d\vec{S} = \left ( \frac{\partial B_x}{\partial x} + \frac{\partial B_y}{\partial y} + \frac{\partial B_z}{\partial z} \right ) dxdydz = 0<br>$$</p>
+<p>引入哈密顿算子$\nabla$，可得微分形式如下：</p>
+<p>$$\nabla \cdot \vec{B}=0$$</p>
+<h2 id="全电流定律-2"><a href="#全电流定律-2" class="headerlink" title="全电流定律"></a>全电流定律</h2><p>取空间内一点P，过P点在平行于$xOy$的平面上作一矩形闭合回路。设P处磁场强度为$H$,则距离P点$dx$处磁场强度为$H+\frac{\partial H}{\partial y} dx$，距离P点$dy$处磁场强度为$H+\frac{\partial H}{\partial x} dy$。在$xOy$平面上存在：</p>
+<p>$$<br>\begin{split}<br>  \oint_{l} \vec{H} \cdot d\vec{l} &amp; = - \vec{H} \cdot \vec{j} \space dy + \vec{H} \cdot \vec{i} \space dx + \left ( \vec{H} + \frac{\partial \vec{H}}{\partial x} \space dx \right ) \cdot \vec{j} \space dy - \left ( \vec{H} + \frac{\partial \vec{H}}{\partial y} \space dy \right ) \cdot \vec{i} \space dx<br>  \\<br>  &amp; = \left ( \frac{\partial H_y}{\partial x} - \frac{\partial H_x}{\partial y} \right ) \space dxdy<br>\end{split}<br>$$</p>
+<p>矩形回路内包含的电流元与电通量变化率分别为：<br>$$<br>\vec{I} = \vec{J} \cdot dS = J_z \space dxdy<br>$$</p>
+<p>$$<br>\iint_{S} \frac{\partial \vec{D}}{\partial t} \cdot d \vec{S} = \frac{\partial D_z}{\partial t} \space dxdy<br>$$</p>
+<p>将以上三部分带入$\eqref{4}$式消去$dxdy$后可得：</p>
+<p>$$<br>\left ( \frac{\partial H_y}{\partial x} - \frac{\partial H_x}{\partial y} \right ) = J_z + \frac{\partial D_z}{\partial t}<br>$$</p>
+<p>同理对$yOz$平面和$xOz$平面进行同样的处理可得到另两个方程，综合三式可得：</p>
+<p>$$curl \vec{H} = \vec{J} + \frac{\partial \vec{D}}{\partial t}$$</p>
+<p>引入$\nabla$算子后可写成：</p>
+<p>$$\nabla \times \vec{H} = \vec{J} + \frac{\partial \vec{D}}{\partial t}$$</p>
+<h2 id="法拉第电磁感应定律-2"><a href="#法拉第电磁感应定律-2" class="headerlink" title="法拉第电磁感应定律"></a>法拉第电磁感应定律</h2><p>形式与方法与全电流定律类似，同理可得：</p>
+<p>$$curl \vec{E} = - \frac{\partial \vec{B}}{\partial t}$$</p>
+<p>引入$\nabla$算子后可写成：</p>
+<p>$$\nabla \times \vec{E} = -\frac{\partial \vec{B}}{\partial t}$$</p>
+<h2 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h2><p>微分形式下的麦克斯韦方程组如下：</p>
+<p>$$ \nabla \cdot \vec{D}=\rho \tag{1*} $$</p>
+<p>$$ \nabla \cdot \vec{B}=0 \tag{2*} $$</p>
+<p>$$ \nabla \times \vec{E} = -\frac{\partial \vec{B}}{\partial t} \tag{3*} $$</p>
+<p>$$ \nabla \times \vec{H} = \vec{J} + \frac{\partial \vec{D}}{\partial t} \tag{4*} $$</p>
+]]></content>
       <categories>
-        <category>游戏</category>
+        <category>杂谈</category>
       </categories>
   </entry>
   <entry>

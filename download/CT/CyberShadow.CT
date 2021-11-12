@@ -1,0 +1,862 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="34">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>0</ID>
+      <Description>"Cyber_Shadow_20210126_Steam_GamePass_by_MBRKiNG"</Description>
+      <LastState Value="" RealAddress="00000000"/>
+      <Color>000080</Color>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>52</ID>
+          <Description>"GamePass"</Description>
+          <Options moHideChildren="1" moDeactivateChildrenAsWell="1"/>
+          <LastState Value="" Activated="1" RealAddress="00000000"/>
+          <Color>008000</Color>
+          <GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>30</ID>
+              <Description>"Enable"</Description>
+              <Options moHideChildren="1" moDeactivateChildrenAsWell="1"/>
+              <LastState Activated="1"/>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>{ Game   : Chowdren.exe
+  Version: 
+  Date   : 2021-01-26
+  Author : FSB
+
+  This script does blah blah blah
+}
+
+define(address,"Chowdren.exe"+767C84)
+define(bytes,66 41 0F 2F B6 B0 EB 09 00)
+
+[ENABLE]
+
+assert(address,bytes)
+alloc(newmem,$1000,"Chowdren.exe"+767C84)
+
+label(code)
+label(return)
+label(player)
+registersymbol(player)
+
+newmem:
+
+code:
+  mov [player],r14
+  comisd xmm6,[r14+0009EBB0]
+  jmp return
+player:
+db
+address:
+  jmp newmem
+  nop 4
+return:
+
+[DISABLE]
+
+address:
+  db bytes
+  // comisd xmm6,[r14+0009EBB0]
+
+dealloc(newmem)
+unregistersymbol(player)
+{
+// ORIGINAL CODE - INJECTION POINT: Chowdren.exe+767C84
+
+Chowdren.exe+767C50: 45 89 BE 08 6D 01 00        - mov [r14+00016D08],r15d
+Chowdren.exe+767C57: 49 8B CE                    - mov rcx,r14
+Chowdren.exe+767C5A: 41 89 86 F8 6C 01 00        - mov [r14+00016CF8],eax
+Chowdren.exe+767C61: 49 89 B6 10 6D 01 00        - mov [r14+00016D10],rsi
+Chowdren.exe+767C68: 4D 89 A6 28 6D 01 00        - mov [r14+00016D28],r12
+Chowdren.exe+767C6F: E8 6C EA E4 FF              - call Chowdren.exe+5B66E0
+Chowdren.exe+767C74: 49 8B CE                    - mov rcx,r14
+Chowdren.exe+767C77: E8 94 2D 01 00              - call Chowdren.exe+77AA10
+Chowdren.exe+767C7C: 49 8B CE                    - mov rcx,r14
+Chowdren.exe+767C7F: E8 5C EA E4 FF              - call Chowdren.exe+5B66E0
+// ---------- INJECTING HERE ----------
+Chowdren.exe+767C84: 66 41 0F 2F B6 B0 EB 09 00  - comisd xmm6,[r14+0009EBB0]
+// ---------- DONE INJECTING  ----------
+Chowdren.exe+767C8D: 72 24                       - jb Chowdren.exe+767CB3
+Chowdren.exe+767C8F: 41 8B 8E 78 BA 01 00        - mov ecx,[r14+0001BA78]
+Chowdren.exe+767C96: 8B C1                       - mov eax,ecx
+Chowdren.exe+767C98: 41 2B 86 0C CB 09 00        - sub eax,[r14+0009CB0C]
+Chowdren.exe+767C9F: 41 89 8E 0C CB 09 00        - mov [r14+0009CB0C],ecx
+Chowdren.exe+767CA6: 83 F8 01                    - cmp eax,01
+Chowdren.exe+767CA9: 74 08                       - je Chowdren.exe+767CB3
+Chowdren.exe+767CAB: 49 8B CE                    - mov rcx,r14
+Chowdren.exe+767CAE: E8 AD 31 01 00              - call Chowdren.exe+77AE60
+Chowdren.exe+767CB3: 49 8B CE                    - mov rcx,r14
+}
+</AssemblerScript>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>38</ID>
+                  <Description>"no Knockback"</Description>
+                  <LastState Activated="1"/>
+                  <VariableType>Auto Assembler Script</VariableType>
+                  <AssemblerScript>{ Game   : Chowdren.exe
+  Version: 
+  Date   : 2021-01-26
+  Author : FSB
+
+  This script does blah blah blah
+}
+
+define(address,"Chowdren.exe"+7E3960)
+define(bytes,40 53 55 56 57)
+
+[ENABLE]
+
+assert(address,bytes)
+alloc(newmem,$1000,"Chowdren.exe"+7E3960)
+
+label(code)
+label(return)
+
+newmem:
+
+code:
+ret
+  push rbx
+  push rbp
+  push rsi
+  push rdi
+  jmp return
+
+address:
+  jmp newmem
+return:
+
+[DISABLE]
+
+address:
+  db bytes
+  // push rbx
+  // push rbp
+  // push rsi
+  // push rdi
+
+dealloc(newmem)
+
+{
+// ORIGINAL CODE - INJECTION POINT: Chowdren.exe+7E3960
+
+Chowdren.exe+7E3951: 48 83 C4 78           - add rsp,78
+Chowdren.exe+7E3955: 41 5E                 - pop r14
+Chowdren.exe+7E3957: 41 5C                 - pop r12
+Chowdren.exe+7E3959: 5F                    - pop rdi
+Chowdren.exe+7E395A: 5E                    - pop rsi
+Chowdren.exe+7E395B: 5D                    - pop rbp
+Chowdren.exe+7E395C: 5B                    - pop rbx
+Chowdren.exe+7E395D: C3                    - ret 
+Chowdren.exe+7E395E: CC                    - int 3 
+Chowdren.exe+7E395F: CC                    - int 3 
+// ---------- INJECTING HERE ----------
+Chowdren.exe+7E3960: 40 53                 - push rbx
+// ---------- DONE INJECTING  ----------
+Chowdren.exe+7E3962: 55                    - push rbp
+Chowdren.exe+7E3963: 56                    - push rsi
+Chowdren.exe+7E3964: 57                    - push rdi
+Chowdren.exe+7E3965: 41 54                 - push r12
+Chowdren.exe+7E3967: 41 55                 - push r13
+Chowdren.exe+7E3969: 41 56                 - push r14
+Chowdren.exe+7E396B: 41 57                 - push r15
+Chowdren.exe+7E396D: 48 83 EC 58           - sub rsp,58
+Chowdren.exe+7E3971: 44 8B B1 08 6D 01 00  - mov r14d,[rcx+00016D08]
+Chowdren.exe+7E3978: 48 8B F9              - mov rdi,rcx
+}
+</AssemblerScript>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>31</ID>
+                  <Description>"HP Current"</Description>
+                  <LastState Value="5" Activated="1" RealAddress="7FF6349D5E58"/>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>Double</VariableType>
+                  <Address>player</Address>
+                  <Offsets>
+                    <Offset>9ebb0</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>32</ID>
+                  <Description>"HP Max"</Description>
+                  <LastState Value="6" RealAddress="7FF6349D5E60"/>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>Double</VariableType>
+                  <Address>player</Address>
+                  <Offsets>
+                    <Offset>9EBB8</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>35</ID>
+                  <Description>"SP Current"</Description>
+                  <LastState Value="4" RealAddress="7FF6349D5E90"/>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>Double</VariableType>
+                  <Address>player</Address>
+                  <Offsets>
+                    <Offset>9EBE8</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>34</ID>
+                  <Description>"SP Max"</Description>
+                  <LastState Value="5" RealAddress="7FF6349D5E98"/>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>Double</VariableType>
+                  <Address>player</Address>
+                  <Offsets>
+                    <Offset>9EBF0</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>33</ID>
+                  <Description>"Orbs/Score"</Description>
+                  <LastState Value="100000" RealAddress="7FF6349D5E70"/>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>Double</VariableType>
+                  <Address>player</Address>
+                  <Offsets>
+                    <Offset>9EBC8</Offset>
+                  </Offsets>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>45</ID>
+              <Description>"Enable AoB Version"</Description>
+              <Options moHideChildren="1" moDeactivateChildrenAsWell="1"/>
+              <LastState/>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>{ Game   : Chowdren.exe
+  Version: 
+  Date   : 2021-01-26
+  Author : FSB
+
+  This script does blah blah blah
+}
+
+[ENABLE]
+
+aobscanmodule(p001,Chowdren.exe,66 41 0F 2F B6 B0 EB 09 00) // should be unique
+alloc(newmem,$1000,p001)
+
+label(code)
+label(return)
+label(player)
+registersymbol(player)
+
+newmem:
+
+code:
+  mov [player],r14
+  comisd xmm6,[r14+0009EBB0]
+  jmp return
+player:
+db
+p001:
+  jmp newmem
+  nop 4
+return:
+registersymbol(p001)
+
+[DISABLE]
+
+p001:
+  db 66 41 0F 2F B6 B0 EB 09 00
+
+unregistersymbol(p001)
+dealloc(newmem)
+unregistersymbol(player)
+{
+// ORIGINAL CODE - INJECTION POINT: Chowdren.exe+767C84
+
+Chowdren.exe+767C50: 45 89 BE 08 6D 01 00        - mov [r14+00016D08],r15d
+Chowdren.exe+767C57: 49 8B CE                    - mov rcx,r14
+Chowdren.exe+767C5A: 41 89 86 F8 6C 01 00        - mov [r14+00016CF8],eax
+Chowdren.exe+767C61: 49 89 B6 10 6D 01 00        - mov [r14+00016D10],rsi
+Chowdren.exe+767C68: 4D 89 A6 28 6D 01 00        - mov [r14+00016D28],r12
+Chowdren.exe+767C6F: E8 6C EA E4 FF              - call Chowdren.exe+5B66E0
+Chowdren.exe+767C74: 49 8B CE                    - mov rcx,r14
+Chowdren.exe+767C77: E8 94 2D 01 00              - call Chowdren.exe+77AA10
+Chowdren.exe+767C7C: 49 8B CE                    - mov rcx,r14
+Chowdren.exe+767C7F: E8 5C EA E4 FF              - call Chowdren.exe+5B66E0
+// ---------- INJECTING HERE ----------
+Chowdren.exe+767C84: 66 41 0F 2F B6 B0 EB 09 00  - comisd xmm6,[r14+0009EBB0]
+// ---------- DONE INJECTING  ----------
+Chowdren.exe+767C8D: 72 24                       - jb Chowdren.exe+767CB3
+Chowdren.exe+767C8F: 41 8B 8E 78 BA 01 00        - mov ecx,[r14+0001BA78]
+Chowdren.exe+767C96: 8B C1                       - mov eax,ecx
+Chowdren.exe+767C98: 41 2B 86 0C CB 09 00        - sub eax,[r14+0009CB0C]
+Chowdren.exe+767C9F: 41 89 8E 0C CB 09 00        - mov [r14+0009CB0C],ecx
+Chowdren.exe+767CA6: 83 F8 01                    - cmp eax,01
+Chowdren.exe+767CA9: 74 08                       - je Chowdren.exe+767CB3
+Chowdren.exe+767CAB: 49 8B CE                    - mov rcx,r14
+Chowdren.exe+767CAE: E8 AD 31 01 00              - call Chowdren.exe+77AE60
+Chowdren.exe+767CB3: 49 8B CE                    - mov rcx,r14
+}
+</AssemblerScript>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>51</ID>
+                  <Description>"no Knockback"</Description>
+                  <LastState/>
+                  <VariableType>Auto Assembler Script</VariableType>
+                  <AssemblerScript>{ Game   : Chowdren.exe
+  Version: 
+  Date   : 2021-01-26
+  Author : FSB
+
+  This script does blah blah blah
+}
+
+[ENABLE]
+
+aobscanmodule(p002,Chowdren.exe,5E 41 5C 5F 5E 5D 5B C3 CC CC 40 53 55 56 57 41 54) // should be unique
+alloc(newmem,$1000,p002)
+
+label(code)
+label(return)
+
+newmem:
+
+code:
+ret
+  push rbx
+  push rbp
+  push rsi
+  push rdi
+  jmp return
+
+p002+0A:
+  jmp newmem
+return:
+registersymbol(p002)
+
+[DISABLE]
+
+p002+0A:
+  db 40 53 55 56 57
+
+unregistersymbol(p002)
+dealloc(newmem)
+
+{
+// ORIGINAL CODE - INJECTION POINT: Chowdren.exe+7E3960
+
+Chowdren.exe+7E3951: 48 83 C4 78           - add rsp,78
+Chowdren.exe+7E3955: 41 5E                 - pop r14
+Chowdren.exe+7E3957: 41 5C                 - pop r12
+Chowdren.exe+7E3959: 5F                    - pop rdi
+Chowdren.exe+7E395A: 5E                    - pop rsi
+Chowdren.exe+7E395B: 5D                    - pop rbp
+Chowdren.exe+7E395C: 5B                    - pop rbx
+Chowdren.exe+7E395D: C3                    - ret 
+Chowdren.exe+7E395E: CC                    - int 3 
+Chowdren.exe+7E395F: CC                    - int 3 
+// ---------- INJECTING HERE ----------
+Chowdren.exe+7E3960: 40 53                 - push rbx
+// ---------- DONE INJECTING  ----------
+Chowdren.exe+7E3962: 55                    - push rbp
+Chowdren.exe+7E3963: 56                    - push rsi
+Chowdren.exe+7E3964: 57                    - push rdi
+Chowdren.exe+7E3965: 41 54                 - push r12
+Chowdren.exe+7E3967: 41 55                 - push r13
+Chowdren.exe+7E3969: 41 56                 - push r14
+Chowdren.exe+7E396B: 41 57                 - push r15
+Chowdren.exe+7E396D: 48 83 EC 58           - sub rsp,58
+Chowdren.exe+7E3971: 44 8B B1 08 6D 01 00  - mov r14d,[rcx+00016D08]
+Chowdren.exe+7E3978: 48 8B F9              - mov rdi,rcx
+}
+</AssemblerScript>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>46</ID>
+                  <Description>"HP Current"</Description>
+                  <LastState Value="5" RealAddress="7FF6349D5E58"/>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>Double</VariableType>
+                  <Address>player</Address>
+                  <Offsets>
+                    <Offset>9ebb0</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>47</ID>
+                  <Description>"HP Max"</Description>
+                  <LastState Value="6" RealAddress="7FF6349D5E60"/>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>Double</VariableType>
+                  <Address>player</Address>
+                  <Offsets>
+                    <Offset>9EBB8</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>48</ID>
+                  <Description>"SP Current"</Description>
+                  <LastState Value="4" RealAddress="7FF6349D5E90"/>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>Double</VariableType>
+                  <Address>player</Address>
+                  <Offsets>
+                    <Offset>9EBE8</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>49</ID>
+                  <Description>"SP Max"</Description>
+                  <LastState Value="5" RealAddress="7FF6349D5E98"/>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>Double</VariableType>
+                  <Address>player</Address>
+                  <Offsets>
+                    <Offset>9EBF0</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>50</ID>
+                  <Description>"Orbs/Score"</Description>
+                  <LastState Value="100000" RealAddress="7FF6349D5E70"/>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>Double</VariableType>
+                  <Address>player</Address>
+                  <Offsets>
+                    <Offset>9EBC8</Offset>
+                  </Offsets>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>53</ID>
+          <Description>"Steam"</Description>
+          <Options moHideChildren="1" moDeactivateChildrenAsWell="1"/>
+          <LastState Value="" RealAddress="00000000"/>
+          <Color>800000</Color>
+          <GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>55</ID>
+              <Description>"Enable"</Description>
+              <Options moHideChildren="1" moDeactivateChildrenAsWell="1"/>
+              <LastState/>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>{ Game   : CyberShadow.exe
+  Version: 
+  Date   : 2021-01-26
+  Author : FSB
+
+  This script does blah blah blah
+}
+
+define(address,"CyberShadow.exe"+72F287)
+define(bytes,66 0F 2F 83 F8 44 07 00)
+
+[ENABLE]
+
+assert(address,bytes)
+alloc(newmem,$1000)
+
+label(code)
+label(return)
+label(steam)
+registersymbol(steam)
+newmem:
+
+code:
+  mov [steam],ebx
+  comisd xmm0,[ebx+000744F8]
+  jmp return
+steam:
+db
+address:
+  jmp newmem
+  nop 3
+return:
+
+[DISABLE]
+
+address:
+  db bytes
+  // comisd xmm0,[ebx+000744F8]
+
+dealloc(newmem)
+unregistersymbol(steam)
+
+{
+// ORIGINAL CODE - INJECTION POINT: CyberShadow.exe+72F287
+
+CyberShadow.exe+72F259: 89 83 9C 14 01 00        - mov [ebx+0001149C],eax
+CyberShadow.exe+72F25F: F2 0F 10 83 38 45 07 00  - movsd xmm0,[ebx+00074538]
+CyberShadow.exe+72F267: 8B CB                    - mov ecx,ebx
+CyberShadow.exe+72F269: F2 0F 11 83 F8 44 07 00  - movsd [ebx+000744F8],xmm0
+CyberShadow.exe+72F271: E8 3A D7 00 00           - call CyberShadow.exe+73C9B0
+CyberShadow.exe+72F276: 8B CB                    - mov ecx,ebx
+CyberShadow.exe+72F278: E8 03 20 EE FF           - call CyberShadow.exe+611280
+CyberShadow.exe+72F27D: 8B CB                    - mov ecx,ebx
+CyberShadow.exe+72F27F: E8 FC 1F EE FF           - call CyberShadow.exe+611280
+CyberShadow.exe+72F284: 0F 57 C0                 - xorps xmm0,xmm0
+// ---------- INJECTING HERE ----------
+CyberShadow.exe+72F287: 66 0F 2F 83 F8 44 07 00  - comisd xmm0,[ebx+000744F8]
+// ---------- DONE INJECTING  ----------
+CyberShadow.exe+72F28F: 72 20                    - jb CyberShadow.exe+72F2B1
+CyberShadow.exe+72F291: 8B 8B A0 14 01 00        - mov ecx,[ebx+000114A0]
+CyberShadow.exe+72F297: 8B C1                    - mov eax,ecx
+CyberShadow.exe+72F299: 2B 83 B4 24 07 00        - sub eax,[ebx+000724B4]
+CyberShadow.exe+72F29F: 89 8B B4 24 07 00        - mov [ebx+000724B4],ecx
+CyberShadow.exe+72F2A5: 83 F8 01                 - cmp eax,01
+CyberShadow.exe+72F2A8: 74 07                    - je CyberShadow.exe+72F2B1
+CyberShadow.exe+72F2AA: 8B CB                    - mov ecx,ebx
+CyberShadow.exe+72F2AC: E8 DF D9 00 00           - call CyberShadow.exe+73CC90
+CyberShadow.exe+72F2B1: 8B CB                    - mov ecx,ebx
+}
+</AssemblerScript>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>67</ID>
+                  <Description>"No Knockback"</Description>
+                  <LastState/>
+                  <VariableType>Auto Assembler Script</VariableType>
+                  <AssemblerScript>{ Game   : CyberShadow.exe
+  Version: 
+  Date   : 2021-01-26
+  Author : FSB
+
+  This script does blah blah blah
+}
+
+define(address,"CyberShadow.exe"+785BE0)
+define(bytes,55 8B EC 83 EC 3C)
+
+[ENABLE]
+
+assert(address,bytes)
+alloc(newmem,$1000)
+
+label(code)
+label(return)
+
+newmem:
+
+code:
+ret
+  push ebp
+  mov ebp,esp
+  sub esp,3C
+  jmp return
+
+address:
+  jmp newmem
+  nop
+return:
+
+[DISABLE]
+
+address:
+  db bytes
+  // push ebp
+  // mov ebp,esp
+  // sub esp,3C
+
+dealloc(newmem)
+
+{
+// ORIGINAL CODE - INJECTION POINT: CyberShadow.exe+785BE0
+
+CyberShadow.exe+785BD6: CC                 - int 3 
+CyberShadow.exe+785BD7: CC                 - int 3 
+CyberShadow.exe+785BD8: CC                 - int 3 
+CyberShadow.exe+785BD9: CC                 - int 3 
+CyberShadow.exe+785BDA: CC                 - int 3 
+CyberShadow.exe+785BDB: CC                 - int 3 
+CyberShadow.exe+785BDC: CC                 - int 3 
+CyberShadow.exe+785BDD: CC                 - int 3 
+CyberShadow.exe+785BDE: CC                 - int 3 
+CyberShadow.exe+785BDF: CC                 - int 3 
+// ---------- INJECTING HERE ----------
+CyberShadow.exe+785BE0: 55                 - push ebp
+// ---------- DONE INJECTING  ----------
+CyberShadow.exe+785BE1: 8B EC              - mov ebp,esp
+CyberShadow.exe+785BE3: 83 EC 3C           - sub esp,3C
+CyberShadow.exe+785BE6: 8B C1              - mov eax,ecx
+CyberShadow.exe+785BE8: 53                 - push ebx
+CyberShadow.exe+785BE9: 56                 - push esi
+CyberShadow.exe+785BEA: 89 45 F8           - mov [ebp-08],eax
+CyberShadow.exe+785BED: 8D 98 28 E4 00 00  - lea ebx,[eax+0000E428]
+CyberShadow.exe+785BF3: 57                 - push edi
+CyberShadow.exe+785BF4: 8D 45 C4           - lea eax,[ebp-3C]
+CyberShadow.exe+785BF7: 89 5D F4           - mov [ebp-0C],ebx
+}
+</AssemblerScript>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>57</ID>
+                  <Description>"HP Current"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>Double</VariableType>
+                  <Address>steam</Address>
+                  <Offsets>
+                    <Offset>744f8</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>58</ID>
+                  <Description>"HP Max"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>Double</VariableType>
+                  <Address>steam</Address>
+                  <Offsets>
+                    <Offset>74500</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>61</ID>
+                  <Description>"SP Current"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>Double</VariableType>
+                  <Address>steam</Address>
+                  <Offsets>
+                    <Offset>74530</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>60</ID>
+                  <Description>"SP Max"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>Double</VariableType>
+                  <Address>steam</Address>
+                  <Offsets>
+                    <Offset>74538</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>59</ID>
+                  <Description>"Orbs/Score"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>Double</VariableType>
+                  <Address>steam</Address>
+                  <Offsets>
+                    <Offset>74510</Offset>
+                  </Offsets>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>56</ID>
+              <Description>"Enable AoB Version"</Description>
+              <Options moHideChildren="1" moDeactivateChildrenAsWell="1"/>
+              <LastState/>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>{ Game   : CyberShadow.exe
+  Version: 
+  Date   : 2021-01-26
+  Author : FSB
+
+  This script does blah blah blah
+}
+
+[ENABLE]
+
+aobscanmodule(s001,CyberShadow.exe,66 0F 2F 83 F8 44 07 00 72) // should be unique
+alloc(newmem,$1000)
+
+label(code)
+label(return)
+label(steam)
+registersymbol(steam)
+newmem:
+
+code:
+  mov [steam],ebx
+  comisd xmm0,[ebx+000744F8]
+  jmp return
+steam:
+db
+s001:
+  jmp newmem
+  nop 3
+return:
+registersymbol(s001)
+
+[DISABLE]
+
+s001:
+  db 66 0F 2F 83 F8 44 07 00
+
+unregistersymbol(s001)
+dealloc(newmem)
+unregistersymbol(steam)
+{
+// ORIGINAL CODE - INJECTION POINT: CyberShadow.exe+72F287
+
+CyberShadow.exe+72F259: 89 83 9C 14 01 00        - mov [ebx+0001149C],eax
+CyberShadow.exe+72F25F: F2 0F 10 83 38 45 07 00  - movsd xmm0,[ebx+00074538]
+CyberShadow.exe+72F267: 8B CB                    - mov ecx,ebx
+CyberShadow.exe+72F269: F2 0F 11 83 F8 44 07 00  - movsd [ebx+000744F8],xmm0
+CyberShadow.exe+72F271: E8 3A D7 00 00           - call CyberShadow.exe+73C9B0
+CyberShadow.exe+72F276: 8B CB                    - mov ecx,ebx
+CyberShadow.exe+72F278: E8 03 20 EE FF           - call CyberShadow.exe+611280
+CyberShadow.exe+72F27D: 8B CB                    - mov ecx,ebx
+CyberShadow.exe+72F27F: E8 FC 1F EE FF           - call CyberShadow.exe+611280
+CyberShadow.exe+72F284: 0F 57 C0                 - xorps xmm0,xmm0
+// ---------- INJECTING HERE ----------
+CyberShadow.exe+72F287: 66 0F 2F 83 F8 44 07 00  - comisd xmm0,[ebx+000744F8]
+// ---------- DONE INJECTING  ----------
+CyberShadow.exe+72F28F: 72 20                    - jb CyberShadow.exe+72F2B1
+CyberShadow.exe+72F291: 8B 8B A0 14 01 00        - mov ecx,[ebx+000114A0]
+CyberShadow.exe+72F297: 8B C1                    - mov eax,ecx
+CyberShadow.exe+72F299: 2B 83 B4 24 07 00        - sub eax,[ebx+000724B4]
+CyberShadow.exe+72F29F: 89 8B B4 24 07 00        - mov [ebx+000724B4],ecx
+CyberShadow.exe+72F2A5: 83 F8 01                 - cmp eax,01
+CyberShadow.exe+72F2A8: 74 07                    - je CyberShadow.exe+72F2B1
+CyberShadow.exe+72F2AA: 8B CB                    - mov ecx,ebx
+CyberShadow.exe+72F2AC: E8 DF D9 00 00           - call CyberShadow.exe+73CC90
+CyberShadow.exe+72F2B1: 8B CB                    - mov ecx,ebx
+}
+</AssemblerScript>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>68</ID>
+                  <Description>"no Knockback"</Description>
+                  <LastState/>
+                  <VariableType>Auto Assembler Script</VariableType>
+                  <AssemblerScript>{ Game   : CyberShadow.exe
+  Version: 
+  Date   : 2021-01-26
+  Author : FSB
+
+  This script does blah blah blah
+}
+
+[ENABLE]
+
+aobscanmodule(s002,CyberShadow.exe,55 8B EC 83 EC 3C 8B C1 53 56 89 45 F8 8D 98 28 E4) // should be unique
+alloc(newmem,$1000)
+
+label(code)
+label(return)
+
+newmem:
+
+code:
+ret
+  push ebp
+  mov ebp,esp
+  sub esp,3C
+  jmp return
+
+s002:
+  jmp newmem
+  nop
+return:
+registersymbol(s002)
+
+[DISABLE]
+
+s002:
+  db 55 8B EC 83 EC 3C
+
+unregistersymbol(s002)
+dealloc(newmem)
+
+{
+// ORIGINAL CODE - INJECTION POINT: CyberShadow.exe+785BE0
+
+CyberShadow.exe+785BD6: CC                 - int 3 
+CyberShadow.exe+785BD7: CC                 - int 3 
+CyberShadow.exe+785BD8: CC                 - int 3 
+CyberShadow.exe+785BD9: CC                 - int 3 
+CyberShadow.exe+785BDA: CC                 - int 3 
+CyberShadow.exe+785BDB: CC                 - int 3 
+CyberShadow.exe+785BDC: CC                 - int 3 
+CyberShadow.exe+785BDD: CC                 - int 3 
+CyberShadow.exe+785BDE: CC                 - int 3 
+CyberShadow.exe+785BDF: CC                 - int 3 
+// ---------- INJECTING HERE ----------
+CyberShadow.exe+785BE0: 55                 - push ebp
+// ---------- DONE INJECTING  ----------
+CyberShadow.exe+785BE1: 8B EC              - mov ebp,esp
+CyberShadow.exe+785BE3: 83 EC 3C           - sub esp,3C
+CyberShadow.exe+785BE6: 8B C1              - mov eax,ecx
+CyberShadow.exe+785BE8: 53                 - push ebx
+CyberShadow.exe+785BE9: 56                 - push esi
+CyberShadow.exe+785BEA: 89 45 F8           - mov [ebp-08],eax
+CyberShadow.exe+785BED: 8D 98 28 E4 00 00  - lea ebx,[eax+0000E428]
+CyberShadow.exe+785BF3: 57                 - push edi
+CyberShadow.exe+785BF4: 8D 45 C4           - lea eax,[ebp-3C]
+CyberShadow.exe+785BF7: 89 5D F4           - mov [ebp-0C],ebx
+}
+</AssemblerScript>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>62</ID>
+                  <Description>"HP Current"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>Double</VariableType>
+                  <Address>steam</Address>
+                  <Offsets>
+                    <Offset>744f8</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>63</ID>
+                  <Description>"HP Max"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>Double</VariableType>
+                  <Address>steam</Address>
+                  <Offsets>
+                    <Offset>74500</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>64</ID>
+                  <Description>"SP Current"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>Double</VariableType>
+                  <Address>steam</Address>
+                  <Offsets>
+                    <Offset>74530</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>65</ID>
+                  <Description>"SP Max"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>Double</VariableType>
+                  <Address>steam</Address>
+                  <Offsets>
+                    <Offset>74538</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>66</ID>
+                  <Description>"Orbs/Score"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>Double</VariableType>
+                  <Address>steam</Address>
+                  <Offsets>
+                    <Offset>74510</Offset>
+                  </Offsets>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols>
+    <SymbolEntry>
+      <Name>memPointerTest</Name>
+      <Address>26EC8400000</Address>
+    </SymbolEntry>
+  </UserdefinedSymbols>
+</CheatTable>
