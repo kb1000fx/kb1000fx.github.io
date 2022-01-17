@@ -1266,13 +1266,19 @@
 <p>可以加入服务自动启动或是用screen手动启动</p>
 <h1 id="Chrome浏览器代理设置"><a href="#Chrome浏览器代理设置" class="headerlink" title="Chrome浏览器代理设置"></a>Chrome浏览器代理设置</h1><p>打开开发者模式，使用<code>crx</code>文件安装<code>SwtichyOmega</code>插件。</p>
 <p><code>SwtichyOmega</code>插件地址：<a href="https://github.com/FelisCatus/SwitchyOmega/releases" target="_blank" rel="noopener">Github release</a> ； <a href="../download/SwitchyOmega_Chromium.crx">本站下载</a></p>
-<h1 id="git代理设置"><a href="#git代理设置" class="headerlink" title="git代理设置"></a>git代理设置</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#设置代理</span></span><br><span class="line">git config --global http.proxy <span class="string">'socks5://127.0.0.1:1080'</span> </span><br><span class="line">git config --global https.proxy <span class="string">'socks5://127.0.0.1:1080'</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#删除代理</span></span><br><span class="line">git config --global --<span class="built_in">unset</span> http.proxy</span><br><span class="line">git config --global --<span class="built_in">unset</span> https.proxy</span><br></pre></td></tr></table></figure>
+<h1 id="git代理设置"><a href="#git代理设置" class="headerlink" title="git代理设置"></a>git代理设置</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#设置代理</span></span><br><span class="line">git config --global http.proxy socks5://127.0.0.1:1080</span><br><span class="line">git config --global https.proxy socks5://127.0.0.1:1080</span><br><span class="line"></span><br><span class="line"><span class="comment">#删除代理</span></span><br><span class="line">git config --global --<span class="built_in">unset</span> http.proxy</span><br><span class="line">git config --global --<span class="built_in">unset</span> https.proxy</span><br></pre></td></tr></table></figure>
 
 <h1 id="npm代理设置方式"><a href="#npm代理设置方式" class="headerlink" title="npm代理设置方式"></a>npm代理设置方式</h1><p>设置代理</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> proxy socks5://127.0.0.1:1080</span><br><span class="line">npm config <span class="built_in">set</span> https-proxy socks5://127.0.0.1:1080</span><br></pre></td></tr></table></figure>
 
 <p>删除代理</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config delete proxy</span><br><span class="line">npm config delete https-proxy</span><br></pre></td></tr></table></figure>]]></content>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config delete proxy</span><br><span class="line">npm config delete https-proxy</span><br></pre></td></tr></table></figure>
+
+<p>设置淘宝源</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+
+<p>恢复官方源</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config delete registry</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>技术</category>
         <category>Linux</category>
@@ -4886,6 +4892,67 @@ $$ \oint_{l} \vec{H} \cdot d\vec{l}= I + \iint_{S} \frac{\partial \vec{D}}{\part
 ]]></content>
       <categories>
         <category>杂谈</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>UOS下替换安装源及安装常见软件踩坑</title>
+    <url>/t-4838/</url>
+    <content><![CDATA[<p>UOS作为一款由deepin衍生而来的国产系统，在各种操作方面与一般的Debian系有相似之处又略有不同。由于自带的deepin源存在一定问题，可以为系统替换ARM版的Ubuntu源来增加扩展性。</p>
+<a id="more"></a>
+
+<h1 id="替换清华源"><a href="#替换清华源" class="headerlink" title="替换清华源"></a>替换清华源</h1><p>Ubuntu ARM64清华源: <a href="https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu-ports/" target="_blank" rel="noopener">https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu-ports/</a></p>
+<ul>
+<li>新建源文件<figure class="highlight vim"><table><tr><td class="code"><pre><span class="line">sudo <span class="keyword">vi</span> /etc/apt/sources.<span class="keyword">list</span>.d/repo.<span class="keyword">list</span></span><br></pre></td></tr></table></figure></li>
+<li>替换为清华源<br>将文件替换为以下内容并保存<figure class="highlight vim"><table><tr><td class="code"><pre><span class="line"># 默认注释了源码镜像以提高 apt <span class="keyword">update</span> 速度，如有需要可自行取消注释</span><br><span class="line"><span class="keyword">deb</span> http<span class="variable">s:</span>//mirrors.tuna.tsinghua.edu.<span class="keyword">cn</span>/ubuntu-ports/ focal main restricted universe multiverse</span><br><span class="line"># <span class="keyword">deb</span>-src http<span class="variable">s:</span>//mirrors.tuna.tsinghua.edu.<span class="keyword">cn</span>/ubuntu-ports/ focal main restricted universe multiverse</span><br><span class="line"><span class="keyword">deb</span> http<span class="variable">s:</span>//mirrors.tuna.tsinghua.edu.<span class="keyword">cn</span>/ubuntu-ports/ focal-updates main restricted universe multiverse</span><br><span class="line"># <span class="keyword">deb</span>-src http<span class="variable">s:</span>//mirrors.tuna.tsinghua.edu.<span class="keyword">cn</span>/ubuntu-ports/ focal-updates main restricted universe multiverse</span><br><span class="line"><span class="keyword">deb</span> http<span class="variable">s:</span>//mirrors.tuna.tsinghua.edu.<span class="keyword">cn</span>/ubuntu-ports/ focal-backports main restricted universe multiverse</span><br><span class="line"># <span class="keyword">deb</span>-src http<span class="variable">s:</span>//mirrors.tuna.tsinghua.edu.<span class="keyword">cn</span>/ubuntu-ports/ focal-backports main restricted universe multiverse</span><br><span class="line"><span class="keyword">deb</span> http<span class="variable">s:</span>//mirrors.tuna.tsinghua.edu.<span class="keyword">cn</span>/ubuntu-ports/ focal-security main restricted universe multiverse</span><br><span class="line"># <span class="keyword">deb</span>-src http<span class="variable">s:</span>//mirrors.tuna.tsinghua.edu.<span class="keyword">cn</span>/ubuntu-ports/ focal-security main restricted universe multiverse</span><br><span class="line"></span><br><span class="line"># 预发布软件源，不建议启用</span><br><span class="line"># <span class="keyword">deb</span> http<span class="variable">s:</span>//mirrors.tuna.tsinghua.edu.<span class="keyword">cn</span>/ubuntu-ports/ focal-proposed main restricted universe multiverse</span><br><span class="line"># <span class="keyword">deb</span>-src http<span class="variable">s:</span>//mirrors.tuna.tsinghua.edu.<span class="keyword">cn</span>/ubuntu-ports/ focal-proposed main restricted universe multiverse</span><br></pre></td></tr></table></figure></li>
+<li>安装公钥<figure class="highlight brainfuck"><table><tr><td class="code"><pre><span class="line"><span class="comment">sudo</span> <span class="comment">apt</span><span class="literal">-</span><span class="comment">key</span> <span class="comment">adv</span> --<span class="comment">keyserver</span> <span class="comment">keyserver</span><span class="string">.</span><span class="comment">ubuntu</span><span class="string">.</span><span class="comment">com</span> --<span class="comment">recv</span><span class="literal">-</span><span class="comment">keys</span> <span class="comment">3B4FE6ACC0B21F32</span></span><br></pre></td></tr></table></figure></li>
+<li>更新apt源<figure class="highlight pgsql"><table><tr><td class="code"><pre><span class="line">sudo apt-<span class="keyword">get</span> <span class="keyword">update</span></span><br></pre></td></tr></table></figure>
+<h1 id="软件安装"><a href="#软件安装" class="headerlink" title="软件安装"></a>软件安装</h1><h2 id="FireFox-95"><a href="#FireFox-95" class="headerlink" title="FireFox 95+"></a>FireFox 95+</h2>UOS官方源中的火狐版本较老，可替换清华源后通过apt安装新版<figure class="highlight crmsh"><table><tr><td class="code"><pre><span class="line">sudo apt-get install firefox</span><br><span class="line">``` </span><br><span class="line"><span class="comment">## NodeJS</span></span><br><span class="line">地址: https://nodejs.org/en/download/</span><br><span class="line">解压后使用以下方式之一将<span class="keyword">node</span><span class="title">添加至全局</span></span><br><span class="line"><span class="title">+ 建立软链接</span></span><br></pre></td></tr></table></figure>
+sudo ln -s /usr/local/node/bin/node /usr/local/bin<br>sudo ln -s /usr/local/node/bin/npm /usr/local/bin<br>sudo ln -s /usr/local/node/bin/npx /usr/local/bin<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">+ </span>添加PATH</span><br></pre></td></tr></table></figure>
+sudo vi /etc/profile.d/node-env.sh<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">文件中写入以下内容并保存，重新登录后即可直接在终端使用全局模块</span><br></pre></td></tr></table></figure>
+export PATH=$PATH:/usr/local/node/bin<figure class="highlight vala"><table><tr><td class="code"><pre><span class="line"><span class="meta"># WPSJS</span></span><br><span class="line"><span class="meta">## 安装wpsjs</span></span><br><span class="line">在已配置好nodejs之后，使用npm全局安装wpsjs</span><br></pre></td></tr></table></figure>
+npm install -g wpsjs<br>```<h1 id="已知问题"><a href="#已知问题" class="headerlink" title="已知问题"></a>已知问题</h1></li>
+<li>自带输入法与VSCode冲突</li>
+<li>换源并upgrade后可能会导致自带的UOS浏览器崩溃</li>
+</ul>
+]]></content>
+      <categories>
+        <category>技术</category>
+        <category>Linux</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>UOS下使用WPS加载项</title>
+    <url>/t-38753/</url>
+    <content><![CDATA[<p>UOS下自带的专业版WPS与Windows下的专业版WPS或是官网的Linux版WPS均有所不同，在此记录一下UOS下使用WPS加载项的方式。</p>
+<a id="more"></a>
+
+<p>WPS加载项本质上是一组带有特定功能的前端页面，通过WPS自带的V8引擎加载显示。WPS加载项的加载方式按配置的位置可分为<code>publish模式</code> 与 <code>jsplugin模式</code>，同时每种方式都可以进行在线安装或离线安装。在这里进行一下简单的介绍。  </p>
+<h1 id="常用路径与基础操作方式"><a href="#常用路径与基础操作方式" class="headerlink" title="常用路径与基础操作方式"></a>常用路径与基础操作方式</h1><h2 id="路径"><a href="#路径" class="headerlink" title="路径"></a>路径</h2><h3 id="oem-ini"><a href="#oem-ini" class="headerlink" title="oem.ini"></a>oem.ini</h3><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line"><span class="regexp">/opt/</span>apps<span class="regexp">/cn.wps.wps-office-pro/</span>files<span class="regexp">/kingsoft/</span>wps-office<span class="regexp">/office6/</span>cfgs<span class="regexp">/</span></span><br></pre></td></tr></table></figure>
+<h3 id="jsplugins-xml"><a href="#jsplugins-xml" class="headerlink" title="jsplugins.xml"></a>jsplugins.xml</h3><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">~<span class="regexp">/.local/</span>share<span class="regexp">/Kingsoft/</span>wps<span class="regexp">/jsaddons</span></span><br></pre></td></tr></table></figure>
+<h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><h2 id="重启WPS服务"><a href="#重启WPS服务" class="headerlink" title="重启WPS服务"></a>重启WPS服务</h2><figure class="highlight vim"><table><tr><td class="code"><pre><span class="line">/<span class="keyword">opt</span>/apps/<span class="keyword">cn</span>.wps.wps-office-<span class="keyword">pro</span>/<span class="keyword">files</span>/bin/quickstartoffice restart</span><br></pre></td></tr></table></figure>
+<h2 id="全局安装wpsjs"><a href="#全局安装wpsjs" class="headerlink" title="全局安装wpsjs"></a>全局安装wpsjs</h2><figure class="highlight coffeescript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">npm</span> i -g wpsjs</span><br></pre></td></tr></table></figure>
+
+<h1 id="publish模式下安装在线加载项"><a href="#publish模式下安装在线加载项" class="headerlink" title="publish模式下安装在线加载项"></a>publish模式下安装在线加载项</h1><h2 id="生成加载项"><a href="#生成加载项" class="headerlink" title="生成加载项"></a>生成加载项</h2><p>执行 <code>wpsjs publish</code> 并填写服务器地址</p>
+<h2 id="部署加载项"><a href="#部署加载项" class="headerlink" title="部署加载项"></a>部署加载项</h2><ul>
+<li>将生成的<code>wps-addon-build</code>下的内容部署到服务器上，或使用<code>http-server</code>本地建立服务器</li>
+<li>打开<code>/wps-addon-publish/publish.html</code>并在网页中配置加载项<h2 id="卸载加载项"><a href="#卸载加载项" class="headerlink" title="卸载加载项"></a>卸载加载项</h2></li>
+<li>使用<code>/wps-addon-publish/publish.html</code>移除加载项</li>
+<li>删除<code>~/.local/share/Kingsoft/wps/jsaddons/publish.xml</code>里的相应内容</li>
+<li>重启wps服务</li>
+</ul>
+<h1 id="jsplugin模式下离线安装加载项"><a href="#jsplugin模式下离线安装加载项" class="headerlink" title="jsplugin模式下离线安装加载项"></a>jsplugin模式下离线安装加载项</h1><h2 id="生成加载项-1"><a href="#生成加载项-1" class="headerlink" title="生成加载项"></a>生成加载项</h2><p>执行 <code>wpsjs build</code> 并选择离线模式</p>
+<h2 id="部署加载项-1"><a href="#部署加载项-1" class="headerlink" title="部署加载项"></a>部署加载项</h2><ul>
+<li>将生成的7z文件解压到<code>~/.local/share/Kingsoft/wps/jsaddons/</code>，在<code>jsaddons</code>目录下将得到一个名字为<code>加载项名_版本号</code>且包含<code>index.html</code>和<code>ribbon.xml</code>的文件夹</li>
+<li>编辑<code>jsaddons</code>下的<code>jsplugins.xml</code>文件，格式如下：<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">jsplugins</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">jsplugin</span> <span class="attr">name</span>=<span class="string">"加载项名称"</span> <span class="attr">type</span>=<span class="string">"可为et wps wpp之一"</span> <span class="attr">url</span>=<span class="string">"地址"</span> <span class="attr">version</span>=<span class="string">"版本号"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">jsplugins</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="卸载加载项-1"><a href="#卸载加载项-1" class="headerlink" title="卸载加载项"></a>卸载加载项</h2></li>
+<li>删除<code>~/.local/share/Kingsoft/wps/jsaddons/</code>下的加载项文件夹</li>
+<li>删除<code>~/.local/share/Kingsoft/wps/jsaddons/jsplugins.xml</code>里的相应内容</li>
+<li>重启wps服务</li>
+</ul>
+]]></content>
+      <categories>
+        <category>技术</category>
+        <category>Linux</category>
       </categories>
   </entry>
 </search>

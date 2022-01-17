@@ -270,7 +270,7 @@
     </span>
     <span>
       <span class="iconfont icon-calendar-check"></span>
-      更新于:&nbsp;2020-03-21
+      更新于:&nbsp;2021-11-19
     </span>
     <span>
       <span class="iconfont icon-folder"></span>
@@ -349,13 +349,19 @@
 <p>可以加入服务自动启动或是用screen手动启动</p>
 <h1 id="Chrome浏览器代理设置"><a href="#Chrome浏览器代理设置" class="headerlink" title="Chrome浏览器代理设置"></a>Chrome浏览器代理设置</h1><p>打开开发者模式，使用<code>crx</code>文件安装<code>SwtichyOmega</code>插件。</p>
 <p><code>SwtichyOmega</code>插件地址：<a href="https://github.com/FelisCatus/SwitchyOmega/releases" target="_blank" rel="noopener">Github release</a> ； <a href="../download/SwitchyOmega_Chromium.crx">本站下载</a></p>
-<h1 id="git代理设置"><a href="#git代理设置" class="headerlink" title="git代理设置"></a>git代理设置</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#设置代理</span></span><br><span class="line">git config --global http.proxy <span class="string">'socks5://127.0.0.1:1080'</span> </span><br><span class="line">git config --global https.proxy <span class="string">'socks5://127.0.0.1:1080'</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#删除代理</span></span><br><span class="line">git config --global --<span class="built_in">unset</span> http.proxy</span><br><span class="line">git config --global --<span class="built_in">unset</span> https.proxy</span><br></pre></td></tr></table></figure>
+<h1 id="git代理设置"><a href="#git代理设置" class="headerlink" title="git代理设置"></a>git代理设置</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#设置代理</span></span><br><span class="line">git config --global http.proxy socks5://127.0.0.1:1080</span><br><span class="line">git config --global https.proxy socks5://127.0.0.1:1080</span><br><span class="line"></span><br><span class="line"><span class="comment">#删除代理</span></span><br><span class="line">git config --global --<span class="built_in">unset</span> http.proxy</span><br><span class="line">git config --global --<span class="built_in">unset</span> https.proxy</span><br></pre></td></tr></table></figure>
 
 <h1 id="npm代理设置方式"><a href="#npm代理设置方式" class="headerlink" title="npm代理设置方式"></a>npm代理设置方式</h1><p>设置代理</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> proxy socks5://127.0.0.1:1080</span><br><span class="line">npm config <span class="built_in">set</span> https-proxy socks5://127.0.0.1:1080</span><br></pre></td></tr></table></figure>
 
 <p>删除代理</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm config delete proxy</span><br><span class="line">npm config delete https-proxy</span><br></pre></td></tr></table></figure>
+
+<p>设置淘宝源</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+
+<p>恢复官方源</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config delete registry</span><br></pre></td></tr></table></figure>
   </div>
   <!--文末结束语-->
   
@@ -492,7 +498,7 @@
         <a href="https://beian.miit.gov.cn" rel="noopener" target="_blank">苏ICP备18025778号</a>
       
       <span>
-        &copy; 2015 - 2021 
+        &copy; 2015 - 2022 
         
           <span style="color:#d9333f" class="iconfont icon-heart"></span>
         

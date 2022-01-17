@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <script>if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href="https://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); </script>
+    
+    
+        <link rel="preload" crossorigin="crossorigin" href="/fonts/roboto/Roboto-Regular.woff2" as="font">
+        <link rel="preload" crossorigin="crossorigin" href="/fonts/roboto/Roboto-Bold.woff2" as="font">
+    
+    
+    
+        <link rel="shortcut icon" href="/images/favicon.ico">
+    
+
+    
+    
+        
+<link rel="stylesheet" href="/css/mdui.min.v1.0.0.css">
+
+    
+    
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/iconfont.css">
+
+
+    
+    
+
+    
+        <script data-ad-client="ca-pub-5888225880131847" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    
+
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144166423-1"></script>
+<script>
+  var host = window.location.hostname;
+  if (host != "localhost" || true == false) {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-144166423-1');
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+          
+
+
+    
+    
+    <title>
+        
+            UOS下替换安装源及安装常见软件踩坑 | 小蜗熊的蜂蜜罐
+        
+    </title>
+    
+    
+<meta name="generator" content="Hexo 4.2.1"></head>
+<body class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-primary-teal mdui-theme-accent-blue">
+  
+  <header class="mdui-appbar mdui-appbar-fixed">
+  <div id="toolbar" class="mdui-toolbar mdui-color-theme">
+    <button class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#sidebar', swipe: true}"><i class="iconfont icon-menu"></i></button>
+    <a href="/" class="mdui-typo-headline">小蜗熊的蜂蜜罐</a>
+    <a href="/" class="header-subtitle mdui-typo-headline"></a>
+    <div class="mdui-toolbar-spacer"></div>
+    <button class="mdui-btn mdui-btn-icon" mdui-dialog="{target: '#search'}" mdui-tooltip="{content: 'search'}"><i class="iconfont icon-search"></i></button>
+  </div>
+</header>
+
+<div class="mdui-dialog" id="search">
+  
+    <div class="search-form">
+      <input type="search" class="search-form-input" placeholder="请输入关键字" onfocus="listenSearchFunc()">
+    </div>
+    <div class="search-result" data-resource="/search.xml"></div>
+  
+</div>
+
+  <aside id="sidebar" class="mdui-drawer">
+    <div class="mdui-tab" mdui-tab>
+        <a href="#sidebar-tab1" id="sidebartab" class="mdui-ripple mdui-tab-active">站点概览</a>
+        <a href="#sidebar-tab2" id="sidebartab" class="mdui-ripple">关于</a>
+    </div>
+
+    
+    <div id="sidebar-tab1" class="mdui-p-a-1">
+        <div class="mdui-list">
+            
+                
+                <a href="/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-home"></i>
+                    </div>
+                    <div class="mdui-list-item-content">主页</div>
+                </a>
+            
+                
+                <a href="/tags/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-bookmark"></i>
+                    </div>
+                    <div class="mdui-list-item-content">标签</div>
+                </a>
+            
+                
+                <a href="/categories/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-folder"></i>
+                    </div>
+                    <div class="mdui-list-item-content">分类</div>
+                </a>
+            
+                
+                <a href="/archives/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-archive"></i>
+                    </div>
+                    <div class="mdui-list-item-content">归档</div>
+                </a>
+            
+                
+                <a href="/tools/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-tools"></i>
+                    </div>
+                    <div class="mdui-list-item-content">工具箱</div>
+                </a>
+            
+                
+                <a href="/about/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-user"></i>
+                    </div>
+                    <div class="mdui-list-item-content">关于</div>
+                </a>
+            
+                
+                <a href="https://note.garybear.cn/" target="_blank" rel="noopener" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-blog"></i>
+                    </div>
+                    <div class="mdui-list-item-content">笔记本</div>
+                </a>
+            
+            <div class="mdui-list-item mdui-ripple">
+                <div class="mdui-list-item-icon">
+                    <i class="iconfont icon-moon"></i>
+                </div>
+                <div class="mdui-list-item-content">夜间模式</div>
+                <label class="mdui-switch" id="darkmode">
+                  <input type="checkbox" id="nightmode_switch"/>
+                  <i class="mdui-switch-icon"></i>
+                </label>
+            </div>           
+        </div>
+    </div>
+
+    
+    <div id="sidebar-tab2" class="mdui-p-a-1">
+        <div class="sidebar-overview">
+            <div class="sidebar-avatar">
+                
+                    <img src="/images/avatar.webp"/>
+                
+            </div>
+            <div class="sidebar-author-name">机智小蜗熊</div>
+            <div class="sidebar-description">人间五十年，岂有长生不灭者？</div>
+        </div>
+        <div class="sidebar-links">
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-mail"></i></span>
+                    <a href="mailto:kb1000fx@gmail.com" class="mdui-chip-title">E-Mail</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-github"></i></span>
+                    <a href="https://github.com/kb1000fx" target="_blank" rel="noopener" class="mdui-chip-title">GitHub</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-bilibili"></i></span>
+                    <a href="https://live.bilibili.com/8448779" target="_blank" rel="noopener" class="mdui-chip-title">Bilibili</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-steam"></i></span>
+                    <a href="https://steamcommunity.com/profiles/76561198346798163" target="_blank" rel="noopener" class="mdui-chip-title">Steam</a>
+                </div>
+            
+        </div>
+        <ul class="mdui-list" mdui-collapse="{accordion: true}">
+            <li class="mdui-collapse-item">
+                <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-link"></i>
+                    </div>
+                    <div class="mdui-list-item-content">友情链接</div>
+                    <div class="mdui-collapse-item-arrow">
+                        <i class="mdui-list-item-icon iconfont icon-angle-down"></i>
+                    </div>
+                </div>
+                <ul id="linksList" class="mdui-collapse-item-body mdui-list mdui-list-dense">
+                    
+                        <a href="https://garybear.cn/hexo-theme-meadow/#/" class="mdui-list-item mdui-ripple">
+                            Meadow说明文档
+                        </a>
+                    
+                        <a href="https://garybear.cn/hexo-theme-insulin/#/" class="mdui-list-item mdui-ripple">
+                            Insulin说明文档
+                        </a>
+                    
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="mdui-divider"></div>
+    
+    
+        <div class="adsense-contain">
+            <!-- Sidebar Ads -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5888225880131847"
+     data-ad-slot="4752632688"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+        </div>
+    
+</aside>
+  
+  <main id="main-contain" class="mdui-container mdui-m-t-5">
+    <article id="article" class="mdui-card mdui-p-b-2 mdui-m-b-5">
+  <header class="mdui-card-media">
+    
+    
+      <div class="post-header"> 
+  <a class="post-header-title" href="/t-4838/">UOS下替换安装源及安装常见软件踩坑</a>
+  <div class="post-header-meta">
+    <span>
+      <span class="iconfont icon-calendar"></span>
+      发布于:&nbsp;2022-01-01
+    </span>
+    <span>
+      <span class="iconfont icon-calendar-check"></span>
+      更新于:&nbsp;2022-01-17
+    </span>
+    <span>
+      <span class="iconfont icon-folder"></span>
+      分类于:&nbsp;<a class="category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a> > <a class="category-link" href="/categories/%E6%8A%80%E6%9C%AF/Linux/">Linux</a>
+    </span>
+    
+      <span>
+        <span class="iconfont icon-eye"></span>
+        阅读次数:&nbsp;
+        <span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span>
+      </span>
+    
+  </div>
+</div>   
+    
+
+
+
+    
+    
+    <div class="mdui-card-menu">
+    
+      <button class="mdui-btn mdui-btn-icon mdui-text-color-teal" mdui-menu="{target: '#share_menu', align: 'right'}"><i class="iconfont icon-share"></i></button>
+      <ul class="mdui-menu" id="share_menu">
+        <li class="mdui-menu-item">
+          <a href="http://service.weibo.com/share/share.php?appkey=&title=UOS下替换安装源及安装常见软件踩坑&url=https://garybear.cn/t-4838/&pic=https://garybear.cn/images/favicon.ico&searchPic=false&style=simple" target="_blank" class="mdui-ripple">分享到 Weibo</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://twitter.com/intent/tweet?text=UOS下替换安装源及安装常见软件踩坑&url=https://garybear.cn/t-4838/&via=机智小蜗熊" target="_blank" class="mdui-ripple">分享到 Twitter</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://garybear.cn/t-4838/" target="_blank" class="mdui-ripple">分享到 Facebook</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://plus.google.com/share?url=https://garybear.cn/t-4838/" target="_blank" class="mdui-ripple">分享到 Google+</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://garybear.cn/t-4838/&title=UOS下替换安装源及安装常见软件踩坑" target="_blank" class="mdui-ripple">分享到 LinkedIn</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="http://connect.qq.com/widget/shareqq/index.html?site=小蜗熊的蜂蜜罐&title=UOS下替换安装源及安装常见软件踩坑&summary=人间五十年，岂有长生不灭者？&pics=https://garybear.cn/images/favicon.ico&url=https://garybear.cn/t-4838/" target="_blank" class="mdui-ripple">分享到 QQ</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://telegram.me/share/url?url=https://garybear.cn/t-4838/&text=UOS下替换安装源及安装常见软件踩坑" target="_blank" class="mdui-ripple">分享到 Telegram</a>
+        </li>
+      </ul>
+    
+  </div>
+  </header>
+  
+  
+    <div class="adsense-contain">
+      <!-- Banner Ads -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5888225880131847"
+     data-ad-slot="3949852758"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    </div>
+  
+  
+  
+  
+  <div class="mdui-card-content mdui-typo mdui-p-x-4">
+    <p>UOS作为一款由deepin衍生而来的国产系统，在各种操作方面与一般的Debian系有相似之处又略有不同。由于自带的deepin源存在一定问题，可以为系统替换ARM版的Ubuntu源来增加扩展性。</p>
+<a id="more"></a>
+
+<h1 id="替换清华源"><a href="#替换清华源" class="headerlink" title="替换清华源"></a>替换清华源</h1><p>Ubuntu ARM64清华源: <a href="https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu-ports/" target="_blank" rel="noopener">https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu-ports/</a></p>
+<ul>
+<li>新建源文件<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo <span class="keyword">vi</span> /etc/apt/sources.<span class="keyword">list</span>.d/repo.<span class="keyword">list</span></span><br></pre></td></tr></table></figure></li>
+<li>替换为清华源<br>将文件替换为以下内容并保存<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># 默认注释了源码镜像以提高 apt <span class="keyword">update</span> 速度，如有需要可自行取消注释</span><br><span class="line"><span class="keyword">deb</span> http<span class="variable">s:</span>//mirrors.tuna.tsinghua.edu.<span class="keyword">cn</span>/ubuntu-ports/ focal main restricted universe multiverse</span><br><span class="line"># <span class="keyword">deb</span>-src http<span class="variable">s:</span>//mirrors.tuna.tsinghua.edu.<span class="keyword">cn</span>/ubuntu-ports/ focal main restricted universe multiverse</span><br><span class="line"><span class="keyword">deb</span> http<span class="variable">s:</span>//mirrors.tuna.tsinghua.edu.<span class="keyword">cn</span>/ubuntu-ports/ focal-updates main restricted universe multiverse</span><br><span class="line"># <span class="keyword">deb</span>-src http<span class="variable">s:</span>//mirrors.tuna.tsinghua.edu.<span class="keyword">cn</span>/ubuntu-ports/ focal-updates main restricted universe multiverse</span><br><span class="line"><span class="keyword">deb</span> http<span class="variable">s:</span>//mirrors.tuna.tsinghua.edu.<span class="keyword">cn</span>/ubuntu-ports/ focal-backports main restricted universe multiverse</span><br><span class="line"># <span class="keyword">deb</span>-src http<span class="variable">s:</span>//mirrors.tuna.tsinghua.edu.<span class="keyword">cn</span>/ubuntu-ports/ focal-backports main restricted universe multiverse</span><br><span class="line"><span class="keyword">deb</span> http<span class="variable">s:</span>//mirrors.tuna.tsinghua.edu.<span class="keyword">cn</span>/ubuntu-ports/ focal-security main restricted universe multiverse</span><br><span class="line"># <span class="keyword">deb</span>-src http<span class="variable">s:</span>//mirrors.tuna.tsinghua.edu.<span class="keyword">cn</span>/ubuntu-ports/ focal-security main restricted universe multiverse</span><br><span class="line"></span><br><span class="line"># 预发布软件源，不建议启用</span><br><span class="line"># <span class="keyword">deb</span> http<span class="variable">s:</span>//mirrors.tuna.tsinghua.edu.<span class="keyword">cn</span>/ubuntu-ports/ focal-proposed main restricted universe multiverse</span><br><span class="line"># <span class="keyword">deb</span>-src http<span class="variable">s:</span>//mirrors.tuna.tsinghua.edu.<span class="keyword">cn</span>/ubuntu-ports/ focal-proposed main restricted universe multiverse</span><br></pre></td></tr></table></figure></li>
+<li>安装公钥<figure class="highlight brainfuck"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">sudo</span> <span class="comment">apt</span><span class="literal">-</span><span class="comment">key</span> <span class="comment">adv</span> --<span class="comment">keyserver</span> <span class="comment">keyserver</span><span class="string">.</span><span class="comment">ubuntu</span><span class="string">.</span><span class="comment">com</span> --<span class="comment">recv</span><span class="literal">-</span><span class="comment">keys</span> <span class="comment">3B4FE6ACC0B21F32</span></span><br></pre></td></tr></table></figure></li>
+<li>更新apt源<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-<span class="keyword">get</span> <span class="keyword">update</span></span><br></pre></td></tr></table></figure>
+<h1 id="软件安装"><a href="#软件安装" class="headerlink" title="软件安装"></a>软件安装</h1><h2 id="FireFox-95"><a href="#FireFox-95" class="headerlink" title="FireFox 95+"></a>FireFox 95+</h2>UOS官方源中的火狐版本较老，可替换清华源后通过apt安装新版<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install firefox</span><br><span class="line">``` </span><br><span class="line"><span class="comment">## NodeJS</span></span><br><span class="line">地址: https://nodejs.org/en/download/</span><br><span class="line">解压后使用以下方式之一将<span class="keyword">node</span><span class="title">添加至全局</span></span><br><span class="line"><span class="title">+ 建立软链接</span></span><br></pre></td></tr></table></figure>
+sudo ln -s /usr/local/node/bin/node /usr/local/bin<br>sudo ln -s /usr/local/node/bin/npm /usr/local/bin<br>sudo ln -s /usr/local/node/bin/npx /usr/local/bin<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">+ </span>添加PATH</span><br></pre></td></tr></table></figure>
+sudo vi /etc/profile.d/node-env.sh<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">文件中写入以下内容并保存，重新登录后即可直接在终端使用全局模块</span><br></pre></td></tr></table></figure>
+export PATH=$PATH:/usr/local/node/bin<figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># WPSJS</span></span><br><span class="line"><span class="meta">## 安装wpsjs</span></span><br><span class="line">在已配置好nodejs之后，使用npm全局安装wpsjs</span><br></pre></td></tr></table></figure>
+npm install -g wpsjs<br>```<h1 id="已知问题"><a href="#已知问题" class="headerlink" title="已知问题"></a>已知问题</h1></li>
+<li>自带输入法与VSCode冲突</li>
+<li>换源并upgrade后可能会导致自带的UOS浏览器崩溃</li>
+</ul>
+
+  </div>
+  <!--文末结束语-->
+  
+    <div style="text-align:center;color: #ccc;font-size:24px;"> --- 本文结束 <i class="iconfont icon-heartbeat" style="font-size:24px;"></i> The End --- </div>
+  
+  <!--页脚广告-->
+  
+    <div class="adsense-contain">
+      <!-- Footer Ads -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5888225880131847"
+     data-ad-slot="2212253348"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    </div>
+  
+  <div class="mdui-divider"></div>
+  
+  <nav>
+    
+      <a rel="prev" class="post-nav-item mdui-float-left" href="/t-38753/">
+        <i class="iconfont icon-angle-left"></i>
+        <span>UOS下使用WPS加载项</span>
+      </a>
+    
+    
+      <a rel="next" class="post-nav-item mdui-float-right" href="/t-54320/">
+        <span>Cheat Engine脚本汇总</span>
+        <i class="iconfont icon-angle-right"></i>
+      </a>
+    
+  </nav>
+</article>
+
+
+
+
+  <div class="toc-button"  style="z-index: 100;">
+    <button class="mdui-fab mdui-ripple mdui-color-teal" mdui-menu="{target: '#toc'}"><i class="iconfont icon-list"></i></button>
+    <ul class="mdui-menu" id="toc">
+      <li class="mdui-menu-item">
+        <a href="/t-4838/" id="toc-header" class="mdui-ripple">文章目录</a>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#替换清华源"><span class="toc-number">1.</span> <span class="toc-text">替换清华源</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#软件安装"><span class="toc-number">2.</span> <span class="toc-text">软件安装</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#FireFox-95"><span class="toc-number">2.1.</span> <span class="toc-text">FireFox 95+</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#已知问题"><span class="toc-number">3.</span> <span class="toc-text">已知问题</span></a></li></ol>
+      </li>
+    </ul>
+  </div>
+
+
+
+    <div id="comment" class="mdui-card mdui-p-a-2 mdui-m-b-5">
+      <div class="mdui-tab" mdui-tab>
+        
+          <a href="#comment-tab0" class="mdui-ripple">gitalk</a>
+        
+          <a href="#comment-tab1" class="mdui-ripple">valine</a>
+        
+          <a href="#comment-tab2" class="mdui-ripple">livere</a>
+        
+      </div>
+      
+        <div id="comment-tab0" class="mdui-p-a-2">
+          <div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
+<script>
+  var gitalk = new Gitalk({
+    clientID: 'f3866882707e12e74c4a',
+    clientSecret: '04a037afee00b94e4b55e474aa270ac136a8c952',
+    repo: 'kb1000fx.github.io',
+    owner: 'kb1000fx',
+    admin: ['kb1000fx'],
+    id:  md5(location.pathname) ,
+    distractionFreeMode: 'true',
+  });
+  gitalk.render('gitalk-container');
+</script>
+        </div>
+      
+        <div id="comment-tab1" class="mdui-p-a-2">
+          <div id="vcomments"></div>
+<script src="//cdnjs.loli.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+  var GUEST_INFO = ['nick', 'mail', 'link'];
+  var guest_info = ''.split(',').filter(function (item) {
+    return GUEST_INFO.indexOf(item) > -1;
+  });
+  var notify = '' === 'true';
+  var verify = '' === 'true';
+  new Valine({
+    el: '#vcomments',
+    notify: notify,
+    verify: verify,
+    appId: '9J3H5T0CaVVKvypbpuFLbq8d-gzGzoHsz',
+    appKey: '7KXF5yiKhXgkkwO1reve8XRl',
+    placeholder: '说点什么',
+    pageSize: '',
+    avatar: '',
+    lang: '',
+    guest_info: guest_info
+  });
+</script>
+        </div>
+      
+        <div id="comment-tab2" class="mdui-p-a-2">
+          <div id="lv-container" data-id="city" data-uid="MTAyMC80OTI2OS8yNTc2Mw==">
+  <script type="text/javascript">
+    (function (d, s) {
+      var j, e = d.getElementsByTagName(s)[0];
+      if (typeof LivereTower === 'function') { return; }
+      j = d.createElement(s);
+      j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+      j.async = true;
+      e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+  </script>
+  <noscript>Please enable JavaScript to view the comments powered by LiveRe.</noscript>
+</div>
+        </div>
+      
+    </div>
+
+  </main>
+  <footer id="footer" class="mdui-text-center mdui-m-t-5 mdui-p-b-2 mdui-p-t-4 mdui-color-theme">
+  <div class="mdui-container">
+    <div class="mdui-row">
+      
+        <a href="https://beian.miit.gov.cn" rel="noopener" target="_blank">苏ICP备18025778号</a>
+      
+      <span>
+        &copy; 2015 - 2022 
+        
+          <span style="color:#d9333f" class="iconfont icon-heart"></span>
+        
+        机智小蜗熊
+      </span>
+    </div>
+    <div class="mdui-row">
+      
+        <div class="mdui-col-xs-6 mdui-text-right">
+          <span>Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a></span>
+        </div>
+        <div class="mdui-col-xs-6 mdui-text-left">
+          <span>Theme: <a href="https://github.com/kb1000fx/Meadow" rel="noopener" target="_blank">Meadow</a></span>
+        </div>
+      
+    </div>
+    <div class="mdui-row">
+      
+        <div class="mdui-col-xs-6 mdui-text-right">
+          <span id="busuanzi_container_site_uv" style="display: none;"> <span class="iconfont icon-user"></span>总访客量 <span id="busuanzi_value_site_uv"></span></span>
+        </div>
+        <div class="mdui-col-xs-6 mdui-text-left">
+          <span id="busuanzi_container_site_pv" style="display: none;"> <span class="iconfont icon-eye"></span>总访问量 <span id="busuanzi_value_site_pv"></span></span>
+        </div>
+      
+    </div>
+ </div>
+</footer>
+  
+  <button id="gotop" class="mdui-fab mdui-fab-fixed mdui-fab-hide mdui-ripple mdui-color-teal" style="z-index:100;"><i class="iconfont icon-arrowup"></i></button>
+  
+  
+
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({
+        startOnLoad: true,
+        theme: "default"
+    });</script>
+
+
+
+
+    
+<script src="/js/mdui.min.v1.0.0.js"></script>
+
+
+
+
+<script src="/js/meadow.js"></script>
+
+</body>
+</html >
