@@ -73,7 +73,7 @@
     </title>
     
     
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 <body class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-primary-teal mdui-theme-accent-blue">
   
   <header class="mdui-appbar mdui-appbar-fixed">
@@ -154,7 +154,7 @@
                 </a>
             
                 
-                <a href="https://note.garybear.cn/" target="_blank" rel="noopener" class="mdui-list-item mdui-ripple">
+                <a target="_blank" rel="noopener" href="https://note.garybear.cn/" class="mdui-list-item mdui-ripple">
                     <div class="mdui-list-item-icon">
                         <i class="iconfont icon-blog"></i>
                     </div>
@@ -196,19 +196,19 @@
                 
                 <div class="mdui-chip">
                     <span class="mdui-chip-icon"><i class="iconfont icon-github"></i></span>
-                    <a href="https://github.com/kb1000fx" target="_blank" rel="noopener" class="mdui-chip-title">GitHub</a>
+                    <a target="_blank" rel="noopener" href="https://github.com/kb1000fx" class="mdui-chip-title">GitHub</a>
                 </div>
             
                 
                 <div class="mdui-chip">
                     <span class="mdui-chip-icon"><i class="iconfont icon-bilibili"></i></span>
-                    <a href="https://live.bilibili.com/8448779" target="_blank" rel="noopener" class="mdui-chip-title">Bilibili</a>
+                    <a target="_blank" rel="noopener" href="https://live.bilibili.com/8448779" class="mdui-chip-title">Bilibili</a>
                 </div>
             
                 
                 <div class="mdui-chip">
                     <span class="mdui-chip-icon"><i class="iconfont icon-steam"></i></span>
-                    <a href="https://steamcommunity.com/profiles/76561198346798163" target="_blank" rel="noopener" class="mdui-chip-title">Steam</a>
+                    <a target="_blank" rel="noopener" href="https://steamcommunity.com/profiles/76561198346798163" class="mdui-chip-title">Steam</a>
                 </div>
             
         </div>
@@ -348,15 +348,15 @@
   
   <div class="mdui-card-content mdui-typo mdui-p-x-4">
     <p>JavaScript中的闭包是指能够访问其他函数作用域内变量的函数，即一个函数内部的函数。闭包是一种保护私有变量的机制，在函数执行时形成私有的作用域，保护里面的私有变量不受外界干扰，即形成一个不销毁的栈环境。但由于闭包会使得函数中的变量都被保存在内存中，所以滥用闭包会造成性能问题或是导致内存泄漏。</p>
-<a id="more"></a>
+<span id="more"></span>
 
 <h1 id="JavaScript闭包简介"><a href="#JavaScript闭包简介" class="headerlink" title="JavaScript闭包简介"></a>JavaScript闭包简介</h1><p>首先来看一个简单的例子：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn1</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  a += <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">return</span> a;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//函数中的a为全局变量</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn2</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line">  a += <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">return</span> a;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//函数中的a为局部变量</span></span><br><span class="line">fn1();</span><br><span class="line"><span class="built_in">console</span>.log(fn1());</span><br><span class="line"><span class="comment">//控制台输出3</span></span><br><span class="line">fn2();</span><br><span class="line"><span class="built_in">console</span>.log(fn2());</span><br><span class="line"><span class="comment">//控制台输出2</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">fn1</span>(<span class="params"></span>) &#123;</span><br><span class="line">  a += <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">return</span> a;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//函数中的a为全局变量</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">fn2</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line">  a += <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">return</span> a;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//函数中的a为局部变量</span></span><br><span class="line"><span class="title function_">fn1</span>();</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">fn1</span>());</span><br><span class="line"><span class="comment">//控制台输出3</span></span><br><span class="line"><span class="title function_">fn2</span>();</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">fn2</span>());</span><br><span class="line"><span class="comment">//控制台输出2</span></span><br></pre></td></tr></table></figure>
 <p>在这个例子中，fn1使用的是全局变量a，fn2使用的是局部变量a。多次执行函数后，f1返回的是多次累加的结果，而f2由于使用的是局部变量执行结果始终与单次执行相同。如果希望多次对一个变量进行操作，同时又不希望将其暴露在全局之中，此时上面的两个函数均无法满足需求，可使用嵌套函数的方法。在JavaScript中，所有函数都能访问它们上一层的作用域。嵌套函数可以访问上一层的函数变量。例如：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> add = (<span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> counter = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> <span class="title">f2</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">          <span class="keyword">return</span> counter += <span class="number">1</span>;</span><br><span class="line">      &#125;</span><br><span class="line">&#125;)();</span><br><span class="line"> </span><br><span class="line">add();</span><br><span class="line">add();</span><br><span class="line">add();</span><br><span class="line"><span class="comment">//此时counter为3</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> add = (<span class="keyword">function</span> <span class="title function_">f1</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">var</span> counter = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">function</span> <span class="title function_">f2</span>(<span class="params"></span>) &#123;</span><br><span class="line">          <span class="keyword">return</span> counter += <span class="number">1</span>;</span><br><span class="line">      &#125;</span><br><span class="line">&#125;)();</span><br><span class="line"> </span><br><span class="line"><span class="title function_">add</span>();</span><br><span class="line"><span class="title function_">add</span>();</span><br><span class="line"><span class="title function_">add</span>();</span><br><span class="line"><span class="comment">//此时counter为3</span></span><br></pre></td></tr></table></figure>
 <p>上面的这个函数就是一个JavaScript闭包，它使得函数拥有私有变量变成可能。</p>
 <h1 id="作用域与作用域链"><a href="#作用域与作用域链" class="headerlink" title="作用域与作用域链"></a>作用域与作用域链</h1><p>JavaScript中存在如下三种作用域：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 全局作用域</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 函数作用域</span></span><br><span class="line">  &#123;</span><br><span class="line">    <span class="comment">// 块级作用域</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 全局作用域</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">func</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="comment">// 函数作用域</span></span><br><span class="line">  &#123;</span><br><span class="line">    <span class="comment">// 块级作用域</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>当同时存在多个作用域对象时，所有函数的作用域对象会被环境栈所管理。环境栈中的作用域对象是按顺序访问的，最先能够访问的是当前函数的作用域，如果访问的变量在当前作用域没有，会访问上一层作用域，直到找到全局作用域。如果访问到全局作用域也没有这个对象，会抛出ReferenceError的异常。</p>
 <p>简单来说就是前面提到过的<code>所有函数都能访问它们上一层的作用域</code>，子对象会一级级向上寻找所有父对象的变量，函数内部可以读取全局变量，这就是所谓的作用域链。</p>
 <h1 id="JavaScript闭包原理"><a href="#JavaScript闭包原理" class="headerlink" title="JavaScript闭包原理"></a>JavaScript闭包原理</h1><p>还是以上面提到的闭包为例，上面的例子中多次调用add函数后变量counter的值能够持续增加，原因就在于每次执行完add之后counter并没有被回收。<br>简单来说，其过程就是：</p>
@@ -426,7 +426,7 @@
     <ul class="mdui-menu" id="toc">
       <li class="mdui-menu-item">
         <a href="/t-37956/" id="toc-header" class="mdui-ripple">文章目录</a>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#JavaScript闭包简介"><span class="toc-number">1.</span> <span class="toc-text">JavaScript闭包简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#作用域与作用域链"><span class="toc-number">2.</span> <span class="toc-text">作用域与作用域链</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#JavaScript闭包原理"><span class="toc-number">3.</span> <span class="toc-text">JavaScript闭包原理</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#JavaScript垃圾回收机制"><span class="toc-number">4.</span> <span class="toc-text">JavaScript垃圾回收机制</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#JavaScript%E9%97%AD%E5%8C%85%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text">JavaScript闭包简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BD%9C%E7%94%A8%E5%9F%9F%E4%B8%8E%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%93%BE"><span class="toc-number">2.</span> <span class="toc-text">作用域与作用域链</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#JavaScript%E9%97%AD%E5%8C%85%E5%8E%9F%E7%90%86"><span class="toc-number">3.</span> <span class="toc-text">JavaScript闭包原理</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#JavaScript%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E6%9C%BA%E5%88%B6"><span class="toc-number">4.</span> <span class="toc-text">JavaScript垃圾回收机制</span></a></li></ol>
       </li>
     </ul>
   </div>
@@ -516,7 +516,7 @@
         <a href="https://beian.miit.gov.cn" rel="noopener" target="_blank">苏ICP备18025778号</a>
       
       <span>
-        &copy; 2015 - 2022 
+        &copy; 2015 - 2023 
         
           <span style="color:#d9333f" class="iconfont icon-heart"></span>
         

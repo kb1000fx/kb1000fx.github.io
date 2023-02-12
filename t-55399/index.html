@@ -73,7 +73,7 @@
     </title>
     
     
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 <body class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-primary-teal mdui-theme-accent-blue">
   
   <header class="mdui-appbar mdui-appbar-fixed">
@@ -154,7 +154,7 @@
                 </a>
             
                 
-                <a href="https://note.garybear.cn/" target="_blank" rel="noopener" class="mdui-list-item mdui-ripple">
+                <a target="_blank" rel="noopener" href="https://note.garybear.cn/" class="mdui-list-item mdui-ripple">
                     <div class="mdui-list-item-icon">
                         <i class="iconfont icon-blog"></i>
                     </div>
@@ -196,19 +196,19 @@
                 
                 <div class="mdui-chip">
                     <span class="mdui-chip-icon"><i class="iconfont icon-github"></i></span>
-                    <a href="https://github.com/kb1000fx" target="_blank" rel="noopener" class="mdui-chip-title">GitHub</a>
+                    <a target="_blank" rel="noopener" href="https://github.com/kb1000fx" class="mdui-chip-title">GitHub</a>
                 </div>
             
                 
                 <div class="mdui-chip">
                     <span class="mdui-chip-icon"><i class="iconfont icon-bilibili"></i></span>
-                    <a href="https://live.bilibili.com/8448779" target="_blank" rel="noopener" class="mdui-chip-title">Bilibili</a>
+                    <a target="_blank" rel="noopener" href="https://live.bilibili.com/8448779" class="mdui-chip-title">Bilibili</a>
                 </div>
             
                 
                 <div class="mdui-chip">
                     <span class="mdui-chip-icon"><i class="iconfont icon-steam"></i></span>
-                    <a href="https://steamcommunity.com/profiles/76561198346798163" target="_blank" rel="noopener" class="mdui-chip-title">Steam</a>
+                    <a target="_blank" rel="noopener" href="https://steamcommunity.com/profiles/76561198346798163" class="mdui-chip-title">Steam</a>
                 </div>
             
         </div>
@@ -344,9 +344,9 @@
   
   
   <div class="mdui-card-content mdui-typo mdui-p-x-4">
-    <p>Steam版的只狼由于存档中含有与账号相关的信息，无法直接复制文件来进行存档替换。如果需要使用他人存档或进行盗版存档转正，需要先对其进行修改。本文需要用到16进制编辑器，这里使用的是<a href="https://mh-nexus.de/downloads/HxDSetup.zip" target="_blank" rel="noopener">HXD</a>。</p>
-<a id="more"></a>
-<h1 id="修改步骤"><a href="#修改步骤" class="headerlink" title="修改步骤"></a>修改步骤</h1><p>存档文件位置：<code>%appdata%\Sekiro\{SteamID}\S0000.sl2</code></p>
+    <p>Steam版的只狼由于存档中含有与账号相关的信息，无法直接复制文件来进行存档替换。如果需要使用他人存档或进行盗版存档转正，需要先对其进行修改。本文需要用到16进制编辑器，这里使用的是<a target="_blank" rel="noopener" href="https://mh-nexus.de/downloads/HxDSetup.zip">HXD</a>。</p>
+<span id="more"></span>
+<h1 id="修改步骤"><a href="#修改步骤" class="headerlink" title="修改步骤"></a>修改步骤</h1><p>存档文件位置：<code>%appdata%\Sekiro\&#123;SteamID&#125;\S0000.sl2</code></p>
 <p>具体步骤如下：</p>
 <ol>
 <li>查找待修改文件中<code>00A003D4-00A003DB</code>的位置，将其替换为自己的Steam 64位ID。</li>
@@ -357,22 +357,22 @@
 <h1 id="存档数据地址"><a href="#存档数据地址" class="headerlink" title="存档数据地址"></a>存档数据地址</h1><p>存档文件共有5个存档位和一个含有SteamID的信息位，每个存档位又分为存档数据和存档校验两个部分，同时每个存档数据中都包含一份SteamID，结构如下。</p>
 <p>其中存档1、存档2地址已经验证过，其余存档的地址是根据数据长度与存档1、2中SteamID与数据头的偏移量<code>33E54</code>计算得到的，不保证其准确性。</p>
 <p>存档1</p>
-<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">存档数据: <span class="number">00000310</span> - <span class="number">0010030</span>F</span><br><span class="line">存档校验: <span class="number">00000300</span> - <span class="number">0000030</span>F</span><br><span class="line">SteamID: <span class="number">00034164</span> - <span class="number">0003416</span>B</span><br></pre></td></tr></table></figure>
+<figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">存档数据: <span class="number">00000310</span> - <span class="number">0010030</span>F</span><br><span class="line">存档校验: <span class="number">00000300</span> - <span class="number">0000030</span>F</span><br><span class="line">SteamID: <span class="number">00034164</span> - <span class="number">0003416</span>B</span><br></pre></td></tr></table></figure>
 <p>存档2</p>
-<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">存档数据: <span class="number">00100320</span> - <span class="number">0020031</span>F</span><br><span class="line">存档校验: <span class="number">00100310</span> - <span class="number">0010031</span>F</span><br><span class="line">SteamID: <span class="number">00134174</span> - <span class="number">0013417</span>B</span><br></pre></td></tr></table></figure>
+<figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">存档数据: <span class="number">00100320</span> - <span class="number">0020031</span>F</span><br><span class="line">存档校验: <span class="number">00100310</span> - <span class="number">0010031</span>F</span><br><span class="line">SteamID: <span class="number">00134174</span> - <span class="number">0013417</span>B</span><br></pre></td></tr></table></figure>
 <p>存档3</p>
-<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">存档数据: <span class="number">00200330</span> - <span class="number">0030032</span>F</span><br><span class="line">存档校验: <span class="number">00200320</span> - <span class="number">0020032</span>F</span><br><span class="line">SteamID: <span class="number">00234184</span> - <span class="number">0023418</span>B</span><br></pre></td></tr></table></figure>
+<figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">存档数据: <span class="number">00200330</span> - <span class="number">0030032</span>F</span><br><span class="line">存档校验: <span class="number">00200320</span> - <span class="number">0020032</span>F</span><br><span class="line">SteamID: <span class="number">00234184</span> - <span class="number">0023418</span>B</span><br></pre></td></tr></table></figure>
 <p>存档4</p>
-<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">存档数据: <span class="number">00300340</span> - <span class="number">0040033</span>F</span><br><span class="line">存档校验: <span class="number">00300330</span> - <span class="number">0030033</span>F</span><br><span class="line">SteamID: <span class="number">00334194</span> - <span class="number">0033419</span>B</span><br></pre></td></tr></table></figure>
+<figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">存档数据: <span class="number">00300340</span> - <span class="number">0040033</span>F</span><br><span class="line">存档校验: <span class="number">00300330</span> - <span class="number">0030033</span>F</span><br><span class="line">SteamID: <span class="number">00334194</span> - <span class="number">0033419</span>B</span><br></pre></td></tr></table></figure>
 <p>存档5</p>
-<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">存档数据: <span class="number">00400350</span> - <span class="number">0050034</span>F</span><br><span class="line">存档校验: <span class="number">00400340</span> - <span class="number">0040034</span>F</span><br><span class="line">SteamID: <span class="number">004341</span>A4 - <span class="number">004341</span>A8</span><br></pre></td></tr></table></figure>
+<figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">存档数据: <span class="number">00400350</span> - <span class="number">0050034</span>F</span><br><span class="line">存档校验: <span class="number">00400340</span> - <span class="number">0040034</span>F</span><br><span class="line">SteamID: <span class="number">004341A4</span> - <span class="number">004341A8</span></span><br></pre></td></tr></table></figure>
 <p>用户信息</p>
-<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">总SteamID: <span class="number">00</span>A003D4 - <span class="number">00</span>A003DB</span><br></pre></td></tr></table></figure>
+<figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">总SteamID: <span class="number">00A003D4</span> - <span class="number">00</span>A003DB</span><br></pre></td></tr></table></figure>
 <p>存档1的数据详情 (来源于Reddit，未验证)</p>
-<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">角色: <span class="number">00016140</span> - <span class="number">000</span>A0F5F</span><br><span class="line">位置: <span class="number">000</span>A5A70 - <span class="number">000</span>A5B1F</span><br></pre></td></tr></table></figure>
+<figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">角色: <span class="number">00016140</span> - <span class="number">000</span>A0F5F</span><br><span class="line">位置: <span class="number">000A5A70</span> - <span class="number">000</span>A5B1F</span><br></pre></td></tr></table></figure>
 
 <blockquote>
-<p>参考：<a href="https://www.reddit.com/r/Sekiro/comments/ba44qp/how_to_edit_your_save_file_to_fix_various_issues/" target="_blank" rel="noopener">https://www.reddit.com/r/Sekiro/comments/ba44qp/how_to_edit_your_save_file_to_fix_various_issues/</a></p>
+<p>参考：<a target="_blank" rel="noopener" href="https://www.reddit.com/r/Sekiro/comments/ba44qp/how_to_edit_your_save_file_to_fix_various_issues/">https://www.reddit.com/r/Sekiro/comments/ba44qp/how_to_edit_your_save_file_to_fix_various_issues/</a></p>
 </blockquote>
 
   </div>
@@ -421,7 +421,7 @@
     <ul class="mdui-menu" id="toc">
       <li class="mdui-menu-item">
         <a href="/t-55399/" id="toc-header" class="mdui-ripple">文章目录</a>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#修改步骤"><span class="toc-number">1.</span> <span class="toc-text">修改步骤</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#存档数据地址"><span class="toc-number">2.</span> <span class="toc-text">存档数据地址</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E6%AD%A5%E9%AA%A4"><span class="toc-number">1.</span> <span class="toc-text">修改步骤</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AD%98%E6%A1%A3%E6%95%B0%E6%8D%AE%E5%9C%B0%E5%9D%80"><span class="toc-number">2.</span> <span class="toc-text">存档数据地址</span></a></li></ol>
       </li>
     </ul>
   </div>
@@ -511,7 +511,7 @@
         <a href="https://beian.miit.gov.cn" rel="noopener" target="_blank">苏ICP备18025778号</a>
       
       <span>
-        &copy; 2015 - 2022 
+        &copy; 2015 - 2023 
         
           <span style="color:#d9333f" class="iconfont icon-heart"></span>
         

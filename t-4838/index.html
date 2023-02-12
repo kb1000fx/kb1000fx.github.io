@@ -73,7 +73,7 @@
     </title>
     
     
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 <body class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-primary-teal mdui-theme-accent-blue">
   
   <header class="mdui-appbar mdui-appbar-fixed">
@@ -154,7 +154,7 @@
                 </a>
             
                 
-                <a href="https://note.garybear.cn/" target="_blank" rel="noopener" class="mdui-list-item mdui-ripple">
+                <a target="_blank" rel="noopener" href="https://note.garybear.cn/" class="mdui-list-item mdui-ripple">
                     <div class="mdui-list-item-icon">
                         <i class="iconfont icon-blog"></i>
                     </div>
@@ -196,19 +196,19 @@
                 
                 <div class="mdui-chip">
                     <span class="mdui-chip-icon"><i class="iconfont icon-github"></i></span>
-                    <a href="https://github.com/kb1000fx" target="_blank" rel="noopener" class="mdui-chip-title">GitHub</a>
+                    <a target="_blank" rel="noopener" href="https://github.com/kb1000fx" class="mdui-chip-title">GitHub</a>
                 </div>
             
                 
                 <div class="mdui-chip">
                     <span class="mdui-chip-icon"><i class="iconfont icon-bilibili"></i></span>
-                    <a href="https://live.bilibili.com/8448779" target="_blank" rel="noopener" class="mdui-chip-title">Bilibili</a>
+                    <a target="_blank" rel="noopener" href="https://live.bilibili.com/8448779" class="mdui-chip-title">Bilibili</a>
                 </div>
             
                 
                 <div class="mdui-chip">
                     <span class="mdui-chip-icon"><i class="iconfont icon-steam"></i></span>
-                    <a href="https://steamcommunity.com/profiles/76561198346798163" target="_blank" rel="noopener" class="mdui-chip-title">Steam</a>
+                    <a target="_blank" rel="noopener" href="https://steamcommunity.com/profiles/76561198346798163" class="mdui-chip-title">Steam</a>
                 </div>
             
         </div>
@@ -340,19 +340,26 @@
   
   <div class="mdui-card-content mdui-typo mdui-p-x-4">
     <p>UOS作为一款由deepin衍生而来的国产系统，在各种操作方面与一般的Debian系有相似之处又略有不同。由于自带的deepin源存在一定问题，可以为系统替换ARM版的Ubuntu源来增加扩展性。</p>
-<a id="more"></a>
+<span id="more"></span>
 
-<h1 id="替换清华源"><a href="#替换清华源" class="headerlink" title="替换清华源"></a>替换清华源</h1><p>Ubuntu ARM64清华源: <a href="https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu-ports/" target="_blank" rel="noopener">https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu-ports/</a></p>
+<h1 id="替换清华源"><a href="#替换清华源" class="headerlink" title="替换清华源"></a>替换清华源</h1><p>Ubuntu ARM64清华源: <a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu-ports/">https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu-ports/</a></p>
 <ul>
-<li>新建源文件<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo <span class="keyword">vi</span> /etc/apt/sources.<span class="keyword">list</span>.d/repo.<span class="keyword">list</span></span><br></pre></td></tr></table></figure></li>
-<li>替换为清华源<br>将文件替换为以下内容并保存<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># 默认注释了源码镜像以提高 apt <span class="keyword">update</span> 速度，如有需要可自行取消注释</span><br><span class="line"><span class="keyword">deb</span> http<span class="variable">s:</span>//mirrors.tuna.tsinghua.edu.<span class="keyword">cn</span>/ubuntu-ports/ focal main restricted universe multiverse</span><br><span class="line"># <span class="keyword">deb</span>-src http<span class="variable">s:</span>//mirrors.tuna.tsinghua.edu.<span class="keyword">cn</span>/ubuntu-ports/ focal main restricted universe multiverse</span><br><span class="line"><span class="keyword">deb</span> http<span class="variable">s:</span>//mirrors.tuna.tsinghua.edu.<span class="keyword">cn</span>/ubuntu-ports/ focal-updates main restricted universe multiverse</span><br><span class="line"># <span class="keyword">deb</span>-src http<span class="variable">s:</span>//mirrors.tuna.tsinghua.edu.<span class="keyword">cn</span>/ubuntu-ports/ focal-updates main restricted universe multiverse</span><br><span class="line"><span class="keyword">deb</span> http<span class="variable">s:</span>//mirrors.tuna.tsinghua.edu.<span class="keyword">cn</span>/ubuntu-ports/ focal-backports main restricted universe multiverse</span><br><span class="line"># <span class="keyword">deb</span>-src http<span class="variable">s:</span>//mirrors.tuna.tsinghua.edu.<span class="keyword">cn</span>/ubuntu-ports/ focal-backports main restricted universe multiverse</span><br><span class="line"><span class="keyword">deb</span> http<span class="variable">s:</span>//mirrors.tuna.tsinghua.edu.<span class="keyword">cn</span>/ubuntu-ports/ focal-security main restricted universe multiverse</span><br><span class="line"># <span class="keyword">deb</span>-src http<span class="variable">s:</span>//mirrors.tuna.tsinghua.edu.<span class="keyword">cn</span>/ubuntu-ports/ focal-security main restricted universe multiverse</span><br><span class="line"></span><br><span class="line"># 预发布软件源，不建议启用</span><br><span class="line"># <span class="keyword">deb</span> http<span class="variable">s:</span>//mirrors.tuna.tsinghua.edu.<span class="keyword">cn</span>/ubuntu-ports/ focal-proposed main restricted universe multiverse</span><br><span class="line"># <span class="keyword">deb</span>-src http<span class="variable">s:</span>//mirrors.tuna.tsinghua.edu.<span class="keyword">cn</span>/ubuntu-ports/ focal-proposed main restricted universe multiverse</span><br></pre></td></tr></table></figure></li>
-<li>安装公钥<figure class="highlight brainfuck"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">sudo</span> <span class="comment">apt</span><span class="literal">-</span><span class="comment">key</span> <span class="comment">adv</span> --<span class="comment">keyserver</span> <span class="comment">keyserver</span><span class="string">.</span><span class="comment">ubuntu</span><span class="string">.</span><span class="comment">com</span> --<span class="comment">recv</span><span class="literal">-</span><span class="comment">keys</span> <span class="comment">3B4FE6ACC0B21F32</span></span><br></pre></td></tr></table></figure></li>
-<li>更新apt源<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-<span class="keyword">get</span> <span class="keyword">update</span></span><br></pre></td></tr></table></figure>
-<h1 id="软件安装"><a href="#软件安装" class="headerlink" title="软件安装"></a>软件安装</h1><h2 id="FireFox-95"><a href="#FireFox-95" class="headerlink" title="FireFox 95+"></a>FireFox 95+</h2>UOS官方源中的火狐版本较老，可替换清华源后通过apt安装新版<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install firefox</span><br><span class="line">``` </span><br><span class="line"><span class="comment">## NodeJS</span></span><br><span class="line">地址: https://nodejs.org/en/download/</span><br><span class="line">解压后使用以下方式之一将<span class="keyword">node</span><span class="title">添加至全局</span></span><br><span class="line"><span class="title">+ 建立软链接</span></span><br></pre></td></tr></table></figure>
-sudo ln -s /usr/local/node/bin/node /usr/local/bin<br>sudo ln -s /usr/local/node/bin/npm /usr/local/bin<br>sudo ln -s /usr/local/node/bin/npx /usr/local/bin<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">+ </span>添加PATH</span><br></pre></td></tr></table></figure>
-sudo vi /etc/profile.d/node-env.sh<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">文件中写入以下内容并保存，重新登录后即可直接在终端使用全局模块</span><br></pre></td></tr></table></figure>
-export PATH=$PATH:/usr/local/node/bin<figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># WPSJS</span></span><br><span class="line"><span class="meta">## 安装wpsjs</span></span><br><span class="line">在已配置好nodejs之后，使用npm全局安装wpsjs</span><br></pre></td></tr></table></figure>
-npm install -g wpsjs<br>```<h1 id="已知问题"><a href="#已知问题" class="headerlink" title="已知问题"></a>已知问题</h1></li>
+<li>新建源文件<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vi <span class="regexp">/etc/</span>apt<span class="regexp">/sources.list.d/</span>repo.list</span><br></pre></td></tr></table></figure></li>
+<li>替换为清华源<br>将文件替换为以下内容并保存<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释</span></span><br><span class="line">deb https:<span class="regexp">//mi</span>rrors.tuna.tsinghua.edu.cn<span class="regexp">/ubuntu-ports/</span> focal main restricted universe multiverse</span><br><span class="line"><span class="comment"># deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ focal main restricted universe multiverse</span></span><br><span class="line">deb https:<span class="regexp">//mi</span>rrors.tuna.tsinghua.edu.cn<span class="regexp">/ubuntu-ports/</span> focal-updates main restricted universe multiverse</span><br><span class="line"><span class="comment"># deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ focal-updates main restricted universe multiverse</span></span><br><span class="line">deb https:<span class="regexp">//mi</span>rrors.tuna.tsinghua.edu.cn<span class="regexp">/ubuntu-ports/</span> focal-backports main restricted universe multiverse</span><br><span class="line"><span class="comment"># deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ focal-backports main restricted universe multiverse</span></span><br><span class="line">deb https:<span class="regexp">//mi</span>rrors.tuna.tsinghua.edu.cn<span class="regexp">/ubuntu-ports/</span> focal-security main restricted universe multiverse</span><br><span class="line"><span class="comment"># deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ focal-security main restricted universe multiverse</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 预发布软件源，不建议启用</span></span><br><span class="line"><span class="comment"># deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ focal-proposed main restricted universe multiverse</span></span><br><span class="line"><span class="comment"># deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ focal-proposed main restricted universe multiverse</span></span><br></pre></td></tr></table></figure></li>
+<li>安装公钥<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-key adv <span class="attr">--keyserver</span> keyserver<span class="selector-class">.ubuntu</span><span class="selector-class">.com</span> <span class="attr">--recv-keys</span> <span class="number">3</span>B4FE6ACC0B21F32</span><br></pre></td></tr></table></figure></li>
+<li>更新apt源<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-<span class="keyword">get</span> <span class="keyword">update</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h1 id="软件安装"><a href="#软件安装" class="headerlink" title="软件安装"></a>软件安装</h1><h2 id="FireFox-95"><a href="#FireFox-95" class="headerlink" title="FireFox 95+"></a>FireFox 95+</h2><p>UOS官方源中的火狐版本较老，可替换清华源后通过apt安装新版</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-<span class="built_in">get</span> install firefox</span><br></pre></td></tr></table></figure>
+<h2 id="NodeJS"><a href="#NodeJS" class="headerlink" title="NodeJS"></a>NodeJS</h2><p>地址: <a target="_blank" rel="noopener" href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a><br>解压后使用以下方式之一将node添加至全局</p>
+<ul>
+<li>建立软链接<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo ln -s <span class="regexp">/usr/</span>local<span class="regexp">/node/</span>bin<span class="regexp">/node /u</span>sr<span class="regexp">/local/</span>bin</span><br><span class="line">sudo ln -s <span class="regexp">/usr/</span>local<span class="regexp">/node/</span>bin<span class="regexp">/npm /u</span>sr<span class="regexp">/local/</span>bin</span><br><span class="line">sudo ln -s <span class="regexp">/usr/</span>local<span class="regexp">/node/</span>bin<span class="regexp">/npx /u</span>sr<span class="regexp">/local/</span>bin</span><br></pre></td></tr></table></figure></li>
+<li>添加PATH<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vi /etc/profile.d/<span class="keyword">node</span><span class="title">-env</span>.sh</span><br></pre></td></tr></table></figure>
+文件中写入以下内容并保存，重新登录后即可直接在终端使用全局模块<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export <span class="title class_">PATH</span>=<span class="variable">$PATH</span><span class="symbol">:/usr/local/node/bin</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h1 id="WPSJS"><a href="#WPSJS" class="headerlink" title="WPSJS"></a>WPSJS</h1><h2 id="安装wpsjs"><a href="#安装wpsjs" class="headerlink" title="安装wpsjs"></a>安装wpsjs</h2><p>在已配置好nodejs之后，使用npm全局安装wpsjs</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span> -g wpsjs</span><br></pre></td></tr></table></figure>
+<h1 id="已知问题"><a href="#已知问题" class="headerlink" title="已知问题"></a>已知问题</h1><ul>
 <li>自带输入法与VSCode冲突</li>
 <li>换源并upgrade后可能会导致自带的UOS浏览器崩溃</li>
 </ul>
@@ -403,7 +410,7 @@ npm install -g wpsjs<br>```<h1 id="已知问题"><a href="#已知问题" class="
     <ul class="mdui-menu" id="toc">
       <li class="mdui-menu-item">
         <a href="/t-4838/" id="toc-header" class="mdui-ripple">文章目录</a>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#替换清华源"><span class="toc-number">1.</span> <span class="toc-text">替换清华源</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#软件安装"><span class="toc-number">2.</span> <span class="toc-text">软件安装</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#FireFox-95"><span class="toc-number">2.1.</span> <span class="toc-text">FireFox 95+</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#已知问题"><span class="toc-number">3.</span> <span class="toc-text">已知问题</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9B%BF%E6%8D%A2%E6%B8%85%E5%8D%8E%E6%BA%90"><span class="toc-number">1.</span> <span class="toc-text">替换清华源</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85"><span class="toc-number">2.</span> <span class="toc-text">软件安装</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#FireFox-95"><span class="toc-number">2.1.</span> <span class="toc-text">FireFox 95+</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#NodeJS"><span class="toc-number">2.2.</span> <span class="toc-text">NodeJS</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#WPSJS"><span class="toc-number">3.</span> <span class="toc-text">WPSJS</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85wpsjs"><span class="toc-number">3.1.</span> <span class="toc-text">安装wpsjs</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B7%B2%E7%9F%A5%E9%97%AE%E9%A2%98"><span class="toc-number">4.</span> <span class="toc-text">已知问题</span></a></li></ol>
       </li>
     </ul>
   </div>
@@ -493,7 +500,7 @@ npm install -g wpsjs<br>```<h1 id="已知问题"><a href="#已知问题" class="
         <a href="https://beian.miit.gov.cn" rel="noopener" target="_blank">苏ICP备18025778号</a>
       
       <span>
-        &copy; 2015 - 2022 
+        &copy; 2015 - 2023 
         
           <span style="color:#d9333f" class="iconfont icon-heart"></span>
         

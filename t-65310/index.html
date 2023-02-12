@@ -73,7 +73,7 @@
     </title>
     
     
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 <body class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-primary-teal mdui-theme-accent-blue">
   
   <header class="mdui-appbar mdui-appbar-fixed">
@@ -154,7 +154,7 @@
                 </a>
             
                 
-                <a href="https://note.garybear.cn/" target="_blank" rel="noopener" class="mdui-list-item mdui-ripple">
+                <a target="_blank" rel="noopener" href="https://note.garybear.cn/" class="mdui-list-item mdui-ripple">
                     <div class="mdui-list-item-icon">
                         <i class="iconfont icon-blog"></i>
                     </div>
@@ -196,19 +196,19 @@
                 
                 <div class="mdui-chip">
                     <span class="mdui-chip-icon"><i class="iconfont icon-github"></i></span>
-                    <a href="https://github.com/kb1000fx" target="_blank" rel="noopener" class="mdui-chip-title">GitHub</a>
+                    <a target="_blank" rel="noopener" href="https://github.com/kb1000fx" class="mdui-chip-title">GitHub</a>
                 </div>
             
                 
                 <div class="mdui-chip">
                     <span class="mdui-chip-icon"><i class="iconfont icon-bilibili"></i></span>
-                    <a href="https://live.bilibili.com/8448779" target="_blank" rel="noopener" class="mdui-chip-title">Bilibili</a>
+                    <a target="_blank" rel="noopener" href="https://live.bilibili.com/8448779" class="mdui-chip-title">Bilibili</a>
                 </div>
             
                 
                 <div class="mdui-chip">
                     <span class="mdui-chip-icon"><i class="iconfont icon-steam"></i></span>
-                    <a href="https://steamcommunity.com/profiles/76561198346798163" target="_blank" rel="noopener" class="mdui-chip-title">Steam</a>
+                    <a target="_blank" rel="noopener" href="https://steamcommunity.com/profiles/76561198346798163" class="mdui-chip-title">Steam</a>
                 </div>
             
         </div>
@@ -344,31 +344,51 @@
   
   
   <div class="mdui-card-content mdui-typo mdui-p-x-4">
-    <p>Let’s Encrypt是ISRG运营一个免费、开放，自动化的证书颁发机构，可以申请到期限90天的免费SSL证书（包括单域名、多域名和泛域名）。 Certbot是Let’s Encrypt官方提供的一款SSL自动安装程序，<a href="https://certbot.eff.org/" target="_blank" rel="noopener">官方网站</a> 。使用Certbot可以自动完成获取密钥、申请证书、安装证书等一系列繁琐的操作，也提供了自动证书续期的功能。使用Certbot自动配置SSL证书，也可以免去手动申请证书中添加TXT解析的步骤。</p>
-<a id="more"></a>
+    <p>Let’s Encrypt是ISRG运营一个免费、开放，自动化的证书颁发机构，可以申请到期限90天的免费SSL证书（包括单域名、多域名和泛域名）。 Certbot是Let’s Encrypt官方提供的一款SSL自动安装程序，<a target="_blank" rel="noopener" href="https://certbot.eff.org/">官方网站</a> 。使用Certbot可以自动完成获取密钥、申请证书、安装证书等一系列繁琐的操作，也提供了自动证书续期的功能。使用Certbot自动配置SSL证书，也可以免去手动申请证书中添加TXT解析的步骤。</p>
+<span id="more"></span>
 
 <h2 id="安装Certbot客户端"><a href="#安装Certbot客户端" class="headerlink" title="安装Certbot客户端"></a>安装Certbot客户端</h2><h3 id="方法一-Packages-for-Debian"><a href="#方法一-Packages-for-Debian" class="headerlink" title="方法一 (Packages for Debian)"></a>方法一 (Packages for Debian)</h3><p>Ubuntu下可以直接用预编译好的安装包进行安装，步骤如下： </p>
-<pre><code>sudo apt-get update
-sudo apt-get install software-properties-common  
-sudo add-apt-repository ppa:certbot/certbot  
-sudo apt-get update  
-sudo apt-get install python-certbot-apache</code></pre><p>安装后可执行<code>certbot</code>来检验是否安装成功。 </p>
+<pre><code> sudo apt-get update
+ sudo apt-get install software-properties-common  
+ sudo add-apt-repository ppa:certbot/certbot  
+ sudo apt-get update  
+ sudo apt-get install python-certbot-apache
+</code></pre>
+<p>安装后可执行<code>certbot</code>来检验是否安装成功。 </p>
 <h3 id="方法二-Certbot-Auto"><a href="#方法二-Certbot-Auto" class="headerlink" title="方法二 (Certbot-Auto)"></a>方法二 (Certbot-Auto)</h3><p>如果源出现问题无法使用apt-get进行安装，或者是当前系统linux版本没有对应的certbot安装包时(如CentOS6等)，可采用方法二。 CentOS6用此方法安装前还需要更新Python。 </p>
-<pre><code>git clone https://github.com/certbot/certbot.git
-chmod a+x certbot-auto</code></pre><p>从GitHub获取Cerbot-Auto并赋予权限 </p>
-<pre><code>./certbot-auto</code></pre><p>自动安装当前环境下所需的依赖 <code>如采用此方法安装，请把下文中的 certbot 全改成./certbot-auto</code></p>
-<h2 id="配置SSL证书"><a href="#配置SSL证书" class="headerlink" title="配置SSL证书"></a>配置SSL证书</h2><h3 id="1-停止Apache服务"><a href="#1-停止Apache服务" class="headerlink" title="1. 停止Apache服务"></a>1. 停止Apache服务</h3><pre><code>sudo /etc/init.d/apache2 stop</code></pre><h3 id="2-生成SSL证书"><a href="#2-生成SSL证书" class="headerlink" title="2. 生成SSL证书"></a>2. 生成SSL证书</h3><p>单证书对应单域名的情况下，可以使用： </p>
-<pre><code>sudo certbot –apache -d [your domain]</code></pre><p>在单证书对应多个域名的情况下，可以在其后加上多个 <code>-d [your domain]</code> , 其中第一个一般为主域名。 </p>
-<pre><code>sudo certbot –apache -d [your domain1] -d [your domain2] ···</code></pre><p>运行时会有一个交互过程，根据提示输入邮箱地址并进行验证，这个邮箱可以用来恢复丢失的密钥和接收通知。 最后会有一个选项，选择同时开启http和https或者是全部重定向到https，建议全部重定向。 </p>
-<h3 id="3-启动Apache服务"><a href="#3-启动Apache服务" class="headerlink" title="3. 启动Apache服务"></a>3. 启动Apache服务</h3><pre><code>sudo /etc/init.d/apache2 start</code></pre><h2 id="Certbot自动更新"><a href="#Certbot自动更新" class="headerlink" title="Certbot自动更新"></a>Certbot自动更新</h2><p>Let’s Encrypt颁发的证书期限只有90天，所以需要定期进行更新。<br>首先可以通过<code>sudo certbot renew –dry-run</code>命令进行验证，确保certbot可以进行证书更新。然后可以借助Cron使其自动执行更新任务。<br>Cron是一个定时执行工具，作用类似于windows下的计划任务，具体操作如下：<br>使用命令<code>cron -l</code>或直接编辑/etc/crontab文件 </p>
-<pre><code>0 3 1 * * certbot renew --pre-hook &quot;/etc/init.d/apache2 stop&quot; --post-hook &quot;/etc/init.d/apache2 start&quot;</code></pre><p><code>cron -l</code> 后出现刚添加的内容，即为设置成功。 </p>
+<pre><code> git clone https://github.com/certbot/certbot.git
+ chmod a+x certbot-auto
+</code></pre>
+<p>从GitHub获取Cerbot-Auto并赋予权限 </p>
+<pre><code>./certbot-auto
+</code></pre>
+<p>自动安装当前环境下所需的依赖 <code>如采用此方法安装，请把下文中的 certbot 全改成./certbot-auto</code></p>
+<h2 id="配置SSL证书"><a href="#配置SSL证书" class="headerlink" title="配置SSL证书"></a>配置SSL证书</h2><h3 id="1-停止Apache服务"><a href="#1-停止Apache服务" class="headerlink" title="1. 停止Apache服务"></a>1. 停止Apache服务</h3><pre><code>sudo /etc/init.d/apache2 stop
+</code></pre>
+<h3 id="2-生成SSL证书"><a href="#2-生成SSL证书" class="headerlink" title="2. 生成SSL证书"></a>2. 生成SSL证书</h3><p>单证书对应单域名的情况下，可以使用： </p>
+<pre><code>sudo certbot –apache -d [your domain]
+</code></pre>
+<p>在单证书对应多个域名的情况下，可以在其后加上多个 <code>-d [your domain]</code> , 其中第一个一般为主域名。 </p>
+<pre><code>sudo certbot –apache -d [your domain1] -d [your domain2] ···
+</code></pre>
+<p>运行时会有一个交互过程，根据提示输入邮箱地址并进行验证，这个邮箱可以用来恢复丢失的密钥和接收通知。 最后会有一个选项，选择同时开启http和https或者是全部重定向到https，建议全部重定向。 </p>
+<h3 id="3-启动Apache服务"><a href="#3-启动Apache服务" class="headerlink" title="3. 启动Apache服务"></a>3. 启动Apache服务</h3><pre><code> sudo /etc/init.d/apache2 start
+</code></pre>
+<h2 id="Certbot自动更新"><a href="#Certbot自动更新" class="headerlink" title="Certbot自动更新"></a>Certbot自动更新</h2><p>Let’s Encrypt颁发的证书期限只有90天，所以需要定期进行更新。<br>首先可以通过<code>sudo certbot renew –dry-run</code>命令进行验证，确保certbot可以进行证书更新。然后可以借助Cron使其自动执行更新任务。<br>Cron是一个定时执行工具，作用类似于windows下的计划任务，具体操作如下：<br>使用命令<code>cron -l</code>或直接编辑&#x2F;etc&#x2F;crontab文件 </p>
+<pre><code>0 3 1 * * certbot renew --pre-hook &quot;/etc/init.d/apache2 stop&quot; --post-hook &quot;/etc/init.d/apache2 start&quot;
+</code></pre>
+<p><code>cron -l</code> 后出现刚添加的内容，即为设置成功。 </p>
 <h2 id="可能出现的问题"><a href="#可能出现的问题" class="headerlink" title="可能出现的问题"></a>可能出现的问题</h2><h3 id="python虚拟环境问题"><a href="#python虚拟环境问题" class="headerlink" title="python虚拟环境问题"></a>python虚拟环境问题</h3><p>在低内存的VPS上运行certbot可能会出现依赖安装失败，可以通过杀死其他程序来释放内存，经测试可用内存在120m时运行失败，通过kill命令释放至500m可用时即可正常运行。<br>如果主机内存物理内存本身即小于512m，可采用创建临时交换文件的方法： </p>
-<pre><code>sudo fallocate -l 1G /tmp/swapfile
-sudo chmod 600 /tmp/swapfile
-sudo mkswap /tmp/swapfile
-sudo swapon /tmp/swapfile</code></pre><p>安装结束后用以下命令删除交换文件： </p>
-<pre><code>sudo swapoff /tmp/swapfile
-sudo rm /tmp/swapfile</code></pre><h3 id="Chrome下无法显示小绿锁"><a href="#Chrome下无法显示小绿锁" class="headerlink" title="Chrome下无法显示小绿锁"></a>Chrome下无法显示小绿锁</h3><p>Chrome下显示小绿锁需要页面内全部资源均为HTTPS资源，否则会显示“您与此网站之间建立的链接并非完全安全”。 如果添加完SSL证书后仍未显示绿锁，需要检查网页内的资源并将其改为HTTPS。包括对象储存服务、网页内图片以及外链图片。</p>
+<pre><code> sudo fallocate -l 1G /tmp/swapfile
+ sudo chmod 600 /tmp/swapfile
+ sudo mkswap /tmp/swapfile
+ sudo swapon /tmp/swapfile
+</code></pre>
+<p>安装结束后用以下命令删除交换文件： </p>
+<pre><code> sudo swapoff /tmp/swapfile
+ sudo rm /tmp/swapfile
+</code></pre>
+<h3 id="Chrome下无法显示小绿锁"><a href="#Chrome下无法显示小绿锁" class="headerlink" title="Chrome下无法显示小绿锁"></a>Chrome下无法显示小绿锁</h3><p>Chrome下显示小绿锁需要页面内全部资源均为HTTPS资源，否则会显示“您与此网站之间建立的链接并非完全安全”。 如果添加完SSL证书后仍未显示绿锁，需要检查网页内的资源并将其改为HTTPS。包括对象储存服务、网页内图片以及外链图片。</p>
 
   </div>
   <!--文末结束语-->
@@ -416,7 +436,7 @@ sudo rm /tmp/swapfile</code></pre><h3 id="Chrome下无法显示小绿锁"><a hre
     <ul class="mdui-menu" id="toc">
       <li class="mdui-menu-item">
         <a href="/t-65310/" id="toc-header" class="mdui-ripple">文章目录</a>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装Certbot客户端"><span class="toc-number">1.</span> <span class="toc-text">安装Certbot客户端</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#方法一-Packages-for-Debian"><span class="toc-number">1.1.</span> <span class="toc-text">方法一 (Packages for Debian)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法二-Certbot-Auto"><span class="toc-number">1.2.</span> <span class="toc-text">方法二 (Certbot-Auto)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置SSL证书"><span class="toc-number">2.</span> <span class="toc-text">配置SSL证书</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-停止Apache服务"><span class="toc-number">2.1.</span> <span class="toc-text">1. 停止Apache服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-生成SSL证书"><span class="toc-number">2.2.</span> <span class="toc-text">2. 生成SSL证书</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-启动Apache服务"><span class="toc-number">2.3.</span> <span class="toc-text">3. 启动Apache服务</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Certbot自动更新"><span class="toc-number">3.</span> <span class="toc-text">Certbot自动更新</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#可能出现的问题"><span class="toc-number">4.</span> <span class="toc-text">可能出现的问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#python虚拟环境问题"><span class="toc-number">4.1.</span> <span class="toc-text">python虚拟环境问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Chrome下无法显示小绿锁"><span class="toc-number">4.2.</span> <span class="toc-text">Chrome下无法显示小绿锁</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85Certbot%E5%AE%A2%E6%88%B7%E7%AB%AF"><span class="toc-number">1.</span> <span class="toc-text">安装Certbot客户端</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E4%B8%80-Packages-for-Debian"><span class="toc-number">1.1.</span> <span class="toc-text">方法一 (Packages for Debian)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E4%BA%8C-Certbot-Auto"><span class="toc-number">1.2.</span> <span class="toc-text">方法二 (Certbot-Auto)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AESSL%E8%AF%81%E4%B9%A6"><span class="toc-number">2.</span> <span class="toc-text">配置SSL证书</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%81%9C%E6%AD%A2Apache%E6%9C%8D%E5%8A%A1"><span class="toc-number">2.1.</span> <span class="toc-text">1. 停止Apache服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E7%94%9F%E6%88%90SSL%E8%AF%81%E4%B9%A6"><span class="toc-number">2.2.</span> <span class="toc-text">2. 生成SSL证书</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%90%AF%E5%8A%A8Apache%E6%9C%8D%E5%8A%A1"><span class="toc-number">2.3.</span> <span class="toc-text">3. 启动Apache服务</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Certbot%E8%87%AA%E5%8A%A8%E6%9B%B4%E6%96%B0"><span class="toc-number">3.</span> <span class="toc-text">Certbot自动更新</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%AF%E8%83%BD%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-number">4.</span> <span class="toc-text">可能出现的问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#python%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E9%97%AE%E9%A2%98"><span class="toc-number">4.1.</span> <span class="toc-text">python虚拟环境问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Chrome%E4%B8%8B%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E5%B0%8F%E7%BB%BF%E9%94%81"><span class="toc-number">4.2.</span> <span class="toc-text">Chrome下无法显示小绿锁</span></a></li></ol></li></ol>
       </li>
     </ul>
   </div>
@@ -506,7 +526,7 @@ sudo rm /tmp/swapfile</code></pre><h3 id="Chrome下无法显示小绿锁"><a hre
         <a href="https://beian.miit.gov.cn" rel="noopener" target="_blank">苏ICP备18025778号</a>
       
       <span>
-        &copy; 2015 - 2022 
+        &copy; 2015 - 2023 
         
           <span style="color:#d9333f" class="iconfont icon-heart"></span>
         

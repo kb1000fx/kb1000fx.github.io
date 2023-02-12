@@ -73,7 +73,7 @@
     </title>
     
     
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 <body class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-primary-teal mdui-theme-accent-blue">
   
   <header class="mdui-appbar mdui-appbar-fixed">
@@ -154,7 +154,7 @@
                 </a>
             
                 
-                <a href="https://note.garybear.cn/" target="_blank" rel="noopener" class="mdui-list-item mdui-ripple">
+                <a target="_blank" rel="noopener" href="https://note.garybear.cn/" class="mdui-list-item mdui-ripple">
                     <div class="mdui-list-item-icon">
                         <i class="iconfont icon-blog"></i>
                     </div>
@@ -196,19 +196,19 @@
                 
                 <div class="mdui-chip">
                     <span class="mdui-chip-icon"><i class="iconfont icon-github"></i></span>
-                    <a href="https://github.com/kb1000fx" target="_blank" rel="noopener" class="mdui-chip-title">GitHub</a>
+                    <a target="_blank" rel="noopener" href="https://github.com/kb1000fx" class="mdui-chip-title">GitHub</a>
                 </div>
             
                 
                 <div class="mdui-chip">
                     <span class="mdui-chip-icon"><i class="iconfont icon-bilibili"></i></span>
-                    <a href="https://live.bilibili.com/8448779" target="_blank" rel="noopener" class="mdui-chip-title">Bilibili</a>
+                    <a target="_blank" rel="noopener" href="https://live.bilibili.com/8448779" class="mdui-chip-title">Bilibili</a>
                 </div>
             
                 
                 <div class="mdui-chip">
                     <span class="mdui-chip-icon"><i class="iconfont icon-steam"></i></span>
-                    <a href="https://steamcommunity.com/profiles/76561198346798163" target="_blank" rel="noopener" class="mdui-chip-title">Steam</a>
+                    <a target="_blank" rel="noopener" href="https://steamcommunity.com/profiles/76561198346798163" class="mdui-chip-title">Steam</a>
                 </div>
             
         </div>
@@ -340,24 +340,24 @@
   
   <div class="mdui-card-content mdui-typo mdui-p-x-4">
     <p>在安装Android-x86后，由于nVidia显卡驱动的原因启动过程中可能会卡住无法进入图形界面。此时在需要在启动参数中添加nomodeset选项来禁用显卡。其他Linux系统中遇到同样的问题也可以使用此方法解决。</p>
-<a id="more"></a>
+<span id="more"></span>
 <h1 id="产生原因"><a href="#产生原因" class="headerlink" title="产生原因"></a>产生原因</h1><blockquote>
 <p>The newest kernels have moved the video mode setting into the kernel. So all the programming of the hardware specific clock rates and registers on the video card happen in the kernel rather than in the X driver when the X server starts.. This makes it possible to have high resolution nice looking splash (boot) screens and flicker free transitions from boot splash to login screen. Unfortunately, on some cards this doesnt work properly and you end up with a black screen. Adding the nomodeset parameter instructs the kernel to not load video drivers and use BIOS modes instead until X is loaded.</p>
 </blockquote>
 <p>某些显卡下Linux内核无法正常工作导致黑屏。</p>
 <h1 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h1><p>开机后在grub界面选择第二项<code>Debug mode</code>，输入</p>
-<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mount –o remount,rw <span class="string">/mnt</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mount –o remount,rw /mnt</span><br></pre></td></tr></table></figure>
 <p>再输入</p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">vi</span> /mnt/grub/<span class="keyword">menu</span>.lst</span><br></pre></td></tr></table></figure>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi <span class="regexp">/mnt/g</span>rub/menu.lst</span><br></pre></td></tr></table></figure>
 <p>在第七行的root前加入<code>quiet nomodeset</code>，修改后内容如下：</p>
-<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">...</span></span><br><span class="line"><span class="symbol">title</span> <span class="keyword">Android-x86 </span><span class="number">8</span>.<span class="number">1</span>-<span class="built_in">r5</span></span><br><span class="line">    kernel /<span class="keyword">android-8. </span><span class="number">1</span>-<span class="built_in">r5</span>/kernel quiet nomodeset root=/dev/ram0 SRC=/<span class="keyword">android-8. </span><span class="number">1</span>-<span class="built_in">r5</span></span><br><span class="line">    initrd /<span class="keyword">android-8. </span><span class="number">1</span>-<span class="built_in">r5</span>/ initrd. img</span><br><span class="line"><span class="symbol">...</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">title Android-x86 <span class="number">8.1</span>-r5</span><br><span class="line">    kernel <span class="regexp">/android-8. 1-r5/</span>kernel quiet nomodeset root=<span class="regexp">/dev/</span>ram0 SRC=/android-<span class="number">8</span>. <span class="number">1</span>-r5</span><br><span class="line">    initrd <span class="regexp">/android-8. 1-r5/</span> initrd. img</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
 
 <p>按<code>ESC</code>退出编辑，并输入<code>:wq</code>保存退出。<br>重启后即可进入图形界面。</p>
 <h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ul>
-<li><a href="https://android.stackexchange.com/questions/144535/android-x86-marshmallow-not-booting-on-virtualbox-and-vmware-workstation" target="_blank" rel="noopener">Android x86 Marshmallow not booting on Virtualbox and VMware Workstation</a></li>
-<li><a href="https://ubuntuforums.org/showthread.php?t=1613132" target="_blank" rel="noopener">How to set NOMODESET and other kernel boot options in grub2</a></li>
-<li><a href="https://www.android-x86.org/documentation/graphic_card.html" target="_blank" rel="noopener">How to boot the Android-x86 Live-CD when you have problems with your graphiccard</a></li>
-<li><a href="https://www.dell.com/support/article/en-us/sln306327/manual-nomodeset-kernel-boot-line-option-for-linux-booting?lang=en" target="_blank" rel="noopener">Manual “nomodeset” Kernel Boot Line Option for Linux Booting</a></li>
+<li><a target="_blank" rel="noopener" href="https://android.stackexchange.com/questions/144535/android-x86-marshmallow-not-booting-on-virtualbox-and-vmware-workstation">Android x86 Marshmallow not booting on Virtualbox and VMware Workstation</a></li>
+<li><a target="_blank" rel="noopener" href="https://ubuntuforums.org/showthread.php?t=1613132">How to set NOMODESET and other kernel boot options in grub2</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.android-x86.org/documentation/graphic_card.html">How to boot the Android-x86 Live-CD when you have problems with your graphiccard</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.dell.com/support/article/en-us/sln306327/manual-nomodeset-kernel-boot-line-option-for-linux-booting?lang=en">Manual “nomodeset” Kernel Boot Line Option for Linux Booting</a></li>
 </ul>
 
   </div>
@@ -406,7 +406,7 @@
     <ul class="mdui-menu" id="toc">
       <li class="mdui-menu-item">
         <a href="/t-52966/" id="toc-header" class="mdui-ripple">文章目录</a>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#产生原因"><span class="toc-number">1.</span> <span class="toc-text">产生原因</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#解决方法"><span class="toc-number">2.</span> <span class="toc-text">解决方法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#参考资料"><span class="toc-number">3.</span> <span class="toc-text">参考资料</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%A7%E7%94%9F%E5%8E%9F%E5%9B%A0"><span class="toc-number">1.</span> <span class="toc-text">产生原因</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95"><span class="toc-number">2.</span> <span class="toc-text">解决方法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="toc-number">3.</span> <span class="toc-text">参考资料</span></a></li></ol>
       </li>
     </ul>
   </div>
@@ -496,7 +496,7 @@
         <a href="https://beian.miit.gov.cn" rel="noopener" target="_blank">苏ICP备18025778号</a>
       
       <span>
-        &copy; 2015 - 2022 
+        &copy; 2015 - 2023 
         
           <span style="color:#d9333f" class="iconfont icon-heart"></span>
         

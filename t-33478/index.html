@@ -73,7 +73,7 @@
     </title>
     
     
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 <body class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-primary-teal mdui-theme-accent-blue">
   
   <header class="mdui-appbar mdui-appbar-fixed">
@@ -154,7 +154,7 @@
                 </a>
             
                 
-                <a href="https://note.garybear.cn/" target="_blank" rel="noopener" class="mdui-list-item mdui-ripple">
+                <a target="_blank" rel="noopener" href="https://note.garybear.cn/" class="mdui-list-item mdui-ripple">
                     <div class="mdui-list-item-icon">
                         <i class="iconfont icon-blog"></i>
                     </div>
@@ -196,19 +196,19 @@
                 
                 <div class="mdui-chip">
                     <span class="mdui-chip-icon"><i class="iconfont icon-github"></i></span>
-                    <a href="https://github.com/kb1000fx" target="_blank" rel="noopener" class="mdui-chip-title">GitHub</a>
+                    <a target="_blank" rel="noopener" href="https://github.com/kb1000fx" class="mdui-chip-title">GitHub</a>
                 </div>
             
                 
                 <div class="mdui-chip">
                     <span class="mdui-chip-icon"><i class="iconfont icon-bilibili"></i></span>
-                    <a href="https://live.bilibili.com/8448779" target="_blank" rel="noopener" class="mdui-chip-title">Bilibili</a>
+                    <a target="_blank" rel="noopener" href="https://live.bilibili.com/8448779" class="mdui-chip-title">Bilibili</a>
                 </div>
             
                 
                 <div class="mdui-chip">
                     <span class="mdui-chip-icon"><i class="iconfont icon-steam"></i></span>
-                    <a href="https://steamcommunity.com/profiles/76561198346798163" target="_blank" rel="noopener" class="mdui-chip-title">Steam</a>
+                    <a target="_blank" rel="noopener" href="https://steamcommunity.com/profiles/76561198346798163" class="mdui-chip-title">Steam</a>
                 </div>
             
         </div>
@@ -350,26 +350,62 @@
 
 
 - PermitRootLogin prohibit-password
-+ PermitRootLogin yes</code></pre><a id="more"></a>
-<h3 id="2-设置root密码"><a href="#2-设置root密码" class="headerlink" title="2.设置root密码"></a>2.设置root密码</h3><pre><code>sudo passwd</code></pre><h3 id="3-设置DNS"><a href="#3-设置DNS" class="headerlink" title="3.设置DNS"></a>3.设置DNS</h3><p>有些服务器提供商并未设置DNS地址，这时需要先手动进行设置，否则接下来的步骤都将无法解析地址。 1.首先打开/etc/resolv.conf或/etc/resolvconf/resolv.conf.d/tail，前者在重启后会还原。 </p>
++ PermitRootLogin yes
+</code></pre>
+<span id="more"></span>
+<h3 id="2-设置root密码"><a href="#2-设置root密码" class="headerlink" title="2.设置root密码"></a>2.设置root密码</h3><pre><code>sudo passwd
+</code></pre>
+<h3 id="3-设置DNS"><a href="#3-设置DNS" class="headerlink" title="3.设置DNS"></a>3.设置DNS</h3><p>有些服务器提供商并未设置DNS地址，这时需要先手动进行设置，否则接下来的步骤都将无法解析地址。 1.首先打开&#x2F;etc&#x2F;resolv.conf或&#x2F;etc&#x2F;resolvconf&#x2F;resolv.conf.d&#x2F;tail，前者在重启后会还原。 </p>
 <pre><code>sudo vi /etc/resolv.conf
 或者
-sudo vi /etc/resolvconf/resolv.conf.d/tail</code></pre><p>2.在文件中加入“nameserver 114.114.114.114”这么一条配置，保存退出。 3.重启网络。 </p>
-<pre><code>sudo /etc/init.d/networking restart</code></pre><h3 id="4-更新源"><a href="#4-更新源" class="headerlink" title="4.更新源"></a>4.更新源</h3><pre><code>sudo apt-get update</code></pre><p>源保存的文件为：/etc/apt/sources.list </p>
-<h2 id="安装常用软件"><a href="#安装常用软件" class="headerlink" title="安装常用软件"></a>安装常用软件</h2><h3 id="1-SSH"><a href="#1-SSH" class="headerlink" title="1.SSH"></a>1.SSH</h3><pre><code>sudo apt-get install openssh-server</code></pre><p>查看状态：service ssh status/start/stop/restart 或：/etc/init.d/ssh status/start/stop/retsrt </p>
-<h3 id="2-Vim"><a href="#2-Vim" class="headerlink" title="2.Vim"></a>2.Vim</h3><pre><code>sudo apt-get install vim</code></pre><h3 id="3-Tree"><a href="#3-Tree" class="headerlink" title="3.Tree"></a>3.Tree</h3><pre><code>sudo apt-get install tree</code></pre><h3 id="4-Git"><a href="#4-Git" class="headerlink" title="4.Git"></a>4.Git</h3><pre><code>sudo apt-get install git</code></pre><h2 id="搭建LAMP"><a href="#搭建LAMP" class="headerlink" title="搭建LAMP"></a>搭建LAMP</h2><h3 id="1-安装Apache"><a href="#1-安装Apache" class="headerlink" title="1.安装Apache"></a>1.安装Apache</h3><pre><code>sudo apt-get install apache2</code></pre><p>测试： 浏览器访问<a href="http://localhost" target="_blank" rel="noopener">http://localhost</a>，出现It Works!网页。 查看状态： service apache2 status/start/stop/restart Web目录：/var/www 安装目录： /etc/apache2/ 全局配置： /etc/apache2/apache2.conf 监听端口： /etc/apache2/ports.conf 虚拟主机： /etc/apache2/sites-enabled/000-default.conf </p>
-<h3 id="2-安装MySQL"><a href="#2-安装MySQL" class="headerlink" title="2.安装MySQL"></a>2.安装MySQL</h3><pre><code>sudo apt-get install mysql-server mysql-client</code></pre><p>测试：mysql -u root -p 查看状态：service mysql status/start/stop/retart 查看监听端口的情况：netstat -tunpl或 netstat -tap </p>
-<h3 id="3-安装PHP"><a href="#3-安装PHP" class="headerlink" title="3.安装PHP"></a>3.安装PHP</h3><pre><code>sudo apt-get install php7.0</code></pre><p>测试：php7.0 -v </p>
+sudo vi /etc/resolvconf/resolv.conf.d/tail
+</code></pre>
+<p>2.在文件中加入“nameserver 114.114.114.114”这么一条配置，保存退出。 3.重启网络。 </p>
+<pre><code>sudo /etc/init.d/networking restart
+</code></pre>
+<h3 id="4-更新源"><a href="#4-更新源" class="headerlink" title="4.更新源"></a>4.更新源</h3><pre><code>sudo apt-get update
+</code></pre>
+<p>源保存的文件为：&#x2F;etc&#x2F;apt&#x2F;sources.list </p>
+<h2 id="安装常用软件"><a href="#安装常用软件" class="headerlink" title="安装常用软件"></a>安装常用软件</h2><h3 id="1-SSH"><a href="#1-SSH" class="headerlink" title="1.SSH"></a>1.SSH</h3><pre><code>sudo apt-get install openssh-server
+</code></pre>
+<p>查看状态：service ssh status&#x2F;start&#x2F;stop&#x2F;restart 或：&#x2F;etc&#x2F;init.d&#x2F;ssh status&#x2F;start&#x2F;stop&#x2F;retsrt </p>
+<h3 id="2-Vim"><a href="#2-Vim" class="headerlink" title="2.Vim"></a>2.Vim</h3><pre><code>sudo apt-get install vim
+</code></pre>
+<h3 id="3-Tree"><a href="#3-Tree" class="headerlink" title="3.Tree"></a>3.Tree</h3><pre><code>sudo apt-get install tree
+</code></pre>
+<h3 id="4-Git"><a href="#4-Git" class="headerlink" title="4.Git"></a>4.Git</h3><pre><code>sudo apt-get install git
+</code></pre>
+<h2 id="搭建LAMP"><a href="#搭建LAMP" class="headerlink" title="搭建LAMP"></a>搭建LAMP</h2><h3 id="1-安装Apache"><a href="#1-安装Apache" class="headerlink" title="1.安装Apache"></a>1.安装Apache</h3><pre><code>sudo apt-get install apache2
+</code></pre>
+<p>测试： 浏览器访问<a target="_blank" rel="noopener" href="http://localhost/">http://localhost</a>，出现It Works!网页。 查看状态： service apache2 status&#x2F;start&#x2F;stop&#x2F;restart Web目录：&#x2F;var&#x2F;www 安装目录： &#x2F;etc&#x2F;apache2&#x2F; 全局配置： &#x2F;etc&#x2F;apache2&#x2F;apache2.conf 监听端口： &#x2F;etc&#x2F;apache2&#x2F;ports.conf 虚拟主机： &#x2F;etc&#x2F;apache2&#x2F;sites-enabled&#x2F;000-default.conf </p>
+<h3 id="2-安装MySQL"><a href="#2-安装MySQL" class="headerlink" title="2.安装MySQL"></a>2.安装MySQL</h3><pre><code>sudo apt-get install mysql-server mysql-client
+</code></pre>
+<p>测试：mysql -u root -p 查看状态：service mysql status&#x2F;start&#x2F;stop&#x2F;retart 查看监听端口的情况：netstat -tunpl或 netstat -tap </p>
+<h3 id="3-安装PHP"><a href="#3-安装PHP" class="headerlink" title="3.安装PHP"></a>3.安装PHP</h3><pre><code>sudo apt-get install php7.0
+</code></pre>
+<p>测试：php7.0 -v </p>
 <h3 id="4-安装其他模块"><a href="#4-安装其他模块" class="headerlink" title="4.安装其他模块"></a>4.安装其他模块</h3><pre><code>sudo apt-get install libapache2-mod-php7.0
-sudo apt-get install php7.0-mysql</code></pre><p>重启服务 service apache2 restart service mysql restart 测试Apache能否解析PHP vim /var/www/html/phpinfo.php 文件中写：<?php echo phpinfo();?> 浏览器访问：<a href="http://localhost/phpinfo.php，出现PHP" target="_blank" rel="noopener">http://localhost/phpinfo.php，出现PHP</a> Version网页 </p>
-<h3 id="5-修改权限"><a href="#5-修改权限" class="headerlink" title="5.修改权限"></a>5.修改权限</h3><pre><code>sudo chmod 777 /var/www</code></pre><h3 id="6-安装phpMyAdmin"><a href="#6-安装phpMyAdmin" class="headerlink" title="6.安装phpMyAdmin"></a>6.安装phpMyAdmin</h3><pre><code>sudo apt-get install phpmyadmin</code></pre><p>安装：选择apache2，点击确定。下一步选择是要配置数据库，并输入密码。 创建phpMyAdmin快捷方式： </p>
+sudo apt-get install php7.0-mysql
+</code></pre>
+<p>重启服务 service apache2 restart service mysql restart 测试Apache能否解析PHP vim &#x2F;var&#x2F;www&#x2F;html&#x2F;phpinfo.php 文件中写：<?php echo phpinfo();?> 浏览器访问：<a target="_blank" rel="noopener" href="http://localhost/phpinfo.php%EF%BC%8C%E5%87%BA%E7%8E%B0PHP">http://localhost/phpinfo.php，出现PHP</a> Version网页 </p>
+<h3 id="5-修改权限"><a href="#5-修改权限" class="headerlink" title="5.修改权限"></a>5.修改权限</h3><pre><code>sudo chmod 777 /var/www
+</code></pre>
+<h3 id="6-安装phpMyAdmin"><a href="#6-安装phpMyAdmin" class="headerlink" title="6.安装phpMyAdmin"></a>6.安装phpMyAdmin</h3><pre><code>sudo apt-get install phpmyadmin
+</code></pre>
+<p>安装：选择apache2，点击确定。下一步选择是要配置数据库，并输入密码。 创建phpMyAdmin快捷方式： </p>
 <pre><code>sudo ln -s /usr/share/phpmyadmin /var/www/html
  ```
 启用Apache mod_rewrite模块：sudo a2enmod rewrite 
-重启服务： </code></pre><p>service php7.0-fpm restart service apache2 restart </p>
+重启服务： 
+</code></pre>
+<p>service php7.0-fpm restart service apache2 restart </p>
 <pre><code>测试：浏览器访问：http://localhost/phpmyadmin
-### 7.配置Apache</code></pre><p>vim /etc/apache2/apache2.conf </p>
-<pre><code>添加： </code></pre><p>AddType application/x-httpd-php .php .htm .html AddDefaultCharset UTF-8 </p>
+### 7.配置Apache
+</code></pre>
+<p>vim &#x2F;etc&#x2F;apache2&#x2F;apache2.conf </p>
+<pre><code>添加： 
+</code></pre>
+<p>AddType application&#x2F;x-httpd-php .php .htm .html AddDefaultCharset UTF-8 </p>
 <pre><code>重启Apache服务
 ## 设置
 ### 1.Apache限制IP访问某个特定的文件或文件夹
@@ -398,9 +434,15 @@ sudo apt-get install php7.0-mysql</code></pre><p>重启服务 service apache2 re
 ### 2.Apache开启Rewrite功能
 Ubuntu默认未开启Rewrite支持需手动开启，在此只是简单介绍，详细教程还是参考[「Files Directive」](https://httpd.apache.org/docs/2.4/en/mod/core.html#files)。
 
-在配置文件「apache2.conf」中加入：</code></pre><p>LoadModule rewrite_module modules/mod_rewrite.so </p>
-<pre><code>同时打开指定目录的AllowOveride开关（以网站根目录www为例）：</code></pre><p>Options Indexes FollowSymLinks AllowOverride All Order allow,deny Allow from all </p>
-<pre><code>测试Rewrite是否打开可在「.htaccess」中加入：</code></pre><h1 id="BEGIN"><a href="#BEGIN" class="headerlink" title="BEGIN"></a>BEGIN</h1><p>RewriteEngine on RewriteBase / RewriteRule .*$ http://欲跳转的页面 #END ``` 若能成功跳转，则说明Rewrite开启成功。</p>
+在配置文件「apache2.conf」中加入：
+</code></pre>
+<p>LoadModule rewrite_module modules&#x2F;mod_rewrite.so </p>
+<pre><code>同时打开指定目录的AllowOveride开关（以网站根目录www为例）：
+</code></pre>
+<p>Options Indexes FollowSymLinks AllowOverride All Order allow,deny Allow from all </p>
+<pre><code>测试Rewrite是否打开可在「.htaccess」中加入：
+</code></pre>
+<h1 id="BEGIN"><a href="#BEGIN" class="headerlink" title="BEGIN"></a>BEGIN</h1><p>RewriteEngine on RewriteBase &#x2F; RewriteRule .*$ http:&#x2F;&#x2F;欲跳转的页面 #END &#96;&#96;&#96; 若能成功跳转，则说明Rewrite开启成功。</p>
 
   </div>
   <!--文末结束语-->
@@ -448,7 +490,7 @@ Ubuntu默认未开启Rewrite支持需手动开启，在此只是简单介绍，�
     <ul class="mdui-menu" id="toc">
       <li class="mdui-menu-item">
         <a href="/t-33478/" id="toc-header" class="mdui-ripple">文章目录</a>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Ubuntu16-04下的LAMP环境搭建"><span class="toc-number">1.</span> <span class="toc-text">Ubuntu16.04下的LAMP环境搭建</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#基本设置"><span class="toc-number">1.1.</span> <span class="toc-text">基本设置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-开启root账号SSH登录"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.开启root账号SSH登录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-设置root密码"><span class="toc-number">1.1.2.</span> <span class="toc-text">2.设置root密码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-设置DNS"><span class="toc-number">1.1.3.</span> <span class="toc-text">3.设置DNS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-更新源"><span class="toc-number">1.1.4.</span> <span class="toc-text">4.更新源</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装常用软件"><span class="toc-number">1.2.</span> <span class="toc-text">安装常用软件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-SSH"><span class="toc-number">1.2.1.</span> <span class="toc-text">1.SSH</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Vim"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.Vim</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Tree"><span class="toc-number">1.2.3.</span> <span class="toc-text">3.Tree</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-Git"><span class="toc-number">1.2.4.</span> <span class="toc-text">4.Git</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#搭建LAMP"><span class="toc-number">1.3.</span> <span class="toc-text">搭建LAMP</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-安装Apache"><span class="toc-number">1.3.1.</span> <span class="toc-text">1.安装Apache</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-安装MySQL"><span class="toc-number">1.3.2.</span> <span class="toc-text">2.安装MySQL</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-安装PHP"><span class="toc-number">1.3.3.</span> <span class="toc-text">3.安装PHP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-安装其他模块"><span class="toc-number">1.3.4.</span> <span class="toc-text">4.安装其他模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-修改权限"><span class="toc-number">1.3.5.</span> <span class="toc-text">5.修改权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-安装phpMyAdmin"><span class="toc-number">1.3.6.</span> <span class="toc-text">6.安装phpMyAdmin</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#BEGIN"><span class="toc-number">2.</span> <span class="toc-text">BEGIN</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Ubuntu16-04%E4%B8%8B%E7%9A%84LAMP%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="toc-number">1.</span> <span class="toc-text">Ubuntu16.04下的LAMP环境搭建</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE"><span class="toc-number">1.1.</span> <span class="toc-text">基本设置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%BC%80%E5%90%AFroot%E8%B4%A6%E5%8F%B7SSH%E7%99%BB%E5%BD%95"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.开启root账号SSH登录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E8%AE%BE%E7%BD%AEroot%E5%AF%86%E7%A0%81"><span class="toc-number">1.1.2.</span> <span class="toc-text">2.设置root密码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E8%AE%BE%E7%BD%AEDNS"><span class="toc-number">1.1.3.</span> <span class="toc-text">3.设置DNS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E6%9B%B4%E6%96%B0%E6%BA%90"><span class="toc-number">1.1.4.</span> <span class="toc-text">4.更新源</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6"><span class="toc-number">1.2.</span> <span class="toc-text">安装常用软件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-SSH"><span class="toc-number">1.2.1.</span> <span class="toc-text">1.SSH</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Vim"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.Vim</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Tree"><span class="toc-number">1.2.3.</span> <span class="toc-text">3.Tree</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-Git"><span class="toc-number">1.2.4.</span> <span class="toc-text">4.Git</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%90%AD%E5%BB%BALAMP"><span class="toc-number">1.3.</span> <span class="toc-text">搭建LAMP</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%AE%89%E8%A3%85Apache"><span class="toc-number">1.3.1.</span> <span class="toc-text">1.安装Apache</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%AE%89%E8%A3%85MySQL"><span class="toc-number">1.3.2.</span> <span class="toc-text">2.安装MySQL</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%AE%89%E8%A3%85PHP"><span class="toc-number">1.3.3.</span> <span class="toc-text">3.安装PHP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%AE%89%E8%A3%85%E5%85%B6%E4%BB%96%E6%A8%A1%E5%9D%97"><span class="toc-number">1.3.4.</span> <span class="toc-text">4.安装其他模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E4%BF%AE%E6%94%B9%E6%9D%83%E9%99%90"><span class="toc-number">1.3.5.</span> <span class="toc-text">5.修改权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E5%AE%89%E8%A3%85phpMyAdmin"><span class="toc-number">1.3.6.</span> <span class="toc-text">6.安装phpMyAdmin</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#BEGIN"><span class="toc-number">2.</span> <span class="toc-text">BEGIN</span></a></li></ol>
       </li>
     </ul>
   </div>
@@ -538,7 +580,7 @@ Ubuntu默认未开启Rewrite支持需手动开启，在此只是简单介绍，�
         <a href="https://beian.miit.gov.cn" rel="noopener" target="_blank">苏ICP备18025778号</a>
       
       <span>
-        &copy; 2015 - 2022 
+        &copy; 2015 - 2023 
         
           <span style="color:#d9333f" class="iconfont icon-heart"></span>
         

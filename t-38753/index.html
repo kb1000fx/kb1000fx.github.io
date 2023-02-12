@@ -73,7 +73,7 @@
     </title>
     
     
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 <body class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-primary-teal mdui-theme-accent-blue">
   
   <header class="mdui-appbar mdui-appbar-fixed">
@@ -154,7 +154,7 @@
                 </a>
             
                 
-                <a href="https://note.garybear.cn/" target="_blank" rel="noopener" class="mdui-list-item mdui-ripple">
+                <a target="_blank" rel="noopener" href="https://note.garybear.cn/" class="mdui-list-item mdui-ripple">
                     <div class="mdui-list-item-icon">
                         <i class="iconfont icon-blog"></i>
                     </div>
@@ -196,19 +196,19 @@
                 
                 <div class="mdui-chip">
                     <span class="mdui-chip-icon"><i class="iconfont icon-github"></i></span>
-                    <a href="https://github.com/kb1000fx" target="_blank" rel="noopener" class="mdui-chip-title">GitHub</a>
+                    <a target="_blank" rel="noopener" href="https://github.com/kb1000fx" class="mdui-chip-title">GitHub</a>
                 </div>
             
                 
                 <div class="mdui-chip">
                     <span class="mdui-chip-icon"><i class="iconfont icon-bilibili"></i></span>
-                    <a href="https://live.bilibili.com/8448779" target="_blank" rel="noopener" class="mdui-chip-title">Bilibili</a>
+                    <a target="_blank" rel="noopener" href="https://live.bilibili.com/8448779" class="mdui-chip-title">Bilibili</a>
                 </div>
             
                 
                 <div class="mdui-chip">
                     <span class="mdui-chip-icon"><i class="iconfont icon-steam"></i></span>
-                    <a href="https://steamcommunity.com/profiles/76561198346798163" target="_blank" rel="noopener" class="mdui-chip-title">Steam</a>
+                    <a target="_blank" rel="noopener" href="https://steamcommunity.com/profiles/76561198346798163" class="mdui-chip-title">Steam</a>
                 </div>
             
         </div>
@@ -340,18 +340,20 @@
   
   <div class="mdui-card-content mdui-typo mdui-p-x-4">
     <p>UOS下自带的专业版WPS与Windows下的专业版WPS或是官网的Linux版WPS均有所不同，在此记录一下UOS下使用WPS加载项的方式。</p>
-<a id="more"></a>
+<span id="more"></span>
 
 <p>WPS加载项本质上是一组带有特定功能的前端页面，通过WPS自带的V8引擎加载显示。WPS加载项的加载方式按配置的位置可分为<code>publish模式</code> 与 <code>jsplugin模式</code>，同时每种方式都可以进行在线安装或离线安装。在这里进行一下简单的介绍。  </p>
-<h1 id="常用路径与基础操作方式"><a href="#常用路径与基础操作方式" class="headerlink" title="常用路径与基础操作方式"></a>常用路径与基础操作方式</h1><h2 id="路径"><a href="#路径" class="headerlink" title="路径"></a>路径</h2><h3 id="oem-ini"><a href="#oem-ini" class="headerlink" title="oem.ini"></a>oem.ini</h3><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">/opt/</span>apps<span class="regexp">/cn.wps.wps-office-pro/</span>files<span class="regexp">/kingsoft/</span>wps-office<span class="regexp">/office6/</span>cfgs<span class="regexp">/</span></span><br></pre></td></tr></table></figure>
-<h3 id="jsplugins-xml"><a href="#jsplugins-xml" class="headerlink" title="jsplugins.xml"></a>jsplugins.xml</h3><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~<span class="regexp">/.local/</span>share<span class="regexp">/Kingsoft/</span>wps<span class="regexp">/jsaddons</span></span><br></pre></td></tr></table></figure>
-<h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><h2 id="重启WPS服务"><a href="#重启WPS服务" class="headerlink" title="重启WPS服务"></a>重启WPS服务</h2><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/<span class="keyword">opt</span>/apps/<span class="keyword">cn</span>.wps.wps-office-<span class="keyword">pro</span>/<span class="keyword">files</span>/bin/quickstartoffice restart</span><br></pre></td></tr></table></figure>
+<h1 id="常用路径与基础操作方式"><a href="#常用路径与基础操作方式" class="headerlink" title="常用路径与基础操作方式"></a>常用路径与基础操作方式</h1><h2 id="路径"><a href="#路径" class="headerlink" title="路径"></a>路径</h2><h3 id="oem-ini"><a href="#oem-ini" class="headerlink" title="oem.ini"></a>oem.ini</h3><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">/opt/</span>apps<span class="regexp">/cn.wps.wps-office-pro/</span>files<span class="regexp">/kingsoft/</span>wps-office<span class="regexp">/office6/</span>cfgs/</span><br></pre></td></tr></table></figure>
+<h3 id="jsplugins-xml"><a href="#jsplugins-xml" class="headerlink" title="jsplugins.xml"></a>jsplugins.xml</h3><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~<span class="regexp">/.local/</span>share<span class="regexp">/Kingsoft/</span>wps/jsaddons</span><br></pre></td></tr></table></figure>
+<h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><h2 id="重启WPS服务"><a href="#重启WPS服务" class="headerlink" title="重启WPS服务"></a>重启WPS服务</h2><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">/opt/</span>apps<span class="regexp">/cn.wps.wps-office-pro/</span>files<span class="regexp">/bin/</span>quickstartoffice restart</span><br></pre></td></tr></table></figure>
 <h2 id="全局安装wpsjs"><a href="#全局安装wpsjs" class="headerlink" title="全局安装wpsjs"></a>全局安装wpsjs</h2><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">npm</span> i -g wpsjs</span><br></pre></td></tr></table></figure>
 
 <h1 id="publish模式下安装在线加载项"><a href="#publish模式下安装在线加载项" class="headerlink" title="publish模式下安装在线加载项"></a>publish模式下安装在线加载项</h1><h2 id="生成加载项"><a href="#生成加载项" class="headerlink" title="生成加载项"></a>生成加载项</h2><p>执行 <code>wpsjs publish</code> 并填写服务器地址</p>
 <h2 id="部署加载项"><a href="#部署加载项" class="headerlink" title="部署加载项"></a>部署加载项</h2><ul>
 <li>将生成的<code>wps-addon-build</code>下的内容部署到服务器上，或使用<code>http-server</code>本地建立服务器</li>
-<li>打开<code>/wps-addon-publish/publish.html</code>并在网页中配置加载项<h2 id="卸载加载项"><a href="#卸载加载项" class="headerlink" title="卸载加载项"></a>卸载加载项</h2></li>
+<li>打开<code>/wps-addon-publish/publish.html</code>并在网页中配置加载项</li>
+</ul>
+<h2 id="卸载加载项"><a href="#卸载加载项" class="headerlink" title="卸载加载项"></a>卸载加载项</h2><ul>
 <li>使用<code>/wps-addon-publish/publish.html</code>移除加载项</li>
 <li>删除<code>~/.local/share/Kingsoft/wps/jsaddons/publish.xml</code>里的相应内容</li>
 <li>重启wps服务</li>
@@ -359,8 +361,9 @@
 <h1 id="jsplugin模式下离线安装加载项"><a href="#jsplugin模式下离线安装加载项" class="headerlink" title="jsplugin模式下离线安装加载项"></a>jsplugin模式下离线安装加载项</h1><h2 id="生成加载项-1"><a href="#生成加载项-1" class="headerlink" title="生成加载项"></a>生成加载项</h2><p>执行 <code>wpsjs build</code> 并选择离线模式</p>
 <h2 id="部署加载项-1"><a href="#部署加载项-1" class="headerlink" title="部署加载项"></a>部署加载项</h2><ul>
 <li>将生成的7z文件解压到<code>~/.local/share/Kingsoft/wps/jsaddons/</code>，在<code>jsaddons</code>目录下将得到一个名字为<code>加载项名_版本号</code>且包含<code>index.html</code>和<code>ribbon.xml</code>的文件夹</li>
-<li>编辑<code>jsaddons</code>下的<code>jsplugins.xml</code>文件，格式如下：<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">jsplugins</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">jsplugin</span> <span class="attr">name</span>=<span class="string">"加载项名称"</span> <span class="attr">type</span>=<span class="string">"可为et wps wpp之一"</span> <span class="attr">url</span>=<span class="string">"地址"</span> <span class="attr">version</span>=<span class="string">"版本号"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">jsplugins</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="卸载加载项-1"><a href="#卸载加载项-1" class="headerlink" title="卸载加载项"></a>卸载加载项</h2></li>
+<li>编辑<code>jsaddons</code>下的<code>jsplugins.xml</code>文件，格式如下：<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">jsplugins</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">jsplugin</span> <span class="attr">name</span>=<span class="string">&quot;加载项名称&quot;</span> <span class="attr">type</span>=<span class="string">&quot;可为et wps wpp之一&quot;</span> <span class="attr">url</span>=<span class="string">&quot;地址&quot;</span> <span class="attr">version</span>=<span class="string">&quot;版本号&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">jsplugins</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="卸载加载项-1"><a href="#卸载加载项-1" class="headerlink" title="卸载加载项"></a>卸载加载项</h2><ul>
 <li>删除<code>~/.local/share/Kingsoft/wps/jsaddons/</code>下的加载项文件夹</li>
 <li>删除<code>~/.local/share/Kingsoft/wps/jsaddons/jsplugins.xml</code>里的相应内容</li>
 <li>重启wps服务</li>
@@ -390,6 +393,11 @@
   
   <nav>
     
+      <a rel="prev" class="post-nav-item mdui-float-left" href="/t-2056/">
+        <i class="iconfont icon-angle-left"></i>
+        <span>JavaScript设计模式简介之单例模式</span>
+      </a>
+    
     
       <a rel="next" class="post-nav-item mdui-float-right" href="/t-4838/">
         <span>UOS下替换安装源及安装常见软件踩坑</span>
@@ -407,7 +415,7 @@
     <ul class="mdui-menu" id="toc">
       <li class="mdui-menu-item">
         <a href="/t-38753/" id="toc-header" class="mdui-ripple">文章目录</a>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#常用路径与基础操作方式"><span class="toc-number">1.</span> <span class="toc-text">常用路径与基础操作方式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#路径"><span class="toc-number">1.1.</span> <span class="toc-text">路径</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#oem-ini"><span class="toc-number">1.1.1.</span> <span class="toc-text">oem.ini</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#jsplugins-xml"><span class="toc-number">1.1.2.</span> <span class="toc-text">jsplugins.xml</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#操作"><span class="toc-number">1.2.</span> <span class="toc-text">操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#重启WPS服务"><span class="toc-number">1.3.</span> <span class="toc-text">重启WPS服务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#全局安装wpsjs"><span class="toc-number">1.4.</span> <span class="toc-text">全局安装wpsjs</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#publish模式下安装在线加载项"><span class="toc-number">2.</span> <span class="toc-text">publish模式下安装在线加载项</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#生成加载项"><span class="toc-number">2.1.</span> <span class="toc-text">生成加载项</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#部署加载项"><span class="toc-number">2.2.</span> <span class="toc-text">部署加载项</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#卸载加载项"><span class="toc-number">2.3.</span> <span class="toc-text">卸载加载项</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#jsplugin模式下离线安装加载项"><span class="toc-number">3.</span> <span class="toc-text">jsplugin模式下离线安装加载项</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#生成加载项-1"><span class="toc-number">3.1.</span> <span class="toc-text">生成加载项</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#部署加载项-1"><span class="toc-number">3.2.</span> <span class="toc-text">部署加载项</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#卸载加载项-1"><span class="toc-number">3.3.</span> <span class="toc-text">卸载加载项</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E8%B7%AF%E5%BE%84%E4%B8%8E%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C%E6%96%B9%E5%BC%8F"><span class="toc-number">1.</span> <span class="toc-text">常用路径与基础操作方式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B7%AF%E5%BE%84"><span class="toc-number">1.1.</span> <span class="toc-text">路径</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#oem-ini"><span class="toc-number">1.1.1.</span> <span class="toc-text">oem.ini</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#jsplugins-xml"><span class="toc-number">1.1.2.</span> <span class="toc-text">jsplugins.xml</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C"><span class="toc-number">1.2.</span> <span class="toc-text">操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%87%8D%E5%90%AFWPS%E6%9C%8D%E5%8A%A1"><span class="toc-number">1.3.</span> <span class="toc-text">重启WPS服务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%A8%E5%B1%80%E5%AE%89%E8%A3%85wpsjs"><span class="toc-number">1.4.</span> <span class="toc-text">全局安装wpsjs</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#publish%E6%A8%A1%E5%BC%8F%E4%B8%8B%E5%AE%89%E8%A3%85%E5%9C%A8%E7%BA%BF%E5%8A%A0%E8%BD%BD%E9%A1%B9"><span class="toc-number">2.</span> <span class="toc-text">publish模式下安装在线加载项</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%9F%E6%88%90%E5%8A%A0%E8%BD%BD%E9%A1%B9"><span class="toc-number">2.1.</span> <span class="toc-text">生成加载项</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2%E5%8A%A0%E8%BD%BD%E9%A1%B9"><span class="toc-number">2.2.</span> <span class="toc-text">部署加载项</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%B8%E8%BD%BD%E5%8A%A0%E8%BD%BD%E9%A1%B9"><span class="toc-number">2.3.</span> <span class="toc-text">卸载加载项</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#jsplugin%E6%A8%A1%E5%BC%8F%E4%B8%8B%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85%E5%8A%A0%E8%BD%BD%E9%A1%B9"><span class="toc-number">3.</span> <span class="toc-text">jsplugin模式下离线安装加载项</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%9F%E6%88%90%E5%8A%A0%E8%BD%BD%E9%A1%B9-1"><span class="toc-number">3.1.</span> <span class="toc-text">生成加载项</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2%E5%8A%A0%E8%BD%BD%E9%A1%B9-1"><span class="toc-number">3.2.</span> <span class="toc-text">部署加载项</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%B8%E8%BD%BD%E5%8A%A0%E8%BD%BD%E9%A1%B9-1"><span class="toc-number">3.3.</span> <span class="toc-text">卸载加载项</span></a></li></ol></li></ol>
       </li>
     </ul>
   </div>
@@ -497,7 +505,7 @@
         <a href="https://beian.miit.gov.cn" rel="noopener" target="_blank">苏ICP备18025778号</a>
       
       <span>
-        &copy; 2015 - 2022 
+        &copy; 2015 - 2023 
         
           <span style="color:#d9333f" class="iconfont icon-heart"></span>
         

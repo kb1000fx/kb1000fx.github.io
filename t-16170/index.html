@@ -129,7 +129,7 @@
     </title>
     
     
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 <body class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-primary-teal mdui-theme-accent-blue">
   
   <header class="mdui-appbar mdui-appbar-fixed">
@@ -210,7 +210,7 @@
                 </a>
             
                 
-                <a href="https://note.garybear.cn/" target="_blank" rel="noopener" class="mdui-list-item mdui-ripple">
+                <a target="_blank" rel="noopener" href="https://note.garybear.cn/" class="mdui-list-item mdui-ripple">
                     <div class="mdui-list-item-icon">
                         <i class="iconfont icon-blog"></i>
                     </div>
@@ -252,19 +252,19 @@
                 
                 <div class="mdui-chip">
                     <span class="mdui-chip-icon"><i class="iconfont icon-github"></i></span>
-                    <a href="https://github.com/kb1000fx" target="_blank" rel="noopener" class="mdui-chip-title">GitHub</a>
+                    <a target="_blank" rel="noopener" href="https://github.com/kb1000fx" class="mdui-chip-title">GitHub</a>
                 </div>
             
                 
                 <div class="mdui-chip">
                     <span class="mdui-chip-icon"><i class="iconfont icon-bilibili"></i></span>
-                    <a href="https://live.bilibili.com/8448779" target="_blank" rel="noopener" class="mdui-chip-title">Bilibili</a>
+                    <a target="_blank" rel="noopener" href="https://live.bilibili.com/8448779" class="mdui-chip-title">Bilibili</a>
                 </div>
             
                 
                 <div class="mdui-chip">
                     <span class="mdui-chip-icon"><i class="iconfont icon-steam"></i></span>
-                    <a href="https://steamcommunity.com/profiles/76561198346798163" target="_blank" rel="noopener" class="mdui-chip-title">Steam</a>
+                    <a target="_blank" rel="noopener" href="https://steamcommunity.com/profiles/76561198346798163" class="mdui-chip-title">Steam</a>
                 </div>
             
         </div>
@@ -396,7 +396,7 @@
   
   <div class="mdui-card-content mdui-typo mdui-p-x-4">
     <p>大概一周之前，和朋友聊天时谈论到了闰月的问题，今天正好在知乎上回答了一个春分点移动的问题，就将这些内容整合一下，简单地做个记录。</p>
-<a id="more"></a>
+<span id="more"></span>
 
 <h1 id="产生闰月的原因"><a href="#产生闰月的原因" class="headerlink" title="产生闰月的原因"></a>产生闰月的原因</h1><p>历法是以一定参考物来记录时间的方式，按照其参考的标准可分为：阳历、阴历、阴阳历三种 (注意这里的阴历指的不是传统的农历而是以月亮为参考的历法，农历应该算作阴阳历)。</p>
 <p>阳历是以太阳经过春分点的周期（回归年）为基础的，通常将其定义为一年，在这种定义下一个月只是对一年时间的等长 (其实公历中并不是完全等长) 划分，并没有实际的意义。典型的阳历就是现在使用的公历，也就是格里高利历。</p>
@@ -404,7 +404,7 @@
 <p>阴阳历结合了以上二者的特点，分别以月相周期为一个月，以地球公转周期为一年，农历就是一种阴阳历。<br>但是很显然这种定义方式有一个问题，就是无论朔望月或是回归年都不是一天的整数倍，所以一年并不能用整数个月来表示。为了解决这个问题，农历中采用了闰月的方式。即在定义一年为12个月的基础上，在个别年份中多加一个月，使得在一定周期内农历年和回归年天数相等。</p>
 <h1 id="确定闰月的方法"><a href="#确定闰月的方法" class="headerlink" title="确定闰月的方法"></a>确定闰月的方法</h1><p><strong>注意！闰月是指农历中多一个月，和公历中二月有29天的闰年不是一回事！</strong></p>
 <p>根据上一节可知，闰月是农历中用于调和朔望月和回归年之间矛盾的一种方式，下面是两种确定闰月的具体方法：</p>
-<h2 id="十九年七闰法"><a href="#十九年七闰法" class="headerlink" title="十九年七闰法"></a>十九年七闰法</h2><p>太阳经过春分点的周期（不等于地球绕太阳公转周期），也就是回归年，为365.24天。<br>月相变化的平均时间（不等于月球绕地球公转周期），也就是朔望月，为29.53天。<br>如果简单地以12个朔望月为一年的话，一年共有$12 \times 29.53 = 354.36天$，与正常的回归年相比相差10.88天。<br>根据年月时间的最小公倍数可以确定插入闰月的数量。方式如下：</p>
+<h2 id="十九年七闰法"><a href="#十九年七闰法" class="headerlink" title="十九年七闰法"></a>十九年七闰法</h2><p>太阳经过春分点的周期（不等于地球绕太阳公转周期），也就是回归年，为365.24天。<br>月相变化的平均时间（不等于月球绕地球公转周期），也就是朔望月，为29.53天。<br>如果简单地以12个朔望月为一年的话，一年共有$12 \times 29.53 &#x3D; 354.36天$，与正常的回归年相比相差10.88天。<br>根据年月时间的最小公倍数可以确定插入闰月的数量。方式如下：</p>
 <div class="math-fluid">
 $$\frac{月}{年} = \frac{29.53}{354.36}  \approx \frac{19}{235} = \frac{19}{19 \times 12 +7}$$
 </div>
@@ -415,7 +415,7 @@ $$\frac{月}{年} = \frac{29.53}{354.36}  \approx \frac{19}{235} = \frac{19}{19 
 <p>无中气置闰法规定<strong>两个冬至之间，若存在13个月，则第一个没有中气的月份为闰月</strong>。将节气与农历的朔望月相比较可以发现，每个月的中气出现时间都会比上个月晚0.91天，32.45个月后中气就会比最初晚一个月。因此将无中气的月份设为闰月，相当于每32.45个月添加一个闰月，近似就是<code>十九年七闰</code>。</p>
 <h1 id="杂项"><a href="#杂项" class="headerlink" title="杂项"></a>杂项</h1><h2 id="朔望月和月球公转周期"><a href="#朔望月和月球公转周期" class="headerlink" title="朔望月和月球公转周期"></a>朔望月和月球公转周期</h2><p>朔望月是月相的变化周期，即月球从位于太阳和地球之间的状态到达下一个位于太阳地球间状态的时间长度，这个时长比月球公转周期长。原因是当月球完成一次公转后由于地球的公转使得地球也前进了一段距离，所以月球需要再运行一段时间才能重新回到太阳和地球之间。</p>
 <h2 id="恒星年和回归年"><a href="#恒星年和回归年" class="headerlink" title="恒星年和回归年"></a>恒星年和回归年</h2><p>恒星年是地球公转的真实周期，回归年是太阳经过春分点的周期。<br>由于地球的自转，地轴会围绕黄轴做缓慢的圆周运动，称为<strong>地轴进动</strong>。地轴进动与陀螺的旋转类似，地轴围绕黄轴扫成一个锥面。由于赤道平面垂直于地轴，所以在地轴进动的同时赤道平面也进行同方向的缓慢的转动（转动这个词可能不准确，就当是移动吧）。<br>黄道平面与赤道平面在天球上就有两个交点，春分点就是黄道由南向北与赤道相交的点。随着地轴带动赤道面转动，两个交点也在黄道上同方向（自东向西，与自转公转相反）移动。所以一个回归年内太阳运动的距离实际上是一个圆周的距离减掉春分点反向移动的距离，回归年的时长也就小于实际的公转周期恒星年。</p>
-<p>春分点移动的图就不放了，需要的去原回答里看吧。<br><strong>今天在知乎上的原回答:</strong> <a href="https://www.zhihu.com/question/344409756/answer/819512503" target="_blank" rel="noopener">为什么地球自转春分点要在天球上不断西移？</a></p>
+<p>春分点移动的图就不放了，需要的去原回答里看吧。<br><strong>今天在知乎上的原回答:</strong> <a target="_blank" rel="noopener" href="https://www.zhihu.com/question/344409756/answer/819512503">为什么地球自转春分点要在天球上不断西移？</a></p>
 
   </div>
   <!--文末结束语-->
@@ -463,7 +463,7 @@ $$\frac{月}{年} = \frac{29.53}{354.36}  \approx \frac{19}{235} = \frac{19}{19 
     <ul class="mdui-menu" id="toc">
       <li class="mdui-menu-item">
         <a href="/t-16170/" id="toc-header" class="mdui-ripple">文章目录</a>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#产生闰月的原因"><span class="toc-number">1.</span> <span class="toc-text">产生闰月的原因</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#确定闰月的方法"><span class="toc-number">2.</span> <span class="toc-text">确定闰月的方法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#十九年七闰法"><span class="toc-number">2.1.</span> <span class="toc-text">十九年七闰法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#无中气置闰法"><span class="toc-number">2.2.</span> <span class="toc-text">无中气置闰法</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#杂项"><span class="toc-number">3.</span> <span class="toc-text">杂项</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#朔望月和月球公转周期"><span class="toc-number">3.1.</span> <span class="toc-text">朔望月和月球公转周期</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#恒星年和回归年"><span class="toc-number">3.2.</span> <span class="toc-text">恒星年和回归年</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%A7%E7%94%9F%E9%97%B0%E6%9C%88%E7%9A%84%E5%8E%9F%E5%9B%A0"><span class="toc-number">1.</span> <span class="toc-text">产生闰月的原因</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%A1%AE%E5%AE%9A%E9%97%B0%E6%9C%88%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-number">2.</span> <span class="toc-text">确定闰月的方法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81%E4%B9%9D%E5%B9%B4%E4%B8%83%E9%97%B0%E6%B3%95"><span class="toc-number">2.1.</span> <span class="toc-text">十九年七闰法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%A0%E4%B8%AD%E6%B0%94%E7%BD%AE%E9%97%B0%E6%B3%95"><span class="toc-number">2.2.</span> <span class="toc-text">无中气置闰法</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9D%82%E9%A1%B9"><span class="toc-number">3.</span> <span class="toc-text">杂项</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%94%E6%9C%9B%E6%9C%88%E5%92%8C%E6%9C%88%E7%90%83%E5%85%AC%E8%BD%AC%E5%91%A8%E6%9C%9F"><span class="toc-number">3.1.</span> <span class="toc-text">朔望月和月球公转周期</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%81%92%E6%98%9F%E5%B9%B4%E5%92%8C%E5%9B%9E%E5%BD%92%E5%B9%B4"><span class="toc-number">3.2.</span> <span class="toc-text">恒星年和回归年</span></a></li></ol></li></ol>
       </li>
     </ul>
   </div>
@@ -553,7 +553,7 @@ $$\frac{月}{年} = \frac{29.53}{354.36}  \approx \frac{19}{235} = \frac{19}{19 
         <a href="https://beian.miit.gov.cn" rel="noopener" target="_blank">苏ICP备18025778号</a>
       
       <span>
-        &copy; 2015 - 2022 
+        &copy; 2015 - 2023 
         
           <span style="color:#d9333f" class="iconfont icon-heart"></span>
         

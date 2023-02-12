@@ -73,7 +73,7 @@
     </title>
     
     
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 <body class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-primary-teal mdui-theme-accent-blue">
   
   <header class="mdui-appbar mdui-appbar-fixed">
@@ -154,7 +154,7 @@
                 </a>
             
                 
-                <a href="https://note.garybear.cn/" target="_blank" rel="noopener" class="mdui-list-item mdui-ripple">
+                <a target="_blank" rel="noopener" href="https://note.garybear.cn/" class="mdui-list-item mdui-ripple">
                     <div class="mdui-list-item-icon">
                         <i class="iconfont icon-blog"></i>
                     </div>
@@ -196,19 +196,19 @@
                 
                 <div class="mdui-chip">
                     <span class="mdui-chip-icon"><i class="iconfont icon-github"></i></span>
-                    <a href="https://github.com/kb1000fx" target="_blank" rel="noopener" class="mdui-chip-title">GitHub</a>
+                    <a target="_blank" rel="noopener" href="https://github.com/kb1000fx" class="mdui-chip-title">GitHub</a>
                 </div>
             
                 
                 <div class="mdui-chip">
                     <span class="mdui-chip-icon"><i class="iconfont icon-bilibili"></i></span>
-                    <a href="https://live.bilibili.com/8448779" target="_blank" rel="noopener" class="mdui-chip-title">Bilibili</a>
+                    <a target="_blank" rel="noopener" href="https://live.bilibili.com/8448779" class="mdui-chip-title">Bilibili</a>
                 </div>
             
                 
                 <div class="mdui-chip">
                     <span class="mdui-chip-icon"><i class="iconfont icon-steam"></i></span>
-                    <a href="https://steamcommunity.com/profiles/76561198346798163" target="_blank" rel="noopener" class="mdui-chip-title">Steam</a>
+                    <a target="_blank" rel="noopener" href="https://steamcommunity.com/profiles/76561198346798163" class="mdui-chip-title">Steam</a>
                 </div>
             
         </div>
@@ -339,8 +339,8 @@
   
   
   <div class="mdui-card-content mdui-typo mdui-p-x-4">
-    <p>最近想尝试一下PS4游戏直播，查阅一番资料后找到了一个劫持PS4自带的Twitch直播流到B站或斗鱼的方法。在这里简单介绍一下如何在无采集卡的情况下使用树莓派与<a href="https://github.com/Tilerphy/ps4broadcast" target="_blank" rel="noopener">ps4broadcast</a>在B站进行PS4直播，除了树莓派之外也可以使用桥接的Linux虚拟机或者是与主机同一局域网内的物理机进行此操作。</p>
-<a id="more"></a>
+    <p>最近想尝试一下PS4游戏直播，查阅一番资料后找到了一个劫持PS4自带的Twitch直播流到B站或斗鱼的方法。在这里简单介绍一下如何在无采集卡的情况下使用树莓派与<a target="_blank" rel="noopener" href="https://github.com/Tilerphy/ps4broadcast">ps4broadcast</a>在B站进行PS4直播，除了树莓派之外也可以使用桥接的Linux虚拟机或者是与主机同一局域网内的物理机进行此操作。</p>
+<span id="more"></span>
 
 <h1 id="编译运行环境"><a href="#编译运行环境" class="headerlink" title="编译运行环境"></a>编译运行环境</h1><h2 id="编译NodeJS"><a href="#编译NodeJS" class="headerlink" title="编译NodeJS"></a>编译NodeJS</h2><p>NodeJS需要8.7.0以上的版本，推荐使用最新的14.15.4 LTS，终端输入以下命令即可下载源码并进行编译</p>
 <blockquote>
@@ -351,18 +351,18 @@
 <h2 id="编译Nginx"><a href="#编译Nginx" class="headerlink" title="编译Nginx"></a>编译Nginx</h2><p>使用git下载最新的ps4broadcast项目源码</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/Tilerphy/ps4broadcast.git</span><br></pre></td></tr></table></figure>
 <p>更改脚本的执行权限</p>
-<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo chmod <span class="number">777</span> install.sh</span><br><span class="line">sudo chmod <span class="number">777</span> start-web.sh</span><br></pre></td></tr></table></figure>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">sudo</span> chmod <span class="number">777</span> install.sh</span><br><span class="line"><span class="attribute">sudo</span> chmod <span class="number">777</span> start-web.sh</span><br></pre></td></tr></table></figure>
 <p>执行安装脚本编译Nginx及插件</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ./<span class="keyword">install</span>.sh</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ./install.sh</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>由于树莓派gcc版本的问题，旧版的ps4broadcast源码在编译nginx时会报错，需要在make后添加参数<code>CFLAGS=&#39;-Wno-implicit-fallthrough&#39;</code></p>
 </blockquote>
 <h1 id="直播设置"><a href="#直播设置" class="headerlink" title="直播设置"></a>直播设置</h1><h2 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h2><p>终端输入</p>
-<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ./<span class="literal">start</span>-web.sh eth0</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ./start-web.sh eth0</span><br></pre></td></tr></table></figure>
 <p>其中<code>eth0</code>是网卡的设备号，建议使用有线网络。</p>
-<p>浏览器打开 <a href="http://localhost:26666/" target="_blank" rel="noopener">http://localhost:26666/</a> ，根据提示输入Twitch ID、url、code等信息，点击reset live。若显示<code>n channels</code>即启动成功。</p>
+<p>浏览器打开 <a target="_blank" rel="noopener" href="http://localhost:26666/">http://localhost:26666/</a> ，根据提示输入Twitch ID、url、code等信息，点击reset live。若显示<code>n channels</code>即启动成功。</p>
 <h2 id="PS4设置"><a href="#PS4设置" class="headerlink" title="PS4设置"></a>PS4设置</h2><p>按以下来设置PS4网络</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">IP:</span> <span class="number">192.168</span><span class="number">.200</span><span class="number">.45</span></span><br><span class="line"><span class="attr">Netmask:</span> <span class="number">255.255</span><span class="number">.255</span><span class="number">.0</span></span><br><span class="line"><span class="attr">Gateway:</span> <span class="string">树莓派的ip</span></span><br><span class="line"><span class="attr">Primary DNS:</span> <span class="number">114.114</span><span class="number">.114</span><span class="number">.114</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight nestedtext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">IP</span><span class="punctuation">:</span> <span class="string">192.168.200.45</span></span><br><span class="line"><span class="attribute">Netmask</span><span class="punctuation">:</span> <span class="string">255.255.255.0</span></span><br><span class="line"><span class="attribute">Gateway</span><span class="punctuation">:</span> <span class="string">树莓派的ip</span></span><br><span class="line"><span class="attribute">Primary DNS</span><span class="punctuation">:</span> <span class="string">114.114.114.114</span></span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>由于目前Twitch被国内屏蔽，可能需要设置代理来绑定Twitch账号</p>
 </blockquote>
@@ -414,7 +414,7 @@
     <ul class="mdui-menu" id="toc">
       <li class="mdui-menu-item">
         <a href="/t-53243/" id="toc-header" class="mdui-ripple">文章目录</a>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#编译运行环境"><span class="toc-number">1.</span> <span class="toc-text">编译运行环境</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#编译NodeJS"><span class="toc-number">1.1.</span> <span class="toc-text">编译NodeJS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装npm依赖库"><span class="toc-number">1.2.</span> <span class="toc-text">安装npm依赖库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编译Nginx"><span class="toc-number">1.3.</span> <span class="toc-text">编译Nginx</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#直播设置"><span class="toc-number">2.</span> <span class="toc-text">直播设置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#启动"><span class="toc-number">2.1.</span> <span class="toc-text">启动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PS4设置"><span class="toc-number">2.2.</span> <span class="toc-text">PS4设置</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#开始直播"><span class="toc-number">3.</span> <span class="toc-text">开始直播</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BC%96%E8%AF%91%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83"><span class="toc-number">1.</span> <span class="toc-text">编译运行环境</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%96%E8%AF%91NodeJS"><span class="toc-number">1.1.</span> <span class="toc-text">编译NodeJS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85npm%E4%BE%9D%E8%B5%96%E5%BA%93"><span class="toc-number">1.2.</span> <span class="toc-text">安装npm依赖库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%96%E8%AF%91Nginx"><span class="toc-number">1.3.</span> <span class="toc-text">编译Nginx</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%9B%B4%E6%92%AD%E8%AE%BE%E7%BD%AE"><span class="toc-number">2.</span> <span class="toc-text">直播设置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8"><span class="toc-number">2.1.</span> <span class="toc-text">启动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PS4%E8%AE%BE%E7%BD%AE"><span class="toc-number">2.2.</span> <span class="toc-text">PS4设置</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BC%80%E5%A7%8B%E7%9B%B4%E6%92%AD"><span class="toc-number">3.</span> <span class="toc-text">开始直播</span></a></li></ol>
       </li>
     </ul>
   </div>
@@ -504,7 +504,7 @@
         <a href="https://beian.miit.gov.cn" rel="noopener" target="_blank">苏ICP备18025778号</a>
       
       <span>
-        &copy; 2015 - 2022 
+        &copy; 2015 - 2023 
         
           <span style="color:#d9333f" class="iconfont icon-heart"></span>
         

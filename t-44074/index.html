@@ -129,7 +129,7 @@
     </title>
     
     
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 <body class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-primary-teal mdui-theme-accent-blue">
   
   <header class="mdui-appbar mdui-appbar-fixed">
@@ -210,7 +210,7 @@
                 </a>
             
                 
-                <a href="https://note.garybear.cn/" target="_blank" rel="noopener" class="mdui-list-item mdui-ripple">
+                <a target="_blank" rel="noopener" href="https://note.garybear.cn/" class="mdui-list-item mdui-ripple">
                     <div class="mdui-list-item-icon">
                         <i class="iconfont icon-blog"></i>
                     </div>
@@ -252,19 +252,19 @@
                 
                 <div class="mdui-chip">
                     <span class="mdui-chip-icon"><i class="iconfont icon-github"></i></span>
-                    <a href="https://github.com/kb1000fx" target="_blank" rel="noopener" class="mdui-chip-title">GitHub</a>
+                    <a target="_blank" rel="noopener" href="https://github.com/kb1000fx" class="mdui-chip-title">GitHub</a>
                 </div>
             
                 
                 <div class="mdui-chip">
                     <span class="mdui-chip-icon"><i class="iconfont icon-bilibili"></i></span>
-                    <a href="https://live.bilibili.com/8448779" target="_blank" rel="noopener" class="mdui-chip-title">Bilibili</a>
+                    <a target="_blank" rel="noopener" href="https://live.bilibili.com/8448779" class="mdui-chip-title">Bilibili</a>
                 </div>
             
                 
                 <div class="mdui-chip">
                     <span class="mdui-chip-icon"><i class="iconfont icon-steam"></i></span>
-                    <a href="https://steamcommunity.com/profiles/76561198346798163" target="_blank" rel="noopener" class="mdui-chip-title">Steam</a>
+                    <a target="_blank" rel="noopener" href="https://steamcommunity.com/profiles/76561198346798163" class="mdui-chip-title">Steam</a>
                 </div>
             
         </div>
@@ -401,7 +401,7 @@
   
   <div class="mdui-card-content mdui-typo mdui-p-x-4">
     <p>麦克斯韦方程组可以算得上是物理学史上最优美的一组方程了，就像镇楼图里说的那样，因为麦克斯韦方程组，所以才有了光。</p>
-<a id="more"></a>
+<span id="more"></span>
 <h1 id="麦克斯韦方程组积分形式的推导和证明"><a href="#麦克斯韦方程组积分形式的推导和证明" class="headerlink" title="麦克斯韦方程组积分形式的推导和证明"></a>麦克斯韦方程组积分形式的推导和证明</h1><h2 id="高斯定律"><a href="#高斯定律" class="headerlink" title="高斯定律"></a>高斯定律</h2><p><strong>高斯定律表示任意曲面的电通量之和等于其中包含的电荷数，证明了电场是有源场</strong></p>
 <p><strong>推导方式如下：</strong></p>
 <p>根据库仑定律及电场强度的定义，空间内某一点出电场强度为：</p>
@@ -443,8 +443,8 @@ $$ \oint_{S} \vec{B} \cdot d\vec{S}= \frac{\mu I}{4 \pi} \oint_{S} \frac{d \vec{
 </div>
 
 <ul>
-<li>当电流元位于曲面内部时，$\vec{r}$与$\vec{S}$间相互平行，磁通量积分$ \oint_{S} \vec{B} \cdot d\vec{S}= 0 $</li>
-<li>当电流元位于曲面外侧时，做一个包含电流元在内的辅助曲面，由增补法可得磁通量积分$ \oint_{S} \vec{B} \cdot d\vec{S}= 0 $</li>
+<li>当电流元位于曲面内部时，$\vec{r}$与$\vec{S}$间相互平行，磁通量积分$ \oint_{S} \vec{B} \cdot d\vec{S}&#x3D; 0 $</li>
+<li>当电流元位于曲面外侧时，做一个包含电流元在内的辅助曲面，由增补法可得磁通量积分$ \oint_{S} \vec{B} \cdot d\vec{S}&#x3D; 0 $</li>
 </ul>
 <h2 id="法拉第电磁感应定律"><a href="#法拉第电磁感应定律" class="headerlink" title="法拉第电磁感应定律"></a>法拉第电磁感应定律</h2><p><strong>法拉第电磁感应定律是由实验现象归纳得到的，表明了变化的磁场产生电场</strong></p>
 <p><strong>推导方式如下：</strong></p>
@@ -509,39 +509,39 @@ $$ \oint_{l} \vec{H} \cdot d\vec{l}= I + \iint_{S} \frac{\partial \vec{D}}{\part
 
 
 <h1 id="由麦克斯韦方程组的积分形式推导其微分形式"><a href="#由麦克斯韦方程组的积分形式推导其微分形式" class="headerlink" title="由麦克斯韦方程组的积分形式推导其微分形式"></a>由麦克斯韦方程组的积分形式推导其微分形式</h1><h2 id="Nabla算子简介"><a href="#Nabla算子简介" class="headerlink" title="Nabla算子简介"></a>Nabla算子简介</h2><p>Nabla算子($\nabla$)是一种矢量算符，可以将标量场转化为梯度的矢量场，借助它及其点积、叉积能够方便地表示$梯度(grand)$、$散度(div)$、$旋度(curl)$ 等概念：</p>
-<p>$$\nabla = \frac{\partial }{\partial x} \vec{i} + \frac{\partial }{\partial y} \vec{j} + \frac{\partial }{\partial z} \vec{k} $$</p>
-<p>$$\nabla E = grand({E}) = \frac{\partial E }{\partial x} \vec{i} + \frac{\partial E }{\partial y} \vec{j} + \frac{\partial E }{\partial z} \vec{k} $$</p>
-<p>$$\nabla \cdot \vec{E} = div(\vec{E}) = \frac{\partial E_x }{\partial x} + \frac{\partial E_y }{\partial y} + \frac{\partial E_z }{\partial z} $$</p>
-<p>$$\nabla \times \vec{E} = curl(\vec{E}) = \left ( \frac{\partial E_z}{\partial y} - \frac{\partial E_y}{\partial z} \right ) \vec{i} + \left ( \frac{\partial E_x}{\partial z} - \frac{\partial E_z}{\partial x} \right ) \vec{j} + \left ( \frac{\partial E_y}{\partial x} - \frac{\partial E_x}{\partial y} \right ) \vec{k}$$</p>
+<p>$$\nabla &#x3D; \frac{\partial }{\partial x} \vec{i} + \frac{\partial }{\partial y} \vec{j} + \frac{\partial }{\partial z} \vec{k} $$</p>
+<p>$$\nabla E &#x3D; grand({E}) &#x3D; \frac{\partial E }{\partial x} \vec{i} + \frac{\partial E }{\partial y} \vec{j} + \frac{\partial E }{\partial z} \vec{k} $$</p>
+<p>$$\nabla \cdot \vec{E} &#x3D; div(\vec{E}) &#x3D; \frac{\partial E_x }{\partial x} + \frac{\partial E_y }{\partial y} + \frac{\partial E_z }{\partial z} $$</p>
+<p>$$\nabla \times \vec{E} &#x3D; curl(\vec{E}) &#x3D; \left ( \frac{\partial E_z}{\partial y} - \frac{\partial E_y}{\partial z} \right ) \vec{i} + \left ( \frac{\partial E_x}{\partial z} - \frac{\partial E_z}{\partial x} \right ) \vec{j} + \left ( \frac{\partial E_y}{\partial x} - \frac{\partial E_x}{\partial y} \right ) \vec{k}$$</p>
 <h2 id="高斯定律-2"><a href="#高斯定律-2" class="headerlink" title="高斯定律"></a>高斯定律</h2><p>取空间内任一六面体的体积元，以三条棱为轴建立xyz直角坐标系。则对于任意两个相对的面，电通量之和为：</p>
-<p>$$<br>\left ( \vec{D} + \frac{\partial \vec{D}}{\partial x} \right ) \cdot \vec{i} \space dydz - \vec{D} \cdot \vec{i} \space dydz = \frac{\partial \vec{D}}{\partial x} \cdot \vec{i} \space dydz = \frac{\partial D_x}{\partial x} \space dxdydz<br>$$</p>
+<p>$$<br>\left ( \vec{D} + \frac{\partial \vec{D}}{\partial x} \right ) \cdot \vec{i} \space dydz - \vec{D} \cdot \vec{i} \space dydz &#x3D; \frac{\partial \vec{D}}{\partial x} \cdot \vec{i} \space dydz &#x3D; \frac{\partial D_x}{\partial x} \space dxdydz<br>$$</p>
 <p>对于整个体积元来说，六个面的电通量之和为：</p>
-<p>$$<br>\oint_{S} \vec{D} \cdot d\vec{S} = \left ( \frac{\partial D_x}{\partial x} + \frac{\partial D_y}{\partial y} + \frac{\partial D_z}{\partial z} \right ) dxdydz = \rho dxdydz<br>$$</p>
+<p>$$<br>\oint_{S} \vec{D} \cdot d\vec{S} &#x3D; \left ( \frac{\partial D_x}{\partial x} + \frac{\partial D_y}{\partial y} + \frac{\partial D_z}{\partial z} \right ) dxdydz &#x3D; \rho dxdydz<br>$$</p>
 <p>引入哈密顿算子$\nabla$，可得微分形式如下：</p>
-<p>$$\nabla \cdot \vec{D}=\rho$$</p>
+<p>$$\nabla \cdot \vec{D}&#x3D;\rho$$</p>
 <h2 id="高斯磁定律-2"><a href="#高斯磁定律-2" class="headerlink" title="高斯磁定律"></a>高斯磁定律</h2><p>形式与方法与高斯电定律相同，同理可得：</p>
-<p>$$<br>\oint_{S} \vec{B} \cdot d\vec{S} = \left ( \frac{\partial B_x}{\partial x} + \frac{\partial B_y}{\partial y} + \frac{\partial B_z}{\partial z} \right ) dxdydz = 0<br>$$</p>
+<p>$$<br>\oint_{S} \vec{B} \cdot d\vec{S} &#x3D; \left ( \frac{\partial B_x}{\partial x} + \frac{\partial B_y}{\partial y} + \frac{\partial B_z}{\partial z} \right ) dxdydz &#x3D; 0<br>$$</p>
 <p>引入哈密顿算子$\nabla$，可得微分形式如下：</p>
-<p>$$\nabla \cdot \vec{B}=0$$</p>
+<p>$$\nabla \cdot \vec{B}&#x3D;0$$</p>
 <h2 id="全电流定律-2"><a href="#全电流定律-2" class="headerlink" title="全电流定律"></a>全电流定律</h2><p>取空间内一点P，过P点在平行于$xOy$的平面上作一矩形闭合回路。设P处磁场强度为$H$,则距离P点$dx$处磁场强度为$H+\frac{\partial H}{\partial y} dx$，距离P点$dy$处磁场强度为$H+\frac{\partial H}{\partial x} dy$。在$xOy$平面上存在：</p>
-<p>$$<br>\begin{split}<br>  \oint_{l} \vec{H} \cdot d\vec{l} &amp; = - \vec{H} \cdot \vec{j} \space dy + \vec{H} \cdot \vec{i} \space dx + \left ( \vec{H} + \frac{\partial \vec{H}}{\partial x} \space dx \right ) \cdot \vec{j} \space dy - \left ( \vec{H} + \frac{\partial \vec{H}}{\partial y} \space dy \right ) \cdot \vec{i} \space dx<br>  \\<br>  &amp; = \left ( \frac{\partial H_y}{\partial x} - \frac{\partial H_x}{\partial y} \right ) \space dxdy<br>\end{split}<br>$$</p>
-<p>矩形回路内包含的电流元与电通量变化率分别为：<br>$$<br>\vec{I} = \vec{J} \cdot dS = J_z \space dxdy<br>$$</p>
-<p>$$<br>\iint_{S} \frac{\partial \vec{D}}{\partial t} \cdot d \vec{S} = \frac{\partial D_z}{\partial t} \space dxdy<br>$$</p>
+<p>$$<br>\begin{split}<br>  \oint_{l} \vec{H} \cdot d\vec{l} &amp; &#x3D; - \vec{H} \cdot \vec{j} \space dy + \vec{H} \cdot \vec{i} \space dx + \left ( \vec{H} + \frac{\partial \vec{H}}{\partial x} \space dx \right ) \cdot \vec{j} \space dy - \left ( \vec{H} + \frac{\partial \vec{H}}{\partial y} \space dy \right ) \cdot \vec{i} \space dx<br>  \\<br>  &amp; &#x3D; \left ( \frac{\partial H_y}{\partial x} - \frac{\partial H_x}{\partial y} \right ) \space dxdy<br>\end{split}<br>$$</p>
+<p>矩形回路内包含的电流元与电通量变化率分别为：<br>$$<br>\vec{I} &#x3D; \vec{J} \cdot dS &#x3D; J_z \space dxdy<br>$$</p>
+<p>$$<br>\iint_{S} \frac{\partial \vec{D}}{\partial t} \cdot d \vec{S} &#x3D; \frac{\partial D_z}{\partial t} \space dxdy<br>$$</p>
 <p>将以上三部分带入$\eqref{4}$式消去$dxdy$后可得：</p>
-<p>$$<br>\left ( \frac{\partial H_y}{\partial x} - \frac{\partial H_x}{\partial y} \right ) = J_z + \frac{\partial D_z}{\partial t}<br>$$</p>
+<p>$$<br>\left ( \frac{\partial H_y}{\partial x} - \frac{\partial H_x}{\partial y} \right ) &#x3D; J_z + \frac{\partial D_z}{\partial t}<br>$$</p>
 <p>同理对$yOz$平面和$xOz$平面进行同样的处理可得到另两个方程，综合三式可得：</p>
-<p>$$curl \vec{H} = \vec{J} + \frac{\partial \vec{D}}{\partial t}$$</p>
+<p>$$curl \vec{H} &#x3D; \vec{J} + \frac{\partial \vec{D}}{\partial t}$$</p>
 <p>引入$\nabla$算子后可写成：</p>
-<p>$$\nabla \times \vec{H} = \vec{J} + \frac{\partial \vec{D}}{\partial t}$$</p>
+<p>$$\nabla \times \vec{H} &#x3D; \vec{J} + \frac{\partial \vec{D}}{\partial t}$$</p>
 <h2 id="法拉第电磁感应定律-2"><a href="#法拉第电磁感应定律-2" class="headerlink" title="法拉第电磁感应定律"></a>法拉第电磁感应定律</h2><p>形式与方法与全电流定律类似，同理可得：</p>
-<p>$$curl \vec{E} = - \frac{\partial \vec{B}}{\partial t}$$</p>
+<p>$$curl \vec{E} &#x3D; - \frac{\partial \vec{B}}{\partial t}$$</p>
 <p>引入$\nabla$算子后可写成：</p>
-<p>$$\nabla \times \vec{E} = -\frac{\partial \vec{B}}{\partial t}$$</p>
+<p>$$\nabla \times \vec{E} &#x3D; -\frac{\partial \vec{B}}{\partial t}$$</p>
 <h2 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h2><p>微分形式下的麦克斯韦方程组如下：</p>
-<p>$$ \nabla \cdot \vec{D}=\rho \tag{1*} $$</p>
-<p>$$ \nabla \cdot \vec{B}=0 \tag{2*} $$</p>
-<p>$$ \nabla \times \vec{E} = -\frac{\partial \vec{B}}{\partial t} \tag{3*} $$</p>
-<p>$$ \nabla \times \vec{H} = \vec{J} + \frac{\partial \vec{D}}{\partial t} \tag{4*} $$</p>
+<p>$$ \nabla \cdot \vec{D}&#x3D;\rho \tag{1*} $$</p>
+<p>$$ \nabla \cdot \vec{B}&#x3D;0 \tag{2*} $$</p>
+<p>$$ \nabla \times \vec{E} &#x3D; -\frac{\partial \vec{B}}{\partial t} \tag{3*} $$</p>
+<p>$$ \nabla \times \vec{H} &#x3D; \vec{J} + \frac{\partial \vec{D}}{\partial t} \tag{4*} $$</p>
 
   </div>
   <!--文末结束语-->
@@ -589,7 +589,7 @@ $$ \oint_{l} \vec{H} \cdot d\vec{l}= I + \iint_{S} \frac{\partial \vec{D}}{\part
     <ul class="mdui-menu" id="toc">
       <li class="mdui-menu-item">
         <a href="/t-44074/" id="toc-header" class="mdui-ripple">文章目录</a>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#麦克斯韦方程组积分形式的推导和证明"><span class="toc-number">1.</span> <span class="toc-text">麦克斯韦方程组积分形式的推导和证明</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#高斯定律"><span class="toc-number">1.1.</span> <span class="toc-text">高斯定律</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#高斯磁定律"><span class="toc-number">1.2.</span> <span class="toc-text">高斯磁定律</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#法拉第电磁感应定律"><span class="toc-number">1.3.</span> <span class="toc-text">法拉第电磁感应定律</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#全电流定律"><span class="toc-number">1.4.</span> <span class="toc-text">全电流定律</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-number">1.5.</span> <span class="toc-text">总结</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#高斯定律-1"><span class="toc-number">1.5.1.</span> <span class="toc-text">高斯定律</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#高斯磁定律-1"><span class="toc-number">1.5.2.</span> <span class="toc-text">高斯磁定律</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#法拉第电磁感应定律-1"><span class="toc-number">1.5.3.</span> <span class="toc-text">法拉第电磁感应定律</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#全电流定律-1"><span class="toc-number">1.5.4.</span> <span class="toc-text">全电流定律</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#由麦克斯韦方程组的积分形式推导其微分形式"><span class="toc-number">2.</span> <span class="toc-text">由麦克斯韦方程组的积分形式推导其微分形式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Nabla算子简介"><span class="toc-number">2.1.</span> <span class="toc-text">Nabla算子简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#高斯定律-2"><span class="toc-number">2.2.</span> <span class="toc-text">高斯定律</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#高斯磁定律-2"><span class="toc-number">2.3.</span> <span class="toc-text">高斯磁定律</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#全电流定律-2"><span class="toc-number">2.4.</span> <span class="toc-text">全电流定律</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#法拉第电磁感应定律-2"><span class="toc-number">2.5.</span> <span class="toc-text">法拉第电磁感应定律</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结-1"><span class="toc-number">2.6.</span> <span class="toc-text">总结</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%BA%A6%E5%85%8B%E6%96%AF%E9%9F%A6%E6%96%B9%E7%A8%8B%E7%BB%84%E7%A7%AF%E5%88%86%E5%BD%A2%E5%BC%8F%E7%9A%84%E6%8E%A8%E5%AF%BC%E5%92%8C%E8%AF%81%E6%98%8E"><span class="toc-number">1.</span> <span class="toc-text">麦克斯韦方程组积分形式的推导和证明</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%AB%98%E6%96%AF%E5%AE%9A%E5%BE%8B"><span class="toc-number">1.1.</span> <span class="toc-text">高斯定律</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%AB%98%E6%96%AF%E7%A3%81%E5%AE%9A%E5%BE%8B"><span class="toc-number">1.2.</span> <span class="toc-text">高斯磁定律</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%95%E6%8B%89%E7%AC%AC%E7%94%B5%E7%A3%81%E6%84%9F%E5%BA%94%E5%AE%9A%E5%BE%8B"><span class="toc-number">1.3.</span> <span class="toc-text">法拉第电磁感应定律</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%A8%E7%94%B5%E6%B5%81%E5%AE%9A%E5%BE%8B"><span class="toc-number">1.4.</span> <span class="toc-text">全电流定律</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">1.5.</span> <span class="toc-text">总结</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%AB%98%E6%96%AF%E5%AE%9A%E5%BE%8B-1"><span class="toc-number">1.5.1.</span> <span class="toc-text">高斯定律</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%AB%98%E6%96%AF%E7%A3%81%E5%AE%9A%E5%BE%8B-1"><span class="toc-number">1.5.2.</span> <span class="toc-text">高斯磁定律</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%95%E6%8B%89%E7%AC%AC%E7%94%B5%E7%A3%81%E6%84%9F%E5%BA%94%E5%AE%9A%E5%BE%8B-1"><span class="toc-number">1.5.3.</span> <span class="toc-text">法拉第电磁感应定律</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%A8%E7%94%B5%E6%B5%81%E5%AE%9A%E5%BE%8B-1"><span class="toc-number">1.5.4.</span> <span class="toc-text">全电流定律</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%94%B1%E9%BA%A6%E5%85%8B%E6%96%AF%E9%9F%A6%E6%96%B9%E7%A8%8B%E7%BB%84%E7%9A%84%E7%A7%AF%E5%88%86%E5%BD%A2%E5%BC%8F%E6%8E%A8%E5%AF%BC%E5%85%B6%E5%BE%AE%E5%88%86%E5%BD%A2%E5%BC%8F"><span class="toc-number">2.</span> <span class="toc-text">由麦克斯韦方程组的积分形式推导其微分形式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Nabla%E7%AE%97%E5%AD%90%E7%AE%80%E4%BB%8B"><span class="toc-number">2.1.</span> <span class="toc-text">Nabla算子简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%AB%98%E6%96%AF%E5%AE%9A%E5%BE%8B-2"><span class="toc-number">2.2.</span> <span class="toc-text">高斯定律</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%AB%98%E6%96%AF%E7%A3%81%E5%AE%9A%E5%BE%8B-2"><span class="toc-number">2.3.</span> <span class="toc-text">高斯磁定律</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%A8%E7%94%B5%E6%B5%81%E5%AE%9A%E5%BE%8B-2"><span class="toc-number">2.4.</span> <span class="toc-text">全电流定律</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%95%E6%8B%89%E7%AC%AC%E7%94%B5%E7%A3%81%E6%84%9F%E5%BA%94%E5%AE%9A%E5%BE%8B-2"><span class="toc-number">2.5.</span> <span class="toc-text">法拉第电磁感应定律</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93-1"><span class="toc-number">2.6.</span> <span class="toc-text">总结</span></a></li></ol></li></ol>
       </li>
     </ul>
   </div>
@@ -679,7 +679,7 @@ $$ \oint_{l} \vec{H} \cdot d\vec{l}= I + \iint_{S} \frac{\partial \vec{D}}{\part
         <a href="https://beian.miit.gov.cn" rel="noopener" target="_blank">苏ICP备18025778号</a>
       
       <span>
-        &copy; 2015 - 2022 
+        &copy; 2015 - 2023 
         
           <span style="color:#d9333f" class="iconfont icon-heart"></span>
         
