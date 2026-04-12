@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.1">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.css" integrity="sha256-gkQVf8UKZgQ0HyuxL/VnacadJ+D2Kox2TCEBuNQg5+w=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"garybear.cn","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"stackoverflow-dark","dark":"stackoverflow-light"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"flat"},"fold":{"enable":true,"height":500},"language":false},"bookmark":{"enable":false,"color":"#ff0000","save":"manual"},"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":["gitalk","livere"],"storage":true,"lazyload":false,"nav":{"livere":{"order":2},"gitalk":{"order":1}}},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="htaccess文件简介htaccess文件是Apache服务器中的一个配置文件，负责相关目录下的网页配置。&#x2F;www&#x2F;html下的.htaccess文件与主配置文件中段中内容完全等效。.htaccess文件中的配置指令作用于.htaccess文件所在的目录及其所有子目录，且子目录中的指令会覆盖父目录或者主配置文件中的指令。">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="htaccess文件格式">
+<meta property="og:url" content="https://garybear.cn/t-65147/index.html">
+<meta property="og:site_name" content="Gary Bear&#39;s Blog">
+<meta property="og:description" content="htaccess文件简介htaccess文件是Apache服务器中的一个配置文件，负责相关目录下的网页配置。&#x2F;www&#x2F;html下的.htaccess文件与主配置文件中段中内容完全等效。.htaccess文件中的配置指令作用于.htaccess文件所在的目录及其所有子目录，且子目录中的指令会覆盖父目录或者主配置文件中的指令。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2018-03-09T10:03:12.000Z">
+<meta property="article:modified_time" content="2026-04-10T16:24:09.105Z">
+<meta property="article:author" content="机智小蜗熊">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://garybear.cn/t-65147/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://garybear.cn/t-65147/","path":"t-65147/","title":"htaccess文件格式"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>htaccess文件格式 | Gary Bear's Blog</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144166423-1"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-144166423-1","only_pageview":false,"measure_protocol_api_secret":null}</script>
+  <script src="/js/third-party/analytics/google-analytics.js" defer></script>
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.umd.js" integrity="sha256-a+H7FYzJv6oU2hfsfDGM2Ohw/cR9v+hPfxHCLdmCrE8=" crossorigin="anonymous" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/7.2.0/pangu.umd.js" integrity="sha256-JnmRRnJK7DC6RQJbAJb6AXOM9OmWzS6z8eYultk/48Y=" crossorigin="anonymous" defer></script>
+<script src="/js/comments.js" defer></script><script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.5.0/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"default","dark":"dark"},"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.10.1/mermaid.min.js","integrity":"sha256-BmQmdWDS8X2OTbrwELWK366LV6escyWhHHe0XCTU/Hk="}}</script>
+  <script src="/js/third-party/tags/mermaid.js" defer></script>
+
+
+  <script src="/js/third-party/fancybox.js" defer></script>
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js" defer></script>
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Gary Bear's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">6</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">11</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">67</span></a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#htaccess%E6%96%87%E4%BB%B6%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">htaccess文件简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#rewrite%E7%9A%84%E8%AF%AD%E6%B3%95%E6%A0%BC%E5%BC%8F%EF%BC%9A"><span class="nav-number">2.</span> <span class="nav-text">rewrite的语法格式：</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#RewriteEngine-On-Off"><span class="nav-number">2.1.</span> <span class="nav-text">RewriteEngine On|Off</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RewriteBase-URL-path"><span class="nav-number">2.2.</span> <span class="nav-text">RewriteBase URL-path</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RewriteCond-TestString-CondPattern-flags"><span class="nav-number">2.3.</span> <span class="nav-text">RewriteCond TestString CondPattern [flags]</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RewriteRule-Pattern-Substitution-Flags"><span class="nav-number">2.4.</span> <span class="nav-text">RewriteRule Pattern Substitution [Flags]</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#htaccess%E6%96%87%E4%BB%B6URL%E9%87%8D%E5%86%99%E5%86%99%E6%B3%95%E4%BE%8B%E5%AD%90"><span class="nav-number">3.</span> <span class="nav-text">.htaccess文件URL重写写法例子</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E5%8F%8D%E7%9B%97%E9%93%BE"><span class="nav-number">3.1.</span> <span class="nav-text">1. 反盗链</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E9%98%B2%E6%AD%A2%E7%9B%AE%E5%BD%95%E6%B5%8F%E8%A7%88"><span class="nav-number">3.2.</span> <span class="nav-text">2. 防止目录浏览</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-SEO%E5%8F%8B%E5%A5%BD%E7%9A%84301%E6%B0%B8%E4%B9%85%E9%87%8D%E5%AE%9A%E5%90%91"><span class="nav-number">3.3.</span> <span class="nav-text">3. SEO友好的301永久重定向</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E6%98%BE%E7%A4%BA%E4%B8%AA%E6%80%A7%E5%8C%96%E7%9A%84-404-%E9%94%99%E8%AF%AF%E9%A1%B5%E9%9D%A2"><span class="nav-number">3.4.</span> <span class="nav-text">4. 显示个性化的 404 错误页面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E8%AE%BE%E7%BD%AE%E7%9B%AE%E5%BD%95%E7%9A%84%E9%BB%98%E8%AE%A4%E9%A1%B5%E9%9D%A2"><span class="nav-number">3.5.</span> <span class="nav-text">5. 设置目录的默认页面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-%E5%9F%BA%E4%BA%8Ereferer%E6%9D%A5%E9%99%90%E5%88%B6%E7%BD%91%E7%AB%99%E8%AE%BF%E9%97%AE"><span class="nav-number">3.6.</span> <span class="nav-text">6. 基于referer来限制网站访问</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-%E7%BC%93%E5%AD%98%E6%96%87%E4%BB%B6"><span class="nav-number">3.7.</span> <span class="nav-text">9. 缓存文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-%E6%B7%BB%E5%8A%A0%E5%B0%BE%E9%83%A8%E7%9A%84%E5%8F%8D%E6%96%9C%E6%9D%A0"><span class="nav-number">3.8.</span> <span class="nav-text">10. 添加尾部的反斜杠</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-%E5%A4%84%E7%90%86%E7%A7%BB%E5%8A%A8%E8%BF%87%E7%9A%84%E6%96%87%E4%BB%B6"><span class="nav-number">3.9.</span> <span class="nav-text">11. 处理移动过的文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12-html%E5%90%8E%E7%BC%80%E7%9A%84url%E9%93%BE%E6%8E%A5%E5%88%B0php%E6%96%87%E4%BB%B6"><span class="nav-number">3.10.</span> <span class="nav-text">12. html后缀的url链接到php文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#13-%E6%97%A7%E6%96%87%E4%BB%B6%E5%A4%B9%E7%9A%84%E5%86%85%E5%AE%B9%E9%93%BE%E6%8E%A5%E5%88%B0%E6%96%B0%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="nav-number">3.11.</span> <span class="nav-text">13. 旧文件夹的内容链接到新文件夹</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#14-%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6%E5%90%8D"><span class="nav-number">3.12.</span> <span class="nav-text">14. 隐藏文件名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#15-%E9%98%BB%E6%AD%A2-%E5%85%81%E8%AE%B8%E7%89%B9%E5%AE%9AIP-IP%E6%AE%B5"><span class="nav-number">3.13.</span> <span class="nav-text">15. 阻止&#x2F;允许特定IP&#x2F;IP段</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#16-%E6%B7%BB%E5%8A%A0MIME%E7%B1%BB%E5%9E%8B"><span class="nav-number">3.14.</span> <span class="nav-text">16. 添加MIME类型</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="机智小蜗熊"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">机智小蜗熊</p>
+  <div class="site-description" itemprop="description">Dead, Fat, Otaku</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">67</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/kb1000fx" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;kb1000fx" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:kb1000fx@gmail.com" title="E-Mail → mailto:kb1000fx@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://steamcommunity.com/id/kb1000fx/" title="Steam → https:&#x2F;&#x2F;steamcommunity.com&#x2F;id&#x2F;kb1000fx&#x2F;" rel="noopener me" target="_blank"><i class="fab fa-steam fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://live.bilibili.com/8448779" title="BiliBili → https:&#x2F;&#x2F;live.bilibili.com&#x2F;8448779" rel="noopener me" target="_blank"><i class="fab fa-bilibili fa-fw"></i></a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/big/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://garybear.cn/t-65147/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="机智小蜗熊">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Gary Bear's Blog">
+      <meta itemprop="description" content="Dead, Fat, Otaku">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="htaccess文件格式 | Gary Bear's Blog">
+      <meta itemprop="description" content="">
+    </span>  
+      <header class="post-header"  >
+        <h1 class="post-title" itemprop="name headline">
+          htaccess文件格式
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2018-03-09 18:03:12" itemprop="dateCreated datePublished" datetime="2018-03-09T18:03:12+08:00">2018-03-09</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-04-11 00:24:09" itemprop="dateModified" datetime="2026-04-11T00:24:09+08:00">2026-04-11</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+          >
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="htaccess文件简介"><a href="#htaccess文件简介" class="headerlink" title="htaccess文件简介"></a>htaccess文件简介</h1><p>htaccess文件是Apache服务器中的一个配置文件，负责相关目录下的网页配置。&#x2F;www&#x2F;html下的.htaccess文件与主配置文件中段中内容完全等效。.htaccess文件中的配置指令作用于.htaccess文件所在的目录及其所有子目录，且子目录中的指令会覆盖父目录或者主配置文件中的指令。 </p>
+<span id="more"></span>
+<h1 id="rewrite的语法格式："><a href="#rewrite的语法格式：" class="headerlink" title="rewrite的语法格式："></a>rewrite的语法格式：</h1><pre><code>1. RewriteEngine On #启用rewrite起作用。
+2. RewriteBase url-path #设定基准目录。
+3. RewriteCond test-string condPattern #用于测试rewrite的匹配条件。
+4. RewriteRule Pattern Substitution #规则
+</code></pre>
+<h2 id="RewriteEngine-On-Off"><a href="#RewriteEngine-On-Off" class="headerlink" title="RewriteEngine On|Off"></a>RewriteEngine On|Off</h2><p>RewriteEngine 用于开启或停用rewrite功能。rewrite configurations 不会自动继承。 </p>
+<h2 id="RewriteBase-URL-path"><a href="#RewriteBase-URL-path" class="headerlink" title="RewriteBase URL-path"></a>RewriteBase URL-path</h2><p>RewriteBase用于设定重写的基准URL。<br>RewriteRule可以用于目录级的配置文件中 (.htaccess)并在局部范围内起作用，即规则实际处理的只是剥离了本地路径前缀的一部分。处理结束后，这个路径会被自动地附着回去。默认值是”RewriteBase physical-directory-path”。 </p>
+<h2 id="RewriteCond-TestString-CondPattern-flags"><a href="#RewriteCond-TestString-CondPattern-flags" class="headerlink" title="RewriteCond TestString CondPattern [flags]"></a>RewriteCond TestString CondPattern [flags]</h2><p>RewriteCond指令定义了一个规则的条件，即，在一个RewriteRule指令之前有一个或多个RewriteCond指令。 条件之后的重写规则仅在当前URI与pattern匹配并且符合这些条件的时候才会起作用。<br>TestString是一个纯文本的字符串，但是还可以包含下列可扩展的成分： + RewriteRule反向引用: 引用方法是 $N (0 &lt;&#x3D; N &lt;&#x3D; 9) 引用当前(带有若干RewriteCond指令的)RewriteRule中的 与pattern匹配的分组成分(圆括号!)。<br>+ RewriteCond反向引用: 引用方法是 %N (1 &lt;&#x3D; N &lt;&#x3D; 9) 引用当前若干RewriteCond条件中最后符合的条件中的分组成分(圆括号!)。 + RewriteMap 扩展: 引用方法是 ${mapname:key|default} + 服务器变量: 引用方法是 %{ NAME_OF_VARIABLE } CondPattern是条件参数。<br>Flags标识是是第三个参数,可选OR、AND、NC，默认为AND。 </p>
+<h2 id="RewriteRule-Pattern-Substitution-Flags"><a href="#RewriteRule-Pattern-Substitution-Flags" class="headerlink" title="RewriteRule Pattern Substitution [Flags]"></a>RewriteRule Pattern Substitution [Flags]</h2><p>其中的Pattern就是参数，一般为一些文件的扩展名，Substitution是用来替换前面用的，这儿的Flags，常用的R表示 redirect（强制重定向），F表示forbidden（禁止访问），L表示last（最后），通常当你希望停止重写操作而立即重定向时，可用它。 </p>
+<h1 id="htaccess文件URL重写写法例子"><a href="#htaccess文件URL重写写法例子" class="headerlink" title=".htaccess文件URL重写写法例子"></a>.htaccess文件URL重写写法例子</h1><h2 id="1-反盗链"><a href="#1-反盗链" class="headerlink" title="1. 反盗链"></a>1. 反盗链</h2><pre><code>RewriteBase /
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^http://(www.)?yoursite.com/.*$ [NC]
+RewriteRule .(gif|jpg|swf|flv|png)$ /feed/ [R=302,L]
+</code></pre>
+<h2 id="2-防止目录浏览"><a href="#2-防止目录浏览" class="headerlink" title="2. 防止目录浏览"></a>2. 防止目录浏览</h2><pre><code>Options All -Indexes
+</code></pre>
+<h2 id="3-SEO友好的301永久重定向"><a href="#3-SEO友好的301永久重定向" class="headerlink" title="3. SEO友好的301永久重定向"></a>3. SEO友好的301永久重定向</h2><pre><code>Redirect 301 http://www.yoursite.com/article.html http://www.yoursite.com/archives/article
+</code></pre>
+<h2 id="4-显示个性化的-404-错误页面"><a href="#4-显示个性化的-404-错误页面" class="headerlink" title="4. 显示个性化的 404 错误页面"></a>4. 显示个性化的 404 错误页面</h2><pre><code>ErrorDocument 404 /404.html
+</code></pre>
+<h2 id="5-设置目录的默认页面"><a href="#5-设置目录的默认页面" class="headerlink" title="5. 设置目录的默认页面"></a>5. 设置目录的默认页面</h2><p>假如你需要为不同的目录设置不同的默认页面，你可以很容易的通过 .htaccess 实现： </p>
+<pre><code>DirectoryIndex about.html
+</code></pre>
+<h2 id="6-基于referer来限制网站访问"><a href="#6-基于referer来限制网站访问" class="headerlink" title="6. 基于referer来限制网站访问"></a>6. 基于referer来限制网站访问</h2><pre><code>&lt;IfModule mod_rewrite.c&gt;
+RewriteEngine on  RewriteCond %{HTTP_REFERER} spamteam.com [NC,OR]
+RewriteCond %{HTTP_REFERER} trollteam.com [NC,OR]
+RewriteRule .* – [F]
+&lt;/ifModule&gt;
+</code></pre>
+<ol start="7">
+<li>限制PHP上传文件大小</li>
+</ol>
+<pre><code>php_value upload_max_filesize 20M
+php_value post_max_size 20M
+php_value max_execution_time 200
+php_value max_input_time 200
+</code></pre>
+<ol start="8">
+<li>通过压缩文件来减少网络流量</li>
+</ol>
+<pre><code>AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/xml
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE application/xml
+AddOutputFilterByType DEFLATE application/xhtml+xml
+AddOutputFilterByType DEFLATE application/rss+xml
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE application/x-javascript
+</code></pre>
+<h2 id="9-缓存文件"><a href="#9-缓存文件" class="headerlink" title="9. 缓存文件"></a>9. 缓存文件</h2><pre><code>&lt;FilesMatch “.(flv|gif|jpg|jpeg|png|ico|swf|js|css|pdf)$”&gt;
+Header set Cache-Control “max-age=2592000〃
+&lt;/FilesMatch&gt;
+</code></pre>
+<h2 id="10-添加尾部的反斜杠"><a href="#10-添加尾部的反斜杠" class="headerlink" title="10. 添加尾部的反斜杠"></a>10. 添加尾部的反斜杠</h2><pre><code>&lt;IfModule mod_rewrite.c&gt;
+RewriteCond %{REQUEST_URI} /+[^\.]+$
+RewriteRule ^(.+[^/])$ %{REQUEST_URI}/ [R=301,L]
+&lt;/IfModule&gt;
+</code></pre>
+<h2 id="11-处理移动过的文件"><a href="#11-处理移动过的文件" class="headerlink" title="11. 处理移动过的文件"></a>11. 处理移动过的文件</h2><pre><code>Redirect 301 /old.html http://yoursite.com/new.html
+</code></pre>
+<p>或者是 </p>
+<pre><code>RewriteRule /old.html http://yoursite.com/new.html [R=301,L]
+</code></pre>
+<p>如果想隐式跳转 </p>
+<pre><code>RewriteRule /old.html http://yoursite.com/new.html [L]
+</code></pre>
+<h2 id="12-html后缀的url链接到php文件"><a href="#12-html后缀的url链接到php文件" class="headerlink" title="12. html后缀的url链接到php文件"></a>12. html后缀的url链接到php文件</h2><pre><code>RewriteRule ^/?([a-z/]+)\.html$ $1.php [L]
+</code></pre>
+<h2 id="13-旧文件夹的内容链接到新文件夹"><a href="#13-旧文件夹的内容链接到新文件夹" class="headerlink" title="13. 旧文件夹的内容链接到新文件夹"></a>13. 旧文件夹的内容链接到新文件夹</h2><pre><code>RewriteRule ^/?old_directory/([a-z/.]+)$ new_directory/$1 [R=301,L]
+</code></pre>
+<h2 id="14-隐藏文件名"><a href="#14-隐藏文件名" class="headerlink" title="14. 隐藏文件名"></a>14. 隐藏文件名</h2><pre><code>RewriteRule ^/?([a-z]+)$ $1.php [L]
+</code></pre>
+<h2 id="15-阻止-允许特定IP-IP段"><a href="#15-阻止-允许特定IP-IP段" class="headerlink" title="15. 阻止&#x2F;允许特定IP&#x2F;IP段"></a>15. 阻止&#x2F;允许特定IP&#x2F;IP段</h2><p>禁止所有IP，除了指定的 </p>
+<pre><code>order deny,allow
+deny from all
+</code></pre>
+<p>如果想允许IP段，如123.123.123.0 ~ 123.123.123.255，则 </p>
+<pre><code>allow from 123.123.123.
+allow from 123.123.123.123
+
+ErrorDocument 403 /page.html
+
+&lt;Files page.html&gt;
+allow from all
+&lt;/Files&gt;
+</code></pre>
+<p>如果想禁止特定IP </p>
+<pre><code>deny from 123.123.123.123
+</code></pre>
+<h2 id="16-添加MIME类型"><a href="#16-添加MIME类型" class="headerlink" title="16. 添加MIME类型"></a>16. 添加MIME类型</h2><pre><code>AddType video/x-flv .flv
+</code></pre>
+<p>如果设置类型为 application&#x2F;octet-stream 将提示下载 </p>
+<pre><code>AddType application/octet-stream .pdf
+</code></pre>
+
+          <div style="text-align:center;color: #ccc;font-size:24px;">  --- 本文结束&nbsp;<i class="fa fa-heartbeat" style="font-size:24px;"></i>&nbsp;The End ---  </div>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>机智小蜗熊
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://garybear.cn/t-65147/" title="htaccess文件格式">https://garybear.cn/t-65147/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/t-65310/" rel="prev" title="LAMP下使用Certbot自动配置SSL证书">
+                  <i class="fa fa-angle-left"></i> LAMP下使用Certbot自动配置SSL证书
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/t-15843/" rel="next" title="Windows及Office的KMS激活">
+                  Windows及Office的KMS激活 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+      <div class="tabs tabs-comment">
+        <ul class="nav-tabs">
+            <li class="tab"><a href="#comment-gitalk">GITALK</a></li>
+            <li class="tab"><a href="#comment-livere">LIVERE</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane gitalk" id="comment-gitalk">
+              <div class="comments gitalk-container"></div>
+            </div>
+            <div class="tab-pane livere" id="comment-livere">
+              <div class="comments" id="lv-container" data-id="city" data-uid="MTAyMC80OTI2OS8yNTc2Mw=="></div>
+            </div>
+        </div>
+      </div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright"><a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">苏ICP备18025778号 </a>
+    &copy; 2015 – 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">机智小蜗熊</span>
+  </div>
+  <div class="powered-by">
+    Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a>&emsp;  Theme <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/kb1000fx" class="github-corner" title="在 GitHub 上关注我" aria-label="在 GitHub 上关注我" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"kb1000fx","repo":"kb1000fx.github.io","client_id":"f3866882707e12e74c4a","client_secret":"04a037afee00b94e4b55e474aa270ac136a8c952","admin_user":null,"distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"body":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"e99c9af7cd507995828de017e1ddad6a"}</script>
+<script src="/js/third-party/comments/gitalk.js" defer></script>
+<script src="/js/third-party/comments/livere.js" defer></script>
+
+</body>
+</html>
