@@ -85,6 +85,8 @@
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5888225880131847"
+      crossorigin="anonymous"></script>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
@@ -305,7 +307,20 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>之前一直用官方端架设MC服务器，这一次使用docker来进行尝试。</p>
+    <div class="post-body" itemprop="articleBody">
+        
+          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5888225880131847"
+               crossorigin="anonymous"></script>
+     <!-- Banner Ads -->
+     <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-5888225880131847"
+          data-ad-slot="3949852758"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+     <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+     </script><p>之前一直用官方端架设MC服务器，这一次使用docker来进行尝试。</p>
 <span id="more"></span>
 <h1 id="安装Docker"><a href="#安装Docker" class="headerlink" title="安装Docker"></a>安装Docker</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> <span class="built_in">mkdir</span> -p /etc/apt/keyrings</span><br><span class="line"></span><br><span class="line">curl -fsSL https://download.docker.com/linux/debian/gpg | <span class="built_in">sudo</span> gpg --dearmor -o /etc/apt/keyrings/docker.gpg</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> \</span><br><span class="line">  <span class="string">&quot;deb [arch=<span class="subst">$(dpkg --print-architecture)</span> signed-by=/etc/apt/keyrings/docker.gpg] https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/debian \</span></span><br><span class="line"><span class="string">  <span class="subst">$(lsb_release -cs)</span> stable&quot;</span> | <span class="built_in">sudo</span> <span class="built_in">tee</span> /etc/apt/sources.list.d/docker.list &gt; /dev/null</span><br><span class="line"></span><br><span class="line"><span class="built_in">sudo</span> apt-get update</span><br><span class="line"></span><br><span class="line"><span class="built_in">sudo</span> apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin</span><br></pre></td></tr></table></figure>
 
@@ -322,6 +337,20 @@
 <p>将文件上传到映射文件夹（以<code>/root/mc</code>为例）</p>
 <h1 id="运行Docker容器"><a href="#运行Docker容器" class="headerlink" title="运行Docker容器"></a>运行Docker容器</h1><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">run</span> -d -v /root/mc:/data -e <span class="attribute">TYPE</span>=CURSEFORGE \</span><br><span class="line">    -e <span class="attribute">CF_SERVER_MOD</span>=MOD.zip -e <span class="attribute">MEMORY</span>=8G \</span><br><span class="line">    -e <span class="attribute">ONLINE_MODE</span>=<span class="literal">FALSE</span> -e <span class="attribute">VERSION</span>=1.12.2 \</span><br><span class="line">    -p 25565:25565 -e <span class="attribute">EULA</span>=<span class="literal">TRUE</span> --name mc itzg/minecraft-server:java8</span><br></pre></td></tr></table></figure>
           <div style="text-align:center;color: #ccc;font-size:24px;">  --- 本文结束&nbsp;<i class="fa fa-heartbeat" style="font-size:24px;"></i>&nbsp;The End ---  </div>
+
+        
+     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5888225880131847"
+          crossorigin="anonymous"></script>
+     <!-- Banner Ads -->
+     <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-5888225880131847"
+          data-ad-slot="2212253348"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+     <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+     </script>
     </div>
 
     

@@ -84,6 +84,8 @@
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5888225880131847"
+      crossorigin="anonymous"></script>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
@@ -304,7 +306,20 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>更多详细内容参见 <a target="_blank" rel="noopener" href="http://dontstarve.wikia.com/wiki/Don%27t_Starve_Game_Wiki">饥荒维基</a></p>
+    <div class="post-body" itemprop="articleBody">
+        
+          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5888225880131847"
+               crossorigin="anonymous"></script>
+     <!-- Banner Ads -->
+     <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-5888225880131847"
+          data-ad-slot="3949852758"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+     <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+     </script><p>更多详细内容参见 <a target="_blank" rel="noopener" href="http://dontstarve.wikia.com/wiki/Don%27t_Starve_Game_Wiki">饥荒维基</a></p>
 <span id="more"></span>
 <h1 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h1><figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line">#上帝模式：</span><br><span class="line"><span class="built_in">c_godmode</span>()</span><br><span class="line"></span><br><span class="line">#物品栏中给予物品：</span><br><span class="line"><span class="built_in">c_give</span>(&quot;代码名称“，数量)  </span><br><span class="line"></span><br><span class="line">#鼠标指针处生成物品：</span><br><span class="line"><span class="built_in">c_spawn</span>(“XX”，数量)</span><br><span class="line"></span><br><span class="line">#鼠标指针处生成物品：</span><br><span class="line">DebugSpawn&quot;XX&quot;</span><br><span class="line"></span><br><span class="line">#删除物品：</span><br><span class="line">TheInput:<span class="built_in">GetWorldEntityUnderMouse</span>():<span class="built_in">Remove</span>()</span><br><span class="line"></span><br><span class="line">#设置生命：</span><br><span class="line"><span class="built_in">c_sethealth</span>(百分数)</span><br><span class="line"></span><br><span class="line">#设置精神：</span><br><span class="line"><span class="built_in">c_setsanity</span>(百分数)</span><br><span class="line"></span><br><span class="line">#设置饥饿：</span><br><span class="line"><span class="built_in">c_sethunger</span>(百分数)</span><br><span class="line"></span><br><span class="line">#设置速度：</span><br><span class="line"><span class="built_in">c_speed</span>(默认为<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">#停止饥饿：</span><br><span class="line"><span class="built_in">GetPlayer</span>().components.hunger:<span class="built_in">Pause</span>(true)</span><br><span class="line"></span><br><span class="line">#变成海狸：</span><br><span class="line"><span class="built_in">GetPlayer</span>().components.beaverness:<span class="built_in">SetPercent</span>(<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">#饥饿值上限：</span><br><span class="line"><span class="built_in">GetPlayer</span>().components.hunger:<span class="built_in">SetMax</span>(<span class="number">500</span>)</span><br><span class="line"></span><br><span class="line">#精神值上限：</span><br><span class="line"><span class="built_in">GetPlayer</span>().components.sanity:<span class="built_in">SetMax</span>(<span class="number">500</span>)</span><br><span class="line"></span><br><span class="line">#生命值上限：</span><br><span class="line"><span class="built_in">GetPlayer</span>().components.health:<span class="built_in">SetMaxHealth</span>(<span class="number">300</span>)</span><br><span class="line"></span><br><span class="line">#全物品直接制造：</span><br><span class="line"><span class="built_in">GetPlayer</span>().components.builder:<span class="built_in">GiveAllRecipes</span>()</span><br><span class="line"></span><br><span class="line">#传送：</span><br><span class="line"><span class="built_in">GetPlayer</span>().Transform:<span class="built_in">SetPosition</span>(坐标，例：<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">#地图全开：</span><br><span class="line"><span class="built_in">GetWorld</span>().minimap.MiniMap:<span class="built_in">ShowArea</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">10000</span>)</span><br><span class="line"></span><br><span class="line">#列出玩家名称跟编号列表：</span><br><span class="line"><span class="built_in">c_listallplayers</span>()</span><br><span class="line"></span><br><span class="line">#复活指定编号玩家：AllPlayers[number]:<span class="built_in">PushEvent</span>(<span class="string">&#x27;respawnfromghost&#x27;</span>)</span><br><span class="line"></span><br><span class="line">#玩家换角色：</span><br><span class="line"><span class="built_in">c_despawn</span>(AllPlayers[NUMBER])</span><br></pre></td></tr></table></figure>
 
@@ -1158,6 +1173,20 @@
 </tbody></table>
 
           <div style="text-align:center;color: #ccc;font-size:24px;">  --- 本文结束&nbsp;<i class="fa fa-heartbeat" style="font-size:24px;"></i>&nbsp;The End ---  </div>
+
+        
+     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5888225880131847"
+          crossorigin="anonymous"></script>
+     <!-- Banner Ads -->
+     <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-5888225880131847"
+          data-ad-slot="2212253348"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+     <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+     </script>
     </div>
 
     
