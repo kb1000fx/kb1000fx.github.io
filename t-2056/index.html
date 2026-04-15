@@ -26,7 +26,7 @@
 <meta property="og:description" content="休整了一阵子，身体和心理都慢慢恢复了一些。鸽了这么久终于补上这篇单例模式了，下面开始正题。单例模式，顾名思义即一个类仅有一个实例。单例模式下即使多次调用构造函数(使用new操作符创建多个对象)，得到的都是同一个实例对象。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-09-05T04:00:00.000Z">
-<meta property="article:modified_time" content="2023-02-13T16:03:12.616Z">
+<meta property="article:modified_time" content="2026-04-15T15:41:52.793Z">
 <meta property="article:author" content="机智小蜗熊">
 <meta property="article:tag" content="前端">
 <meta name="twitter:card" content="summary">
@@ -122,7 +122,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">6</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">11</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">67</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">6</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">13</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">67</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -194,7 +194,7 @@
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-count">13</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -279,7 +279,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-02-14 00:03:12" itemprop="dateModified" datetime="2023-02-14T00:03:12+08:00">2023-02-14</time>
+      <time title="修改时间：2026-04-15 23:41:52" itemprop="dateModified" datetime="2026-04-15T23:41:52+08:00">2026-04-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -291,7 +291,7 @@
         </span>
           >
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/Web/" itemprop="url" rel="index"><span itemprop="name">Web</span></a>
+          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AFWeb/" itemprop="url" rel="index"><span itemprop="name">前端Web</span></a>
         </span>
     </span>
 
@@ -336,25 +336,23 @@
 <h2 id="原型链的继承关系"><a href="#原型链的继承关系" class="headerlink" title="原型链的继承关系"></a>原型链的继承关系</h2><p>使用上面的闭包方式存在一个问题：由于构造函数被重写，在初始定义和重定义之间添加到类中的属性都会丢失。例如：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">ClassC</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">var</span> instance = <span class="variable language_">this</span></span><br><span class="line">    <span class="title class_">ClassC</span> = <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> instance</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title class_">ClassC</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">pro1</span> = <span class="literal">true</span></span><br><span class="line"><span class="keyword">var</span> ins1 = <span class="keyword">new</span> <span class="title class_">ClassC</span>()</span><br><span class="line"><span class="title class_">ClassC</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">pro2</span> = <span class="literal">true</span></span><br><span class="line"><span class="keyword">var</span> ins2 = <span class="keyword">new</span> <span class="title class_">ClassC</span>()</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(ins1.<span class="property">pro1</span>)  <span class="comment">//true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(ins1.<span class="property">pro2</span>)  <span class="comment">//underfined</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(ins2.<span class="property">pro1</span>)  <span class="comment">//true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(ins2.<span class="property">pro2</span>)  <span class="comment">//underfined</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(ins1.<span class="property">constructor</span>.<span class="property">name</span>)  <span class="comment">// &quot;ClassC&quot;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(ins1.<span class="property">constructor</span> === <span class="title class_">ClassC</span>)    <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
 <p>造成这种现象的原因是，重写构造函数后原先的构造函数因为使用了闭包还保留在内存中，但是构造函数指针已经指向了一个新的函数了。<br>与此同时<code>ins1.constructor</code>仍然指向原始的构造函数而不是重定义之后的构造函数，因此<code>ins1.constructor === ClassC</code>。原型链的继承关系可参见下面两个图：</p>
-<div class="mermaid">
-  classDiagram
-    Class --> ClassPrototype
-    ClassPrototype ..> Class
-    ClassPrototype <-- ins1: Prototype
-    ClassPrototype <-- ins2: Prototype
-    class Class{
-        prototype
-    }
-    class ClassPrototype{
-        constructor
-    }
-    class ins1{
-        prototype
-    }
-    class ins2{
-        prototype
-    }
-</div>
+<pre><code class="highlight mermaid">classDiagram
+  Class --&gt; ClassPrototype
+  ClassPrototype ..&gt; Class
+  ClassPrototype &lt;-- ins1: Prototype
+  ClassPrototype &lt;-- ins2: Prototype
+  class Class&#123;
+      prototype
+  &#125;
+  class ClassPrototype&#123;
+      constructor
+  &#125;
+  class ins1&#123;
+      prototype
+  &#125;
+  class ins2&#123;
+      prototype
+  &#125;</code></pre>
 
 <h2 id="原型链修复"><a href="#原型链修复" class="headerlink" title="原型链修复"></a>原型链修复</h2><p>对于上面提到的问题，我们需要对原型链进行修改。方法如下：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">ClassC</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">var</span> instance = <span class="variable language_">this</span></span><br><span class="line">    <span class="title class_">ClassC</span> = <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> instance</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//新构造函数的原型对象指向原来的原型对象</span></span><br><span class="line">    <span class="title class_">ClassC</span>.<span class="property"><span class="keyword">prototype</span></span> = <span class="variable language_">this</span>.<span class="property">constructor</span>.<span class="property"><span class="keyword">prototype</span></span></span><br><span class="line">    <span class="comment">//原型对象指回新构造函数</span></span><br><span class="line">    instance.<span class="property">constructor</span> = <span class="title class_">ClassC</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title class_">ClassC</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">pro1</span> = <span class="literal">true</span></span><br><span class="line"><span class="keyword">var</span> ins1 = <span class="keyword">new</span> <span class="title class_">ClassC</span>()</span><br><span class="line"><span class="title class_">ClassC</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">pro2</span> = <span class="literal">true</span></span><br><span class="line"><span class="keyword">var</span> ins2 = <span class="keyword">new</span> <span class="title class_">ClassC</span>()</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(ins1.<span class="property">pro1</span>)  <span class="comment">//true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(ins1.<span class="property">pro2</span>)  <span class="comment">//true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(ins2.<span class="property">pro1</span>)  <span class="comment">//true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(ins2.<span class="property">pro2</span>)  <span class="comment">//true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(ins1.<span class="property">constructor</span>.<span class="property">name</span>)  <span class="comment">// &quot;ClassC&quot;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(ins1.<span class="property">constructor</span> === <span class="title class_">ClassC</span>)    <span class="comment">// true</span></span><br></pre></td></tr></table></figure>

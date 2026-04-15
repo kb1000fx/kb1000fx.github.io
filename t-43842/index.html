@@ -27,7 +27,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://garybear.cn/images/43842/factory.webp">
 <meta property="article:published_time" content="2020-06-29T04:00:00.000Z">
-<meta property="article:modified_time" content="2026-04-10T15:04:13.661Z">
+<meta property="article:modified_time" content="2026-04-15T15:41:52.793Z">
 <meta property="article:author" content="机智小蜗熊">
 <meta property="article:tag" content="前端">
 <meta name="twitter:card" content="summary">
@@ -124,7 +124,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">6</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">11</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">67</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">6</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">13</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">67</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -196,7 +196,7 @@
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-count">13</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -281,7 +281,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-04-10 23:04:13" itemprop="dateModified" datetime="2026-04-10T23:04:13+08:00">2026-04-10</time>
+      <time title="修改时间：2026-04-15 23:41:52" itemprop="dateModified" datetime="2026-04-15T23:41:52+08:00">2026-04-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -293,7 +293,7 @@
         </span>
           >
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/Web/" itemprop="url" rel="index"><span itemprop="name">Web</span></a>
+          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AFWeb/" itemprop="url" rel="index"><span itemprop="name">前端Web</span></a>
         </span>
     </span>
 
@@ -330,23 +330,21 @@
 <span id="more"></span>
 <p><img src="/images/43842/factory.webp"></p>
 <h1 id="简单工厂"><a href="#简单工厂" class="headerlink" title="简单工厂"></a>简单工厂</h1><p>简单工厂模式又称为静态工厂模式，是由一个工厂函数来实例化多个产品对象，主要用来创建同一类对象。其过程图如下：</p>
-<div class="mermaid">
-  classDiagram
-    Client -- Factory
-    Factory <-- productOne
-    Factory <-- productTwo
-    class Factory{
-      + createProduct()
-    }
-    class productOne{
-      data
-      method()
-    }
-    class productTwo{
-      data
-      method()
-    }
-</div>
+<pre><code class="highlight mermaid">classDiagram
+  Client -- Factory
+  Factory &lt;-- productOne
+  Factory &lt;-- productTwo
+  class Factory&#123;
+    + createProduct()
+  &#125;
+  class productOne&#123;
+    data
+    method()
+  &#125;
+  class productTwo&#123;
+    data
+    method()
+  &#125;</code></pre>
 
 <p>下面举一个简单的例子：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> factory=<span class="keyword">function</span>(<span class="params">data</span>)&#123;</span><br><span class="line">    <span class="keyword">var</span> product = <span class="keyword">new</span> <span class="title class_">Object</span>;</span><br><span class="line">    product.<span class="property">data</span> = data;</span><br><span class="line">    product.<span class="property">method</span> = <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;I am Product &quot;</span>+<span class="variable language_">this</span>.<span class="property">data</span>);</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">return</span> product</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//调用</span></span><br><span class="line"><span class="keyword">var</span> product1 = <span class="title function_">factory</span>(<span class="number">1</span>);</span><br><span class="line"><span class="keyword">var</span> product2 = <span class="keyword">new</span> <span class="title function_">factory</span>(<span class="number">2</span>);</span><br><span class="line"><span class="comment">//这里使用了new结果相同</span></span><br><span class="line">product1.<span class="title function_">method</span>()</span><br><span class="line"><span class="comment">//输出：I am Product 1</span></span><br><span class="line">product2.<span class="title function_">method</span>()</span><br><span class="line"><span class="comment">//输出：I am Product 2</span></span><br></pre></td></tr></table></figure>
@@ -354,28 +352,26 @@
 <p>其中<code>Factory</code>就是一个简单工厂，通过传入不同的参数生成许多同类的对象。对于这个例子而言，由于<code>Factory</code>的返回值是一个对象，所以在使用时无论是否作为构造函数调用(即是否加new)运行结果均相同，都是生成的对象。</p>
 <p>值得一提的是，上面的例子中的对象<code>productOne</code>与<code>productTwo</code>在内存中均含一个method方法，二者并不共用，这会导致一定程度的浪费。详见<a href="#%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F%E4%B8%8E%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0">工厂模式与构造函数</a>一节</p>
 <h1 id="工厂方法"><a href="#工厂方法" class="headerlink" title="工厂方法"></a>工厂方法</h1><p>对于生成不同种类的对象，上面介绍的简单工厂无法做到，可以使用下面的工厂方法。工厂方法模式与上面的不同在于将实际创建对象的工作推迟到子类中，使得核心类就变成了抽象类，只作为接口来调用子类的构造函数。但是由于在JavaScript中很难像传统面向对象那样去实现创建抽象类。所以参考其核心思想可以将工厂方法看作是一个实例化对象的工厂类。具体过程如下：</p>
-<div class="mermaid">
-  classDiagram
-    Client -- Factory
-    Factory <-- ConcreteFactoryOne
-    Factory <-- ConcreteFactoryTwo
-    ConcreteFactoryOne <-- ProductOne
-    ConcreteFactoryTwo <-- ProductTwo
-    class ConcreteFactoryOne{
-      + createProductOne()
-    }
-    class ConcreteFactoryTwo{
-      + createProductTwo()
-    }
-    class ProductOne{
-      data
-      method()
-    }
-    class ProductTwo{
-      data
-      method()
-    }
-</div>
+<pre><code class="highlight mermaid">classDiagram
+  Client -- Factory
+  Factory &lt;-- ConcreteFactoryOne
+  Factory &lt;-- ConcreteFactoryTwo
+  ConcreteFactoryOne &lt;-- ProductOne
+  ConcreteFactoryTwo &lt;-- ProductTwo
+  class ConcreteFactoryOne&#123;
+    + createProductOne()
+  &#125;
+  class ConcreteFactoryTwo&#123;
+    + createProductTwo()
+  &#125;
+  class ProductOne&#123;
+    data
+    method()
+  &#125;
+  class ProductTwo&#123;
+    data
+    method()
+  &#125;</code></pre>
 
 <p>对上面的例子进行改写，使用Factory同时产生两种对象。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//使用安全模式创建工厂方法函数</span></span><br><span class="line"><span class="keyword">var</span> <span class="title class_">Factory</span> = <span class="keyword">function</span>(<span class="params">child,data</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span>(<span class="variable language_">this</span> <span class="keyword">instanceof</span> <span class="title class_">Factory</span>) &#123;</span><br><span class="line">      <span class="keyword">var</span> product = <span class="keyword">new</span> <span class="variable language_">this</span>[child](data);</span><br><span class="line">      <span class="keyword">return</span> product;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Factory</span>(child,data);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//设置子类构造函数</span></span><br><span class="line"><span class="title class_">Factory</span>.<span class="property"><span class="keyword">prototype</span></span> = &#123;</span><br><span class="line">    <span class="title class_">ConcreteFactoryOne</span>: <span class="keyword">function</span>(<span class="params">data</span>) &#123;</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">data</span> = data;</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">method</span> = <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Product 1, data &quot;</span> + <span class="variable language_">this</span>.<span class="property">data</span>)</span><br><span class="line">      &#125;;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="title class_">ConcreteFactoryTwo</span>: <span class="keyword">function</span>(<span class="params">data</span>) &#123;</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">data</span> = data,</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">method</span> = <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Product 2, data &quot;</span> + <span class="variable language_">this</span>.<span class="property">data</span>)</span><br><span class="line">      &#125;;</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;</span><br><span class="line"><span class="title class_">Factory</span>(<span class="string">&#x27;ConcreteFactoryOne&#x27;</span>,<span class="number">1</span>).<span class="title function_">method</span>();</span><br><span class="line"><span class="comment">//这里没用使用new结果相同</span></span><br><span class="line"><span class="comment">//输出：Product 1, data 1</span></span><br><span class="line"><span class="keyword">new</span> <span class="title class_">Factory</span>(<span class="string">&#x27;ConcreteFactoryTwo&#x27;</span>,<span class="number">2</span>).<span class="title function_">method</span>();</span><br><span class="line"><span class="comment">//输出：Product 2, data 2</span></span><br></pre></td></tr></table></figure>
@@ -383,44 +379,42 @@
 <p>第二个例子中，Factory主要是起一个接口的作用，真正实例化的操作在其子类之中。如果直接使用<code>switch-case</code>一类的流程判断也可以完成接口逻辑，但添加新子类后也需对接口进行修改。因此使用上例中的方法可以减少改动的位置。</p>
 <p>由于两个子类的构造函数保存在<code>Factory.prototype</code>中，所以必须先对父类<code>Factory</code>进行实例化才能调用这两个函数再实例化子类。开头使用的安全模式是为了确保父类被成功实例化，防止因在使用过程中忘记使用<code>new</code>(如例中所示) 而导致的错误。把构造函数保存在<code>Factory.prototype</code>中而不直接在<code>Factory</code>中是因为安全模式可能会实例化多个父类对象Factory，避免同一个函数在多次实例化过程对内存的浪费。这两个问题其实是相互作用相互影响的。</p>
 <h1 id="抽象工厂"><a href="#抽象工厂" class="headerlink" title="抽象工厂"></a>抽象工厂</h1><p>抽象工厂与上面的两种方法不同，它并不直接生成实例而是生成簇。抽象工厂实际上是一个实现子类继承父类的方法，在这个方法中需要传递子类以及要继承父类的名称。并且在抽象工厂方法中增加了一次对抽象类存在性的一次判断，如果抽象类存在，则将子类通过寄生式继承父类的方法。过程如下：</p>
-<div class="mermaid">
-  classDiagram
-    Client -- AbstractFactory
-    AbstractFactory <-- ConcreteFactoryOne
-    AbstractFactory <-- ConcreteFactoryTwo
-    ConcreteFactoryOne <-- ProductOneA
-    ConcreteFactoryOne <-- ProductOneB
-    ConcreteFactoryTwo <-- ProductTwoA
-    ConcreteFactoryTwo <-- ProductTwoB
-    ProductOneA -- AbstractProductA
-    ProductTwoA -- AbstractProductA
-    ProductOneB -- AbstractProductB
-    ProductTwoB -- AbstractProductB
-    class ConcreteFactoryOne{
-      + createProductOneA()
-      + createProductOneB()
-    }
-    class ConcreteFactoryTwo{
-      + createProductTwoA()
-      + createProductTwoB()
-    }
-    class ProductOneA{
-      data
-      method()
-    }
-    class ProductOneB{
-      data
-      method()
-    }
-    class ProductTwoA{
-      data
-      method()
-    }
-    class ProductTwoB{
-      data
-      method()
-    }
-</div>
+<pre><code class="highlight mermaid">classDiagram
+  Client -- AbstractFactory
+  AbstractFactory &lt;-- ConcreteFactoryOne
+  AbstractFactory &lt;-- ConcreteFactoryTwo
+  ConcreteFactoryOne &lt;-- ProductOneA
+  ConcreteFactoryOne &lt;-- ProductOneB
+  ConcreteFactoryTwo &lt;-- ProductTwoA
+  ConcreteFactoryTwo &lt;-- ProductTwoB
+  ProductOneA -- AbstractProductA
+  ProductTwoA -- AbstractProductA
+  ProductOneB -- AbstractProductB
+  ProductTwoB -- AbstractProductB
+  class ConcreteFactoryOne&#123;
+    + createProductOneA()
+    + createProductOneB()
+  &#125;
+  class ConcreteFactoryTwo&#123;
+    + createProductTwoA()
+    + createProductTwoB()
+  &#125;
+  class ProductOneA&#123;
+    data
+    method()
+  &#125;
+  class ProductOneB&#123;
+    data
+    method()
+  &#125;
+  class ProductTwoA&#123;
+    data
+    method()
+  &#125;
+  class ProductTwoB&#123;
+    data
+    method()
+  &#125;</code></pre>
 
 <p>在JavaScript中，由于无法像其他传统面向对象的语言中那样使用abstract声明抽象类，需要通过在类的方法中抛出错误来对抽象类进行模拟。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//抽象工厂方法</span></span><br><span class="line"><span class="keyword">var</span> <span class="title class_">AbstractFactory</span> = <span class="keyword">function</span>(<span class="params">subType, superType</span>) &#123;</span><br><span class="line">  <span class="comment">//判断抽象工厂中是否有该抽象类</span></span><br><span class="line">  <span class="keyword">if</span>(<span class="keyword">typeof</span> <span class="title class_">AbstractFactory</span>[superType] === <span class="string">&#x27;function&#x27;</span>) &#123;</span><br><span class="line">    <span class="comment">//缓存类</span></span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">F</span>(<span class="params"></span>) &#123;&#125;;</span><br><span class="line">    <span class="comment">//继承父类属性和方法</span></span><br><span class="line">    F.<span class="property"><span class="keyword">prototype</span></span> = <span class="keyword">new</span> <span class="title class_">AbstractFactory</span>[superType] ();</span><br><span class="line">    <span class="comment">//将子类的constructor指向子类</span></span><br><span class="line">    subType.<span class="property">constructor</span> = subType;</span><br><span class="line">    <span class="comment">//子类原型继承父类</span></span><br><span class="line">    subType.<span class="property"><span class="keyword">prototype</span></span> = <span class="keyword">new</span> <span class="title function_">F</span>();</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">Error</span>(<span class="string">&#x27;抽象类不存在!&#x27;</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//抽象类Product A</span></span><br><span class="line"><span class="title class_">AbstractFactory</span>.<span class="property">AbstractProductA</span> = <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">type</span> = <span class="string">&#x27;ProductA&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="title class_">AbstractFactory</span>.<span class="property">AbstractProductA</span>.<span class="property"><span class="keyword">prototype</span></span> = &#123;</span><br><span class="line">  <span class="attr">getData</span>: <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Error</span>(<span class="string">&#x27;抽象方法不能调用&#x27;</span>);</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//抽象类Product B</span></span><br><span class="line"><span class="title class_">AbstractFactory</span>.<span class="property">AbstractProductB</span> = <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">type</span> = <span class="string">&#x27;ProductB&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="title class_">AbstractFactory</span>.<span class="property">AbstractProductB</span>.<span class="property"><span class="keyword">prototype</span></span> = &#123;</span><br><span class="line">  <span class="attr">getData</span>: <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Error</span>(<span class="string">&#x27;抽象方法不能调用&#x27;</span>);</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//抽象工厂实现对抽象类的继承</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">ConcreteFactoryOne</span>(<span class="params">data</span>) &#123;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">data</span> = data;</span><br><span class="line">&#125;</span><br><span class="line"><span class="title class_">AbstractFactory</span>(<span class="title class_">ConcreteFactoryOne</span>, <span class="string">&#x27;AbstractProductA&#x27;</span>);</span><br><span class="line"><span class="comment">//子类中重写抽象方法</span></span><br><span class="line"><span class="title class_">ConcreteFactoryOne</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">getData</span> = <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Data: &quot;</span>+ <span class="variable language_">this</span>.<span class="property">data</span> + <span class="string">&quot; Type: &quot;</span> + <span class="variable language_">this</span>.<span class="property">type</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">ConcreteFactoryTwo</span>(<span class="params">data</span>) &#123;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">data</span> = data;</span><br><span class="line">&#125;</span><br><span class="line"><span class="title class_">AbstractFactory</span>(<span class="title class_">ConcreteFactoryTwo</span>, <span class="string">&#x27;AbstractProductB&#x27;</span>);</span><br><span class="line"><span class="title class_">ConcreteFactoryTwo</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">getData</span> = <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Data: &quot;</span>+ <span class="variable language_">this</span>.<span class="property">data</span> + <span class="string">&quot; Type: &quot;</span> + <span class="variable language_">this</span>.<span class="property">type</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//测试</span></span><br><span class="line"><span class="keyword">var</span> productOneA = <span class="keyword">new</span> <span class="title class_">ConcreteFactoryOne</span>(<span class="string">&quot;I am productOneA&quot;</span>);</span><br><span class="line"><span class="keyword">var</span> productTwoB = <span class="keyword">new</span> <span class="title class_">ConcreteFactoryTwo</span>(<span class="string">&quot;I am productTwoB&quot;</span>);</span><br><span class="line">productOneA.<span class="title function_">getData</span>();</span><br><span class="line"><span class="comment">//输出 Data: I am productOneA Type: ProductA</span></span><br><span class="line">productTwoB.<span class="title function_">getData</span>();</span><br><span class="line"><span class="comment">//输出 Data: I am productTwoB Type: ProductB</span></span><br></pre></td></tr></table></figure>
@@ -490,8 +484,8 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/t-52966/" rel="prev" title="解决Android-x86无法进入图形界面的问题">
-                  <i class="fa fa-angle-left"></i> 解决Android-x86无法进入图形界面的问题
+                <a href="/t-37956/" rel="prev" title="JavaScript闭包原理与垃圾回收机制">
+                  <i class="fa fa-angle-left"></i> JavaScript闭包原理与垃圾回收机制
                 </a>
             </div>
             <div class="post-nav-item">
